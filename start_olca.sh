@@ -1,0 +1,44 @@
+#!/usr/bin/env bash
+# .devcontainer/start_olca.sh
+# Launched by postStartCommand in devcontainer.json.
+# Starts the openLCA gdt-server if it isn't already running.
+
+set -e
+
+IMAGE="greendelta/gdt-server:latest"
+CONTAINER="olca-server"
+DATA_DIR="$HOME/olca-data"
+
+mkdir -p "$DATA_DIR/databases"
+
+# Skip if already running
+if docker ps --format '{{.Names}}' | grep -q "^${CONTAINER}$"; then
+    echo "[olca] gdt-server already running."
+    exit 0
+fi
+
+# Remove stopped container with same name if present
+docker rm -f "$CONTAINER" 2>/dev/null || true
+
+echo "[olca] Pulling greendelta/gdt-server..."
+docker pull "$IMAGE" --quiet
+
+echo "[olca] Starting gdt-server on port 8080..."
+docker run \
+    --name "$CONTAINER" \
+    -p 8080:8080 \
+    -v "$DATA_DIR:/app/data" \
+    -d \
+    "$IMAGE" \
+    -db paper_cup_lca
+
+# Wait up to 30 seconds
+for i in $(seq 1 15); do
+    if curl -s http://localhost:8080/api/version > /dev/null 2>&1; then
+        echo "[olca] Server ready at http://localhost:8080"
+        exit 0
+    fi
+    sleep 2
+done
+
+echo "[olca] WARNING: gdt-server may not be ready yet. Check: docker logs $CONTAINER"
