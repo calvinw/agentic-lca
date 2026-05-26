@@ -5,7 +5,7 @@
 
 set -e
 
-IMAGE="greendelta/gdt-server:latest"
+IMAGE="gdt-server:latest"
 CONTAINER="olca-server"
 DATA_DIR="$HOME/olca-data"
 
@@ -20,8 +20,14 @@ fi
 # Remove stopped container with same name if present
 docker rm -f "$CONTAINER" 2>/dev/null || true
 
-echo "[olca] Pulling greendelta/gdt-server..."
-docker pull "$IMAGE" --quiet
+# Build the gdt-server image if not present
+if ! docker image inspect "$IMAGE" > /dev/null 2>&1; then
+    echo "[olca] Building gdt-server image from GreenDelta's Dockerfile..."
+    BUILD_DIR=$(mktemp -d)
+    curl -fsSL https://raw.githubusercontent.com/GreenDelta/gdt-server/main/Dockerfile -o "$BUILD_DIR/Dockerfile"
+    docker build -t "$IMAGE" "$BUILD_DIR"
+    rm -rf "$BUILD_DIR"
+fi
 
 echo "[olca] Starting gdt-server on port 8080..."
 docker run \
