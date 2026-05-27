@@ -12,12 +12,12 @@ Prerequisites:
   The gdt-server must be running on localhost:8080 (run setup_olca.sh first).
 """
 
-import olca_ipc as ipc
+from olca_ipc.rest import RestClient
 import olca_schema as o
 
-client = ipc.Client(8080)
+client = RestClient("http://localhost:8080/")
 
-print("Connected to openLCA IPC server")
+print("Connected to openLCA gdt-server (REST)")
 print("=" * 60)
 
 # ── 1. UNIT GROUPS & FLOW PROPERTIES ─────────────────────────────────────────

@@ -10,10 +10,10 @@ Prerequisites:
 """
 
 import json
-import olca_ipc as ipc
+from olca_ipc.rest import RestClient
 import olca_schema as o
 
-client = ipc.Client(8080)
+client = RestClient("http://localhost:8080/")
 
 # Load IDs written by 01_build_model.py
 ids = json.loads(open("model_ids.json").read())

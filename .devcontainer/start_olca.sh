@@ -22,9 +22,17 @@ docker rm -f "$CONTAINER" 2>/dev/null || true
 
 # Build the gdt-server image if not present
 if ! docker image inspect "$IMAGE" > /dev/null 2>&1; then
-    echo "[olca] Building gdt-server image from GreenDelta's Dockerfile..."
+    echo "[olca] Building gdt-server image (pinned to Java 17 for EclipseLink compatibility)..."
     BUILD_DIR=$(mktemp -d)
-    curl -fsSL https://raw.githubusercontent.com/GreenDelta/gdt-server/main/Dockerfile -o "$BUILD_DIR/Dockerfile"
+
+    # Fetch layers from upstream Dockerfile
+    curl -fsSL https://raw.githubusercontent.com/GreenDelta/gdt-server/main/Dockerfile \
+        -o "$BUILD_DIR/Dockerfile.upstream"
+
+    # Replace Java 21 JRE with Java 17 (EclipseLink doesn't support class file major version 65)
+    sed 's|eclipse-temurin:21-jre|eclipse-temurin:17-jre|' \
+        "$BUILD_DIR/Dockerfile.upstream" > "$BUILD_DIR/Dockerfile"
+
     docker build -t "$IMAGE" "$BUILD_DIR"
     rm -rf "$BUILD_DIR"
 fi
