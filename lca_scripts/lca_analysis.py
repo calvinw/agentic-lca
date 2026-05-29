@@ -2,12 +2,12 @@
 """
 lca_analysis.py
 
-Reads an LCA specification from analysis.md (YAML frontmatter), builds the
-model in openLCA via the gdt-server REST API, walks through each step of the
-LCI methodology, and writes lca_results.md.
+Reads an LCA specification from an analysis.md file (YAML frontmatter), builds
+the model in openLCA via the gdt-server REST API, walks through each step of the
+LCI methodology, writes lca_results.md, and generates product_graph.png.
 
 Usage:
-    python3 lca_analysis.py [analysis_file.md]   (default: analysis.md)
+    python3 lca_scripts/lca_analysis.py lca_analysis/coffee/analysis.md
 """
 
 import sys
@@ -17,14 +17,19 @@ import yaml
 import numpy as np
 from olca_ipc.rest import RestClient
 import olca_schema as o
+import matplotlib
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt
+import matplotlib.patches as mpatches
 
 ANALYSIS_FILE = sys.argv[1] if len(sys.argv) > 1 else "analysis.md"
 RESULTS_FILE  = str(pathlib.Path(ANALYSIS_FILE).parent / "lca_results.md")
+GRAPH_FILE    = str(pathlib.Path(ANALYSIS_FILE).parent / "product_graph.png")
 SERVER_URL    = "http://localhost:8080/"
 
 # ── Formatting helpers ────────────────────────────────────────────────────────
 
-W = 64  # banner width
+W = 64
 
 def banner(title: str):
     print(f"\n{'═'*W}")
@@ -71,7 +76,7 @@ def load_spec(path: str) -> dict:
 # ── Build openLCA entities ────────────────────────────────────────────────────
 
 def build_model(client: RestClient, spec: dict) -> tuple[dict, o.Ref]:
-    reg = {}  # name → olca_schema object (flow or process)
+    reg = {}
 
     step(3, "Unit Groups and Flow Properties")
     for symbol, description in spec["units"].items():
@@ -156,11 +161,202 @@ def build_matrices(spec: dict):
 
     return A, B, prod_names, proc_names, em_names
 
+# ── Generate product_graph.png ────────────────────────────────────────────────
+
+def topo_sort(processes):
+    produces = {ps["reference_output"]["flow"]: ps["name"] for ps in processes}
+    deps = {ps["name"]: [] for ps in processes}
+    for ps in processes:
+        for inp in ps.get("inputs", []):
+            if inp["flow"] in produces:
+                deps[ps["name"]].append(produces[inp["flow"]])
+    ordered = []
+    remaining = [ps["name"] for ps in processes]
+    while remaining:
+        for name_p in remaining:
+            if all(d in ordered for d in deps[name_p]):
+                ordered.append(name_p)
+                remaining.remove(name_p)
+                break
+    return ordered
+
+def generate_graph(spec: dict, output_path: str):
+    processes = spec["processes"]
+    ref_name  = spec["reference_process"]
+    fu        = spec["functional_unit"]
+    name      = spec["name"]
+
+    order    = topo_sort(processes)
+    proc_map = {ps["name"]: ps for ps in processes}
+    produces = {ps["reference_output"]["flow"]: ps["name"] for ps in processes}
+
+    n     = len(processes)
+    COL_W = 3.2
+    ROW_H = 6.5
+    fig_w = (n + 1) * COL_W + 1.0
+
+    fig, ax = plt.subplots(figsize=(fig_w, ROW_H))
+    ax.set_xlim(0, fig_w)
+    ax.set_ylim(0, ROW_H)
+    ax.axis("off")
+    fig.patch.set_facecolor("#f5f5f5")
+
+    Y_NATURE_IN  = 5.8    # From Nature zone centre
+    Y_PROCESS    = 3.2    # process boxes
+    Y_BUS        = 4.3    # bus line — above processes, within Supply Chain zone
+    Y_NATURE_OUT = 1.0    # To Nature zone centre
+    C_PROC = "#3a7ebf"; C_FU = "#7b4ea6"; C_IN = "#3a9957"
+    C_OUT  = "#c45c1a"; C_ARROW = "#444444"; C_EM_ARR = "#c0392b"
+    BOX_W  = 2.2;  BOX_H = 0.8;  EM_W = 2.0;  EM_H = 0.5
+
+    LABEL_PROPS = dict(fontsize=7.5, zorder=6,
+                       bbox=dict(boxstyle="round,pad=0.15",
+                                 facecolor="white", edgecolor="none", alpha=0.85))
+
+    def col_x(i):
+        return 0.9 + i * COL_W + COL_W / 2
+
+    proc_col = {pname: col_x(i) for i, pname in enumerate(order)}
+
+    def box(cx, cy, text, color, w=BOX_W, h=BOX_H, fs=8):
+        ax.add_patch(mpatches.FancyBboxPatch(
+            (cx - w/2, cy - h/2), w, h,
+            boxstyle="round,pad=0.06",
+            facecolor=color, edgecolor="white", linewidth=1.5, zorder=3))
+        ax.text(cx, cy, text, ha="center", va="center",
+                fontsize=fs, color="white", fontweight="bold",
+                zorder=4, multialignment="center", linespacing=1.3)
+
+    def labelled_arrow(x1, y1, x2, y2, label="", color=C_ARROW):
+        ax.annotate("", xy=(x2, y2), xytext=(x1, y1),
+                    arrowprops=dict(arrowstyle="->", color=color, lw=1.6), zorder=2)
+        if label:
+            mx, my = (x1+x2)/2, (y1+y2)/2
+            if abs(x2-x1) >= abs(y2-y1):   # horizontal → label above midpoint
+                ax.text(mx, my + 0.16, label, ha="center", va="bottom",
+                        color=color, **LABEL_PROPS)
+            else:                            # vertical → label to the right
+                ax.text(mx + 0.12, my, label, ha="left", va="center",
+                        color=color, **LABEL_PROPS)
+
+    # ── Title
+    ax.text(fig_w/2, ROW_H - 0.28, name, ha="center", fontsize=12,
+            fontweight="bold", color="#222", zorder=5)
+    ax.text(fig_w/2, ROW_H - 0.65, "Product Graph", ha="center",
+            fontsize=9, color="#666", zorder=5)
+
+    # ── Zone bands (each defined by bottom and top y coordinates)
+    for label, color, y_bot, y_top in [
+        ("From Nature",  "#e8f5ec", 5.1, 6.4),
+        ("Supply Chain", "#e8f0f8", 2.4, 5.0),
+        ("To Nature",    "#fdeede", 0.2, 1.7),
+    ]:
+        h = y_top - y_bot
+        ax.add_patch(mpatches.FancyBboxPatch(
+            (0.2, y_bot), fig_w - 0.4, h,
+            boxstyle="round,pad=0.05", facecolor=color, edgecolor="none", zorder=0))
+        ax.text(0.45, (y_bot + y_top) / 2, label, ha="center", va="center",
+                fontsize=7.5, color="#555", fontstyle="italic", rotation=90, zorder=1)
+
+    # ── Process boxes
+    for pname in order:
+        ps = proc_map[pname]
+        ro = ps["reference_output"]
+        box(proc_col[pname], Y_PROCESS,
+            f"{pname}\n→ {ro['amount']} {ro['flow']}", C_PROC)
+
+    # ── Group flows: (src, flow_name, unit) → [(dst, amount)]
+    flow_groups = {}
+    for pname in order:
+        for inp in proc_map[pname].get("inputs", []):
+            if inp["flow"] in produces:
+                src      = produces[inp["flow"]]
+                unit_sym = next((p["unit"] for p in spec["products"]
+                                 if p["name"] == inp["flow"]), "")
+                key = (src, inp["flow"], unit_sym)
+                flow_groups.setdefault(key, []).append((pname, inp["amount"]))
+
+    # ── Draw arrows — single destination: straight arrow at process level
+    #                  multiple destinations: bus line below with drop arrows
+    for (src, flow, unit_sym), dsts in flow_groups.items():
+        src_cx = proc_col[src]
+
+        if len(dsts) == 1:
+            dst, amount = dsts[0]
+            labelled_arrow(src_cx + BOX_W/2, Y_PROCESS,
+                           proc_col[dst] - BOX_W/2, Y_PROCESS,
+                           label=f"{amount} {unit_sym}")
+        else:
+            # Bus line — electricity goes UP from source, RIGHT along bus,
+            # then DOWN into each consuming process
+            dst_cxs     = [proc_col[d] for d, _ in dsts]
+            x_bus_start = src_cx
+            x_bus_end   = max(dst_cxs)
+
+            # Vertical rise from source box top UP to bus level
+            ax.plot([src_cx, src_cx], [Y_PROCESS + BOX_H/2, Y_BUS],
+                    color=C_ARROW, lw=1.5, zorder=2)
+            # Horizontal bus line (dashed)
+            ax.plot([x_bus_start, x_bus_end], [Y_BUS, Y_BUS],
+                    color=C_ARROW, lw=1.5, ls="--", zorder=2)
+            # Flow name label on bus
+            ax.text((x_bus_start + x_bus_end)/2, Y_BUS + 0.1, flow,
+                    ha="center", va="bottom", color=C_ARROW, **LABEL_PROPS)
+
+            # Drop arrows DOWN from bus into each consumer's top
+            for dst, amount in dsts:
+                dcx = proc_col[dst]
+                labelled_arrow(dcx, Y_BUS, dcx, Y_PROCESS + BOX_H/2,
+                               label=f"{amount} {unit_sym}")
+
+    # ── From Nature boxes
+    for pname in order:
+        if not any(inp["flow"] in produces
+                   for inp in proc_map[pname].get("inputs", [])):
+            cx = proc_col[pname]
+            box(cx, Y_NATURE_IN, "Raw materials\n(from nature)", C_IN,
+                w=EM_W, h=EM_H, fs=7.5)
+            # Arrow from bottom of From Nature box down to top of process box
+            labelled_arrow(cx, Y_NATURE_IN - EM_H/2,
+                           cx, Y_PROCESS + BOX_H/2, color=C_IN)
+
+    # ── Emission arrows + boxes
+    em_positions = {}
+    for pname in order:
+        cx = proc_col[pname]
+        for em in proc_map[pname].get("emissions", []):
+            labelled_arrow(cx, Y_PROCESS - BOX_H/2, cx, Y_NATURE_OUT + EM_H/2,
+                           label=f"{em['amount']} {em['flow']}", color=C_EM_ARR)
+            em_positions[em["flow"]] = cx
+    for em_flow, cx in em_positions.items():
+        box(cx, Y_NATURE_OUT, em_flow, C_OUT, w=EM_W, h=EM_H, fs=7.5)
+
+    # ── Functional unit box
+    fu_cx  = proc_col[ref_name] + COL_W
+    ref_ro = proc_map[ref_name]["reference_output"]
+    box(fu_cx, Y_PROCESS,
+        f"Functional Unit\n{fu['amount']} {fu['unit']}\n{fu['description']}",
+        C_FU, w=BOX_W, h=BOX_H + 0.2, fs=7.5)
+    labelled_arrow(proc_col[ref_name] + BOX_W/2, Y_PROCESS,
+                   fu_cx - BOX_W/2, Y_PROCESS,
+                   label=f"{ref_ro['amount']} {ref_ro['flow']}")
+
+    # ── Legend
+    ax.legend(handles=[
+        mpatches.Patch(facecolor=C_PROC, label="Supply chain process"),
+        mpatches.Patch(facecolor=C_FU,   label="Functional unit"),
+        mpatches.Patch(facecolor=C_IN,   label="Input from nature"),
+        mpatches.Patch(facecolor=C_OUT,  label="Emission to nature"),
+    ], loc="lower right", fontsize=7.5, framealpha=0.9, edgecolor="#ccc")
+
+    plt.tight_layout(pad=0.3)
+    plt.savefig(output_path, dpi=150, bbox_inches="tight", facecolor="#f5f5f5")
+    plt.close()
+
 # ── Generate lca_results.md ───────────────────────────────────────────────────
 
 def write_results_md(spec, A, B, s, Bs, olca_outputs,
                      proc_names, prod_names, em_names, system_id):
-
     fu   = spec["functional_unit"]
     name = spec["name"]
     now  = datetime.datetime.now().strftime("%Y-%m-%d %H:%M")
@@ -173,7 +369,6 @@ def write_results_md(spec, A, B, s, Bs, olca_outputs,
     ln(f"Generated: {now}  |  openLCA system ID: `{system_id}`")
     ln()
 
-    # ── Goal and scope
     ln("## Step 1 — Goal and Scope")
     ln()
     ln(f"**Goal:** {spec.get('goal','').strip()}")
@@ -182,28 +377,25 @@ def write_results_md(spec, A, B, s, Bs, olca_outputs,
     ln()
     ln("**Reference flow vector f:**")
     ln()
-    ref_proc_spec_md = next(ps for ps in spec["processes"]
-                            if ps["name"] == spec["reference_process"])
-    ref_flow_name_md = ref_proc_spec_md["reference_output"]["flow"]
-    prod_idx_md = {p["name"]: i for i, p in enumerate(spec["products"])}
-    f_vec = [0.0] * len(prod_names)
-    f_vec[prod_idx_md[ref_flow_name_md]] = fu["amount"]
+    ref_ps       = next(ps for ps in spec["processes"]
+                        if ps["name"] == spec["reference_process"])
+    ref_flow     = ref_ps["reference_output"]["flow"]
+    prod_idx_md  = {p["name"]: i for i, p in enumerate(spec["products"])}
+    f_vec        = [0.0] * len(prod_names)
+    f_vec[prod_idx_md[ref_flow]] = fu["amount"]
     ln("```")
     for i, (pn, fv) in enumerate(zip(prod_names, f_vec)):
         ln(f"  f[{i+1}] = {fv}   ({pn})")
     ln("```")
     ln()
 
-    # ── Technology matrix A
     ln("## Step 2 — Technology Matrix A")
     ln()
     ln("Columns = processes, rows = products.  `+` = produced, `−` = consumed.")
     ln()
-    # markdown table
     header = "| |" + "|".join(f" {p} " for p in proc_names) + "|"
     sep    = "|---|" + "|".join("---:" for _ in proc_names) + "|"
-    ln(header)
-    ln(sep)
+    ln(header); ln(sep)
     for i, rn in enumerate(prod_names):
         row = "| **" + rn + "** |"
         for j in range(len(proc_names)):
@@ -212,7 +404,6 @@ def write_results_md(spec, A, B, s, Bs, olca_outputs,
         ln(row)
     ln()
 
-    # ── Scaling vector
     ln("## Step 3 — Scaling Vector  s = A⁻¹ · f")
     ln()
     ln("How many times each process must run to deliver exactly f:")
@@ -223,14 +414,11 @@ def write_results_md(spec, A, B, s, Bs, olca_outputs,
         ln(f"| {pn} | **{sv:.4f}** |")
     ln()
 
-    # ── Intervention matrix B
     ln("## Step 4 — Intervention Matrix B")
     ln()
     ln("Columns = processes, rows = elementary flows (biosphere).")
     ln()
-    header = "| |" + "|".join(f" {p} " for p in proc_names) + "|"
-    ln(header)
-    ln(sep)
+    ln(header); ln(sep)
     for i, en in enumerate(em_names):
         row = "| **" + en + "** |"
         for j in range(len(proc_names)):
@@ -239,7 +427,6 @@ def write_results_md(spec, A, B, s, Bs, olca_outputs,
         ln(row)
     ln()
 
-    # ── LCI results
     ln("## Step 5 — LCI Results  B · s")
     ln()
     ln("| Flow | Numpy result | openLCA result | Unit | Match |")
@@ -248,14 +435,13 @@ def write_results_md(spec, A, B, s, Bs, olca_outputs,
         olca_val = olca_outputs.get(en)
         np_val   = Bs[i]
         unit     = spec["units"].get(
-            next(e["unit"] for e in
-                 spec["elementary_flows"]["emissions"] if e["name"] == en), "kg")
+            next(e["unit"] for e in spec["elementary_flows"]["emissions"]
+                 if e["name"] == en), "kg")
         match    = "✓" if olca_val is not None and abs(olca_val - np_val) < 1e-4 else "✗"
         olca_str = f"{olca_val:.4f}" if olca_val is not None else "—"
         ln(f"| **{en}** | {np_val:.4f} | {olca_str} | {unit} | {match} |")
     ln()
 
-    # ── Contribution analysis
     ln("## Step 6 — Contribution Analysis")
     ln()
     ln("Which process is responsible for each emission?")
@@ -269,7 +455,6 @@ def write_results_md(spec, A, B, s, Bs, olca_outputs,
         ln(f"| {pn} | {s[j]:.4f} | {direct:.4f} kg | {pct:.0f}% |")
     ln()
 
-    # ── Summary
     ln("## Summary")
     ln()
     ln("$$")
@@ -281,7 +466,7 @@ def write_results_md(spec, A, B, s, Bs, olca_outputs,
            f"of {fu['description']}")
     ln()
     ln("---")
-    ln(f"*Generated by `lca_analysis.py` using openLCA gdt-server v2*")
+    ln(f"*Generated by `lca_scripts/lca_analysis.py` using openLCA gdt-server v2*")
 
     pathlib.Path(RESULTS_FILE).write_text("\n".join(lines))
 
@@ -290,7 +475,6 @@ def write_results_md(spec, A, B, s, Bs, olca_outputs,
 def main():
     banner(f"LCA Analysis Runner  —  {ANALYSIS_FILE}")
 
-    # ── Verify server
     import requests
     try:
         r = requests.get(f"{SERVER_URL}api/version", timeout=5)
@@ -310,21 +494,19 @@ def main():
     print(f"  Analysis: {name}")
     print(f"  Goal    : {goal[:70]}{'…' if len(goal)>70 else ''}")
 
-    # ── Step 1: Goal and scope
     step(1, "Goal and Scope")
     print(f"\n  Functional unit : {fu['amount']} {fu['unit']} of '{fu['description']}'")
     prod_names_preview = [p["name"] for p in spec["products"]]
-    ref_proc_spec = next(ps for ps in spec["processes"]
-                         if ps["name"] == spec["reference_process"])
-    ref_flow_name = ref_proc_spec["reference_output"]["flow"]
-    prod_idx_preview = {p["name"]: i for i, p in enumerate(spec["products"])}
-    f_vec = [0.0] * len(prod_names_preview)
-    f_vec[prod_idx_preview[ref_flow_name]] = fu["amount"]
+    ref_ps       = next(ps for ps in spec["processes"]
+                        if ps["name"] == spec["reference_process"])
+    ref_flow     = ref_ps["reference_output"]["flow"]
+    prod_idx_pre = {p["name"]: i for i, p in enumerate(spec["products"])}
+    f_vec        = [0.0] * len(prod_names_preview)
+    f_vec[prod_idx_pre[ref_flow]] = fu["amount"]
     print(f"\n  Reference flow vector f:")
     for i, (pn, fv) in enumerate(zip(prod_names_preview, f_vec)):
         print(f"    f[{i+1}] = {fv}  ({pn})")
 
-    # ── Step 2: Product graph summary
     step(2, "Product Graph")
     print(f"\n  Processes : {len(spec['processes'])}")
     print(f"  Products  : {len(spec['products'])}")
@@ -332,35 +514,28 @@ def main():
     print(f"  Emissions : {n_em}")
     print()
     for ps in spec["processes"]:
-        ro = ps["reference_output"]
-        ins  = ", ".join(f"{i['amount']} {i['flow']}" for i in ps.get("inputs", []))
-        ems  = ", ".join(f"{e['amount']} {e['flow']}" for e in ps.get("emissions", []))
+        ro  = ps["reference_output"]
+        ins = ", ".join(f"{i['amount']} {i['flow']}" for i in ps.get("inputs", []))
+        ems = ", ".join(f"{e['amount']} {e['flow']}" for e in ps.get("emissions", []))
         print(f"  {ps['name']}")
         print(f"    → outputs {ro['amount']} {ro['flow']}")
         if ins:  print(f"    ← needs   {ins}")
         if ems:  print(f"    ↑ emits   {ems}")
 
-    # ── Build model in openLCA (Steps 3–7)
     client = RestClient(SERVER_URL)
     reg, system_ref = build_model(client, spec)
 
-    # ── Derive matrices from spec
     A, B, prod_names, proc_names, em_names = build_matrices(spec)
 
-    # ── Step 8: Show technology matrix A
     step(8, "Technology Matrix A")
     print()
     print_matrix(prod_names, proc_names, A.tolist(),
                  row_label="products", col_label="processes")
 
-    # ── Step 9: Solve for scaling vector s
     step(9, "Scaling Vector  s = A⁻¹ · f")
-    ref_proc_spec = next(ps for ps in spec["processes"]
-                         if ps["name"] == spec["reference_process"])
-    ref_flow_name = ref_proc_spec["reference_output"]["flow"]
-    prod_idx_map  = {n: i for i, n in enumerate(prod_names)}
+    prod_idx_map = {n: i for i, n in enumerate(prod_names)}
     f = np.zeros(len(prod_names))
-    f[prod_idx_map[ref_flow_name]] = fu["amount"]
+    f[prod_idx_map[ref_flow]] = fu["amount"]
     s = np.linalg.solve(A, f)
     print(f"\n  f = {list(f)}")
     print(f"\n  s = A⁻¹ · f")
@@ -368,7 +543,6 @@ def main():
         bar = "█" * int(sv * 20)
         print(f"    s[{i+1}] = {sv:.4f}  {bar}  {pn}")
 
-    # ── Step 10: Show intervention matrix B
     step(10, "Intervention Matrix B")
     print()
     if len(em_names) > 0:
@@ -377,25 +551,18 @@ def main():
     else:
         print("  (no elementary flows defined)")
 
-    # ── Step 11: Run calculation in openLCA
     step(11, "LCA Calculation via openLCA gdt-server")
     print(f"\n  Submitting product system {system_ref.id[:8]}…")
-    setup  = o.CalculationSetup(
-        target=o.Ref(id=system_ref.id),
-        amount=fu["amount"],
-    )
+    setup  = o.CalculationSetup(target=o.Ref(id=system_ref.id), amount=fu["amount"])
     result = client.calculate(setup)
     result.wait_until_ready()
     print(f"  Calculation complete.")
 
     flows = result.get_total_flows()
-    olca_outputs = {
-        f.envi_flow.flow.name: f.amount
-        for f in flows if not f.envi_flow.is_input
-    }
+    olca_outputs = {f.envi_flow.flow.name: f.amount
+                    for f in flows if not f.envi_flow.is_input}
     result.dispose()
 
-    # ── Step 12: LCI results — B · s
     step(12, "LCI Results  B · s")
     Bs = B @ s
     print()
@@ -403,16 +570,14 @@ def main():
     rule()
     for i, en in enumerate(em_names):
         olca_val = olca_outputs.get(en)
-        unit_sym = next(
-            (e["unit"] for e in spec["elementary_flows"]["emissions"]
-             if e["name"] == en), "?")
+        unit_sym = next((e["unit"] for e in spec["elementary_flows"]["emissions"]
+                         if e["name"] == en), "?")
         match    = "✓ MATCH" if olca_val is not None and abs(olca_val - Bs[i]) < 1e-4 else "✗ DIFF"
         olca_str = f"{olca_val:.4f}" if olca_val is not None else "—"
         print(f"  {en:<32} {Bs[i]:>10.4f}  {olca_str:>10}  {unit_sym}  {match}")
     print()
     print(f"  Core equation:  CO₂ = B · A⁻¹ · f = {Bs[0]:.4f} kg")
 
-    # ── Step 13: Contribution analysis
     step(13, "Contribution Analysis (Hotspot Identification)")
     total = Bs[0] if len(Bs) > 0 else 1
     print()
@@ -424,12 +589,16 @@ def main():
         bar    = "█" * int(pct / 5)
         print(f"  {pn:<30} {s[j]:>8.4f}  {direct:>10.4f} kg  {pct:5.1f}%  {bar}")
 
-    # ── Write results
     write_results_md(spec, A, B, s, Bs, olca_outputs,
                      proc_names, prod_names, em_names, system_ref.id)
 
+    step(14, "Product Graph")
+    generate_graph(spec, GRAPH_FILE)
+    print(f"  Graph saved  → {GRAPH_FILE}")
+
     banner("Done")
     print(f"  Results written to → {RESULTS_FILE}")
+    print(f"  Graph saved    to → {GRAPH_FILE}")
     print()
 
 if __name__ == "__main__":

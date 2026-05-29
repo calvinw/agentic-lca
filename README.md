@@ -34,12 +34,12 @@ lca_analysis/
 └── cotton_shirt/    — carbon footprint of one cotton shirt (cradle to gate)
 ```
 
-### 3. The runner script (`lca_analysis.py`)
-This is the engine that reads your recipe card and produces the report. You run it by pointing it at a specific analysis folder:
+### 3. The runner script (`lca_scripts/lca_analysis.py`)
+This is the engine that reads your recipe card and produces the report and graph. You run it by pointing it at a specific analysis folder:
 
 ```bash
-python3 lca_analysis.py lca_analysis/cotton_shirt/analysis.md
-python3 lca_analysis.py lca_analysis/coffee/analysis.md
+python3 lca_scripts/lca_analysis.py lca_analysis/cotton_shirt/analysis.md
+python3 lca_scripts/lca_analysis.py lca_analysis/coffee/analysis.md
 ```
 
 ---
@@ -49,10 +49,12 @@ python3 lca_analysis.py lca_analysis/coffee/analysis.md
 1. Open a terminal in your Codespace
 2. Run the command for the analysis you want, for example:
    ```bash
-   python3 lca_analysis.py lca_analysis/cotton_shirt/analysis.md
+   python3 lca_scripts/lca_analysis.py lca_analysis/cotton_shirt/analysis.md
    ```
-3. The results are saved to `lca_analysis/cotton_shirt/lca_results.md`
-4. Open that file to read the full report
+3. Two files are saved in the analysis folder:
+   - `lca_results.md` — the full written report
+   - `product_graph.png` — a visual diagram of the supply chain
+4. Click either file in the VS Code file explorer to open it
 
 ---
 
@@ -78,11 +80,11 @@ The `analysis.md` file needs these sections:
 
 | File | Purpose |
 |---|---|
-| `lca_analysis.py` | Runs an LCA from an `analysis.md` file |
+| `lca_scripts/lca_analysis.py` | Runs an LCA, writes results and generates the product graph |
 | `lca_analysis/coffee/` | Coffee example — teaches the basic matrix maths |
 | `lca_analysis/cotton_shirt/` | Cotton shirt — a realistic cradle-to-gate study |
-| `LCACoffeeExlainer.md` | Written guide explaining the maths behind LCA step by step |
-| `LCA_Paper_vs_Plastic_Cup_v2.xlsx` | Spreadsheet comparing paper vs. polystyrene cups |
+| `docs/LCACoffeeExlainer.md` | Written guide explaining the maths behind LCA step by step |
+| `docs/LCA_Paper_vs_Plastic_Cup_v2.xlsx` | Spreadsheet comparing paper vs. polystyrene cups |
 | `.devcontainer/start_olca.sh` | Starts the openLCA server (runs automatically on Codespace start) |
 
 ---

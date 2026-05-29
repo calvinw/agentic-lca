@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Coffee LCA — Product Graph</title>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 2rem;
+      background: #f9f9f9;
+    }
+    h1 { color: #333; }
+    p  { color: #555; max-width: 600px; }
+    .mermaid {
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      display: inline-block;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Coffee LCA — Product Graph</h1>
+  <p>
+    This diagram shows the full supply chain for one cup of coffee.
+    Read it left to right: coal is extracted from the ground, burned to generate
+    electricity, which heats water, which brews the coffee.
+    CO₂ is released into the air at the coal-burning step.
+  </p>
+
+  <div class="mermaid">
+flowchart LR
+    subgraph nature_in["🌍 From Nature"]
+        coal["Coal\n(from ground)"]
+    end
+
+    subgraph tech["⚙️ Supply Chain"]
+        P3["P3 — Burn coal\nProduces: 1 kWh electricity"]
+        P2["P2 — Boil water\nProduces: 1 L boiled water"]
+        P1["P1 — Make coffee\nProduces: 1 cup coffee"]
+    end
+
+    subgraph nature_out["🌍 To Nature"]
+        co2["CO₂ to air\n1 kg per kWh"]
+    end
+
+    coal -->|fuel| P3
+    P3 -->|"0.5 kWh"| P2
+    P2 -->|"0.2 L"| P1
+    P1 -->|"1 cup"| fu["☕ 1 cup of coffee\n(functional unit)"]
+    P3 -->|"1.0 kg CO₂"| co2
+  </div>
+
+  <script>
+    mermaid.initialize({ startOnLoad: true, theme: 'default' });
+  </script>
+</body>
+</html>

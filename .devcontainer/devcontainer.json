@@ -19,7 +19,8 @@
     "vscode": {
       "extensions": [
         "ritwickdey.LiveServer",
-        "GrapeCity.gc-excelviewer"
+        "GrapeCity.gc-excelviewer",
+        "bierner.markdown-mermaid"
       ]
     }
   }

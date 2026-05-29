@@ -1,5 +1,5 @@
 ---
-name: query-lca
+name: run-lca
 description: >
   Use this skill whenever the user wants to perform a Life Cycle Assessment
   (LCA) using openLCA. Triggers include: "carbon footprint of", "compare
@@ -13,16 +13,17 @@ description: >
 
 ## How this skill works
 
-The standard workflow produces two files:
+The standard workflow produces three files:
 
 | File | Purpose |
 |---|---|
 | `analysis.md` | YAML spec: defines the system (edit this) |
 | `lca_results.md` | Generated report: matrices, scaling vector, results |
+| `product_graph.png` | Visual diagram of the supply chain |
 
 Run the analysis with:
 ```bash
-python3 lca_analysis.py [analysis.md]
+python3 lca_scripts/lca_analysis.py lca_analysis/<name>/analysis.md
 ```
 
 ---

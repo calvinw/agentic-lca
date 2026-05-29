@@ -1,7 +1,7 @@
 ---
 # ─────────────────────────────────────────────────────────────
 # LCA Analysis Specification
-# Run with:  python3 lca_analysis.py lca_analysis/coffee/analysis.md
+# Run with:  python3 lca_scripts/lca_analysis.py lca_analysis/coffee/analysis.md
 # ─────────────────────────────────────────────────────────────
 
 name: Coffee LCA — one cup
@@ -57,3 +57,30 @@ The chain is: coal combustion → electricity → boiling water → coffee.
 All CO₂ originates in P3; P1 and P2 have no direct emissions.
 
 Expected result: **0.1 kg CO₂ per cup**.
+
+---
+
+## Product Graph
+
+```mermaid
+flowchart LR
+    subgraph nature_in["🌍 From Nature"]
+        coal["Coal\n(from ground)"]
+    end
+
+    subgraph tech["⚙️ Supply Chain (Technosphere)"]
+        P3["P3 — Burn coal\nProduces: 1 kWh electricity"]
+        P2["P2 — Boil water\nProduces: 1 L boiled water"]
+        P1["P1 — Make coffee\nProduces: 1 cup coffee"]
+    end
+
+    subgraph nature_out["🌍 To Nature"]
+        co2["CO₂ to air\n1 kg per kWh"]
+    end
+
+    coal -->|fuel| P3
+    P3 -->|"0.5 kWh"| P2
+    P2 -->|"0.2 L"| P1
+    P1 -->|"1 cup"| fu["☕ 1 cup of coffee\n(functional unit)"]
+    P3 -->|"1.0 kg CO₂"| co2
+```

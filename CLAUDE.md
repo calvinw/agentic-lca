@@ -70,6 +70,65 @@ If a command produces output — numbers, file paths, error messages, or a list 
 
 ---
 
+## Narrating Bash Commands — Detailed Rules
+
+A "Bash command" is an instruction typed into the terminal (the black text window) that tells the computer to do something. Students will not know what a terminal command means just by reading it. You must always explain every command in plain English before running it and translate the result after.
+
+### Before every Bash command, explain ALL of these:
+
+1. **What the terminal is** — if this is the first command in a session, remind the student: "The terminal is like a text-based remote control for the computer. Instead of clicking buttons, we type instructions."
+
+2. **What this specific command does** — in one or two plain sentences, describe what the instruction will do, as if explaining it to someone who has never seen a terminal. Never say "I'll run X" without saying what X actually does.
+
+3. **Why we need to do this right now** — what problem does it solve or what information does it give us?
+
+4. **What you expect to see** — tell the student what a successful result looks like, so they know whether things went well.
+
+### After every Bash command, explain ALL of these:
+
+1. **What the output means** — translate every important line of output into plain English. Do not skip lines without explaining why they are not important.
+
+2. **Whether it worked** — say explicitly "this worked" or "there was a problem" rather than leaving the student to guess.
+
+3. **What happens next** — what does this result mean for the next step?
+
+### Specific command translations
+
+Use these plain-English explanations when you run these common commands:
+
+| Command | What to say before running it |
+|---|---|
+| `python3 lca_scripts/lca_analysis.py ...` | "I'm going to run the LCA analysis now. This is like pressing 'Calculate' — the computer will read the supply chain file, send it to the openLCA software, do the maths, and save a report and diagram." |
+| `curl -s http://localhost:8080/api/version` | "I'm going to check whether the openLCA software is switched on and ready. Think of it like knocking on a door — if it answers, we know it's running." |
+| `ls` or `tree` | "I'm going to look at what files and folders exist here, like opening a drawer in a filing cabinet to see what's inside." |
+| `git status` | "I'm going to check which files have been changed or added since the last time we saved our work to the project history." |
+| `git add` / `git commit` | "I'm going to save the current state of the project — like taking a snapshot — so we can always come back to this point if needed." |
+| `git push` | "I'm going to upload our saved snapshot to GitHub, which is the online storage for this project, so it's backed up and shareable." |
+| `pip install ...` | "I'm going to install a software tool that the analysis needs. Think of it like downloading an app — the computer goes and fetches it and sets it up." |
+| `mkdir` | "I'm going to create a new folder, just like right-clicking in a file explorer and choosing 'New Folder'." |
+| `mv` | "I'm going to move a file from one folder to another — the same as dragging and dropping it in a file explorer." |
+| `rm` | "I'm going to permanently delete a file. This cannot be undone, so I'm only doing this because we've confirmed it's no longer needed." |
+| `sync-skills.sh` | "I'm going to update all the AI assistants with the latest version of the skills we've set up for this project." |
+
+### Never paste raw output without translating it
+
+If a command produces output, go through it line by line (or group by group) and explain what each part means. For example:
+
+**Bad:**
+```
+lca_results.md written.
+product_graph.png saved.
+```
+> Done.
+
+**Good:**
+> The command finished and reported two things:
+> - **lca_results.md written** — this means the written report (the one with all the numbers and tables) has been saved into the cotton shirt folder. You can open it in VS Code to read it.
+> - **product_graph.png saved** — this means the diagram showing the supply chain has also been saved. Click on it in the file explorer on the left to see the visual.
+> Everything went as expected — no errors.
+
+---
+
 ## Examples of Student-Friendly vs. Technical Responses
 
 ### Example 1 — Explaining a code change
