@@ -19,7 +19,7 @@ from olca_ipc.rest import RestClient
 import olca_schema as o
 
 ANALYSIS_FILE = sys.argv[1] if len(sys.argv) > 1 else "analysis.md"
-RESULTS_FILE  = "lca_results.md"
+RESULTS_FILE  = str(pathlib.Path(ANALYSIS_FILE).parent / "lca_results.md")
 SERVER_URL    = "http://localhost:8080/"
 
 # ── Formatting helpers ────────────────────────────────────────────────────────
@@ -182,7 +182,12 @@ def write_results_md(spec, A, B, s, Bs, olca_outputs,
     ln()
     ln("**Reference flow vector f:**")
     ln()
-    f_vec = [fu["amount"]] + [0.0] * (len(prod_names) - 1)
+    ref_proc_spec_md = next(ps for ps in spec["processes"]
+                            if ps["name"] == spec["reference_process"])
+    ref_flow_name_md = ref_proc_spec_md["reference_output"]["flow"]
+    prod_idx_md = {p["name"]: i for i, p in enumerate(spec["products"])}
+    f_vec = [0.0] * len(prod_names)
+    f_vec[prod_idx_md[ref_flow_name_md]] = fu["amount"]
     ln("```")
     for i, (pn, fv) in enumerate(zip(prod_names, f_vec)):
         ln(f"  f[{i+1}] = {fv}   ({pn})")
@@ -309,7 +314,12 @@ def main():
     step(1, "Goal and Scope")
     print(f"\n  Functional unit : {fu['amount']} {fu['unit']} of '{fu['description']}'")
     prod_names_preview = [p["name"] for p in spec["products"]]
-    f_vec = [fu["amount"]] + [0.0] * (len(prod_names_preview) - 1)
+    ref_proc_spec = next(ps for ps in spec["processes"]
+                         if ps["name"] == spec["reference_process"])
+    ref_flow_name = ref_proc_spec["reference_output"]["flow"]
+    prod_idx_preview = {p["name"]: i for i, p in enumerate(spec["products"])}
+    f_vec = [0.0] * len(prod_names_preview)
+    f_vec[prod_idx_preview[ref_flow_name]] = fu["amount"]
     print(f"\n  Reference flow vector f:")
     for i, (pn, fv) in enumerate(zip(prod_names_preview, f_vec)):
         print(f"    f[{i+1}] = {fv}  ({pn})")
@@ -345,8 +355,12 @@ def main():
 
     # ── Step 9: Solve for scaling vector s
     step(9, "Scaling Vector  s = A⁻¹ · f")
+    ref_proc_spec = next(ps for ps in spec["processes"]
+                         if ps["name"] == spec["reference_process"])
+    ref_flow_name = ref_proc_spec["reference_output"]["flow"]
+    prod_idx_map  = {n: i for i, n in enumerate(prod_names)}
     f = np.zeros(len(prod_names))
-    f[0] = fu["amount"]
+    f[prod_idx_map[ref_flow_name]] = fu["amount"]
     s = np.linalg.solve(A, f)
     print(f"\n  f = {list(f)}")
     print(f"\n  s = A⁻¹ · f")

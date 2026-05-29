@@ -1,6 +1,6 @@
 # LCA Results: Coffee LCA — one cup
 
-Generated: 2026-05-26 05:21  |  openLCA system ID: `bf0765f8-2b87-42ec-b5b7-5ca07ef512be`
+Generated: 2026-05-29 00:00  |  openLCA system ID: `cb758e83-b855-4642-99f7-575a0bb8ce91`
 
 ## Step 1 — Goal and Scope
 
