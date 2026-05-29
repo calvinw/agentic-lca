@@ -2,12 +2,12 @@
 """
 lca_analysis.py
 
-Reads an LCA specification from an analysis.md file (YAML frontmatter), builds
+Reads an LCA specification from a recipe_card.md file (YAML frontmatter), builds
 the model in openLCA via the gdt-server REST API, walks through each step of the
 LCI methodology, writes lca_results.md, and generates product_graph.png.
 
 Usage:
-    python3 lca_scripts/lca_analysis.py lca_analysis/coffee/analysis.md
+    python3 lca_scripts/lca_analysis.py lca_analysis/coffee/recipe_card.md
 """
 
 import sys
@@ -22,7 +22,7 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 
-ANALYSIS_FILE = sys.argv[1] if len(sys.argv) > 1 else "analysis.md"
+ANALYSIS_FILE = sys.argv[1] if len(sys.argv) > 1 else "recipe_card.md"
 RESULTS_FILE  = str(pathlib.Path(ANALYSIS_FILE).parent / "lca_results.md")
 GRAPH_FILE    = str(pathlib.Path(ANALYSIS_FILE).parent / "product_graph.png")
 SERVER_URL    = "http://localhost:8080/"
@@ -64,7 +64,7 @@ def print_matrix(row_names, col_names, data, row_label="", col_label=""):
         print(f"  {r:<{rw+2}}{cells}")
     print()
 
-# ── Parse analysis.md ─────────────────────────────────────────────────────────
+# ── Parse recipe_card.md ──────────────────────────────────────────────────────
 
 def load_spec(path: str) -> dict:
     text = pathlib.Path(path).read_text()

@@ -1,7 +1,7 @@
 ---
 # ─────────────────────────────────────────────────────────────
 # LCA Analysis Specification
-# Run with:  python3 lca_scripts/lca_analysis.py lca_analysis/coffee/analysis.md
+# Run with:  python3 lca_scripts/lca_analysis.py lca_analysis/coffee/recipe_card.md
 # ─────────────────────────────────────────────────────────────
 
 name: Coffee LCA — one cup

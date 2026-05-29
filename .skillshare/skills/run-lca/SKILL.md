@@ -17,13 +17,13 @@ The standard workflow produces three files:
 
 | File | Purpose |
 |---|---|
-| `analysis.md` | YAML spec: defines the system (edit this) |
+| `recipe_card.md` | YAML spec: defines the system (edit this) |
 | `lca_results.md` | Generated report: matrices, scaling vector, results |
 | `product_graph.png` | Visual diagram of the supply chain |
 
 Run the analysis with:
 ```bash
-python3 lca_scripts/lca_analysis.py lca_analysis/<name>/analysis.md
+python3 lca_scripts/lca_analysis.py lca_analysis/<name>/recipe_card.md
 ```
 
 ---
@@ -59,9 +59,9 @@ client = RestClient("http://localhost:8080/")
 
 ---
 
-## analysis.md format
+## recipe_card.md format
 
-`analysis.md` is a markdown file whose YAML frontmatter fully specifies the
+`recipe_card.md` is a markdown file whose YAML frontmatter fully specifies the
 LCA model. The markdown body is free text (ignored by the runner).
 
 ```yaml

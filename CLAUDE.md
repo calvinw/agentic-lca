@@ -144,10 +144,10 @@ product_graph.png saved.
 ### Example 2 — Explaining a file structure
 
 **Bad (too technical):**
-> Each analysis is isolated in its own subdirectory under `lca_analysis/` with its own `analysis.md` spec and generated `lca_results.md` output.
+> Each analysis is isolated in its own subdirectory under `lca_analysis/` with its own `recipe_card.md` spec and generated `lca_results.md` output.
 
 **Good (student-friendly):**
-> Think of the `lca_analysis` folder like a filing cabinet. Inside it, each product you study gets its own drawer — for example, `coffee` or `cotton_shirt`. Inside each drawer, there are exactly two documents: the recipe card (called `analysis.md`) where you describe the product, and the report (called `lca_results.md`) where the results are saved after the analysis runs. This way, studying a new product never overwrites the work you did on a previous one.
+> Think of the `lca_analysis` folder like a filing cabinet. Inside it, each product you study gets its own drawer — for example, `coffee` or `cotton_shirt`. Inside each drawer, there are exactly two documents: the recipe card (called `recipe_card.md`) where you describe the product, and the report (called `lca_results.md`) where the results are saved after the analysis runs. This way, studying a new product never overwrites the work you did on a previous one.
 
 ### Example 3 — Explaining a result
 

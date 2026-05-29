@@ -24,7 +24,7 @@ Each analysis lives in its own folder inside `lca_analysis/`. Every folder conta
 
 | File | What it is |
 |---|---|
-| `analysis.md` | The **recipe card** — you describe the product and its supply chain here |
+| `recipe_card.md` | The **recipe card** — you describe the product and its supply chain here |
 | `lca_results.md` | The **report** — automatically generated after the analysis runs |
 
 Current analyses:
@@ -38,8 +38,8 @@ lca_analysis/
 This is the engine that reads your recipe card and produces the report and graph. You run it by pointing it at a specific analysis folder:
 
 ```bash
-python3 lca_scripts/lca_analysis.py lca_analysis/cotton_shirt/analysis.md
-python3 lca_scripts/lca_analysis.py lca_analysis/coffee/analysis.md
+python3 lca_scripts/lca_analysis.py lca_analysis/cotton_shirt/recipe_card.md
+python3 lca_scripts/lca_analysis.py lca_analysis/coffee/recipe_card.md
 ```
 
 ---
@@ -49,7 +49,7 @@ python3 lca_scripts/lca_analysis.py lca_analysis/coffee/analysis.md
 1. Open a terminal in your Codespace
 2. Run the command for the analysis you want, for example:
    ```bash
-   python3 lca_scripts/lca_analysis.py lca_analysis/cotton_shirt/analysis.md
+   python3 lca_scripts/lca_analysis.py lca_analysis/cotton_shirt/recipe_card.md
    ```
 3. Two files are saved in the analysis folder:
    - `lca_results.md` — the full written report
@@ -60,9 +60,9 @@ python3 lca_scripts/lca_analysis.py lca_analysis/coffee/analysis.md
 
 ## Creating a new analysis
 
-To study a new product, create a new folder under `lca_analysis/` and add an `analysis.md` file describing the supply chain. Use the coffee or cotton shirt examples as a starting point — the format is the same for any product.
+To study a new product, create a new folder under `lca_analysis/` and add an `recipe_card.md` file describing the supply chain. Use the coffee or cotton shirt examples as a starting point — the format is the same for any product.
 
-The `analysis.md` file needs these sections:
+The `recipe_card.md` file needs these sections:
 
 | Section | What to fill in |
 |---|---|

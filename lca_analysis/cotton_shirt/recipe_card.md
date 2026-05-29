@@ -1,7 +1,7 @@
 ---
 # ─────────────────────────────────────────────────────────────
 # LCA Analysis Specification
-# Run with:  python3 lca_scripts/lca_analysis.py lca_analysis/cotton_shirt/analysis.md
+# Run with:  python3 lca_scripts/lca_analysis.py lca_analysis/cotton_shirt/recipe_card.md
 # ─────────────────────────────────────────────────────────────
 
 name: Cotton Shirt LCA — cradle to gate
