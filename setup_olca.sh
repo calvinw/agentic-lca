@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # setup_olca.sh
-# Pulls and starts the openLCA gdt-server Docker container.
+# Builds (if needed) and starts the openLCA gdt-server Docker container.
 # Run this once at the start of a Codespaces session.
 #
 # Usage:  bash setup_olca.sh
@@ -8,23 +8,31 @@
 
 set -e
 
-IMAGE="greendelta/gdt-server:latest"
+IMAGE="gdt-server:latest"
 CONTAINER="olca-server"
 DATA_DIR="$HOME/olca-data"
 
-# Create a data directory for the openLCA workspace
 mkdir -p "$DATA_DIR/databases"
+
+# Build the image if it doesn't exist yet
+if ! docker image inspect "$IMAGE" > /dev/null 2>&1; then
+    echo "[olca] Building gdt-server image (this only happens once)..."
+    BUILD_DIR=$(mktemp -d)
+    curl -fsSL https://raw.githubusercontent.com/GreenDelta/gdt-server/main/Dockerfile \
+        -o "$BUILD_DIR/Dockerfile.upstream"
+    sed 's|eclipse-temurin:21-jre|eclipse-temurin:17-jre|' \
+        "$BUILD_DIR/Dockerfile.upstream" > "$BUILD_DIR/Dockerfile"
+    docker build -t "$IMAGE" "$BUILD_DIR"
+    rm -rf "$BUILD_DIR"
+fi
 
 # Stop and remove any existing container with the same name
 if docker ps -a --format '{{.Names}}' | grep -q "^${CONTAINER}$"; then
-    echo "Removing existing container: $CONTAINER"
+    echo "[olca] Removing existing container: $CONTAINER"
     docker rm -f "$CONTAINER"
 fi
 
-echo "Pulling image: $IMAGE"
-docker pull "$IMAGE"
-
-echo "Starting gdt-server on port 8080..."
+echo "[olca] Starting gdt-server on port 8080..."
 docker run \
     --name "$CONTAINER" \
     -p 8080:8080 \
@@ -33,11 +41,10 @@ docker run \
     "$IMAGE" \
     -db paper_cup_lca
 
-# Wait for server to be ready
-echo "Waiting for server to start..."
+echo "[olca] Waiting for server to start..."
 for i in $(seq 1 30); do
     if curl -s http://localhost:8080/api/version > /dev/null 2>&1; then
-        echo "Server ready at http://localhost:8080"
+        echo "[olca] Server ready at http://localhost:8080"
         curl -s http://localhost:8080/api/version
         echo ""
         exit 0

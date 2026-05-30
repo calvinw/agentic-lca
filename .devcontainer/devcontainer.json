@@ -1,17 +1,9 @@
 {
   "image": "ghcr.io/calvinw/ai-course-devcontainer:latest",
-  "forwardPorts": [8080],
-  "portsAttributes": {
-    "8080": {
-      "label": "openLCA gdt-server",
-      "onAutoForward": "silent"
-    }
-  },
   "features": {
     "ghcr.io/devcontainers/features/docker-in-docker:2": {}
   },
-  "postCreateCommand": "setup-env.sh && install-mcps.sh && setup-skills.sh && skillshare install github.com/anthropics/skills/skill-creator && sync-skills.sh || true && pip install olca-ipc olca-schema --break-system-packages",
-  "postStartCommand": "bash .devcontainer/start_olca.sh",
+  "postCreateCommand": "setup-env.sh && install-mcps.sh && setup-skills.sh && skillshare install github.com/anthropics/skills/skill-creator && (sync-skills.sh || true) && pip install olca-ipc olca-schema --break-system-packages",
   "secrets": {
     "STITCH_API_KEY": "STITCH_API_KEY"
   },
