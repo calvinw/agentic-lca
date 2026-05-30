@@ -1,0 +1,634 @@
+1
+00:00:09,470 --> 00:00:12,210
+Where shall we stop?
+
+2
+00:00:12,210 --> 00:00:15,435
+When we speak of
+system boundaries,
+
+3
+00:00:15,435 --> 00:00:19,035
+should we include if we take
+our example of popcorn,
+
+4
+00:00:19,035 --> 00:00:22,115
+the machine who
+manufactured the popcorn?
+
+5
+00:00:22,115 --> 00:00:25,460
+What about the machine
+who made the machine and
+
+6
+00:00:25,460 --> 00:00:26,960
+the machine who made
+the machine who made
+
+7
+00:00:26,960 --> 00:00:29,995
+the machine who
+manufactured popcorn?
+
+8
+00:00:29,995 --> 00:00:32,520
+We don't have infinite time,
+
+9
+00:00:32,520 --> 00:00:35,370
+we need to stop somewhere
+in our assessment,
+
+10
+00:00:35,370 --> 00:00:37,915
+so where to stop
+
+11
+00:00:37,915 --> 00:00:44,460
+consistently and how to fix
+these system boundaries.
+
+12
+00:00:44,460 --> 00:00:46,430
+Our learning objective is to
+
+13
+00:00:46,430 --> 00:00:48,770
+define consistent
+system boundaries based
+
+14
+00:00:48,770 --> 00:00:50,510
+on the product service and
+
+15
+00:00:50,510 --> 00:00:52,790
+the function, and
+more specifically,
+
+16
+00:00:52,790 --> 00:00:56,300
+identify potential biases
+in system boundary,
+
+17
+00:00:56,300 --> 00:00:58,954
+determine rule for
+good practice,
+
+18
+00:00:58,954 --> 00:01:02,675
+and check whether
+under which condition
+
+19
+00:01:02,675 --> 00:01:05,300
+common processes to
+different scenario
+
+20
+00:01:05,300 --> 00:01:08,375
+can be excluded from
+these boundaries.
+
+21
+00:01:08,375 --> 00:01:11,525
+Let's take a counterexample.
+
+22
+00:01:11,525 --> 00:01:14,270
+In the early 1990s,
+
+23
+00:01:14,270 --> 00:01:16,475
+consultants worked for
+
+24
+00:01:16,475 --> 00:01:20,840
+a very well-known international
+fast food chain of
+
+25
+00:01:20,840 --> 00:01:24,180
+restaurants and they compare
+
+26
+00:01:24,180 --> 00:01:29,530
+a fast food with a
+conventional restaurant.
+
+27
+00:01:29,780 --> 00:01:33,074
+Basically, the consultant
+
+28
+00:01:33,074 --> 00:01:35,810
+arrive with his results
+and publishes, in fact,
+
+29
+00:01:35,810 --> 00:01:39,320
+it was disclosed inside
+the fast-food restaurant
+
+30
+00:01:39,320 --> 00:01:44,440
+that the fast food requires
+six time less energy,
+
+31
+00:01:44,440 --> 00:01:47,360
+seven time less water,
+
+32
+00:01:47,360 --> 00:01:51,770
+and surprisingly, five
+times less waste.
+
+33
+00:01:51,770 --> 00:01:55,130
+The last point was the
+
+34
+00:01:55,130 --> 00:01:59,670
+most surprising from
+my point of view.
+
+35
+00:02:00,410 --> 00:02:03,150
+Looking at these results,
+
+36
+00:02:03,150 --> 00:02:04,730
+we were starting investigating,
+
+37
+00:02:04,730 --> 00:02:08,310
+but why do we get these results?
+
+38
+00:02:08,310 --> 00:02:10,590
+Why is really the
+question for science?
+
+39
+00:02:10,590 --> 00:02:12,860
+When we don't understand
+when we're surprised,
+
+40
+00:02:12,860 --> 00:02:15,710
+we never let it go, we
+always ask why, why,
+
+41
+00:02:15,710 --> 00:02:18,530
+why, until we understand
+and either we
+
+42
+00:02:18,530 --> 00:02:21,860
+learn something new or
+there was a problem.
+
+43
+00:02:21,860 --> 00:02:23,630
+In this study,
+
+44
+00:02:23,630 --> 00:02:26,000
+there was indeed some problems.
+
+45
+00:02:26,000 --> 00:02:27,470
+It was a restaurant,
+
+46
+00:02:27,470 --> 00:02:30,275
+so they had taken the boundary,
+
+47
+00:02:30,275 --> 00:02:34,145
+the walls of my restaurant
+as system boundary,
+
+48
+00:02:34,145 --> 00:02:39,875
+and choosing geographical
+rather than functional boundary
+
+49
+00:02:39,875 --> 00:02:44,345
+does not necessarily
+cover the same reality.
+
+50
+00:02:44,345 --> 00:02:47,180
+We see that when we have
+
+51
+00:02:47,180 --> 00:02:50,690
+here the different step
+of food preparation,
+
+52
+00:02:50,690 --> 00:02:52,520
+which are considered in
+
+53
+00:02:52,520 --> 00:02:54,140
+the fast-food restaurant and
+
+54
+00:02:54,140 --> 00:02:55,840
+in a conventional restaurant.
+
+55
+00:02:55,840 --> 00:02:58,760
+If you take the wall
+of the restaurant,
+
+56
+00:02:58,760 --> 00:03:02,870
+what happens inside the
+wall of the two here,
+
+57
+00:03:02,870 --> 00:03:04,070
+the fast foods,
+
+58
+00:03:04,070 --> 00:03:08,750
+and on the right, the
+conventional restaurant.
+
+59
+00:03:08,750 --> 00:03:11,660
+First, the preparation
+of food and
+
+60
+00:03:11,660 --> 00:03:15,800
+cooking is included in the
+conventional restaurant,
+
+61
+00:03:15,800 --> 00:03:19,235
+but this is excluded in
+
+62
+00:03:19,235 --> 00:03:21,740
+my fast-food restaurant
+because it's
+
+63
+00:03:21,740 --> 00:03:25,645
+pre-prepared burger or
+salad which are ready.
+
+64
+00:03:25,645 --> 00:03:29,685
+The final cooking
+is in both cases,
+
+65
+00:03:29,685 --> 00:03:32,360
+but in addition to the cleaning,
+
+66
+00:03:32,360 --> 00:03:34,250
+heating of the
+restaurant itself,
+
+67
+00:03:34,250 --> 00:03:36,875
+and the restaurant is
+not really the same,
+
+68
+00:03:36,875 --> 00:03:40,640
+there is not so much table
+in a fast-food restaurant,
+
+69
+00:03:40,640 --> 00:03:45,880
+here we have to also deal
+with reusable dishes.
+
+70
+00:03:45,880 --> 00:03:48,110
+We don't have here dishes,
+
+71
+00:03:48,110 --> 00:03:52,280
+but we have packaging
+and the packaging waste
+
+72
+00:03:52,280 --> 00:03:55,280
+here can be not
+
+73
+00:03:55,280 --> 00:03:58,015
+necessarily collected
+inside my restaurant,
+
+74
+00:03:58,015 --> 00:04:02,160
+so they might be
+excluded, and secondly,
+
+75
+00:04:02,160 --> 00:04:04,415
+the manufactured
+of the packaging
+
+76
+00:04:04,415 --> 00:04:06,050
+was not happening
+in the restaurants,
+
+77
+00:04:06,050 --> 00:04:07,535
+so it's also excluded.
+
+78
+00:04:07,535 --> 00:04:09,950
+If we come back, the function
+
+79
+00:04:09,950 --> 00:04:12,124
+of the fast food, in addition,
+
+80
+00:04:12,124 --> 00:04:14,840
+is different because we have
+
+81
+00:04:14,840 --> 00:04:17,825
+people in a conventional
+restaurant will sit,
+
+82
+00:04:17,825 --> 00:04:19,955
+will take time to speak whereas,
+
+83
+00:04:19,955 --> 00:04:23,435
+in fast food, you don't offer
+these secondary function.
+
+84
+00:04:23,435 --> 00:04:26,225
+To compare rather the fast food,
+
+85
+00:04:26,225 --> 00:04:29,870
+we should compare it with
+another fast food for which we
+
+86
+00:04:29,870 --> 00:04:34,170
+have reusable dishes
+versus the takeaway.
+
+87
+00:04:34,170 --> 00:04:36,340
+Now, about the waste,
+
+88
+00:04:36,340 --> 00:04:39,695
+what is the difference
+on the waste between
+
+89
+00:04:39,695 --> 00:04:43,120
+the fast foods and the
+conventional restaurant?
+
+90
+00:04:43,120 --> 00:04:45,320
+First, the main waste
+
+91
+00:04:45,320 --> 00:04:48,145
+stream in a normal
+restaurant, what is it?
+
+92
+00:04:48,145 --> 00:04:51,255
+It's the green waste,
+
+93
+00:04:51,255 --> 00:04:53,165
+it's preparing my food.
+
+94
+00:04:53,165 --> 00:04:54,920
+I have here losses,
+
+95
+00:04:54,920 --> 00:04:58,940
+I have some bones
+that are excluded and
+
+96
+00:04:58,940 --> 00:05:03,020
+this compostable waste
+are the main part,
+
+97
+00:05:03,020 --> 00:05:06,450
+whereas it's packaging in
+the case of the fast food.
+
+98
+00:05:06,450 --> 00:05:08,150
+So very different waste,
+
+99
+00:05:08,150 --> 00:05:11,390
+so taking just the
+quantity as such doesn't
+
+100
+00:05:11,390 --> 00:05:16,035
+qualify for an impact base
+footprint of comparison.
+
+101
+00:05:16,035 --> 00:05:17,940
+We need to account from
+
+102
+00:05:17,940 --> 00:05:20,360
+which type of waste,
+and in addition,
+
+103
+00:05:20,360 --> 00:05:22,370
+as we said, the packaging
+is not necessarily
+
+104
+00:05:22,370 --> 00:05:25,215
+considered in my
+fast-food restaurant.
+
+105
+00:05:25,215 --> 00:05:28,520
+The preparation and the energy
+
+106
+00:05:28,520 --> 00:05:30,200
+when preparing the burgers,
+
+107
+00:05:30,200 --> 00:05:31,220
+salad, and all that,
+
+108
+00:05:31,220 --> 00:05:33,410
+was also dis-considered in
+
+109
+00:05:33,410 --> 00:05:36,175
+the fast food and not
+in the conventional.
+
+110
+00:05:36,175 --> 00:05:41,435
+Let's look at the system
+boundary now for a proper study.
+
+111
+00:05:41,435 --> 00:05:44,210
+Colleague from the ETH Zurich,
+
+112
+00:05:44,210 --> 00:05:46,430
+the Switzerland
+Institute of Technology,
+
+113
+00:05:46,430 --> 00:05:48,025
+the Swiss MIT in Zurich,
+
+114
+00:05:48,025 --> 00:05:51,450
+redid the same study, this time,
+
+115
+00:05:51,450 --> 00:05:54,800
+according and
+considering dishes,
+
+116
+00:05:54,800 --> 00:05:57,485
+packaging, the food preparation,
+
+117
+00:05:57,485 --> 00:06:00,245
+the dishwashing,
+heating, lighting,
+
+118
+00:06:00,245 --> 00:06:04,265
+and the waste treatment
+equally in both scenarios.
+
+119
+00:06:04,265 --> 00:06:06,380
+They were including what was
+
+120
+00:06:06,380 --> 00:06:09,230
+happening in the pre-preparation
+
+121
+00:06:09,230 --> 00:06:11,630
+of the food as well as what
+
+122
+00:06:11,630 --> 00:06:14,345
+was happening within
+the restaurant.
+
+123
+00:06:14,345 --> 00:06:16,130
+Here the system boundary were
+
+124
+00:06:16,130 --> 00:06:18,845
+counting for the same reality.
+
+125
+00:06:18,845 --> 00:06:22,465
+Second, they compared
+another fast food,
+
+126
+00:06:22,465 --> 00:06:26,325
+one with reusable,
+
+127
+00:06:26,325 --> 00:06:35,790
+this one is with reusable
+dishes versus here,
+
+128
+00:06:35,790 --> 00:06:39,550
+the takeaway fast food.
+
+129
+00:06:40,520 --> 00:06:44,390
+They recounted also the
+number of customer, in fact,
+
+130
+00:06:44,390 --> 00:06:47,450
+the fast food customer
+were overestimated or
+
+131
+00:06:47,450 --> 00:06:48,770
+they hadn't taken really
+
+132
+00:06:48,770 --> 00:06:50,915
+an average day in
+the first study.
+
+133
+00:06:50,915 --> 00:06:53,285
+We see that, in practice,
+
+134
+00:06:53,285 --> 00:06:57,380
+the reusable dishes
+was leading to
+
+135
+00:06:57,380 --> 00:06:58,940
+a lower impact and
+
+136
+00:06:58,940 --> 00:07:01,830
+one reason for it was a
+reduction of transportation,
+
+137
+00:07:01,830 --> 00:07:03,365
+the other reason was
+
+138
+00:07:03,365 --> 00:07:06,995
+the reduction in the
+secondary packaging,
+
+139
+00:07:06,995 --> 00:07:11,700
+which is not completely
+surprising in our case.

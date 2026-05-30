@@ -1,0 +1,109 @@
+We know that getting new data for life cycle
+inventory is hot, so could we benefit
+from existing data to get an easy way to obtain the first order of magnitude
+for many different product? This is exactly
+what input-output LCA economic-based
+LCA is offering. The learning objectives are to introduce the economic-based
+input-output LCA and apply this
+economic input-output LCA to the hand-dryer
+example to show you how you can perform
+quickly an LCA on this basis. Process LCA, we know, is based on technical
+coefficient and detailed process modeling
+for core processes. If we take the
+example of aluminum, one of the main physical
+flow for aluminum are the kilowatt-hour electricity
+used per kilogram aluminum. What we're basically
+doing in process LCA is multiplying
+these intermediary physical flow by an
+elementary flow of CO_2, for example, per physical units, so in kilo CO_2 per
+kilowatt-hour electricity. When we multiply that, the kilowatt-hour electricity
+goes away and we get the kilo CO_2 per kilo aluminum. That will be one of the
+inventory flow that we have. Now, economic
+input-output-based LCA rely on data which are coming on the spending
+of each sector. We say, for example, for one unit output
+of this sector here, this sector will spend money
+in another two sectors. For example, this
+sector at tier 1, will then spend amount of money in other sector at tier 2. We continue like
+that up to infinity. The beauty is any industry
+from a sector is defacto reporting to the Bureau
+of Economic Analysis in the US how much spending
+they make in 400 sectors. We can start building
+this network for 400 different types of products or commodities,
+or sectors. We can have either
+commodity or sector based. How does it work? Instead of an intermediary
+physical flow, we have now an intermediary
+economic flow, which are the dollars
+spent on buying electricity per dollar
+aluminum output or aluminum produce. What we need is determine
+elementary flow per dollar, per economic units
+in, for example, kilo CO_2 per
+dollar electricity, to multiply that, and then the dollar
+electricity go away, and we get kilo CO_2
+per dollar aluminum, which will be our
+new inventory flow. If we multiply that
+by the number of dollar aluminum per
+functional unit, we will get the kilo CO_2
+per functional unit. The same way that here, we were multiplying by the kilo aluminum
+per functional unit, and we were getting
+the same kilo CO_2 per functional unit
+in both approaches. Similar approaches, how do we get the kilo CO_2 per
+dollar electricity? We, in fact, take the
+overall electricity sector, look at how many dollar output
+we have from electricity, what is the total CO_2 emission from the electricity sector, and do the relative ratio
+of it to calculate this. Let's take an example and use a small tool which
+is available online. I invite you to also connect on this website and we will
+do it directly using it. We can use the economic
+input-output and also identify which sector
+has a dominant contribution. Let's look how it works. When you arrive to
+www.eiolca.net, this economic input-output
+life cycle assessment. You go and use the tool, and you arrive here. You can choose different
+model of producer. Let's stick to the
+US 2002 Producer. But we could have also a
+purchaser perspective, if you like, for
+different years. But this one has 428 sectors. We can put here and
+search for a product. We had bought a computer
+which was $1,585. If we look for electronics, and we search for it,
+electronic computer, you see we get different
+computer and we have here an electronic
+computer manufacturing. I would like to select that. In addition, I will select a
+million dollar in that case. Here we had not a
+million dollar, but we'll keep in million because if we take it in dollar, we likely to have small coma, which is not very convenient. I put $1.585 million, we'll have to divide the
+results afterwards by 1,000. Let's look first at
+the economic activity as outputs which will be what economic activity this $1.5 million in the computer
+sector is creating. You see that we get here a higher economic
+activity of $3.91 million for $1.5 million spent in the electronic
+computer and manufacturing. Where is it spent? Still, the highest number is in the electronic
+computer manufacturing. But you see that wholesale
+trade is important. Printed circuits, management
+of company is important, computer storage, computer
+terminal, semiconductor, and then software is important, scientific research
+and development services, and real estate. We see the money is spent
+in all these sectors. One dollar spent in one sector will generate
+an additional number of dollar in the rest
+of the economy through the different tiers. Now we can change
+the input and say, I'm not interested so much
+in the economic activity. I'm not an economist. But as an environmental person, I'm interested in
+greenhouse gases, and we select that. Now we've done an LCA
+in a few minutes. We have now the
+greenhouse gases, which are for $1.585 million. What are the amount
+of greenhouse gases? Four hundred and
+fifty one ton CO_2. If I take now one
+computer and divide this million dollar by
+1,000, this will be, in fact, 451 kilogram
+CO_2 per computer. Where do we have
+the main emission? Power generation and supply,
+that's the electricity. Electricity for
+manufacturing because here we don't have the use
+phase of the computer. To add the use phase, we should add a
+certain amount of dollars spent in the
+electricity sector during the use phase. But already, the
+power generation and supply is dominant
+for the manufacturing. Then iron and steel mills, oil and gas transportation. You see truck transportation. What is really interesting is
+air transportation is here. Even if it was not appearing in the dollar spent because
+of the high emission, it comes out here in that case. Even the wholesale
+which is that trade, which is not very energy
+intensive or CO_2 intensive, appears because of its
+high contribution. The beauty of that
+is we have done an LCA in a few minutes
+and we have seen what are the main contributor that we can check if they
+were included when I do my process LCA of these, too.

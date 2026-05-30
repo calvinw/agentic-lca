@@ -1,0 +1,347 @@
+1
+00:00:09,520 --> 00:00:16,095
+Finally let's compare the method,
+how different are they in their results.
+
+2
+00:00:16,095 --> 00:00:18,294
+And a nice way to look at that is,
+
+3
+00:00:18,294 --> 00:00:22,048
+to take the worldwide impact
+on normalization flows.
+
+4
+00:00:22,048 --> 00:00:27,403
+Calculated by taking the total
+emission in each inventory flow times,
+
+5
+00:00:27,403 --> 00:00:29,823
+the characterization factor.
+
+6
+00:00:29,823 --> 00:00:35,826
+And we see the results for ReCiPe,
+IMPACT2002+ and IMPACT World+ this
+
+7
+00:00:35,826 --> 00:00:41,936
+is published in our impact world plus
+publication of bill volatile 2019.
+
+8
+00:00:41,936 --> 00:00:45,705
+What is interesting is you see
+a relatively good concordance for
+
+9
+00:00:45,705 --> 00:00:46,973
+the highest impact.
+
+10
+00:00:46,973 --> 00:00:50,879
+So when we look between ReCiPe,
+climate change,
+
+11
+00:00:50,879 --> 00:00:57,577
+particular matter in IMPACT World+,
+climate change, this is 100 years first.
+
+12
+00:00:57,577 --> 00:01:02,481
+And then you have after 100
+years impact which are here and
+
+13
+00:01:02,481 --> 00:01:06,820
+particular now the water
+is also particularly here.
+
+14
+00:01:06,820 --> 00:01:12,493
+But the water is also important and the
+water was not considered really in ReCiPe.
+
+15
+00:01:12,493 --> 00:01:17,537
+Human toxicity are coming so
+find particular
+
+16
+00:01:17,537 --> 00:01:22,322
+is here and
+we find that also as important.
+
+17
+00:01:22,322 --> 00:01:26,360
+Toxicity is a bit middle ground here
+
+18
+00:01:26,360 --> 00:01:31,207
+depending on the cancer and
+then cancer and
+
+19
+00:01:31,207 --> 00:01:37,273
+in ReCiPe also is is slightly
+lower importance here.
+
+20
+00:01:37,273 --> 00:01:39,252
+And also in the middle ground for
+
+21
+00:01:39,252 --> 00:01:43,809
+the impact that impact doesn't have
+the climate change on human health.
+
+22
+00:01:43,809 --> 00:01:48,224
+It kept it separate so
+we cannot compare it on the same scale.
+
+23
+00:01:48,224 --> 00:01:53,126
+But it's interesting also the category
+with the lowest impact are uniting
+
+24
+00:01:53,126 --> 00:01:58,051
+radiation photochemical formation,
+this is also what we find in impact.
+
+25
+00:01:58,051 --> 00:02:01,594
+Well, plus, so
+there is here good concordance.
+
+26
+00:02:01,594 --> 00:02:06,626
+The Japanese method arrived
+to climate change and
+
+27
+00:02:06,626 --> 00:02:12,273
+PM as the highest in 10 -2
+daily per person per year.
+
+28
+00:02:12,273 --> 00:02:15,482
+And you see we we are exactly
+in the same range here.
+
+29
+00:02:15,482 --> 00:02:17,680
+So relatively good concordance.
+
+30
+00:02:17,680 --> 00:02:22,397
+This was human health, you can do
+the same for the ecosystem quality.
+
+31
+00:02:22,397 --> 00:02:25,781
+And we see here slightly
+more different but
+
+32
+00:02:25,781 --> 00:02:31,047
+we see climate change and
+land occupation as some of the top level.
+
+33
+00:02:31,047 --> 00:02:37,525
+And we see that also climate change and
+the land occupation are also top.
+
+34
+00:02:37,525 --> 00:02:42,241
+What we have in a different is
+freshwater exostosis is different
+
+35
+00:02:42,241 --> 00:02:43,909
+here between the two.
+
+36
+00:02:43,909 --> 00:02:49,224
+And we have again that uniting
+radiation is really negligible for
+
+37
+00:02:49,224 --> 00:02:51,453
+the ecosystem in our case.
+
+38
+00:02:51,453 --> 00:02:56,167
+Confirming if like that we
+have low level terrestrial
+
+39
+00:02:56,167 --> 00:03:01,208
+acidification is a bit more
+prominent in impact ReCiPe.
+
+40
+00:03:01,208 --> 00:03:06,017
+So, overall a relatively good concordance
+between method with some differences.
+
+41
+00:03:06,017 --> 00:03:11,060
+And that's why we suggest that
+you always use a second method to
+
+42
+00:03:11,060 --> 00:03:16,406
+confirm that your main conclusion for
+your case study are robust.
+
+43
+00:03:16,406 --> 00:03:20,748
+We see some first sign of maturity
+as a scientific area, okay.
+
+44
+00:03:20,748 --> 00:03:25,754
+Still improving life cycle impact
+system is still in improving.
+
+45
+00:03:25,754 --> 00:03:30,282
+First, we have seen a very high level
+of collaboration between the impact
+
+46
+00:03:30,282 --> 00:03:32,776
+assessment field and risk assessment.
+
+47
+00:03:32,776 --> 00:03:38,076
+Indoor pollution which show that we
+are really partner in the story.
+
+48
+00:03:38,076 --> 00:03:42,097
+First we had adapted risk
+assessment to make it comparative.
+
+49
+00:03:42,097 --> 00:03:47,202
+And then we brought back comparative
+with innovative development and
+
+50
+00:03:47,202 --> 00:03:51,797
+that made us interesting for
+the people from risk assessment.
+
+51
+00:03:51,797 --> 00:03:55,723
+And that's why I was in
+fact high here in the risk
+
+52
+00:03:55,723 --> 00:03:59,663
+science center when we
+we it was existing here.
+
+53
+00:03:59,663 --> 00:04:03,227
+We start to be published in
+the best environmental journal and
+
+54
+00:04:03,227 --> 00:04:05,290
+the international journal of LCA.
+
+55
+00:04:05,290 --> 00:04:09,146
+Okay, together with the journalist
+industry ecology journal of
+
+56
+00:04:09,146 --> 00:04:12,032
+cleaner production is
+producing a lot of paper.
+
+57
+00:04:12,032 --> 00:04:16,853
+But their index here
+the importance has grown up to 4.3
+
+58
+00:04:16,853 --> 00:04:21,384
+being making this journal
+number 26 out of 350.
+
+59
+00:04:21,384 --> 00:04:24,030
+That's reasonably good that we see.
+
+60
+00:04:24,030 --> 00:04:30,430
+Conclusion always at least include
+the main information on given effect.
+
+61
+00:04:30,430 --> 00:04:36,326
+If you want to model LCIA you
+need to take all relevant
+
+62
+00:04:36,326 --> 00:04:42,761
+aspect of the cause effect chain,
+okay, cause effect.
+
+63
+00:04:46,464 --> 00:04:50,644
+Why, because some people judge for
+example make judgment just on
+
+64
+00:04:50,644 --> 00:04:55,515
+the intrinsic toxicity, neglecting
+the fate which is a factor of million.
+
+65
+00:04:55,515 --> 00:04:57,811
+You cannot neglect the factor of million.
+
+66
+00:04:57,811 --> 00:05:02,229
+Okay, and so
+far use several typically two or
+
+67
+00:05:02,229 --> 00:05:08,870
+three impact assistant method usually
+do most of the work with one.
+
+68
+00:05:08,870 --> 00:05:12,916
+And you test your final results,
+a new final conclusion with the other.
+
+69
+00:05:12,916 --> 00:05:18,793
+So in your case study you can choose
+either as a basis like impact 2002 or
+
+70
+00:05:18,793 --> 00:05:23,571
+TRACI or ReCiPe and
+then use one of the other as a comparison.
+
+71
+00:05:23,571 --> 00:05:28,234
+I'm not entirely sure if impact
+well place will be available.
+
+72
+00:05:28,234 --> 00:05:33,420
+It might not be available in
+Cima Pro easily for this year

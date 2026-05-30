@@ -1,0 +1,54 @@
+So we've learned how to normalize that and we can now apply that
+once we clarified our calculation to our different scenarios and first I keep my different
+area of protection. Here we have human health
+okay from here until here and then here we have
+the ecosystem quality and we finalize here with the natural
+resources with express his in primary energy so all the years. So when we look at the scenarios,
+let's start to put them a bit in perspective we find back
+between scenario that the damage characterization which is very
+important to perform first. Because otherwise we would
+have very similar results between these different
+impact categories so that the importance of the damage
+characterization is that we can differentiate this
+impact category from the other. And now from the normalized value we see that the way the normalization
+factor are done. We get in fact slightly higher
+proportionally impact for global warming on human health than for global warming on ecosystem
+quality which has other category. Which are contributing substantially
+not so much from for a front end panel, but from agriculture in a sense,
+not that surprising in this case. Okay so now question is what about
+summing all this impact after all. Now we have the same unit
+previously we had dolly and PDF square meter yard and
+dollar or mega jewel. So now we have the same units. Can we submit it? The answer is having the same
+unit is a necessary condition to some different quantity up,
+but not a sufficient condition. And in fact a priori you should keep the
+human health, the ecosystem quality and the natural resources has
+three different impact score. Okay, and we'll discuss on the next slide, what do we imply if we start summing
+them up across area of protection? Okay, we see also that we
+have the results after 100 years which are still
+substantial adding up here. So if we now we group within human health, you see that about half of
+the impact in human health and a bit more than half
+are due to global warming. That's what we have here like that, second read the after 100 years matter. Okay, this is after 100 years. That's a factor about 1.5 compared
+to the impact over the first years. And we find really in
+the three area of protection, the same ranking nearly where steel and recycled aluminum are high and
+low and the composite and the aluminum are pretty
+intermediary in the middle. So if you would start to sum
+up these different ratios, you would assume in fact
+that the total effect for human health would be equivalent
+to the total effect on equity, ecosystems, quality. Which be equivalent to the total effect on
+energy and resources or natural resources. Is that true? Nothing tell us that the present
+effect is equivalent. Okay, so to do better. That's where it's interesting
+to move to the next step, which will be in the next section of
+this presentation which is on waiting. So summary for the normalization
+normalization compared the impact score. Perfection we need to the total
+world impact per inhabitant of the corresponding impact category. It's really putting
+the score of my scenario in perspective to our overall activity. Normalized score can only be summed
+up within each area of protection. They cannot be some up across area
+of protection unless you accept or you assume that the total world
+impact are considered equivalent between the different area of
+protection or damaged categories. The Life Cycle Initiative developed
+default consistent normalization factor at midpoint and damage level. But I highly recommend that we
+apply it at damage level here and it's recommended that
+therefore to first perform the midpoint to damage
+assessment before normalizing. And we've seen that in our example
+because that will in a sense get rid of certain category which don't really
+come high in the the overall impact

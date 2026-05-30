@@ -1,0 +1,145 @@
+Use of ecoinvent, some
+tips for good use. If you have an industrial
+use of electricity, you might want to use the medium voltage and not necessarily the
+electricity mix. If you have a household use, you can use a low voltage. That is just the factor. This may not so huge difference, but this is good practice or you use the overall mix
+for the country. More important to take
+the right country then if you don't have a
+medium voltage for US, use the US mix. Transportation include the
+fact that 40 percent of the trip coming
+back once you have delivered your product
+are done empty. In 60 percent of the cases, they are able to find another
+goods to transport back, but 40 percent are empty and
+it's already included in the present data per tonne kilometer that we find
+in the ecoinvent database. Data and energy, we have three types of data, I think we already
+looked at that. We had the per fuel
+unit quantity, which is in kilo or
+this one or without conversion and unless you
+just study the supply chain, I would not use this data because they're
+missing the main emission here. Two possibility for
+what we can use, you can use your energy
+per megajoule final, this is what is bought, as we have learned, and they
+are called burnt processes, which include the term burn
+and this is with combustion. If you still want to relate
+it to the fuel quantity, you can use the net calorific
+value that we have seen, when we had looked at our inventory life
+cycle inventory data, where we had the aluminum 460 megajoule or the
+recycle aluminum, etc, rather glass, the
+gold and all that. We have done that,
+we had one slide on the net calorific value
+for this conversion. Cheaper megajoule useful is what is delivered inside the
+house and this will be heat. This is waste
+combustion and with the losses associated
+with combustion, what goes out on the
+stack of your house, for example, be sure you
+include end-of-life processes. I recommend you only
+use fossil CO2, not biogenic and be careful, you will see some suddenly
+bonus or negative impacts of heavy metal uptake because the crop are taking a
+metal from the soil. This is beneficial from
+a soil point of view, but it forgets very
+often that at the end of the life it is going in
+wastewater treatment plant, it comes back on the soil, the whole cycle is not considered you don't want
+to count really for it. A few more hints
+Benzene emission are reported under benzene rather
+than aromatic hydrocarbon, or the other organic volatile
+compound are under NMVOCs, which is non methane
+volatile organic compounds. Particulate emission, what really matters are the PM_2.5, the ones smaller than
+2.5 micro meter. Why? Because this is thought
+as really the most potent whereas those who are between 2.5 and 10 or larger than 10, this is a total particulate
+matter with TPM. They don't contribute much, that's at least the
+present state of science. If sometime you get only PM_10, you will just convert it
+through the fraction of PM_2.5 and get the impact
+always as a PM_2.5. For the CO_2 in
+particular, as I say, your pragmatic solution
+is to only account for fossil non biogenic CO_2 because what has been fixed is the negative
+value have been fixed, is re-released back, so you don't need
+to consider that. Where you need to consider
+the biogenic is for the CH_4 because these come
+in addition to the CO, they will degrade in CO_2
+but come in addition. PAHs, here you have benzo a pyrene as a separate
+emission and in a sense, PAHs is the rest of
+PAHs that are reported. The dioxin and Firenze emission, are expressed as
+equivalent TCDD or 2378 trichloride
+dibenzodioxin emission, which has already a
+weighting factor, so in a sense it's
+already a sort of impact assessment results. Finally, new feature
+of ecoinvent 3, we have some waterflow, We have new data set for
+electricity production, including the one in the US. We can choose our modeling
+strategy and to cut it short, I think you want to use the
+cut-off by default databases, which from my point
+of view is still the most reliable
+one or called simmer browser or recycled content
+unit option that you have. In the future we could have some allocation at the point of substitution and not
+want to enter in detail. But the separation of
+processes should first be applied so that if you have a plastic recycled
+from agriculture, you don't suddenly find with the impact which go with this
+plastic for the recycle. The people who are using
+recycled material, you find some nitrate
+because you had perhaps some crops which
+were losing nitrate, which are associated
+with this plastic. But the plastic itself is
+not linked to the nitrate. You should have done
+a separate assessment just for the plastic, but it's hard to do
+and has not been. In the meantime,
+to cut it short is used the cut-off models
+at least for this class. Finally, we are interested in collecting life-cycle
+inventory data. When we do that, first matters for primary data, you could use perhaps interviews of people who have a
+lot of experience, questionnaire or survey that
+you distribute in a company, you get them field. It's hard work to get them back. Bookkeeping of the enterprise
+or their management system, their ERP, that is, is basically following all
+what they're buying and so on. That could be interesting.
+We did that in fact at University of Michigan
+to do a first assessment. We look at all the spending
+of the university and got statistic on that to do a
+life-cycle assessment of that. That was about 10 years ago. We can use data collection
+tool online after. Of course you could do
+outside measurement. This is really expensive, but probably the most accurate. Secondary data we can find nowadays quite
+a bit on interview, you have the privilege
+to be able to do a literature search
+in 10 seconds. When I did my PhD, I would go to the library, look on mic microfilm. Then select publication,
+write down the title and all the coordinate
+it will go to Zurich. Three weeks later
+I will get back the paper and discovered was
+in Japanese for example, if it arrives to me. Nowadays, it's such
+a treat that we can Google search and
+do these data search. When you search, you
+can search for LCAs, cardboard footprint
+of different items, which will work pretty well. A nice way to search
+also is to come. If you find literature
+source which is well quoted. You look, who is
+quoting this milestone if you literature search
+and you can find all, all the people that paper. I go into the list
+of paper and look, Oh, this is an
+interesting paper. Doing that on three
+or four paper, you get a good sense of what
+is there because keyword, you might miss
+interesting thing. This is a nice way to do that, that generation
+then you could do calculation and estimate of
+emission factor for example. Here, Sonneman et al. developed by the
+lifecycle initiative have some global
+guidance principle, is a source which we will
+post on our course website. If you do that calculation, focus on the foreground system. The foreground system is defined as the processes which are under the financial control
+or operational control of a company undertaking
+the product inventory. For the other processes, you try to use the
+base data quality and that can be achieved by extrapolation or by simply
+using a similar process. As suggested by the
+greenhouse gas protocol here, it may be useful to
+establish a management plan, identifying all unit processes, collecting screening
+data, and refining the data collection
+for those processes which are contributing to
+the life cycle impact. This is typically the screening
+approach you do first, decide what is important
+to emphasize here. This reference here will provide you additional data if
+you have to do that. In summary, the availability of LCI data has made the
+realization of LCA's substantially easier and
+cheaper and enable you as a practitioner to focus on your foreground system
+where you have direct data. Whereas for all the rest, you can usually rely
+on background data. Consistency between
+background data is really key and
+very important. When using a conveyed that data, I recognize if you energy
+is about burned or our heat from all just the
+kilogram physical units. To be sure you have been
+modeling the process properly. I finish with Direct
+LCI data collection is hard work, but we need it. Usually it's okay to do it for one or two processes
+that we can. This is our privilege
+in some respect. In our time of data rich that we've never seen so many
+data available nowadays.

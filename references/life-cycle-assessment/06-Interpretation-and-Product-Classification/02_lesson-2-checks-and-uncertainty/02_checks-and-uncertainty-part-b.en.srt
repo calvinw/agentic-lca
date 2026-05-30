@@ -1,0 +1,1034 @@
+1
+00:00:08,690 --> 00:00:11,835
+Now, once you've checked
+
+2
+00:00:11,835 --> 00:00:14,790
+and you think your
+results have been robust,
+
+3
+00:00:14,790 --> 00:00:18,840
+you would still be
+able to decide what is
+
+4
+00:00:18,840 --> 00:00:19,920
+the uncertainty and is
+
+5
+00:00:19,920 --> 00:00:23,655
+the significant difference
+between scenario.
+
+6
+00:00:23,655 --> 00:00:25,740
+This is for part B.
+
+7
+00:00:25,740 --> 00:00:30,980
+First, considering the
+different part of the LCA,
+
+8
+00:00:30,980 --> 00:00:33,950
+here are the different
+phases of my LCA.
+
+9
+00:00:33,950 --> 00:00:36,200
+We have different type of
+
+10
+00:00:36,200 --> 00:00:38,875
+uncertainty for each
+of these phase.
+
+11
+00:00:38,875 --> 00:00:43,745
+First uncertain time are the
+uncertainty on input data,
+
+12
+00:00:43,745 --> 00:00:46,985
+and that could be into data
+
+13
+00:00:46,985 --> 00:00:50,915
+for the elementary of
+the intermediary flows.
+
+14
+00:00:50,915 --> 00:00:54,650
+An emission factor that we
+have on the uncertainty
+
+15
+00:00:54,650 --> 00:00:58,850
+or some model from
+environmental parameters.
+
+16
+00:00:58,850 --> 00:01:02,075
+For example, the
+chemical properties
+
+17
+00:01:02,075 --> 00:01:05,000
+have also uncertainty
+in the model.
+
+18
+00:01:05,000 --> 00:01:09,380
+Second model type, the
+model uncertainty itself.
+
+19
+00:01:09,380 --> 00:01:13,070
+Here it's more difficult
+to assess that.
+
+20
+00:01:13,070 --> 00:01:17,195
+You can have a model
+which are linear,
+
+21
+00:01:17,195 --> 00:01:20,075
+but in fact the
+phenomena is non-linear.
+
+22
+00:01:20,075 --> 00:01:22,160
+That would be a
+murderer uncertainty.
+
+23
+00:01:22,160 --> 00:01:26,145
+You could miss some
+contribution here.
+
+24
+00:01:26,145 --> 00:01:29,370
+We're trying also to
+account for that.
+
+25
+00:01:29,370 --> 00:01:33,845
+Some choices are associated
+with uncertainties.
+
+26
+00:01:33,845 --> 00:01:36,830
+For example, the choice of
+the allocation methods,
+
+27
+00:01:36,830 --> 00:01:39,685
+the choice of your
+system boundaries,
+
+28
+00:01:39,685 --> 00:01:42,440
+and the time horizons that you
+
+29
+00:01:42,440 --> 00:01:45,980
+consider will also did
+a 100 years larger
+
+30
+00:01:45,980 --> 00:01:48,650
+than a 100 years that will
+
+31
+00:01:48,650 --> 00:01:52,405
+play a role, and the choice
+of your weighting methods.
+
+32
+00:01:52,405 --> 00:01:54,590
+Now, variable, it's
+
+33
+00:01:54,590 --> 00:01:58,565
+either spacial viability
+or temporal variability.
+
+34
+00:01:58,565 --> 00:02:01,520
+This is not an uncertainty
+in the sense that if
+
+35
+00:02:01,520 --> 00:02:04,130
+your model is accounting for
+
+36
+00:02:04,130 --> 00:02:07,100
+regional difference in
+environmental sensitivity,
+
+37
+00:02:07,100 --> 00:02:11,195
+for example, or in your
+characterization factor.
+
+38
+00:02:11,195 --> 00:02:13,160
+Toxic don't have
+the same effect if
+
+39
+00:02:13,160 --> 00:02:15,050
+they have diluted a lot or not.
+
+40
+00:02:15,050 --> 00:02:18,050
+For example, if you
+account for that,
+
+41
+00:02:18,050 --> 00:02:20,780
+then it's just
+viability, and you are
+
+42
+00:02:20,780 --> 00:02:23,675
+able to reproduce that but
+if you use a simpler model,
+
+43
+00:02:23,675 --> 00:02:25,390
+this big covenant certain.
+
+44
+00:02:25,390 --> 00:02:28,080
+Same with temporal evaluation.
+
+45
+00:02:28,080 --> 00:02:30,290
+Your emission factor
+can change with time.
+
+46
+00:02:30,290 --> 00:02:33,095
+New technology can
+change with time.
+
+47
+00:02:33,095 --> 00:02:35,960
+Which mean, if we don't
+account for that,
+
+48
+00:02:35,960 --> 00:02:38,840
+this become an
+uncertainty and finally,
+
+49
+00:02:38,840 --> 00:02:40,595
+we can have uncertainty
+
+50
+00:02:40,595 --> 00:02:43,085
+associated with the
+technology use.
+
+51
+00:02:43,085 --> 00:02:46,055
+We can have different
+technology and
+
+52
+00:02:46,055 --> 00:02:51,350
+our data are not coming from
+the present technology of
+
+53
+00:02:51,350 --> 00:02:56,300
+the study we using
+other as a proxy and
+
+54
+00:02:56,300 --> 00:03:01,880
+that can create uncertainty
+we have all these type,
+
+55
+00:03:01,880 --> 00:03:04,325
+how can we assess, address,
+
+56
+00:03:04,325 --> 00:03:07,135
+and mitigate these
+different uncertainty?
+
+57
+00:03:07,135 --> 00:03:09,965
+We have? That's nice,
+a series of tools.
+
+58
+00:03:09,965 --> 00:03:13,085
+The first tool is
+the ISO standards,
+
+59
+00:03:13,085 --> 00:03:14,870
+and the recommendation light
+
+60
+00:03:14,870 --> 00:03:16,595
+from the life-cycle initiative.
+
+61
+00:03:16,595 --> 00:03:19,535
+This basically first address
+
+62
+00:03:19,535 --> 00:03:23,030
+the uncertainty due to
+choices is well-defined.
+
+63
+00:03:23,030 --> 00:03:25,340
+How you should define
+your functional unit,
+
+64
+00:03:25,340 --> 00:03:27,890
+how you should choose
+
+65
+00:03:27,890 --> 00:03:29,390
+your allocation method or
+
+66
+00:03:29,390 --> 00:03:31,850
+system boundary in
+a systematic way.
+
+67
+00:03:31,850 --> 00:03:33,425
+You still have some freedom.
+
+68
+00:03:33,425 --> 00:03:35,540
+You could still
+make some mistake,
+
+69
+00:03:35,540 --> 00:03:39,470
+but it ensure basic
+consistency, and
+
+70
+00:03:39,470 --> 00:03:43,820
+that's the role of the
+standard expert judgment.
+
+71
+00:03:43,820 --> 00:03:47,000
+The advantage of expert
+judgment is you're going to
+
+72
+00:03:47,000 --> 00:03:50,525
+assess and use it for
+any type of uncertainty.
+
+73
+00:03:50,525 --> 00:03:54,890
+But it's as good as
+the experts are there.
+
+74
+00:03:54,890 --> 00:03:57,635
+I would say, with experience,
+
+75
+00:03:57,635 --> 00:03:59,210
+we are gaining and
+
+76
+00:03:59,210 --> 00:04:01,880
+learning quite a bit
+about uncertainty.
+
+77
+00:04:01,880 --> 00:04:03,770
+But on the other hand, we
+
+78
+00:04:03,770 --> 00:04:06,215
+would like to compliment
+it with some tool.
+
+79
+00:04:06,215 --> 00:04:09,140
+The first tool, which is also
+
+80
+00:04:09,140 --> 00:04:12,530
+usable nearly in every
+case is sensitivity study.
+
+81
+00:04:12,530 --> 00:04:16,595
+Make the input vary, and you
+look how much the output are
+
+82
+00:04:16,595 --> 00:04:20,360
+very you can use
+
+83
+00:04:20,360 --> 00:04:25,175
+that for the parameter
+uncertainty input parameters,
+
+84
+00:04:25,175 --> 00:04:27,920
+but also you can test
+different scenarios.
+
+85
+00:04:27,920 --> 00:04:30,185
+Here we have the
+scenario analysis,
+
+86
+00:04:30,185 --> 00:04:31,700
+which is the variance for
+
+87
+00:04:31,700 --> 00:04:34,580
+discrete classes from
+allocation method,
+
+88
+00:04:34,580 --> 00:04:39,410
+and on that you can study
+more than uncertainty.
+
+89
+00:04:39,410 --> 00:04:42,395
+In certain cases, you
+can make regression,
+
+90
+00:04:42,395 --> 00:04:45,290
+for example, for
+bioaccumulation factor
+
+91
+00:04:45,290 --> 00:04:47,570
+as a function of
+chemical properties,
+
+92
+00:04:47,570 --> 00:04:51,605
+you can look at the correlation
+which were made, and get
+
+93
+00:04:51,605 --> 00:04:53,900
+statistical uncertainty based on
+
+94
+00:04:53,900 --> 00:04:57,410
+the measured value which
+were used for that.
+
+95
+00:04:57,410 --> 00:04:59,870
+Nonlinear modeling
+can help reduce
+
+96
+00:04:59,870 --> 00:05:03,365
+uncertainty because it counts
+for non-linear phenomena.
+
+97
+00:05:03,365 --> 00:05:07,910
+Spatialized model and
+dynamic model enable to
+
+98
+00:05:07,910 --> 00:05:10,670
+account for the spatial
+variability and
+
+99
+00:05:10,670 --> 00:05:14,085
+therefore reduce
+uncertainty. In that case.
+
+100
+00:05:14,085 --> 00:05:18,560
+Two methods are important
+for the parameter,
+
+101
+00:05:18,560 --> 00:05:21,140
+the input parameter uncertainty.
+
+102
+00:05:21,140 --> 00:05:23,855
+This is to be able to know
+
+103
+00:05:23,855 --> 00:05:27,110
+if not a single like in
+the sensitivity study,
+
+104
+00:05:27,110 --> 00:05:30,545
+but multiple parameter
+vary at the same time.
+
+105
+00:05:30,545 --> 00:05:33,530
+How much is my
+output uncertainty
+
+106
+00:05:33,530 --> 00:05:36,255
+varying with this
+input parameter?
+
+107
+00:05:36,255 --> 00:05:38,690
+And of course, in the end,
+
+108
+00:05:38,690 --> 00:05:40,760
+we would like to be able to
+
+109
+00:05:40,760 --> 00:05:43,340
+compare results
+with measurements,
+
+110
+00:05:43,340 --> 00:05:47,194
+which is the ultimate
+way to verify a model,
+
+111
+00:05:47,194 --> 00:05:50,560
+but it's very time-consuming.
+
+112
+00:05:50,560 --> 00:05:53,580
+The number of star
+here was representing
+
+113
+00:05:53,580 --> 00:05:57,585
+how good is the method
+for addressing this type.
+
+114
+00:05:57,585 --> 00:05:59,435
+It's the best and
+
+115
+00:05:59,435 --> 00:06:01,805
+the only way really to
+stress model uncertainty,
+
+116
+00:06:01,805 --> 00:06:04,635
+but in a system approach where
+
+117
+00:06:04,635 --> 00:06:07,895
+we are looking at the impact
+of a functional unit,
+
+118
+00:06:07,895 --> 00:06:12,960
+it's really hard to verify a
+per functional unit number
+
+119
+00:06:12,960 --> 00:06:16,725
+because you cannot measure
+
+120
+00:06:16,725 --> 00:06:20,290
+the shoe factory that you
+have a single shoe going out.
+
+121
+00:06:20,290 --> 00:06:22,895
+You need to do it for
+the overall production.
+
+122
+00:06:22,895 --> 00:06:27,730
+There you might perhaps
+have direct measurements.
+
+123
+00:06:27,730 --> 00:06:31,260
+Functional unit being a
+construct of the mind,
+
+124
+00:06:31,260 --> 00:06:35,160
+we have to be very
+selective to choose cases
+
+125
+00:06:35,160 --> 00:06:39,655
+where some time we can also
+compare with measurements.
+
+126
+00:06:39,655 --> 00:06:43,865
+Let's look at some
+of these approaches.
+
+127
+00:06:43,865 --> 00:06:46,220
+I start with the
+expert judgment,
+
+128
+00:06:46,220 --> 00:06:50,400
+and give you my 30
+years expertise in LCA.
+
+129
+00:06:50,400 --> 00:06:52,690
+What I've seen being
+
+130
+00:06:52,690 --> 00:06:56,020
+the minimum differences between
+
+131
+00:06:56,020 --> 00:06:58,175
+two different scenario to be
+
+132
+00:06:58,175 --> 00:07:00,695
+considered as
+significantly different.
+
+133
+00:07:00,695 --> 00:07:04,245
+Flows like energy and CO_2,
+
+134
+00:07:04,245 --> 00:07:06,925
+you need at least a 10
+percent difference.
+
+135
+00:07:06,925 --> 00:07:09,800
+There are flows where
+data are relatively good,
+
+136
+00:07:09,800 --> 00:07:11,940
+so small difference
+is important.
+
+137
+00:07:11,940 --> 00:07:13,625
+But if you have a two
+percent difference,
+
+138
+00:07:13,625 --> 00:07:16,125
+you can consider them as equal.
+
+139
+00:07:16,125 --> 00:07:19,760
+Acidification, eutrophication,
+fine particulate
+
+140
+00:07:19,760 --> 00:07:21,900
+at least 30 to I would say
+
+141
+00:07:21,900 --> 00:07:25,875
+30-50 percent
+difference for the PM.
+
+142
+00:07:25,875 --> 00:07:30,039
+Because uncertainty
+on the emission
+
+143
+00:07:30,039 --> 00:07:32,520
+here is more substantial.
+
+144
+00:07:32,520 --> 00:07:34,425
+For toxicity results.
+
+145
+00:07:34,425 --> 00:07:38,830
+Here the uncertainty
+is on the inventory,
+
+146
+00:07:38,830 --> 00:07:41,555
+but also on the
+characterization factor
+
+147
+00:07:41,555 --> 00:07:43,235
+and the impact side.
+
+148
+00:07:43,235 --> 00:07:45,250
+Here, at least you need
+
+149
+00:07:45,250 --> 00:07:47,325
+at least a factor
+of ten difference.
+
+150
+00:07:47,325 --> 00:07:51,390
+Or if it's very different
+substances and type of impact,
+
+151
+00:07:51,390 --> 00:07:56,280
+a factor 100 to be
+considered as significant.
+
+152
+00:07:56,280 --> 00:07:59,280
+The same for damage
+oriented results if
+
+153
+00:07:59,280 --> 00:08:02,180
+you compare across
+different impact category,
+
+154
+00:08:02,180 --> 00:08:04,620
+fine particulate
+with global warming,
+
+155
+00:08:04,620 --> 00:08:08,600
+with human toxicity,
+at least a factor of
+
+156
+00:08:08,600 --> 00:08:12,850
+10 or a 100 different to have
+a significant difference.
+
+157
+00:08:12,850 --> 00:08:16,960
+Question. Is that
+relevant still,
+
+158
+00:08:16,960 --> 00:08:19,570
+two ways to use factors
+
+159
+00:08:19,570 --> 00:08:20,880
+and characterization
+factor which
+
+160
+00:08:20,880 --> 00:08:22,620
+have so much uncertainty?
+
+161
+00:08:22,620 --> 00:08:24,669
+The answer, you have to realize
+
+162
+00:08:24,669 --> 00:08:27,485
+that toxicity results between
+
+163
+00:08:27,485 --> 00:08:31,010
+saccharine and dioxane has
+
+164
+00:08:31,010 --> 00:08:35,120
+12 orders of
+magnitude variation.
+
+165
+00:08:35,250 --> 00:08:39,245
+Here we are speaking to one
+or two orders of magnitude.
+
+166
+00:08:39,245 --> 00:08:42,445
+10-100 is discriminant compare
+
+167
+00:08:42,445 --> 00:08:44,440
+to a million times a million.
+
+168
+00:08:44,440 --> 00:08:45,809
+It's still useful.
+
+169
+00:08:45,809 --> 00:08:50,255
+But look at these
+results in log scale,
+
+170
+00:08:50,255 --> 00:08:56,894
+either for talks here or when
+you compare damage results.
+
+171
+00:08:56,894 --> 00:09:00,710
+Sensitivity analysis
+and scenario analysis.
+
+172
+00:09:00,710 --> 00:09:02,740
+Sensitivity analysis enabled you
+
+173
+00:09:02,740 --> 00:09:04,410
+to test the robustness of
+
+174
+00:09:04,410 --> 00:09:08,820
+data to the data input
+and an assumption.
+
+175
+00:09:08,820 --> 00:09:11,940
+The idea is, you vary the input,
+
+176
+00:09:11,940 --> 00:09:15,610
+you look how the output
+vary. Two options.
+
+177
+00:09:15,610 --> 00:09:17,740
+First is you vary
+
+178
+00:09:17,740 --> 00:09:20,400
+each input parameter
+by 10 percent and you
+
+179
+00:09:20,400 --> 00:09:22,150
+see if the output vary also by
+
+180
+00:09:22,150 --> 00:09:25,515
+10 percent, or very little.
+
+181
+00:09:25,515 --> 00:09:29,230
+Problem here you're not
+considering that some of
+
+182
+00:09:29,230 --> 00:09:33,530
+these parameters here are
+more uncertain than other.
+
+183
+00:09:33,530 --> 00:09:35,945
+Not all parameter are equal.
+
+184
+00:09:35,945 --> 00:09:38,130
+It's better in fact,
+
+185
+00:09:38,130 --> 00:09:42,180
+to vary the input
+parameter between the
+
+186
+00:09:42,180 --> 00:09:47,030
+upper and the lower 95
+percent confidence limits.
+
+187
+00:09:47,030 --> 00:09:49,450
+You estimate for a
+given parameter.
+
+188
+00:09:49,450 --> 00:09:52,410
+This parameter vary
+perhaps by 10 percent,
+
+189
+00:09:52,410 --> 00:09:55,650
+but these other parameter
+vary by 100 percent,
+
+190
+00:09:55,650 --> 00:09:57,065
+a factor two twice higher,
+
+191
+00:09:57,065 --> 00:09:59,225
+twice lower, for example.
+
+192
+00:09:59,225 --> 00:10:02,855
+You make this
+variation according to
+
+193
+00:10:02,855 --> 00:10:05,855
+the given parameter,
+and you look
+
+194
+00:10:05,855 --> 00:10:09,730
+at the variation in
+final impact estimates.
+
+195
+00:10:09,730 --> 00:10:14,320
+The scenario analysis is a
+sensitivity analysis but with
+
+196
+00:10:14,320 --> 00:10:16,985
+discrete changes like change
+
+197
+00:10:16,985 --> 00:10:20,630
+the method of allocation
+that you are comparing.
+
+198
+00:10:20,630 --> 00:10:23,765
+For example, instead
+of substitution,
+
+199
+00:10:23,765 --> 00:10:26,750
+you use affects
+financial allocation.
+
+200
+00:10:26,750 --> 00:10:30,930
+You'd look how this
+affects the final results,
+
+201
+00:10:30,930 --> 00:10:34,380
+how the results are
+robust for this.
+
+202
+00:10:34,380 --> 00:10:37,375
+Now, sensitivity
+analysis usually
+
+203
+00:10:37,375 --> 00:10:40,565
+study one parameter at a time.
+
+204
+00:10:40,565 --> 00:10:44,260
+Now, you can already put sense.
+
+205
+00:10:44,260 --> 00:10:45,905
+This is where you vary
+
+206
+00:10:45,905 --> 00:10:49,825
+different parameter in
+fractural experimental plan,
+
+207
+00:10:49,825 --> 00:10:52,495
+for example, where
+you take extreme and
+
+208
+00:10:52,495 --> 00:10:55,715
+check all the extreme
+from a square.
+
+209
+00:10:55,715 --> 00:11:00,755
+Or then you can perform really
+uncertainty propagation.
+
+210
+00:11:00,755 --> 00:11:02,615
+Here you can use
+
+211
+00:11:02,615 --> 00:11:08,085
+the cardinal Monte Carlo
+random parameter selection.
+
+212
+00:11:08,085 --> 00:11:10,085
+You do that for the input.
+
+213
+00:11:10,085 --> 00:11:11,375
+You get a results on
+
+214
+00:11:11,375 --> 00:11:14,220
+the output and you repeat
+that median of time,
+
+215
+00:11:14,220 --> 00:11:18,090
+and you get a distribution
+on your output there.
+
+216
+00:11:18,090 --> 00:11:20,555
+Or they are simpler
+way to do that,
+
+217
+00:11:20,555 --> 00:11:22,835
+which is a Taylor series
+expansion that I will
+
+218
+00:11:22,835 --> 00:11:26,675
+demonstrate through
+an example later on.
+
+219
+00:11:26,675 --> 00:11:29,430
+Finally, empirical
+evaluation is really
+
+220
+00:11:29,430 --> 00:11:32,105
+the only way I say
+to model validity,
+
+221
+00:11:32,105 --> 00:11:36,350
+but not that easy
+to apply for LCA.

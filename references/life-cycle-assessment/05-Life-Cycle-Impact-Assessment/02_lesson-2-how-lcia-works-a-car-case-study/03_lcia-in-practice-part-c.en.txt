@@ -1,0 +1,111 @@
+Now that we know how to determined impact score
+within an impact category, question is how much these different impact score
+contribute to the damage, and is the damage
+relevant and important? If we look at our present world, it's true that the present
+damage is absolutely relevant. I just take as an example, I took these pictures
+here in 2014, six years ago in Kangaroo
+Island near South of Adelaide. A beautiful island, about 80 miles long,
+something like that. This year, beginning of January, a series of fire took place
+and with climate change, half of the island
+was destructed, and including the
+area where I had taken this Koala at 5:00 AM
+with sunrise behind his ear. It's sad, I would say
+consequences of our behavior. It's really worse that we look at our different products, and see how we could
+identify what matters, and then mitigate these
+different impacts. Let's look at that with our front-end panel
+case study from going to midpoint score
+to damage scores. Learning objective, determine
+damage impact scores from inventory and
+midpoint results. Interpret the LCIA
+results at damaged level. Apply impact World plus, add damage level to our
+car case study. Then compare and identify the most and least
+relevant impact category for this particular case study. Damage characterization is there the third step in our life
+cycle impact assessment. It is based on natural science, so no, I would say social
+preference, a priori. It aims to quantify the contribution of
+each midpoint category, to one or more damage category associated with main
+areas of protection. From the midpoint level, climate change
+here, for example, short-term, we determine in fact two impacts related
+to climate change. The climate change
+on human health, which is one of the area
+of protection here, but also the climate
+change impacts, as we've just seen
+with Kangaroo Island, on ecosystem quality, and what is related to it. One midpoint impact category could contribute at
+several end point, even if the number of area of protection
+is all these three. We have this list of different damage category
+that we can keep separate, and we have a lot of results or we can group them and
+then show the different, and compare the different
+contribution to human health. All the arrows arriving here, are the different
+contribution to ecosystem quality of finally to the resource and
+instrumental services. How do we calculate them? Really simple, multiply
+and sum in the end. Damage score express
+the midpoint flow of the reference substance
+of the category into an absolute damage. For example, for fine
+particle at impact, we will translate
+the kilo_pm 2.5, into this [inaudible]
+adjusted life years score. Note that damage is not
+a term defined by ISO. We did life-cycle initiative, we just redefine it clearly; damage score describe the damage inflicted upon
+category endpoint. Endpoint it being a term
+which is defined in ISO. Personally, I do prefer the
+term damage to endpoint, because endpoint
+in risk assessment has different meaning. An endpoint is typically the health outcome
+which is considered, or the organ which is looked at in rat
+toxicity for example. Whereas here endpoint is
+really a synonym of damage, and you will find both in the literature or in the different impact
+assessment method, they are really synonyms. How do we get from the
+midpoint score in category m, for example, global
+warming, to a damage, for example, on human health? We use MDF here, which is category specific, and damaged specific there's the link between the impact
+category and the damage, and its risk called
+a midpoint to damage factor from category m to damage d. If we
+take the category, find particulate unit of
+this MDF DALY kilo_pm. They multiply the main
+point which was in Kilo_PM2.5 equivalent and
+per functional units. When we do this multiplication, we find simply DALY per functional unit since the
+two kilo are getting away. Note that we can either
+do the sum here or we also can keep the score for each impact category separate
+and just compare them. In that case, we made
+them comparable. We don't necessarily need
+to go to a single score. What are the existing
+midpoint to damage factor? This is valid for
+impact World Plus. For human health, we
+first express them in DALY, disability-adjusted
+life years. One main factor is
+8.310 minus 7 here, which is the global warming
+impact from 0-100 years. In addition to that, some of the gases will have
+an odor effect like methane, and they have all their
+effect in these 0-100 years. But some other like
+CO_2, N_2O will also contribute for impact
+after 100 years. That we see in fact, the impact after 100
+years in our case for LT longer-term is about 2.5 higher than the impact in the first 100 years
+in that case. We see that water use is contributing the
+comparative toxic units on humans which were cases of cancer or
+cases of lung cancer, 11.5 so the unit will
+be here DALY per case. That will be cancer
+or non-cancer here for the non-cancer
+toxicity category. Then we have also some factor
+for ionizing radiation. Respiratory inorganic, which
+are the fine particulates, and respiratory organic or for toxin formation as so many
+other people are calling it, ozone layer depletion. On the right-hand side, you have the impacts, the damage on the
+ecosystem quality, and it's in potentially
+disappeared fraction of species, potentially the PDF. Is it a fashion of species over its multiplication
+over a certain area, unit area, and during a year? Why over and during? Because if some
+substance, for example, will diffuse over
+very large area and the persistent
+over a longer time, their impact damage
+will be also higher. Depends also to the extent of the damage is also important
+to measure in that school. Again, we have a first 100
+years score plus second, the longer-term over 100 year, which are also about
+2.5 times higher. The third area of protection is this instrumental value and we have essentially so far
+values which offer for sale. There are some interim value for mineral use and water
+use in that case. Let's look and apply now for
+the steel front-end panel. These data to calculate the damage from global warming and fine particulates
+on human health. For the first 100 year, we have 258.1 kilo
+CO_2 equivalent, which are multiply the 8.310
+minus 7 DALY per kilo. We will get here 0.000214 DALY per
+functional unit. You see again, we have the
+kilo per functional unit, we divide DALY per kilo of the rest of substance and we get the DALY per
+functional unit. We can do the same for the fine particulate impact
+and we can sum them up. We find here 0.00113 DALY per functional unit or that could be 1.3, 10 minus 3 DALY per
+functional unit. Let's remind this number. This is our steel
+front-end panel, essentially driven in a sense by the global warming impact. Because in the other here
+you have another 2.5, which is nearly 0.005 here, which is included in the 0.0088, which is coming from the global warming
+higher than 100 years.

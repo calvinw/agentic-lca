@@ -1,0 +1,61 @@
+Finally let's compare the method,
+how different are they in their results. And a nice way to look at that is, to take the worldwide impact
+on normalization flows. Calculated by taking the total
+emission in each inventory flow times, the characterization factor. And we see the results for ReCiPe,
+IMPACT2002+ and IMPACT World+ this is published in our impact world plus
+publication of bill volatile 2019. What is interesting is you see
+a relatively good concordance for the highest impact. So when we look between ReCiPe,
+climate change, particular matter in IMPACT World+,
+climate change, this is 100 years first. And then you have after 100
+years impact which are here and particular now the water
+is also particularly here. But the water is also important and the
+water was not considered really in ReCiPe. Human toxicity are coming so
+find particular is here and
+we find that also as important. Toxicity is a bit middle ground here depending on the cancer and
+then cancer and in ReCiPe also is is slightly
+lower importance here. And also in the middle ground for the impact that impact doesn't have
+the climate change on human health. It kept it separate so
+we cannot compare it on the same scale. But it's interesting also the category
+with the lowest impact are uniting radiation photochemical formation,
+this is also what we find in impact. Well, plus, so
+there is here good concordance. The Japanese method arrived
+to climate change and PM as the highest in 10 -2
+daily per person per year. And you see we we are exactly
+in the same range here. So relatively good concordance. This was human health, you can do
+the same for the ecosystem quality. And we see here slightly
+more different but we see climate change and
+land occupation as some of the top level. And we see that also climate change and
+the land occupation are also top. What we have in a different is
+freshwater exostosis is different here between the two. And we have again that uniting
+radiation is really negligible for the ecosystem in our case. Confirming if like that we
+have low level terrestrial acidification is a bit more
+prominent in impact ReCiPe. So, overall a relatively good concordance
+between method with some differences. And that's why we suggest that
+you always use a second method to confirm that your main conclusion for
+your case study are robust. We see some first sign of maturity
+as a scientific area, okay. Still improving life cycle impact
+system is still in improving. First, we have seen a very high level
+of collaboration between the impact assessment field and risk assessment. Indoor pollution which show that we
+are really partner in the story. First we had adapted risk
+assessment to make it comparative. And then we brought back comparative
+with innovative development and that made us interesting for
+the people from risk assessment. And that's why I was in
+fact high here in the risk science center when we
+we it was existing here. We start to be published in
+the best environmental journal and the international journal of LCA. Okay, together with the journalist
+industry ecology journal of cleaner production is
+producing a lot of paper. But their index here
+the importance has grown up to 4.3 being making this journal
+number 26 out of 350. That's reasonably good that we see. Conclusion always at least include
+the main information on given effect. If you want to model LCIA you
+need to take all relevant aspect of the cause effect chain,
+okay, cause effect. Why, because some people judge for
+example make judgment just on the intrinsic toxicity, neglecting
+the fate which is a factor of million. You cannot neglect the factor of million. Okay, and so
+far use several typically two or three impact assistant method usually
+do most of the work with one. And you test your final results,
+a new final conclusion with the other. So in your case study you can choose
+either as a basis like impact 2002 or TRACI or ReCiPe and
+then use one of the other as a comparison. I'm not entirely sure if impact
+well place will be available. It might not be available in
+Cima Pro easily for this year

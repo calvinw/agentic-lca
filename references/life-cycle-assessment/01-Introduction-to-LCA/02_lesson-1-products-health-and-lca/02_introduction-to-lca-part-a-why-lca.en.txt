@@ -1,0 +1,121 @@
+Look around you.
+How many objects do you have in the
+room around you? Each of these objects has
+its own supply chain, which is generating
+environmental emission in possibly the entire world. In addition, each of this
+product will be disposed off and create
+additional emission at the end of its life. Crucial that we understand how products are impacting
+the world and we need a tool which will work on the whole life cycle of
+pro-products and this is where life-cycle
+assessment is useful. Today, we'll look and understand
+why LCA can be used and how it can be used and what are the main stages covered by LCA. We will, as learning
+objective first, list the lifecycle
+stages of a product. You will be able to
+express the reasons why LCA is needed and then identify some of the
+main application of LCA here. If we look at the different
+stages of an LCA, everything starts
+first in the mining, in the extraction of
+metals or energy, where we dig the earth
+and take lots of earths, which has a small
+amount of resources, and we have to extract and
+transform these resources, concentrate them, refine the energy mean in refineries to get the raw material
+that we can then use in manufacturing
+and assembly here. One, we have manufactured
+and assembled product. Many industry, like
+a car industry is not producing most
+of the components, but it's assembling these
+components into a car here. Once we have that, we have to package and
+distribute our products. We have the user of
+our product here. This product, ones this
+have been used once could be either reused, recycled, or being disposed in a landfill, or disposing an incinerator, creating emission using
+resources at each of the stage of our life cycle, going from cradle to cradle
+to grave or in fact, from cradle to cradle, if we recycle our
+different products. Let's look at why LCA
+is really needed. It's interesting in the 1990s
+we were starting to work on LCA in different
+labs in the world. I met with environmental
+manager from Jacob Coffee. They had their own
+environmental departments. He told me basically, "We have 80 percent of our environmental effort is made indoor in the
+wall of my company." That only 20 percent of the environmental impact is
+happening where the coffee is manufactured and 80 percent is either created of the impact is either happening upstream, for example, in
+agriculture here, or downstream during
+the use phase or during the waste treatments. We have this discrepancy
+between where we put our environmental efforts and
+where we have our impacts, which we need to solve. That's where life-cycle
+assessment is enabling us to have this broad view avoiding
+to just the place, pollution from one
+place to another, or solve one problem
+but create another one. We want to be more
+integrated there. This development of LCA
+has been in parallel with the way environmental has been seen in our pre-1970s. We have really whistleblowers, I mean, Silent Spring Carson, who are environmental
+prophets who have the vision that we cannot
+continue as we are doing here. Nowadays we see they were right. We have limits, in that case, very few regulation at
+that time some concern, but not much waste it's
+not so much an issue. 1973, we have an energy
+crisis in the world. Price of petrol is
+10 times higher in a few months and we
+start to realize, we need to do more. We have in 1970s and '80s, emission control,
+emission regulation, end of pipe control are coming. Usually, it's limited to an environmental
+department in a company. It's not the whole company
+which is aiming at that here. A time where environmental
+NGOs are opposing industry largely. We have this
+conflict industry. Say, we want to
+continue to produce, the society needs our product, our chemical and you say no, you cannot do that. There are these also with
+the nuclear industry, quite a lot of opposition there. In 1990s, it's interesting. We start here to have a
+more proactive era where people start to see possibilities of synergy between
+environment and economics. Instead of opposing,
+we start saying we might have some
+win-win situation. We have new integrated
+pollution control or take back strategy, where you have
+to produce or to take back the computer
+to recycle them. The awareness is go all the sector and organization, and that's where
+life-cycle approaches gets further deadlock here, because we need this view going through the
+entire supply chain. We entered in 2000 in a more progressive way where actors start to
+really collaborate. It was amazing collaboration. We see DuPont collaborating
+with NGO, WWF, or even Greenpeace entering
+in collaboration with industry with a goal to improve the way we are
+managing our chemical, managing of emission, managing our environment
+and biodiversity. Here we have integrated
+product policy in particular here in
+the European Union, which looks not only at what comes out of the chimney
+or the industry, but look at the product
+with anti perspective thus the generalization
+of LCA and use of LCA. This now is integrated, I would say since
+the last two years, three years, we start having
+these climate action, which in especially
+the young generation, has taken off in an
+amazing way and change, perhaps not so much
+here presently, that change radically the
+way the government and the different parliaments are voting laws and progressing, at least in Europe presently. Just to give you an example, how things have changed and how now someone who has a producer, or even a bank, has now extended responsibility compared to where we were
+in the last century. In 2000, we were asked
+by a local bank, I was working at the
+Ecole Polytechnic in Lausanne, Switzerland, and this local bank asks us to do the environmental
+footprints, but also the environmental management plans of their bank. We did how much
+electricity was used, we collected that, we did the carbon footprint
+of the entire bank, but we also studied how
+they were investing the money the different
+people we're giving them, and what type of
+things that were financing with this money. We gave our results to
+the board of the bank, the president and all the
+board members were there, and one thing we insisted on was that they were financing petroleum trade and transport, but they were not in the
+management system assessing the environmental
+risk involved and especially checking
+the quality of life, the tanker who were
+carrying the petrol there. We gave that recommendation, the internal lawyer evaluation
+of our work will say, no bank has ever been sued
+for financing oil transport so this is not a substantial risk and
+they did not act on it. December 2002, a
+26-years-old tanker sink on the shore of Spain and really 77,000 metric tons
+of heavy fuel. The entire coast, we know with an oil spill, look how
+messy it looks like. Unfortunately, this
+local bank had finance part of this
+transportation of that ship. They made the headline
+of the local news. I can tell you, I jump back on my slides to look if
+we had communicated clearly that they
+should have done and be rigorous on that, and in fact, two months later,
+the bank had left this profitable petrol
+business because of the risk of image associated
+with this transport. Very interesting,
+limited risk, no, because we are
+expecting things now from a bank that was not
+expected 10 years earlier.

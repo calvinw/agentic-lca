@@ -1,0 +1,683 @@
+1
+00:00:09,692 --> 00:00:14,868
+Now let's move and
+have more up to date results
+
+2
+00:00:14,868 --> 00:00:20,177
+from eco invent who in
+version two added the full
+
+3
+00:00:20,177 --> 00:00:25,110
+analysis of laptop, desktop, printers.
+
+4
+00:00:25,110 --> 00:00:30,037
+So we have we have quite a few electronic
+component there in a convent and
+
+5
+00:00:30,037 --> 00:00:33,460
+that that's highly interesting.
+
+6
+00:00:33,460 --> 00:00:36,903
+Let's look at this process
+tree of a desktop and and
+
+7
+00:00:36,903 --> 00:00:41,890
+we look at from a global warming
+potential perspective a climate change.
+
+8
+00:00:41,890 --> 00:00:47,613
+Okay functional unit is still
+1PC used during 10,000 hours and
+
+9
+00:00:47,613 --> 00:00:50,627
+first look at the desktop computer.
+
+10
+00:00:50,627 --> 00:00:57,632
+So if we look here, we have in
+fact here the electricity side and
+
+11
+00:00:57,632 --> 00:01:01,995
+here we have the manufacturing site and
+
+12
+00:01:01,995 --> 00:01:07,697
+the size of the arrows is
+proportional to the flow.
+
+13
+00:01:07,697 --> 00:01:13,908
+So we see that we have at least
+two third on the electric side and
+
+14
+00:01:13,908 --> 00:01:22,518
+about one third here on the manufacturing
+which is confirmed what we had in 1998.
+
+15
+00:01:22,518 --> 00:01:24,911
+And if we enlarge the screen,
+
+16
+00:01:24,911 --> 00:01:29,989
+you see that that three electricity
+low voltage production and
+
+17
+00:01:29,989 --> 00:01:35,088
+that is all the electricity
+production chain here on the left.
+
+18
+00:01:35,088 --> 00:01:39,963
+And on the right, it's really
+the CRT screen is important and
+
+19
+00:01:39,963 --> 00:01:46,154
+the manufacturing of the computers
+are about equally important in that case,
+
+20
+00:01:46,154 --> 00:01:52,470
+with the printed wide bringing important
+contribution inside the total here.
+
+21
+00:01:52,470 --> 00:01:57,548
+Okay, so now let's look at the laptop and
+we see for
+
+22
+00:01:57,548 --> 00:02:02,983
+the laptop,
+we see a reverse effect where about 60%
+
+23
+00:02:02,983 --> 00:02:09,009
+of the carbon footprint is coming
+from the manufacturing and
+
+24
+00:02:09,009 --> 00:02:13,763
+40% from the electricity production side.
+
+25
+00:02:13,763 --> 00:02:19,730
+So let's look again,
+if we enlarge a bit this this picture,
+
+26
+00:02:19,730 --> 00:02:23,951
+we see what is contributing to the laptop.
+
+27
+00:02:23,951 --> 00:02:27,520
+So the left is again electricity
+production, nothing new.
+
+28
+00:02:27,520 --> 00:02:32,061
+Okay, but the the amount has
+just been reduced on this side,
+
+29
+00:02:32,061 --> 00:02:36,976
+you start finding okay,
+the printed wiring boards to the right.
+
+30
+00:02:36,976 --> 00:02:42,818
+Okay, and you have the LCD module
+which is an important contribution and
+
+31
+00:02:42,818 --> 00:02:47,609
+now interestingly the battery
+is appearing as an important
+
+32
+00:02:47,609 --> 00:02:50,610
+contributing here also on the left.
+
+33
+00:02:50,610 --> 00:02:55,084
+But the PCB,
+the printed circuit wiring board is,
+
+34
+00:02:55,084 --> 00:02:58,829
+I would say the first
+component in there and
+
+35
+00:02:58,829 --> 00:03:03,614
+there is some magnesium alloy
+which are used here which
+
+36
+00:03:03,614 --> 00:03:08,005
+also play a role in terms
+of material in this case.
+
+37
+00:03:08,005 --> 00:03:11,745
+Let's now look not only
+at carbon footprints,
+
+38
+00:03:11,745 --> 00:03:15,952
+we still have our carbon here
+at the global warming but
+
+39
+00:03:15,952 --> 00:03:20,347
+now we extend it and
+we have somewhat similar picture for
+
+40
+00:03:20,347 --> 00:03:25,145
+the different human health here
+categories which are here.
+
+41
+00:03:25,145 --> 00:03:29,979
+And then for the ecosystem impact we
+try until here global warming and
+
+42
+00:03:29,979 --> 00:03:32,396
+the two energy and mineral here and
+
+43
+00:03:32,396 --> 00:03:36,494
+we see one exception,
+this is the ozone layer depletion.
+
+44
+00:03:36,494 --> 00:03:41,134
+That's a limitation when you have
+a mid point impact assessment that
+
+45
+00:03:41,134 --> 00:03:44,981
+it's very likely that the laptop
+is performing better.
+
+46
+00:03:44,981 --> 00:03:50,445
+But on this category which
+are link to CFC mission it was.
+
+47
+00:03:50,445 --> 00:03:56,024
+So the question is, how important
+is this category versus the other?
+
+48
+00:03:56,024 --> 00:04:01,194
+And this is the role of our damage
+assessment where we will now put
+
+49
+00:04:01,194 --> 00:04:06,581
+that in perspective looking at
+Dali's which make it comparable.
+
+50
+00:04:06,581 --> 00:04:11,075
+But first,
+we can check with different methods,
+
+51
+00:04:11,075 --> 00:04:15,997
+we always say,
+we want test alternative LCA method and
+
+52
+00:04:15,997 --> 00:04:23,489
+we see CML was the mostly used method
+in the early 2000 until perhaps 2010.
+
+53
+00:04:23,489 --> 00:04:28,566
+And again, we see ozone depletion
+the other about the same.
+
+54
+00:04:28,566 --> 00:04:34,335
+The laptop being about a third of the of
+the desktop TRACI, the USCP method,
+
+55
+00:04:34,335 --> 00:04:38,859
+very similar picture and
+the ozone depletion being there.
+
+56
+00:04:38,859 --> 00:04:42,211
+So if like this main conclusion arose.
+
+57
+00:04:42,211 --> 00:04:46,714
+So let's look now at
+the damage assessment and
+
+58
+00:04:46,714 --> 00:04:50,071
+these are the normalized damage.
+
+59
+00:04:50,071 --> 00:04:51,770
+So that would be here.
+
+60
+00:04:51,770 --> 00:04:55,040
+Some person functional unit.
+
+61
+00:04:55,040 --> 00:05:03,292
+Okay, and
+who say normalize damage assessment?
+
+62
+00:05:03,292 --> 00:05:10,370
+We cannot combine human health and the
+human health impact category of this one.
+
+63
+00:05:10,370 --> 00:05:16,894
+This is the different human health
+category, ecosystem quality categories
+
+64
+00:05:16,894 --> 00:05:22,323
+where I see the contribution to
+the normalized damage is lower.
+
+65
+00:05:22,323 --> 00:05:25,315
+In fact that's surprising for I mean,
+
+66
+00:05:25,315 --> 00:05:31,410
+the impact of a personal computer which
+are more electricity and human health.
+
+67
+00:05:31,410 --> 00:05:37,350
+The climate change which is an impact 2000
+kept separate and to not driven energy and
+
+68
+00:05:37,350 --> 00:05:42,780
+mineral extraction which is also based
+the energy to extract these minerals.
+
+69
+00:05:42,780 --> 00:05:47,988
+So if we look separately,
+first, my also layer depletion
+
+70
+00:05:47,988 --> 00:05:55,023
+which was the only category which had
+conflicting result here is negligible.
+
+71
+00:05:55,023 --> 00:05:59,868
+Okay, that that's the beauty of
+the damage to put in perspective
+
+72
+00:05:59,868 --> 00:06:04,273
+versus the fine particulate
+what we call the respiratory in
+
+73
+00:06:04,273 --> 00:06:08,781
+organics here which have
+a dominant impact on human health.
+
+74
+00:06:08,781 --> 00:06:13,722
+Not that surprisingly, in fact, for
+both in that case, that's really
+
+75
+00:06:13,722 --> 00:06:18,825
+both computer in that case because
+system quality we have some terrestrial
+
+76
+00:06:18,825 --> 00:06:24,009
+[INAUDIBLE] which might be linked to
+the land filling of some of the elements.
+
+77
+00:06:24,009 --> 00:06:25,799
+And global warming,
+
+78
+00:06:25,799 --> 00:06:31,880
+we find something which is really
+linked to the energy used in this case.
+
+79
+00:06:31,880 --> 00:06:39,682
+Okay, so I put here best representation
+because I really like here that you have,
+
+80
+00:06:39,682 --> 00:06:46,145
+in Singapore you take a small which
+is a per impact category option.
+
+81
+00:06:46,145 --> 00:06:49,033
+And this gives us the separation.
+
+82
+00:06:49,033 --> 00:06:52,235
+We can then sum up here on human health,
+
+83
+00:06:52,235 --> 00:06:57,690
+here on ecosystem quality and
+that's what we are obtaining here.
+
+84
+00:06:57,690 --> 00:07:00,211
+And of course, the ranking is the same and
+
+85
+00:07:00,211 --> 00:07:03,760
+instill the normalized damage
+aggregated per category.
+
+86
+00:07:03,760 --> 00:07:08,801
+But I really prefer that we interpret
+the result with this representation
+
+87
+00:07:08,801 --> 00:07:13,860
+where we can see the contribution of
+each midpoint category to the total.
+
+88
+00:07:13,860 --> 00:07:17,339
+Okay, now what substances are and and
+
+89
+00:07:17,339 --> 00:07:22,667
+component are contributing
+also to the human toxicity and
+
+90
+00:07:22,667 --> 00:07:25,722
+the human health health effect?
+
+91
+00:07:25,722 --> 00:07:30,610
+So if we take the desktop computer,
+we see here this time
+
+92
+00:07:30,610 --> 00:07:35,290
+on human toxicity
+the contribution of the building,
+
+93
+00:07:35,290 --> 00:07:40,284
+the manufacturing of my PC
+are about higher than before.
+
+94
+00:07:40,284 --> 00:07:43,670
+We were at one third, we are at about 40%.
+
+95
+00:07:43,670 --> 00:07:48,888
+And if we are increasing a bit
+the size of this picture,
+
+96
+00:07:48,888 --> 00:07:55,467
+we see that we have the desktop is
+becoming a bit bit important here and
+
+97
+00:07:55,467 --> 00:07:59,210
+also the printed wiring board force for
+
+98
+00:07:59,210 --> 00:08:03,199
+the CRT screen are relevant in this case.
+
+99
+00:08:03,199 --> 00:08:08,377
+If we take the laptop,
+then we are in a one third electricity,
+
+100
+00:08:08,377 --> 00:08:10,678
+two third manufacturing.
+
+101
+00:08:10,678 --> 00:08:15,557
+And if we are enlarging
+what matters most here for
+
+102
+00:08:15,557 --> 00:08:21,517
+the manufacturing,
+electricity is always the same here.
+
+103
+00:08:21,517 --> 00:08:26,830
+So we see that the batteries
+start to be important here
+
+104
+00:08:26,830 --> 00:08:32,027
+with 0.0779 equivalent
+of the battery that we
+
+105
+00:08:32,027 --> 00:08:37,578
+have by functional unit and
+the printed wiring board for
+
+106
+00:08:37,578 --> 00:08:43,750
+the laptop here are really
+the high contributor in this case.
+
+107
+00:08:43,750 --> 00:08:48,034
+Okay, now we can look not
+only at which components
+
+108
+00:08:48,034 --> 00:08:52,012
+are contributing to
+carcinogenic damages but
+
+109
+00:08:52,012 --> 00:08:56,811
+we look the carcinogen from
+impact 2002 and TRACI.
+
+110
+00:08:56,811 --> 00:09:00,941
+And we look what was
+the substance contributing most.
+
+111
+00:09:00,941 --> 00:09:04,470
+So here the highest is hydrocarbon to air.
+
+112
+00:09:04,470 --> 00:09:07,372
+Okay, which we don't really find and
+
+113
+00:09:07,372 --> 00:09:12,089
+it's probably not simply not
+available as such in TRACI, but
+
+114
+00:09:12,089 --> 00:09:17,920
+we have a lot of overlap between the two
+approaches of what is contributing.
+
+115
+00:09:17,920 --> 00:09:22,708
+So the arsenic to air,
+which is the highest
+
+116
+00:09:22,708 --> 00:09:27,520
+here is also a contribution here for air.
+
+117
+00:09:27,520 --> 00:09:32,728
+The arsenic to water is here
+as the second contributor
+
+118
+00:09:32,728 --> 00:09:39,451
+chromium to air is also appearing
+arsenic to soil is also appearing.
+
+119
+00:09:39,451 --> 00:09:45,651
+So we have I mean a relatively
+good cordons but some differences.
+
+120
+00:09:45,651 --> 00:09:49,381
+I mean like the lead to
+water which is different.
+
+121
+00:09:49,381 --> 00:09:51,830
+I say the hydrocarbon to air.
+
+122
+00:09:51,830 --> 00:09:52,851
+Benzoate.
+
+123
+00:09:52,851 --> 00:09:56,980
+Perrin is also in both
+lists that we have here.
+
+124
+00:09:56,980 --> 00:10:01,524
+And really on the top side,
+this sort of differences
+
+125
+00:10:01,524 --> 00:10:06,320
+between the hydrocarbon and,
+and the arsenic.
+
+126
+00:10:06,320 --> 00:10:08,311
+They are within one order of magnitude.
+
+127
+00:10:08,311 --> 00:10:11,141
+So we should really
+think in log scale here.
+
+128
+00:10:11,141 --> 00:10:12,771
+So these are really equivalent.
+
+129
+00:10:12,771 --> 00:10:17,321
+So the use of these methods are really
+to select what are the 10 or
+
+130
+00:10:17,321 --> 00:10:19,920
+15 substances which matter most.
+
+131
+00:10:19,920 --> 00:10:25,103
+And we see that several of them are in
+fact common to the different method,
+
+132
+00:10:25,103 --> 00:10:28,680
+which is relatively good news in our case.
+
+133
+00:10:28,680 --> 00:10:31,151
+This is now the human health damage.
+
+134
+00:10:31,151 --> 00:10:36,010
+So what come in addition to the cancer and
+cancer are here.
+
+135
+00:10:36,010 --> 00:10:41,098
+The fine particulate, okay, so
+primary particulate here but
+
+136
+00:10:41,098 --> 00:10:44,650
+also the secondary
+particulate from Nox and
+
+137
+00:10:44,650 --> 00:10:50,500
+Sox which are admitted and
+which in impact 2002 are dominating.
+
+138
+00:10:50,500 --> 00:10:54,911
+Whereas at that time CML didn't have that.
+
+139
+00:10:54,911 --> 00:11:01,055
+So we, we find back the arsenic and the
+same as we had with the casino gen, simply
+
+140
+00:11:01,055 --> 00:11:07,411
+not because they just missing some of the
+effect of find particular in that metal.
+
+141
+00:11:07,411 --> 00:11:11,624
+So it's important we understand,
+okay, what is missing when,
+
+142
+00:11:11,624 --> 00:11:16,603
+when we look at the floor, it's always
+in semi pro interesting to say what has
+
+143
+00:11:16,603 --> 00:11:20,850
+not been considered by the method,
+which might be problematic.
+
+144
+00:11:20,850 --> 00:11:21,481
+Okay,

@@ -1,0 +1,115 @@
+You have seen with
+the case study, the use of one
+life cycle impacts assessment method in detail, which is in IMPACT World+, of course a good method
+because it's our methods, but it's not the
+only one method. We would like to have an
+overview, and I would like to provide you an overview of the different life
+cycle IMPACT method, the mostly used and the best
+quality method available. Our learning objective is to define the latest life cycle in this student framework and explain you what is in
+the work in progress. Identify the characteristic
+of our main LCIA methods, and compare results of different damage level life cycle impact
+assessment method for the total emission
+of the world to see how the different
+methods concord or in the contrary,
+contradict each other. We are presently working within the life cycle
+initiative hosted by UN Environment on
+the development of global GLAM3 methods, the global environmental
+impact assessment methods. In that frame we see there are some category in
+green which have been already developed like
+the climate change with the global warming potential,
+and the GTP 100 years. In contrast, we have
+ongoing work to extend that for example
+with climate change, to move to endpoint includes the nutrition, and
+the HENI index is the principal candidate. To do that to also
+arrive to DALI, so here for all human health, we will be a damage
+level with DALI, and include some of the ecosystem services
+and biotic resources, which we have here. Different effort on
+ecosystem quality, on the resources and to consolidate the
+results on human health. It's interesting to backup
+a bit and look what is the history of methods
+and at the earlier stage, if the equation, the fact
+that the first method, operational method
+which came out with the eco-scarcity
+methods or eco-points, with eco-points in 1990, and it was a distance
+to target method. Distance to target, you
+compare an emission to the total target for this same effect and you look how distance and
+the closer you are, the higher my impact, the further you are
+from this target. The further my impact.
+There's this method has been kept and has been
+updated recently. It's still usable, but it's not really based
+on the damage oriented. It's, on the other hand, at the midpoint level, it's really the CML
+LCA guide in '92, which has opened
+the field there, which is ideal that you
+separate impacts in different category as we saw in the previous framework slide. They really were breaking it. It was a really great report by colleague who are still
+working in the field. They are dead in CML. That guide in 2002,
+a bit disappointing. It was same story, not much innovation in 10 years as we thought they could
+have done in that case. In parallel to these
+mid point tide, we start having pioneer method, which was in 1992 already, which was EPS, which was
+developed in Sweden here for us. And by a colleague Bernstein who in term of the framework, really foresee the
+damaged side, and was really a precursor before
+most of the other people. The only problem and he update
+these method in 2000 is the realization the quality of the factor was not up to
+the level of the framework. This is a method
+which has never, I would say, imposed
+itself here. Still in Holland,
+this was CML was enlightened University
+in Holland. Another method came
+out in '95 was updated in '99 also
+distance to target, but at European level, this ecoindicator
+that we have here. An important milestone is here. These people unite together. Here with the people from CML, also from Holland, plus
+some Swiss people in fact, but I was not involved in
+that to produce one of the mostly used methanol
+recipe in 2008. But prior to that, we had come with
+impact 2002 plus here with the first
+really mattered, which was combining the
+midpoint and damage. You really had both the different impact category moving to impact
+on human health, and impact on
+ecosystem and produce this first real
+implementation of a midpoint damage approach here, and we updated this between 2013-2019 with the
+impact well plus method here, which is really a
+global methods. I have different global methods
+which are now available, but it was really the
+first global method made available already
+early 2013 there. Recipe has an update here, which is also really good midpoint damage methods that combined the midpoint
+and the damage. It's probably the most used
+method that you could take as one of the defaults
+you want to use. The team from recipe in backward plus we worked together
+for a very specialized, I would say method, which has just come out. I don't think it will last
+forever in the sense, it was a bit less consistent
+than the individual method, but had some
+advantages when you're studying some very
+specialized impact category. The third, if you like, family of method which is
+really important, and in the midpoint damage is a line method which is
+from Japanese colleague. They go to a full waiting. They do the a wonderful job on the weighting of indicators, which was really, I would say an exceptional work
+from our colleagues. In parallel with that, we have at the different
+federal level for US, we have TRACI 2003
+updated in 2011, done by Jane Bear in Cincinnati, which is really a
+solid midpoint method, not super innovative to
+bring the damage together, but still at midpoint is
+the recommended method for the US and is being updated
+to my knowledge presently. In Europe, the product's environmental
+footprint to cover, it started with compendium of
+different methods in 2012. That very original, I was still involved
+with colleague. But we had the explicit request
+not to do anything new, and they updated it last year, and this is also good
+and solid method. Finally, we have this GLAM, global impact assessment
+with two workshop 2016, '18, and we are
+presently working, coordinating here
+about 100 scientists worldwide to arrive to a
+global method which would be a consensus to avoid people could have to select too much of a method
+or make choices there. Say as a default
+method to be used, and then compare eventually
+still with another one. These different methods have different coverage of
+the midpoint category. Here for the main method
+that we could recommend, the ecological scarcity, TRACI for the US, I say 2003 but also 2011, IMPACT 2002 and IMPACT
+World Plus which are here. The line method
+recipe 2008 and 2013, the path protection
+environmental footprint, the work of the
+life-cycle initiative and find the NCAA impact. You see the midpoint
+coverage and there is a relatively a good coverage
+of this midpoint category, and for the damage level, then some of them are only
+having normalization, and some will have, that the case really for the US, and we have really some method which
+have the midpoint and the damage that can be
+used in the best way. So cover our human health, ecosystem quality, and
+natural resources. Some I have some biotic
+resources in addition.

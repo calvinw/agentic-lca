@@ -1,0 +1,1115 @@
+1
+00:00:08,360 --> 00:00:12,090
+Let us look together at
+
+2
+00:00:12,090 --> 00:00:14,820
+guidelines for
+performing the Phase 2
+
+3
+00:00:14,820 --> 00:00:16,350
+of your case study leading
+
+4
+00:00:16,350 --> 00:00:19,949
+to the final
+presentation and using
+
+5
+00:00:19,949 --> 00:00:22,290
+SimaPro software for calculating
+
+6
+00:00:22,290 --> 00:00:25,485
+your impact assessment
+and interpretation.
+
+7
+00:00:25,485 --> 00:00:30,750
+The learning objective
+here is for Phase 2,
+
+8
+00:00:30,750 --> 00:00:34,920
+to use the SimaPro
+software focusing on
+
+9
+00:00:34,920 --> 00:00:39,570
+impact assessment and
+interpretation of your results.
+
+10
+00:00:39,570 --> 00:00:43,160
+In addition to your
+presentation and accounting for
+
+11
+00:00:43,160 --> 00:00:46,775
+the command received after
+your final presentation,
+
+12
+00:00:46,775 --> 00:00:49,670
+you want to write a two-pages
+
+13
+00:00:49,670 --> 00:00:53,350
+concise and rich abstract
+with main results.
+
+14
+00:00:53,350 --> 00:00:55,550
+Here I would like to provide you
+
+15
+00:00:55,550 --> 00:00:58,370
+an overview of the
+different instructions,
+
+16
+00:00:58,370 --> 00:01:01,595
+template, example, deliverables,
+
+17
+00:01:01,595 --> 00:01:04,940
+and evaluation criteria
+for case study.
+
+18
+00:01:04,940 --> 00:01:08,480
+Phase 2. We focus on Phase 2
+
+19
+00:01:08,480 --> 00:01:11,990
+as the use of the SimaPro
+software leading to
+
+20
+00:01:11,990 --> 00:01:16,160
+final presentation
+and to a summary of
+
+21
+00:01:16,160 --> 00:01:22,115
+two pages which summarize your
+main methods and results.
+
+22
+00:01:22,115 --> 00:01:25,180
+What are the
+objectives of Phase 2?
+
+23
+00:01:25,180 --> 00:01:27,230
+Compare and interpret
+
+24
+00:01:27,230 --> 00:01:29,750
+the comprehensive
+environmental impacts,
+
+25
+00:01:29,750 --> 00:01:32,360
+this time not just
+CO_2 energy balance,
+
+26
+00:01:32,360 --> 00:01:34,745
+but acidification,
+eutrophication,
+
+27
+00:01:34,745 --> 00:01:37,130
+all the different impact of
+
+28
+00:01:37,130 --> 00:01:41,990
+your product alternatives
+using an LCA software,
+
+29
+00:01:41,990 --> 00:01:45,910
+and you can also perform
+some sensitivity study here.
+
+30
+00:01:45,910 --> 00:01:48,650
+You want to collect the data for
+
+31
+00:01:48,650 --> 00:01:52,400
+the selected variables from
+Phase 1 to improve what you
+
+32
+00:01:52,400 --> 00:01:55,260
+had done in screening
+and you want to
+
+33
+00:01:55,260 --> 00:01:58,695
+provide recommendation
+for product improvements.
+
+34
+00:01:58,695 --> 00:02:02,590
+What are the steps and
+deliverable of Phase 2?
+
+35
+00:02:02,590 --> 00:02:04,400
+After a first run and
+
+36
+00:02:04,400 --> 00:02:07,550
+implementing results
+in new software,
+
+37
+00:02:07,550 --> 00:02:11,055
+we'll take a first process T for
+
+38
+00:02:11,055 --> 00:02:15,230
+CO_2 energy and GA1 results and
+
+39
+00:02:15,230 --> 00:02:19,320
+compare it with the
+energy and CO_2
+
+40
+00:02:19,320 --> 00:02:23,580
+from GA1 results from your
+previous hand calculation.
+
+41
+00:02:23,580 --> 00:02:24,905
+We want to compare
+
+42
+00:02:24,905 --> 00:02:27,830
+software results with
+hand calculation.
+
+43
+00:02:27,830 --> 00:02:31,660
+This is your group
+activity 2a deliverable.
+
+44
+00:02:31,660 --> 00:02:37,085
+You then perform the inventory
+and impact assessment,
+
+45
+00:02:37,085 --> 00:02:41,030
+accounting for the commands
+that we will make after
+
+46
+00:02:41,030 --> 00:02:44,910
+that you have presented here
+your first process tree,
+
+47
+00:02:44,910 --> 00:02:49,100
+and that will lead
+for the slides for
+
+48
+00:02:49,100 --> 00:02:51,440
+your final case
+study presentation
+
+49
+00:02:51,440 --> 00:02:55,225
+posted on the day before
+your presentation for it.
+
+50
+00:02:55,225 --> 00:02:58,010
+The final slide will include
+
+51
+00:02:58,010 --> 00:03:00,800
+correction from the
+oral presentation
+
+52
+00:03:00,800 --> 00:03:02,890
+that you will have received.
+
+53
+00:03:02,890 --> 00:03:05,520
+In GA4, you have
+
+54
+00:03:05,520 --> 00:03:08,255
+these final two-pages projects
+
+55
+00:03:08,255 --> 00:03:10,805
+abstract including two figures.
+
+56
+00:03:10,805 --> 00:03:14,935
+Let's go a bit more in
+detail what it looks like.
+
+57
+00:03:14,935 --> 00:03:17,160
+For group activity 2a,
+
+58
+00:03:17,160 --> 00:03:20,390
+the process tree and
+inventory, basically,
+
+59
+00:03:20,390 --> 00:03:22,160
+you implement your scenario in
+
+60
+00:03:22,160 --> 00:03:24,619
+SimaPro following the guidelines
+
+61
+00:03:24,619 --> 00:03:26,750
+and the experience we got
+
+62
+00:03:26,750 --> 00:03:29,345
+with hands trying
+example together,
+
+63
+00:03:29,345 --> 00:03:32,270
+performing it together
+this time on your own you
+
+64
+00:03:32,270 --> 00:03:35,670
+will do it and implement
+your scenario.
+
+65
+00:03:35,670 --> 00:03:39,620
+Be careful to really
+design your process,
+
+66
+00:03:39,620 --> 00:03:42,305
+not everything per
+functional units
+
+67
+00:03:42,305 --> 00:03:44,930
+all the time and have one
+assembly with everything.
+
+68
+00:03:44,930 --> 00:03:48,410
+You want to create
+components like we created
+
+69
+00:03:48,410 --> 00:03:52,070
+for the towel in the
+hands drying example,
+
+70
+00:03:52,070 --> 00:03:53,810
+we create one towel which
+
+71
+00:03:53,810 --> 00:03:55,910
+include the transport
+of that towel,
+
+72
+00:03:55,910 --> 00:03:58,190
+the paper used for that towel,
+
+73
+00:03:58,190 --> 00:04:00,665
+and even the disposal
+for that towel.
+
+74
+00:04:00,665 --> 00:04:02,495
+Then in the assembly
+you will say,
+
+75
+00:04:02,495 --> 00:04:07,335
+I'm using 1.5 towel
+per functional unit.
+
+76
+00:04:07,335 --> 00:04:09,410
+The interest of that is if you
+
+77
+00:04:09,410 --> 00:04:11,825
+can easily perform a
+sensitivity study,
+
+78
+00:04:11,825 --> 00:04:17,005
+if I'm using one or two
+towel or three towels,
+
+79
+00:04:17,005 --> 00:04:19,920
+what are the changes,
+
+80
+00:04:19,920 --> 00:04:24,130
+and you can very easily run
+this scenario in that way.
+
+81
+00:04:24,130 --> 00:04:26,720
+You can also verify things in
+
+82
+00:04:26,720 --> 00:04:30,725
+an easy way if you do
+it per components.
+
+83
+00:04:30,725 --> 00:04:33,710
+We want here now to display
+
+84
+00:04:33,710 --> 00:04:37,280
+the fossil CO_2 and the
+non-renewable primary energy.
+
+85
+00:04:37,280 --> 00:04:40,505
+Take it from impact 2002,
+for example, Tracy,
+
+86
+00:04:40,505 --> 00:04:42,800
+you cannot really
+compare with the CO_2
+
+87
+00:04:42,800 --> 00:04:45,350
+with its surplus energy,
+
+88
+00:04:45,350 --> 00:04:49,375
+which doesn't account for
+the main energy consumption,
+
+89
+00:04:49,375 --> 00:04:52,050
+so you take it in Impact 2002
+
+90
+00:04:52,050 --> 00:04:55,190
+and you perform the
+network and process tree,
+
+91
+00:04:55,190 --> 00:04:58,850
+and you compare your
+process tree with
+
+92
+00:04:58,850 --> 00:05:02,870
+your hand and excel calculation
+that you made earlier,
+
+93
+00:05:02,870 --> 00:05:05,210
+explain any
+substantial difference
+
+94
+00:05:05,210 --> 00:05:06,290
+more than, for example,
+
+95
+00:05:06,290 --> 00:05:08,150
+30 percent because that's
+
+96
+00:05:08,150 --> 00:05:10,000
+probably is why you
+have a problem.
+
+97
+00:05:10,000 --> 00:05:13,360
+We have posted here
+a template which
+
+98
+00:05:13,360 --> 00:05:16,930
+enable you to make that and
+post your different points.
+
+99
+00:05:16,930 --> 00:05:19,120
+This is a good example with
+
+100
+00:05:19,120 --> 00:05:22,735
+the wall paint compared
+to a wallpaper.
+
+101
+00:05:22,735 --> 00:05:25,210
+Here for the wall paint,
+for each scenario,
+
+102
+00:05:25,210 --> 00:05:28,765
+you want to look at
+the process tree,
+
+103
+00:05:28,765 --> 00:05:32,590
+identifying the main
+contributors here that we
+
+104
+00:05:32,590 --> 00:05:36,310
+have and you compare
+then the amount of
+
+105
+00:05:36,310 --> 00:05:41,365
+CO_2 you have here with the
+amount you had calculated
+
+106
+00:05:41,365 --> 00:05:43,525
+by hand calculation
+and you should be
+
+107
+00:05:43,525 --> 00:05:47,095
+relatively close
+normally within 10,
+
+108
+00:05:47,095 --> 00:05:49,760
+20, maximum 30 percent,
+
+109
+00:05:49,760 --> 00:05:52,530
+but if 30 percent, you
+start to need to explain.
+
+110
+00:05:52,530 --> 00:05:54,380
+By the way, you
+could still detail
+
+111
+00:05:54,380 --> 00:05:56,330
+in SimaPro that you have
+
+112
+00:05:56,330 --> 00:06:00,740
+about 61 percent
+for the Ti0_2 here,
+
+113
+00:06:00,740 --> 00:06:08,490
+the titanium dioxide here
+20.5 percent and AU steel,
+
+114
+00:06:08,490 --> 00:06:12,640
+which is the last five
+percent that you have here.
+
+115
+00:06:12,640 --> 00:06:15,260
+Do that for each
+of the scenario.
+
+116
+00:06:15,260 --> 00:06:20,735
+Then that will constitute
+your first GA2a deliverable.
+
+117
+00:06:20,735 --> 00:06:24,080
+In GA2b, you want
+then to present
+
+118
+00:06:24,080 --> 00:06:28,655
+your normalized damage
+per impact category.
+
+119
+00:06:28,655 --> 00:06:32,000
+Click on the top here you
+have a small box to call,
+
+120
+00:06:32,000 --> 00:06:35,610
+which is per impact category
+
+121
+00:06:36,220 --> 00:06:39,140
+that you can click to
+
+122
+00:06:39,140 --> 00:06:42,470
+get not a total human
+health impacts,
+
+123
+00:06:42,470 --> 00:06:45,725
+but the different impacts for
+
+124
+00:06:45,725 --> 00:06:48,005
+all the human health category
+
+125
+00:06:48,005 --> 00:06:51,275
+if you take here
+for impact 2002,
+
+126
+00:06:51,275 --> 00:06:55,099
+and all the ecosystem
+quality category,
+
+127
+00:06:55,099 --> 00:06:56,990
+the global warming and the
+
+128
+00:06:56,990 --> 00:06:59,915
+energy category
+that you have here.
+
+129
+00:06:59,915 --> 00:07:02,465
+You can also perform in there
+
+130
+00:07:02,465 --> 00:07:05,705
+a sensitivity study looking
+
+131
+00:07:05,705 --> 00:07:09,140
+here at an alternative
+wallpaper and
+
+132
+00:07:09,140 --> 00:07:11,570
+an alternative wall
+paint that we have
+
+133
+00:07:11,570 --> 00:07:14,750
+here and looking what
+are the improvement
+
+134
+00:07:14,750 --> 00:07:17,570
+if I have a product improvement
+and you see here you
+
+135
+00:07:17,570 --> 00:07:21,620
+have a 30 percent
+product improvement.
+
+136
+00:07:21,620 --> 00:07:25,730
+The beauty of keeping that
+bearing per category is,
+
+137
+00:07:25,730 --> 00:07:28,040
+for example, you see
+ionizing radiation
+
+138
+00:07:28,040 --> 00:07:31,080
+behaves slightly
+differently from the other.
+
+139
+00:07:31,080 --> 00:07:33,280
+Some of the results are inverse
+
+140
+00:07:33,280 --> 00:07:37,705
+but we see here that this is
+not really relevant here,
+
+141
+00:07:37,705 --> 00:07:40,480
+what is really relevant is
+fine particulate matter,
+
+142
+00:07:40,480 --> 00:07:43,840
+a bit the carcinogen and
+basically global warming and
+
+143
+00:07:43,840 --> 00:07:48,665
+non-renewable energy are
+re-dominant in this case.
+
+144
+00:07:48,665 --> 00:07:52,100
+Evaluation criteria for
+your final presentation,
+
+145
+00:07:52,100 --> 00:07:54,440
+we will look at the
+quality of check between
+
+146
+00:07:54,440 --> 00:07:57,830
+your SimaPro inventory and
+your hand calculation.
+
+147
+00:07:57,830 --> 00:08:00,170
+The originality and the interest
+
+148
+00:08:00,170 --> 00:08:02,225
+of impact assessment results,
+
+149
+00:08:02,225 --> 00:08:05,300
+the appropriate analysis and
+
+150
+00:08:05,300 --> 00:08:07,805
+depths of results
+interpretation,
+
+151
+00:08:07,805 --> 00:08:11,000
+and the quality of
+your conclusion and
+
+152
+00:08:11,000 --> 00:08:14,330
+especially recommendation
+to the user
+
+153
+00:08:14,330 --> 00:08:18,455
+that what you've done
+is directly useful.
+
+154
+00:08:18,455 --> 00:08:21,320
+We value the amount
+of work you make
+
+155
+00:08:21,320 --> 00:08:24,500
+and the originality if
+you take self-initiative,
+
+156
+00:08:24,500 --> 00:08:29,060
+not just what we told you
+to do or classical case,
+
+157
+00:08:29,060 --> 00:08:32,030
+but explore a bit,
+try new things.
+
+158
+00:08:32,030 --> 00:08:34,640
+This is how we learn
+
+159
+00:08:34,640 --> 00:08:38,090
+and we arrive to
+interesting results.
+
+160
+00:08:38,090 --> 00:08:39,470
+We look at the quality of
+
+161
+00:08:39,470 --> 00:08:41,480
+your presentation and ability to
+
+162
+00:08:41,480 --> 00:08:45,275
+answer question to arrive
+to an overall rate.
+
+163
+00:08:45,275 --> 00:08:50,795
+The grade themselves will
+be put at the end of GA3b.
+
+164
+00:08:50,795 --> 00:08:52,430
+Once you have resubmitted
+
+165
+00:08:52,430 --> 00:08:55,730
+your presentation with
+the corrected slides,
+
+166
+00:08:55,730 --> 00:08:58,700
+then we will
+evaluate that in one
+
+167
+00:08:58,700 --> 00:09:01,520
+go the other intermediate
+representations so that you get
+
+168
+00:09:01,520 --> 00:09:05,480
+feedback as we progress
+and you can correct
+
+169
+00:09:05,480 --> 00:09:09,695
+yourself and arrive to a really
+good final presentation.
+
+170
+00:09:09,695 --> 00:09:11,870
+Then after the presentation,
+
+171
+00:09:11,870 --> 00:09:14,570
+accounting also for the
+comments you have received,
+
+172
+00:09:14,570 --> 00:09:17,495
+you write a two-page summary
+
+173
+00:09:17,495 --> 00:09:20,630
+and we will provide you a
+template for that which
+
+174
+00:09:20,630 --> 00:09:23,420
+is in fact coming
+from the template to
+
+175
+00:09:23,420 --> 00:09:27,859
+propose abstract for the
+C Tech Europe Conference,
+
+176
+00:09:27,859 --> 00:09:31,970
+which is a nice, instead
+of just being 400 words,
+
+177
+00:09:31,970 --> 00:09:34,670
+it's two pages
+template where you
+
+178
+00:09:34,670 --> 00:09:37,730
+can define your introduction
+and goal definition,
+
+179
+00:09:37,730 --> 00:09:40,520
+method data inventory here.
+
+180
+00:09:40,520 --> 00:09:46,055
+Don't tell so much what you
+did but how you did it.
+
+181
+00:09:46,055 --> 00:09:50,630
+Say, we used this and
+this two to obtain this,
+
+182
+00:09:50,630 --> 00:09:54,065
+or we applied this
+model to do that,
+
+183
+00:09:54,065 --> 00:09:55,985
+not just that we did that.
+
+184
+00:09:55,985 --> 00:09:59,165
+We want to understand
+well how you did it.
+
+185
+00:09:59,165 --> 00:10:01,070
+Then for the results on
+
+186
+00:10:01,070 --> 00:10:03,860
+impact assessment and
+discussion interpretation,
+
+187
+00:10:03,860 --> 00:10:06,155
+we want here all main result.
+
+188
+00:10:06,155 --> 00:10:10,955
+Again, don't say we
+obtained CO_2 balance.
+
+189
+00:10:10,955 --> 00:10:13,880
+You give the results
+of your CO_2 balance,
+
+190
+00:10:13,880 --> 00:10:15,890
+the results of your network.
+
+191
+00:10:15,890 --> 00:10:19,370
+For that, we want you
+to paste two figures
+
+192
+00:10:19,370 --> 00:10:23,270
+and have some legends and
+labeled clearly displayed.
+
+193
+00:10:23,270 --> 00:10:27,380
+X axis must have
+units and clearly
+
+194
+00:10:27,380 --> 00:10:29,570
+indicated on these two figures
+
+195
+00:10:29,570 --> 00:10:31,445
+and choose the one
+which are risks,
+
+196
+00:10:31,445 --> 00:10:33,470
+which summarizes, in a sense,
+
+197
+00:10:33,470 --> 00:10:36,710
+all UK studying in
+a compact way but
+
+198
+00:10:36,710 --> 00:10:41,135
+informative way and
+be result-oriented.
+
+199
+00:10:41,135 --> 00:10:43,279
+Present what is original,
+
+200
+00:10:43,279 --> 00:10:44,585
+what you bring you.
+
+201
+00:10:44,585 --> 00:10:46,100
+Here, finally,
+
+202
+00:10:46,100 --> 00:10:50,060
+have also short recommendation
+of what you say
+
+203
+00:10:50,060 --> 00:10:52,070
+plus a few references with
+
+204
+00:10:52,070 --> 00:10:54,560
+your main sources that you use.
+
+205
+00:10:54,560 --> 00:10:58,160
+Evaluation criteria for
+the final abstract.
+
+206
+00:10:58,160 --> 00:11:01,805
+The method is clearly
+and shortly summarized,
+
+207
+00:11:01,805 --> 00:11:04,355
+including the main data sources.
+
+208
+00:11:04,355 --> 00:11:06,305
+Results are correct.
+
+209
+00:11:06,305 --> 00:11:08,480
+We want no mistake,
+
+210
+00:11:08,480 --> 00:11:10,550
+especially because
+you got feedback
+
+211
+00:11:10,550 --> 00:11:13,085
+so you should be good now,
+
+212
+00:11:13,085 --> 00:11:16,640
+well-described and a good
+interpretation of figures.
+
+213
+00:11:16,640 --> 00:11:18,980
+It's not just putting a figure.
+
+214
+00:11:18,980 --> 00:11:22,880
+You need to get out the
+information or the figure,
+
+215
+00:11:22,880 --> 00:11:26,210
+interpret what are
+the main influence,
+
+216
+00:11:26,210 --> 00:11:28,055
+what is interesting
+in this figure,
+
+217
+00:11:28,055 --> 00:11:31,270
+in a few bullet points
+that you can have.
+
+218
+00:11:31,270 --> 00:11:34,690
+We value the adequate choices
+of the two main figure,
+
+219
+00:11:34,690 --> 00:11:39,550
+that they are really the best
+results and that you have
+
+220
+00:11:39,550 --> 00:11:41,830
+useful recommendation with
+
+221
+00:11:41,830 --> 00:11:44,895
+future work and
+short limitation.
+
+222
+00:11:44,895 --> 00:11:46,880
+Again, amount of work,
+
+223
+00:11:46,880 --> 00:11:49,580
+originality and
+self-initiative and
+
+224
+00:11:49,580 --> 00:11:51,620
+the quality of the writing.
+
+225
+00:11:51,620 --> 00:11:55,595
+We want it concise and
+rich informative test
+
+226
+00:11:55,595 --> 00:11:57,860
+in a professional layout.
+
+227
+00:11:57,860 --> 00:12:02,345
+Finally, we'll arrive
+to an overall rating.
+
+228
+00:12:02,345 --> 00:12:05,735
+To help you to perform all this,
+
+229
+00:12:05,735 --> 00:12:09,905
+we have a few complimentary
+file for GA2a.
+
+230
+00:12:09,905 --> 00:12:11,090
+The process tree,
+
+231
+00:12:11,090 --> 00:12:14,405
+you have a process
+tree template file.
+
+232
+00:12:14,405 --> 00:12:17,510
+We provide you an example of
+
+233
+00:12:17,510 --> 00:12:22,430
+the final presentation on this
+wallpaper and wall paint,
+
+234
+00:12:22,430 --> 00:12:25,760
+which was well-designed
+project here.
+
+235
+00:12:25,760 --> 00:12:28,730
+You have two pages abstract
+
+236
+00:12:28,730 --> 00:12:33,770
+template which is empty
+and you can fill it in,
+
+237
+00:12:33,770 --> 00:12:36,890
+and you have an abstract
+example, again,
+
+238
+00:12:36,890 --> 00:12:39,020
+which was from an
+interesting project
+
+239
+00:12:39,020 --> 00:12:41,670
+that you can look at.

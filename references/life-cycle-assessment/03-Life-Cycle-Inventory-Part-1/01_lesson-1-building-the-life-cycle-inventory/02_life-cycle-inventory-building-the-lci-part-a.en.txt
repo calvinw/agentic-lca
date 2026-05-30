@@ -1,0 +1,36 @@
+Now that we have built our product system,
+how can we study the flow which are crossing the system
+boundary from the environment and to the environment and make
+the inventory of these different flows. So this is the second phase of an LCA. Which look after the goal and
+scope definition. Look at the inventory of extractions and
+emission and and we are really interested to to
+see when we compare scenario per functional unit, what we abstain there. So the learning objective in
+building this life cycle inventory are to quantify the direct elementary
+flow of each unit process, combine each unit process,
+intermediary and elementary flow to obtain
+aggregated inventory flows. And then we want a clear differentiation
+that we understand if it's a direct flow or an aggregated flow per
+functional unit which is accounting for the entire supply chain. In this second case,
+let's start with a few definitions by definition the inventory of
+elementary flow Is the list and amount of all the floor which
+are crossing the system boundary from the environment for
+the resources and to the environment for the emissions. So this is our green arrows
+that we have here and we really have a list of at
+least 400 substances depending on the database that are crossing
+this boundary per functional unit. And this is what we aim
+because we are aiming with LCA at the environmental impact. So that's what we want to assess. Let's take an example
+of shoe manufacturing. Okay. And we want when we
+determine the elementary for shoe manufacturing to take not only
+the direct emission to air but also we know that for shoe manufacturing
+we need, for example some rubber, we need some leather and we need some
+electricity for the manufacturing. This is a tier one, tier two. We need a farm because leather
+comes from comes from a cow and you need to grow your cow and
+that means you need fertilizer. And so
+we have the the the entire process and emission can occure at each of this
+unit process that we have here. So if we want the total
+aggregated of all the C02 emissions, we need to move up and
+down the process tree and obtain all these emissions, but
+we want them per functional unit. Okay.
+That so that we can sum them consistently here. So it means taking into account of C02 emission not only during
+shoe manufacturing, but during all these different processes
+that we have in the process tree.

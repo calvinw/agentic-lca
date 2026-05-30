@@ -1,0 +1,109 @@
+Now let's move and
+have more up to date results from eco invent who in
+version two added the full analysis of laptop, desktop, printers. So we have we have quite a few electronic
+component there in a convent and that that's highly interesting. Let's look at this process
+tree of a desktop and and we look at from a global warming
+potential perspective a climate change. Okay functional unit is still
+1PC used during 10,000 hours and first look at the desktop computer. So if we look here, we have in
+fact here the electricity side and here we have the manufacturing site and the size of the arrows is
+proportional to the flow. So we see that we have at least
+two third on the electric side and about one third here on the manufacturing
+which is confirmed what we had in 1998. And if we enlarge the screen, you see that that three electricity
+low voltage production and that is all the electricity
+production chain here on the left. And on the right, it's really
+the CRT screen is important and the manufacturing of the computers
+are about equally important in that case, with the printed wide bringing important
+contribution inside the total here. Okay, so now let's look at the laptop and
+we see for the laptop,
+we see a reverse effect where about 60% of the carbon footprint is coming
+from the manufacturing and 40% from the electricity production side. So let's look again,
+if we enlarge a bit this this picture, we see what is contributing to the laptop. So the left is again electricity
+production, nothing new. Okay, but the the amount has
+just been reduced on this side, you start finding okay,
+the printed wiring boards to the right. Okay, and you have the LCD module
+which is an important contribution and now interestingly the battery
+is appearing as an important contributing here also on the left. But the PCB,
+the printed circuit wiring board is, I would say the first
+component in there and there is some magnesium alloy
+which are used here which also play a role in terms
+of material in this case. Let's now look not only
+at carbon footprints, we still have our carbon here
+at the global warming but now we extend it and
+we have somewhat similar picture for the different human health here
+categories which are here. And then for the ecosystem impact we
+try until here global warming and the two energy and mineral here and we see one exception,
+this is the ozone layer depletion. That's a limitation when you have
+a mid point impact assessment that it's very likely that the laptop
+is performing better. But on this category which
+are link to CFC mission it was. So the question is, how important
+is this category versus the other? And this is the role of our damage
+assessment where we will now put that in perspective looking at
+Dali's which make it comparable. But first,
+we can check with different methods, we always say,
+we want test alternative LCA method and we see CML was the mostly used method
+in the early 2000 until perhaps 2010. And again, we see ozone depletion
+the other about the same. The laptop being about a third of the of
+the desktop TRACI, the USCP method, very similar picture and
+the ozone depletion being there. So if like this main conclusion arose. So let's look now at
+the damage assessment and these are the normalized damage. So that would be here. Some person functional unit. Okay, and
+who say normalize damage assessment? We cannot combine human health and the
+human health impact category of this one. This is the different human health
+category, ecosystem quality categories where I see the contribution to
+the normalized damage is lower. In fact that's surprising for I mean, the impact of a personal computer which
+are more electricity and human health. The climate change which is an impact 2000
+kept separate and to not driven energy and mineral extraction which is also based
+the energy to extract these minerals. So if we look separately,
+first, my also layer depletion which was the only category which had
+conflicting result here is negligible. Okay, that that's the beauty of
+the damage to put in perspective versus the fine particulate
+what we call the respiratory in organics here which have
+a dominant impact on human health. Not that surprisingly, in fact, for
+both in that case, that's really both computer in that case because
+system quality we have some terrestrial [INAUDIBLE] which might be linked to
+the land filling of some of the elements. And global warming, we find something which is really
+linked to the energy used in this case. Okay, so I put here best representation
+because I really like here that you have, in Singapore you take a small which
+is a per impact category option. And this gives us the separation. We can then sum up here on human health, here on ecosystem quality and
+that's what we are obtaining here. And of course, the ranking is the same and instill the normalized damage
+aggregated per category. But I really prefer that we interpret
+the result with this representation where we can see the contribution of
+each midpoint category to the total. Okay, now what substances are and and component are contributing
+also to the human toxicity and the human health health effect? So if we take the desktop computer,
+we see here this time on human toxicity
+the contribution of the building, the manufacturing of my PC
+are about higher than before. We were at one third, we are at about 40%. And if we are increasing a bit
+the size of this picture, we see that we have the desktop is
+becoming a bit bit important here and also the printed wiring board force for the CRT screen are relevant in this case. If we take the laptop,
+then we are in a one third electricity, two third manufacturing. And if we are enlarging
+what matters most here for the manufacturing,
+electricity is always the same here. So we see that the batteries
+start to be important here with 0.0779 equivalent
+of the battery that we have by functional unit and
+the printed wiring board for the laptop here are really
+the high contributor in this case. Okay, now we can look not
+only at which components are contributing to
+carcinogenic damages but we look the carcinogen from
+impact 2002 and TRACI. And we look what was
+the substance contributing most. So here the highest is hydrocarbon to air. Okay, which we don't really find and it's probably not simply not
+available as such in TRACI, but we have a lot of overlap between the two
+approaches of what is contributing. So the arsenic to air,
+which is the highest here is also a contribution here for air. The arsenic to water is here
+as the second contributor chromium to air is also appearing
+arsenic to soil is also appearing. So we have I mean a relatively
+good cordons but some differences. I mean like the lead to
+water which is different. I say the hydrocarbon to air. Benzoate. Perrin is also in both
+lists that we have here. And really on the top side,
+this sort of differences between the hydrocarbon and,
+and the arsenic. They are within one order of magnitude. So we should really
+think in log scale here. So these are really equivalent. So the use of these methods are really
+to select what are the 10 or 15 substances which matter most. And we see that several of them are in
+fact common to the different method, which is relatively good news in our case. This is now the human health damage. So what come in addition to the cancer and
+cancer are here. The fine particulate, okay, so
+primary particulate here but also the secondary
+particulate from Nox and Sox which are admitted and
+which in impact 2002 are dominating. Whereas at that time CML didn't have that. So we, we find back the arsenic and the
+same as we had with the casino gen, simply not because they just missing some of the
+effect of find particular in that metal. So it's important we understand,
+okay, what is missing when, when we look at the floor, it's always
+in semi pro interesting to say what has not been considered by the method,
+which might be problematic. Okay,

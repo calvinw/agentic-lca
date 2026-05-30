@@ -1,0 +1,543 @@
+1
+00:00:11,171 --> 00:00:15,198
+So now it's interesting to
+use the primary energy and
+
+2
+00:00:15,198 --> 00:00:18,260
+the CO2 balance both of them together.
+
+3
+00:00:18,260 --> 00:00:24,304
+And check the data that we have
+obtained for light bulb example and
+
+4
+00:00:24,304 --> 00:00:30,370
+check that using the gram CO2
+per megajoule primary energy.
+
+5
+00:00:30,370 --> 00:00:34,219
+Let's look how to do this.
+
+6
+00:00:34,219 --> 00:00:41,106
+The first thing is when we look at
+different types of fuels like coal for
+
+7
+00:00:41,106 --> 00:00:45,892
+example, the energy
+content is associated with
+
+8
+00:00:45,892 --> 00:00:50,693
+the number of hydrogen
+bonds we have in our fuel.
+
+9
+00:00:50,693 --> 00:00:56,786
+Whereas the carbon emission associated
+with a number of carbon atoms.
+
+10
+00:00:56,786 --> 00:01:02,092
+So if we look at coal,
+we have in fact a lot of carbon atoms for
+
+11
+00:01:02,092 --> 00:01:05,610
+restricted number of hydrogen bonds.
+
+12
+00:01:05,610 --> 00:01:12,808
+And we have in fact only half the number
+of hydrogen compared to the carbon.
+
+13
+00:01:12,808 --> 00:01:17,687
+If we have now oil,
+we still have quite an important
+
+14
+00:01:17,687 --> 00:01:22,112
+part of carbon but
+we have far more hydrogen and
+
+15
+00:01:22,112 --> 00:01:26,778
+we have two hydrogen hydro atoms for
+one carbon.
+
+16
+00:01:26,778 --> 00:01:32,832
+CH4 four methane, one C,
+four H, so ratio of 4 to 1 and
+
+17
+00:01:32,832 --> 00:01:38,004
+for the hydrogen,
+this is the ideal situation,
+
+18
+00:01:38,004 --> 00:01:41,285
+where we only have hydrogen and
+
+19
+00:01:41,285 --> 00:01:47,250
+that means when we oxidized
+the hydrogen H become H2O.
+
+20
+00:01:47,250 --> 00:01:53,093
+Okay, and with H2O,
+it means out of a fuel cell motor vehicle,
+
+21
+00:01:53,093 --> 00:01:58,071
+we will only have as an emission water,
+which is really
+
+22
+00:01:58,071 --> 00:02:03,401
+cool to only have that because
+pollution will be limited.
+
+23
+00:02:03,401 --> 00:02:11,060
+So the question is why don't we have
+all our motors with fuel cells?
+
+24
+00:02:11,060 --> 00:02:15,522
+And the answer is it's great for
+the car itself, but
+
+25
+00:02:15,522 --> 00:02:18,571
+we don't get renewable hydrogen.
+
+26
+00:02:18,571 --> 00:02:20,321
+We don't find hydrogen like that.
+
+27
+00:02:20,321 --> 00:02:23,381
+We need to produce it.
+
+28
+00:02:23,381 --> 00:02:28,720
+And to produce it, we are using usually
+natural gas and then create the hydrogen.
+
+29
+00:02:28,720 --> 00:02:34,470
+And when doing that, we will lose
+the carbon, which also will emits CO2.
+
+30
+00:02:34,470 --> 00:02:38,870
+So literally the present
+solution unless we find
+
+31
+00:02:38,870 --> 00:02:42,957
+renewable sources to produce the hydrogen.
+
+32
+00:02:42,957 --> 00:02:47,722
+What is important here is
+the ratio of CO2 emissions,
+
+33
+00:02:47,722 --> 00:02:52,696
+but mega joule energy is associated
+because of this carbon to
+
+34
+00:02:52,696 --> 00:02:56,810
+hydrogen ratio with the ratio of H to C.
+
+35
+00:02:56,810 --> 00:02:59,811
+This provide us a way to check that.
+
+36
+00:02:59,811 --> 00:03:02,985
+It means all fuel will have
+quite a fixed ratio and
+
+37
+00:03:02,985 --> 00:03:06,180
+that enables us to check the data.
+
+38
+00:03:06,180 --> 00:03:10,297
+This ratio has been
+changing with time with and
+
+39
+00:03:10,297 --> 00:03:13,888
+since the first models in the 1840,
+
+40
+00:03:13,888 --> 00:03:18,560
+we had about 0.85 ton
+carbon per kilowatt here.
+
+41
+00:03:18,560 --> 00:03:23,111
+And in 2020 we are at 0.45.
+
+42
+00:03:23,111 --> 00:03:26,790
+So nearly a factor to
+over nearly 200 years.
+
+43
+00:03:26,790 --> 00:03:31,193
+So progress is important, but
+relatively slow, when we look at that.
+
+44
+00:03:31,193 --> 00:03:32,769
+Now, to check our data,
+
+45
+00:03:32,769 --> 00:03:36,770
+let's look at all the data from
+the ecoinvent database.
+
+46
+00:03:36,770 --> 00:03:40,997
+And we look here at
+the grams CO2/megajoule,
+
+47
+00:03:40,997 --> 00:03:44,550
+non renewable energy on the left side.
+
+48
+00:03:44,550 --> 00:03:48,423
+And what we see is many of the processes
+
+49
+00:03:48,423 --> 00:03:53,880
+are working close to what
+we have here with oil.
+
+50
+00:03:53,880 --> 00:04:01,715
+Okay, oil is here nearly our
+reference with 65 gCO2/MJ,
+
+51
+00:04:01,715 --> 00:04:05,990
+nonrenewable primary energy.
+
+52
+00:04:05,990 --> 00:04:11,716
+And you see it's logic that plane,
+road transportation,
+
+53
+00:04:11,716 --> 00:04:17,911
+oil based material and
+many of the materials are related to oil.
+
+54
+00:04:17,911 --> 00:04:20,636
+There are oil based or using gasoline and
+
+55
+00:04:20,636 --> 00:04:26,169
+in that case this ratio will always be the
+same because when you burn the gasoline,
+
+56
+00:04:26,169 --> 00:04:31,190
+it will emit the carbon proportional
+to the number of carbon atoms.
+
+57
+00:04:31,190 --> 00:04:37,295
+Now, compared to that, we can see
+that coal here is a bit higher and
+
+58
+00:04:37,295 --> 00:04:40,040
+that around 80 gCO2/MJ.
+
+59
+00:04:40,040 --> 00:04:43,865
+And that reflects that coal
+had a higher number or
+
+60
+00:04:43,865 --> 00:04:49,490
+proportion of carbon atom,
+gas on the contrary is about 50 g/CO2.
+
+61
+00:04:49,490 --> 00:04:53,219
+Small reduction but
+still important compared to oil,
+
+62
+00:04:53,219 --> 00:04:57,570
+which means natural gas is
+pretty good here for heating.
+
+63
+00:04:57,570 --> 00:04:59,700
+What deviates from that?
+
+64
+00:04:59,700 --> 00:05:04,688
+Okay, on the low end we have nuclear
+power, which in terms of carbon
+
+65
+00:05:04,688 --> 00:05:09,589
+emission is really great because
+as you are using nuclear energy,
+
+66
+00:05:09,589 --> 00:05:12,141
+there is no combustion of carbon.
+
+67
+00:05:12,141 --> 00:05:16,285
+And in that case we don't have emission
+apart from building the power plant,
+
+68
+00:05:16,285 --> 00:05:20,515
+which is very small compared to the amount
+which is produced over lifetime.
+
+69
+00:05:20,515 --> 00:05:25,676
+That means that the electricity here
+in Switzerland or in Europe is lower.
+
+70
+00:05:25,676 --> 00:05:31,746
+Whereas in US we have so much coal in
+the power plant that we reach nearly 0.6.
+
+71
+00:05:31,746 --> 00:05:36,925
+That would be about here for
+the electricity in the US.
+
+72
+00:05:36,925 --> 00:05:42,057
+So not really better than oil in
+our case here for the US situation.
+
+73
+00:05:42,057 --> 00:05:45,853
+We have two things which are interesting,
+
+74
+00:05:45,853 --> 00:05:51,350
+the oil based material
+are around here 30gCO2/MJ, why?
+
+75
+00:05:51,350 --> 00:05:55,819
+Because the carbon is still
+inside my plastic and
+
+76
+00:05:55,819 --> 00:06:01,931
+will only be released when we
+incinerate for example our plastic.
+
+77
+00:06:01,931 --> 00:06:09,470
+So if we incinerate it will go after
+incineration up to the 65 gCO2/MJ.
+
+78
+00:06:09,470 --> 00:06:16,455
+But if we put it in a landfill, at least
+for the next 50,000 years we will keep or
+
+79
+00:06:16,455 --> 00:06:21,111
+at least a few 1000 year,
+we will keep the plastic and
+
+80
+00:06:21,111 --> 00:06:27,339
+the emission overall will remain at
+the 30 gCO2/MJ, that we have here.
+
+81
+00:06:27,339 --> 00:06:29,400
+Fuel without combustion.
+
+82
+00:06:29,400 --> 00:06:32,301
+Then nearly everything is inside the fuel.
+
+83
+00:06:32,301 --> 00:06:36,180
+We just have the supply chain which
+was about 20% of the emission.
+
+84
+00:06:36,180 --> 00:06:44,790
+So we are around 10 here
+gCO2/MJ in that case.
+
+85
+00:06:44,790 --> 00:06:47,600
+Now, what's happening on the high end?
+
+86
+00:06:47,600 --> 00:06:53,930
+You see here, cement concrete mortar,
+are really high compare to the other.
+
+87
+00:06:53,930 --> 00:06:56,690
+So there is something different happening.
+
+88
+00:06:56,690 --> 00:06:58,970
+When I asked the question why people say,
+
+89
+00:06:58,970 --> 00:07:02,420
+that's because concrete
+requires a lot of energy.
+
+90
+00:07:02,420 --> 00:07:03,251
+That's true.
+
+91
+00:07:03,251 --> 00:07:06,080
+But that should go the other
+direction because we
+
+92
+00:07:06,080 --> 00:07:08,370
+divide by the non-renewable energy.
+
+93
+00:07:08,370 --> 00:07:12,944
+Okay, so if we have would have
+high energy and high CO2 emission,
+
+94
+00:07:12,944 --> 00:07:15,820
+this should be about the same as the rest.
+
+95
+00:07:15,820 --> 00:07:18,366
+So the answer is elsewhere.
+
+96
+00:07:18,366 --> 00:07:23,844
+The answer is that cement is made of what,
+it's made of carbon, it's made of calc.
+
+97
+00:07:23,844 --> 00:07:29,959
+And when we put the cement inside a wall
+or it's liquid, when it will solidify,
+
+98
+00:07:29,959 --> 00:07:36,097
+we have a chemical reaction which make
+it become solid and really holding well.
+
+99
+00:07:36,097 --> 00:07:40,521
+And this is where the carbon
+atom are emitted and
+
+100
+00:07:40,521 --> 00:07:47,870
+generate important emission of CO2 in
+this drying period of the concrete.
+
+101
+00:07:47,870 --> 00:07:48,578
+Okay, so
+
+102
+00:07:48,578 --> 00:07:54,380
+this is the reason that we are about a
+factor of three higher than with the oil.
+
+103
+00:07:54,380 --> 00:07:56,586
+The hydraulic is interesting.
+
+104
+00:07:56,586 --> 00:08:01,146
+Okay, the hydraulic energy is
+interesting because it's higher and
+
+105
+00:08:01,146 --> 00:08:04,456
+you think why a renewable
+energy would be higher.
+
+106
+00:08:04,456 --> 00:08:10,186
+Because we are looking only at
+the megajoule nonrenewable here.
+
+107
+00:08:10,186 --> 00:08:15,483
+And that means the hydraulic energy
+has very low CO2 emission and
+
+108
+00:08:15,483 --> 00:08:17,520
+very low non renewable.
+
+109
+00:08:17,520 --> 00:08:21,430
+But the ratio is high because
+we need to build the dam and
+
+110
+00:08:21,430 --> 00:08:24,415
+the dam is partly or made out of concrete.
+
+111
+00:08:24,415 --> 00:08:28,930
+And that bring it at a relatively
+high level compared to the rest.
+
+112
+00:08:28,930 --> 00:08:32,990
+That shows very well,
+don't use this ratio for
+
+113
+00:08:32,990 --> 00:08:39,405
+measuring the performance of a given
+technology is just to check the data.
+
+114
+00:08:39,405 --> 00:08:42,485
+The performance must be
+measured per functional unit.
+
+115
+00:08:42,485 --> 00:08:46,555
+Okay, not a ratio here between two flows.
+
+116
+00:08:46,555 --> 00:08:50,465
+But this ratio is very
+useful to check the data.

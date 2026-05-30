@@ -1,0 +1,82 @@
+LCA is keeping records of
+a large number of flows. And there are different types of flow. And we need to structure
+these thousands of flow and use them to first build
+the product system and the process tree, so
+how to deal with all this flow. We will learn it with
+the funding learning objectives. We want to build the product system and
+process tree. We want to define the product system on
+a functional basis not surprisingly for LCA which is function based. We want to identify flow
+intermediary between different economic process and
+elementary from or to the environment. And then build this system process
+tree composed of unit processes linked by these intermediary
+flow between economic processes. Let's start by a few definitions. Product system is a collection
+of unit processes which perform one or
+more defined function. So a product system is in
+fact defined by the product system here is a group of
+unit processes defined by the product function that it serves. And it's characterized not
+only by the final products, but really by the function
+of these products. Okay, so ideally a product system
+contains all the different processes that we have inside the system
+that are required to achieve the function. And that means basically
+that if I have included all processes here that serves
+to serve this function. Okay, the input of the rest of
+the economy is in fact zero because everything what is needed for
+my product system is included here. We'll see in practice,
+we have some exception. We don't want to work too long to that. So we'll have some rules for
+good practice there. But ideally, basically, the only exchange with the rest of the
+economy is the delivered product function. On the other hand, the product system as as a part of
+the economy is in fact a machine or plant which is extracting
+resources from the environment. And emitting, on the other hand,
+residue along substances or pollutants to the environment to air,
+to water, to soil or emitting noise also. We see that the environmental
+here will be all marked. The flow from into the environment will
+be all marking in yellow and here all the flow intermediary between different
+economic processes are marked in blue. So, let's go in further detail and
+look at one of these process which is basically
+that the product system is disaggregated into
+the series of unit process. So unit process is linked to
+other unit process upstream via these intermediary flow or
+flow downstream to another processes here via
+another intermediary flow. So the intermediary flow are flows
+that connect unit processes. The elementary flow are input
+from the environment for each of these processes or
+output to the environment which can occure in our system, okay? And presently we are building
+the product system. So we focus mostly on intermediary flow. This is in the gold definition part. Okay, the inventory of the elementary
+flow either as resources or as a mission is by definition
+the quantification of all elementary flow crossing the system
+boundary from and to the environment. And that will be treated
+in the next chapter. So we park that and we think how
+do we build our product system? So let's look at an example and
+let's take a shoe example, here we have the shoe manufacturing
+as our central unit process here. To build this shoe, we need some rubber. Okay that will be needed. We probably need if it's
+a leather shoe some leather. Okay, and we might need some electricity
+and some heat that we have here. The leather, this would be what we
+call the tier one processes which are directly entering the manufacturer
+of our shoe which is my main product and offering a pair of feet protected during
+for example a year in the case of a shoe. So now the leather itself is
+being produced by a cow and this cow is right on the farm. Okay, so we'll have another for
+example, unit processes for the farm processing of the farm
+production of my leather. And that will be here,
+the tier two processes that will be used. And you have tier three
+processes will be for example the fertilizer which
+are needed by the farm at this level. So we build our products system
+by moving up and down and following this and
+imagery flow to build from the mainstream manufacturing the tier one first
+processes then the tier two etc. Each of these processes
+itself can either extract flows from the environment like for
+the first fade or the natural gas from ground for
+electricity. Or more commonly in fact because
+the extraction from the environment is usually done by mining operation. It will nearly all these unit processes
+will have some emission to the air, to the water or to the soil that we can
+see such as methane for the farm C02. For many of the processes PM 2.5 for
+electricity production from coal for example and dye to fresh water
+directly from my shoe manufacturing. These are called as we say
+elementary flow in yellow and the intermediary flow which are used
+to build our system are in blue here. On each of the unit process,
+you could make a mass balance and an energy balance from all the inputs. Okay, and all the output. And this is very useful to
+verify that the unit process and the global system respect
+the conservation of energy and mass. It's not commonly done I
+would say in all LCA or LCA database, but
+that's an increasing tendency that we should in fact check our
+balance that the sum of inputs correspond to the sum of outputs,
+to check out our balance.

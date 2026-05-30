@@ -1,0 +1,612 @@
+1
+00:00:08,850 --> 00:00:12,955
+If you do comparative assertion,
+
+2
+00:00:12,955 --> 00:00:18,035
+you will have to have
+a peer-review work and
+
+3
+00:00:18,035 --> 00:00:20,740
+this peer-review
+will ensure that
+
+4
+00:00:20,740 --> 00:00:24,130
+the interpretation
+reflect the identified,
+
+5
+00:00:24,130 --> 00:00:27,730
+limitation and goal of the
+study that you don't suddenly
+
+6
+00:00:27,730 --> 00:00:29,470
+have conclusion which were not
+
+7
+00:00:29,470 --> 00:00:31,745
+really well grounding the study,
+
+8
+00:00:31,745 --> 00:00:35,455
+and that the study report is
+transparent and consistent.
+
+9
+00:00:35,455 --> 00:00:37,960
+It's optional. But as I say,
+
+10
+00:00:37,960 --> 00:00:39,535
+to be ISO-compatible,
+
+11
+00:00:39,535 --> 00:00:41,815
+if you involve a
+comparative assertion,
+
+12
+00:00:41,815 --> 00:00:44,100
+you need to have a peer-review,
+
+13
+00:00:44,100 --> 00:00:45,440
+and a peer review in fact,
+
+14
+00:00:45,440 --> 00:00:49,220
+with three reviewers,
+at least a president,
+
+15
+00:00:49,220 --> 00:00:51,110
+a chair, and then two other
+
+16
+00:00:51,110 --> 00:00:54,775
+reviewers which would
+provide their advice.
+
+17
+00:00:54,775 --> 00:00:56,480
+It needs to be planned and
+
+18
+00:00:56,480 --> 00:00:58,850
+budgeted from the
+start for a small LCA,
+
+19
+00:00:58,850 --> 00:01:02,525
+that would be perhaps 10% of
+the cost for a larger LCA.
+
+20
+00:01:02,525 --> 00:01:05,585
+About 5% of the cost.
+
+21
+00:01:05,585 --> 00:01:07,400
+What is small and large?
+
+22
+00:01:07,400 --> 00:01:08,930
+I mean, a small LCA would be
+
+23
+00:01:08,930 --> 00:01:11,945
+something in the range 5-10,000.
+
+24
+00:01:11,945 --> 00:01:15,440
+Large LCA would be rather
+in the range 20-30,000,
+
+25
+00:01:15,440 --> 00:01:18,900
+but I've carried out some LCA,
+
+26
+00:01:18,900 --> 00:01:22,280
+one LCA, for $600,000
+because we were
+
+27
+00:01:22,280 --> 00:01:27,370
+doing a product in
+every state in the US.
+
+28
+00:01:27,370 --> 00:01:29,635
+With a high level of
+
+29
+00:01:29,635 --> 00:01:33,730
+complexity govern all
+different impacts.
+
+30
+00:01:35,090 --> 00:01:39,885
+When you involve the reviewer,
+
+31
+00:01:39,885 --> 00:01:42,285
+involve them from the start.
+
+32
+00:01:42,285 --> 00:01:45,300
+Discussed already, the
+scope and goal definition,
+
+33
+00:01:45,300 --> 00:01:48,140
+discuss the basis for
+comparison with them,
+
+34
+00:01:48,140 --> 00:01:51,440
+discuss after the inventory or
+
+35
+00:01:51,440 --> 00:01:53,690
+also get from them what
+
+36
+00:01:53,690 --> 00:01:55,640
+they suggest to use
+as data sources.
+
+37
+00:01:55,640 --> 00:01:59,765
+Because if you just involve
+them at the end of your LCA,
+
+38
+00:01:59,765 --> 00:02:02,180
+you will be in
+trouble because you
+
+39
+00:02:02,180 --> 00:02:05,195
+don't have time to correct,
+
+40
+00:02:05,195 --> 00:02:06,890
+your budget is gone,
+
+41
+00:02:06,890 --> 00:02:11,190
+you cannot take advantage
+of their advice properly.
+
+42
+00:02:11,190 --> 00:02:16,275
+Really, peer-review are
+usually very knowledgeable and
+
+43
+00:02:16,275 --> 00:02:21,455
+I've been doing one of my
+first large peer review I did.
+
+44
+00:02:21,455 --> 00:02:24,890
+In fact, the three
+peer reviewer had
+
+45
+00:02:24,890 --> 00:02:29,630
+probably about 40 years
+of LCA experience,
+
+46
+00:02:29,630 --> 00:02:32,030
+whereas the people
+doing the LCA had
+
+47
+00:02:32,030 --> 00:02:36,720
+only three or four years
+experience cumulatively.
+
+48
+00:02:36,740 --> 00:02:39,320
+There we really brought
+
+49
+00:02:39,320 --> 00:02:41,870
+a lot of information
+and knowledge to
+
+50
+00:02:41,870 --> 00:02:47,500
+the LCA so that in fact the
+final results were good.
+
+51
+00:02:47,500 --> 00:02:51,485
+But it would not have
+
+52
+00:02:51,485 --> 00:02:55,310
+been without the peer
+review at the same level.
+
+53
+00:02:55,310 --> 00:02:57,140
+These people now in fact,
+
+54
+00:02:57,140 --> 00:02:58,160
+I've learned a lot and now
+
+55
+00:02:58,160 --> 00:03:00,980
+themselves experts
+since that time,
+
+56
+00:03:00,980 --> 00:03:03,290
+which was very
+interesting and we were
+
+57
+00:03:03,290 --> 00:03:07,335
+working on a regular
+basis with them in fact.
+
+58
+00:03:07,335 --> 00:03:11,180
+Peer review, the importance
+to have that clearly
+
+59
+00:03:11,180 --> 00:03:14,795
+stated from the star.t
+The scope definition,
+
+60
+00:03:14,795 --> 00:03:18,020
+the scope of an LCA must take
+into account and clearly
+
+61
+00:03:18,020 --> 00:03:22,235
+describe a bit all
+the steps of the LCA.
+
+62
+00:03:22,235 --> 00:03:25,250
+But in particular here
+
+63
+00:03:25,250 --> 00:03:28,640
+four steps which are part
+of the goal definition.
+
+64
+00:03:28,640 --> 00:03:30,290
+Product system to be studied;
+
+65
+00:03:30,290 --> 00:03:31,505
+function of the system,
+
+66
+00:03:31,505 --> 00:03:34,010
+functional unit
+system boundaries.
+
+67
+00:03:34,010 --> 00:03:37,340
+A series of points
+which are more on
+
+68
+00:03:37,340 --> 00:03:39,140
+the inventory side like
+
+69
+00:03:39,140 --> 00:03:43,375
+the allocation procedure will
+define all what it means.
+
+70
+00:03:43,375 --> 00:03:47,765
+Data requirement,
+assumption, value choices,
+
+71
+00:03:47,765 --> 00:03:51,505
+limitatation data
+quality requirements.
+
+72
+00:03:51,505 --> 00:03:55,070
+Typical of critical review and
+
+73
+00:03:55,070 --> 00:03:59,030
+the type and format of the
+report which is there.
+
+74
+00:03:59,030 --> 00:04:01,130
+Then it should also define
+
+75
+00:04:01,130 --> 00:04:03,260
+the life cycle impact
+assessment methods
+
+76
+00:04:03,260 --> 00:04:08,070
+and interpretation to
+be used in that case.
+
+77
+00:04:08,070 --> 00:04:10,610
+Just to be clear, in
+the golden scope,
+
+78
+00:04:10,610 --> 00:04:12,320
+you don't do all that.
+
+79
+00:04:12,320 --> 00:04:15,230
+But I will say up a posteriori.
+
+80
+00:04:15,230 --> 00:04:16,445
+Once you've done that,
+
+81
+00:04:16,445 --> 00:04:21,710
+you define exactly what is
+going to come in the study and
+
+82
+00:04:21,710 --> 00:04:24,800
+how it will be made or has been
+
+83
+00:04:24,800 --> 00:04:29,825
+made in some respect if you
+define that a posteriori.
+
+84
+00:04:29,825 --> 00:04:33,845
+Now, how do you
+perform your LCA?
+
+85
+00:04:33,845 --> 00:04:37,220
+How do you best invest
+the time you have,
+
+86
+00:04:37,220 --> 00:04:38,810
+you have a limited
+amount of money.
+
+87
+00:04:38,810 --> 00:04:43,660
+It limits the time you can
+invest if the consultant,
+
+88
+00:04:43,660 --> 00:04:47,820
+you need to bill at
+least $1,000 a day for
+
+89
+00:04:47,820 --> 00:04:55,390
+younger scientists,
+or young analyst.
+
+90
+00:04:58,280 --> 00:05:00,710
+If you have a 5,000 LCA,
+
+91
+00:05:00,710 --> 00:05:01,970
+you have basically 10 days.
+
+92
+00:05:01,970 --> 00:05:05,050
+How to best involve
+these ten days.
+
+93
+00:05:05,050 --> 00:05:08,040
+I recommend to
+carry out the LCA,
+
+94
+00:05:08,040 --> 00:05:09,605
+this is not an eyesore itself,
+
+95
+00:05:09,605 --> 00:05:11,210
+but in two steps.
+
+96
+00:05:11,210 --> 00:05:14,330
+That's valid for many
+scientific approach
+
+97
+00:05:14,330 --> 00:05:17,060
+with about equal
+effort in each step.
+
+98
+00:05:17,060 --> 00:05:20,105
+First step you do a
+first screening phase,
+
+99
+00:05:20,105 --> 00:05:23,750
+and that will last until
+halfway of your LCA.
+
+100
+00:05:23,750 --> 00:05:25,985
+If you have 10 days
+after five days,
+
+101
+00:05:25,985 --> 00:05:28,325
+you come back to your sponsor
+
+102
+00:05:28,325 --> 00:05:30,770
+with the first screening
+phase covering
+
+103
+00:05:30,770 --> 00:05:34,730
+the whole LCA and
+assessing orders
+
+104
+00:05:34,730 --> 00:05:37,400
+of magnitude of the
+emission
+
+105
+00:05:37,400 --> 00:05:39,730
+inventory and impacts.
+
+106
+00:05:39,730 --> 00:05:45,195
+Or if your LCA was 30 days work,
+
+107
+00:05:45,195 --> 00:05:49,160
+or $30,000 typically,
+
+108
+00:05:49,160 --> 00:05:51,640
+after 15 days work,
+
+109
+00:05:51,640 --> 00:05:53,230
+you will come and
+
+110
+00:05:53,230 --> 00:05:58,885
+present the first screening
+of all the study.
+
+111
+00:05:58,885 --> 00:06:02,170
+Then you identify
+with your sponsor and
+
+112
+00:06:02,170 --> 00:06:07,250
+use your advisory group.
+
+113
+00:06:07,250 --> 00:06:10,390
+What to do in priority in
+
+114
+00:06:10,390 --> 00:06:14,995
+a default detailed analysis
+to then invest your time in
+
+115
+00:06:14,995 --> 00:06:19,240
+the most important
+life-cycle stages
+
+116
+00:06:19,240 --> 00:06:22,740
+or most important components
+of your products,
+
+117
+00:06:22,740 --> 00:06:27,710
+or the most important
+substances impact that you
+
+118
+00:06:27,710 --> 00:06:30,350
+have so that you don't
+
+119
+00:06:30,350 --> 00:06:33,530
+give equal importance
+to every stage,
+
+120
+00:06:33,530 --> 00:06:35,810
+but you really emphasize and get
+
+121
+00:06:35,810 --> 00:06:38,975
+the maximum benefit and accuracy
+
+122
+00:06:38,975 --> 00:06:42,050
+and improvements
+in your study with
+
+123
+00:06:42,050 --> 00:06:45,940
+the time that is left
+to invest for this.
+
+124
+00:06:45,940 --> 00:06:48,350
+In summary, the goal and scope
+
+125
+00:06:48,350 --> 00:06:50,975
+definition phase is crucial
+
+126
+00:06:50,975 --> 00:06:53,765
+and it defines the
+main hypothesis
+
+127
+00:06:53,765 --> 00:06:56,120
+and method used in the LCA.
+
+128
+00:06:56,120 --> 00:06:57,920
+It's really crucial step to
+
+129
+00:06:57,920 --> 00:06:59,960
+ensure the steady consistency.
+
+130
+00:06:59,960 --> 00:07:01,970
+It requires discussion and
+
+131
+00:07:01,970 --> 00:07:05,165
+interaction between the
+clients, the sponsor,
+
+132
+00:07:05,165 --> 00:07:09,350
+the analysts
+performing the study,
+
+133
+00:07:09,350 --> 00:07:11,945
+the potential stakeholders, and
+
+134
+00:07:11,945 --> 00:07:16,770
+potentially if any of the
+independent peer reviewer.

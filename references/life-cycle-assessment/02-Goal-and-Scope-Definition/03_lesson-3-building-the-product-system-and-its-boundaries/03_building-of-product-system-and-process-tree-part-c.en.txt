@@ -1,0 +1,108 @@
+So let's see what are the steps and
+how we can apply them to the aluminum
+example to build this tree? The idea is first,
+we start from the functional unit and we put that as a box, as a process. Then we take the blue flows, the intermediary flows
+from this unit process and we build our Tier 1 flows
+that we have here, okay? And this will group all
+the flow that are needed, for example, if we take a functional unit
+here of 1 kg aluminum liquid, okay? We'll have here some aluminum oxide,
+some anodes we look at in a minute. And then we follow up and we say,
+this Tier 1 processes, what do they need? And they need themselves some other
+material which are entering in their production. And we find that via following
+the intermediary flow. So we start from a functional unit,
+we take the Tier 1, we follow upstream and downstream
+of the Tier 1, we repeat this step until you reach processes which
+are covered by an LCA database. So if here I have a process which is well
+covered, I can stop because people have already done the work for the upstream and
+I don't need to repeat that, okay? So you are in fact in a better position
+than when I started LCA in 1991, where we had very, very few databases and data from packaging or
+mostly on the energy side. But you now have more
+than 4000 processes and processes like laptops and electronics. You have a whole diversity of chemical, which set you in a much better place
+to perform much quicker than LCA, and in fact, much more accurately
+than we had in the past. So once we have traced all that, we
+redesign our processor tree, we do that. And then we will give for
+each box, we want a number of each box which will be, for
+example, here will x and we will calculate it based
+on this different flow, which would be, for example,
+here, the kilo box site, okay? Per kilo aluminum,
+per functional unit, okay? So in each box, you will have either
+the kilo or if it's different unit, you could have per functional
+unit that you want to give, and you don't give the unit, you give an
+individual number like x in that box and y in that one for each box. Let's see how we do that with the example
+of the aluminum primary liquid. So we want 1 kilo out of our
+aluminum plant producing that. And first, we identify the first
+tier of reference flow. So we see that we have
+here aluminum oxide, which will be one of the flow,
+we'll study it. And remember we have here 1.93 kilo
+aluminum oxide per aluminum primer. But we also have an anode and cathode,
+some plant electricity mix the heat, the natural gas,
+heat from natural gas and some transport from a transoceanic freight
+plus two disposal processes. We can put a box for each of them. And we see we have a transport
+oceanic freight and don't forget to put the disposal
+which are part of my system. And all these boxes here
+which are downstream from my aluminum primary liquid. This is a disposal of the process, the disposal as it's
+a credit to gate LCA heat, the disposal of the aluminum itself will
+come later in the life cycle in this case. And let's look particularly
+at the aluminum oxide. So if I put the the box here, I'm using 1.93 kilo per functional unit. If I put here 1 kilo as a functional unit, that's what I'm using,
+and I keep record of that. This was Tier 1,
+these are all the Tier 1 processes, okay? And now let's look at Tier 2,
+how do we do? We take aluminum oxide from the database. We look at the intermediary flow and
+we repeat the operation, okay? So aluminum oxide is using
+aluminum hydroxide, okay? And basically,
+you follow a process flow which indicate how a product is manufactured and what are all the different
+sub-products which are used here. So 1.53 aluminum hydroxide plus,
+I also have the same electricity, heat and additional amount which which
+come in addition to what we have. Emission here our only heat waste
+in that case, which is rare, usually you have more emission than that. But as we say, when we build our system,
+we forget about that, we will come back when doing
+our inventory for this flow. So now aluminum oxide,
+I have now the aluminum hydroxide which now
+are the Tier 2 processes, okay? Which are here marked in brown,
+and you see that some of the processes like the heat,
+light fuel oil, all the transport oceanic are both in
+fact, Tier 1 and Tier 2 processes. Because they contribute
+directly as direct here, input to the aluminum primary liquid for
+here. And they also indirectly contribute via
+the aluminum hydroxide which contribute to the aluminum oxide, which contribute
+to the aluminum primary liquid. So in the end, the amount of transport
+will sum up these different amounts, okay? So now how we repeat,
+we have got of Tier 2 and Tier 3 level. How can we populate
+the amount in each box? So we said here, this is easy,
+this is 1.93 kilo oxide per functional unit because
+that was the direct flow. How much do we put in that box? We know we needed 1.93 kg aluminum
+oxide per kilo aluminum liquid. If we multiply that by 1.53 kg aluminum
+hydroxide per kilo aluminum oxide, you see that in terms of units,
+the kilo aluminum oxide are disappearing, and I will get kilo aluminum
+hydroxide per kilo aluminum liquid. This is the amount per functional unit. And here 1.93 times 1.53, that's 2.96 and you get your 2.96 here, kilo aluminum hydroxide per functional
+unit that you can do here, okay? And we can continue that because if
+we repeat this step at level three, we found the amount here. But in addition to that,
+we have the level three tier where we are introducing the aluminum hydroxide
+itself has the bauxite at mine and 1.4 kilo bauxite at mine which
+is used in my aluminum hydroxide. Plus again, some electricity,
+some heat, and some transport which are producing here
+and some red mud from bauxite digestion. So this adds now the Tier 3
+level that we have here, okay? Which are also entering inside my system. So now we use this an intermediary
+flow to fill in the box. And that's what we did here 1.93, we had multiply here
+these two to get 2.96. And here for the next level, how do we do? We have 1.93, 1.33, 2.96, and you look at the unit now it's kilo
+aluminum hydroxide per functional unit. And now, we have 2.965 time 1.4, if you repeat the operation, which give us the 4.14 kilo bauxite. This time, the kilo aluminum hydroxide
+are getting away, if we look here, kilo bauxite per functional
+unit per kilo aluminum liquids, all this number here we're putting
+are already per functional unit here. And we repeat that for the anode for
+the petrol, the light fuel oil and the transport, which will be a combination
+of what is coming from here and directly from the aluminum here, okay? So we get all out here like that stepwise. And in the end, we have a nice design
+process tree with in each box. And that's really the condition when
+I ask you to do the process tree, I want to see the amount per
+functional unit in each box here filled with the amount here of process
+used per functional unit. This is really key in what we want to do. Okay, in summary,
+a product system description includes the unit processes
+which are part of my system, the intermediary product flows. And we would say we park and
+keep the elementary flow from each of these unit process from into
+the environment, okay?. In addition, we have the product
+function which is delivered and crisscrossing the system
+boundary to the economy. Whereas the elementary flow
+are crossing the boundary from and to the environment in that case. The process tree is built starting from
+the reference flow, what was purchased to obtain the product function, and moving
+through the different tiers of processes. And the process tree is documented
+using intermediary flows to calculate the total amount of
+each process per functional unit, which is key that we will use
+later in the next phase LCA phase, which is the inventory in that case here.

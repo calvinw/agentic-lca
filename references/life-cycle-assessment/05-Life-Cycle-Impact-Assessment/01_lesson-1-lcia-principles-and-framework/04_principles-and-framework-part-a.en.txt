@@ -1,0 +1,102 @@
+Welcome back, today we're going to dive
+deeper into the framework of life cycle impact assessment, or LCIA. So our learning objectives for today, are to describe the challenges that we
+have with combining different indicators. And being able to compare them,
+to find the key vocabulary for life cycle impact assessment. Especially focusing on this idea
+of midpoint impact categories, and endpoint damage categories. And really recognize that the uncertainty
+of impacts depends on interpretation uncertainty and model uncertainty. Which are often inversely related. So, let's say that we want to calculate
+the impact of University of Michigan by combining some key numbers. Well it was founded in 1817, and
+has more than 64,000 students, and the stadium capacity
+is 106,000 students. Wow, these are all really big numbers so
+let's get the total impact by just adding up all three and
+we get a whopping 172,000. But of course in calculating this,
+this doesn't make any sense, those numbers shouldn't be added,
+even if all of them are big. We can't compare U of M to UCLA,
+by looking at this number 170,000 and seeing which one's better or
+more impactful. So but what happens is actually
+in calculating impacts for impact assessment of different decisions. Many approaches end up looking for a
+single final number to compare two things. And they end up adding things that
+don't necessarily make sense. So in impact assessment, our goal is to convert things as
+much to common units as possible. And add up those units, so
+that they can be added and then compared to other scenarios. Now you've actually already seen
+an example of different impact assessment approaches. When Professor Julier presented
+the comparison of packaging materials. Where different approaches caused
+different emissions to be weighted differently. He was showing you different
+impact assessment methods. And what we can see in these
+results is that even there it looks like different emissions
+we get different results. We don't get the same results for
+different impact assessment methods. And so even with a more formal
+impact assessment method, different results can happen and
+that can reveal a potential for bias. And this is why sometimes when such
+impacts are calculated, folks might say, well show me your results, and
+I'll just tell you who paid you. I'll tell you who sponsored this work, in order to get results
+that make them look better. That's understandable that people are
+suspicious of those results because they think it could be skewed
+to support the sponsors. So to be more scientific, and
+to yield more robust results, we need more recognized and
+consistent impact assessment methods. Especially it turns out for toxicity
+assessment, without a formal assessment, we all end up adding implicit and
+unscientific weightings. So we want to be explicit with
+the assumptions we're making. So let's say that we have the question of
+how do we compare elephants and apples? Again it depends on your functional unit, like what's the thing you're
+comparing them based on. If it's based on having to transport
+them and impacts from transport, you care about their weight of course. But if you cared about the caloric intake which I don't like the idea
+of eating an elephant at all. But then you would care more about the
+impacts associated with getting a certain amount of calories out of it. And so, that's similar to
+what we are trying to do here it is a difficult challenge and so
+we'll dive into the details of it. Now in recent decades, international progress has been
+made on LCIA, method quality. The first approaches did more basic
+things like, group emissions and add emissions just based on
+where they were emitted to. So, if I have one chemical
+emitted to water and another chemical emitted to water. I can just group those because they're
+both admitted to water independent of the ultimate impact they have,
+that's called critical volumes. And there was another method
+that what it did is it looked at environmental policy would define,
+a critical flow of emissions. Like we're having a lot of this
+pollutant emitted into the air or water, which isn't good. And then for a given scenario would
+see how much extra was being emitted associated with that scenario. Is it close already to its critical flow? And so
+the closer it is to its critical flow, the more impact it was considered
+to have that's called ecopoints. But neither of these methods linked
+to the ultimate fate exposure and impact of the actual emission. And so it turns out Leiden University in
+the Netherlands played a significant role, in structuring the field in
+terms of impact categories. Looking at fate exposure and impact and, I was lucky enough randomly to be
+going to school at Leiden University. And meet some of the people
+including Professor Hye Yoons, who helped come up with these methods. So one of the key aspects of LCIA is to
+start with what we're trying to protect. We want to evaluate damage
+to the things that we value. So things we want to protect our the human
+system, the natural environment and of course life support
+systems like our climate. And there are two different types of
+values that can be considered here. There's the intrinsic value of we just
+don't want people to get sick or die for human health. And we don't want species to go extinct,
+for ecosystem quality. And there's also the instrumental value,
+so the socioeconomic value. So do impacts, decrease the value
+of our built infrastructure, or decrease the value of cash crops. Or in terms of natural resources, do our impacts decrease the amount
+of minimal resources available. Or, the services that can be
+provided by those ecosystems. Now of course there's also cultural value, such as valuing the cultural heritage
+of historic buildings or monuments. Or value of the natural heritage or
+flora, fauna and geology. And at the moment LCIA hasn't
+really delved into that realm, but I hope that it does soon. And so the way that we look at
+the damage to these areas of protection, is described somewhat in ISO 14044. Which describes an impact
+category that we can use an LCIA. Which means we take our life
+cycle inventory results, and we assign these results to
+different impact categories. And we use impact modeling to compare the
+midpoint damage, at different categories. We can then use damage modeling or
+qualitative approaches, to compare this midpoint damage. To ultimately a damage to one
+of our areas of protection. That's the overview, so
+let's dive a little bit deeper into that. The UNEP-SETAC framework, describes
+this midpoint and damage, framework. So we have our emissions to air water or
+soil and resource extractions, and these can each be linked to
+different midpoint impact categories. So for example emission of CFCs,
+can be linked both to ozone depletion and to climate change because
+it's a greenhouse gas. These midpoint impacts can then be
+grouped together to look at their damage, their endpoint damage. For example to human health,
+ecosystem quality, natural resources. And again, a given midpoint impact it's
+okay for it to be added up together, to connect to different damage categories. So ozone depletion and climate
+change can affect human health, but climate change can also
+affect ecosystem quality. Now in this framework, it is allowed to then combine the damage
+categories into a single weighted score. Because people often want to
+compare an array of scenarios. And they just want to get a final
+score for each scenario and see which one looks best. But that does get a little
+bit like are UFM example, where you're then adding things
+that don't have similar units. And have to apply your own weighting and
+your own biases of what you value most. And so, we usually wouldn't take it to
+the next level of a weighted score.

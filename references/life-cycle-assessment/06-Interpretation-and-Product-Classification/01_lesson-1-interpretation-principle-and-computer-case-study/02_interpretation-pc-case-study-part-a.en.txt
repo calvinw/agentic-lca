@@ -1,0 +1,127 @@
+The best way to interpret and to learn how
+to interpret is to take a real case study and exercise
+our judgment analysis. As a case study, we'll laptop versus desktop. This is a 2000 about laptop. The study we'll carry on, is the study I used, in fact to apply for my
+professorship in 1998. Then we will update it with more recent data
+based on ecoinvent. Learning objectives are to apply the interpretation principle to a computer case study comparing
+a desktop versus laptop. Doing that, we want to
+identify components, life-cycle stage, material and recycling strategy of
+special interests. We will look at these
+different angle we were mentioning earlier. We want to identify
+which substances also are dominating
+human health impacts. For the second stage, interpret results from SimaPro and ecoinvent across
+impact categories. We would like to do this also accounting for
+informal recycling, which will be the last
+part of this presentation. PC case study description. Our objective is to develop a sustainable or environmentally
+friendly computer or to compare different computer from a manufacturing
+perspective. We do the life
+cycle assessment of the desktop versus the laptop for five-years during 2,000
+hours and as initial data, as they say are from 1998, interesting to see how
+it improves with time. Function of a PC is multiple. Probably nowadays, which
+was not the case in '90s, is access to Internet, social media, but also writing, calculating crucial
+for our class, and more broadly,
+the analysis of information or the
+sharing of information. Functional unit. This is 1PC used
+during 10,000 hours. Look this was in '98
+to 200 megahertz PC, where nowadays we are
+at four gigahertz. We multiply the speed of PC by a factor of 20 or even
+30 if we consider this. Reference flow, we buy one desktop that's
+assuming to be equal to the lifetime of analysis
+and at the time it was a CRT, cathodic ray tube screen. Laptop is a PC including
+an LCD screen, and key factor, parameter, of course, the lifetime
+of my computer and the consumption during use. Let's look a bit at the
+system boundary classical, we will in fact, the criteria here chosen
+was all the processes with larger than 2 percent
+emission and resources. In term of resources, we have the material
+to do the PC. For example, here, 0.5 kilo aluminum function unit
+manufacturing process, the use phase was important. The electricity consumption
+for our desktop here of 20,880 kilowatt hour, and we want, of course, the waste treatment
+to be included in our system boundaries. Emission inventory. Always we want to check
+our emission inventory. You can see the weight
+of the desktop, which is substantially
+larger than the typical weight of like four kilogram at
+that time for a laptop. In fact, every flows
+here are higher for the desktop computer
+by basically a factor of 2-3 when we look
+at the different emission. What was relatively
+surprising to me was to see that even for lead, the emission where heavy metals, the emission were higher with desktop and we have to say '98, the impacts of the battery
+are not really considered. That's the question we will have when we move to ecoinvent, is how important are the emission associated
+with the battery? As a curiosity, you can see that a computer is emitting
+close to one ton CO_2. I mean 860 kilo CO_2 emission, or 30 times higher than
+the mass of the PC, so this requires quite a bit of energy and greenhouse
+gas emissions. We then had run the climate
+change score of the desktop, and it's always interesting to identify what are the
+dominant substances. We see very clearly CO_2
+was 860 plus 1.9 CH_4. Even with here we were
+using in with impact 2,000 to a GWP100 of 500 years. That's impacted others
+to make a choice. We made the choice to say we
+want the long-term effect. We know CO_2 proportional, CH_4 has short-term effects, which are high up to 34
+for the first 100 years. But when you wait long enough, you go down to between
+six and 11 here. Even with 34, we would
+be totally dominated, in fact by the CO_2 itself, which is the dominant
+substance here. What is interesting is now let's compare not only the CO2, but the energy, the
+greenhouse effect, the human health damage, and the ecosystem damage. For all of them, very
+similar behavior. We have the laptop
+at about 40 percent. We see this is the
+way it's taught to be interesting to look at
+the different components. In the desktop we really have the screen and the tower itself. You see that large fraction of the impact in
+all impact category is associated with
+the monitor and in particular with its
+energy consumption. Now, interesting to look
+is for each of these, is it rather the use phase or the manufacturing
+which is dominating? Let's look at that. You see that for the desktop, the 160 Watts electricity
+use represent about three quarter of the total primary
+energy consumption. In fact, also greenhouse gases, which are close to that. The production is
+one-fourth of that. The laptop has basically
+reduce the use phase, to a limited amount, whereas the production is
+remained about the same. Even if the mass is less the components here are
+relatively energy-intensive. The laptop is dominated
+by production, but not because
+production increased, but because the use
+phase has decreased. Why has the use phase decreased? Why couldn't we have
+a desktop which is consuming less? Think about it. Very clearly the
+laptop, in fact, is optimized for
+energy consumption. Not so much to reduce energy, but for having an
+extended battery life that you can use it over
+the maximum of time. All components in my laptop are optimized and it's
+an important feature that they consume less, whereas for desktop,
+people don't care. That's a pity in a sense
+because that's how we get electronic equipment which are consuming substantial
+amount of energy. The use phase reduce for the laptop to increase
+battery lifetime has substantial reduction in impact compared to the desktop. Now it's interesting
+to go deeper and say, which of the sub-components
+between materials, the electronic themselves
+what is the repartition in primary energy here
+for the two computers? If we look at our desktop, here, for the desktop,
+the production of material here in green, which is here, is still substantial and we
+have a big CRT, has a lot of glass. Of course, there are
+some electric components and assemblies is a small part. In contrast, the electronic
+component is really the dominant contribution for
+the monitor of my laptop, which is the LCD screen. It's an electric
+component in itself. Now the PCB, the
+printed circuit board, is an interesting feature
+because for this one, none in fact nor the
+electronic component, nor the material, are important
+that it sees the assembly which really here produce
+a large contributor. When we start understanding
+this contribution, we can start answering
+the question, which are the components
+whereas recycling? First things, is
+it interesting to recycle where you have a lot
+of energy for the assembly? Not really because
+when you rebuild it, you will have this energy. Certainly this is not
+a priority there. Now, what is interesting
+is when you have the production of material which represent an
+important fraction, which is essentially here
+for my desktop monitor, this is thought to be a high
+potential for recycling. Now, why are we speaking so
+much about e-waste recycling? Why would it be important? In a sense, two reason, we are interested to
+recycle two kinds of components and materials. Those who have a high
+value and have like precious metals that we have in the components
+that's a first-class. That's a main reason for e-waste recycling
+is avoiding toxics. Having a high toxicity is really the second criteria
+for recycling. It's very interesting to
+see, generally speaking, material which are
+relatively low value, not too much toxicity. You've better to incinerate or landfill them
+and use them for energy production or
+just landfill them. But either highly valued or highly toxics should
+have the same treatment. They should need to be recycled and recycled in the proper way.

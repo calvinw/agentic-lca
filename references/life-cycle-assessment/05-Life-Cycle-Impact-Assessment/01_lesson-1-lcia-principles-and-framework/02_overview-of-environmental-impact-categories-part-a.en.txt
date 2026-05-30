@@ -1,0 +1,142 @@
+Hi, everybody. In today's video, we're going to have an
+overview of some of the most common environmental
+impact categories for our life cycle
+impact assessment. I have to say this
+is one of the things that really got me into LCA is realizing that I could
+connect the decisions I make with the impacts on humans, on the environment, on animals, in general, be able
+to compare those two. Our learning objectives
+for today are to first list the four main environmental
+damage categories, then we're going to relate specific environmental
+and health impacts to each of these categories, and then for a few, we're going to dive deeper
+into the mechanisms and the spatial and temporal ranges of some of the dominant impacts. As a reminder, in our phases
+of life cycle assessment, we've already talked
+about the goal and scope definition
+where we did functional units and our different scenarios
+and system boundaries. Then we use the inventory of
+extractions and emissions to compare the two scenarios and what extractions and emissions
+are associated with each. Then in order to make
+that information meaningful and useful, we take it the next
+step to look at the impacts of those
+extractions and emissions. Throughout, of
+course, we are doing interpretation to make sure that what we're doing
+is making sense, is consistent, and we don't need to revise
+anything along the way. The four categories of
+environmental damage, we've got global impacts, things like climate change, human health impacts, so these are things that cause death or disease to people. Ecosystem and
+biodiversity impacts, so things that affect endangered
+species, for example, or the habitats that they
+live in, and resource use, things like water use, land use, use of minerals
+or non-renewable energy. We'll start with global impacts and we'll look at this through a concept defined by scientists
+as planetary boundaries. Now, planetary boundaries, what they do is
+they characterize safe operating
+space for humanity. Scientists define these
+as things where if you transgress one or more
+planetary boundary, this may be catastrophic
+by triggering nonlinear responses of the continental or
+planetary scale. In 2015, in a science
+advances paper, scientists characterize
+the state of seven out of the nine
+planetary boundaries. We'll start by focusing
+on climate change, which is right here at the top. We can already see, it's already out of the green safe boundary and into the zone of uncertainty
+or increasing risk. The mechanism for climate change is the greenhouse effect. What happens here
+is that the sun shines down on the Earth and so sends energy, and light, and heat into the Earth, and then the Earth's surface
+absorbs that and re-emits that back as long wave
+or heat radiation. It's a different
+form of radiation, which means that
+greenhouse gases in the atmosphere absorb
+that and then they, in turn, re-emit it. Some of it goes out
+into space and some of it goes back to the
+Earth's surface. This is generally
+useful for us and lets us be alive because those greenhouse gases
+keep the surface of the Earth warm enough for us
+to function, which we like. But as we can see
+in recent time, there have been much higher
+anthropogenic CO_2 emissions and so that is leading to a warming of the Earth's
+atmosphere that is much higher than many of us can
+adapt to in many ways. Impacts to date first on
+just the temperature, we can look at the
+global warming relative to a time
+period before we had omitted so much CO_2 and other greenhouse
+gases into the atmosphere. Compared to that time
+period of 1850-1900, we can see that, at first, there were just the
+normal oscillations, right around the 1960s, there were just the normal
+temperature oscillations, but then we can see a
+clear trend upward. Those oscillations continued but the average moved upward. Something to notice here
+is that the model or estimated anthropogenic
+warming is tracking well with the observed monthly global
+mean surface temperature, the observed averages
+are matching modeled averages based on climate change in the
+mechanism that I explained. In terms of long-term impacts
+on this temporal scale. These could be variable, so it depends how
+humans respond, and has large uncertainties due to the complex system
+of the atmosphere. If there's no reduction, we're likely to exceed this
+threshold right here of 1.5 degrees of warming and
+could even reach two degrees. But with faster CO_2
+reductions were likely to stay below 1.5 degrees
+of warming and we can see that we might
+bring us back down. What are the causes
+of climate change? Well, like I said, we believe it's
+greenhouse gases, and the reason that
+scientists have confidence in that is because the observed warming matches the combined
+anthropogenic forcing. Forcing is another word for the effect of our emissions on the temperature
+that's observed. The observed warming
+globally we can see is a little bit more
+than half a degree Celsius, that's this black bar, and greenhouse gases, actually, through our models are
+predicted to lead to a greater increase in
+temperature than is observed. But the reason for
+that is that we also, as humans, emit other particles and pollutants and emissions
+into the atmosphere, and so those forcings actually end up cooling
+the atmosphere, and when we add the green
+bar and the yellow bar, we get our combined
+anthropogenic forcings, which is matching our
+observed warming. Something else to
+note here is that the natural forcings due
+to solar oscillations or any other aspects of
+our orbit are much smaller compared to the observed warming and
+the predicted warming. In terms of thinking
+of the climate change impacts so far, it can be hard to attribute any given impact of climate change because of
+the probabilities involved. But in recent decades, scientists have been
+publishing studies that directly can link
+climate change to specific impacts and they've
+connected climate change to impacts on every single
+continent in the world. That's what this is showing us. These impacts are happening
+all over the world and they're connecting
+all types of impacts. In blue, we've got impacts
+on physical systems, such as glaciers or
+coastal erosion. In green, we've got our
+biological systems, so things like wildfire
+and marine ecosystems. Then in red, we've got
+human and managed systems, so things like food production or livestock or
+health and economies. You can see blue, green,
+and red throughout. If you want to dig
+deeper into this, you can also see the confidence
+range for all of these. You can see relatively
+high confidence that climate change is impacting every continent and
+the many systems that we use in living. What about future risks? These depend on the future of our greenhouse gas emissions. I'm going to go
+through this figure backwards a little bit, starting at Panel C. At Panel C, we can see that our
+baseline emissions are in gray at the top-right, that's how much
+were predicted to emit in greenhouse gases
+if there's no change. But there are
+different scenarios that are in the IPCC report, all of which would lead
+to varying levels of reduced greenhouse
+gas emissions, and so what the
+rest of this figure does is look at those different scenarios
+and their impacts. In Panel B, what we
+can see is that if we are able to reduce our
+greenhouse gas emissions, then that would reduce the cumulative
+emissions over time. It would go from around 8,000 gigatons of CO_2 down to 6,000, 4,000, or 3,000
+gigatons of CO_2. Then on the vertical
+axis of Panel B, we can see what that
+would mean in terms of the global mean
+temperature change. If we make no change, 8,000 would correspond to 4-5
+degrees Celsius increase. But as we reduce our
+cumulative CO_2 emissions, that would reduce the global
+mean temperature change. Then finally, we can
+link this to Panel A, the risks from climate change because these are dependent
+on the temperature change. What we can see is
+that for things like unique and threatened ecosystems or for extreme weather events, even at 1.5-2 degrees Celsius, which we were already
+pretty much at, we're experiencing very high
+risk due to climate change. But for things like the
+distribution of impacts, the global aggregate impacts, or large-scale singular events, if we can keep our
+temperature change down, then we can reduce
+the risk level, the additional risk for
+any of those things.

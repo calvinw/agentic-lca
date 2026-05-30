@@ -1,0 +1,109 @@
+How old or I should say, how young is
+life-cycle assessment as a method than the science? We'll look and recognize that the history of LCA
+and LCA standard is relatively recent and has been rapidly evolving and
+progressing at the same time. We want you to be able to list
+the main LCA standards or LCA-based standards that we
+will refer to in this class. A short historical
+review of LCA. The first LCA has been done 1969 on beverage
+packaging by Coca-Cola. In fact, with a strong
+interest in solid waste. And it's interesting that we
+started with waste in LCA. Is it because waste is the most important
+program in the world? No, probably not. But it's what we see is what is left in our
+hands when we've consume our product and
+that we don't really need. That's why the focus
+started with that. The Swiss EPA produced
+several studies on packing material which
+were very good basis and starting basis for then
+evolve to other studies because they had all
+different type of energy production
+mostly for packing, or they had all the
+different material they had collected the data for. The first restructuring of LCA came through the
+SETAC code of practice, a small documents from Peston
+workshop with experts. And that was developed by the SETAC Society for Environmental Toxicology
+and Chemistry, which is historically
+the society who has and continues to develop LCA with conferences bringing
+together every year about 200 scientists working on this method
+development in the world. This SETAC so then to show the different working
+group from 1995-1999, which really led to further structure the method
+and serves as a basis for an important milestone which was the first ISO standards
+that was determined there. At the end of the 90s, you know scientists
+how they are. They like to work together, but they like their own
+methods, their own approach. To really arrive to recommendation and help
+as a practitioner, we thought we need
+an outside partner beyond the scientific
+society like SETAC. With my colleague,
+we were heading in fact the group on
+impact assessment and we thought let's contact the United Nations
+Environmental Program UNEP, and to see if they would
+collaborate and by chance, when we contacted
+them, Kofi Annan, the UN Secretary at that
+time had just called for studying on the
+environmental impact of the entire supply chain so we were just at the right time. 2002 we launch, with UNEP the
+life-cycle initiative which is still continuing and arriving now at what we were
+aiming at 20 years ago, which was to arrive to recommending an impact
+assessment method. But in between came a
+very important progress 2003, the ecoinvent database, which is one of the
+largest database or the largest database
+with 4,000 processes at the level of unit processes is made available here or
+mostly in Switzerland, but with adaptation nowadays
+in different countries. In parallel with
+the inventory side, we have different impact
+assessment method like for toxicity USEstox, ReCiPe is a Dutch method, Impact World+ is our own method developed with the Polytechnique
+Montreal in Canada. The effort of the
+life-cycle initiative here, which is they've logged
+on LCIA guidance, where we had two of these
+framing workshop in the last four years and we are aiming at arriving as I say, at the recommended reading
+practices and methods. In short, there has been
+a lot of progress in terms of data availability
+for life-cycle inventory, your life is much simpler than mine when I started LCA to do that and in life cycle
+impact assessment, which are available. What are the standard available, which are life-cycle based
+or life-cycle related. ISO has a whole series, and this is a 14,000 series
+of environmental standards. In fact, relatively
+surprising way regarding the newness
+of the approach, LCA has been one of the first environmental
+management standard here with two standards, 14040, which was principal
+and framework, which gives a frame
+then which is developed within 14044, which is the one you
+want to look if you have really detailed question
+or need guidance for that. Though they give guidance, they don't give factors, they don't give number. That's the work in the
+life-cycle initiative to provide these more detailed, harmonized method and numbers. But it helps avoiding a
+lot of the misuse of LCA. If an LCA is ISO compatible, it ensure basic
+quality of the LCA. 2014, a water footprint
+is developed, which is really
+life-cycle based, headed by one of my former collaborator,
+Sebastian Harbor, who had the process
+for giving this water footprint
+LCA-based approach. Two other standard shortly 14048 is giving some data
+documentation and 14049, our example of application for this goal and scope and
+the inventory analysis. No ISO standard for carbon footprint but there
+is a product life cycle, greenhouse gas accounting
+and reporting practice from the World Resources
+Institute and the World Business Council
+on Sustainable Development. In short, life-cycle assessment, what the feature or
+the main feature, it relates the environmental
+impact to the product, service, or the function. We've seen with the
+popcorn example, how we need to relate
+not to just kilogram, but to look at what is a product function and have a unit like the cubic meter use, which is representative of
+a function of a backing, which is protecting and
+transporting material. With LCA, we quantify
+mass balance of emission of resources over the whole life cycle
+from cradle to grave, or even cradle to cradle when we have recycling
+in our life cycle, and we cover multiple
+impacts: greenhouse effect, toxicity resources
+that we look at, not only a single aspect, like carbon or water here. We have the four phases of LCA, goal and scope, inventory, impact assessment
+interpretation that we will go further in more detail
+in the following chapters. In summary, LCA is
+relatively recent, but has been rapidly evolving and progressing
+and maturing. I would say we are
+in a place which is amazing compared to where
+we were 30 years ago, leading to standardization and
+a large data availability, which may make it
+much easier to apply. One of the first tool that
+has been standardized, and we have to
+recognize a standard only provide a frame
+for good practice, but not necessarily the method
+or consensus methods that could help making results more consistent
+across different LCA, and that are needed to be as a complement to
+the ISO standards. Also, we need to be sure
+that the quality of data is recognized and
+ensured in all LCAs.

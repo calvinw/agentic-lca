@@ -1,0 +1,719 @@
+1
+00:00:10,371 --> 00:00:14,282
+How do we handle when
+a process is producing
+
+2
+00:00:14,282 --> 00:00:18,529
+simultaneously different core-products.
+
+3
+00:00:18,529 --> 00:00:23,847
+How to separate and attribute part
+of the emission to one product and
+
+4
+00:00:23,847 --> 00:00:29,085
+the other part to the second one,
+that's what we are going to see.
+
+5
+00:00:29,085 --> 00:00:34,381
+And our objective is how to handle
+core-product in life cycle assessment.
+
+6
+00:00:34,381 --> 00:00:40,904
+And we will identify suited
+allocation method to the problem and
+
+7
+00:00:40,904 --> 00:00:45,868
+rules for
+good versus inappropriate practice.
+
+8
+00:00:45,868 --> 00:00:51,499
+So let's look at the allocation
+between two products and
+
+9
+00:00:51,499 --> 00:00:57,728
+let's take an example to decide
+how to separate two products.
+
+10
+00:00:57,728 --> 00:01:01,137
+So let's take a wheat crop.
+
+11
+00:01:01,137 --> 00:01:06,412
+And this wheat crop, you have different
+operations like the plowing and
+
+12
+00:01:06,412 --> 00:01:09,179
+harvesting and all this operation and
+
+13
+00:01:09,179 --> 00:01:13,863
+at the end you have your wheat
+that you were intending to obtain.
+
+14
+00:01:13,863 --> 00:01:20,277
+But in addition you also have some
+straw that you have produced.
+
+15
+00:01:20,277 --> 00:01:24,298
+And the question is the raw
+material extraction for
+
+16
+00:01:24,298 --> 00:01:30,376
+the detail of the tractor for example or
+the emission from that same tractor,
+
+17
+00:01:30,376 --> 00:01:36,547
+how to separate them and allocated partly
+to the straw and partly to the wheat,
+
+18
+00:01:36,547 --> 00:01:42,847
+because in general we are interested in
+the wheat for example for bread making.
+
+19
+00:01:42,847 --> 00:01:47,959
+So to do that,
+we need an allocation procedure and
+
+20
+00:01:47,959 --> 00:01:50,892
+keyword here is causality.
+
+21
+00:01:50,892 --> 00:01:58,185
+We only will accept to do it if there
+is a causality relationship and
+
+22
+00:01:58,185 --> 00:02:02,493
+we will use method based on causality.
+
+23
+00:02:02,493 --> 00:02:06,338
+Let's look at what 14 or
+
+24
+00:02:06,338 --> 00:02:11,783
+44 is proposing as a preference order,
+okay?
+
+25
+00:02:11,783 --> 00:02:15,395
+So the allocation method
+can be applied and
+
+26
+00:02:15,395 --> 00:02:20,512
+each of these allocation only
+if they fulfill the respective
+
+27
+00:02:20,512 --> 00:02:25,126
+condition of use and
+have this causality principle and
+
+28
+00:02:25,126 --> 00:02:30,061
+this should be done in
+the following order of preference.
+
+29
+00:02:30,061 --> 00:02:34,561
+First we propose to do process separation.
+
+30
+00:02:34,561 --> 00:02:39,510
+If it is possible to disassociate
+the different production system.
+
+31
+00:02:39,510 --> 00:02:44,866
+So let's take our straw and our wheat.
+
+32
+00:02:44,866 --> 00:02:50,373
+So the straw here and
+the wheat product A, okay?
+
+33
+00:02:50,373 --> 00:02:58,174
+And let's think of plowing our field,
+okay?
+
+34
+00:02:58,174 --> 00:03:02,921
+Does plowing belong to wheat or to straw?
+
+35
+00:03:02,921 --> 00:03:06,081
+We cannot separate that
+we need the plowing,
+
+36
+00:03:06,081 --> 00:03:11,246
+we need the sowing of the wheat and
+this will both produce wheat and straw.
+
+37
+00:03:11,246 --> 00:03:17,732
+So this approach is not
+applicable in this situation but
+
+38
+00:03:17,732 --> 00:03:22,976
+it could be partly apply
+when we think that for
+
+39
+00:03:22,976 --> 00:03:28,496
+the straw bales and
+the baling here of my straw.
+
+40
+00:03:28,496 --> 00:03:31,957
+This really only belong to B.
+
+41
+00:03:31,957 --> 00:03:37,724
+So from the point of harvest
+everything which is downstream
+
+42
+00:03:37,724 --> 00:03:42,797
+from that should be attributed
+either to the straw or
+
+43
+00:03:42,797 --> 00:03:48,350
+to the wheat, but
+not to both of them in that case, okay?
+
+44
+00:03:48,350 --> 00:03:53,437
+But not really possible to
+apply fully in that case.
+
+45
+00:03:53,437 --> 00:03:58,253
+The second method to apply in
+order of preference is what
+
+46
+00:03:58,253 --> 00:04:00,821
+is called system expansion.
+
+47
+00:04:00,821 --> 00:04:05,439
+The idea is to say,
+my core product B, okay,
+
+48
+00:04:05,439 --> 00:04:13,877
+is in fact substituting another product in
+the economy that we don't need to produce.
+
+49
+00:04:13,877 --> 00:04:19,707
+Let's call it product product B prime,
+which has a similar function but
+
+50
+00:04:19,707 --> 00:04:24,880
+not necessarily exactly the same or
+not the same way to produce.
+
+51
+00:04:24,880 --> 00:04:29,406
+Let's take an example,
+if you're in Denmark and
+
+52
+00:04:29,406 --> 00:04:34,911
+you produce straw,
+straw is often used for producing heat.
+
+53
+00:04:34,911 --> 00:04:39,287
+And if you produce heat here, okay,
+
+54
+00:04:39,287 --> 00:04:46,358
+you may be substituting heat
+production from natural gas.
+
+55
+00:04:49,844 --> 00:04:55,822
+Okay, so now the idea is to say
+we can subtract to process A and
+
+56
+00:04:55,822 --> 00:05:01,333
+B, the emission associated
+with the heat of natural gas
+
+57
+00:05:01,333 --> 00:05:06,859
+that we haven't avoided burden
+sort of bonus for that.
+
+58
+00:05:06,859 --> 00:05:12,022
+And so we will say that the emission
+
+59
+00:05:12,022 --> 00:05:17,009
+of product A equal to the emission
+
+60
+00:05:17,009 --> 00:05:22,351
+of product (A + B)- the emission
+
+61
+00:05:22,351 --> 00:05:26,466
+of product B prime, okay?
+
+62
+00:05:26,466 --> 00:05:31,719
+And that's away which is
+relatively rigorous but
+
+63
+00:05:31,719 --> 00:05:39,235
+and there is a bad this is only valid
+if B is indeed substituting B prime.
+
+64
+00:05:39,235 --> 00:05:45,377
+So if the substituted core product
+is fully defined known and
+
+65
+00:05:45,377 --> 00:05:50,195
+it really happens okay,
+but if it's the case,
+
+66
+00:05:50,195 --> 00:05:54,298
+this is this is really a good procedure.
+
+67
+00:05:54,298 --> 00:05:59,925
+The third possibility is to
+do physical allocation and
+
+68
+00:05:59,925 --> 00:06:05,426
+for example, on the basis of mass or
+energy content,
+
+69
+00:06:05,426 --> 00:06:12,029
+but this is only valid if there is
+a causality between the mass and
+
+70
+00:06:12,029 --> 00:06:17,288
+the amount of each of these
+products of the emission
+
+71
+00:06:17,288 --> 00:06:21,964
+associated with each
+of these two products.
+
+72
+00:06:21,964 --> 00:06:26,684
+So if we take the case of the wheat and
+the straw,
+
+73
+00:06:26,684 --> 00:06:33,410
+we could think that if you feed both
+the wheat and the straw to a cow and
+
+74
+00:06:33,410 --> 00:06:38,720
+that can happen in in in in
+some cases not very common,
+
+75
+00:06:38,720 --> 00:06:43,677
+but it happens okay,
+you could take X as typically
+
+76
+00:06:43,677 --> 00:06:48,781
+the nutritional content
+of the of the feet, Okay.
+
+77
+00:06:48,781 --> 00:06:51,745
+Or the the energy in the feet and
+
+78
+00:06:51,745 --> 00:06:58,015
+allocate proportionally to the energy
+produced via the wheat and
+
+79
+00:06:58,015 --> 00:07:03,034
+the energy produce and
+fed to the cow via the stroke.
+
+80
+00:07:03,034 --> 00:07:08,655
+But now if wheat is used for bread making,
+we are not eating the stroke.
+
+81
+00:07:08,655 --> 00:07:14,792
+So we cannot use the energy content
+as a basis for allocating this.
+
+82
+00:07:14,792 --> 00:07:19,402
+So in that case we we were not
+going to use this approach and
+
+83
+00:07:19,402 --> 00:07:23,919
+we jump on the fourth approach
+which is generally nearly
+
+84
+00:07:23,919 --> 00:07:28,840
+always applicable is a financial and
+economic allocation.
+
+85
+00:07:28,840 --> 00:07:33,297
+Okay.
+And here the economic allocation is
+
+86
+00:07:33,297 --> 00:07:38,171
+a measure of the incentive for producing.
+
+87
+00:07:38,171 --> 00:07:45,730
+And so we will assess the value of process
+a product A the value of product B.
+
+88
+00:07:45,730 --> 00:07:50,774
+And we reallocate
+proportionally to these values.
+
+89
+00:07:50,774 --> 00:07:57,898
+two points linked to that some people
+will argue, But prices fluctuating.
+
+90
+00:07:57,898 --> 00:08:04,260
+So how how can we have a reliable
+method If if price can fluctuate,
+
+91
+00:08:04,260 --> 00:08:11,086
+I would say this is really realistic
+because when you look at people and
+
+92
+00:08:11,086 --> 00:08:15,485
+the producer will adapt
+their production and
+
+93
+00:08:15,485 --> 00:08:19,785
+what they are doing
+according to the price.
+
+94
+00:08:19,785 --> 00:08:24,775
+If I take the example,
+presently the price of straw
+
+95
+00:08:24,775 --> 00:08:29,415
+is about 1% okay of
+the price of the wheat Which
+
+96
+00:08:29,415 --> 00:08:33,609
+represent 9 99% of the overall value.
+
+97
+00:08:33,609 --> 00:08:39,129
+But if the price of straw
+would become 10 times higher,
+
+98
+00:08:39,129 --> 00:08:44,650
+I'm sure that the the producer
+will change the variety.
+
+99
+00:08:44,650 --> 00:08:50,812
+For example of the wheat he is
+producing to get longer stro or
+
+100
+00:08:50,812 --> 00:08:54,766
+to produce maestro versus the wheat.
+
+101
+00:08:54,766 --> 00:09:00,580
+And presently the contrary as
+the value of straw is low producer and
+
+102
+00:09:00,580 --> 00:09:06,095
+farmer will use growth regulator
+to limit the height of the weed so
+
+103
+00:09:06,095 --> 00:09:11,509
+that the we'd stay and doesn't break and
+the windy condition so
+
+104
+00:09:11,509 --> 00:09:16,421
+that when the harvest comes
+the wheat is still standing and
+
+105
+00:09:16,421 --> 00:09:22,136
+we don't lose part of the yield
+because the stem have been broken and
+
+106
+00:09:22,136 --> 00:09:26,278
+the yield cannot the grain
+cannot be harvested.
+
+107
+00:09:26,278 --> 00:09:33,071
+Okay so this varying price would
+correspond also to varying practices.
+
+108
+00:09:33,071 --> 00:09:36,939
+So I think we we we reflect
+well the incentive for
+
+109
+00:09:36,939 --> 00:09:42,744
+production last choice which is not
+really a good one is value choices or
+
+110
+00:09:42,744 --> 00:09:47,679
+arbitrary parameter which lead
+also to arbitrary results in
+
+111
+00:09:47,679 --> 00:09:50,700
+that case does allocation matters.
+
+112
+00:09:50,700 --> 00:09:52,583
+It does matter.
+
+113
+00:09:52,583 --> 00:09:56,587
+Let's take our example of wheat and
+stroke.
+
+114
+00:09:56,587 --> 00:10:01,115
+If we use the straw for heating and
+
+115
+00:10:01,115 --> 00:10:07,585
+apply the system expansion
+a pros we see that for
+
+116
+00:10:07,585 --> 00:10:14,406
+a total of about 27,000 mega jewel, okay.
+
+117
+00:10:14,406 --> 00:10:19,233
+For the total of the of
+the crop which is the sum of
+
+118
+00:10:19,233 --> 00:10:24,306
+these two flow here we
+will have 93% attributed
+
+119
+00:10:24,306 --> 00:10:29,136
+to the straw because
+the straw is able to produce
+
+120
+00:10:29,136 --> 00:10:34,332
+25,690 mega jewel of
+heat which substitutes
+
+121
+00:10:34,332 --> 00:10:38,832
+an equivalent amount from the natural gas.
+
+122
+00:10:38,832 --> 00:10:42,842
+But look if we now Say
+it was not just heating,
+
+123
+00:10:42,842 --> 00:10:47,857
+it was a co generation of heat and
+power which is I think often
+
+124
+00:10:47,857 --> 00:10:52,996
+the case then even we will
+produce more than the production.
+
+125
+00:10:52,996 --> 00:10:59,652
+So we will attribute 126% of
+the energy to the stroke.
+
+126
+00:10:59,652 --> 00:11:04,017
+Because my wheat crop
+becomes productive of energy,
+
+127
+00:11:04,017 --> 00:11:09,546
+it's not consuming, it's producing
+more and we get the bun use for
+
+128
+00:11:09,546 --> 00:11:13,620
+the wheat because we have
+produced more energy and
+
+129
+00:11:13,620 --> 00:11:17,999
+we have minus 20% of energy
+associated with that.
+
+130
+00:11:17,999 --> 00:11:23,053
+On the other hand when So
+here these two cases it's very small
+
+131
+00:11:23,053 --> 00:11:29,309
+amount of energy which is allocated to
+the straw and the same for the C02.
+
+132
+00:11:29,309 --> 00:11:32,348
+You see only 17% and 4%.
+
+133
+00:11:32,348 --> 00:11:37,204
+Now look what you do if you rain,
+cooperate you throw in the soil and
+
+134
+00:11:37,204 --> 00:11:40,777
+replace some basically
+first fade fertilizer.
+
+135
+00:11:40,777 --> 00:11:47,811
+In that case it's only a a small bonus,
+a small compensation of substitution and
+
+136
+00:11:47,811 --> 00:11:54,132
+you allocate only 1.5% to the stroke and
+you get 98% to the wheat.
+
+137
+00:11:54,132 --> 00:11:59,821
+So really inverse results compared
+to the stroke for heating for
+
+138
+00:11:59,821 --> 00:12:05,087
+example and the financial
+allocation as we saw is 99% for
+
+139
+00:12:05,087 --> 00:12:08,154
+the wheat and 1% for the stroke.
+
+140
+00:12:08,154 --> 00:12:13,084
+So radically different results
+according to the method and so
+
+141
+00:12:13,084 --> 00:12:17,738
+that's why these hierarchy
+of approaches is important.
+
+142
+00:12:17,738 --> 00:12:21,769
+But again we can only apply
+the system expansion if we
+
+143
+00:12:21,769 --> 00:12:25,900
+know the substituted product and
+it really happens.
+
+144
+00:12:25,900 --> 00:12:31,461
+So in summary for allocation allocation
+can play a substantial role and
+
+145
+00:12:31,461 --> 00:12:34,157
+bias results if not appropriate.
+
+146
+00:12:34,157 --> 00:12:39,758
+One of the mostly common bias is to apply
+mass of physical allocation without
+
+147
+00:12:39,758 --> 00:12:44,759
+underlying causality relationship,
+which is not good practice.
+
+148
+00:12:44,759 --> 00:12:49,166
+In such cases,
+even an economic allocation is more
+
+149
+00:12:49,166 --> 00:12:54,188
+appropriate as representative
+of economic causality and
+
+150
+00:12:54,188 --> 00:12:58,091
+incentive for producing each core product.

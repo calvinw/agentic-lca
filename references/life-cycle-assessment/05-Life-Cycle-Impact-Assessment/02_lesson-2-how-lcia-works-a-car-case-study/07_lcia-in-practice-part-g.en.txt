@@ -1,0 +1,116 @@
+Last but not least, could we eventually
+bring everything on the same scale that we arrive to an overall impact which
+combined now the impacts of my impact on human health, and my impact on ecosystem
+and natural resources and bring them on
+the same level. Of course, we don't necessarily need to arrive to a single
+score, as I was saying, but why not make all these
+different impacts really comparable and that we can
+not sum them by group, but look at them across the empire type of
+environmental impact. This is a role of weighting. Learning objective, define
+what is weighting in LCA, provide guidelines
+for good practice in determining weighting factor, apply the weighting to the damage scores
+of car case study, and determine and interpret
+these weighted impact score. Again, we want to
+understand what can and cannot be summed up. This is the fifth
+also optional step of my impact assessment. This time, we are
+going to look at how much value we will attribute to each of
+the different damage. We would like to know what other people are willing
+to pay per DALY, disability adjusted life
+years, for example. What donor people attribute to PDF square meter a year. Once we know that, we can multiply the DALY per functional unit by this dollar per DALY and we will get a
+total damage human health, expressing dollar
+per functional unit, total damage in ecosystem and expressed in dollar per
+functional unit and resources. Then we could even
+this time we can sum them up all the way through
+or we keep them separate, but we can put them on the
+same scale and really compare them across all the pot. Impact World Plus doesn't have an official weight so far, but there is another
+method from Weidema et al. 2009 which enabled to do that and that's what
+we are going to use here. There are different ways
+to wait and approach. The first point is, these are based
+on social values. It's not anymore
+natural science-based, because how much is
+worth a DALY or a human life versus how
+much is worth species, this is not something we
+can find in nature itself. This is something that
+we have to decide as a society what we think is due and there are different methods
+to try to measure them. First method is monetary method, and there are a
+lot of different. It's not because you get a price like the cost on the hospital or
+things like that. You have to be careful
+what you compare. The methods which are using LCA are usually based
+on willingness to pay. This is how much people
+are ready to pay to live one more year in
+good health, for example. Or how much people would say if they are presenting
+an alternative, would prefer one to the other, one being avoiding
+the species deaths versus some human health or versus having some
+more resources. With this, we can
+start transforming impact in costs that
+just what we see. You have other methods which are involving expert panel
+or interest group, where you ask them, what do you think
+is more important? Finally, you have
+distance to target, where you compare
+your own scenario to some more global or national, usually political
+objectives that you can do. All these weighting method, the way to say the problem
+is crucial and that's a limitation of ISO presently that it does not
+provide much guidance. It just mentioned then, but we should re-introduce
+some principle. First-principle from
+my point of view is we should first arrive
+to a damage level. Because if we start weighting directly pollutant quantity
+or amount of [inaudible] , I saw to equivalent. Nobody has a good
+sense of what it means and what is the effect. First thing first, we should do everything we can
+based on natural science. To arrive to a given damage, a DALY is something we
+understand what it means, and in that sense, this is much easier for
+people to evaluate. The second is, you
+should not ask, is global warming more
+important than acidification? You should say, always
+define the absolute value of related to global warming versus the absolute value
+for acidification. You need to provide the panel a level at which
+you evaluate the comparison. It's not necessarily
+the level you have in your case study because here nobody has a good sense of that. You need something
+which is a bit beyond. We need to provide
+the panel member with explicit references
+they can relate to. The total world impact is not a bad one because we have
+some sense in our world, though it's also mediated via what we receive
+as information. But we have a better sense of the total impact than the impact of my
+front-end panel itself. We can invite the
+panel member or to weight normalize
+score in that sense. Not the raw score, but once you have
+normalized them, implicitly normalizing in fact, you are saying, if I
+gave twice more now, I'm giving twice more
+to the global impact, in that case for this
+category than the other. Let's take now the
+monetary method and see how weighted damage
+score can be calculated. What we need is attribute
+a value to my DALY. This factor, which is
+my weighted factor, would be here the cost
+or willingness to pay to avoid one unit damage, and derived from
+budget constraint. That's where my colleague, by Weidema and our
+Japanese colleagues, so Itsudo et al, have done a very good job
+to look at these analysis, where they give people a certain budget and they can decide what they do in priority. Under this constraint, we can design a price
+for the dollar, for the PDF square meter year. We'll see in a minute. We then multiply that by
+the DALY professional unit. We had our 0.01100113, which was our DALY
+per functional unit. That's what we multiply
+our DALY per dollar to arrive to a dollar
+per functional unit. Values. Stepwise method from Weidema 2009 gives us a value. Here we are in Euros and we're not that far in
+front a dollar presently, so €74,000 per DALY, 0.14 for one PDF
+square meter year. For the resource is
+€0.0043 per mega joule. Or if we have our
+resulting dollar here, we can just use the currency that's moving
+with time, of course. One DALY on human health here. If I do the ratio between these two numbers here and here, 74,000 over 0.14, we get
+in fact that one DALY on human health is equivalent to 530,000 PDF square meter year. It's interesting. We had
+seen that for the impact, the ratio is about one
+to 400,000 year for the willingness to pay
+what was observed with people is we arrive to
+something a bit similar. That's probably because the
+question was relatively well set in advance. To get our total human score, we weighted how we
+get our price of €74,000 per DALY time. My DALY score,
+0.00113 coming from part B of our chapter
+or present section. We get here, DALY
+are getting away. We have euro per functional
+unit in our case. That's about €84 per
+functional unit. Is that much or not? We can think a bit. The price of a front-end panel must not be that far
+from this number. It's not a negligible,
+I would say, additional cost that
+are represented here. When we look in addition
+to paying our car, we have indirect
+costs, external costs, or they call them,
+which we should also start considering when we
+compare different impacts.

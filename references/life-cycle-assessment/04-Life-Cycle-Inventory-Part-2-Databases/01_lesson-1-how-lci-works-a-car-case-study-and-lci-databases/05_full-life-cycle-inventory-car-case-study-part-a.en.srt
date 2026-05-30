@@ -1,0 +1,668 @@
+1
+00:00:10,164 --> 00:00:14,305
+How can we calculate a full
+life cycle inventory?
+
+2
+00:00:14,305 --> 00:00:16,779
+The best things to do to do that,
+
+3
+00:00:16,779 --> 00:00:21,645
+it is to take a practical example and
+let's take a car example.
+
+4
+00:00:21,645 --> 00:00:25,024
+Okay, have my small Ferrari here.
+
+5
+00:00:25,024 --> 00:00:28,909
+The car was not necessarily a Ferrari but
+it's a nice car.
+
+6
+00:00:28,909 --> 00:00:33,838
+And we will look at the matrix
+based inventory calculation how
+
+7
+00:00:33,838 --> 00:00:37,737
+we can structure things
+elegantly in that case.
+
+8
+00:00:37,737 --> 00:00:42,044
+So we elaborate a full inventory for
+a simple case study.
+
+9
+00:00:42,044 --> 00:00:46,872
+We then illustrate the determination of
+inventory flow based on aggregated results
+
+10
+00:00:46,872 --> 00:00:47,893
+from databases.
+
+11
+00:00:47,893 --> 00:00:54,512
+And third we perform a sensitive study
+on key uncertain use stage parameter.
+
+12
+00:00:54,512 --> 00:00:58,911
+Typically in that case
+we will look at total
+
+13
+00:00:58,911 --> 00:01:03,686
+distance driven by the car
+over its lifetime.
+
+14
+00:01:03,686 --> 00:01:09,822
+So let's take as an example a passive
+piece in a car which is behind here,
+
+15
+00:01:09,822 --> 00:01:14,060
+the front and
+it's called the front-end panel.
+
+16
+00:01:14,060 --> 00:01:19,095
+And this piece is designed to
+hold the lights of the car,
+
+17
+00:01:19,095 --> 00:01:24,559
+the radiator, it has really
+a holding goal if you like that,
+
+18
+00:01:24,559 --> 00:01:28,218
+we can hold all these different pieces.
+
+19
+00:01:28,218 --> 00:01:33,816
+So the function is transport over
+car lifetime over 200,000 km.
+
+20
+00:01:33,816 --> 00:01:38,780
+And I remind you that when we have
+a component of an overall product
+
+21
+00:01:38,780 --> 00:01:44,106
+which is my car, we will always refer
+to the function of the car overall
+
+22
+00:01:44,106 --> 00:01:48,824
+function which is transportation
+over the entire distance.
+
+23
+00:01:48,824 --> 00:01:53,579
+The functional unit will be one
+front-end panel of equivalent rigidity,
+
+24
+00:01:53,579 --> 00:01:58,416
+which means different quantity depending
+on the different material used.
+
+25
+00:01:58,416 --> 00:02:02,539
+And we will test three material,
+steel, plastic,
+
+26
+00:02:02,539 --> 00:02:07,424
+SMC, thermoplastic and
+condominium and recycle aluminum.
+
+27
+00:02:07,424 --> 00:02:12,773
+So, and we have for 200,000 km service.
+
+28
+00:02:12,773 --> 00:02:16,851
+Let's look if we use our
+usual form to do that,
+
+29
+00:02:16,851 --> 00:02:21,559
+we see that for
+this functional unit of one front-end
+
+30
+00:02:21,559 --> 00:02:26,701
+panel of equivalent rigidity
+over the lifespan of my car.
+
+31
+00:02:26,701 --> 00:02:31,426
+The distance driven. With steel
+I have 10 kilo steel needed.
+
+32
+00:02:31,426 --> 00:02:35,440
+This 10 kilo steel, okay,
+will create
+
+33
+00:02:35,440 --> 00:02:39,082
+I will have 10 kilo
+steel which are driven
+
+34
+00:02:39,082 --> 00:02:44,953
+over 200,000 kilometers and
+it's a number from Volvo here.
+
+35
+00:02:44,953 --> 00:02:49,123
+For each additional kilo
+in the car we assume
+
+36
+00:02:49,123 --> 00:02:54,197
+additional consumption
+of 0.00004 liter
+
+37
+00:02:54,197 --> 00:02:59,506
+per kilo-kilometer times is
+200,000 times 10.
+
+38
+00:02:59,506 --> 00:03:04,677
+We get here 80 liter consumption
+just to transport this
+
+39
+00:03:04,677 --> 00:03:11,150
+front-end panel over the lifespan and
+the 200,000 km driven.
+
+40
+00:03:11,150 --> 00:03:15,735
+The SMC is 7 kilos, so
+this is proportional.
+
+41
+00:03:15,735 --> 00:03:22,472
+And instead here of 10, I would have 7 and
+that gives me 56 instead of 80 liter and
+
+42
+00:03:22,472 --> 00:03:27,567
+the aluminum, I need 5.9 kg aluminum for
+the manufacturing.
+
+43
+00:03:27,567 --> 00:03:34,615
+But for the final weight of my piece
+of aluminum is 3.8 kilogram so
+
+44
+00:03:34,615 --> 00:03:38,830
+which is less than half of my 80 liter.
+
+45
+00:03:38,830 --> 00:03:43,334
+I get 30.4 liter for these 3.8 kg that
+
+46
+00:03:43,334 --> 00:03:48,945
+are transported by my car
+with this front-end panel.
+
+47
+00:03:48,945 --> 00:03:53,242
+System boundary, classic,
+I don't want to go in detail but
+
+48
+00:03:53,242 --> 00:03:58,806
+we excluded here the infrastructure to
+make the car and so we remain relatively
+
+49
+00:03:58,806 --> 00:04:04,394
+simple with the raw material, the
+manufacturing use, and waste treatment.
+
+50
+00:04:04,394 --> 00:04:08,937
+Eventually recycling because the aluminum
+
+51
+00:04:08,937 --> 00:04:13,977
+recycle has a much lower
+energy use than normal.
+
+52
+00:04:13,977 --> 00:04:16,454
+Let's get what are the main
+intermediary flow.
+
+53
+00:04:16,454 --> 00:04:20,883
+If I do my product system, I'll have
+
+54
+00:04:20,883 --> 00:04:25,182
+for each scenario
+five or six number here,
+
+55
+00:04:25,182 --> 00:04:29,628
+the steel is the amount of steel needed.
+
+56
+00:04:29,628 --> 00:04:33,362
+Then the electricity.
+This is for manufacturing oil.
+
+57
+00:04:33,362 --> 00:04:38,104
+The heat for manufacturing my use phase
+of gasoline and a landfill, the 10 kg.
+
+58
+00:04:38,104 --> 00:04:41,477
+And and we'll do that for
+each of the different scenario.
+
+59
+00:04:41,477 --> 00:04:46,016
+Now, once we know the quantity used,
+if you remember,
+
+60
+00:04:46,016 --> 00:04:51,038
+we need to multiply that by
+the total emission per kilo steel,
+
+61
+00:04:51,038 --> 00:04:57,821
+per kilo composed, per kilo virgin
+aluminum or per kilo recycle aluminum.
+
+62
+00:04:57,821 --> 00:05:01,523
+And these are these data
+that we have here and
+
+63
+00:05:01,523 --> 00:05:06,530
+we structure it and put in here
+the different emissions and
+
+64
+00:05:06,530 --> 00:05:09,649
+resource consumption on the rules.
+
+65
+00:05:09,649 --> 00:05:14,095
+And each column corresponds to
+a different material, the steel.
+
+66
+00:05:14,095 --> 00:05:18,785
+We've seen 24.7 mega joule energy and
+
+67
+00:05:18,785 --> 00:05:23,479
+1.28 kg C02 emitted per kilo steel.
+
+68
+00:05:23,479 --> 00:05:24,023
+Okay.
+
+69
+00:05:24,023 --> 00:05:28,134
+And we repeat that for
+each of the scenario.
+
+70
+00:05:28,134 --> 00:05:34,185
+What is interesting is to see we have
+162 here kilo aluminum mega joule,
+
+71
+00:05:34,185 --> 00:05:37,270
+primary energy per kilo, aluminum.
+
+72
+00:05:37,270 --> 00:05:41,135
+So that will be higher than for the steel.
+
+73
+00:05:41,135 --> 00:05:43,286
+And with the composite material,
+
+74
+00:05:43,286 --> 00:05:46,929
+we also have a higher energy
+with 80 mega joule per kilo.
+
+75
+00:05:46,929 --> 00:05:51,867
+Even if it's lighter,
+we might finish with higher energy
+
+76
+00:05:51,867 --> 00:05:56,309
+need at the start,
+after the manufacturing phase.
+
+77
+00:05:56,309 --> 00:06:00,049
+See the interest of recycled aluminum,
+
+78
+00:06:00,049 --> 00:06:06,106
+only 21.8 mega joule per
+kilogram against this 162 here.
+
+79
+00:06:06,106 --> 00:06:11,325
+The electricity we've
+the European electricity with
+
+80
+00:06:11,325 --> 00:06:16,090
+10.5 and
+low level emission of resource use of
+
+81
+00:06:16,090 --> 00:06:21,088
+0.2 mega joule per kilo
+land filled in that case.
+
+82
+00:06:21,088 --> 00:06:24,445
+Okay, so
+now let's combine these two things.
+
+83
+00:06:24,445 --> 00:06:29,476
+On the one hand, the amount
+the intermediary flow, if you like of each
+
+84
+00:06:29,476 --> 00:06:34,703
+of the product time the aggregated
+emission for each from the database.
+
+85
+00:06:34,703 --> 00:06:39,057
+And we structure that
+in matrix calculation.
+
+86
+00:06:39,057 --> 00:06:45,584
+So this is the same matrix we call the
+aggregated matrix of the emission E and
+
+87
+00:06:45,584 --> 00:06:49,534
+energy which has here one row is for
+energy.
+
+88
+00:06:49,534 --> 00:06:54,686
+That is the row for CO2 that we
+have here under different emission.
+
+89
+00:06:54,686 --> 00:06:59,650
+And then I have a demand
+vector y which is composed of
+
+90
+00:06:59,650 --> 00:07:04,392
+here we are calculating for
+the steel scenario.
+
+91
+00:07:07,007 --> 00:07:10,551
+This is our steel scenario.
+
+92
+00:07:10,551 --> 00:07:18,055
+Okay, we'll have 10 kg steel 19.7,
+2.38 liter gasoline and 10 kilo landfill.
+
+93
+00:07:18,055 --> 00:07:22,181
+Total we see is 4,043.
+
+94
+00:07:22,181 --> 00:07:23,608
+How do we get that?
+
+95
+00:07:23,608 --> 00:07:28,807
+And how can we get the contribution of
+each of these components to the total.
+
+96
+00:07:28,807 --> 00:07:33,737
+Matrix calculation,
+you've done that probably a while ago.
+
+97
+00:07:33,737 --> 00:07:37,746
+Either high school or
+first year of undergrad.
+
+98
+00:07:37,746 --> 00:07:41,782
+And let's recap,
+how do we do a matrix circulation.
+
+99
+00:07:41,782 --> 00:07:45,883
+We take first the energy let's calculate
+
+100
+00:07:45,883 --> 00:07:50,695
+we have here 24.7 mega
+joule per kilo steel.
+
+101
+00:07:50,695 --> 00:07:59,424
+24.7 times 10 kg steel time 10.
+
+102
+00:07:59,424 --> 00:08:03,223
+Okay, so that will be 200 and
+
+103
+00:08:03,223 --> 00:08:09,850
+that was 247 mega joule
+per functional unit, okay.
+
+104
+00:08:10,441 --> 00:08:14,853
+The 10 kg here are kilo
+steel per functional unit.
+
+105
+00:08:14,853 --> 00:08:21,853
+And these ones are here
+mega joule per kilo steel.
+
+106
+00:08:21,853 --> 00:08:30,323
+And so we had a kilo per a functional
+unit time mega joule per kilo.
+
+107
+00:08:30,323 --> 00:08:35,035
+We get mega functional unit for
+all these different flow.
+
+108
+00:08:35,035 --> 00:08:39,724
+So first column, first row here,
+second column 10.5
+
+109
+00:08:39,724 --> 00:08:44,894
+electricity time 10.5 mega
+joules per kilowatt hour time,
+
+110
+00:08:44,894 --> 00:08:48,258
+19.7 kilowatt hour of electricity.
+
+111
+00:08:48,258 --> 00:08:52,478
+So I can write down again
+
+112
+00:08:52,478 --> 00:08:57,123
+10.5 time 19.7.
+
+113
+00:08:57,123 --> 00:09:01,914
+This is equal to 207
+
+114
+00:09:06,832 --> 00:09:09,684
+Mega joule per functional unit.
+
+115
+00:09:09,684 --> 00:09:10,413
+Okay.
+
+116
+00:09:10,413 --> 00:09:13,540
+And now we continue.
+
+117
+00:09:13,540 --> 00:09:18,872
+Let's take a triangle
+here to differentiate
+
+118
+00:09:18,872 --> 00:09:24,636
+56.9 time 2.3, 56.9 times 2.3.
+
+119
+00:09:24,636 --> 00:09:31,810
+This is equal to 230.9.
+
+120
+00:09:31,810 --> 00:09:32,417
+Okay.
+
+121
+00:09:32,417 --> 00:09:34,082
+And now I have the gasoline.
+
+122
+00:09:34,082 --> 00:09:41,563
+This is the use phase that you have
+the 43.2 time the 80 liter gasoline.
+
+123
+00:09:41,563 --> 00:09:47,029
+This will be 43.2 time 80 liter.
+
+124
+00:09:47,029 --> 00:09:54,823
+This is a total of 3456.
+
+125
+00:09:54,823 --> 00:10:02,185
+And then the final one is 0.21
+here time 10 kg landfill.
+
+126
+00:10:02,185 --> 00:10:09,534
+So this is 2.1 mega joule per
+functional unit for the landfill.
+
+127
+00:10:09,534 --> 00:10:14,530
+Okay so this is for my landfill.
+
+128
+00:10:14,530 --> 00:10:22,989
+Okay and sum of that is equal to my
+4043 mega joule per functional unit.
+
+129
+00:10:22,989 --> 00:10:24,369
+And I can restart.
+
+130
+00:10:24,369 --> 00:10:27,948
+The second row will give
+me the calculation for
+
+131
+00:10:27,948 --> 00:10:30,282
+the C02 if I would repeat it.
+
+132
+00:10:30,282 --> 00:10:34,137
+Now what is interesting
+is, what is dominant here?
+
+133
+00:10:34,137 --> 00:10:39,936
+Okay so clearly in our case the dominant
+contribution is the use phase.
+
+134
+00:10:39,936 --> 00:10:46,097
+But it's important that we can get what is
+the energy after the manufacturing phase.
+
+135
+00:10:46,097 --> 00:10:50,430
+So that will be the sum of the energy for
+the steel.
+
+136
+00:10:50,430 --> 00:10:56,042
+The 247 plus 207 plus 130.9.
+
+137
+00:10:56,042 --> 00:11:00,875
+Okay this is a total if I take this
+
+138
+00:11:00,875 --> 00:11:05,708
+number together I get 584
+
+139
+00:11:05,708 --> 00:11:10,726
+mega joule per functional unit.
+
+140
+00:11:10,726 --> 00:11:15,819
+So this is my manufacturing
+energy that we have here.
+
+141
+00:11:15,819 --> 00:11:19,299
+Plus 3456 for the transport,
+
+142
+00:11:19,299 --> 00:11:23,622
+the use phase, and 2.1 for the landfill.
+
+143
+00:11:23,622 --> 00:11:27,145
+Will play now with that looking
+at the different results.

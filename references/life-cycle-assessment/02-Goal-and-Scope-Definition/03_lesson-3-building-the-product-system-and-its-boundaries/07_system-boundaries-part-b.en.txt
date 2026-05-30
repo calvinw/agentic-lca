@@ -1,0 +1,147 @@
+Based on that, if we
+want to avoid this bias, what are the rule for good practice in setting
+our system boundary? The general rule is include all the necessary processes to assure the desired function, you want to have everything
+which is necessary included. Second, the system
+boundary should cover the same
+functional reality, not geographical, not
+company boundary, or business boundary, why? Because business boundary
+will depend on what is outsourced to other company
+versus what is produced, and when you compare
+two companies, you cannot take the
+whole of the company, you need to take the
+functional reality, which is including the
+whole supply chain of your company in both cases. Functional reality. Second, only processes
+contributing to more than a certain
+percentage are retained, or said as otherwise, you need to ensure that
+all processes contributing to more than a certain
+percentage are included. This percentage depend
+on the level of detail of the study,
+and why that? Because one of the
+first study I made or I peer-reviewed in fact, was a study on flooring
+from a Swedish company, and this flooring was
+studied very much in detail with a thousand
+different unit processes. That means that if you
+would put a one percent, for example, cutoff and you
+have such a level of detail, you are really in trouble if you start cutting everything
+off or leaving out, which is all the processes
+which are lower than a percent because you would
+leave most processes. If we have, on the other hand, about 10 different
+processes considered, one percent would be
+goods as the basis because things
+which contribute to lesser percent are small
+compared to the other which, on average, would be of 5-20
+or 30 percent as a whole. This cut-off really
+depends on your own study. Second thing, the
+cut-off criteria is really a minimum
+inclusion requirement. We could formulate it as
+we want to be sure that these processes are
+included and are retained. Third rule is, when do we have identical processes in
+a production system? Exactly the same processes, perhaps we could exclude between two scenario because we
+have it in scenario 1, we have it in scenario 2, and if you're interested, one versus two, these
+two things are equal. We could say, "I don't
+need to study that, I know they are the same, I can disregard them." Let's look when we
+can disregard them. We are saying that we can do it only if the intermediary flow affected by these processes
+are strictly equal. Let's take an
+example to do that, and I'll take the example
+of my toothpaste. We'll compare three different
+types of toothpaste. We have here self-standing
+tube compared to packaged tube that you receive inside a cardboard altogether, and a dosing tube where you could take your
+toothbrush and push it here and you would have
+the exact amount of toothpaste which is
+coming on the top. When we compare
+different packaging, I'm just interested in the packaging of
+toothpaste, question, can we exclude the
+toothpaste itself? Haydock in 1995, they made this comparison with our
+three different packaging that we have here. The normal package where the tube is inside
+another package, a self-standing tube, and the dosing tube. You see the self-standing
+tube had the advantage to have lower packaging because you didn't need the
+cardboard to do that. Can we exclude them? You see the three
+toothpastes had exactly the same
+amount of toothpaste, the three tube, so
+can we exclude them? The answer is no
+because when you look the wasted toothpaste
+is not the same. The self-standing tube
+they have is certainly the case with that brand but the self-standing
+tube they had, had more waste in one
+case than the other tube. Even if the amounts inside
+was the same, in fact, to provide the same amount
+to brush your teeth for one mouth well brushed or one
+set of teeth well brushed, you will need in fact a bit
+more every time because when you cannot empty your self-standing tube
+as well as the other. Now, question is, if you are a designer
+and you would like to make toothpaste environmentally friendlier with my packaging,
+what could you do? What would be the
+simplest things to do to make it environmental
+friendlier? Think a minute about it. My proposal is for
+what's a problem? You see here the toothpaste has a dominant impact here
+compared to the packaging. The toothpaste is more important than my packaging itself. Now, have you ever seen advertisements for
+different toothpaste? Usually, when they fill it,
+they feel it like that. Have you ever tried to
+put that in your mouth? I will not try now because
+I would have bubbles coming out of my
+ears if I do that. In fact, the main thing is if we could regulate exactly the
+amount of toothpaste we're putting in our mouth
+that would be really convenient and probably
+where we could gain by adjusting that. To do that would be simple. Just reduce the size of the diameter of the
+opening of that tube. That would be much easier to put exactly the same quantity that you want and not this
+large quantity here. Why companies are doing that? Because here it's not a win-win situation for
+them because if you start being able to regulate
+exactly how much you put, you will put probably less and they will sell less
+toothpaste in that case. But that's a good example of
+where we need to move out of the model where you always try to sell as much as you can in
+terms of consumption. You have that now with
+the powder where we have this smaller quantity of powder which is compressed, and where you don't waste too much and they found
+a solution to still sell this dishwasher
+powder or washing machine powder which are
+more efficient in that case, without losing money
+which is key of course, for the business
+side of the problem. Let's finish with
+the last example. We're comparing two
+herbicides here. We're comparing a
+first herbicide I would say all traditional
+where you need to apply 10 kilogram
+per hectare versus a more modern
+pesticide with only 0.2 kilogram per hectare,
+and this reduces. You need to have more run
+with your tractor here, so it reduces your tractor. What about the
+plowing of my field? This is strictly equal
+operation is the same tractor, the same field which
+will be plowed and require the same amount
+of diesel in both cases. Could we exclude it
+in our case because it's the same between
+scenario when I am interested in
+comparing the herbicide? Answer is no. Because even if the two
+processes are the same, you see, the yield here was different between
+my two herbicides. I have here 4,000
+kilogram yield against the five tons here
+per hectare with herbicide A which was
+apparently more efficient. In that case, that means that my 20 liter diesel even if
+they're identical here, when they are divided by 5, I get four liter diesel per
+functional unit or per ton, whereas 20-liter
+diesel divided by 4 I get here 5 liter
+of diesel per ton. In that case even if I'm
+studying just the herbicide, I need to consider every things
+which have been affected by my herbicide which is
+indirectly via the yield, the amount produced per
+functional unit difference. We need to be careful basically when we exclude
+processes to be sure we have exactly the same intermediary flows
+in both cases. To summarize, the system
+boundary must cover the same functional
+reality in all scenario. We have cut-off criteria for the inclusion of process that we need to
+clearly describe them, we need to give what is the
+cut-off percentage for which all scenario need to be
+included inside my boundary. This cut-off
+criteria is fixed in advance when you put
+your goal and scope definition before
+you go and produce the inventory of emission
+or resource use. The percentage could be a
+percentage on the impact, percentage on the emission, or percentage on the
+resource use and energy use depending
+on the study. Processes that are identical in different scenario can only be excluded if the
+intermediary flow affected are strictly equal. Same quantity of each
+process is required per functional unit of
+the different scenario. Even if sometime you can exclude them because they are the same and the intermediary
+flow are the same, you might still have a rough estimate to
+be able to compare these processes
+which are common to both scenario to those who
+are different in this study.

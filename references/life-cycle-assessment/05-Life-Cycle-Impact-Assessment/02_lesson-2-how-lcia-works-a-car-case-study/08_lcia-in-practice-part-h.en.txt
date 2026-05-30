@@ -1,0 +1,109 @@
+Let's now apply that to
+our different scenarios. Again, I've kept them separate. This time, I have everything
+in Euro per functional unit. This time, I can compare
+across all impact category. Here, I could take
+the highest impact. Which is here, and take my two. We could go to like nearly
+three orders of magnitude. Let's look at which
+impact category are coming out important. We see, of course, the global warming both
+for human health and ecosystem a bit
+higher considered for this case study here
+on human health. The water use impacts might be important to find particular not super surprising. For carcinogen, they are some
+scenario which come out, in that case, and
+non-carcinogen. That's for the human health, we see that in addition to
+that marine ossification, this is linked to
+the CO_2 emission, some water use by the
+terrestrial acidification, and at the level of the
+aquatic and in our case, primary energy is
+also important. In term of ranking, we see clearly we find
+that our usual ranking. Now, this time we can sum
+up everything if we want, and we can arrive to score which we could
+still differentiate. I've kept in the global warming, which are these and these here, on human health and ecosystem quality represented
+bit more than half in fact, of the impact on themselves. We have the other impacts
+which are coming. Total impact here
+you see we arrive to a 130 euro for the steel versus about 20 euro per functional
+unit for recycle aluminum. That means that you could pay your frontend battle a
+substantial, I mean, nearly 100 euro more if we start counting for
+this external cost. In that, we had seen that our previous impacts on
+human health, where I mean, with only part of the mission
+wearing that range with our $84 per euro were right
+in the middle of this range. Okay, and we get our nice, I know it's waiting and we can start interpreting
+and that's especially useful
+when we start having more tradeoff situation here. What is the reliability
+of these results? What was the driving force for the difference
+between this scenario? The answer is the driving force, which was, here was my
+gasoline consumption. Therefore, in fact, the difference between the
+scenario is pretty robust because this is directly
+proportional to my 80 liter. In the case of the steel
+versus the 30.4 liter that we had here for the recycled
+aluminum that we have here. I would say in this case, the variation is
+primarily linked to that, there's probably a bit
+more uncertainty between the two central scenario where the aluminum is requiring
+for the manufacturing, and there might be a bit
+more trade-off there, but they are probably
+more or less comparable. You would make your decision based on price or other factors. Why don't more car
+have aluminum? In fact, for the composite, most of this component nowadays are not
+anymore in steel. They made the move
+to compose it. Why not go to aluminum? What is the difficulty
+with aluminum? In fact, when big
+difficulties for accidents. Okay, steel when it breaks and plastic partly it's
+absorb the energy, it get deformed in a crash. It absorb the energy. It means that if you have
+a crash with a steel car, the size will be reduced. If you have that in aluminum,
+it's totally rigid. If you have a shock here, the driver is getting
+about the same shock. Company who are producing
+aluminum base car, and there are some. They have to make it
+that it will break piece-by-piece here. We'll first break here
+because your soldering must be done that this
+one first breaks, then this one, then this one, etc. That it
+absorbed the energy. It's pretty relatively
+complex process that we need to have here. Now, how robust are the different weight across the different areas
+of protection? Because every individual
+has a different value, different society will
+have different value. This is a very interesting
+study from our colleague, Norihiro Itsubo, who
+is professor in Tokyo. He has developed the Japanese impacts
+assessment and Line 3. We look here at the
+relative importance studied in all these
+different country, more than I think
+23 country here. He looks at this one and ask
+people how much they value, they represent it with
+different example where they would put a waiting on human
+health, biodiversity. Social assets are
+the resources and primary productivity
+is an area of protection that we don't
+have any impact until 2002. Which is linked to basically
+the ability to produce agriculture or resource for
+burning entire forests. What is really interesting, if you look the country which are giving an
+important green part. Which are until about here. High importance to biodiversity. If we look here, these are all developed
+or emerging country. This is industrialized country, which are either the G20 or G8, are
+industrialized country. Industrialized country,
+if we have enough money, we tend to then share it
+between the human health. They also have the smallest
+impact given on human health. Whereas developing country or some other emerging country, where the revenue
+is a bit lower, will start to see
+that we have less important on biodiversity and more important on human health. You see that in this
+graph as a function of the GDP per capita, by weighting factor, my importance of human
+health goes down. If I have more money, the relative
+importance goes down, whereas the biodiversity
+is going up in this case. It's a tendency within
+that every video, but that was very consistent and show that
+these methods are not random. It's social science, it's
+not natural science-based, it's preferences that it can be restructured in a way which
+bring consistent results. Before we conclude, there is a third option beyond
+nominalization and waiting, which is called grouping. I don't want to go in detail. You can read that where impact category can be grouped according to the
+area of protection. We've done that in
+a sense already. The type of emission of
+resources or the spacial place, you can do all grouping. The problem is, which
+one makes sense? That's where we need a bit
+more guidance here then what ISO is providing here. Summary, waiting
+enables comparison of results across area
+of protection based, for example, on monetization
+and conjoint analysis. This budget constraint
+or conjoint analysis. We don't necessarily need to
+arrive to a single score. We can keep separate
+the impact per category and then identify
+what is the high-impact. Present these live
+second issue is working probably based on
+some of the work from it's suitable to develop
+default consistent weights at midpoint and damage at the midpoint to damage
+will use in fact, our MDF or midpoint
+to damage factor.

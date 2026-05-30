@@ -1,0 +1,435 @@
+1
+00:00:08,914 --> 00:00:16,157
+If we look on the transportation and
+especially on remediation project.
+
+2
+00:00:16,157 --> 00:00:20,090
+We made a study with one
+of my master students.
+
+3
+00:00:20,090 --> 00:00:24,600
+We published in 2019 with
+Jacob Gasnika a study on
+
+4
+00:00:24,600 --> 00:00:30,427
+the environmental dredging and
+remediation from the Hudson River.
+
+5
+00:00:30,427 --> 00:00:35,467
+So we compared and
+that was a broad study on health,
+
+6
+00:00:35,467 --> 00:00:41,460
+as we like to do the environmental
+dredging benefits first.
+
+7
+00:00:41,460 --> 00:00:47,901
+And this is the avoided burden
+because when we dredge the river,
+
+8
+00:00:47,901 --> 00:00:52,554
+the concentration in
+PCB in the following 70
+
+9
+00:00:52,554 --> 00:00:57,463
+years will be reduced and
+we get people fishing.
+
+10
+00:00:57,463 --> 00:01:00,889
+In fact,
+the lower river is allowed to fish, but
+
+11
+00:01:00,889 --> 00:01:04,150
+you have restriction on
+the amount you fish and
+
+12
+00:01:04,150 --> 00:01:09,434
+the upper river on the other end is
+forbidden, but some people still do it.
+
+13
+00:01:09,434 --> 00:01:14,570
+We estimated that the dredging operation
+
+14
+00:01:14,570 --> 00:01:22,941
+reduced here the burden of health
+by a limited amount of 15 Dally.
+
+15
+00:01:22,941 --> 00:01:29,789
+This is about one person, one death or
+something of this order of magnitude.
+
+16
+00:01:29,789 --> 00:01:38,303
+Now you have to realize the dredging
+program there has costed $1.5 billion.
+
+17
+00:01:38,303 --> 00:01:42,280
+So 15 Dally for $1.5 billion.
+
+18
+00:01:42,280 --> 00:01:48,026
+There are other benefits in addition
+to that, but it's really debatable.
+
+19
+00:01:48,026 --> 00:01:53,839
+Could we find better alternative
+which will save more life and
+
+20
+00:01:53,839 --> 00:01:58,423
+be more profitable to
+the local community rather
+
+21
+00:01:58,423 --> 00:02:02,355
+than spending that for effort like that?
+
+22
+00:02:02,355 --> 00:02:06,787
+Now, what is interesting was to
+compare this is the benefit, but
+
+23
+00:02:06,787 --> 00:02:12,199
+I'm bringing machine, I'm bringing
+heavy equipment, I'm moving the PCB.
+
+24
+00:02:12,199 --> 00:02:14,849
+So what would be the impact of that?
+
+25
+00:02:14,849 --> 00:02:20,315
+We can see that in term of
+local impact on the community
+
+26
+00:02:20,315 --> 00:02:25,062
+Air PCB is really low, 210 minus 3 Dally.
+
+27
+00:02:25,062 --> 00:02:27,576
+So the community was well protected.
+
+28
+00:02:27,576 --> 00:02:32,203
+The heavy equipment,
+which are emitting fine particulate here,
+
+29
+00:02:32,203 --> 00:02:34,278
+that's about 0.4 Dally.
+
+30
+00:02:34,278 --> 00:02:39,678
+So it's also limited impact,
+but and there is a but,
+
+31
+00:02:39,678 --> 00:02:45,318
+instead of bringing the sediment
+at 300 kilometer or
+
+32
+00:02:45,318 --> 00:02:48,686
+miles that they could have done.
+
+33
+00:02:48,686 --> 00:02:53,545
+Because they were landfill,
+which could receive the sludges
+
+34
+00:02:53,545 --> 00:02:58,591
+extracted from the river full of PCB,
+instead of sending that,
+
+35
+00:02:58,591 --> 00:03:02,431
+it was cheaper because
+there was a better price.
+
+36
+00:03:02,431 --> 00:03:08,552
+In fact, and
+transportation is cheap to ship them
+
+37
+00:03:08,552 --> 00:03:14,541
+1500 kilometer, 1500 miles to Texas.
+
+38
+00:03:14,541 --> 00:03:18,772
+And most of the dredge
+strategies went to Texas.
+
+39
+00:03:18,772 --> 00:03:24,342
+When we calculate with an up to
+date train emission in the US,
+
+40
+00:03:24,342 --> 00:03:28,495
+the amount of tonne kilometer transported,
+
+41
+00:03:28,495 --> 00:03:34,939
+which was huge in that case,
+we have in fact 32 Dally lost disability
+
+42
+00:03:34,939 --> 00:03:40,102
+adjusted life years lost due
+to train transportation.
+
+43
+00:03:40,102 --> 00:03:44,634
+It's not in the region mostly
+it's along the whole railroad.
+
+44
+00:03:44,634 --> 00:03:51,404
+But this is at least in the same
+order of magnitude as the benefit.
+
+45
+00:03:51,404 --> 00:03:56,143
+Now, if in addition to that,
+we consider the risk to workers.
+
+46
+00:03:56,143 --> 00:03:58,988
+The PCB, the worker were okay, the PM,
+
+47
+00:03:58,988 --> 00:04:03,763
+this was really high quality equipment
+they chose and they did a very
+
+48
+00:04:03,763 --> 00:04:08,619
+good job with that with very low PM
+emission, which is not the case for
+
+49
+00:04:08,619 --> 00:04:13,427
+old heavy equipment, but
+here that was restricted for the worker.
+
+50
+00:04:13,427 --> 00:04:18,769
+But dredging is a very dangerous job.
+
+51
+00:04:18,769 --> 00:04:23,231
+You are on boats, you have locks.
+
+52
+00:04:23,231 --> 00:04:25,153
+It's a risky job.
+
+53
+00:04:25,153 --> 00:04:29,099
+And based on the statistic long term,
+
+54
+00:04:29,099 --> 00:04:36,375
+we could predict that there are about
+14 as a Dally lost on average for
+
+55
+00:04:36,375 --> 00:04:40,461
+a 1.5 billion work that we had here.
+
+56
+00:04:40,461 --> 00:04:44,299
+And sadly, in fact, on the Hudson River,
+
+57
+00:04:44,299 --> 00:04:49,419
+someone who was checking the work
+got stuck in a boat which
+
+58
+00:04:49,419 --> 00:04:55,513
+passed over one of the small cascades,
+but got drawn in this guide.
+
+59
+00:04:55,513 --> 00:05:01,061
+And that was nearly 45 Dally in this case.
+
+60
+00:05:01,061 --> 00:05:06,341
+So on summary here the main
+things was if you want to do that
+
+61
+00:05:06,341 --> 00:05:11,302
+you should do a better job
+with your transportation.
+
+62
+00:05:11,302 --> 00:05:16,090
+The transportation of waste is really
+an important point don't ship it
+
+63
+00:05:16,090 --> 00:05:20,418
+the other side of the country when
+you could put it more locally.
+
+64
+00:05:20,418 --> 00:05:24,528
+But people locally didn't want
+really sludges in a sense,
+
+65
+00:05:24,528 --> 00:05:26,674
+since they had been polluted.
+
+66
+00:05:26,674 --> 00:05:31,206
+So all this was due in fact,
+I should have mentioned to
+
+67
+00:05:31,206 --> 00:05:35,845
+General electric which had
+produced transformers and
+
+68
+00:05:35,845 --> 00:05:39,794
+had emitted during years
+PCBs into the river.
+
+69
+00:05:39,794 --> 00:05:44,502
+What was very interesting is on the one
+hand, the dredging is debatable but
+
+70
+00:05:44,502 --> 00:05:49,155
+preventing the source with the source
+control that makes perfect sense.
+
+71
+00:05:49,155 --> 00:05:53,972
+To avoid that what is in
+the soil could reach the river at
+
+72
+00:05:53,972 --> 00:05:57,449
+the production site and that was done.
+
+73
+00:05:57,449 --> 00:06:01,744
+If we don't recycle, or
+don't treat in a sense,
+
+74
+00:06:01,744 --> 00:06:06,657
+when very toxic because it's
+too much transportation or
+
+75
+00:06:06,657 --> 00:06:13,103
+energy we can always for several products
+which have some carbon in them and
+
+76
+00:06:13,103 --> 00:06:17,536
+energy is to recover
+energy with co-generation.
+
+77
+00:06:17,536 --> 00:06:22,397
+Incineration but
+you really have to have high quality
+
+78
+00:06:22,397 --> 00:06:28,123
+incinerator which reject not more
+waste emission than a normal
+
+79
+00:06:28,123 --> 00:06:33,541
+heating system and
+there are possibility to filter there.
+
+80
+00:06:33,541 --> 00:06:38,725
+Also with waste and
+recovering energy digesting like manure or
+
+81
+00:06:38,725 --> 00:06:43,618
+wastewater treatment plant
+sludges enabled to recuperate
+
+82
+00:06:43,618 --> 00:06:48,114
+some of the methane also limit in fact,
+the emission,
+
+83
+00:06:48,114 --> 00:06:51,561
+which is really interesting in our case.
+
+84
+00:06:51,561 --> 00:06:53,095
+So let's conclude.
+
+85
+00:06:53,095 --> 00:06:58,327
+In summary, the dominant stage
+of the lifecycle of a product
+
+86
+00:06:58,327 --> 00:07:05,107
+can guide the optimization and can be
+applied at the early stage of the design.
+
+87
+00:07:05,107 --> 00:07:09,997
+Classification we've developed
+here are able to identify
+
+88
+00:07:09,997 --> 00:07:15,181
+the improvement priority minimum
+weight for mobile product,
+
+89
+00:07:15,181 --> 00:07:18,908
+maximum efficiency for the active product.
+
+90
+00:07:18,908 --> 00:07:22,642
+Maximum useful, effective lifetime and
+
+91
+00:07:22,642 --> 00:07:26,802
+recycling rate or for
+fixed passive product or
+
+92
+00:07:26,802 --> 00:07:32,360
+minimum transport distance for
+weight disposal in our case.

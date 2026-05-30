@@ -1,0 +1,128 @@
+Interpreting results
+implies also tools to find solution to
+improve the products. What tool do we have
+to identify what are the most efficient improvement depending on the different
+types of products? A learning objective is to classify the different
+types of products, and to be able to
+do that in order to incorporate that in very early
+stage of product design. This classification will
+be based on what are the dominant life cycle
+stage of the product here. We want to identify priorities for product
+improvement and optimization, and list some principle
+for ecodesign. Let's look how design
+process happened. At the early stage of a design, you have a lot of freedom. Your potential for action
+here is really high. But as the design
+is progressing, you're making choices, and these choices cannot
+always be reverted. Your potential and your
+freedom, in a sense, is reducing as we're progressing
+towards the final stage. If you realize you haven't
+done a good job here, it's too late to come
+back at this stage. The information available follow exactly an opposite trend, where when you start you
+have little knowledge, but as you progress
+your information is increasing and you can then better evaluate
+your different scenario. The game is really that we
+provide tools which can be valid for the early stage
+as well as the final stage, taking then advantage of
+the full information. We propose here to use about three different
+stages of two. At the start, you have
+design for environment, or product classification, or ecodesign principle that we will just look at it today. When we have made
+the first choices, we have different alternative
+that we can choose. The LCA screening with the energy and CO_2 balance without doing
+a complete LCA, but it's very useful to compare alternative and
+make initial choices. They're also accounting
+possibly for the direct impact of
+toxic during use phase. When you have more information, you can then perform
+a detailed LCA. You could say it's too
+late to do that here. Yes, probably for this product, but these can be of use
+for the next product here, and will guide your design
+of the next product. What we learn here is not
+only for the given product, but for what is
+coming in the future. Now we've seen the screening, we've seen the details here, let's go and back
+up a bit and say, what would be the
+priority for improvement based just on a few
+observation on products? We propose you to
+classify product according to the dominant
+life cycle stage. Let's distinguish first
+between active product. A product is considered active if the use
+stage is dominant, either for the energy
+or for the impact. Passive products
+are product whether manufacturing and our disposal stage
+dominates the impact. Second, differentiation is
+mobile versus fixed product. A product is mobile
+if transport stage is responsible for
+the dominant impact, and is fixed if this transport
+stage is not dominant. You have to be careful because mobile product can be
+immobile during use stage, but have been transported
+over long distance in the manufacturing,
+for example. Once we have classified that, that give us an indicator,
+some principle, because active
+products we want to increase efficiency
+or reduce emission, this is a priority. For the passive product, it's the material composition, it's the product
+effective lifetime, and the material recycling
+which are important. Whereas for mobile product, the weight reduction
+will be essential. Let's try with a few products, and you can then continue for a larger number of
+product in your activity. Let's look first
+at a light bulb. We've seen that,
+and the light bulb, when we did the CO_2
+energy balance, was entirely dominated, in fact, by the use phase. We're typically with the light
+bulb in a situation where the active and the efficiency
+will be absolutely crucial. If I take a shelf or as we
+have here, or a wardrobe. Then during use phase, relatively little
+emission could be some impacts associated
+with chemical in products but typically that would be a passive material
+and passive elements. Here the material
+and the weights, how long it's used will
+be very important. Now, mobile and passive, do we have that? For your mobile is it
+that we are active? With this definition, typically a plane seat, the efficiency is
+not crucial for a plane seat but
+what is crucial is the weight of the seats
+that we want to minimize. In contrast, a plane reactor
+will be typically here, a product which both its
+efficiency and its weight because it's still on the
+plane and it needs to be transported will
+be very important. Then we have a whole
+series of products which have combined impact
+which are about equal. We've seen our laptop was slightly higher at
+the manufacturing but still the use phase was
+nearly half of the emission. If we take a professional
+drill which is use an hour a day or
+something like that, this is clearly an
+active product. But when we look
+at a home drill, it's not obvious that it's still active because let's
+say I have my drill for about 30 years
+but I'm using on average perhaps five
+minutes a year, I'm really effectively
+drilling some walls. Depending on the level of projects you
+have in your house, your home drill might in
+fact need more energy for manufacturing it than during its use stage, during its life. We can now play and you
+will take the product you had touched within
+the last 20 hours and then put them here on this
+representation of passive, active, fixed mobile. Then it will set the
+priority that for the fixed material
+composition, product lifetime, reuse, repair material
+cycling is important, the mobile, the weight
+will be important. In that sense the laptop
+we had here might be here misplaced in the sense that the home drill
+doesn't move much better. Laptop in fact can
+be transported over relatively large
+distances if you use it in intercontinental travel as I'm doing when I want
+to meet with my family. Let's look a bit
+more in detail at some consumer goods and what
+we have as typical goods. Active products some
+of our example, refrigerator, dishwasher,
+washing machine, all the appliances and here we want to buy efficient
+appliance here. Car parts or car we need
+to reduce weight and have a low consumption car or you
+want to go at least larger, nowadays we can easily
+do 40 miles per gallon. My previous is at 44 on
+average for example. For the passive products, we want to lengthen
+the useful tool. The first thing is in
+fact we can add to what we have here is reduce. Don't offer jewelry too
+many too often here. For me, I've basically jewelry. There is one here, lifetime so far, 37 years. It has been used, it's not super heavy
+but you've seen that the CO_2 footprint and energy footprint of gold is pretty
+high so we really want to make it last for this reason and for
+other reason of course. Sports goods, textile paper. Here reuse, recycle
+is really good. Reuse of clothing
+is more and more common nowadays and smart and, or reuse of furniture is really. The perishable goods, there the challenge is to avoid losses and on average we have close to 30 percent
+losses on our food. That's the place where
+we could do far better.

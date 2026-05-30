@@ -1,0 +1,98 @@
+How can we calculate a full
+life cycle inventory? The best things to do to do that, it is to take a practical example and
+let's take a car example. Okay, have my small Ferrari here. The car was not necessarily a Ferrari but
+it's a nice car. And we will look at the matrix
+based inventory calculation how we can structure things
+elegantly in that case. So we elaborate a full inventory for
+a simple case study. We then illustrate the determination of
+inventory flow based on aggregated results from databases. And third we perform a sensitive study
+on key uncertain use stage parameter. Typically in that case
+we will look at total distance driven by the car
+over its lifetime. So let's take as an example a passive
+piece in a car which is behind here, the front and
+it's called the front-end panel. And this piece is designed to
+hold the lights of the car, the radiator, it has really
+a holding goal if you like that, we can hold all these different pieces. So the function is transport over
+car lifetime over 200,000 km. And I remind you that when we have
+a component of an overall product which is my car, we will always refer
+to the function of the car overall function which is transportation
+over the entire distance. The functional unit will be one
+front-end panel of equivalent rigidity, which means different quantity depending
+on the different material used. And we will test three material,
+steel, plastic, SMC, thermoplastic and
+condominium and recycle aluminum. So, and we have for 200,000 km service. Let's look if we use our
+usual form to do that, we see that for
+this functional unit of one front-end panel of equivalent rigidity
+over the lifespan of my car. The distance driven. With steel
+I have 10 kilo steel needed. This 10 kilo steel, okay,
+will create I will have 10 kilo
+steel which are driven over 200,000 kilometers and
+it's a number from Volvo here. For each additional kilo
+in the car we assume additional consumption
+of 0.00004 liter per kilo-kilometer times is
+200,000 times 10. We get here 80 liter consumption
+just to transport this front-end panel over the lifespan and
+the 200,000 km driven. The SMC is 7 kilos, so
+this is proportional. And instead here of 10, I would have 7 and
+that gives me 56 instead of 80 liter and the aluminum, I need 5.9 kg aluminum for
+the manufacturing. But for the final weight of my piece
+of aluminum is 3.8 kilogram so which is less than half of my 80 liter. I get 30.4 liter for these 3.8 kg that are transported by my car
+with this front-end panel. System boundary, classic,
+I don't want to go in detail but we excluded here the infrastructure to
+make the car and so we remain relatively simple with the raw material, the
+manufacturing use, and waste treatment. Eventually recycling because the aluminum recycle has a much lower
+energy use than normal. Let's get what are the main
+intermediary flow. If I do my product system, I'll have for each scenario
+five or six number here, the steel is the amount of steel needed. Then the electricity.
+This is for manufacturing oil. The heat for manufacturing my use phase
+of gasoline and a landfill, the 10 kg. And and we'll do that for
+each of the different scenario. Now, once we know the quantity used,
+if you remember, we need to multiply that by
+the total emission per kilo steel, per kilo composed, per kilo virgin
+aluminum or per kilo recycle aluminum. And these are these data
+that we have here and we structure it and put in here
+the different emissions and resource consumption on the rules. And each column corresponds to
+a different material, the steel. We've seen 24.7 mega joule energy and 1.28 kg C02 emitted per kilo steel. Okay. And we repeat that for
+each of the scenario. What is interesting is to see we have
+162 here kilo aluminum mega joule, primary energy per kilo, aluminum. So that will be higher than for the steel. And with the composite material, we also have a higher energy
+with 80 mega joule per kilo. Even if it's lighter,
+we might finish with higher energy need at the start,
+after the manufacturing phase. See the interest of recycled aluminum, only 21.8 mega joule per
+kilogram against this 162 here. The electricity we've
+the European electricity with 10.5 and
+low level emission of resource use of 0.2 mega joule per kilo
+land filled in that case. Okay, so
+now let's combine these two things. On the one hand, the amount
+the intermediary flow, if you like of each of the product time the aggregated
+emission for each from the database. And we structure that
+in matrix calculation. So this is the same matrix we call the
+aggregated matrix of the emission E and energy which has here one row is for
+energy. That is the row for CO2 that we
+have here under different emission. And then I have a demand
+vector y which is composed of here we are calculating for
+the steel scenario. This is our steel scenario. Okay, we'll have 10 kg steel 19.7,
+2.38 liter gasoline and 10 kilo landfill. Total we see is 4,043. How do we get that? And how can we get the contribution of
+each of these components to the total. Matrix calculation,
+you've done that probably a while ago. Either high school or
+first year of undergrad. And let's recap,
+how do we do a matrix circulation. We take first the energy let's calculate we have here 24.7 mega
+joule per kilo steel. 24.7 times 10 kg steel time 10. Okay, so that will be 200 and that was 247 mega joule
+per functional unit, okay. The 10 kg here are kilo
+steel per functional unit. And these ones are here
+mega joule per kilo steel. And so we had a kilo per a functional
+unit time mega joule per kilo. We get mega functional unit for
+all these different flow. So first column, first row here,
+second column 10.5 electricity time 10.5 mega
+joules per kilowatt hour time, 19.7 kilowatt hour of electricity. So I can write down again 10.5 time 19.7. This is equal to 207 Mega joule per functional unit. Okay. And now we continue. Let's take a triangle
+here to differentiate 56.9 time 2.3, 56.9 times 2.3. This is equal to 230.9. Okay. And now I have the gasoline. This is the use phase that you have
+the 43.2 time the 80 liter gasoline. This will be 43.2 time 80 liter. This is a total of 3456. And then the final one is 0.21
+here time 10 kg landfill. So this is 2.1 mega joule per
+functional unit for the landfill. Okay so this is for my landfill. Okay and sum of that is equal to my
+4043 mega joule per functional unit. And I can restart. The second row will give
+me the calculation for the C02 if I would repeat it. Now what is interesting
+is, what is dominant here? Okay so clearly in our case the dominant
+contribution is the use phase. But it's important that we can get what is
+the energy after the manufacturing phase. So that will be the sum of the energy for
+the steel. The 247 plus 207 plus 130.9. Okay this is a total if I take this number together I get 584 mega joule per functional unit. So this is my manufacturing
+energy that we have here. Plus 3456 for the transport, the use phase, and 2.1 for the landfill. Will play now with that looking
+at the different results.

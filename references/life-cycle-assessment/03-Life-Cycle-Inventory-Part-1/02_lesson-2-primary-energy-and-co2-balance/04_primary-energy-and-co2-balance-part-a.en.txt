@@ -1,0 +1,56 @@
+If we come back
+to our case study about the lighting case
+study and light bulb, what was the dominant process which could dominate
+the carbon footprint or the energy footprint
+of a lighting operation? Is it the manufacturing
+of the bulb? Is it the usage? Is it the disposal
+which are important? How does that vary
+when I move to a fluorescent or LED bulb? To do that, this is
+a sense of studying the primary energy
+and CO_2 balance, and we will first do it, I would say by hand or with
+Excel on a spreadsheet. Before moving to more
+complex LCA, software. Learning objectives
+are to establish the primary energy and CO_2
+balance of a product system. Second, in part B of
+this presentation, we'll check the consistency of inventory data using
+grams CO_2 per megajoule primary
+energy resources extracted as a check
+instrument in our heads. Let's recall and remind
+that we have already done when we build
+our product system, we have already
+built-up process tree. In each of the processes, we have put the amount like
+100 gram of glass was used, which was five bulbs
+times 20 gram per bulb and we have built
+our product system. Now the question is, how can we from that, use these processes to estimate based on database
+data on each of the N processes of
+this process tree? How can we build a full balance? The principles are simple. We will follow the upstream and downstream
+intermediary flow like when we built our system and combine that
+with LCA processes. When we were building
+our process tree, we built it until reaching this process covered
+by an LCA Data. That's why we will call them
+here database processes. So the steps are we
+list these n processes. This was in the process tree. Then we find for each of these database the
+elementary flow per unit of each of these
+database in that case and we multiply it
+by the amount of each database processes
+professional unit to get the contribution
+of each process to energy and CO_2 balance. Then we can sum up across all these different processes and arrive to the
+total primary energy and CO2 emitted per
+functional unit. Then we will check the
+consistency between fossil CO_2 emission and
+non-renewable primary energy. Let's apply it to our
+incandescent light bulb, a case study. Look how it looks like. What are the N processes? These are the one we will rely for upstream to
+go in a database, and this is here glass. We have aluminum, 75 gram for the five bulbs, the tungsten, 3.5 grams, the energy, primary energy. We had also 5 times
+10 gram of paper. This 50 gram or 0.05
+kilograms here. We have as the main flow
+during the use stage, 300 kilowatt-hour electricity
+we are consuming. We also have landfill
+processes at the end of life where each of the material used will be eventually
+disposed in the landfill. The addition we had
+transportation and transportation was calculated as weight
+transported times the distance, which was the 731
+kilo time kilometer not per kilometer
+time kilometer. If the database are giving
+the data per ton kilometer, we have to divide that by 1,000, so this is 0.731 time kilometer. Here we will have
+2.285 time kilometer transported for the
+oceanic freight.

@@ -1,0 +1,109 @@
+Last part here is so
+far we've looked at computer which were in the in the developing country would
+be partly recycled at the end of life. What's happening when e waste is rather
+brought in an informal e waste recycling. So we're just publishing
+presently a study on analysis in collaboration
+with my colleague dr rick Neitzel and
+Obre who made a PhD on that. We look at recycling in the informal
+sector and in in fact in Thailand, okay? And the first things when you do you
+want to study recycling mass balance. I'm a physicist, I love to be sure that
+we're not underestimating some masses. So we we really need to say,
+okay, when we are dismantling our television in the Thai community
+who is specialized in doing that. We start from an average of 21 kilo, okay? And this is the 100% that we will have and
+now people are recuperating, you see the copper,
+copper is just about 1%. They are recuperating some steel here,
+10% from my TV, they're recuperating plastic,
+17% of the weight. The screen is heavy, 64%,
+they just selling the screen as such, they're not doing it themselves. The wires are 1.1% but have quite
+a bit of copper which is interesting. And the printed circuit board
+which are nearly 5% of the total. The cathode ray tube, the CRT tube is about 2% with also some
+precious metal which are interesting. What is very interesting
+is what is put to landfill in fact in the community is only 8%, okay? So in fact it means
+the the recovery efficiency here in this community
+is super high with 92%. And that's interesting
+because in develop and OECD country we tend to be
+much more wasteful than that. What we put in landfill are much
+higher quantity of material, in contrast here where the economy try
+to be parsimonious and recuperate that. So in fact the informal in terms
+of efficiency is really good for at least sorting dismantling things, it's heavy labor to do that, but that's a good strategy in that case. So now we took this mass balance and
+then we looked at different aspects. We look at the recovered mass, the income
+financially and the environmental impact. Let's look in detail what's going on here. Recovered mass, you see the large mass in
+gray here is the steel that we have here. The second largest mass for
+the washing machine in particular, refrigerator, on our tv is
+the plastic that we have here, okay? And this is the plastic
+that we in that case. And then we have our CRT glass which is directly here which is an important mass. And the copper as we were saying,
+not that important in terms of mass. That when we move to the income,
+you see the copper and there are two here which are important,
+it's copper from cable, recuperated copper from cable and the
+copper itself from the motor I think that. They represent more
+than half of the income in any of these scenario
+that we have here. Okay, so
+they are really interesting to recuperate, I mean, money-wise,
+we look at the environment in a second. Money-wise, the steel for
+the refrigerator is also important. Okay, and we have still a bit for
+the washing machine and the plastic here is relevant for
+the income. Now, what is the economic
+performance of this community? You can see this is the initial
+in blue mass or price okay? So in that case they pay this amount and when they resell all
+our different material, they will get about 30% margin. And this margin will be
+used to pay the worker or pay the family who
+are doing that as a family. And they are about,
+when we were calculating the revenue, they are the minimum salary in Thailand,
+which is not much but not that bad. And that really confirmed we have
+the right order of magnitude of prices and everything because in a sense, the price, initial price will just adapt
+in fact to enable enough margin. But the people selling
+the recuperated tv and refrigerator before being dismantled,
+they want also to make the maximum profit. But they must leave some profit
+to the one who are dismantling. We saw that the recovered mass compared to
+initial mass we've nearly recovered 100%, that's good news, environmental impact. Let's move at the four graph to the right,
+we have here the human health in Dali's. Climate change impact,
+global warming, resources, which is basically energy and
+minerals and the ecosystem quality here. We've use impact 2002
+to do this evaluation. 0 is here, so this means this is
+above 0 impact is detrimental. Here we have a bonus,
+why do we have a bonus because we are recuperating raw material which are substituting by
+allocation virgin material. So this is beneficial
+when it's below the 0. So let's look at the main
+contribution in terms of benefits. We can see that the PCB,
+this is a printing circuit board, that's really an important contribution. Again, the copper and partly the plastic
+might be here important contributors. Now, the detrimental side,
+what do we have? We have that the cables which are here, this is my whole cable which is here. My whole cable here and here are creating substantial emission
+because they burn it okay? They will burn the cable to get rid of the
+plastic burning that you create dioxin, so you create human health
+impact which are important. The second human health impact is
+associated with the CRT glass here. This is this part and this is linked to
+the lead which is at the back of my CRT, which if it's not properly
+handled is a problem. By the way, in a sense, if you don't
+have the informal recycling, this part will be also admitted into my landfill if
+I landfill it as such without dismantling. So this is not really a detrimental
+effect, but the wiring are because if they would be put to landfill,
+they would not have so many emissions. In term of the climate
+change we see really bonus, we don't have this high toxicity effect. And all the recycling is
+bringing a net here, if you like, positive contribution or
+more substituted than than emitted. Same story for the resource site. And here the plastic start to
+contribute in an important way in these different category,
+providing you indeed, recycled plastic. Which was the case at that time,
+I don't know now the market has changed dramatically with china
+changing their practice. So we see an efficient recuperation but problematic when we go to the really
+processing of the recovered materials. So informal sector would be really good,
+in fact, for dismantling sorting,
+recovering the material themselves. And then have this transfer
+to a more formal sector to do the extraction of
+material in a proper way. So, in summary, for this interpretation of computer use
+stage has a central importance for the desktop and this is where manufacturer
+could do better, they could reduce that. And the use cases reduced for
+the laptop and manufacturing start to
+be really important. Process tree is an efficient way
+to identify the dominant process. You can use that yourself for
+your case study in semi pro. Relatively good convergence in
+our case between LCIA method. Two converging motivation from very
+different points of departure but arriving to the same conclusion for
+very good, very valuable and very bad,
+very toxic components. Then both of them,
+it's interesting to either to recover the valuable component and
+avoid toxic impact of electronic components in land fill and
+also in the informal sector. What is interesting is that sort of life
+cycle based, mass balance based approach can be applied or not only to the formal
+but also to informal recycling sector, which has a high efficiently for
+dismantling-sorting. That is problematic when you go to
+burn some, for example of the cable.

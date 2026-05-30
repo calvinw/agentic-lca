@@ -1,0 +1,100 @@
+We have more or less see that for front-end panel of our car, that the steel scenario
+is the highest, the recycled
+aluminum the lowest. But the question is, how relevant this type of impact compared to the
+rest of our daily life? This is what normalization is
+specifically interested in. Learning Objectives
+of this section is to define what is
+normalization in LCA. Apply normalization
+to the damage score of our car case study, calculate and interpret these
+normalization score and understand this is
+important to what can and cannot be summed up. This is the fourth step
+and it's an optional step, as we mentioned in the
+different steps slide. Normalization, the idea is to compare the contribution of our service of a functional unit to the total effect
+at global level, perhaps per person
+because that would be a too high number two
+tails total world effect. But the total effect
+purpose and usually we do it at global level or for certain methods which
+are continental, like for Europe or US for Tracy, it's at continental level. We have arrived
+to a total damage or damages in different
+impact category that we have here, and we want to put
+them in perspective. What do we do? We take the total emission
+per person per year. In fact, we run this
+total emission at the entrance here of my
+impact World plus methods, and I run it through and I get a total world damage
+per person per year, a total ecosystem damage
+per person per year, and a total world results
+impacts in person per year. Then I can compare my total world damage per person per year and my
+damage per functional unit. That's exactly the idea
+of what we are doing. The definition is we analyze the respective share of
+a functional unit to the overall worldwide
+effects per person for each
+area of protection, or the overall annual
+worldwide effect per person. This comparison
+between my scenario and the overall world impact
+per person per year can be interpreted as the contribution
+of the functional unit to the average annual
+impact of a person on human health and ecosystem
+or energy resources, and we do it separately
+for the three because we get here separate calculation
+and separate scores. So we are comparing each
+of these separately, at least in the first stage. You have to be careful, give us a damage
+oriented comparison, but it gives us an intuition of the magnitude of the impact of each scenario compared
+to our total daily life. Let's look how we do that. To calculate my
+total world damage in a certain area, as I say, I take my emission
+contributing to each impact category and the total emission and I run
+it through impact World. I go through my
+different processes and I get a total world damage. How high is it? That's interesting to
+see for human health. We get about here 0.0216 DALY per person per year. Is it high or low? Let's look over the entire
+lifetime and we get here 1.86 DALY per person
+over a lifetime. About two years lost
+due to pollution. This is a realistic number. That's where we can start comparing to what's
+happening in life. This is about what
+the global burden of disease is attributed
+to pollution here. For ecosystem quality, we
+have less feeling of that, but we arrived to
+about 8,500 PDF. Potentially disappeared
+fraction of species over one square meter and the
+year per person year. For the resources, we
+arrive to 63,000 here, 100 mega-joule per
+person per year, or $313 here per
+person per year. Now we could also use and look, that's interesting
+to see how many, with our
+characterization factor, what is the relative
+ratio between the 0.0216? I make it the ratio to
+8,500 then I inverse that, I take the inverse of that. We can interpret the
+inverse of this ratio that for every DALY of impact on
+human health we generate, we also generate about
+8,500 divided by 0.021. That's about 400,000 PDF square meter year of
+impact on ecosystem. It doesn't mean this
+is equal because it's just the present effect and how the present
+effect equivalent, that's something we'll discuss in the next section I'm waiting. But it'd give us an
+order of magnitude of our present impact in
+different impact categories. Now how do we apply
+that for a scenario? To calculate for given scenarios and normally the
+normalized damage, we will take the damage on human health in DALY per
+functional unit, for example. That was our 0.00113 DALY per functional unit that we had with accounting for all
+different scenario, and we divide it by the world damage that
+we have just seen, which is in DALY
+per person year. When I divide, I put the
+DALY down here person year. If we combine that, the DALY goes away and we get person year for our
+functional unit. Somewhat strange. It's how much of the equivalent impact
+of a person year per functional unit is this
+functional unit responsible of. You could keep either group
+things, total human health, or you could keep
+each impact category, global warming on human health, water use on human health, cancer, non-cancer
+separate, if you will. Let's see how we apply that for the total human damage
+score, which was 0.0113. That was when we did the damaged part of
+the impact assessment. When we want to calculate
+the normalized damage score for human has for the steel
+panel, what do we get? We get that the normalized
+damage is equal here to 0.00113 DALY per functional unit divided by, what did we have, 0.0216. The unit of that, as we said are person year per DALY here. We get about 0.052, and what is the unit, DALY goes away, person year per functional unit. Interpretation. That means that this
+front-end panel over 200,000 kilometer, which was mostly dominated
+by the 80-liter gasoline in the case of the steel
+pylon or about 40 gallon of gasoline is corresponding
+to 5.2 percent of the total impact generated by an average person or the average of all
+person in the world. 5.2 percent sounds high for just a piece of a car like that. But we have to realize
+that we are in the US and the pollution from a
+US citizen is far higher, in fact than its
+share in the world. We have to keep
+that in mind when we take it as a reference, the average consumption
+or impacts in the world.

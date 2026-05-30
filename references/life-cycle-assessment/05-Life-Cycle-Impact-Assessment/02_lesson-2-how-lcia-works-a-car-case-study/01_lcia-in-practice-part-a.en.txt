@@ -1,0 +1,101 @@
+Now we have seen the framework for
+lifecycle impact assessment. How does it work in practice? How can we evaluate this impact in various impact category and
+how is the process to do that? That's what we are going to do
+through our car case study and front end panel example
+comparing as if you remember the steel with the aluminium and
+the plastic panel. So first learning objective for
+this part, a one and a two define the steps of
+a lifecycle impact assessment. Okay, let's look at the stepwise procedure
+and then we'll take the first step and we'll then characterize the impact for
+each impact category. We want to evaluate in each
+different type of impact category, the score of the different scenario. We'll apply to do that imply Impact World+
+at midpoint level to our car case study. And we want to identify
+inventory flow with the highest contribution to impact and interpret the LCIA results
+at midpoint level. So within each category we can look and
+start comparing our different scenarios. Our case study is if you remember
+a front-end panel which is this passive piece which is holding
+the lights and different pieces, weighting about ten kilo for
+steel, only 3.8 for aluminium. Which mean that we have
+a consumption of about over the 200,000 kilometer service of like 80 liter for the steel gasoline and only 34 liter for
+the aluminium front end panel. Okay, we had already
+obtained the inventory and we were showing that the steel
+is reflected in a high energy, this heavyweight and this large
+consumption, high energy, high CO2. You see 253.9 compared to the other and fine particulate for example, you see 0.383 here,
+which are really the highest. So steel is often the highest but
+not always. You see, you have here for the lead,
+we start having steel which is in fact less and lower than
+the recycled aluminium which has apparently some lead process
+emitted during the processes. On the other hand, the recycled aluminium
+is better in most cases, but not always. Again, it's the worst
+with lead in that case. So to go further than that,
+we need to put things in perspective. Basically, is lead dominant impact or
+it's relatively small impact? And for that, the first step
+is to classify my emission and look which emission correspond
+to which impact category. So we select the emission which
+are relevant for each impact category. Then step two,
+we do the midpoint characterization. We give a total score within this
+impact category, like global warming or total score for acidification, total
+score for ozone depletion, for example. And here we weight emission and
+extraction using natural science based factor to look at the contribution
+of each of the inventory flow to the midpoint category impact score
+based on the midpoint selected for this impact category in the previous
+step of classification. When we arrive to that, we finish with
+about 18 different impact categories. That's a lot to take a decision. And we can take one more step,
+okay which is a damage characterization, which is still science based and
+natural science based. We look how each midpoint category okay, is contributing to larger damage category, which will be expressed, for
+example, for human health okay and ecosystem services, and
+also natural resources. That's our three main area of
+protection for human health. We will express that all
+in DALYs in disability adjusted life years in that case. So we want all the impact category
+which are contribute to human health. That would be global warming,
+ozone depletion, human toxicity for cancer and
+non cancer, for example. Water use might also have some
+effect on malnutrition and we can bring them on a common metric,
+which is nice because it will put in perspective which one
+are really important. Two other optional steps to put results
+in perspective, the normalization step. Here we compare the results
+of a given case study. In our case, for example,
+our car case study, we compare them with the total
+world emission per capita. Put in perspective that this
+particular case, for example, might have higher impact on human health, because emits quite a few particulate
+matter or knocks from transportation, versus other type of application,
+like agriculture application, which will have more impact on
+eutrophication, for example. And so comparing our case with
+the world is interesting. The last point is,
+if we want to start comparing across a different area of protection,
+comparing human health and a year of life lost or
+dally comparing to a loss of species, this cannot be compared
+based on natural science. Nothing tell us the value of a species,
+the intrinsic value. So to do that,
+basically we need to rely on social, political, ethical values. And this is what is called a weighting
+really, where we compare the damage results and start to get all
+the results compare on a single metric, could be, for example, dollar or
+euro, that we can have altogether. It doesn't mean we sum
+everything up together. We can still keep them separate,
+but we make them comparable. Okay, so the LCIA, I like to say,
+is the art of comparing. And that's what we are going to do and
+apply it for our case studies. So we will use for this one of the latest
+method that we have developed ourselves. This is Impact World+,
+published in 2019, but has been experimenting with
+it since in fact 2013. And we go really from
+inventory flow to damage. So we have the inventory flows,
+here we go then to midpoint level, we'll move to damage level
+to eventually arrive. That is,
+damage kept separate in each category. We can aggregate if we want this
+damage to a total human health impact. And eventually arrive to area of
+concern also in a compatible way. I will come back on that. So let's start and
+first step was classification. So we attribute CO2, for
+example, will mostly contribute to the climate change short
+term in this case, okay. Now if we take a pesticide,
+it can contribute to several categories. It can contribute here to
+the freshwater resources. It could contribute to the human toxicity,
+cancer or non cancer, for example. And we continue on and
+on I mean basically we put zero and one in a sense in a column to say okay. And put a one like a binary
+classification on all the flow which will contribute to a given category. And all the other which mean
+we don't need to look at it. We don't need to evaluate anything for it. So in short, the classification step
+allow to dispatch the pollutants according to the impact
+category they affect. CO2, methane and nitrous oxide
+Are contributing to global warming. And one substance may contribute
+to several impact category for example, the methane is also
+contributing to photochemical ozone creation in addition
+to the global warming.

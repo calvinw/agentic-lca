@@ -1,0 +1,96 @@
+Of course LCA is the best tool
+because I've been working for more than 28 years on it but
+it's not the only one and we need to acknowledge the other
+environmental tool and does understand for
+which problem is which tool suited. So let's look at these different tool and
+differentiate as learning objectives, the main purpose and characteristics
+of LCA and various environmental tools. And second identify the most
+appropriate tools for a range of environmental problems. Different tools for different purposes so the first thing is LCA as such is
+essentially an environmental tool. To study the supply chain We
+have an other tool which are not necessarily environment and
+which will be a compliment LCA. And these are life cycle
+costing which is a sort of LCA. But focusing on the economic
+aspect on the cost side and social LCA will cover the other
+pillar of sustainability. So life cycle costing is
+studying the economic here and but also with the supply
+chain perspective and social LCA will look at like
+children labor over the entire supply chain of example
+shoe product in that case. But LCA itself by default
+is an environmental LCA which study environmental problem. Now LCA itself and on the environmental
+side can be complemented by several other quantitative tools which are addressing
+different questions and problems. And these are and we'll come back and
+look at them in detail, substance and mass flow analysis, risk assessment,
+carbon and water footprints. In addition to quantitative
+tool we have upstream of LCA. Some more general concept lifecycle
+thinking being sort of generalization and qualitative LCA way of addressing problem. Eco design which is
+an approach how to design new products which
+are environmental friendly and industrial ecology is an approach
+where you close the cycle and you use for
+example the waste from one industry, you use them as the raw material for
+a second industry etc. And you you try to close the different
+cycles here on I would say downstream from LCA in terms of application you have
+more procedure oriented methods. First environmental impact assessment
+which can be partly quantitative. It's not only qualitative or
+procedural but it's it's still in the frame of
+legal procedure usually. Ecolabel which are qualifying certain products
+according to given criteria. Environmental audit of the company
+which look at the weak point of the company what is
+the stage where they are? And environmental management system
+which are tools to systematically include the environmental dimension
+in all decision of company. So to look at this further
+in further details at the environmental different tools. Let's let's look how decision is taken and
+usually decisions are taken by the top management people who are well paid in
+the company but they are not on their own. And first they will rely on for
+the development of new product. They will rely on engineers
+could be material engineer, mechanical engineer depending on
+the company and what they are doing. And these people are this engineer
+are are really looking at the technological system ensuring
+that the product has the right performance has the right
+lifetime lifespan and if a product doesn't meet the requirement
+it will not be solved it it doesn't work. So it's really a key point even
+before we consider the economic aspect you need to meet
+a certain number of criteria. Then we can look either at
+the environmental aspect and this is what we want in this class. But you could look at
+life cycle costing for the economic aspect will just look a bit
+at that and the social aspect with social LCA looking also at the structure
+of salary and I say child labor or the training of women participate,
+participation of women in the company and the question of equality which
+are related also to products. But as we said LCA focus on
+the environmental aspect and has this concept upstream and
+procedure and really this this quantitative
+assessment method are feeding for informing the different decision and
+procedure. So let's look in more detail at this
+six tools that we have here and let's define them a bit
+in in further detail or seven tools that we have
+a life cycle assessment. We've seen quantify a large
+number of resource extraction and mission of substance and to estimate multiple environmental
+impact associated with a given function. Substance flow analysis, quantify
+the flow of environmental accumulation of a single substance usually or
+a group of substance that we can have. So they focus they are they
+are more narrow in that sense and and following the environment
+following a certain region. This flow of given substance. Material flow analysis is basically doing the same but
+with material and material can be raw material or
+paper, glass, concrete, some basic material
+used in the economy. Now on the quantitative also
+side we have risk assessment and it studies the risk or
+the probability of severe impact. And that could be an installation
+like a nuclear power plant or usually with mostly used risk assessment
+is for a chemical substance or eventually a group of substances that
+we have and will go more in detail. Local environmental impact assessment,
+assesses the negative or positive environmental consequences of and
+this is the key word a new project. Prior to decision construction or
+even getting the permit for constructing. And it may be governed by rules
+of administrative procedures. Both in terms of the tool you
+must use to decide that, but also in terms of the the actors, the stakeholders that needs to be
+involved in terms of the community. Carbon footprint is a sort of mini
+LCA where you, instead of looking at all the environmental impact,
+you will look at the emission and impact on global warming of
+the different greenhouse gas and that could be for
+a product of human activity or business. Water footprint, then is also a sectorial
+sort of life cycle based analysis, which we look at the impact associated
+with water and as an area of concern. Because it will look at what concerns
+water that could be water usage, water scarcity, we think,
+but also the environmental exposure related to like
+freshwater eco toxicity or human toxicity exposure through
+the water media directly through water or
+indirectly through fish, for example.

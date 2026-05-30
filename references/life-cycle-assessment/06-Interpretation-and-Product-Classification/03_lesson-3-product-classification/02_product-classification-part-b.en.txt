@@ -1,0 +1,67 @@
+In summary here, this
+eco-design design strategy, we can call it the
+7R, which I like. First strategy, rethink
+and dematerialize. Could I obtain more
+service from a similar or even reduced
+material quantity? What do we have as example
+for dematerialization? If you look, this
+was in the '80s. Early '90s, we had to
+create two supercomputer. You have a picture here. This is about a ton of
+material that we have here for what was the most
+powerful computer here from the NASA at this time. His power was 1.9
+gigaflops, 244 megahertz. An iPhone 4, which is now really old, has the same nearly property and power than this
+supercomputer, 1.6800 megahertz and
+weighed a few 100 grams. Is this really a success
+story of dematerialization? Think about it. What's happening at that time, only the NASA had
+the supercomputer. Nowadays, everybody has a
+mobile phone plus a laptop. In fact, the total mass has rather increased
+and the intensity or so of components in
+these is really high. In fact, we might
+have even increased the amount of the
+mass we were using. When I started my studies in '78 at [inaudible] in Lausanne, the computer was taking
+the entire floor of the family house. That was several ton. That was probably rather 10 tons of material which was there. But nowadays the way it is about comparable
+of all the computer or the desktop and the PC which are presently at the
+university there. It's still an objective, but we must be careful to the rebound effect
+and that we will look in our next chapter
+on consumption. Rethink, but also reduce. Reduce or avoid is always
+better than finding solution to recycle or
+end of a pipe solution. Reduce consumption during use phase with proactive product, especially, and reduce
+toxics in manufacturing. For high toxic, high
+active product, we want here to
+reduce the quantity. If we cannot reduce, we could repair and replace
+just the obsolete components. Here, desktop could be more interesting sometimes
+than a laptop because you could change
+your motherboard while keeping your keyboard, which is perfectly
+in good shape or you can just change your hard
+disk when it's obsolete. The problem is a bit
+with computers that the company have interests
+to make it obsolete. The optimization of program, especially in the Windows
+or Macintosh world is not good because they
+have interests that we use more Linux for
+that is much more parsimonious and you could use much older machine
+and in a perfect way. Let's also reuse. If material extraction and production phase
+are substantial, we can increase the product
+lifetime and reuse parts. Is it always positive to
+increase the lifetime? Be careful because for products which have
+high efficiency, it's okay unless the efficiency and new duration has increased. So increasing the lifetime of an incandescent light
+bulb is not smart. This one you need to replace and substitute them
+with LEDs nowadays. That's it. You don't want to keep
+also necessarily, always for active product, old products in that case. Eventually you can
+look at recycling. But this is an end
+of pipe solution and there are trade-offs
+between recycling and how far you
+need to transport. Because you cannot
+recycle on-the-spot. You need to concentrate and bring things together
+for a recycling facility. There are two kinds of goods which are really
+interesting to recycle. Either very valuable components, like precious metal, which could be in electronics
+or also very toxic. That's interesting to see that either of them are important. But again, we will have trade-off
+with transport emission. For example, we see plastic. The plastic contains
+about 40 megajoules and other 40
+megajoules for energy. A recycled plastic requires
+probably half of the energy, about 40 megajoules per kilogram that we can save by
+using recycled plastic. Is that important compared
+to transportation? Transportation is two megajoules
+for 1,000 kilometers, and that's by truck. If you go by freight, it's even less than that. It's really worth
+here to recycle this high-energy
+content material and try to substitute
+new material.

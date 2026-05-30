@@ -1,0 +1,124 @@
+Interpretation, the
+force phase of LCA. What are the basic principles
+for interpretation? It's looking at your
+product results from all the different points
+of view that you can do, from an angle, from
+another angle, and this will build your
+conclusion of your study. We're really focusing on
+the interpretation phase, the last phase of my life cycle. We know that interpretation
+has already taken place as we were analyzing
+the goal definition, as we analyze the inventory. But it's really at the end of the impact
+assessment that we really have most of the
+in-depth interpretation. We will look at these
+different angles. Learning objective
+evaluate results. We want to draw conclusion, explain the limitation
+of the study, and make recommendation based on the results of our inventory and impact
+assessment phases. Within that, we want to
+identify the critical points, the critical stages, the critical component in our life cycle where most
+of the impact occur. Of course, we want to be
+sure that our results hold, and we want to also
+look at the quality and robustness of results with different tool quality control, sensitivity analysis, uncertainty analysis
+that we can do. Look from different angles. You have the picture here
+from the alleged glace in Glacier in Switzerland, the largest nation in Europe. It's fascinating when you want
+to walk along the glacier. This is a picture when
+you are at the bottom, like here along the bottom. But you can walk about ten miles along here, it's just gorgeous. Every 200 feet or
+400 feet you stop, you look and it's different
+and you want to take picture. Because you've, you've
+changed the angle and you discover
+something new every time. As this glacier is
+really turning round, the angle is changing. LCA interpretation is like that. You want you want to look at
+these different angle and your results will look
+slightly different and you will learn something new from each of these angles. Which angles should we
+look the results from? We should look at
+each LCA phase. After the pollutant inventory,
+the characterization, the damage that we want
+to look at the results. Then we want to look at the
+results after each LCA stage. Raw material extraction, what is the contribution
+of manufacturing, transportation, use
+phase disposal. We will come back on concentrating of the
+largest of course, but also the one where you have the highest reduction potential in terms of these stages each. If you have a multi-component
+product like a computer, you can look how
+much at the screen, at the keyboard,
+at the hard-disk, the motherboard, you
+main control unit. Each of these
+component contributes, and that will guide
+you also where to intervene in priority. You can look also
+at each process. That would be each
+intermediary flow, which is important
+and contributing, or each pollutant, which is each elementary flow which
+play an important role. Again, we could look for each
+midpoint impact category. How much is your given
+midpoint contributing. Finally, you can look
+at the contribution of the mid-point impact category to the damage on human health, or damage to the ecosystem. Is it due mostly to acidification
+versus ecotoxicity, for example, or impact of
+global ring on ecosystem? You want to put that
+in perspective. Here are a few questions you can checklist you can ask when you look at results which are the largest contribution to
+the environmental impact. This is clear. We
+want, to do that. We have just to be
+careful when we use that, because it depends how refined you've been in differentiating
+your processes. Sometimes a large set of individual processes
+that each of them looks small that leads to substantial impact when summed
+up and brought together. Okay, But still, what matters
+is the first question. Second is, what can we change, and what is either
+cheap economy, or even cost-effective
+to change? It depends not only on
+what is the large but on the feasibility of
+changing something. Typically we look here
+for win-win cases where both impact and costs can be
+reduced at the same time. It makes perfect
+sense to do that. We look for part
+of the life-cycle, or part of the product where limited low-cost
+intervention can be very efficient
+in reusing impact, even if it's only two
+percent of the total. Take the doors of the house. We have two or three
+doors inside the house, and in term of impact, it's only perhaps two
+to three percent of the impact of the heat
+losses through this door. But often these door of
+poor quality, you could easily put the more insulated
+door which would be substantial improvement
+per square feet change in that case, or per dollar invested. Then we want to test
+the robustness, the significance of the reasons. The question is, why? Why? Why? Are the difference
+between my scenarios significant, or
+environmentally relevant? These differ between
+impact categories. Because if you look at global warming is probably a ten percent difference will be substantial or
+significant whereas for toxicity you want
+at least one order of magnitude but the variation
+between the least and most toxic substances is six or seven
+orders of magnitude. Then you want, once you have
+established your conclusion, you want to check if it's
+correct and rubbish. You can use several
+impact assessment method, for example, to check,
+check, and check. When there are
+differences in term, you want to know the
+cause of the differences. That's exactly the
+question is why? In term of which process is more important or more polluting
+in one than the other, which inventory flow
+is contributing. You can perform
+sensitivity study what to look at what are the
+key parameter and which are affecting
+and for which the environmental results are basically proportional
+to these parameter. In all that, if
+results are surprising or not what you expected or you have differences and you
+don't really understand, you want to be sure
+you understand the underlying
+parameter component of stage responsible for these
+differences are surprised. The message is valid for
+any scientific study. Never let it go
+until you understand the rationale for a difference
+or surprising results. Because either you've
+made a mistake two-thirds of the time
+or the last third, you learn something new and
+you experience broaden, and in addition, it's fun. Summary, interpretation is about ensuring a maximum useful
+output from your study. You've worked hard
+for your case study and saying that you
+don't want to be half interpreted because you
+have built like in CMA Pro, your inventory and your
+impact assessment, get the maximum amount
+of it and test it. You can use the question we just mentioned as a checklist to really provide the maximum useful to you and your sponsor. You then test the robustness
+and the correctness of the main conclusion of a valid whatever back-end
+system metadata I choose. Of course, we also
+identify what we have not covered all the
+needs or the limitation, and that will set the
+background for future study. Often, the future need
+is an elegant way to assess limitation or to communicate limitation
+in that case.

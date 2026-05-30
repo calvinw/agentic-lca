@@ -1,0 +1,51 @@
+let's do as an example the life
+cycle assessment input output life cycle assessment of our paper towel
+versus an electric dryer for hand drying. So we just need to know the basic price. So if a towel is about
+two cents per towel, we multiply it by the reference flow. 1.5 towel per functional unit. If you remember. And we get 0.0 $35 per functional unit. Okay this is this is the main flow that
+that we had for the electric dryer. We know that the main flow
+was the electricity and at 10 cents per dollar or
+$0.1 per kilowatt hour. We multiply that by the amount
+of kilowatt hour we had perfection reference
+flow which was 0.0 15 kilowatt hour, 1800 what time? 30 seconds. And we get here 0.00 $15 per functional unit. And we can start plugging it for
+let's do a million of hand dried. Okay. And we can compare
+the results with calculation the Excel calculation we
+did based on a coin vent. Okay so let's look at the results of this first for a million hand dried. Okay. And we have the paper towel
+scenario paper towel mean most of the money is invested in
+the paper mill for a million hands dry. That's the amount of dollar that we have. Total c. 2 53 tons of co two If now I go not for a million hand but a single pair of end. I will get 53 tons divided by a million. This is 53 graham C. 02 per pair of hand dried and interestingly not surprisingly the paper industry spend some as many other company of the same sector. But you see more surprisingly
+the power generation and supply is really important for this
+paper and then you have some pulp mills, truck transportation is important,
+some pipeline transportation, coal mining. Xterra.
+That that that we have here because it's also an energy intensive sector. So 53 g of CO two per pair for and right if now I apply my 0.0 $15 million. Okay I get 14 ton of C. 02 and that means 14 g of C. 02 per pair of hands tried. Okay so
+this is about less than than a third of the amount which was needed with paper towel in this case again power generation, he is really dominant and
+the rest is much less. But we still have spending in the coal
+mining for the extraction of coal gas is another source here and we'll get
+some truck transportation here and the natural gas distribution and
+here's the spending were made in the electricity sector which is power
+generation and supply that we have here. Very efficient way to get
+results in a happy way. Are they reliable? They are hard to trace and and
+we can raise questions but it's really interesting
+to identify whether all the important sector were considered for
+the process. L.
+C. The other thing is in addition if you
+go and we go to you can download and have the full inventory here. You will get some
+services like lawyers and other services, banking services etcetera, which typically represent 1% or of any L. C.
+A. And so you could you could use
+in fact process input advocacy to complement the processes
+see on the services to evaluate the emission
+associated with these services. So let's conclude in
+summary input output I. O. L. C. A. Takes advantage of free economic
+data collected every year or every five years by the Bureau
+of Economic Analysis to predict the economic intermediary flow and
+the interest. It has no cut off. We all have all the spending in the other
+400 and it covers the different services. So very useful to check process
+LCN test where the important part of the supply chain have been
+neglected like the airplane for the computer which which
+could be really important. However, it's not possible
+to differentiate product of similar price within
+a given industrial sector. I cannot differentiate
+two type of towels or two types of computer if they
+have a somewhat similar price. So useful method you will also
+find it in fact in cinema pro when you will do your exercises,
+you can in fact for example add the services
+using the seda database that is available without in Singapore. But you need to upload the input output
+when you upload your different databases

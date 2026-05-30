@@ -1,0 +1,115 @@
+Where to find consistent and
+high quality data. How how can we recognize what data, good quality and
+where the place to find them. This is our goal for today. And the learner objective is
+to describe the different life cycle inventory database
+which are available. It's to illustrate the data
+format of one specific and mostly used database,
+the ecoinvent database. The database is to recognize
+different types of data and energies based inventory flows and
+use them adequately. And finally, to identify source for
+direct data, life cycle inventory, data collection,
+LCI for life cycle inventory. Good.
+So, first in the life cycle inventory database, we have two types of modeling
+which are answering different questions. The first time is the attributional LCA. Where we look at a product and
+we look at what are the share of the activity
+in the world that have really contributed to that product. So can be attributed,
+allocated to the given products. What is the average share of the impact
+that this product is responsible of? And for this we use typically
+average electricity mix that we consider because if
+this process use electricity, we assume that it will
+use the same share of electricity as the other in the same mix. Making with the same proportion between
+nuclear gas power plants or hydro that we get our coal power plant that we
+get this average sort of contribution. The other approach is
+called consequential. And in consequential approach, you want to study what is
+expected to change, okay? In the environmental impact
+when suddenly you add a product to the present economy, okay? So, when producing consuming and disposing
+the product, what are the change? So you want to identify marginal change, here marginal is a key word. And it means you will look, for example, if I add a certain
+electricity consumption, what is the likely additional
+technology which will either for example, in the growing market is likely
+that the new plants are gas power plant. So you will use only electricity from gas. Or if you are in a decreasing market, it's likely that coal power plants
+are the ones which are fazed off and which will be considered for
+the marginal change here. You have to be careful when you
+do consequential because you have the risk that you are only
+taking marginal change. But within the time of
+your product system, if you study for
+example electricity production or energy production,
+a power plant will stay 40 years. During 40 years, it's unlikely
+that the change are marginal. So personally, I'm a bit more tendentially
+using by default attributional. But I have colleagues who are very
+strongly in favor of consequential but it really depends on
+the type of question and I would say the timescale of
+the product you are looking. If you're just looking
+at one point in time or if you're looking on the longer
+term of the decision. So now, where do you find
+life cycle inventory data? And to do that first you rely on
+existing databases if you can. Because it's a lot of work to make your
+data some people are really good at that. But when you do that and you use database
+for all your background processes the one you don't study perhaps in priority you
+need to ensure consistency between data. Data coming from two different database. You have to be very careful if you
+mix them in in a common LCA here. The good news is a lot
+of data are available. The bad news is which one to choose
+because you need to make choices because you have several possibilities sometimes. Second, you could adapt existing
+data to your product or services. And accounting from what type of
+technology and three technology is really important and the age of the technology or
+the country or region studies. I think the type of
+technology is more important. I was told by people from
+the aluminum production for example, that it's not very relevant where
+the plant is in China or in South America. But it's very relevant
+if the plant has been built after 2010 or in the 90s. In contrast to some of the, for
+example, the plant which have been built in Canada and in Switzerland
+which are substantially older plant and with not as efficient
+technology than the new one. And then if you don't find the data,
+[INAUDIBLE] you can collect new LCI data. This is especially for the foreground
+system which is under the control of the industry you are studying or
+the product you are studying. For that it's hard work and
+you need to be systematic. This is really underlying twice
+because this is really important. I'll come back on that. Now, I'm very I mean interested,
+and proud of what the life cycle initiative has been doing colleague
+work on our life cycle inventory. I'm really especially from
+life cycle impact assessments. Not so much of inventory. But 20 years ago working on life
+cycle inventory we were thinking that we needed in addition to a scientific
+society which was at that time SeaTac the society for
+Environmental Toxicology and Chemistry. That we would really profit
+to have an institutional partner who will motivate
+people to expand either for impact assessment or for the inventory,
+the availability of data. And we wrote an email in May 1999 to UN. And at that time the UN secretary Kofi
+Annan had just mentioned the importance of supply chain. So in two weeks, we were in Paris and we really started with the colleague and the director of the UN environmental
+program Mrs. Jaqueline Aloisi de Larderel. We started in fact what is now called the
+life cycle initiative has been running for the last 20 years and has now produced
+this global LCI data access network. Where you can put data set you're
+looking for strawberries you search and here you see you find 74
+data asset worldwide. Here you have dataset from Japan but
+you have the ecoinvent dataset which are there and you know what exists
+basically all the main datasets are there. This is really cool that
+didn't exist even a year ago. It's two months old and really precious. Just to have a look at that and
+a small demo. Let's go on their website and
+see how it's working. Okay, so you arrive here the global
+LCA data access network. And you can search a dataset and let's take coconut as an example
+that we could search. So we searched datasets for coconuts. And you see that you get a lot of dataset, 203 dataset that you have here. And that goes from
+Japanese that I said here. Which could be all sorts of
+use of coconut here, soap, synthetic detergent here for coconut oil. You will have some eco invent
+processes with different perhaps type of allocation which are here,
+and so. So that's a bit intimidating in some
+respect to have so many process you have in fact 20 pages here of 21
+pages of different existing process. So perhaps if you're interested more in milk alternative you
+can put in quotes like coconut milk for
+example and search for it. And in addition here you have here
+two datasets which have coconut milk. And you have some filters you can look
+the one which are free or for sale. You can look the location here,
+it's only France. But when you're want coconuts you
+would have all sorts of data. And there are these two datasets
+are here from French database, the AGRIBALYSE database that we have here. And you have the coconut milk itself,
+okay? And you can start looking at
+the description of this process. Or you also have in that case
+a chicken with curry and coconut milk sauce where
+it's part of the process. And I think in this AGRIBALYSE
+databases the process is there and you could look at it. If you go to the dataset
+you press here and you arrive if you select the English
+as a language to some documentation. You can get the spreadsheet of
+all the raw agricultural product. You can look for the column when
+you have everything in English. This is at farm gate and
+then the ready-to-eat for the product that you have here. Also you have the composition of
+different means which is pretty cool. And as I say you can there
+find where to access the data. This dataset is in fact
+available in semi-pro. So you will be able
+a priority to access it for your different inventory for UK studies.

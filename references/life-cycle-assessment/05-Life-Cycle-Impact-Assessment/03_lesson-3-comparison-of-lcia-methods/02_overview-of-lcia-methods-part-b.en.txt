@@ -1,0 +1,91 @@
+Let's give you a slightly
+more in-depth view of these individual methods looking shortly
+at the framework. LCIA Impact 2002+, if you use it, it's
+still relatively valid. One important thing is
+that it has damaged category or area of
+protection, the human health, the ecosystem quality,
+the resources, but we had kept climate change
+as a separate category. Now when we move
+to IMPACT World+, what we did is we start to do the modeling of the impact
+of climate change on the biodiversity,
+and on human health, and that IMPACT World+
+is considering that. But at that time in 2002, we thought we were not
+accurate enough to go and cover the anti-storage. IMPACT World+ you've
+seen the method applied to the kgeq study,
+the front-end panel. It was based on 2002 here, but it provides now factor for each continent, and allow some regional assessment
+which is important, especially for the water
+use and for acidification. For example, it depends a lot where you emit and what are the quality of the soil or the amount of water
+scarcity in the region. It was the first
+implementation of the USEtox model,
+and also having a water use impact included
+in a full LCIA method. Major improvement in
+modeling land use, water, and resource use. For acidification and
+eutrophication it has world atmospheric and world
+hydrological fate model to really study this
+in a special way. The respiratory effects,
+the fine particulates have new intake fraction, and use the GBD, epidemiological
+derived factor. When interests of
+IMPACT World+ is that you can base your
+assessment on the area of protection or on the
+area of concern that our carbon footprint and the
+water footprints here. In a compatible way
+and consistent way, you can look at
+these two aspects. ReCiPe goes the whole way
+through from my life-cycle, inventory results
+to the results in midpoint category to then go to a damage or an endpoint
+for human health, ecosystem resources, and
+eventually to a single score. One originality of
+ReCiPe is to have a cultural perspective, and three different cultural
+individualistic. Honesty, I don't know why they incorporated that because if you're individualist
+you don't do LCIA. You're just looking at what
+is in your back garden, and you don't mind life-cycle. That's my own bias. The two which are
+really interesting, the hierarchical methods. The hierarchical methods will consider mostly certain
+prove with certain impacts. You need to be proven
+to be incorporated. Whereas the third thing, which is egalitarian, you have more protective
+perspective to say, we take everything, best
+estimate of all impact whereas they are really observed or their potential and accepted. This is especially
+valid for the toxicity. Here we have all impacts
+considered in that case. The default one is
+your hierarchical. If you run it by default, this is the one people
+usually suggest. TRACI. Tragedy
+consistent methods. Well-designed. Doesn't have the damage as a PT they haven't
+moved to there. For the cancer and non-cancer, they also have been
+using USEtox in the latest revision of 2011 and we worked in collaboration with
+Jane Bear for that. LCIA guidance Volume 1. This was this workshop from the UN and it's an ongoing work, but Volume 1 had
+the greenhouse gas, particulate matter,
+water use, land use. The footprint indicator
+recommendation that we saw at the
+start of this class, were coming also
+from this report. Two years later, the second workshop we had:
+acidification, eutrophication, ecotoxicity, human toxicity, the soil quality and
+some mineral resources. I say we are now working
+on the third level. Here we had all our indicator, which were for single category and probably one of the most interesting
+indicator which was developed at that time was the aware
+characterization factor for available water
+remaining methods. The idea is to say we have our characterization
+factor or impact is a function of the inverse of the water remaining because the less water you
+have available, the highest your water
+scarcity and your problems. How do we get this
+water remaining? This is the availability from rainwater minus the demand, and the demand has
+two different part. One is human consumption. This is very clear. The second is a minimum environmental
+requirements to keep the biodiversity
+in a river if you reuse the flow too much
+because you construct a dam, there won't be any fish, so there is a minimum
+requirement in the region. In addition, the CF
+are limited when you look at that between
+0.1 and 100; 100 being the max scarcity
+that we can have. This indicator here,
+what I like is to divide it by the mass
+scarcity to take this CF divided by 100 and it expresses the water scarcity level in the watershed as a
+fraction of the maximum, which would be 100
+cubic meter meter world equivalent in that case. Where do we see high water
+scarcity in the world? Not surprising, west coast
+here of US and Mexico. We have of course
+the Arabic country and Sahara region in Africa. Then in fact, in Central Asia, we have up to China, a lot of desertic area. Finally, to have the Australia where you
+have water in the coast, but most of the other
+area are relatively dry. You see that depending on
+where you are you count that one cubic meter is equivalent to 0.01 cubic meter
+in the blue zone, but will be equivalent up to 100 cubic meter average or I would say if you
+divide here by a hundreds, that's why I prefer. That will be you have an
+index which go to basically 0-1 and one being full scarcity, full competition between the different user
+of that region.

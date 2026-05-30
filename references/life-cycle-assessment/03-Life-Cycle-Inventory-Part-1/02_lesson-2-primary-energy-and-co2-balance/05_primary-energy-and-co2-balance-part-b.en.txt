@@ -1,0 +1,88 @@
+Okay, so
+with step one we have now end processes. We have identified and
+we put them in a spreadsheet. So we've put each of
+these end processes and now we will complement
+with the quantity here. As it's easier to do it
+directly in a spreadsheet, I will invite you to open your
+spreadsheet with the energy and CO2 balance for the lighting example,
+and let's do it together. So you might pause a minute until
+you have opened your file. Okay, so let's look at this spreadsheet. And first we need the amount of
+glass that was five time 20 g. So this is 100 g or 0.1 kg. The packaging was five time 10 g or
+0.05 kg 50 g. The truck we said it was 0.731, which is t km that we have here. And for the freight we have 2.285 t km. We had our 300 kWh a which was our
+reference flow for the electricity. And we've given the amount which goes
+to the disposal at the end of life. So the next step now is to
+get how much energy here and a bit here to the right how much C02 is
+used per kilo glass ,per kilo aluminum, or per kilowatt hour to
+calculate that in that case. And then we combine these two
+flows to get the third floor. So the glass, let's look back and we have in our previous lecture we
+had look at some typical data and we can go back inside the eco
+invent data to file to look for these different processes and
+bring them back here. Okay, so we look for paper,
+we have typically around 20 MJ per kilo paper and
+1 kg CO2 typically. That's about one fourth of the plastic. By the way,
+order of magnitude glass 11.5 and 0.63. This is much less than the kilo
+aluminum that we have all ready seen. Electricity was 12.1, 3.6 MJ per kWh times 3.4 that is
+used to hit the birds or the fishes and
+0.71 kg C02 per kWh in that case. For the transportation, 1t km or 1000 km will be 2.6 MJ. Whereas transportation,
+this is by truck or lorry, transportation via transoceanic freight is more than
+a factor 10 lower with 0.17 only. So we couldn't really have longer
+distances without that much energy for the transportation by freight. And C02 is also here
+a factor 15 nearly between the transportation and
+the transoceanic freight. You have to be careful when you look
+in the according that database, which scenario and
+which process you want to choose. You see that for the truck 16 to 30
+tons of useful load that we have here. We have two processes. One is called operation and
+the other is transport. And you see the unit only
+the transport is in 10 kilometer and it's really measuring
+the transportation function. Whereas the operation is in fact
+just the use phase contribution and it's expressed per vehicle kilometer. So it's how much vehicle needs as energy
+to transfer for one kilometer, but just In fact in terms of the fuel,
+whereas the building of my truck, the manufacturing of my truck and
+the manufacturing of the road is not accounted for here, but
+will be accounted in my transport. So please please use the transport
+value and you see that's where we find the 2.6 and 0.5 here and for
+the transoceanic freight the same, we have 0.17 whereas here the unit
+were the same for operation. You see that the infrastructure and
+the boat are not completely negligible, there's still like 25% of the whole and
+that's the number we get. So let's remember these numbers and now we will bring them and
+introduce them in our spreadsheet. Okay, so for
+the glass we were saying 11.5 mega joule per kilogram the paper was
+at 20 mega joule per kilogram. Our truck we said was at 2.6
+mega joule per kilogram, whereas for the freight we were
+substantially lower with 0.17 and that give us for the energy for the C 02. I've already introduced
+some of them the 0.63 9.5. We just have the truck with 0.15
+kg C 02 per ton kilometer and 0.104 for the transoceanic freight. So now the last operation we need is
+multiply the quantity per function. Need time the energy per unit to
+get the energy per functional unit. So this will be equal to 0.1 time 11.5. That should be about 1.15
+mega joule per functional unit. And you see that this is
+substantially less than aluminum. Even if the mass was 25% lower,
+the emission at a factor 15 higher. So we get 12 mega joule or
+higher contribution from my aluminum for the manufacturing than for my glass. And we do the same for the C02 we can multiply the quantity
+of glass we have in our bulb, in our five bulbs time,
+the emission of C 02 per kilo glass. And we get relatively
+small value in that case. So now what is interesting is let's
+compare that with the use phase and we have our 300 kilowatt to time,
+12.1 which was a mega joule per kilowatt. A primary energy accounting for
+the losses at the power plant. And so
+we get here three hundreds Time 12.1. Will that be substantially higher
+than the manufacturing of the bulb? Yes, okay, we get If I come back here, we had 19 mega joule over
+the entire supply chain. And we're adding 3630. So we go to 3,649 here. So the use faces representing
+99.5% of the total. And if we look at the C02 side for the electricity,
+we have 0.71 here and this is 200. Whereas the rest of the life
+cycle was only about one kilo C02 So again completely
+dominated with 99.5% of my mission taking place
+during the use phase. So this is this is very obvious
+that in our case the priority for improving this product is clearly not so
+much the lifetime of my bulbs, but the reducing the consumption per
+lumen is really the important thing is that the interest of moving towards
+fast fluorescent and eventually LED as alternative
+to my incandescent bulb. Okay, so let's come back and
+look at the results. And if we summarize what we have done we
+have introduced based on the process tree. The quantity per functional unit
+multiplied by the database corresponding data of mega joule and C02 per kilo of glass or
+quantity of each unit quantity of each of the end processes. And we get the total,
+we sum it up in operation three. And we get here the performance of
+my system which are always measured per functional unit. This will be how many mega
+joule per functional limit. How many kilo C02 per functional unit,
+which is substantial here, even for a single lighting fixture or
+light bulb over five years in this case.

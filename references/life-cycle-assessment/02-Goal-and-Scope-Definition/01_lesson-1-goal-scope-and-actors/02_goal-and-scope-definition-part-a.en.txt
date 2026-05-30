@@ -1,0 +1,111 @@
+Goal and scope definition. Why on earth do we spend
+an entire LCA phase, an entire one force of my LCA
+just to scope the problem? That's because a problem which is well-defined
+is half solved. It's really crucial, as we
+saw in the popcorn example, that we define well the basis for comparison,
+the metric used, the system boundaries, and that's why this goal and
+scope definition is perhaps the most important phase and also sometimes the most
+problematic phase in LCA. We start now and we'll spend some time on the goal
+and scope definition to really define the
+different element which serves the basis
+then to calculate inventory of extraction
+and impacts which are related to the
+problem definition. Our learning objective
+for today are to define the goal and
+scope of an LCA and for this particular
+lecture to identify the intended use and
+user of the LCA, the decision context situation, and the intended audience. ISO 14044 give rule and say that in defining
+the goal of an LCA, the following item shall be
+unambiguously stated and when ISO said shall and not can that mean this
+is a requirement. If you want your LCA to be ISO compliant
+and ISO compatible, you need to do that, otherwise, you're
+not. If these points are not explicitly in your
+report you're out, reviewer will not give you the blessing for an
+ISO compliance study. You need to define your
+intended application, why you're carrying
+out the study, who is the intended
+audience to whom the results of the study are
+intended to be communicated, and whether the
+results are intended to be used in a
+comparative assertion, meaning comparing
+your product with another product explicitly
+or even implicitly, and which is intended to be
+disclosed to the public. Let's take the example of light bulbs and we will
+define the scope and the goal of my LCA for typically comparing incandescent
+light bulb with fluorescent or
+an LED light bulb. Let's think what would be the objective and
+reason for our study. Could be different things
+in general for an LCA, could be product information, product development
+within the company, defined policy and strategy at governmental or
+business level or regulation at a
+governmental level. In our case here, we can, for example, provide product information
+to select what is the most suitable type of light bulb for a
+given application. Typically our targeted
+audience here will be consumers
+whereas other LCA could be focused on the
+governmental body or internal also for product development
+inside the company. Then we need to
+define the actors and the actors is a sponsor of the study, the
+different authors. We'll see what is an advisory board and peer
+reviewer in a minute. The more you involve independent
+entities in your work, you will enhance the
+credibility of your study. Let's look in further detail
+about these actors here. The identity of the
+main stakeholders and their addresses
+should be provided. Let's say for sponsor, typically for this
+light bulb study, we would have
+consumer association. The author analyst,
+of course, it's you, EHS672 consultant who will
+become expert in a few weeks. That's your role as in your case study to
+carry such a study. Optional advisory board. What is the role of
+an advisory board? It's to provide
+you the knowledge from different stakeholder
+and ensure that all the hypotheses are setup in a fair way and often you
+will involve people, for example, here
+representative from the bulb manufacturer like astronomer Phillips
+or General Electric. The electricity company would
+be perhaps interesting, like DTE, the USEPA, or representative from an NGO like environmental defense or different NGO and if you're
+a consumer association, you certainly will have someone representing the consumer
+association in that. When you select these people, it's nice in fact to select
+people who are potentially on the other side of the study. It's nice when you're
+on the consumer side to have the bulb
+manufacturer represented. Now, who do you choose in there? Two criteria to
+choose the people. Knowledgeable, you want people who bring knowledge and
+who bring insights. In particular, you're
+not a specialist usually from the domain
+when you do an LCA so you need to bring people who know about bulb and
+will give you insight, will indicate where to
+find some of the data, will help you for that. Second, you want them to
+be open-minded experts. What I mean by that is you
+don't want someone who has decided before the study
+what the results should be. You need people who, looking at the evidences, looking at the science, can change their
+mind while still representing a
+certain stakeholder, and because if this person is well recognized
+in his domain, it will give you credibility
+and avoid that at the end, people say, they didn't consider one of the main
+problem in our story. I have to say, in my experience, one of the first study I did was about rainwater
+recuperation and we had a program officer
+from the CCPA who was leading that and
+a remarkable man, but his boss, at the start of our
+study or before even we had signed the contract, basically said rainwater
+recuperation is not useful and not applicable
+really in Switzerland. We have enough water,
+we don't need that. That was embarrassing
+to do that. The way I got out
+of that was to say, let's add to our
+study a scenario of water saving techniques which would certainly or more
+likely be of interest, whereas we also
+identified, in some cases, rainwater could be of
+interest in sub-sequence set. But it was really a
+problem to have in fact, one of the person
+sponsoring the study and we really had to be
+careful to carry out a very independent
+work in that case. The independence is
+also ensured via optional peer reviewers
+and these are really scientists,
+independent LCA experts. Could be also from a company, but they are really knowledgeable
+in LCA and they are chosen by the sponsor and the study author but should
+be independent of you. That's not the people you
+work on a weekly basis with. It's not people
+within your business, it's people outside which
+will give credibility.

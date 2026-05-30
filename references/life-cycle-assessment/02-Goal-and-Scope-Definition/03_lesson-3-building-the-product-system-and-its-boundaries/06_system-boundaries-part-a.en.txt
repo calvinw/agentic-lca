@@ -1,0 +1,80 @@
+Where shall we stop? When we speak of
+system boundaries, should we include if we take
+our example of popcorn, the machine who
+manufactured the popcorn? What about the machine
+who made the machine and the machine who made
+the machine who made the machine who
+manufactured popcorn? We don't have infinite time, we need to stop somewhere
+in our assessment, so where to stop consistently and how to fix
+these system boundaries. Our learning objective is to define consistent
+system boundaries based on the product service and the function, and
+more specifically, identify potential biases
+in system boundary, determine rule for
+good practice, and check whether
+under which condition common processes to
+different scenario can be excluded from
+these boundaries. Let's take a counterexample. In the early 1990s, consultants worked for a very well-known international
+fast food chain of restaurants and they compare a fast food with a
+conventional restaurant. Basically, the consultant arrive with his results
+and publishes, in fact, it was disclosed inside
+the fast-food restaurant that the fast food requires
+six time less energy, seven time less water, and surprisingly, five
+times less waste. The last point was the most surprising from
+my point of view. Looking at these results, we were starting investigating, but why do we get these results? Why is really the
+question for science? When we don't understand
+when we're surprised, we never let it go, we
+always ask why, why, why, until we understand
+and either we learn something new or
+there was a problem. In this study, there was indeed some problems. It was a restaurant, so they had taken the boundary, the walls of my restaurant
+as system boundary, and choosing geographical
+rather than functional boundary does not necessarily
+cover the same reality. We see that when we have here the different step
+of food preparation, which are considered in the fast-food restaurant and in a conventional restaurant. If you take the wall
+of the restaurant, what happens inside the
+wall of the two here, the fast foods, and on the right, the
+conventional restaurant. First, the preparation
+of food and cooking is included in the
+conventional restaurant, but this is excluded in my fast-food restaurant
+because it's pre-prepared burger or
+salad which are ready. The final cooking
+is in both cases, but in addition to the cleaning, heating of the
+restaurant itself, and the restaurant is
+not really the same, there is not so much table
+in a fast-food restaurant, here we have to also deal
+with reusable dishes. We don't have here dishes, but we have packaging
+and the packaging waste here can be not necessarily collected
+inside my restaurant, so they might be
+excluded, and secondly, the manufactured
+of the packaging was not happening
+in the restaurants, so it's also excluded. If we come back, the function of the fast food, in addition, is different because we have people in a conventional
+restaurant will sit, will take time to speak whereas, in fast food, you don't offer
+these secondary function. To compare rather the fast food, we should compare it with
+another fast food for which we have reusable dishes
+versus the takeaway. Now, about the waste, what is the difference
+on the waste between the fast foods and the
+conventional restaurant? First, the main waste stream in a normal
+restaurant, what is it? It's the green waste, it's preparing my food. I have here losses, I have some bones
+that are excluded and this compostable waste
+are the main part, whereas it's packaging in
+the case of the fast food. So very different waste, so taking just the
+quantity as such doesn't qualify for an impact base
+footprint of comparison. We need to account from which type of waste,
+and in addition, as we said, the packaging
+is not necessarily considered in my
+fast-food restaurant. The preparation and the energy when preparing the burgers, salad, and all that, was also dis-considered in the fast food and not
+in the conventional. Let's look at the system
+boundary now for a proper study. Colleague from the ETH Zurich, the Switzerland
+Institute of Technology, the Swiss MIT in Zurich, redid the same study, this time, according and
+considering dishes, packaging, the food preparation, the dishwashing,
+heating, lighting, and the waste treatment
+equally in both scenarios. They were including what was happening in the pre-preparation of the food as well as what was happening within
+the restaurant. Here the system boundary were counting for the same reality. Second, they compared
+another fast food, one with reusable, this one is with reusable
+dishes versus here, the takeaway fast food. They recounted also the
+number of customer, in fact, the fast food customer
+were overestimated or they hadn't taken really an average day in
+the first study. We see that, in practice, the reusable dishes
+was leading to a lower impact and one reason for it was a
+reduction of transportation, the other reason was the reduction in the
+secondary packaging, which is not completely
+surprising in our case.

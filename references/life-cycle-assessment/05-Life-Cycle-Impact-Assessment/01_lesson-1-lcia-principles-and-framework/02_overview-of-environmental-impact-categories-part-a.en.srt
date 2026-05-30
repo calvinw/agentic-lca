@@ -1,0 +1,1036 @@
+1
+00:00:09,080 --> 00:00:12,555
+Hi, everybody. In today's video,
+
+2
+00:00:12,555 --> 00:00:15,120
+we're going to have an
+overview of some of
+
+3
+00:00:15,120 --> 00:00:19,075
+the most common environmental
+impact categories
+
+4
+00:00:19,075 --> 00:00:22,470
+for our life cycle
+impact assessment.
+
+5
+00:00:22,470 --> 00:00:25,100
+I have to say this
+is one of the things
+
+6
+00:00:25,100 --> 00:00:27,230
+that really got me into LCA is
+
+7
+00:00:27,230 --> 00:00:29,390
+realizing that I could
+connect the decisions I
+
+8
+00:00:29,390 --> 00:00:32,300
+make with the impacts on humans,
+
+9
+00:00:32,300 --> 00:00:34,930
+on the environment, on animals,
+
+10
+00:00:34,930 --> 00:00:38,210
+in general, be able
+to compare those two.
+
+11
+00:00:38,210 --> 00:00:41,825
+Our learning objectives
+for today are to
+
+12
+00:00:41,825 --> 00:00:43,265
+first list the four
+
+13
+00:00:43,265 --> 00:00:45,835
+main environmental
+damage categories,
+
+14
+00:00:45,835 --> 00:00:48,050
+then we're going to relate
+
+15
+00:00:48,050 --> 00:00:50,255
+specific environmental
+and health impacts
+
+16
+00:00:50,255 --> 00:00:52,310
+to each of these categories,
+
+17
+00:00:52,310 --> 00:00:53,765
+and then for a few,
+
+18
+00:00:53,765 --> 00:00:56,330
+we're going to dive deeper
+into the mechanisms and the
+
+19
+00:00:56,330 --> 00:00:58,295
+spatial and temporal ranges
+
+20
+00:00:58,295 --> 00:01:00,775
+of some of the dominant impacts.
+
+21
+00:01:00,775 --> 00:01:06,440
+As a reminder, in our phases
+of life cycle assessment,
+
+22
+00:01:06,440 --> 00:01:07,940
+we've already talked
+about the goal
+
+23
+00:01:07,940 --> 00:01:09,530
+and scope definition
+where we did
+
+24
+00:01:09,530 --> 00:01:10,850
+functional units and
+
+25
+00:01:10,850 --> 00:01:13,525
+our different scenarios
+and system boundaries.
+
+26
+00:01:13,525 --> 00:01:17,990
+Then we use the inventory of
+extractions and emissions to
+
+27
+00:01:17,990 --> 00:01:20,405
+compare the two scenarios and
+
+28
+00:01:20,405 --> 00:01:23,470
+what extractions and emissions
+are associated with each.
+
+29
+00:01:23,470 --> 00:01:25,490
+Then in order to make
+that information
+
+30
+00:01:25,490 --> 00:01:27,005
+meaningful and useful,
+
+31
+00:01:27,005 --> 00:01:28,940
+we take it the next
+step to look at
+
+32
+00:01:28,940 --> 00:01:32,740
+the impacts of those
+extractions and emissions.
+
+33
+00:01:32,740 --> 00:01:34,460
+Throughout, of
+course, we are doing
+
+34
+00:01:34,460 --> 00:01:36,020
+interpretation to make sure
+
+35
+00:01:36,020 --> 00:01:37,895
+that what we're doing
+is making sense,
+
+36
+00:01:37,895 --> 00:01:39,020
+is consistent,
+
+37
+00:01:39,020 --> 00:01:43,145
+and we don't need to revise
+anything along the way.
+
+38
+00:01:43,145 --> 00:01:46,040
+The four categories of
+environmental damage,
+
+39
+00:01:46,040 --> 00:01:48,050
+we've got global impacts,
+
+40
+00:01:48,050 --> 00:01:49,445
+things like climate change,
+
+41
+00:01:49,445 --> 00:01:50,740
+human health impacts,
+
+42
+00:01:50,740 --> 00:01:52,175
+so these are things that cause
+
+43
+00:01:52,175 --> 00:01:54,065
+death or disease to people.
+
+44
+00:01:54,065 --> 00:01:56,640
+Ecosystem and
+biodiversity impacts,
+
+45
+00:01:56,640 --> 00:02:00,080
+so things that affect endangered
+species, for example,
+
+46
+00:02:00,080 --> 00:02:03,710
+or the habitats that they
+live in, and resource use,
+
+47
+00:02:03,710 --> 00:02:05,000
+things like water use,
+
+48
+00:02:05,000 --> 00:02:08,290
+land use, use of minerals
+or non-renewable energy.
+
+49
+00:02:08,290 --> 00:02:10,605
+We'll start with global impacts
+
+50
+00:02:10,605 --> 00:02:12,690
+and we'll look at this through
+
+51
+00:02:12,690 --> 00:02:17,550
+a concept defined by scientists
+as planetary boundaries.
+
+52
+00:02:17,550 --> 00:02:19,804
+Now, planetary boundaries,
+
+53
+00:02:19,804 --> 00:02:21,920
+what they do is
+they characterize
+
+54
+00:02:21,920 --> 00:02:25,805
+safe operating
+space for humanity.
+
+55
+00:02:25,805 --> 00:02:29,195
+Scientists define these
+as things where if you
+
+56
+00:02:29,195 --> 00:02:32,375
+transgress one or more
+planetary boundary,
+
+57
+00:02:32,375 --> 00:02:35,300
+this may be catastrophic
+by triggering
+
+58
+00:02:35,300 --> 00:02:36,740
+nonlinear responses of
+
+59
+00:02:36,740 --> 00:02:39,245
+the continental or
+planetary scale.
+
+60
+00:02:39,245 --> 00:02:43,540
+In 2015, in a science
+advances paper,
+
+61
+00:02:43,540 --> 00:02:45,860
+scientists characterize
+the state of
+
+62
+00:02:45,860 --> 00:02:48,905
+seven out of the nine
+planetary boundaries.
+
+63
+00:02:48,905 --> 00:02:51,830
+We'll start by focusing
+on climate change,
+
+64
+00:02:51,830 --> 00:02:53,515
+which is right here at the top.
+
+65
+00:02:53,515 --> 00:02:54,730
+We can already see,
+
+66
+00:02:54,730 --> 00:02:56,390
+it's already out of
+
+67
+00:02:56,390 --> 00:02:58,910
+the green safe boundary and into
+
+68
+00:02:58,910 --> 00:03:02,350
+the zone of uncertainty
+or increasing risk.
+
+69
+00:03:02,350 --> 00:03:05,375
+The mechanism for climate change
+
+70
+00:03:05,375 --> 00:03:07,040
+is the greenhouse effect.
+
+71
+00:03:07,040 --> 00:03:09,680
+What happens here
+is that the sun
+
+72
+00:03:09,680 --> 00:03:11,390
+shines down on the Earth and so
+
+73
+00:03:11,390 --> 00:03:13,145
+sends energy, and light,
+
+74
+00:03:13,145 --> 00:03:14,850
+and heat into the Earth,
+
+75
+00:03:14,850 --> 00:03:18,470
+and then the Earth's surface
+absorbs that and re-emits
+
+76
+00:03:18,470 --> 00:03:22,750
+that back as long wave
+or heat radiation.
+
+77
+00:03:22,750 --> 00:03:24,500
+It's a different
+form of radiation,
+
+78
+00:03:24,500 --> 00:03:27,080
+which means that
+greenhouse gases in
+
+79
+00:03:27,080 --> 00:03:30,290
+the atmosphere absorb
+that and then they,
+
+80
+00:03:30,290 --> 00:03:31,895
+in turn, re-emit it.
+
+81
+00:03:31,895 --> 00:03:33,860
+Some of it goes out
+into space and some of
+
+82
+00:03:33,860 --> 00:03:36,175
+it goes back to the
+Earth's surface.
+
+83
+00:03:36,175 --> 00:03:38,260
+This is generally
+useful for us and
+
+84
+00:03:38,260 --> 00:03:40,135
+lets us be alive because
+
+85
+00:03:40,135 --> 00:03:42,820
+those greenhouse gases
+keep the surface of
+
+86
+00:03:42,820 --> 00:03:46,580
+the Earth warm enough for us
+to function, which we like.
+
+87
+00:03:46,580 --> 00:03:50,290
+But as we can see
+in recent time,
+
+88
+00:03:50,290 --> 00:03:54,525
+there have been much higher
+anthropogenic CO_2 emissions
+
+89
+00:03:54,525 --> 00:03:56,170
+and so that is leading
+
+90
+00:03:56,170 --> 00:03:59,170
+to a warming of the Earth's
+atmosphere that is much
+
+91
+00:03:59,170 --> 00:04:03,050
+higher than many of us can
+adapt to in many ways.
+
+92
+00:04:03,050 --> 00:04:06,550
+Impacts to date first on
+just the temperature,
+
+93
+00:04:06,550 --> 00:04:08,155
+we can look at the
+global warming
+
+94
+00:04:08,155 --> 00:04:10,480
+relative to a time
+period before we
+
+95
+00:04:10,480 --> 00:04:11,935
+had omitted so much
+
+96
+00:04:11,935 --> 00:04:14,995
+CO_2 and other greenhouse
+gases into the atmosphere.
+
+97
+00:04:14,995 --> 00:04:18,640
+Compared to that time
+period of 1850-1900,
+
+98
+00:04:18,640 --> 00:04:20,605
+we can see that, at first,
+
+99
+00:04:20,605 --> 00:04:22,540
+there were just the
+normal oscillations,
+
+100
+00:04:22,540 --> 00:04:23,800
+right around the 1960s,
+
+101
+00:04:23,800 --> 00:04:25,825
+there were just the normal
+temperature oscillations,
+
+102
+00:04:25,825 --> 00:04:28,790
+but then we can see a
+clear trend upward.
+
+103
+00:04:28,790 --> 00:04:30,770
+Those oscillations continued but
+
+104
+00:04:30,770 --> 00:04:32,510
+the average moved upward.
+
+105
+00:04:32,510 --> 00:04:35,930
+Something to notice here
+is that the model or
+
+106
+00:04:35,930 --> 00:04:39,345
+estimated anthropogenic
+warming is
+
+107
+00:04:39,345 --> 00:04:40,760
+tracking well with
+
+108
+00:04:40,760 --> 00:04:44,000
+the observed monthly global
+mean surface temperature,
+
+109
+00:04:44,000 --> 00:04:45,920
+the observed averages
+are matching
+
+110
+00:04:45,920 --> 00:04:49,460
+modeled averages based on
+
+111
+00:04:49,460 --> 00:04:52,315
+climate change in the
+mechanism that I explained.
+
+112
+00:04:52,315 --> 00:04:57,185
+In terms of long-term impacts
+on this temporal scale.
+
+113
+00:04:57,185 --> 00:04:58,610
+These could be variable,
+
+114
+00:04:58,610 --> 00:05:00,725
+so it depends how
+humans respond,
+
+115
+00:05:00,725 --> 00:05:02,720
+and has large uncertainties due
+
+116
+00:05:02,720 --> 00:05:04,870
+to the complex system
+of the atmosphere.
+
+117
+00:05:04,870 --> 00:05:06,500
+If there's no reduction,
+
+118
+00:05:06,500 --> 00:05:09,710
+we're likely to exceed this
+threshold right here of
+
+119
+00:05:09,710 --> 00:05:13,900
+1.5 degrees of warming and
+could even reach two degrees.
+
+120
+00:05:13,900 --> 00:05:17,070
+But with faster CO_2
+reductions were likely to stay
+
+121
+00:05:17,070 --> 00:05:19,010
+below 1.5 degrees
+of warming and we
+
+122
+00:05:19,010 --> 00:05:21,890
+can see that we might
+bring us back down.
+
+123
+00:05:21,890 --> 00:05:26,525
+What are the causes
+of climate change?
+
+124
+00:05:26,525 --> 00:05:28,280
+Well, like I said,
+
+125
+00:05:28,280 --> 00:05:30,080
+we believe it's
+greenhouse gases,
+
+126
+00:05:30,080 --> 00:05:31,610
+and the reason that
+scientists have
+
+127
+00:05:31,610 --> 00:05:33,485
+confidence in that is because
+
+128
+00:05:33,485 --> 00:05:35,060
+the observed warming matches
+
+129
+00:05:35,060 --> 00:05:37,260
+the combined
+anthropogenic forcing.
+
+130
+00:05:37,260 --> 00:05:39,500
+Forcing is another word for
+
+131
+00:05:39,500 --> 00:05:41,675
+the effect of our emissions
+
+132
+00:05:41,675 --> 00:05:43,880
+on the temperature
+that's observed.
+
+133
+00:05:43,880 --> 00:05:46,370
+The observed warming
+globally we can
+
+134
+00:05:46,370 --> 00:05:49,055
+see is a little bit more
+than half a degree Celsius,
+
+135
+00:05:49,055 --> 00:05:50,620
+that's this black bar,
+
+136
+00:05:50,620 --> 00:05:53,555
+and greenhouse gases, actually,
+
+137
+00:05:53,555 --> 00:05:56,570
+through our models are
+predicted to lead to
+
+138
+00:05:56,570 --> 00:05:59,480
+a greater increase in
+temperature than is observed.
+
+139
+00:05:59,480 --> 00:06:03,230
+But the reason for
+that is that we also,
+
+140
+00:06:03,230 --> 00:06:05,929
+as humans, emit other particles
+
+141
+00:06:05,929 --> 00:06:08,570
+and pollutants and emissions
+into the atmosphere,
+
+142
+00:06:08,570 --> 00:06:09,890
+and so those forcings
+
+143
+00:06:09,890 --> 00:06:11,800
+actually end up cooling
+the atmosphere,
+
+144
+00:06:11,800 --> 00:06:14,165
+and when we add the green
+bar and the yellow bar,
+
+145
+00:06:14,165 --> 00:06:16,610
+we get our combined
+anthropogenic forcings,
+
+146
+00:06:16,610 --> 00:06:18,695
+which is matching our
+observed warming.
+
+147
+00:06:18,695 --> 00:06:20,270
+Something else to
+note here is that
+
+148
+00:06:20,270 --> 00:06:23,810
+the natural forcings due
+to solar oscillations or
+
+149
+00:06:23,810 --> 00:06:26,270
+any other aspects of
+our orbit are much
+
+150
+00:06:26,270 --> 00:06:27,350
+smaller compared to
+
+151
+00:06:27,350 --> 00:06:30,010
+the observed warming and
+the predicted warming.
+
+152
+00:06:30,010 --> 00:06:32,030
+In terms of thinking
+of the climate
+
+153
+00:06:32,030 --> 00:06:33,380
+change impacts so far,
+
+154
+00:06:33,380 --> 00:06:35,615
+it can be hard to attribute
+
+155
+00:06:35,615 --> 00:06:36,860
+any given impact of
+
+156
+00:06:36,860 --> 00:06:39,250
+climate change because of
+the probabilities involved.
+
+157
+00:06:39,250 --> 00:06:41,135
+But in recent decades,
+
+158
+00:06:41,135 --> 00:06:43,550
+scientists have been
+publishing studies that
+
+159
+00:06:43,550 --> 00:06:47,240
+directly can link
+climate change to
+
+160
+00:06:47,240 --> 00:06:50,270
+specific impacts and they've
+connected climate change
+
+161
+00:06:50,270 --> 00:06:53,375
+to impacts on every single
+continent in the world.
+
+162
+00:06:53,375 --> 00:06:54,955
+That's what this is showing us.
+
+163
+00:06:54,955 --> 00:06:57,260
+These impacts are happening
+all over the world and
+
+164
+00:06:57,260 --> 00:07:00,095
+they're connecting
+all types of impacts.
+
+165
+00:07:00,095 --> 00:07:03,260
+In blue, we've got impacts
+on physical systems,
+
+166
+00:07:03,260 --> 00:07:06,005
+such as glaciers or
+coastal erosion.
+
+167
+00:07:06,005 --> 00:07:09,305
+In green, we've got our
+biological systems,
+
+168
+00:07:09,305 --> 00:07:13,205
+so things like wildfire
+and marine ecosystems.
+
+169
+00:07:13,205 --> 00:07:16,555
+Then in red, we've got
+human and managed systems,
+
+170
+00:07:16,555 --> 00:07:18,530
+so things like food production
+
+171
+00:07:18,530 --> 00:07:21,200
+or livestock or
+health and economies.
+
+172
+00:07:21,200 --> 00:07:23,300
+You can see blue, green,
+and red throughout.
+
+173
+00:07:23,300 --> 00:07:26,015
+If you want to dig
+deeper into this,
+
+174
+00:07:26,015 --> 00:07:30,020
+you can also see the confidence
+range for all of these.
+
+175
+00:07:30,020 --> 00:07:32,300
+You can see relatively
+high confidence
+
+176
+00:07:32,300 --> 00:07:33,710
+that climate change is impacting
+
+177
+00:07:33,710 --> 00:07:36,590
+every continent and
+the many systems
+
+178
+00:07:36,590 --> 00:07:38,965
+that we use in living.
+
+179
+00:07:38,965 --> 00:07:41,415
+What about future risks?
+
+180
+00:07:41,415 --> 00:07:43,070
+These depend on the future
+
+181
+00:07:43,070 --> 00:07:44,720
+of our greenhouse gas emissions.
+
+182
+00:07:44,720 --> 00:07:46,415
+I'm going to go
+through this figure
+
+183
+00:07:46,415 --> 00:07:47,450
+backwards a little bit,
+
+184
+00:07:47,450 --> 00:07:50,600
+starting at Panel C. At Panel C,
+
+185
+00:07:50,600 --> 00:07:53,480
+we can see that our
+baseline emissions
+
+186
+00:07:53,480 --> 00:07:55,310
+are in gray at the top-right,
+
+187
+00:07:55,310 --> 00:07:57,650
+that's how much
+were predicted to
+
+188
+00:07:57,650 --> 00:08:00,230
+emit in greenhouse gases
+if there's no change.
+
+189
+00:08:00,230 --> 00:08:02,600
+But there are
+different scenarios
+
+190
+00:08:02,600 --> 00:08:04,655
+that are in the IPCC report,
+
+191
+00:08:04,655 --> 00:08:07,130
+all of which would lead
+to varying levels of
+
+192
+00:08:07,130 --> 00:08:09,530
+reduced greenhouse
+gas emissions,
+
+193
+00:08:09,530 --> 00:08:12,170
+and so what the
+rest of this figure
+
+194
+00:08:12,170 --> 00:08:13,310
+does is look at those
+
+195
+00:08:13,310 --> 00:08:15,110
+different scenarios
+and their impacts.
+
+196
+00:08:15,110 --> 00:08:18,140
+In Panel B, what we
+can see is that if we
+
+197
+00:08:18,140 --> 00:08:21,080
+are able to reduce our
+greenhouse gas emissions,
+
+198
+00:08:21,080 --> 00:08:22,220
+then that would reduce
+
+199
+00:08:22,220 --> 00:08:24,745
+the cumulative
+emissions over time.
+
+200
+00:08:24,745 --> 00:08:27,735
+It would go from around 8,000
+
+201
+00:08:27,735 --> 00:08:31,290
+gigatons of CO_2 down to 6,000,
+
+202
+00:08:31,290 --> 00:08:35,715
+4,000, or 3,000
+gigatons of CO_2.
+
+203
+00:08:35,715 --> 00:08:38,105
+Then on the vertical
+axis of Panel B,
+
+204
+00:08:38,105 --> 00:08:39,830
+we can see what that
+would mean in terms of
+
+205
+00:08:39,830 --> 00:08:41,830
+the global mean
+temperature change.
+
+206
+00:08:41,830 --> 00:08:43,515
+If we make no change,
+
+207
+00:08:43,515 --> 00:08:47,250
+8,000 would correspond to 4-5
+degrees Celsius increase.
+
+208
+00:08:47,250 --> 00:08:51,185
+But as we reduce our
+cumulative CO_2 emissions,
+
+209
+00:08:51,185 --> 00:08:56,570
+that would reduce the global
+mean temperature change.
+
+210
+00:08:56,570 --> 00:08:59,570
+Then finally, we can
+link this to Panel A,
+
+211
+00:08:59,570 --> 00:09:01,415
+the risks from climate change
+
+212
+00:09:01,415 --> 00:09:04,250
+because these are dependent
+on the temperature change.
+
+213
+00:09:04,250 --> 00:09:07,040
+What we can see is
+that for things like
+
+214
+00:09:07,040 --> 00:09:08,870
+unique and threatened ecosystems
+
+215
+00:09:08,870 --> 00:09:10,700
+or for extreme weather events,
+
+216
+00:09:10,700 --> 00:09:13,760
+even at 1.5-2 degrees Celsius,
+
+217
+00:09:13,760 --> 00:09:15,590
+which we were already
+pretty much at,
+
+218
+00:09:15,590 --> 00:09:18,960
+we're experiencing very high
+risk due to climate change.
+
+219
+00:09:18,960 --> 00:09:22,400
+But for things like the
+distribution of impacts,
+
+220
+00:09:22,400 --> 00:09:23,945
+the global aggregate impacts,
+
+221
+00:09:23,945 --> 00:09:26,315
+or large-scale singular events,
+
+222
+00:09:26,315 --> 00:09:29,705
+if we can keep our
+temperature change down,
+
+223
+00:09:29,705 --> 00:09:32,315
+then we can reduce
+the risk level,
+
+224
+00:09:32,315 --> 00:09:34,980
+the additional risk for
+any of those things.

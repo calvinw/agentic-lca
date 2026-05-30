@@ -1,0 +1,72 @@
+Let's dig in a bit further to look not only at
+the existence of the data, but their formats and
+how you can interpret, understand them, read them. In particular, we want to have that in the SimaPro software so that when we will
+exercise with it, once we've done now
+our hand calculation and our case-study
+presentation are done, we want to be able
+to access these. Let's look at the data
+format and data acquisition. As we have just seen, we could have this
+unit process level with direct intermediary data, which is the first step in arriving to aggregated
+data or after identifying the amount
+of each unit process when I build my process tree, calculate the elementary flow per functional unit
+for each process, and getting your
+aggregated inventory. Once you have your aggregate
+inventory at the system level, you can look at both. Let's look first, here are these direct
+intermediary and elementary flow. We take the same
+process we are used to, aluminum primary liquid. We have basically two groups. We have the input from the technosphere,
+from the economy. That input from technosphere, which is one group of processes. We have all the elementary
+flow which are emissions. Mostly here, these
+are emission to air plus a heat waste here. The third category are
+disposal processes. These are disposal
+type of processes. Where do we find them
+when we look in SimaPro? First things in SimaPro, when you look at the process, this is my aluminum
+liquids, ecoinvent. So you have aluminum primary
+liquid at plant here, and you have one kilo, which is the amount you
+can choose your unit, you can choose your amount,
+which is the output. This is what the service
+delivered as the product at the gate of my
+aluminum industry. You here have known
+input from nature. These are the directory
+resource extraction and as we have direct, they are known because the
+direct will happen in mining and this is not this process of the aluminum industry itself. We've seen all these disposal
+intermediary processes, including our aluminum oxide, if you remember, at plant where we had about 1.9, here you have 1.92 kilogram per functional unit per kilo
+of aluminum that we have. We have all the
+different processes from our process tree that we find back all the
+processes we had here. The group, they appear
+on the left-hand side, they appear here under the
+intermediary processes. Sorry, here, this
+is not disposal, this is just my input
+intermediary processes. Here for input. If I look my elementary flows, the direct emission to air, we find back the
+benzo(a)pyrene that we had, the carbon dioxide fossil, you'll find with the
+corresponding quantity that were also in here, carbon dioxide, 1.5 kilo. This is exactly what
+we are finding here. Finally, we have the disposal
+intermediary process which are appearing here. One beauty of ecoinvent is it's results are provided
+with an uncertainty range. Its uncertainty is based
+on quality indices, pedigrees called the pen, one will look at the
+technology of the data. For example, either at the
+geographical matching with the data you have, and depending on the quality, you give a grade from 1-5, and based on that,
+you calculate. Here, let's go for the
+particular smaller than 2.5, you have this factor 3. It means that for a
+factor of three here, this geometric standard
+deviation of three mean that 95 percent
+confidence interval is a value divided by 3. The 95 percent CI
+will go from 0.00261 divided by 3 to 3 times
+0.00261 that we have here. So that gives us an uncertainty, which is we need to have. Second type of data, which was at the end of our
+process to aggregate it, we get only elementary flow. You will have input here
+from the environment, resource extraction, and all the outputs to the
+environment as emission here, mostly emission to air. Here, no intermediary
+flow because this has been accounted for
+getting my supply chain. But now we only look what is crossing our boundary
+to the environment. Let's look natural gas in ground 525 cubic decimeter. You get all for one kilo. Now aggregated flow, you get
+a lot of resource extraction from the environment which was
+not existing in the direct because that was not
+happening in my process, aluminum primary, but it's
+happening in the supply chain. You see here these in ground, this is extraction from the
+ground that we have here. Now, the emission side, you have this aggregated
+emission to air, which here are by
+alphabetical order, and you find carbon
+dioxide fossil, for example, you have
+in different area. For carbon dioxide it's
+irrelevant if the population, but you get here
+like 2.84 plus 4.66, 7.4 plus another 1.8 kilogram. So, about nine kilo
+carbon dioxide emitted, in that case.

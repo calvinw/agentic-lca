@@ -1,0 +1,72 @@
+How to use the dollar sign as a very
+efficient way to perform calculation and to copy formula in the next cell sheet. Because we want to put for even a large
+range of formula to write the formula in a single sheet and be able to copy it and
+that it adjusts the right way directly. Let's take a small example. We have here three people which
+are consuming 10 serving a day, 20 serving a day and 30 serving
+a day of two different food one and two each of them is
+consumed at the same level. And we have here the carbon
+footprint of these two foods. The food one has 0.1 kg of
+CO2 per serving whereas food two has 0.5 kg of CO2 per serving. We would like to calculate
+the carbon footprint in kilo CO2 per day which means taking
+the serving per day. Multiplying it by
+the kilo CO2 per serving. So we'll get a kilo CO2 per
+day serving are going away. So to do that I will say my
+cell C7 is equal here to my consumption B7 time my
+carbon footprint data and kilo CO2 per serving for
+food one which is C3 here. So 10 times 0.1, this is 1 it makes sense. So now as we want to be efficient or
+if we are lazy or both let's take that and
+we want to copy it. You can copy with CTRL C and CTRL V, okay. Or directly take here the corner and
+take it down and we see we're having a problem here. Why are we having a problem, let's look
+what happened when I copied my formula. I had B7 times C3,
+I would like to have here B8 times C3. But I get B8, so this has adapted nicely, it move automatically from B7
+to B8 when I move a row down. But my C3 has also adapted. So I'm trying to use a text here. So Excel doesn't like that. If you make a multiplication with the text
+it doesn't know how to handle that. So what I would like is that we
+block these three remains the same. I always use is C3 here
+when I come down so to block that this is exactly
+what the dollar sign in Excel inside the formula is doing it
+will enable that when I move copies this cell down it will
+remain C3 all the way through. So let's look how it
+looks now I take here I copy it down and now I have 20 times 0.1. This is 2, 30 times 0.13,
+let's look at what it changed. We have B7 times C3,
+B8 we're using this one and we stayed at C3, okay. And here here we also
+have D9 times C3 that we have exactly the same way and
+which is correct. So now again I would like to be efficient. I would like to take this formula here and
+just copy here to the right, okay I should have here 0.5 times 10. That should be 5 on on cell D7. I should have 5 here,
+I should not have 0.5. What happened this time here,
+I would like to calculate here. D3 times B7 but when I copied to the right the B7 became C7. So I'm using these cells instead
+of using you see I'm using that cell times that cell instead
+of using this original cell. So what I can do is I can
+this time block the column. So I put a dollar in front of the B here. Okay and now I press enter and now I can copy here this
+cell to that one and now I'm getting 5 because
+I'm still using B7 here. Okay and I'm using D3 here,
+so that's what I want. So now the beauty of that is why
+I write the formula only once. Okay, my formula here and
+I copy it on the anti range and you get let's take the corner
+here 30 times 0.5. That should be 15 and that's what
+we are getting here will be B9. So the B has adjusted here in the role but it has not adjusted when I moved here. We were already at D9 here
+when I was changing column and the D now is blocked here for the row that
+has been adjusted with the column here. So here we could calculate or total
+footprint we do the sum of these two or we could say one or the other but
+the some been able to do many to so many cells and we get 6, 12, 18, here. That was when I was blocking only
+one of the row or one of the column. But what about if I want let's go here and now I would like to go and
+go instead of per day. I would like to do a per
+year footprint that we have here and this per year footprint. I would in fact avoid
+recalculating everything but directly take my results per day and
+multiply it by a conversion factor in day per year and
+notice that I put a separate cell or that I didn't write 365.25 in the cell. This is not good practice because if for
+example you change to 365 or 365.25 you want to do it and change
+a single cell and everything is adapted. So never put a number in a formula,
+never say this is equal to the carbon footprint per year
+is a carbon footprint per day. Never do that C7 times 325 for
+example 365. Okay and then you don't
+realize that perhaps this time you do 365 the next time the 365.25. So no, don't put here a number often
+you will don't remember what is this number here is easy but
+it could be more complicated. You create a conversion factor and
+you multiply by that. So here C7 times C11 we take that. Now if I want to copy
+it on the entire range, I would like as I'm getting lazy or
+efficient. I would like to always keep these 365.25
+when I moved down or when I move right. So in that case I will
+put the dollar in front of both the column and the role number and now I have blocked myself C11, okay. And I can copy that here,
+copy that here, okay. And here I can see 10 times 365.25 this is 3652 .5. And you see that we're still using
+the same fixed factor here 365. So again, I was only writing
+the formula in a single cell and could copy it all the way through here.

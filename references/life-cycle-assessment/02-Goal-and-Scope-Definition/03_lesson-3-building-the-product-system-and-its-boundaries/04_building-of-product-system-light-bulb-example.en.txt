@@ -1,0 +1,127 @@
+How to build your process tree. When it's not in a database,
+you don't find it in the database. You need to do it by yourself. How can we do it ourselves? Let's do that for
+our previous example here. Our incandescent
+light bulb that we have been using for defining the product function. And the beauty here is that we use
+the same example and we can build and take advantage of what we have already
+done for building our product system. So learning objective build the product
+system and process tree for a product where we don't
+have data from databases and designed specifically the process
+tree for our incandescent light bulb system, determining also as
+we saw with the aluminum liquid. But this time for the light bulb, the amount of each process
+per functional unit. Okay, just a reminder. We start of course from
+the functional units that we always at the center of our problem we take the tier
+one or the reference flow which are here, which we have to purchase here or
+the disposal phase and we will go up if we are in the database
+we can stop if not we will move up and follow the upstream and
+downstream processes unless until we can design the process
+three step number three. And for each of amounts we want for
+"y" functional unit produce. We want to define that. We have X here for
+example kilogram as a certain material per functional unit that we want to
+fill in each of these boxes. Okay, so let's now apply that and apply that to our light bulb example. We can as we said take advantage. And we have defined our functional
+unit as the 800 lumen for a duration of 5000 hours. So I create a process which is
+corresponding to the use phase of my service or product. And I will now look what
+were the reference flow? That was too, we had five in Kennison bulbs because over
+the bulb was lasting about 1000 hours. So we did five of them and
+300 kilowatt hour per functional unit. So we put that if I look at my
+unit process it has five bulbs and 300 kilowatt hour. And we start designing the process tree
+for this example that we have here. So my functional unit,
+this is my functional unit and I need my electricity and
+my five incandescent bulbs. So at each stage we say we stop
+if the process in the database because we are either lazy or
+efficient people. And I said you are in much better
+position than where we were 30 years ago when when LC was
+redeveloped because we have a lot of processes electricity is that in
+a database that's really basic and any database will have
+in fact electricity. So here I can stop. I said I don't need to go upstream because
+some people have done the work for me and I can use further than
+that an aggregated process. Okay that that will use that my bulb Will I find some bulb in the database. Very likely not at this stage. It's too detailed. We don't have 100,000 of products
+that we are using in our economy and you have around you. So in that case we need now to
+get first hand data for that. How do you do? Okay, to face first hand data you
+take your bulb I recommend to put it in a plastic, okay? You break it and
+then in plastic not to enjoy yourself. And then you separate the glass from. Usually this is an aluminum,
+the bottom here and the tungsten filament that that you
+have in there that you want to separate. You take them,
+you take them on your kitchen scale. The tungsten stand might be hard to weigh. But the other element you
+can you can do that series. That's what I did. Okay, I broke my light bulb. And the total weight of the bulb. It was a 60 watt bulb was 35.7 g for
+one incandescent bulb at retail. And it was separated in 20 g glass, 15 g aluminum and
+the 0.7 g tungsten. And there it's more difficult to get. You cannot measure on your
+balance to manufacture that. We found some literature sources which
+gave us 0.38 MJ primary energy. I got directly the primary
+energy here. We waited The weight of the packaging. You also need to do that for
+many object which come in the packaging. So I had here 10 gram
+packaging paper per bulb. And we assume the distances
+basically from china. You need some track in china probably
+to to bring it to a harbor and then you have 10,000 kilometer
+transoceanic and some more track at home. So total we assume here
+3200 kilometer track. And we will see if it matters if it
+matters, we might be more accurate and if you like make an educated guess
+as here but try to get data. Where are the plant manufacturing is
+a region in china which is doing that. Where do I assume my consumption
+there We have these data. So now this is time to building
+your tier two processes which means you create a box for
+each of these different process. A box for glass box for
+aluminum box for tungsten box for your packaging and so on.
+you structure it in a way which really represent the industrial process for
+manufacturing them. So we'll have our bulb here which
+are manufactured here upstream. You will have the glass,
+the aluminum, all the elements. And then you have the paper
+packaging which come to protect your bulb. These two are transported
+together by boat truck and arrive to your product function. In addition you will have at the end
+you bulb to landfill which we had here. We must not forget that one bulb and
+10 g packaging to landfill. We must also dispose of it at its
+ends at at the end of its life. Good.
+So we have designed the process tree. Great step three done now numbers. We don't present me
+a process tree like that. Which I don't know how many
+kilogram of glass perfection. We need how many how much
+energy here professionally or how much paper packaging we need. Don't forget to do step four
+which is designing that. So how would we do that? We had five incandescent bulb if you
+remember 20 gram glass and 15 g aluminum. So 20 g glass. Okay, per bulb time five bulbs per functional units. This is 100 g glass per functional unit. So we can put here 100 g five
+times 15 g for aluminum. This is 75 g five times 0.7 g for
+tank stand. This is here 3.5 g And
+we can continue with a different five times
+10 g of paper packaging. I will have 50 g here so
+we can start filling it here with our operation
+that I rewrote here and we'll get the amount
+here with all the boxes are now filled. And question, can we stop here? Do we find glass in database? Yes, probably we find aluminum. Yes, probaby. Tungsten might be harder to find. But you need to find data. So you you need to do perhaps
+literature search for that one and five times 0.38 MJ
+primary this is 1.9 mega jewel. Primary energy. So we are full here
+the landfill is the same mass. And when you sum all the mass
+you see that we have 229 g or 0.229 kg transported. Because for transportation we need to
+transport both the bulbs, the five bulbs. Okay plus the paper packaging. So this is including here the packaging,
+the glass, the aluminum and
+my tungsten in my story. So I have this 229. How do I get the transportation
+flow per functional unit and what will be the unit? It will be kilo transported over
+a kilometer not per kilometer. Remember. So it will be over. It's like the during its time kilometers. So you will have kilo transported
+time distances to get your total. So let's calculate it now for
+transportation, let's do the truck Transportation 3200 km. Okay, time the way that we
+are transporting that we had here time. 0.229 kg transported per functional unit. Okay, this will be equal to what to 731 kg time km per functional unit. If you look at the unit,
+kilometer time kilo per functional unit. This is what you get and
+you can fill in here. The missing 7 31 kilometer kilo
+time kilometer that we have. Okay we had here
+the 10,000 kilometer time. This .229 or .2285. If we are more accurate, this is
+what this will be 10,000 times 0.2. This is .2285 kg time kilometer for the oceanic freight. And sometimes very often people
+are interested to calculate that not in kilo kilometer, but
+in metric ton kilometer. And a metric ton is 1000 kg. So you divide that by 1000. So it's 2.285 ton kilometer that you will usually very often
+find in the database for these different processes. Okay, so now let's let's
+look what we have obtained. We have our process tree. Every boxes are full. All these different processes
+can be find in a database. Perhaps we'll have to group for
+the landfill. It could be a municipal waste for
+some if we don't have a specific date that we can rely on so we will we will group
+them back but we have the total mass. So we are good to fly for
+then going to the inventory side and calculate our inventory in the next phase. So let's summarize what we have. This process tree is a very elegant
+way to visualize the product system. It follows the industrial processes. It's really a nice way to do that and
+I really recommend that any LC you do, you create one of these nice
+process tree even to publish it is really a nice way
+to represent our problem. The intermediary flow enable us
+to little mine the amount of each process per functional unit. And this is what you have in your box. Your process tree is not just glass,
+it's how much glass for the functional unit you have chosen. And I remind you you you could have chosen
+an obituary number of function unit. We define 5000 We could
+have said 1000 hours. That would just divide the things
+by by a factor of five. In that case this will serve as the basis
+then to determine our inventory, life cycle, inventory of
+resource extraction and emission. My elementary yellow flows. Sorry green flows that I have here. And the question remaining for
+the gold definition is where do we stop? Okay because we don't
+have an infinite time. We need to limit the time we spend and
+without losing too much inaccuracy. So what are the good rule for defining what is the ultimate system
+boundary that we will consider? And how many processes we
+will have to consider. This is the subject of our next lecture

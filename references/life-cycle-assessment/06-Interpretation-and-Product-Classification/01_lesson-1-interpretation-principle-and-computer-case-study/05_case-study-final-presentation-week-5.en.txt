@@ -1,0 +1,161 @@
+Let us look together at guidelines for
+performing the Phase 2 of your case study leading to the final
+presentation and using SimaPro software for calculating your impact assessment
+and interpretation. The learning objective
+here is for Phase 2, to use the SimaPro
+software focusing on impact assessment and
+interpretation of your results. In addition to your
+presentation and accounting for the command received after
+your final presentation, you want to write a two-pages concise and rich abstract
+with main results. Here I would like to provide you an overview of the
+different instructions, template, example, deliverables, and evaluation criteria
+for case study. Phase 2. We focus on Phase 2 as the use of the SimaPro
+software leading to final presentation
+and to a summary of two pages which summarize your
+main methods and results. What are the
+objectives of Phase 2? Compare and interpret the comprehensive
+environmental impacts, this time not just
+CO_2 energy balance, but acidification,
+eutrophication, all the different impact of your product alternatives
+using an LCA software, and you can also perform
+some sensitivity study here. You want to collect the data for the selected variables from
+Phase 1 to improve what you had done in screening
+and you want to provide recommendation
+for product improvements. What are the steps and
+deliverable of Phase 2? After a first run and implementing results
+in new software, we'll take a first process T for CO_2 energy and GA1 results and compare it with the
+energy and CO_2 from GA1 results from your
+previous hand calculation. We want to compare software results with
+hand calculation. This is your group
+activity 2a deliverable. You then perform the inventory
+and impact assessment, accounting for the commands
+that we will make after that you have presented here
+your first process tree, and that will lead
+for the slides for your final case
+study presentation posted on the day before
+your presentation for it. The final slide will include correction from the
+oral presentation that you will have received. In GA4, you have these final two-pages projects abstract including two figures. Let's go a bit more in
+detail what it looks like. For group activity 2a, the process tree and
+inventory, basically, you implement your scenario in SimaPro following the guidelines and the experience we got with hands trying
+example together, performing it together
+this time on your own you will do it and implement
+your scenario. Be careful to really
+design your process, not everything per
+functional units all the time and have one
+assembly with everything. You want to create
+components like we created for the towel in the
+hands drying example, we create one towel which include the transport
+of that towel, the paper used for that towel, and even the disposal
+for that towel. Then in the assembly
+you will say, I'm using 1.5 towel
+per functional unit. The interest of that is if you can easily perform a
+sensitivity study, if I'm using one or two
+towel or three towels, what are the changes, and you can very easily run
+this scenario in that way. You can also verify things in an easy way if you do
+it per components. We want here now to display the fossil CO_2 and the
+non-renewable primary energy. Take it from impact 2002,
+for example, Tracy, you cannot really
+compare with the CO_2 with its surplus energy, which doesn't account for
+the main energy consumption, so you take it in Impact 2002 and you perform the
+network and process tree, and you compare your
+process tree with your hand and excel calculation
+that you made earlier, explain any
+substantial difference more than, for example, 30 percent because that's probably is why you
+have a problem. We have posted here
+a template which enable you to make that and
+post your different points. This is a good example with the wall paint compared
+to a wallpaper. Here for the wall paint,
+for each scenario, you want to look at
+the process tree, identifying the main
+contributors here that we have and you compare
+then the amount of CO_2 you have here with the
+amount you had calculated by hand calculation
+and you should be relatively close
+normally within 10, 20, maximum 30 percent, but if 30 percent, you
+start to need to explain. By the way, you
+could still detail in SimaPro that you have about 61 percent
+for the Ti0_2 here, the titanium dioxide here
+20.5 percent and AU steel, which is the last five
+percent that you have here. Do that for each
+of the scenario. Then that will constitute
+your first GA2a deliverable. In GA2b, you want
+then to present your normalized damage
+per impact category. Click on the top here you
+have a small box to call, which is per impact category that you can click to get not a total human
+health impacts, but the different impacts for all the human health category if you take here
+for impact 2002, and all the ecosystem
+quality category, the global warming and the energy category
+that you have here. You can also perform in there a sensitivity study looking here at an alternative
+wallpaper and an alternative wall
+paint that we have here and looking what
+are the improvement if I have a product improvement
+and you see here you have a 30 percent
+product improvement. The beauty of keeping that
+bearing per category is, for example, you see
+ionizing radiation behaves slightly
+differently from the other. Some of the results are inverse but we see here that this is
+not really relevant here, what is really relevant is
+fine particulate matter, a bit the carcinogen and
+basically global warming and non-renewable energy are
+re-dominant in this case. Evaluation criteria for
+your final presentation, we will look at the
+quality of check between your SimaPro inventory and
+your hand calculation. The originality and the interest of impact assessment results, the appropriate analysis and depths of results
+interpretation, and the quality of
+your conclusion and especially recommendation
+to the user that what you've done
+is directly useful. We value the amount
+of work you make and the originality if
+you take self-initiative, not just what we told you
+to do or classical case, but explore a bit,
+try new things. This is how we learn and we arrive to
+interesting results. We look at the quality of your presentation and ability to answer question to arrive
+to an overall rate. The grade themselves will
+be put at the end of GA3b. Once you have resubmitted your presentation with
+the corrected slides, then we will
+evaluate that in one go the other intermediate
+representations so that you get feedback as we progress
+and you can correct yourself and arrive to a really
+good final presentation. Then after the presentation, accounting also for the
+comments you have received, you write a two-page summary and we will provide you a
+template for that which is in fact coming
+from the template to propose abstract for the
+C Tech Europe Conference, which is a nice, instead
+of just being 400 words, it's two pages
+template where you can define your introduction
+and goal definition, method data inventory here. Don't tell so much what you
+did but how you did it. Say, we used this and
+this two to obtain this, or we applied this
+model to do that, not just that we did that. We want to understand
+well how you did it. Then for the results on impact assessment and
+discussion interpretation, we want here all main result. Again, don't say we
+obtained CO_2 balance. You give the results
+of your CO_2 balance, the results of your network. For that, we want you
+to paste two figures and have some legends and
+labeled clearly displayed. X axis must have
+units and clearly indicated on these two figures and choose the one
+which are risks, which summarizes, in a sense, all UK studying in
+a compact way but informative way and
+be result-oriented. Present what is original, what you bring you. Here, finally, have also short recommendation
+of what you say plus a few references with your main sources that you use. Evaluation criteria for
+the final abstract. The method is clearly
+and shortly summarized, including the main data sources. Results are correct. We want no mistake, especially because
+you got feedback so you should be good now, well-described and a good
+interpretation of figures. It's not just putting a figure. You need to get out the
+information or the figure, interpret what are
+the main influence, what is interesting
+in this figure, in a few bullet points
+that you can have. We value the adequate choices
+of the two main figure, that they are really the best
+results and that you have useful recommendation with future work and
+short limitation. Again, amount of work, originality and
+self-initiative and the quality of the writing. We want it concise and
+rich informative test in a professional layout. Finally, we'll arrive
+to an overall rating. To help you to perform all this, we have a few complimentary
+file for GA2a. The process tree, you have a process
+tree template file. We provide you an example of the final presentation on this
+wallpaper and wall paint, which was well-designed
+project here. You have two pages abstract template which is empty
+and you can fill it in, and you have an abstract
+example, again, which was from an
+interesting project that you can look at.

@@ -1,0 +1,139 @@
+How to best learn a new approach, it's to practice and learn
+by yourself, hands-on. This is exactly the goal and the importance of the
+case study in our class. The learning objectives for this short presentation and the case study in general is to practice LCA via a
+group case study and you will select it. You will perform and present
+the results of phase one, which focus on the
+goal definition and the hand calculation of
+energy and CO2 balance. You will account for the
+comments received after your representation to improve your slides and deliverable. This video here is providing you an overview of the
+different instruction, template, example, and evaluation criteria for these phase
+one of your case study. Phase one focuses on
+a screening analysis, and the intermediary lead us to the intermediary presentation. The aim of the case
+study is to compare the environmental impact of two or more products or
+service alternatives. We want to identify most
+influential parameters, possible improvement
+and the selection will be done on proposal
+of participants. The first phase is on the goal definition and the hand calculation
+of energy and CO2. First, you define your
+goal and scope, function, functional unit, reference flow, process tree and system boundary. This leads you to fill in
+and submit the function, function unit and
+process tree template, which is the first part of the template I will
+present in a minutes. Then you will perform
+the energy and CO2 balance and identify the main processes
+contributing to it. You will then identify one important and very
+sensitive parameter for a sensitive study, plus one parameter to
+obtain for firsthand data. That will enable you to prepare the slides and prepare
+the presentation slide, which is your deliverable GA1b. Finally, after presentation, you have your group activity 1c, which is upload updated slides which are accounting
+for the received comments. Let's look very shortly how does the template or what is
+needed in your presentation? Needed objective, this is shortly giving the
+context and needs, the objective of your study and the scenario you want to compare. Be short. I mean, you want in one slide the
+case of the description, objective and rational give
+just enough information on introduction so that we
+understand why you do that, and what you're going to do. Then you define the function. This is important because
+we want to be sure your functional unit
+correspond well to the main function of the
+problem and possible define also secondary
+function and performance, which can be then scenarios
+specific in that case. You move them to the
+functional unit, reference flow and key
+environmental parameter. The key really here is to fix your functional unit and select a number of functional unit
+that you are selecting. For example, for the light bulb, you select 800 lumen
+provided during 5,000 hours. It could be 1,000 hours, it could be 10,000 hours. This is your choice.
+It's arbitrary the number of functions
+you need to choose. But you choose one and then you provide for each
+reference flow, not only electricity, but how many kilowatt-hour
+for a functional unit, which has a number you put here. How many light bulbs do you need per functional unit, etc. The key environmental
+parameter finally, are parameters which are influencing the
+amount you put here, which are directly linked then
+to your impact afterwards, and the parameter which
+are affecting that. Like efficiency, number of
+use is what you put here. Do provide for each
+reference flow, the quantity used
+corresponding to the selected functional unit and the selected amount of
+functional unit that you have. Also provide one slide with
+what are the main hypothesis and what data source you are using for your main processes. Where do you get the data and which transport
+distance you took, or number of use? For example, for a bag
+if it's reused or not, and have these main hypothesis clearly stated in this slide. Then we want to design
+the process tree. We see in class, what is the process to do that moving upstream
+for each tier what we need here and downstream to include also the disposal
+that we must not forget. This is an example here for light bulb and in
+each of the box, you want the amount of glass
+here per functional unit, which is here now in
+our use phase box. The illumination of 800
+lumen during 5,000 hour. For each of the box here we need 75 gram aluminum per
+functional unit. And we need a transportation
+here, for example, a 731 kilometer
+per functionality. So each of your box must have the amount proportional
+unit that you are needing, and we stop when
+we reach processes available in databases like aluminum that we
+found in databases. You don't need to go to
+the further because we can use aggregated data
+in your database. You do that for the two
+scenario and you can submit your slides here as
+group activity 1A, deliverable and you will get a feedback on this
+first functional unit. Once you get your feedback, you can move to the
+second part of phase one, which is performing the
+energy and CO_2 balance, and you do that for
+each scenario here. For example, in scenario A, I've taken an example of wall painting here to give
+you a template that you have received or the example that you have received
+and to do that, please adopt the Excel
+template that I've provided in your exercise. In activity, three-fifths,
+three on the energy and CO_2 balance for the
+hands drying example. What you want here
+is to identify, what are the main processes which contribute, for example, in high fashion to the
+total of my energy here and of my CO_2 that we
+have here, for example, okay? You want also to check the
+RAM CO_2 per Mega Joule. If you get the too high number, too low number, don't
+let it through. Correct it by yourselves and
+find why I have something which is unusual and look
+for it until you find it. This is the same for scenario B. Once you've done that, you can present the
+two scenario as a stack bar a graph is so much easier to read than a table. Grouping things in, for example, the processing or the material, or whatever you
+think is relevant. But presenting our two scenario as these two stack bar here, and you want to have both the CO_2 equivalent and the energy of a
+functional units, knowing that they should
+be in most cases alike. If they're not alike, then you might have a problem
+and you want to check that. Then you identify
+one parameter which affects your results and the
+ranking between scenario, and basically which is uncertain, where you don't know
+exactly these parameters. So you could say,
+okay, for example, the lifetime of my
+pain could vary and the lifetime of my wallpaper
+could vary quite a bit. So depending if it will last
+30 years or just 10 years. My total energy use will here, for a given time which
+has been chosen, will be reduced in that case. You have alternatively,
+as we'll see in class, the possibility to do not hear the mega joule per
+functional unit, but the cumulative mega joules as a function
+of spending time. This is not really adequate
+for this case study, but could be useful for others. Finally, you define one parameter you will collect and give some indication if it will
+be perhaps force with a small survey on the number of reviews
+people do for banks, for example, could do
+that with your friend or your class or then could be some data you look
+in the literature in a relatively systematic way, or possibly industry contact, but this is a bit more
+difficult for our class. Finally, don't forget
+the slide for conclusion and presenting the next
+step of the study. The main point you
+need to sort out from what you have identify
+at this first screening. The evaluation criteria
+we've put here. I always like to
+distribute that in advance rank and you will get like an evaluation
+one-to-five. That's how we will look at your intermediary
+presentation, and we look at the
+appropriate background, the functional unit
+and the reference. You are well-defined. Your process tree has intermediary flow in each of
+the box per functional unit, your energy and CO_2 balance is consistent with the process tree. You have a nice sensitive
+study of energy on the relevant parameter with a clear conclusion. Next step. Professionalism in
+presenting and explaining the subject and the ability
+to answer questions, compliment what we have here. We'll only put the grade in fact, at the end once you have
+re-submitted in GA 1c, your presentation
+slide, accounting for the comments that we will
+make after your presentation. To finish with some complimentary instruction
+material that you have, this file here is detailing
+what I've presented to you shortly here gives you
+a bit more instruction. Also good practice
+for presenting. We have the template that is also included
+in this presentation, but in a easier way to use that you can use to follow your
+intermediate representation. An example sample
+from a previous year. What was done by a group
+who get good grade, who did a really good
+job in that case. Your activity per 3.3.3 Excel file to calculate your CO_2
+balance and to finish one, the file from 3.3.2 where you get in fact
+a co-invent data both for energy and CO_2 that you can put in that Excel file.

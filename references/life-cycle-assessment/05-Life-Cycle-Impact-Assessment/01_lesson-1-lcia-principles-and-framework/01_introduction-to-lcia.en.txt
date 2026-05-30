@@ -1,0 +1,83 @@
+Welcome back. Today we're going to have an introduction
+to life cycle impact assessment. Our learning objectives for today
+are going to be to connect the life cycle inventory to its impacts by defining this
+life cycle impact assessment phase of LCA. And in doing so we're going to think about the complex challenges in
+addressing some of these impacts. So in LCA, we work hard to get a detailed
+list of the emissions and resources. And then we want to think about, how do we connect those to the impacts
+on human and environmental health? So in terms of our sustainable development
+goal categories, where we have for example responsible consumption and production or
+sustainable cities and communities. We want to figure out how does that
+impact these other sustainable development goal categories including
+good health and well being. Clean water and sanitation,
+climate action, life below water and life on land. This is the third and
+last phase of a life cycle assessment. So we started with a goal and scope
+definition, defining functional units system boundaries,
+figuring out the things we're comparing. Then we moved on to
+the inventory of extractions and emissions associated with each scenario. What's the energy used? What's the pollution that's
+coming into our air and water? And now we move to that last step,
+what are the impacts of that inventory? And of course throughout a key
+point is interpretation. The four categories of environmental
+damage or impact that we focus on here are generally global impacts
+that affect the entire world. Human health impacts which
+affect humans in general. Ecosystem and biodiversity impact which
+affect land, water, soil and species. And then resource use, which is thinking
+about the water and land that's used and other resources, minerals as well. So one way to understand these is to
+categorize some common environmental health impacts into these categories. So when we're talking about air pollution, we're usually talking about
+human health impact categories. When we're thinking about climate change,
+that's a global impact that can lead to increased temperatures and
+extreme weather around the world. When we're looking at
+species becoming extinct, that would fall in
+the biodiversity category. When we talk about polluted water
+that's related to resource use, but it also is connected to the human health
+category of drinking water and food and of course to ecosystem health. And when we look at things like ocean
+acidification and sea level rise that can result from climate change, those are also
+impacts that happen around the world. And finally whenever we're focusing
+on things like use of freshwater, that's a resource use category
+that we're focusing on. One thing in life cycle impact assessment
+is to think about the balance of the impacts that helps us think about the
+balance between using the environment for what humans need versus
+misusing the environment. And one example of this would be in
+the US Dust Bowl in the 1930s and what happened there was after a period in
+the twenties of relatively good rainfall. A lot of farmers in the Great Plains
+decided to farm more intensively use deep
+plowing techniques and new New developments in machinery
+to farm relatively intensively. And so what that did is remove
+the native grasses that normally trapped the soil during times
+of drought and high winds. And so sure enough in 1930, when a drought
+did come, the soil was no longer anchored. And that honor unanchored
+soil turned into dust and then the high winds that came blew,
+that dust high into the air and blackened the sky and
+reached as far as New York City. This was happening throughout
+the 1930s and unfortunately, it only intensified the economic impact
+of the Great Depression that was already hitting the United States. And so it ended up leaving more
+than 500,000 Americans homeless and many who died of dust pneumonia or
+malnutrition. And so with things like life
+cycle impact assessment, we want to think about the potential
+impacts of what we're doing to our environment and how it might impact
+people further on and all around. So, in considering impacts, we're facing new challenges
+since the dust wall happened. New challenges in the magnitude of
+these impacts because of technology and economic development,
+we've accelerated and amplified the magnitude of
+our footprint and impacts. And this is happening in multiple ways. It's happening in our spatial scale
+where globalization distances impacts from the consumer,
+from where those impacts occur. So when I consume something, I may not see any direct feedback
+of the impact it's having. This also is challenging because with
+globalization we require a global response and that makes governance
+a challenge when trying to limit anything on a global scale. Another new challenge we're facing
+is with the temporal scale. So our current actions may only have
+visible impacts decades from now and so that makes it very hard to help
+populations limit their actions based on future impacts that they
+can't yet see or don't know. And this is all related to more
+complex cause-effect chains. These are not always visible and so it's
+crucial to use science and technology for diagnostics and to prevent irreversible
+impacts that may happen far away in both time and space but
+that can still critically impact others. Because as a reminder from before
+we do not inherit the earth from our ancestors,
+we borrow it from our children. So a summary of this video is the life
+cycle impact assessment phase of LCA. Is how we connect that life cycle
+inventory of the scenarios we're comparing to the ultimate impacts on
+environmental and human health. That's the ultimate
+question we want to answer. And because of global interconnectedness
+and accelerating development of technology, it's increasingly
+challenging to recognize and allocate the impacts of individual and
+collective actions

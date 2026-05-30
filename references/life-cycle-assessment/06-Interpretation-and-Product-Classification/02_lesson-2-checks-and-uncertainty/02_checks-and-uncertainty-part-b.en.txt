@@ -1,0 +1,152 @@
+Now, once you've checked and you think your
+results have been robust, you would still be
+able to decide what is the uncertainty and is the significant difference
+between scenario. This is for part B. First, considering the
+different part of the LCA, here are the different
+phases of my LCA. We have different type of uncertainty for each
+of these phase. First uncertain time are the
+uncertainty on input data, and that could be into data for the elementary of
+the intermediary flows. An emission factor that we
+have on the uncertainty or some model from
+environmental parameters. For example, the
+chemical properties have also uncertainty
+in the model. Second model type, the
+model uncertainty itself. Here it's more difficult
+to assess that. You can have a model
+which are linear, but in fact the
+phenomena is non-linear. That would be a
+murderer uncertainty. You could miss some
+contribution here. We're trying also to
+account for that. Some choices are associated
+with uncertainties. For example, the choice of
+the allocation methods, the choice of your
+system boundaries, and the time horizons that you consider will also did
+a 100 years larger than a 100 years that will play a role, and the choice
+of your weighting methods. Now, variable, it's either spacial viability
+or temporal variability. This is not an uncertainty
+in the sense that if your model is accounting for regional difference in
+environmental sensitivity, for example, or in your
+characterization factor. Toxic don't have
+the same effect if they have diluted a lot or not. For example, if you
+account for that, then it's just
+viability, and you are able to reproduce that but
+if you use a simpler model, this big covenant certain. Same with temporal evaluation. Your emission factor
+can change with time. New technology can
+change with time. Which mean, if we don't
+account for that, this become an
+uncertainty and finally, we can have uncertainty associated with the
+technology use. We can have different
+technology and our data are not coming from
+the present technology of the study we using
+other as a proxy and that can create uncertainty
+we have all these type, how can we assess, address, and mitigate these
+different uncertainty? We have? That's nice,
+a series of tools. The first tool is
+the ISO standards, and the recommendation light from the life-cycle initiative. This basically first address the uncertainty due to
+choices is well-defined. How you should define
+your functional unit, how you should choose your allocation method or system boundary in
+a systematic way. You still have some freedom. You could still
+make some mistake, but it ensure basic
+consistency, and that's the role of the
+standard expert judgment. The advantage of expert
+judgment is you're going to assess and use it for
+any type of uncertainty. But it's as good as
+the experts are there. I would say, with experience, we are gaining and learning quite a bit
+about uncertainty. But on the other hand, we would like to compliment
+it with some tool. The first tool, which is also usable nearly in every
+case is sensitivity study. Make the input vary, and you
+look how much the output are very you can use that for the parameter
+uncertainty input parameters, but also you can test
+different scenarios. Here we have the
+scenario analysis, which is the variance for discrete classes from
+allocation method, and on that you can study
+more than uncertainty. In certain cases, you
+can make regression, for example, for
+bioaccumulation factor as a function of
+chemical properties, you can look at the correlation
+which were made, and get statistical uncertainty based on the measured value which
+were used for that. Nonlinear modeling
+can help reduce uncertainty because it counts
+for non-linear phenomena. Spatialized model and
+dynamic model enable to account for the spatial
+variability and therefore reduce
+uncertainty. In that case. Two methods are important
+for the parameter, the input parameter uncertainty. This is to be able to know if not a single like in
+the sensitivity study, but multiple parameter
+vary at the same time. How much is my
+output uncertainty varying with this
+input parameter? And of course, in the end, we would like to be able to compare results
+with measurements, which is the ultimate
+way to verify a model, but it's very time-consuming. The number of star
+here was representing how good is the method
+for addressing this type. It's the best and the only way really to
+stress model uncertainty, but in a system approach where we are looking at the impact
+of a functional unit, it's really hard to verify a
+per functional unit number because you cannot measure the shoe factory that you
+have a single shoe going out. You need to do it for
+the overall production. There you might perhaps
+have direct measurements. Functional unit being a
+construct of the mind, we have to be very
+selective to choose cases where some time we can also
+compare with measurements. Let's look at some
+of these approaches. I start with the
+expert judgment, and give you my 30
+years expertise in LCA. What I've seen being the minimum differences between two different scenario to be considered as
+significantly different. Flows like energy and CO_2, you need at least a 10
+percent difference. There are flows where
+data are relatively good, so small difference
+is important. But if you have a two
+percent difference, you can consider them as equal. Acidification, eutrophication,
+fine particulate at least 30 to I would say 30-50 percent
+difference for the PM. Because uncertainty
+on the emission here is more substantial. For toxicity results. Here the uncertainty
+is on the inventory, but also on the
+characterization factor and the impact side. Here, at least you need at least a factor
+of ten difference. Or if it's very different
+substances and type of impact, a factor 100 to be
+considered as significant. The same for damage
+oriented results if you compare across
+different impact category, fine particulate
+with global warming, with human toxicity,
+at least a factor of 10 or a 100 different to have
+a significant difference. Question. Is that
+relevant still, two ways to use factors and characterization
+factor which have so much uncertainty? The answer, you have to realize that toxicity results between saccharine and dioxane has 12 orders of
+magnitude variation. Here we are speaking to one
+or two orders of magnitude. 10-100 is discriminant compare to a million times a million. It's still useful. But look at these
+results in log scale, either for talks here or when
+you compare damage results. Sensitivity analysis
+and scenario analysis. Sensitivity analysis enabled you to test the robustness of data to the data input
+and an assumption. The idea is, you vary the input, you look how the output
+vary. Two options. First is you vary each input parameter
+by 10 percent and you see if the output vary also by 10 percent, or very little. Problem here you're not
+considering that some of these parameters here are
+more uncertain than other. Not all parameter are equal. It's better in fact, to vary the input
+parameter between the upper and the lower 95
+percent confidence limits. You estimate for a
+given parameter. This parameter vary
+perhaps by 10 percent, but these other parameter
+vary by 100 percent, a factor two twice higher, twice lower, for example. You make this
+variation according to the given parameter,
+and you look at the variation in
+final impact estimates. The scenario analysis is a
+sensitivity analysis but with discrete changes like change the method of allocation
+that you are comparing. For example, instead
+of substitution, you use affects
+financial allocation. You'd look how this
+affects the final results, how the results are
+robust for this. Now, sensitivity
+analysis usually study one parameter at a time. Now, you can already put sense. This is where you vary different parameter in
+fractural experimental plan, for example, where
+you take extreme and check all the extreme
+from a square. Or then you can perform really
+uncertainty propagation. Here you can use the cardinal Monte Carlo
+random parameter selection. You do that for the input. You get a results on the output and you repeat
+that median of time, and you get a distribution
+on your output there. Or they are simpler
+way to do that, which is a Taylor series
+expansion that I will demonstrate through
+an example later on. Finally, empirical
+evaluation is really the only way I say
+to model validity, but not that easy
+to apply for LCA.

@@ -1,0 +1,340 @@
+1
+00:00:11,497 --> 00:00:16,591
+So we've learned how to normalize that and
+
+2
+00:00:16,591 --> 00:00:21,543
+we can now apply that
+once we clarified our
+
+3
+00:00:21,543 --> 00:00:26,779
+calculation to our different scenarios and
+
+4
+00:00:26,779 --> 00:00:32,315
+first I keep my different
+area of protection.
+
+5
+00:00:32,315 --> 00:00:39,119
+Here we have human health
+okay from here until here and
+
+6
+00:00:39,119 --> 00:00:44,562
+then here we have
+the ecosystem quality and
+
+7
+00:00:44,562 --> 00:00:51,821
+we finalize here with the natural
+resources with express
+
+8
+00:00:51,821 --> 00:00:56,827
+his in primary energy so all the years.
+
+9
+00:00:56,827 --> 00:01:01,989
+So when we look at the scenarios,
+let's start to put them a bit
+
+10
+00:01:01,989 --> 00:01:07,054
+in perspective we find back
+between scenario that the damage
+
+11
+00:01:07,054 --> 00:01:12,241
+characterization which is very
+important to perform first.
+
+12
+00:01:12,241 --> 00:01:16,761
+Because otherwise we would
+have very similar results
+
+13
+00:01:16,761 --> 00:01:20,679
+between these different
+impact categories so
+
+14
+00:01:20,679 --> 00:01:25,703
+that the importance of the damage
+characterization is that
+
+15
+00:01:25,703 --> 00:01:30,737
+we can differentiate this
+impact category from the other.
+
+16
+00:01:30,737 --> 00:01:33,647
+And now from the normalized value we
+
+17
+00:01:33,647 --> 00:01:37,917
+see that the way the normalization
+factor are done.
+
+18
+00:01:37,917 --> 00:01:42,887
+We get in fact slightly higher
+proportionally impact for
+
+19
+00:01:42,887 --> 00:01:46,303
+global warming on human health than for
+
+20
+00:01:46,303 --> 00:01:51,911
+global warming on ecosystem
+quality which has other category.
+
+21
+00:01:51,911 --> 00:01:58,675
+Which are contributing substantially
+not so much from for a front end panel,
+
+22
+00:01:58,675 --> 00:02:05,250
+but from agriculture in a sense,
+not that surprising in this case.
+
+23
+00:02:05,250 --> 00:02:13,281
+Okay so now question is what about
+summing all this impact after all.
+
+24
+00:02:13,281 --> 00:02:17,908
+Now we have the same unit
+previously we had dolly and
+
+25
+00:02:17,908 --> 00:02:22,230
+PDF square meter yard and
+dollar or mega jewel.
+
+26
+00:02:22,230 --> 00:02:25,011
+So now we have the same units.
+
+27
+00:02:25,011 --> 00:02:26,311
+Can we submit it?
+
+28
+00:02:29,090 --> 00:02:34,925
+The answer is having the same
+unit is a necessary condition
+
+29
+00:02:34,925 --> 00:02:41,489
+to some different quantity up,
+but not a sufficient condition.
+
+30
+00:02:41,489 --> 00:02:49,464
+And in fact a priori you should keep the
+human health, the ecosystem quality and
+
+31
+00:02:49,464 --> 00:02:55,320
+the natural resources has
+three different impact score.
+
+32
+00:02:55,320 --> 00:02:58,985
+Okay, and we'll discuss on the next slide,
+
+33
+00:02:58,985 --> 00:03:04,690
+what do we imply if we start summing
+them up across area of protection?
+
+34
+00:03:04,690 --> 00:03:09,679
+Okay, we see also that we
+have the results after 100
+
+35
+00:03:09,679 --> 00:03:14,347
+years which are still
+substantial adding up here.
+
+36
+00:03:14,347 --> 00:03:18,250
+So if we now we group within human health,
+
+37
+00:03:18,250 --> 00:03:23,378
+you see that about half of
+the impact in human health and
+
+38
+00:03:23,378 --> 00:03:27,750
+a bit more than half
+are due to global warming.
+
+39
+00:03:27,750 --> 00:03:32,221
+That's what we have here like that,
+
+40
+00:03:32,221 --> 00:03:38,370
+second read the after 100 years matter.
+
+41
+00:03:38,370 --> 00:03:42,590
+Okay, this is after 100 years.
+
+42
+00:03:42,590 --> 00:03:49,840
+That's a factor about 1.5 compared
+to the impact over the first years.
+
+43
+00:03:49,840 --> 00:03:54,238
+And we find really in
+the three area of protection,
+
+44
+00:03:54,238 --> 00:03:57,616
+the same ranking nearly where steel and
+
+45
+00:03:57,616 --> 00:04:02,427
+recycled aluminum are high and
+low and the composite and
+
+46
+00:04:02,427 --> 00:04:07,520
+the aluminum are pretty
+intermediary in the middle.
+
+47
+00:04:07,520 --> 00:04:12,350
+So if you would start to sum
+up these different ratios,
+
+48
+00:04:12,350 --> 00:04:16,655
+you would assume in fact
+that the total effect for
+
+49
+00:04:16,655 --> 00:04:22,325
+human health would be equivalent
+to the total effect on equity,
+
+50
+00:04:22,325 --> 00:04:24,543
+ecosystems, quality.
+
+51
+00:04:24,543 --> 00:04:31,920
+Which be equivalent to the total effect on
+energy and resources or natural resources.
+
+52
+00:04:31,920 --> 00:04:33,280
+Is that true?
+
+53
+00:04:33,280 --> 00:04:38,140
+Nothing tell us that the present
+effect is equivalent.
+
+54
+00:04:38,140 --> 00:04:40,941
+Okay, so to do better.
+
+55
+00:04:40,941 --> 00:04:44,961
+That's where it's interesting
+to move to the next step,
+
+56
+00:04:44,961 --> 00:04:50,141
+which will be in the next section of
+this presentation which is on waiting.
+
+57
+00:04:50,141 --> 00:04:55,329
+So summary for the normalization
+normalization compared the impact score.
+
+58
+00:04:55,329 --> 00:04:59,530
+Perfection we need to the total
+world impact per inhabitant of
+
+59
+00:04:59,530 --> 00:05:02,131
+the corresponding impact category.
+
+60
+00:05:02,131 --> 00:05:06,322
+It's really putting
+the score of my scenario in
+
+61
+00:05:06,322 --> 00:05:10,440
+perspective to our overall activity.
+
+62
+00:05:10,440 --> 00:05:16,450
+Normalized score can only be summed
+up within each area of protection.
+
+63
+00:05:16,450 --> 00:05:21,880
+They cannot be some up across area
+of protection unless you accept or
+
+64
+00:05:21,880 --> 00:05:27,121
+you assume that the total world
+impact are considered equivalent
+
+65
+00:05:27,121 --> 00:05:32,473
+between the different area of
+protection or damaged categories.
+
+66
+00:05:32,473 --> 00:05:37,452
+The Life Cycle Initiative developed
+default consistent normalization
+
+67
+00:05:37,452 --> 00:05:40,071
+factor at midpoint and damage level.
+
+68
+00:05:40,071 --> 00:05:45,167
+But I highly recommend that we
+apply it at damage level here and
+
+69
+00:05:45,167 --> 00:05:49,381
+it's recommended that
+therefore to first perform
+
+70
+00:05:49,381 --> 00:05:54,100
+the midpoint to damage
+assessment before normalizing.
+
+71
+00:05:54,100 --> 00:05:59,569
+And we've seen that in our example
+because that will in a sense get
+
+72
+00:05:59,569 --> 00:06:06,140
+rid of certain category which don't really
+come high in the the overall impact

@@ -1,0 +1,926 @@
+1
+00:00:10,340 --> 00:00:13,395
+We could conclude popcorn,
+
+2
+00:00:13,395 --> 00:00:16,275
+after the quantitative
+assessment is
+
+3
+00:00:16,275 --> 00:00:19,995
+3-4 times better
+than polystyrene.
+
+4
+00:00:19,995 --> 00:00:24,375
+Really? Think a bit,
+
+5
+00:00:24,375 --> 00:00:28,950
+take a critical view of how
+the assessment is performed.
+
+6
+00:00:28,950 --> 00:00:35,200
+Don't we have some bias
+somewhere? Think of it.
+
+7
+00:00:38,350 --> 00:00:41,360
+That's where the
+goal definition,
+
+8
+00:00:41,360 --> 00:00:45,245
+where the scope and goal is
+important because what is
+
+9
+00:00:45,245 --> 00:00:50,230
+the function of our
+filling material?
+
+10
+00:00:50,230 --> 00:00:57,845
+Is it to get kilogram because
+my assessment here I told
+
+11
+00:00:57,845 --> 00:01:00,965
+was an impact per kilo material
+
+12
+00:01:00,965 --> 00:01:04,895
+but our goal is not to
+have the maximum kilogram.
+
+13
+00:01:04,895 --> 00:01:06,890
+On the contrary,
+that will cost at
+
+14
+00:01:06,890 --> 00:01:10,150
+the post office when
+we are sending it.
+
+15
+00:01:10,150 --> 00:01:15,905
+What really we are
+after is to fill in
+
+16
+00:01:15,905 --> 00:01:19,925
+my package here, and
+
+17
+00:01:19,925 --> 00:01:24,390
+to have to fill it in the
+lightest way possible.
+
+18
+00:01:25,640 --> 00:01:31,910
+Unit instead of kilogram
+should be rather volume unit.
+
+19
+00:01:31,910 --> 00:01:33,665
+A volume for one use,
+
+20
+00:01:33,665 --> 00:01:36,340
+probably if we start
+reusing it but
+
+21
+00:01:36,340 --> 00:01:40,035
+if a function is
+packaged filling
+
+22
+00:01:40,035 --> 00:01:42,845
+then this best represented by
+
+23
+00:01:42,845 --> 00:01:47,450
+a cubic meter, and what links
+kilogram to cubic meter?
+
+24
+00:01:47,450 --> 00:01:49,415
+This is a density.
+
+25
+00:01:49,415 --> 00:01:53,000
+It happens that in fact,
+
+26
+00:01:53,000 --> 00:01:58,050
+my popcorn is several time
+
+27
+00:01:58,050 --> 00:02:04,060
+better 4.6 times heavier
+than my polystyrene.
+
+28
+00:02:05,420 --> 00:02:07,555
+What does it mean?
+
+29
+00:02:07,555 --> 00:02:11,050
+It means that the results for
+
+30
+00:02:11,050 --> 00:02:14,440
+my popcorn relative to
+
+31
+00:02:14,440 --> 00:02:20,995
+polystyrene I'll multiply
+by these key factor 4.6.
+
+32
+00:02:20,995 --> 00:02:24,610
+What do we get? This
+is our results.
+
+33
+00:02:24,610 --> 00:02:26,470
+Intact this time per
+
+34
+00:02:26,470 --> 00:02:30,950
+cubic meter material
+or gallon or liter
+
+35
+00:02:30,950 --> 00:02:34,960
+material, and we see
+that the popcorn is in
+
+36
+00:02:34,960 --> 00:02:39,295
+fact equivalent or
+rather worse in fact,
+
+37
+00:02:39,295 --> 00:02:41,740
+that my polystyrene,
+
+38
+00:02:41,740 --> 00:02:46,200
+disappointing for the bio
+material in that case.
+
+39
+00:02:46,200 --> 00:02:53,260
+Now, what is the key parameters
+which made popcorn worse?
+
+40
+00:02:53,260 --> 00:02:59,225
+This is in fact
+essentially the density.
+
+41
+00:02:59,225 --> 00:03:02,450
+The key and from
+
+42
+00:03:02,450 --> 00:03:04,655
+an environmental point of view
+
+43
+00:03:04,655 --> 00:03:07,220
+is in fact not in the hands of
+
+44
+00:03:07,220 --> 00:03:09,530
+an environmental engineer or
+
+45
+00:03:09,530 --> 00:03:13,100
+an environmental health
+practitioner, but is in
+
+46
+00:03:13,100 --> 00:03:17,830
+the hands of a
+material scientist.
+
+47
+00:03:17,830 --> 00:03:20,895
+That's pretty interesting here.
+
+48
+00:03:20,895 --> 00:03:24,330
+Number of reuse would
+be also important.
+
+49
+00:03:24,330 --> 00:03:27,075
+We see that we have in fact
+
+50
+00:03:27,075 --> 00:03:31,730
+460 percent
+improvement potential
+
+51
+00:03:31,730 --> 00:03:34,310
+here by changing the density.
+
+52
+00:03:34,310 --> 00:03:36,530
+If we can reach
+the same density,
+
+53
+00:03:36,530 --> 00:03:38,470
+that will be great.
+
+54
+00:03:38,470 --> 00:03:42,060
+We know that we had a
+good potential, but it
+
+55
+00:03:42,060 --> 00:03:45,585
+was ruined by the
+largest weight.
+
+56
+00:03:45,585 --> 00:03:48,030
+Generally speaking,
+if packaging is four
+
+57
+00:03:48,030 --> 00:03:52,610
+times heavier than the plastic,
+
+58
+00:03:52,610 --> 00:03:55,730
+it's likely that
+it will be worse.
+
+59
+00:03:55,730 --> 00:04:01,715
+I would say that the cutoff
+is around 3-4 times.
+
+60
+00:04:01,715 --> 00:04:07,864
+If you start having 3-4 time
+heavier bio-based material,
+
+61
+00:04:07,864 --> 00:04:09,785
+you are in trouble.
+
+62
+00:04:09,785 --> 00:04:12,710
+I was relatively furious
+when we republished
+
+63
+00:04:12,710 --> 00:04:15,440
+in 1994 this study, and one
+
+64
+00:04:15,440 --> 00:04:18,230
+NGO took it and
+
+65
+00:04:18,230 --> 00:04:21,700
+concluded that bio-based
+material are bad,
+
+66
+00:04:21,700 --> 00:04:24,270
+and that's not the
+point we were making.
+
+67
+00:04:24,270 --> 00:04:27,500
+They are bad only
+because they don't treat
+
+68
+00:04:27,500 --> 00:04:31,520
+the same properties
+and these properties,
+
+69
+00:04:31,520 --> 00:04:35,255
+these function are really
+key and should be done.
+
+70
+00:04:35,255 --> 00:04:38,315
+We have to be careful how
+we interpret things here.
+
+71
+00:04:38,315 --> 00:04:40,840
+The second thing which
+was interesting is here,
+
+72
+00:04:40,840 --> 00:04:44,350
+natural is different from
+environmental friendly.
+
+73
+00:04:44,350 --> 00:04:46,920
+We have a good sense
+of what is natural,
+
+74
+00:04:46,920 --> 00:04:49,690
+we have a relatively bad
+sense and we could be
+
+75
+00:04:49,690 --> 00:04:53,350
+biased on what is
+environmental friendly.
+
+76
+00:04:53,350 --> 00:04:54,910
+The third point is
+
+77
+00:04:54,910 --> 00:04:58,330
+that material function and
+the service offered by
+
+78
+00:04:58,330 --> 00:05:01,210
+a product is essential, and we
+
+79
+00:05:01,210 --> 00:05:04,420
+can have some synergy between
+technological solution,
+
+80
+00:05:04,420 --> 00:05:07,365
+environmental
+economy for example,
+
+81
+00:05:07,365 --> 00:05:10,350
+in our case, to reduce weight.
+
+82
+00:05:10,350 --> 00:05:14,120
+Let me come back on the
+question of ethical.
+
+83
+00:05:15,210 --> 00:05:17,980
+When doing the survey people had
+
+84
+00:05:17,980 --> 00:05:21,530
+a problem that we
+were using popcorn
+
+85
+00:05:22,380 --> 00:05:29,915
+which can be eaten here,
+and use this for packaging
+
+86
+00:05:29,915 --> 00:05:34,590
+but my point of view on that is
+
+87
+00:05:34,590 --> 00:05:39,920
+if you start thinking about
+that a bit seriously,
+
+88
+00:05:39,920 --> 00:05:42,480
+what are we doing presently?
+
+89
+00:05:42,480 --> 00:05:44,840
+Our economy is largely
+
+90
+00:05:44,840 --> 00:05:48,305
+oil-based and fossil
+based and with that,
+
+91
+00:05:48,305 --> 00:05:52,790
+we are consuming, in fact the
+square meter of the past.
+
+92
+00:05:52,790 --> 00:05:56,795
+We are using
+millions of hectares
+
+93
+00:05:56,795 --> 00:06:03,455
+and square feet yards
+at very high speeds.
+
+94
+00:06:03,455 --> 00:06:06,110
+Once we will have used that,
+
+95
+00:06:06,110 --> 00:06:09,155
+we will need to use our area,
+
+96
+00:06:09,155 --> 00:06:11,240
+our land area and
+our forest, and
+
+97
+00:06:11,240 --> 00:06:13,340
+our production to produce
+
+98
+00:06:13,340 --> 00:06:20,400
+both food for people
+and also material.
+
+99
+00:06:20,920 --> 00:06:26,540
+It's interesting because when
+people have this sort of
+
+100
+00:06:26,540 --> 00:06:31,610
+material here which is
+also in fact bio-based,
+
+101
+00:06:31,610 --> 00:06:33,530
+they're made of starch but this
+
+102
+00:06:33,530 --> 00:06:36,455
+time they're expanded properly,
+
+103
+00:06:36,455 --> 00:06:39,530
+and reach a density factor
+
+104
+00:06:39,530 --> 00:06:42,635
+of 1.6 higher than
+the polystyrene.
+
+105
+00:06:42,635 --> 00:06:45,440
+This is already better for
+
+106
+00:06:45,440 --> 00:06:52,610
+the environment than the
+polystyrene in our case.
+
+107
+00:06:52,610 --> 00:06:54,170
+If you put them;
+
+108
+00:06:54,170 --> 00:06:56,720
+this one in water,
+
+109
+00:06:56,720 --> 00:06:59,690
+I put here 20 minutes ago the
+
+110
+00:06:59,690 --> 00:07:03,050
+same as this one, look
+what's happening.
+
+111
+00:07:03,050 --> 00:07:05,015
+This is my polystyrene,
+
+112
+00:07:05,015 --> 00:07:07,025
+it will stay forever.
+
+113
+00:07:07,025 --> 00:07:12,800
+Now, this is my starch-based
+material and I'm getting
+
+114
+00:07:12,800 --> 00:07:18,125
+here completely dissolved
+in a while that we can see.
+
+115
+00:07:18,125 --> 00:07:22,290
+Pretty cool to see that.
+
+116
+00:07:24,490 --> 00:07:28,490
+What was really hard with
+this study I can tell
+
+117
+00:07:28,490 --> 00:07:34,390
+you is I worked with a
+farmer during a whole day,
+
+118
+00:07:34,390 --> 00:07:37,930
+he took his time to welcome
+me to work with him.
+
+119
+00:07:37,930 --> 00:07:42,790
+We measured this half a
+cubic popcorn and waited
+
+120
+00:07:42,790 --> 00:07:47,500
+the propane bottles before
+
+121
+00:07:47,500 --> 00:07:51,140
+and after producing our popcorn.
+
+122
+00:07:51,220 --> 00:07:54,860
+It was really nice a person
+
+123
+00:07:54,860 --> 00:07:59,615
+about 65 to 70 years old
+innovating new things,
+
+124
+00:07:59,615 --> 00:08:02,720
+and I had to tell
+him that what he was
+
+125
+00:08:02,720 --> 00:08:07,370
+doing was not environmental
+friendlier than polystyrene.
+
+126
+00:08:07,370 --> 00:08:12,515
+That was humanly speaking
+pretty hard in fact,
+
+127
+00:08:12,515 --> 00:08:17,690
+but we're scientists
+and LCA is often
+
+128
+00:08:17,690 --> 00:08:19,910
+surprising, and sometime we
+
+129
+00:08:19,910 --> 00:08:23,060
+don't please our sponsors
+and that's okay.
+
+130
+00:08:23,060 --> 00:08:26,000
+He was not sponsoring
+us in that case,
+
+131
+00:08:26,000 --> 00:08:30,400
+but that was that.
+
+132
+00:08:30,400 --> 00:08:35,290
+Let's finish and come
+back to my packaging.
+
+133
+00:08:35,290 --> 00:08:39,320
+Now if I open it here,
+
+134
+00:08:42,690 --> 00:08:49,040
+see what I'll get.
+
+135
+00:08:49,570 --> 00:08:53,720
+I'm curious, what
+do we find here?
+
+136
+00:08:53,720 --> 00:08:56,720
+We see what is here,
+
+137
+00:08:56,720 --> 00:08:57,890
+and I was expecting that.
+
+138
+00:08:57,890 --> 00:09:02,030
+Nowadays we don't use
+polystyrene peanuts.
+
+139
+00:09:02,030 --> 00:09:06,100
+That's the type of material,
+and it's a factor of
+
+140
+00:09:06,100 --> 00:09:10,360
+10 even better than the
+polystyrene peanut.
+
+141
+00:09:10,360 --> 00:09:14,665
+This is really smart because
+this is packing lots of air
+
+142
+00:09:14,665 --> 00:09:21,365
+really compared to the
+polystyrene chips,
+
+143
+00:09:21,365 --> 00:09:23,765
+but look what they put in here.
+
+144
+00:09:23,765 --> 00:09:29,675
+My connector now is
+inside a cardboard,
+
+145
+00:09:29,675 --> 00:09:34,340
+I weighted it as I say and
+this was 20 gram here.
+
+146
+00:09:34,340 --> 00:09:37,970
+This is 220 gram
+that we have here,
+
+147
+00:09:37,970 --> 00:09:39,200
+and inside there is
+
+148
+00:09:39,200 --> 00:09:46,040
+another plastic and in the
+plastic what do we have?
+
+149
+00:09:46,040 --> 00:09:48,980
+We have the envelope. They could
+
+150
+00:09:48,980 --> 00:09:52,130
+have sent me that directly,
+this is a bit crazy.
+
+151
+00:09:52,130 --> 00:09:56,630
+Let's open my envelope.
+
+152
+00:09:56,630 --> 00:10:00,450
+I hope to find my connector
+otherwise I'll be in trouble.
+
+153
+00:10:02,770 --> 00:10:06,810
+This is hard work.
+
+154
+00:10:08,320 --> 00:10:11,270
+Lucky enough there
+is another plastic
+
+155
+00:10:11,270 --> 00:10:12,695
+and indeed in there,
+
+156
+00:10:12,695 --> 00:10:15,930
+you can see my connector.
+
+157
+00:10:17,410 --> 00:10:20,960
+What really would have
+been the best is really
+
+158
+00:10:20,960 --> 00:10:24,035
+sending me that and we
+get completely rid,
+
+159
+00:10:24,035 --> 00:10:26,270
+and that's where also we need to
+
+160
+00:10:26,270 --> 00:10:28,340
+think out of the box in
+term of alternative,
+
+161
+00:10:28,340 --> 00:10:33,425
+how can we avoid
+completely that here?
+
+162
+00:10:33,425 --> 00:10:35,960
+It also raises the question
+
+163
+00:10:35,960 --> 00:10:38,105
+of environmental friendliness of
+
+164
+00:10:38,105 --> 00:10:43,125
+having delivery at your house
+
+165
+00:10:43,125 --> 00:10:48,310
+which could be debated because
+if I have to go express
+
+166
+00:10:48,310 --> 00:10:53,790
+to the next Best Buy or
+whatever with the car,
+
+167
+00:10:53,790 --> 00:10:56,990
+usually I go well
+by bike but if it's
+
+168
+00:10:56,990 --> 00:11:00,770
+further I might go with a
+car, and my wife's car.
+
+169
+00:11:00,770 --> 00:11:03,950
+In that case you would in fact
+
+170
+00:11:03,950 --> 00:11:07,190
+consume quite a lot
+of energy and a truck
+
+171
+00:11:07,190 --> 00:11:09,620
+who would stop in
+
+172
+00:11:09,620 --> 00:11:11,450
+the different houses might be
+
+173
+00:11:11,450 --> 00:11:13,905
+more efficient in that case.
+
+174
+00:11:13,905 --> 00:11:17,920
+In summary, we have identify
+through this example
+
+175
+00:11:17,920 --> 00:11:21,835
+the different LCA phases
+and their main objective.
+
+176
+00:11:21,835 --> 00:11:25,640
+The goal and scope
+definition phase is
+
+177
+00:11:25,640 --> 00:11:29,840
+there to set up the problem,
+and the way to address it.
+
+178
+00:11:29,840 --> 00:11:32,330
+The inventory then determine
+
+179
+00:11:32,330 --> 00:11:34,880
+the extraction and emission
+which are crossing
+
+180
+00:11:34,880 --> 00:11:36,530
+the system boundary defined in
+
+181
+00:11:36,530 --> 00:11:38,060
+the first phase and
+
+182
+00:11:38,060 --> 00:11:40,865
+calculate them per
+functional unit here,
+
+183
+00:11:40,865 --> 00:11:44,910
+a cubic meter
+transported, in our case.
+
+184
+00:11:44,910 --> 00:11:47,305
+The impact assessment phase
+
+185
+00:11:47,305 --> 00:11:49,870
+is there to make this
+different emission
+
+186
+00:11:49,870 --> 00:11:53,260
+comparable, and arrive to
+
+187
+00:11:53,260 --> 00:11:57,510
+interpret the results
+after each phase here.
+
+188
+00:11:57,510 --> 00:12:02,285
+This example make us
+recognize that function is
+
+189
+00:12:02,285 --> 00:12:04,310
+critical and a main point
+
+190
+00:12:04,310 --> 00:12:06,590
+of departure for
+comparing products.
+
+191
+00:12:06,590 --> 00:12:08,240
+This is really crucial.
+
+192
+00:12:08,240 --> 00:12:11,660
+We'll come back in the
+goal definition to
+
+193
+00:12:11,660 --> 00:12:16,280
+define this functional unit
+is unit to compare products.
+
+194
+00:12:16,280 --> 00:12:21,815
+LCA enable us to go beyond
+sometime biased intuition.
+
+195
+00:12:21,815 --> 00:12:25,940
+I would say about one
+out of three LCA I'm doing,
+
+196
+00:12:25,940 --> 00:12:28,520
+I'm really surprised
+by what we are
+
+197
+00:12:28,520 --> 00:12:31,715
+thinking, and I
+come out of it with
+
+198
+00:12:31,715 --> 00:12:34,430
+a different view and what was
+
+199
+00:12:34,430 --> 00:12:38,405
+key on the problem
+in many cases.
+
+200
+00:12:38,405 --> 00:12:42,305
+It's a fun domain to
+work and to explore
+
+201
+00:12:42,305 --> 00:12:47,400
+even after 30 years
+of work in that area.

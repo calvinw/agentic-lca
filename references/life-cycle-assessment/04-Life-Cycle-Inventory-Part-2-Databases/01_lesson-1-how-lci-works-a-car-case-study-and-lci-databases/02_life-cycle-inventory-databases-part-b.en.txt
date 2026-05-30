@@ -1,0 +1,106 @@
+Let's shortly discuss the differences the main life-cycle
+inventory database. The largest database is mostly used is
+Ecoinvent database. We have spoken of
+it quite a bit. Developed by different
+research institutions from the Swiss government. The European platform on life-cycle assessment
+has developed a product environmental
+footprint which is really interesting. You access most of the data of these via the Life
+Cycle Initiative website we've just looked at. In terms of the US. US has not long tradition of
+inventory process LCA data, but has a long tradition of economic base data
+input output data. I will shortly introduce you, what it is about. We have data for 400 sector and this is also accessible
+within Simapro. You can access, it's
+usually under the name of the C database that you need to upload when you upload
+your different database. This is an interesting one to upload and have it
+in your database. Now you have also a
+whole series of sector specific database and that includes the
+Agrifootprint database, which is also in Simapro. The Agribalyse that you
+also have in Simapro all via the GLAD network and the World Food Database
+from the company you created Quantis
+which you can. In fact, is now incorporated
+mostly in Ecoinvent itself or accessible
+via the EU platform. Finally, in the LCA you
+have the LCA commons, which is a nice
+datasets developed by USDA here and the
+National Library. The problem is it's
+relatively difficult to do an entire LCA on these
+LCA commons because the data are not always complete
+and you have to be very careful that you don't have missing processes when
+you use these data, but they can be nice to incorporate in a sense
+within another database. Other main developer of data, country are Japan,
+China is coming, which is nice to have first
+dataset from China, Korea, and Australia, which also important data
+producer, I would say. Let's now go a bit more in detail in the
+Ecoinvent database. It's the broadest unit
+process database worldwide, has energy system
+material and building, chemical metals, transport,
+packaging, waste treatment, agriculture, and quite a
+few electronics product that I really need to
+have like a laptop, a printer, screen, flat, or different types of screen. It's the latter
+that you have here. For each of the process, you will get 400 inventory
+flow time, 4,000 processes. This is a lot of
+data to analyze, but it's really precious because that gives
+you the basis and the background processes
+for many of your data. Two things I want to
+say on this databases. First, it's good
+because the people who have created it are
+hyper systematic. It's a bit of a
+question of culture. They are here, Swiss, German, super detailed,
+super systematic, able to what I call "Answer the call for
+data" like a monk, nearly where you are able to study a process
+during a long time. Get all the data from
+the literature or from online data and check what is there in the team
+would have loved that. They would always have
+one institute who was responsible for a set
+of data, for example, for energy system or material building and to
+other people, at least, from other institutes checking the quality of the
+data so it was check, check, check and really
+high-quality data. In fact, the early
+database started in 1996 on energy system, environment the database
+became in early 2000s, the Ecoinvent come
+and we are now the third version
+of this database. I trust in fact, data via people I
+know are systematic. I know them personally
+or [inaudible] who developed that earlier
+is good friend. I can trust what he's doing in term of the quality
+of what is that. I was part of this
+Ecoinvent center in the bulge coming from the [inaudible] on the French-speaking
+part of Switzerland. My main contribution,
+it was not on data. My main contribution is
+I forced them to write in English because they were documenting
+things in German. I said no way
+you do it in English. Your database is the most
+important in the world. You need every process to
+be documented and you have three folders of about
+a foot of paper, which is now also
+of course in PDF, which is available to support
+and document the data. That's really a
+great initiative. How did they develop it.
+It was very interesting. The people first did
+some energy system under the guidance of a professor that in fact I had
+in my own studies. They did that and
+from there onwards, they made a joint venture
+with the Swiss EPA. The EPA was smart because instead of trying to finance
+everything themselves, they contacted the Swiss office for material and building, the Swiss office
+for transportation, the Swiss office
+for agriculture. Each of these offices, like USDA for agriculture but the equivalent for Switzerland, finance, a part of the database. As a whole, it costed, the first run was probably
+about three million dollars. That's probably another three million or even more which
+have been invested in the meantime to develop all these data and we
+can access it for, I think, $1,500 or
+something like that, this order of magnitude. But you have access to
+it through Simapro here. Through the software
+that we will be using. Ecoinvent database provide
+all flows at two level, at the units process level and then direct emission
+and extraction. Plus you get in fact the
+intermediary flow when you have the unit process level. Intermediary are really
+only for unit process. Whereas instead of
+the U for UP level, you also have
+systems level flows which are aggregated
+inventory emissions. I would say that if you
+are using and developing, adapting a process unit, process level is really neat. If you need to adapt it. If you're just
+using it, in fact, is much easier to visualize afterwards if
+you directly use the aggregated because
+behind it you will have thousands of processes this is sometimes hard to visualize. If you have no change, I would recommend
+that you apply that. Especially because in the
+version we have excess, we cannot do the
+uncertainty analysis directly where the
+uncertainty you need your UP level here. Many other database only provide aggregated flows in that case.

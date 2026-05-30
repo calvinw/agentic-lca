@@ -1,0 +1,517 @@
+1
+00:00:09,520 --> 00:00:14,295
+In summary here, this
+eco-design design strategy,
+
+2
+00:00:14,295 --> 00:00:17,430
+we can call it the
+7R, which I like.
+
+3
+00:00:17,430 --> 00:00:23,175
+First strategy, rethink
+and dematerialize.
+
+4
+00:00:23,175 --> 00:00:27,540
+Could I obtain more
+service from a similar
+
+5
+00:00:27,540 --> 00:00:30,750
+or even reduced
+material quantity?
+
+6
+00:00:30,750 --> 00:00:36,090
+What do we have as example
+for dematerialization?
+
+7
+00:00:36,090 --> 00:00:41,625
+If you look, this
+was in the '80s.
+
+8
+00:00:41,625 --> 00:00:46,295
+Early '90s, we had to
+create two supercomputer.
+
+9
+00:00:46,295 --> 00:00:48,935
+You have a picture here.
+
+10
+00:00:48,935 --> 00:00:54,500
+This is about a ton of
+material that we have here
+
+11
+00:00:54,500 --> 00:00:58,100
+for what was the most
+powerful computer
+
+12
+00:00:58,100 --> 00:01:00,565
+here from the NASA at this time.
+
+13
+00:01:00,565 --> 00:01:06,250
+His power was 1.9
+gigaflops, 244 megahertz.
+
+14
+00:01:06,250 --> 00:01:07,925
+An iPhone 4,
+
+15
+00:01:07,925 --> 00:01:10,655
+which is now really old,
+
+16
+00:01:10,655 --> 00:01:13,729
+has the same nearly property
+
+17
+00:01:13,729 --> 00:01:17,225
+and power than this
+supercomputer,
+
+18
+00:01:17,225 --> 00:01:24,745
+1.6800 megahertz and
+weighed a few 100 grams.
+
+19
+00:01:24,745 --> 00:01:31,400
+Is this really a success
+story of dematerialization?
+
+20
+00:01:31,400 --> 00:01:34,290
+Think about it.
+
+21
+00:01:34,670 --> 00:01:37,820
+What's happening at that time,
+
+22
+00:01:37,820 --> 00:01:42,120
+only the NASA had
+the supercomputer.
+
+23
+00:01:42,670 --> 00:01:50,290
+Nowadays, everybody has a
+mobile phone plus a laptop.
+
+24
+00:01:51,110 --> 00:01:55,080
+In fact, the total mass has
+
+25
+00:01:55,080 --> 00:01:58,190
+rather increased
+and the intensity
+
+26
+00:01:58,190 --> 00:02:02,935
+or so of components in
+these is really high.
+
+27
+00:02:02,935 --> 00:02:06,500
+In fact, we might
+have even increased
+
+28
+00:02:06,500 --> 00:02:11,045
+the amount of the
+mass we were using.
+
+29
+00:02:11,045 --> 00:02:13,000
+When I started my studies in '78
+
+30
+00:02:13,000 --> 00:02:16,390
+at [inaudible] in Lausanne,
+
+31
+00:02:16,390 --> 00:02:18,850
+the computer was taking
+the entire floor
+
+32
+00:02:18,850 --> 00:02:23,330
+of the family house.
+
+33
+00:02:23,750 --> 00:02:26,010
+That was several ton.
+
+34
+00:02:26,010 --> 00:02:28,530
+That was probably rather 10 tons
+
+35
+00:02:28,530 --> 00:02:31,090
+of material which was there.
+
+36
+00:02:31,090 --> 00:02:34,310
+But nowadays the way
+
+37
+00:02:34,310 --> 00:02:37,135
+it is about comparable
+of all the computer or
+
+38
+00:02:37,135 --> 00:02:39,200
+the desktop and the PC which
+
+39
+00:02:39,200 --> 00:02:43,920
+are presently at the
+university there.
+
+40
+00:02:45,930 --> 00:02:48,725
+It's still an objective,
+
+41
+00:02:48,725 --> 00:02:50,330
+but we must be careful to
+
+42
+00:02:50,330 --> 00:02:52,640
+the rebound effect
+and that we will look
+
+43
+00:02:52,640 --> 00:02:57,745
+in our next chapter
+on consumption.
+
+44
+00:02:57,745 --> 00:03:01,080
+Rethink, but also reduce.
+
+45
+00:03:01,080 --> 00:03:05,990
+Reduce or avoid is always
+better than finding
+
+46
+00:03:05,990 --> 00:03:11,705
+solution to recycle or
+end of a pipe solution.
+
+47
+00:03:11,705 --> 00:03:14,525
+Reduce consumption during use
+
+48
+00:03:14,525 --> 00:03:18,395
+phase with proactive product,
+
+49
+00:03:18,395 --> 00:03:23,530
+especially, and reduce
+toxics in manufacturing.
+
+50
+00:03:23,530 --> 00:03:27,665
+For high toxic, high
+active product,
+
+51
+00:03:27,665 --> 00:03:30,515
+we want here to
+reduce the quantity.
+
+52
+00:03:30,515 --> 00:03:32,060
+If we cannot reduce,
+
+53
+00:03:32,060 --> 00:03:37,159
+we could repair and replace
+just the obsolete components.
+
+54
+00:03:37,159 --> 00:03:38,780
+Here, desktop could be more
+
+55
+00:03:38,780 --> 00:03:40,640
+interesting sometimes
+than a laptop because
+
+56
+00:03:40,640 --> 00:03:43,114
+you could change
+your motherboard
+
+57
+00:03:43,114 --> 00:03:45,409
+while keeping your keyboard,
+
+58
+00:03:45,409 --> 00:03:48,380
+which is perfectly
+in good shape or
+
+59
+00:03:48,380 --> 00:03:52,015
+you can just change your hard
+disk when it's obsolete.
+
+60
+00:03:52,015 --> 00:03:55,085
+The problem is a bit
+with computers that
+
+61
+00:03:55,085 --> 00:03:58,385
+the company have interests
+to make it obsolete.
+
+62
+00:03:58,385 --> 00:04:02,149
+The optimization of program,
+
+63
+00:04:02,149 --> 00:04:05,090
+especially in the Windows
+or Macintosh world is
+
+64
+00:04:05,090 --> 00:04:08,570
+not good because they
+have interests that we
+
+65
+00:04:08,570 --> 00:04:12,095
+use more Linux for
+that is much more
+
+66
+00:04:12,095 --> 00:04:14,390
+parsimonious and you could use
+
+67
+00:04:14,390 --> 00:04:18,035
+much older machine
+and in a perfect way.
+
+68
+00:04:18,035 --> 00:04:19,920
+Let's also reuse.
+
+69
+00:04:19,920 --> 00:04:21,600
+If material extraction and
+
+70
+00:04:21,600 --> 00:04:23,640
+production phase
+are substantial,
+
+71
+00:04:23,640 --> 00:04:28,910
+we can increase the product
+lifetime and reuse parts.
+
+72
+00:04:28,910 --> 00:04:33,155
+Is it always positive to
+increase the lifetime?
+
+73
+00:04:33,155 --> 00:04:36,095
+Be careful because for
+
+74
+00:04:36,095 --> 00:04:39,050
+products which have
+high efficiency,
+
+75
+00:04:39,050 --> 00:04:42,529
+it's okay unless the efficiency
+
+76
+00:04:42,529 --> 00:04:44,390
+and new duration has increased.
+
+77
+00:04:44,390 --> 00:04:46,685
+So increasing the lifetime
+
+78
+00:04:46,685 --> 00:04:49,685
+of an incandescent light
+bulb is not smart.
+
+79
+00:04:49,685 --> 00:04:51,800
+This one you need to replace
+
+80
+00:04:51,800 --> 00:04:56,730
+and substitute them
+with LEDs nowadays.
+
+81
+00:04:56,730 --> 00:04:57,435
+That's it.
+
+82
+00:04:57,435 --> 00:05:00,350
+You don't want to keep
+also necessarily,
+
+83
+00:05:00,350 --> 00:05:03,935
+always for active product,
+
+84
+00:05:03,935 --> 00:05:07,210
+old products in that case.
+
+85
+00:05:07,210 --> 00:05:10,835
+Eventually you can
+look at recycling.
+
+86
+00:05:10,835 --> 00:05:13,460
+But this is an end
+of pipe solution
+
+87
+00:05:13,460 --> 00:05:17,480
+and there are trade-offs
+between recycling
+
+88
+00:05:17,480 --> 00:05:20,420
+and how far you
+need to transport.
+
+89
+00:05:20,420 --> 00:05:26,000
+Because you cannot
+recycle on-the-spot.
+
+90
+00:05:26,000 --> 00:05:28,400
+You need to concentrate
+
+91
+00:05:28,400 --> 00:05:32,379
+and bring things together
+for a recycling facility.
+
+92
+00:05:32,379 --> 00:05:36,980
+There are two kinds of goods
+
+93
+00:05:36,980 --> 00:05:39,380
+which are really
+interesting to recycle.
+
+94
+00:05:39,380 --> 00:05:44,255
+Either very valuable components,
+
+95
+00:05:44,255 --> 00:05:45,860
+like precious metal,
+
+96
+00:05:45,860 --> 00:05:51,565
+which could be in electronics
+or also very toxic.
+
+97
+00:05:51,565 --> 00:05:54,575
+That's interesting to see that
+
+98
+00:05:54,575 --> 00:05:57,470
+either of them are important.
+
+99
+00:05:57,470 --> 00:06:01,535
+But again, we will have trade-off
+with transport emission.
+
+100
+00:06:01,535 --> 00:06:04,360
+For example, we see plastic.
+
+101
+00:06:04,360 --> 00:06:07,440
+The plastic contains
+about 40 megajoules
+
+102
+00:06:07,440 --> 00:06:10,365
+and other 40
+megajoules for energy.
+
+103
+00:06:10,365 --> 00:06:14,315
+A recycled plastic requires
+probably half of the energy,
+
+104
+00:06:14,315 --> 00:06:16,819
+about 40 megajoules per kilogram
+
+105
+00:06:16,819 --> 00:06:22,355
+that we can save by
+using recycled plastic.
+
+106
+00:06:22,355 --> 00:06:26,270
+Is that important compared
+to transportation?
+
+107
+00:06:26,270 --> 00:06:30,745
+Transportation is two megajoules
+for 1,000 kilometers,
+
+108
+00:06:30,745 --> 00:06:33,540
+and that's by truck.
+
+109
+00:06:33,540 --> 00:06:36,095
+If you go by freight,
+
+110
+00:06:36,095 --> 00:06:37,775
+it's even less than that.
+
+111
+00:06:37,775 --> 00:06:41,540
+It's really worth
+here to recycle
+
+112
+00:06:41,540 --> 00:06:44,525
+this high-energy
+content material
+
+113
+00:06:44,525 --> 00:06:50,310
+and try to substitute
+new material.

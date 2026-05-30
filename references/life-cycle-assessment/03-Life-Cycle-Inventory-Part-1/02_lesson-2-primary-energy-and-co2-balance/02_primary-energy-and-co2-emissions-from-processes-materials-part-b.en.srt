@@ -1,0 +1,617 @@
+1
+00:00:10,280 --> 00:00:12,920
+Now that we know what we want and
+
+2
+00:00:12,920 --> 00:00:18,617
+which type of energy which is
+the non-renewable primary energy.
+
+3
+00:00:18,617 --> 00:00:22,442
+Let's compare different processes and
+material.
+
+4
+00:00:22,442 --> 00:00:25,575
+What is in fact the best material,
+
+5
+00:00:25,575 --> 00:00:31,309
+is it stone from an environmental
+point of view, tin, woods?
+
+6
+00:00:31,309 --> 00:00:37,166
+I mean, we have all sorts of
+material around this paper,
+
+7
+00:00:37,166 --> 00:00:39,860
+what will be the best one?
+
+8
+00:00:39,860 --> 00:00:44,852
+So, for this we look at
+the non-renewable primary energy and
+
+9
+00:00:44,852 --> 00:00:50,240
+this aggregated inventory for
+a series of first energy carriers.
+
+10
+00:00:50,240 --> 00:00:55,144
+And we can see large differences in
+electricity, if we take the US as
+
+11
+00:00:55,144 --> 00:01:00,930
+a reference, we see that for C02 emission,
+okay, it's among the high one.
+
+12
+00:01:00,930 --> 00:01:05,107
+It's substantially higher than Europe,
+
+13
+00:01:05,107 --> 00:01:13,550
+it's only lower than China here which
+goes to 0.98kg C02 per kilowatt.
+
+14
+00:01:13,550 --> 00:01:16,879
+If you get the other extreme for
+Switzerland or
+
+15
+00:01:16,879 --> 00:01:19,970
+Norway which is mostly hydro and nuclear.
+
+16
+00:01:19,970 --> 00:01:25,603
+You see that instead of 0.71kg C02
+
+17
+00:01:25,603 --> 00:01:33,231
+per kilowatt then you go
+down to 0.11 in that case.
+
+18
+00:01:33,231 --> 00:01:37,647
+So, ratio of C02 to energy
+which vary a lot according
+
+19
+00:01:37,647 --> 00:01:42,447
+to the type of electricity that we have,
+and the reason is,
+
+20
+00:01:42,447 --> 00:01:48,700
+even when we have nuclear power plant,
+we are still heating the world as well.
+
+21
+00:01:48,700 --> 00:01:51,263
+So, for
+the energy is not very efficient but
+
+22
+00:01:51,263 --> 00:01:55,980
+it's efficient because there is
+no carbon for the CO2 considered.
+
+23
+00:01:55,980 --> 00:01:58,971
+If now we look at the gasoline,
+
+24
+00:01:58,971 --> 00:02:04,839
+we have this refined in
+the liter gasoline, this 42.9,
+
+25
+00:02:04,839 --> 00:02:10,149
+which is the energy content
+of my gasoline basically.
+
+26
+00:02:10,149 --> 00:02:15,375
+And this has been all extracted
+when you receive a liter gasoline.
+
+27
+00:02:15,375 --> 00:02:21,543
+But for C02 you see the difference,
+if there is no combustion,
+
+28
+00:02:21,543 --> 00:02:27,151
+only 0.5,
+this was the supply chain emission of C02,
+
+29
+00:02:27,151 --> 00:02:34,021
+with combustion, you add a 2.3 or
+4 kilos C02 per liter gasoline.
+
+30
+00:02:34,021 --> 00:02:40,452
+And we can see that in the ratio
+the gC02/MJ around 65,
+
+31
+00:02:40,452 --> 00:02:47,668
+which is the normal value for
+oil-based system with combustion.
+
+32
+00:02:47,668 --> 00:02:52,092
+Whereas when you have no combustion,
+you only have 11,
+
+33
+00:02:52,092 --> 00:02:56,083
+that's typical of processes
+without combustion.
+
+34
+00:02:56,083 --> 00:03:00,403
+Transportation will be mostly oil-based,
+so
+
+35
+00:03:00,403 --> 00:03:06,025
+we find back ratio which is close
+to the 65 that we have here.
+
+36
+00:03:06,025 --> 00:03:11,030
+And we get for
+transportation data on here,
+
+37
+00:03:11,030 --> 00:03:16,587
+1000 km-kg, not per kilo, but time kilo.
+
+38
+00:03:16,587 --> 00:03:21,766
+So, 1000 kg transported
+over a kilometer or
+
+39
+00:03:21,766 --> 00:03:26,947
+one kilo transported over 1000 kilometer,
+
+40
+00:03:26,947 --> 00:03:31,115
+and we get around 2.6MJ here per 10
+
+41
+00:03:31,115 --> 00:03:36,189
+kilometer transported and 0.15 kg C02.
+
+42
+00:03:36,189 --> 00:03:41,142
+If we compare different modes of
+transportation, this is always interesting
+
+43
+00:03:41,142 --> 00:03:45,793
+to look a train is about three times
+more efficient than either the plane,
+
+44
+00:03:45,793 --> 00:03:48,736
+the intercontinental or
+the car in that case.
+
+45
+00:03:48,736 --> 00:03:55,271
+And we find about the same ratio with the
+C02 the train being substantially lower.
+
+46
+00:03:55,271 --> 00:04:00,870
+Now, these are electric-intercity train,
+Europe, I think an Amtrak
+
+47
+00:04:00,870 --> 00:04:06,584
+train would be somewhere in between
+that because of the diesel emission.
+
+48
+00:04:06,584 --> 00:04:11,052
+And also the lower occupancy here of train
+
+49
+00:04:11,052 --> 00:04:16,415
+compared to European
+where you have two-story,
+
+50
+00:04:16,415 --> 00:04:24,980
+usually number of people which is really
+higher in the modern European trades.
+
+51
+00:04:24,980 --> 00:04:29,622
+But interesting to see that plane and
+car are relatively similar for
+
+52
+00:04:29,622 --> 00:04:31,424
+the transport of person.
+
+53
+00:04:31,424 --> 00:04:35,844
+But here it was intercontinental,
+so for short trip,
+
+54
+00:04:35,844 --> 00:04:41,624
+the car is better for a longer trip,
+it's probably relatively close.
+
+55
+00:04:41,624 --> 00:04:47,906
+Material, okay, materials,
+what is the worst material?
+
+56
+00:04:47,906 --> 00:04:53,830
+You say, that's what is big here,
+
+57
+00:04:53,830 --> 00:04:59,233
+1kg gold is 269,000MJ, and
+
+58
+00:04:59,233 --> 00:05:06,221
+16.5 tons of C02 for 1kg, why this big?
+
+59
+00:05:06,221 --> 00:05:11,677
+Because to extract 1kg gold,
+you need to extract tons
+
+60
+00:05:11,677 --> 00:05:16,777
+of material, you refine it and
+extract your gold,
+
+61
+00:05:16,777 --> 00:05:22,220
+this is really energy intensive processes.
+
+62
+00:05:22,220 --> 00:05:27,377
+Then we see,
+we have primary aluminum 160MJ which
+
+63
+00:05:27,377 --> 00:05:35,071
+is substantially higher than the recycled
+aluminum, which is only at 22MJ.
+
+64
+00:05:35,071 --> 00:05:39,286
+So, we'll see the importance
+between primary and
+
+65
+00:05:39,286 --> 00:05:44,677
+recycled which might might vary
+quite a bit in these situations,
+
+66
+00:05:44,677 --> 00:05:48,807
+is also reflected in the ratio here for
+the C02.
+
+67
+00:05:48,807 --> 00:05:54,211
+What about my question,
+what is the best and the worst material?
+
+68
+00:05:54,211 --> 00:05:58,590
+Do you do exactly the same
+thing with kilo aluminum and
+
+69
+00:05:58,590 --> 00:06:01,520
+a kilo gold or a kilo polyethylene?
+
+70
+00:06:01,520 --> 00:06:07,412
+Okay so, we have seen with the popcorn,
+we have to be careful when not to
+
+71
+00:06:07,412 --> 00:06:13,921
+compare things just based on the kilogram
+because the function is different.
+
+72
+00:06:13,921 --> 00:06:19,443
+Aluminum will be used in
+typically mobile application
+
+73
+00:06:19,443 --> 00:06:23,771
+where you can really have lighter pieces.
+
+74
+00:06:23,771 --> 00:06:28,228
+And components that will
+reduce the amount of energy
+
+75
+00:06:28,228 --> 00:06:31,569
+needed to transport either in a plane or
+
+76
+00:06:31,569 --> 00:06:36,545
+in the car what we want to bring
+from one point to the other.
+
+77
+00:06:36,545 --> 00:06:41,958
+Paper you see around 20MJ,
+glasses is relatively low intensity
+
+78
+00:06:41,958 --> 00:06:46,701
+with 11.5 but a lot of kilogram,
+I mean much heavier.
+
+79
+00:06:46,701 --> 00:06:52,806
+And steel and copper around
+30MJ per kilogram in that case.
+
+80
+00:06:52,806 --> 00:06:57,610
+1000 kg water is only 5MJ, so the water,
+
+81
+00:06:57,610 --> 00:07:03,730
+we are pretty efficient to
+extract that and use it.
+
+82
+00:07:03,730 --> 00:07:09,502
+Let's have a look at plastics,
+and I've taken here the HDP,
+
+83
+00:07:09,502 --> 00:07:15,061
+high density polyethylene,
+and you see around 76.4.
+
+84
+00:07:15,061 --> 00:07:19,591
+So, from the 76.4 you can say,
+
+85
+00:07:19,591 --> 00:07:26,010
+a kilo oil itself in it you
+have about 45MJ per kilo oil.
+
+86
+00:07:26,010 --> 00:07:31,148
+And it means that in
+addition to being pure oil,
+
+87
+00:07:31,148 --> 00:07:38,481
+the plastic requires another
+about 20MJ for its manufacturing.
+
+88
+00:07:38,481 --> 00:07:43,895
+When we look at the emission,
+okay, the emission is 1.56,
+
+89
+00:07:43,895 --> 00:07:49,009
+it's only 20gC02/MJ,
+because on the extraction side
+
+90
+00:07:49,009 --> 00:07:55,246
+we had already extracted the energy
+when we receive a kilo polyethylene.
+
+91
+00:07:55,246 --> 00:08:00,772
+But on the emission side, it's only
+if I put it in an incinerator that
+
+92
+00:08:00,772 --> 00:08:06,129
+we will release the carbon which
+are still in my plastic, okay?
+
+93
+00:08:06,129 --> 00:08:10,978
+So, in that case you have to be careful
+that if you incinerate it at the end
+
+94
+00:08:10,978 --> 00:08:14,329
+of its life,
+these are the end of life processes.
+
+95
+00:08:14,329 --> 00:08:19,220
+You will have huge emission of up to 3 kg
+
+96
+00:08:19,220 --> 00:08:24,419
+per kilo incinerated P or polyethylene.
+
+97
+00:08:24,419 --> 00:08:28,972
+Plastic also need to be manufactured, so
+
+98
+00:08:28,972 --> 00:08:34,043
+this is just the raw plastic,
+and we need to add
+
+99
+00:08:34,043 --> 00:08:39,246
+another 9.2MJ if you
+do the film extrusion,
+
+100
+00:08:39,246 --> 00:08:45,116
+and about 27MJ for
+injection molding in this case.
+
+101
+00:08:45,116 --> 00:08:49,247
+For the landfill,
+as we said the emission can be
+
+102
+00:08:49,247 --> 00:08:53,188
+substantial depending on the composition.
+
+103
+00:08:53,188 --> 00:08:58,964
+But the energy is relatively small,
+that's not very relevant and
+
+104
+00:08:58,964 --> 00:09:03,721
+don't need to be further
+assessed in further detail.
+
+105
+00:09:03,721 --> 00:09:07,919
+We've looked at just a few metals here,
+and
+
+106
+00:09:07,919 --> 00:09:14,632
+we can now look at different type of
+metal, be it be a copper or silver.
+
+107
+00:09:14,632 --> 00:09:20,032
+And we see here the platinum
+being one of the higher together
+
+108
+00:09:20,032 --> 00:09:26,188
+with the gold which is not exactly
+the same value but close to value,
+
+109
+00:09:26,188 --> 00:09:31,383
+and this is was in Nuss and
+Eckelman in 2014 Pios one.
+
+110
+00:09:31,383 --> 00:09:37,040
+We can have the same type of table and
+it just reflects the energy here
+
+111
+00:09:37,040 --> 00:09:42,111
+with 12,500 for gold,
+same value here for platinum.
+
+112
+00:09:42,111 --> 00:09:49,317
+And like silver would be
+substantially here lower than gold,
+
+113
+00:09:49,317 --> 00:09:55,702
+or copper will be even here
+around 3kg here to make it.
+
+114
+00:09:55,702 --> 00:10:00,783
+So, small useful table and elegant to
+put it in that format we are used.
+
+115
+00:10:00,783 --> 00:10:05,341
+Let's conclude the ratio
+between final energy and
+
+116
+00:10:05,341 --> 00:10:11,490
+primary energy defined the energy
+efficiency of the supply chain and
+
+117
+00:10:11,490 --> 00:10:16,260
+that's where we want to choose
+which energy we use for
+
+118
+00:10:16,260 --> 00:10:19,460
+what which to carefully and avoid.
+
+119
+00:10:19,460 --> 00:10:23,554
+For example, the use of electricity for
+degrading it to heat,
+
+120
+00:10:23,554 --> 00:10:26,050
+which is a low quality energy.
+
+121
+00:10:26,050 --> 00:10:29,770
+Parts of the primary
+energy is non renewable.
+
+122
+00:10:29,770 --> 00:10:34,801
+That means that the basic resource of
+this energy is non replaceable or is
+
+123
+00:10:34,801 --> 00:10:40,501
+replaced very slowly through millions of
+years which will be needed in that case.
+
+124
+00:10:40,501 --> 00:10:43,190
+And we're using it at a rapid pace.
+
+125
+00:10:43,190 --> 00:10:47,210
+There are large differences of several
+other magnitude between the energy
+
+126
+00:10:47,210 --> 00:10:47,791
+and the c.
+
+127
+00:10:47,791 --> 00:10:50,660
+02 per kilo of different material.
+
+128
+00:10:50,660 --> 00:10:55,840
+And these cannot be directly compared
+because they have usually different
+
+129
+00:10:55,840 --> 00:11:01,691
+functions in our product and they need all
+to be considered but not really compared.
+
+130
+00:11:01,691 --> 00:11:03,261
+That one is better than the other.

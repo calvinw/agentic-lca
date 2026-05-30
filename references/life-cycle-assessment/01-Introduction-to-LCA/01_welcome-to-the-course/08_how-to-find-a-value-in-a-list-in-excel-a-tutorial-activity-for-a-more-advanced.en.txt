@@ -1,0 +1,44 @@
+How to find a value in the list in Excel. When the ranking is not the same
+between this list and this other list. You see the Tortilla Ice 1st. Here is number 4. The cheese here is first and
+here is number 3 in the room. So I could manually enter each value here. But I could make a mistake when I do that. So if we can it's better
+to have a look of value. There is a function in Excel which is
+called villa Luca but it's not convenient because if I would incite a role like
+here the formula is not any more valid. So I propose you a bit complicated but very powerful function which is
+in fact relatively simple to use. There is a function in Excel
+which is called index. This function equal. So open the file and
+go in the top find a value in the list. You open the file how
+to use dollar in Excel. You go in the top, find a value
+in the list and we go in age 5. And we say we use the index function. And you see the index function
+will in a certain array will return the rule number
+that you give it here. So equal index. And I choose here I would
+like to return the tortilla to equivalent per kilo ingredients. To be able to calculate my gramm
+ingredient preserving time. Tortilla per kilo ingredients. I will have a conversion
+factor to get my tortilla 2%. So anyway I want to return
+now the 1033 here which is the third value in that in that race. So I take the range here and I returned the on position
+number 3 which is here. This is good, this is returning 10.33 be
+where we need to block here the dollars. So you can add $2 or on a PC. You can press F. 4 with You your cursor before the number. And that adds automatically $2 and
+I can do the same, add my dollars. You can you can each at a dollar or
+so each. So I'm blocking my role because when I will copy I wanted still use
+the same array to do that. So I have my 1033 but
+I had to give the 3 which is not very convenient because I have
+to look at it one by one. This is not very good. So I would like to get
+automatically that we find that cheese cheddar is
+the third role in this array function to do that is called match. So you do equal match for
+example in cell D. Five. And we are looking up for cheese cheddar are okay. And I'm going to look for the cell F5. The value of this cell in
+the range that we have here. And of course I will
+have to block the range. I will have to add my dollars. Okay. Yeah dollars. And I would like an exact match because
+if I have tortilla and tortilla, whole wheat, I don't want that. It's the same. So I want an exact match. And you force the exact match. I don't know why they did that. But with zero you say zero is
+exact comma zero is exact match. And if he worked well we should
+have 3 now here wow good. So we've returned and number 3. So now the trick is I know how to do that. Let's combine it. I have here put my 3 manually. I can take this formula here. I copy it and
+then I substitute here in the 3 my match. You need to remove the equal match of a 5. It would search a 5 in the array here and and for an exact match. And it will return here number 3. And I was looking number 3 in this one. So you need to be careful
+that the range here. Okay.
+The column is different by the rain. Should be the sage 5- 14. 5- 14 that we have here. So here let's look what do we get? 10.33. Took a few minutes to explain you that. But now the beauty is look at that. We can take that we copy it here. Okay and let's do a pay special. Yeah. They pay special with the formula. And look at that. We fried being 0.24 ,0.24
+added suggestion 0.29. Tortilla. 0.96. 0.96. Now tortilla whole wheat. Let's copy that also. Okay here. And you see tortilla was 0.96 here. Tortilla with 0.84 ,0 .84. So it's with a single formula. I could copy it and
+it returned me the value for all values. So this is very powerful. In fact the index can
+also define if you define not a column but an array matrix here. You could define not only the third
+index here in term of the row but you could define also the column. So in fact you could have
+a double index and the array and then the match and the match and
+and get a dramatically but that that starts to be
+beyond what we need for him. Okay so that was a bit more advanced. That's just for you. You don't need it for this homework. You can also manually
+choose the value here. But it's pretty convenient and
+powerful on the long term.

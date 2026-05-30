@@ -1,0 +1,104 @@
+So once we have done our dispatch and we know which substance to consider for
+given category, we now would like to give
+the relative weight of the different substance in that category. And for this we will develop what
+we call characterization factor and that's why it's called midpoint
+characterization here. And give for
+each scenario weight the emission C02 and methane that gives the relative
+weight too arrived to a contribution to a given
+in fact impact category. Like here's a climate change
+short term which will have like CH4 also contributing
+two weeks in that case. Okay, so how do we do that? We've in fact already practiced
+that with the carbon footprint. We express the inventory flow,
+each of the inventive flow of this impact category into a reference
+substance for that category. So for carbon footprint,
+the reference substance was C02. So we express our CH4 in C02 equivalent. Okay.
+And this expression is the, what we call the midpoint characterization factor for
+substance I in category M. Is the equivalency how many kilos
+C02 is methane equivalent to? Okay, so this was we know that for
+methane we were at 34. It was by a genic to 36 in the case of of CH4 that we can have here. And the score is a weighted
+sum of the inventory flow, the amount of C02 emitted, the amount
+of methane emitted per a functional unit time the CF here,
+my characterization factor. So we get kilo I per functional
+unit time kilo C02 per kilo I if I take the carbon footprint. So I get kilo C02 per functional unit. So it will be in kilo of
+reference substance for the category M per functional
+unit that I get the score. What are these reference substance? Quickly we know with global warming
+we have the kilo C02 equivalent. Marine eutrophication it's only kilo C02
+because it's really the concentration of C02 in the atmosphere. And not so
+much the other greenhouse gasses which is modifying the concentration in the ocean. Land occupation it's a hectare
+use over a year time a year. And we take the arable
+land equivalent to measure an impact on biodiversity facilities. Mega joule deprived kilo mineral
+is kilo deprived of minerals, water use a cubic meter. Water acidification is kilo S02. Classic aquatic
+eutrophication is kilo P04 P. And the marine eutrophication is kilo and
+kilo nitrogen in that case. The CTU is a specialty from use talks and it's which is the NFC tag toxicity model. And it is in fact comparative toxic units and you have for humans and for ecosystem here or for humans. For humans,
+in fact these are cases of cancer. Okay. And all cases of non cancer. So it's a new incidence of cancer or
+of non cancer. We have baptized them comparative toxic units to avoid people to take the absolute value to I mean on regulatory basis. So we don't want people suing other to
+say you are killing so many people or creating so many cases of cancer. But it's rather really a comparative
+metric that we want to. Br C14 equivalent for ionizing radiation. The PM 2.5 equivalent for fine particulate
+or respiratory and organic kilo. Non methane VOC. Volatile organic compounds for
+the respiratory organic or colossal photo accident formation. Okay. And the ozone layer
+depletion is in CFC-11. How does it work? We've already experienced this mechanic. We had this 253.9 kilo C02
+per a functional unit for front-end panel multiplied by
+one is the same 0.15CH4 here. And you see that we still
+use here the IPCC 2007 data. And you will always very often have that. That you have always, when you quote
+C02 equivalent, you need to be sure what was the value used and
+that we are consistent when we compare. Here that was 25. We've seen we are now at
+the recommendation of 34 biogenic and 36 for the fossils due to accounting for
+feedback with the ocean. But we have 25. 0.15 times 25. Another 3.8 and
+two we are not in agriculture production. So these are relatively small and
+we get a total of 258. We can play the same game
+with the fine particulate. Now the only difference
+we have you refined by car 0.383 of kilo PM 10 in that case. And basically it's considered
+in larger particular that only the fraction below 2.5 microns is
+the one responsible for the effect. So the effect here is 0.6 because we have
+about 60% of the PM 10 R PM 2.5 in weight. And so
+we multiply 0.38 by 0.6 we get 0.023 and we do that for each substance. Whereas you have to be careful for SO2. This is a secondary
+particular SO2 combines with any history gets ammonium sulfate and
+so the the kilo. Here we get kilo PM 2.5
+per kilo really knocks or S02 knowing there is
+a transformation in between. So how does it work? Kilo SO2 0.49 kg SO2
+perfection in unit time, 0.0 38 the kilo is to go away. We get 0.017 kg PM 2.5
+per functional unit. Which is what we have here we
+do the sum we arrive to 0.042. This is for
+my front-end panel per functional unit. So now we can repeat that for
+all categories and also for all scenarios. And that's what we have done and
+that's what we get. Okay. So we have taken as a reference,
+we don't have really a good metric at this point to know if a category
+is more important than another. So we put them with the highest
+scenario here at 100%. Okay. So question which scenario is best and
+which scenario is worst? Have a look at these results a bit
+carefully you can pose if you like. Okay, so
+we see that in all this first category we have the steel which is high also here and
+the last one. But we have two categories where
+the aluminum is higher and this is in fact ionizing radiation and for the aquatic toxicity we also have that. And that that's for the ionizing radiation this is linked to
+the electrolysis and use electricity. So there is also a usage
+of nuclear power for that. And then for aquatic toxicity this
+is direct effect from aluminum depending on the cell
+ability of the aluminum. Now what is the best scenario? So potentially the steel
+will be the worst. But we're not really sure unless we
+can show that ionizing radiation and aquatica talks on that dominant
+impact on human health for ionizing radiation and
+ecosystem for aquatic talks. On the recycled aluminum side you
+can see that the recycle aluminum scenario is usually lower but
+not always ionizing radiation. Again, aluminum is remain higher. Here's noncasinogen we have
+it a bit higher and here for the aquatic eutrophication we have
+a small difference to a knowledge. Potentially best scenario
+recycle aluminum. But again we need
+the next step in fact and we need to give respective importance
+of each impact category and this is the role of
+the damage characterization, which is the step three after this one. So summary the midpoint characterization
+factor, enable to compare and possibly aggregate chemical
+within each impact category. So within a category we can then identify
+the inventory flows which dominant contribution as we saw CO2 was
+dominating for the global warming. And here for the PM we see we have two
+important contribution SO2 is important and the PM 10 is also the second
+important contribution. So we can really identify
+what matters most. And finally the midpoint characterization
+does not provide insight on the respective important
+of each impact category. That's the important that we assess
+impact at damage level on a common damage metric with each
+damage impact category. For example in DALY's for human health. Okay. And we will take it means all different
+impact category contributing to human health impact like global warming,
+ozone depletion, cancer, non cancer or water use are all contributing and fine
+particulates are contributing to that. And we want then to calculate the
+respective contribution of each of these midpoint category to the total, which will put them in perspective
+in an interesting way.

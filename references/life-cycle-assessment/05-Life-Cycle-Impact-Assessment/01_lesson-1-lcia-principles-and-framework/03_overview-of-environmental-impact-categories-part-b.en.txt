@@ -1,0 +1,160 @@
+How do we treat this? How do we treat this
+issue of climate change? The main thing is to reduce
+greenhouse gas emissions. What we're seeing here is that in the lighter
+version of each color, we would have the
+direct CO_2 emissions for different sectors. If there were no mitigation. We can see for transport, there would be a steadily
+increasing CO_2 emissions, for buildings as well. Definitely for industry
+and electricity, we also see this trend in increasing CO_2 emissions
+associated with those. Now AFOLU here stands for the
+net effect of agriculture, forestry, and other land use. Then there's also non CO_2 greenhouse gas
+emissions that are coming. But if we have various
+mitigation scenarios, those are the darker
+version of each color, we can see how we can
+reduce the CO_2 emissions. One of the main ones we can
+do is for our electricity. Key measures to achieve such mitigation goals
+include decarbonizing, so reducing the carbon intensity of electricity generation, as well as efficiency
+enhancements and behavioral changes. In order to reduce
+our energy demand compared to our baseline. Another thing to think about
+in terms of the treatment of this climate change issue is addressing CO_2
+emissions fairly. Not just lumping by country and asking different
+countries to meet targets, but recognizing our per
+capita contributions. In this figure, we can see that the United States and China have similar size areas
+on this figure. Which means that they are both contributing similar
+size CO_2 emissions. But because the horizontal axis is their annual emissions, and the vertical axis is
+the per capita emissions. We can see that, the
+US is emitting per person double the CO_2
+compared to China. We want to be able to
+take that into account when making global plans
+about CO_2 emissions. That's one example of global
+impact climate change, and it's one we're
+struggling with. I also want to focus on a different global impact
+or ozone depletion. We can see in our planetary
+boundaries figure, that this is one where
+we are safely still in the safe or green zone for our stratospheric
+ozone depletion. We'll look into
+why that might be. The diagnosis about
+ozone depletion is that in the 1970s and '80s, a lot of things called CFCs or chlorofluorocarbons
+were being emitted as part of industrial processes. What would happen is that the chlorine would get removed, once it's in the atmosphere,
+get removed from the CFC, and it was then able to
+break down the ozone high in our atmosphere by reacting
+with the O_3 ozone molecules, separating off an O. Then the chlorine
+could get free and do it again and again and again. Even a small amount of
+chlorine could lead to a huge depletion in ozone
+in our stratosphere. One CFC could break down
+100,000 molecules of ozone. The problem with
+this is that the sun has different types of rays
+that can do damage to us, and the ozone layer
+was blocking some of these critical UV rays from impacting human
+and plant health. We were able to measure
+this happening. This graph is showing the
+minimum levels of ozone over Antarctica
+through the year 2015. The lower the
+minimum levels are, the more exposed plants and animals are to the
+harmful UV radiation. Now we can see a clear
+drastic decrease in the minimum ozone, which is bad, but then
+they flattened out. The ozone was no longer
+decreasing, and so we went up. How did that happen? Here's a little timeline. The key thing is the diagnosis
+came before the symptoms. In 1920s, a scientist
+named Dobson was studying stratospheric
+ozone, and in 1974, an article in nature already
+characterized this mechanism of CFCs migrating into the stratosphere and
+releasing chlorine. In 1985, the British
+Antarctic Survey team had been measuring the ozone
+layer already for 18 years, and they saw the first
+visible evidence that the ozone layer
+was depleting. It was depleted so much they
+actually didn't believe their data until a second
+set of data confirmed it. Then relatively quickly in 1987, the Montreal Protocol
+on Substances That Deplete the Ozone
+Layer is signed. It became a legally
+binding protocol between 24 countries to
+reduce CFC emissions. Kofi Annan, the former Secretary General of
+the United Nations, said about this, "Perhaps the single most successful
+international agreement to date has been the
+Montreal Protocol." That that led to a freeze in the production
+and consumption of CFCs, and it was a success story. Industrialized countries in
+1986 had a huge amount of ozone depleting
+potential each year that they were emitting, and that steadily reduced to a point where we're no longer worried about
+the ozone layer. That was a little bit about
+the global impacts category. Now we're going to talk about
+some human health impacts. One of the dominant
+human health impacts is ambient air pollution. We can see that on this
+figure from the Lancet, which is outlining the
+attributable dailies per year, so disability adjusted
+life years per year for different things that
+impact human health. The biggest one is dietary
+risks and inactivity, which we spent a
+lot of time talking about already related
+to food and diet. But the next two
+biggest ones are household air pollution and ambient particulate matter,
+outdoor air pollution. Those have a huge
+impact on human health. Other things that impacted
+our human toxicity, including indoor
+toxicity of chemicals, photochemical ozone. We'll talk a little bit more
+about ionizing radiation, noise, occupational
+risks and injuries. One of those dominant things is the human health impacts due to primary and secondary
+particulate matter, and this is something
+that I focused on a lot in my research. It leads to 3.2 million
+deaths per year, 65% of which actually
+occur in Asia, which is not at all necessary, the country that's
+inducing the PM emissions. What happens is something called reactive oxidants stress, which leads to cardiovascular
+and pulmonary diseases, lung cancer, lower respiratory
+infections, and stroke. The US alone is responsible
+for 86,000 deaths per year, 85% of which are
+cardiovascular diseases. Another human health impact other than particulate matter is that due to photochemical
+oxidation from NOx and VOCs. NOx is formed when nitrogen
+and oxygen that are already in the air react together under
+high temperatures, such as in the exhaust of
+fossil fuel-burning engines, and that creates NOx. NOx can then react with volatile organic
+compounds or VOCs, which can be emitted
+by gasoline as an antigen pyrogenic source or biogenic sources like trees. When sunlight plus NOx plus
+VOCs react, they form ozone. But in this case, the ozone is close to
+where we are rather than far up above blocking the sun and it actually has
+negative effects on us, on respiratory
+effects for humans or decreased reduction
+in plant productivity. Those were some examples of human health impacts
+associated with emissions. Now we'll talk a
+little bit about ecosystem and
+biodiversity impacts. The main example
+will give here is the Lake Erie toxic algae bloom. This happens when rainfall washes fertilizer
+and manure that we emit into the environment from these large farm fields into streams that all
+flow into Lake Erie. This fertilizer
+causes huge amounts of algae to grow each year, which can make water
+toxic to fish, wildlife, and people. As an example, in July 2019, a severe bloom of
+blue-green algae began spreading across the
+western half of Lake Erie. The dominant organism in
+there was a bacteria that produces a toxin which
+can cause liver damage, numbness, dizziness,
+and vomiting. That's an example of how
+our emissions can cause ecosystem impacts that can
+also impact human health. Now we'll cover the last
+category of resource use. This can include water use, such as freshwater
+biodiversity loss, or global water crisis that leads to food
+security issues. Land use, which
+can be related to habitat change as a major driver of terrestrial
+biodiversity loss. Biotic depletion, such as overfishing
+and marine ecosystems. Or energy resources, that's a functional impact
+where the renewal rate of an energy source
+is vastly exceeded and that's why we call
+it non-renewable energy. Here's an example
+of how water use can affect humans
+and ecosystems. Water use decreases
+the availability and leads to
+competition for water. For human users that don't
+have any adaptation, there are direct
+human health impacts associated with
+lesser, dirtier water. But many adaptations also
+decrease water availability to have indirect impacts on human health resources
+and ecosystem. For ecosystems, they
+get limited water. There are, of course, impacts
+on ecosystem quality, both direct and indirect. The summary of all this is that the main diagnoses of these global impact
+categories that we're talking about are the
+increasing consumption in developed nations is leading to pollution and usage of
+non-renewable resources. The negative impacts that are occurring are unequally
+affecting off in developing nations through irreversible use of
+natural resources, decreasing water quality, or climate change or
+particulate matter. It's good to realize
+that the scale of these impacts can
+range from very local to global and from immediate impacts to those
+that take decades to manifest. A key thing here is just to think globally and act locally, and use LCA to help make our actions more
+effective. Thank you.

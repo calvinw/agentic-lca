@@ -1,0 +1,482 @@
+1
+00:00:10,962 --> 00:00:18,759
+How to use the dollar sign as a very
+efficient way to perform calculation and
+
+2
+00:00:18,759 --> 00:00:22,870
+to copy formula in the next cell sheet.
+
+3
+00:00:22,870 --> 00:00:28,566
+Because we want to put for even a large
+range of formula to write the formula in
+
+4
+00:00:28,566 --> 00:00:35,440
+a single sheet and be able to copy it and
+that it adjusts the right way directly.
+
+5
+00:00:35,440 --> 00:00:37,740
+Let's take a small example.
+
+6
+00:00:37,740 --> 00:00:43,169
+We have here three people which
+are consuming 10 serving a day,
+
+7
+00:00:43,169 --> 00:00:48,794
+20 serving a day and 30 serving
+a day of two different food one and
+
+8
+00:00:48,794 --> 00:00:53,240
+two each of them is
+consumed at the same level.
+
+9
+00:00:53,240 --> 00:00:58,240
+And we have here the carbon
+footprint of these two foods.
+
+10
+00:00:58,240 --> 00:01:03,198
+The food one has 0.1 kg of
+CO2 per serving whereas
+
+11
+00:01:03,198 --> 00:01:07,261
+food two has 0.5 kg of CO2 per serving.
+
+12
+00:01:08,440 --> 00:01:12,668
+We would like to calculate
+the carbon footprint in kilo CO2 per
+
+13
+00:01:12,668 --> 00:01:15,640
+day which means taking
+the serving per day.
+
+14
+00:01:15,640 --> 00:01:19,081
+Multiplying it by
+the kilo CO2 per serving.
+
+15
+00:01:19,081 --> 00:01:24,840
+So we'll get a kilo CO2 per
+day serving are going away.
+
+16
+00:01:24,840 --> 00:01:31,434
+So to do that I will say my
+cell C7 is equal here to my
+
+17
+00:01:31,434 --> 00:01:38,032
+consumption B7 time my
+carbon footprint data and
+
+18
+00:01:38,032 --> 00:01:45,440
+kilo CO2 per serving for
+food one which is C3 here.
+
+19
+00:01:45,440 --> 00:01:50,640
+So 10 times 0.1, this is 1 it makes sense.
+
+20
+00:01:50,640 --> 00:01:54,890
+So now as we want to be efficient or
+if we are lazy or
+
+21
+00:01:54,890 --> 00:01:58,751
+both let's take that and
+we want to copy it.
+
+22
+00:01:58,751 --> 00:02:04,010
+You can copy with CTRL C and CTRL V, okay.
+
+23
+00:02:04,010 --> 00:02:08,096
+Or directly take here the corner and
+take it down and
+
+24
+00:02:08,096 --> 00:02:11,540
+we see we're having a problem here.
+
+25
+00:02:11,540 --> 00:02:16,890
+Why are we having a problem, let's look
+what happened when I copied my formula.
+
+26
+00:02:16,890 --> 00:02:25,340
+I had B7 times C3,
+I would like to have here B8 times C3.
+
+27
+00:02:25,340 --> 00:02:29,448
+But I get B8, so this has adapted nicely,
+
+28
+00:02:29,448 --> 00:02:35,180
+it move automatically from B7
+to B8 when I move a row down.
+
+29
+00:02:35,180 --> 00:02:38,451
+But my C3 has also adapted.
+
+30
+00:02:38,451 --> 00:02:40,740
+So I'm trying to use a text here.
+
+31
+00:02:40,740 --> 00:02:42,641
+So Excel doesn't like that.
+
+32
+00:02:42,641 --> 00:02:46,840
+If you make a multiplication with the text
+it doesn't know how to handle that.
+
+33
+00:02:46,840 --> 00:02:54,891
+So what I would like is that we
+block these three remains the same.
+
+34
+00:02:54,891 --> 00:02:58,241
+I always use is C3 here
+when I come down so
+
+35
+00:02:58,241 --> 00:03:02,972
+to block that this is exactly
+what the dollar sign in Excel
+
+36
+00:03:02,972 --> 00:03:07,703
+inside the formula is doing it
+will enable that when I move
+
+37
+00:03:07,703 --> 00:03:12,751
+copies this cell down it will
+remain C3 all the way through.
+
+38
+00:03:12,751 --> 00:03:17,352
+So let's look how it
+looks now I take here I
+
+39
+00:03:17,352 --> 00:03:22,361
+copy it down and now I have 20 times 0.1.
+
+40
+00:03:22,361 --> 00:03:26,721
+This is 2, 30 times 0.13,
+let's look at what it changed.
+
+41
+00:03:26,721 --> 00:03:32,440
+We have B7 times C3,
+B8 we're using this one and
+
+42
+00:03:32,440 --> 00:03:35,240
+we stayed at C3, okay.
+
+43
+00:03:35,240 --> 00:03:40,207
+And here here we also
+have D9 times C3 that we
+
+44
+00:03:40,207 --> 00:03:46,040
+have exactly the same way and
+which is correct.
+
+45
+00:03:46,040 --> 00:03:48,221
+So now again I would like to be efficient.
+
+46
+00:03:48,221 --> 00:03:54,790
+I would like to take this formula here and
+just copy here to the right,
+
+47
+00:03:54,790 --> 00:03:58,881
+okay I should have here 0.5 times 10.
+
+48
+00:03:58,881 --> 00:04:02,861
+That should be 5 on on cell D7.
+
+49
+00:04:04,640 --> 00:04:07,891
+I should have 5 here,
+I should not have 0.5.
+
+50
+00:04:07,891 --> 00:04:15,390
+What happened this time here,
+I would like to calculate here.
+
+51
+00:04:15,390 --> 00:04:20,284
+D3 times B7 but when I copied to
+
+52
+00:04:20,284 --> 00:04:24,821
+the right the B7 became C7.
+
+53
+00:04:24,821 --> 00:04:29,605
+So I'm using these cells instead
+of using you see I'm using that
+
+54
+00:04:29,605 --> 00:04:34,440
+cell times that cell instead
+of using this original cell.
+
+55
+00:04:34,440 --> 00:04:38,390
+So what I can do is I can
+this time block the column.
+
+56
+00:04:38,390 --> 00:04:42,661
+So I put a dollar in front of the B here.
+
+57
+00:04:43,940 --> 00:04:47,690
+Okay and now I press enter and
+
+58
+00:04:47,690 --> 00:04:53,159
+now I can copy here this
+cell to that one and
+
+59
+00:04:53,159 --> 00:05:00,940
+now I'm getting 5 because
+I'm still using B7 here.
+
+60
+00:05:00,940 --> 00:05:04,911
+Okay and I'm using D3 here,
+so that's what I want.
+
+61
+00:05:04,911 --> 00:05:10,340
+So now the beauty of that is why
+I write the formula only once.
+
+62
+00:05:10,340 --> 00:05:16,949
+Okay, my formula here and
+I copy it on the anti range and
+
+63
+00:05:16,949 --> 00:05:23,571
+you get let's take the corner
+here 30 times 0.5.
+
+64
+00:05:23,571 --> 00:05:29,541
+That should be 15 and that's what
+we are getting here will be B9.
+
+65
+00:05:29,541 --> 00:05:33,713
+So the B has adjusted here in the role but
+
+66
+00:05:33,713 --> 00:05:37,771
+it has not adjusted when I moved here.
+
+67
+00:05:37,771 --> 00:05:42,694
+We were already at D9 here
+when I was changing column and
+
+68
+00:05:42,694 --> 00:05:49,740
+the D now is blocked here for the row that
+has been adjusted with the column here.
+
+69
+00:05:49,740 --> 00:05:56,136
+So here we could calculate or total
+footprint we do the sum of these two or
+
+70
+00:05:56,136 --> 00:06:01,784
+we could say one or the other but
+the some been able to do many to so
+
+71
+00:06:01,784 --> 00:06:06,940
+many cells and we get 6, 12, 18, here.
+
+72
+00:06:06,940 --> 00:06:13,221
+That was when I was blocking only
+one of the row or one of the column.
+
+73
+00:06:13,221 --> 00:06:18,238
+But what about if I want let's go here and
+
+74
+00:06:18,238 --> 00:06:24,001
+now I would like to go and
+go instead of per day.
+
+75
+00:06:24,001 --> 00:06:28,891
+I would like to do a per
+year footprint that we
+
+76
+00:06:28,891 --> 00:06:33,640
+have here and this per year footprint.
+
+77
+00:06:33,640 --> 00:06:37,803
+I would in fact avoid
+recalculating everything but
+
+78
+00:06:37,803 --> 00:06:42,932
+directly take my results per day and
+multiply it by a conversion
+
+79
+00:06:42,932 --> 00:06:47,768
+factor in day per year and
+notice that I put a separate cell or
+
+80
+00:06:47,768 --> 00:06:51,681
+that I didn't write 365.25 in the cell.
+
+81
+00:06:51,681 --> 00:06:57,095
+This is not good practice because if for
+example you change to 365 or
+
+82
+00:06:57,095 --> 00:07:03,840
+365.25 you want to do it and change
+a single cell and everything is adapted.
+
+83
+00:07:03,840 --> 00:07:08,976
+So never put a number in a formula,
+never say this is equal
+
+84
+00:07:08,976 --> 00:07:15,040
+to the carbon footprint per year
+is a carbon footprint per day.
+
+85
+00:07:15,040 --> 00:07:22,840
+Never do that C7 times 325 for
+example 365.
+
+86
+00:07:22,840 --> 00:07:26,750
+Okay and then you don't
+realize that perhaps this time
+
+87
+00:07:26,750 --> 00:07:30,080
+you do 365 the next time the 365.25.
+
+88
+00:07:30,080 --> 00:07:34,779
+So no, don't put here a number often
+you will don't remember what is
+
+89
+00:07:34,779 --> 00:07:38,770
+this number here is easy but
+it could be more complicated.
+
+90
+00:07:38,770 --> 00:07:42,831
+You create a conversion factor and
+you multiply by that.
+
+91
+00:07:42,831 --> 00:07:48,751
+So here C7 times C11 we take that.
+
+92
+00:07:48,751 --> 00:07:53,035
+Now if I want to copy
+it on the entire range,
+
+93
+00:07:53,035 --> 00:07:57,810
+I would like as I'm getting lazy or
+efficient.
+
+94
+00:07:57,810 --> 00:08:05,071
+I would like to always keep these 365.25
+when I moved down or when I move right.
+
+95
+00:08:05,071 --> 00:08:10,163
+So in that case I will
+put the dollar in front
+
+96
+00:08:10,163 --> 00:08:14,972
+of both the column and the role number and
+
+97
+00:08:14,972 --> 00:08:19,791
+now I have blocked myself C11, okay.
+
+98
+00:08:19,791 --> 00:08:27,340
+And I can copy that here,
+copy that here, okay.
+
+99
+00:08:27,340 --> 00:08:31,158
+And here I can see 10 times
+
+100
+00:08:31,158 --> 00:08:36,480
+365.25 this is 3652 .5.
+
+101
+00:08:36,480 --> 00:08:43,271
+And you see that we're still using
+the same fixed factor here 365.
+
+102
+00:08:43,271 --> 00:08:47,475
+So again, I was only writing
+the formula in a single cell and
+
+103
+00:08:47,475 --> 00:08:50,260
+could copy it all the way through here.

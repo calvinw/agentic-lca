@@ -1,0 +1,84 @@
+Now that we know
+how to aggregate the different
+elementary flow across the entire supply chain and
+get aggregated results, I would say cradle to gate
+for different material, it's very interesting to
+compare the primary energy we are getting or
+the CO_2 emission. But to do that, we first need to define well, what type of energy
+because there are several term which are used
+for describing the energy. We want to define as a
+learning objective primary, final, and useful energy. Second, we will then compare aggregated processes
+for primary energy for various materials
+and processes. Let's look at this definition. Primary energy is
+defined as the energy contained in the energy carrier at the point of extraction. It's the total energy
+you extract from the environment and that will include the upstream
+energy usage that you need to
+do the extraction, to do the refinery, the preparation, and to
+distribute all that. You need to extract
+all that so that you have the final
+energy which is delivered to the consumer or purchased by the consumers if we take his or her
+point of view. The final energy is what is consumed whereas the
+primary energy is what needs to be extracted to deliver this energy consumed. The useful energy
+is the portion of the final energy
+which is actually delivered inside the
+house for example, or available after
+final conversion for the respective
+use of the consumer. Let's look at an example
+to understand that. Let's take natural gas first. We have here some
+gas and I buy one megajoule final which
+is at my gas meter. First, what's happening
+when you have a heating, usually you have a
+small stack on the roof and you in fact are
+ejecting some heat. The efficiency will be
+a key parameter here which will relate the final
+energy to the useful energy. For a gas heater it has a recuperation of condensation which most of
+modern heater have, you get a high efficiency. You can get like 95
+percent efficiency so one megajoule final,
+0.95 megajoule useful. How much energy do you
+need to produce that? You might have a tanker
+or the pipeline, have some losses
+on the pipeline, you need to transport that. You will have order of magnitude 1.2-1.25 megajoule primary
+per megajoule final. Now let's move to electricity. One megajoule final, how much in the house?
+Hundred percent. Everything degrade in heat. You get here one
+megajoule useful, so great, 100 percent
+efficiency for the electricity. That's pretty good. Now, what upstream
+from the electricity? The electricity is high exergy, high-quality and we
+measure the quality of energy in exergy which is the potential to create mechanical energy
+with this energy. Electricity has more than
+95 percent potential for creating the
+mechanical work, much higher than heat. But that means that
+when you want to transform heat into high exergy, you have losses and
+substantial losses. In fact, we are heating the part at either
+nuclear power station, gas power station, or coal power station; you have these big
+towers and you will lose about 2/3 in the
+atmosphere or you have your longer
+lake or river and you will heat fishes in that
+case and heat the water. One megajoule final, 3.4 mega joule primary
+are necessary. Who was saying that for
+heating electricity is a good idea and efficient
+because in fact, it's a ratio of 3.4:1? Again approximately 1.3:
+1 delivered in the house. The gas is much more efficient and should
+be kept for heating, whereas electricity should
+be kept for producing mechanical work in cars or different application
+in our case. Now, electricity
+is often expressed not in mega joule but
+in kilowatt hour final. That's what usually you buy. As you have 3,600 seconds and a joule
+is watt times second, we have in fact, one kilowatt-hour final
+is 3.6 megajoule final. One kilowatt-hour final, one kilowatt-hour useful but
+in terms of primary energy, this will be in fact 3.4 and these are
+megajoule primary per megajoule final time
+the 3.6 we have here which is megajoule final
+per kilowatt-hour final. When you get that, you get 3.4 times 3.6, this is equal to 12.1 mega joule primary energy per kilowatt-hour
+final in that case. You have to be really
+careful that we always say what type of energy
+we are using. What are the typical values for different ores or
+energy vectors, energy carrier that
+you have available? We have a whole survey
+which is around 40 here. Down here kerosene, light fuel, heavy fuel oil. The oil-based material
+are around 42, 43 megajoule per kilo,
+relatively high density, higher than for example, the bio-gas or the
+hard coal or the lower quality coal which is even
+lower here which can be even lower than 10
+megajoule per kilogram. This is useful. When we want to calculate the primary energy, we will take the amount of crude oil extracted and
+multiply by this value, and that will give us this total megajoule
+primary energy extracted.

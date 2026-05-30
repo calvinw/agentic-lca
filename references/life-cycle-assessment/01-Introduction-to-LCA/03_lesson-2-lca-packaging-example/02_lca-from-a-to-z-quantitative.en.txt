@@ -1,0 +1,95 @@
+So let's continue our LCA from A to Z. And our example of bio-based material. But this time let's go to Part B,
+which is the quantitative and really the life cycle assessments of. If we want to do better
+than our intuition and our qualitative discussion,
+LCA is there exactly for that to try to analyze in
+detail what's going on. So our learning objective
+is described the different objective of each of the LCA phase. We'll identify these phases and look what
+they are doing through this example and identify the most critical element when
+comparing these two packaging product for filling material, either the bio-based or
+the oil-based materials. Okay, so quantitative life cycle
+assessment is an environmental assessment method, and
+it first defined the goal and scope phase number one of the LCA
+defining the golden scope of the study. Seems a bit simple or
+obvious, but it's not. In fact that's where they could be the
+most bias is probably at this stage here. Once we have defined our system
+boundaries in particular we will perform the inventory and determine
+the inventory of resource extraction and of emission for
+example as a mission the NOx C02. Or carbon monoxide CO,
+which is emitted over the whole life cycle of my polystyrene from
+resource extraction up to use and disposal over the whole
+life cycle of the product. And in addition then we will look
+all these different emission. We will look at the impact assessment what
+impact they have on humans and ecosystem. And finally, we will, phase four is to interpret which
+is in fact all the way through. We interpret after the goal definition
+after the inventory of extraction and mission and
+of course after the impact assessment. Let's see how to apply
+that to our popcorn story. So if we take a renewable here
+packing material system boundaries, we first have to extract the energy
+from the soil, the oil, refine it. We use this energy within
+an industry which is for example, preparing the fertilizer that
+you apply on your field and then on your field you
+might have nitrate or phosphate leaching which is
+living here the emission. Ammonia emitted in to the air NH3 for
+example. Denitrification, this is N20 which
+is also a greenhouse gas and in addition I will have my tractor which
+is having some emissions that I have here. In this study from 1992, we didn't
+have the infrastructure covered for all the oil extraction for
+my oil-based material. So as I didn't have that,
+we excluded the tractor. I was in a research station,
+an economical reserve station, so I could have in fact model my tractor but
+to be a bit consistent here we did that. Nowadays, the databases have
+the infrastructure, and we don't need to exclude that. So we will include it. We transport our corn, we dry it, then we transport it to the place
+where we will have my big popcorn blower with hot hair and
+I can put it in my package. We excluded here the usage of the package,
+but we included the waste disposal either
+by incinerating it or by composing it, which is one of the advantage of
+the popcorn that you could compost it. Okay, so we've done our system boundaries. Now, we are looking for
+each of these processes. We have emission and
+these emissions are crossing the boundary and
+the inventory is in fact the sum of all the emission which
+are crossing the boundary. Or all the resources which
+are arriving from the ground taken from the ground into my product system. Results here for the emission and
+extraction inventory, polystyrene versus popcorn. So let's ask me back to the question, how many times is popcorn
+better than polystyrene? According to this inventory where
+we have carbon dioxide particle, carbon monoxide, ammonia nitrates and
+the energy is just a small extract. At that time I had about 30 flows and
+now as an ecoinvent will have more than 1000 nearly
+flows which are modeled. So how many times better? Okay, we can say carbon dioxide, this is about 9 time
+better popcorn particle. This is about 6 time better for
+carbon monoxide. This is about 3.4 time better. But, and
+let's perhaps finish the better part where 81 it's more than 10 time better for
+the energy. So we should say [SOUND] this is
+about three to six times better. But we see that for any three. In fact, it's worse here and
+worse for nitrate. Why for this emission? Because this emission
+associated with agriculture. So we could expect that ammonia and
+nitrates which are coming from the fertilizer's application would
+bring some additional emission here. So we have a trade-off to analyze. So what is more important is
+it the greenhouse gas emission like C02 or
+is it this agriculture emission here? That's the goal of an impact
+assessment to determine that. And here I'm taking the impact 2002
+which is the method we developed in the early 2000 in my team
+when I was still in Switzerland. And the results this emission and
+extraction are transferred and waited to give a score in each of these
+impact category like human toxicity, fine particular respiratory effects, whether we have the global
+warming effect for example. Or the non-renewable
+energy that we have here. And then we aggregate all the human
+data together to human health score which is in DALYS that
+we have seen and used already. Ecosystem qualities and other at this
+stage we were keeping the climate saying separate as an impact
+separate damage category, and we had the resource extraction which
+was energy based in that case. So we do that, and we combine and
+at this stage I didn't have at that time yet
+impact 2002 we were 1992. So I had developed this
+critical surface time method, critical volume in a which was
+just comparing two talks here. We were taking the fate of substance. So that was a better method here. And this is a target based method
+comparing to the to the national target of reduction. For each you see the composition here
+is each of the substance polluting. We find them the contribution
+to the total impact and we've taken here 100% for polystyrene and popcorn is the second column for
+each of these three methods here. So by watch factor is polystyrene
+better than popcorn per kilo material. Okay, we see about three
+times better here. Nearly four times better here and
+2.5 times better here. So 3 to 4 times better. That's probably what we see
+here after our impact assessment. So we could conclude popcorn
+after the quantity of assessment is 3 to 4 times
+better than polystyrene. Really. Okay. Think a bit. Take a critical view of how
+the assessment is performed. Don't we have some bias somewhere. Think of it

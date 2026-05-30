@@ -1,0 +1,133 @@
+Now we have these two bulbs, and it's great to have
+the fluorescent bulb because we have reduced
+our consumption. What could be the
+problem with it? Problem could be this one
+needs a bit more time, so what I did when we
+were using this one, now I've moved to LED, but when I was using that, I was using slightly
+higher intensity so that when I switch it on, my wife will not complain, and we will directly get the
+good light in that case. Second problems on this, remember this was especially when it appeared in the 1990s, this was substantially
+more expensive. The service here
+more expensive with the fluorescent or
+nowadays the LED, then with an incandescent
+bulb, let's look at that. To look at that, it's
+not anymore LCA, we're going out of a
+life cycle assessment, we are starting to do
+life cycle costing. And the beauty is
+that reference flow was what is needed to be purchased to ensure
+the function. So this is also the basis, the same reference flow can be used to do a life cycle costing, adding as an information
+the price of my purchase in addition to the
+quantity we have already determined in
+the reference flows. Let's try to do it together. We have here our 300 kilowatt-hour
+per functional unit, which was the electricity use. Price of electricity, we could say here, $0.1 or 10 cent
+per kilowatt-hour. Here we would have a total of $30 consume over five
+years in our case. Let's compare here, and we have 65 kilowatt-hour times
+$0.1 per kilowatt-hour. Over these five years, we only have $6.5 here, that's a substantial difference, we've saved here about $23.5. Now, if we take our bulb, first we needed five bulb here, so we need five times, I assume they are
+like 50 cent each, that's $2.5 for the bulbs. Whereas with the incandescent, the fluorescents, I
+will use only one here. So even the bulb themselves
+in this hypothesis is in fact cheaper with the fluorescent
+than incandescent. If we move it
+further to the LED, which should last even
+longer if they are of reasonable quality
+than the incandescent, will also not really increase substantially as the price of
+the purchase at the start. Now we have $30 doing for
+the electricity $2.5, we get $32.5 here,
+and here $8.5. We saved a substantial amount of money in these difference. Making it efficient, in fact, make us here in a
+win-win situation, which is very interesting
+because we saving both for the environment related to electricity consumption
+and also money, which is also related to the
+same energy consumption. Life cycle costing
+can be made on a similar basis
+combining the quantity, obtaining the LCA with
+the price to get that. But as I said, this is not anymore LCA, we were not going to study
+that in detail in the future. Let's look a bit at these
+key parameter we've seen, and the first is a
+light efficiency here in lumen per watt on this graph. You see the low efficiency
+of the incandescent bulb, which are down here, and the fluorescent bulb already better in terms of
+efficiency in that case. You have light which have even higher efficiency like
+sodium lamps in the past, which were used in the streets. Nowadays it's interesting
+that was when I studied or finished my study I was doing my PhD
+between '83 and '88, we didn't have LED. LED came really at
+the end of the '90s, I remember buying an
+LED for my class, but the light used was really a perhaps 100 lumen instead
+of 800 at that time. But now we see that
+if I look here at the electrical consumption
+for a given flow, if I put my 800 lumen
+here that we have, we have this reduction, substantial reduction for incandescent to the fluorescent. Small increase, but
+still important increase from the fluorescence
+to the LED, but less gain than what we have had in the previous stage. Also technological
+improvement needs time. We see that compared
+to a candle. This is a log scale which
+was 0.1 percent efficiency. Here we are now with the LEDs rather close to
+the 50 percent efficiency, so much better and
+that's the reason why now inside the house it's really interesting to change all
+your bulb to LED because in fact you're paying electricity
+at a much higher level, so when you move, just change all the bulb
+that's cost-effective and that's good for
+the environment that you want to do that. This change has
+made time we needed 150 years to reach the
+level we have with LED. The same with motor
+engine efficiency have increased with time, but have increased
+relatively slowly between the first steam engine and the gas turbine that
+we start having here with high efficiencies. If we summarize our
+different results, the functional unit
+is the common unit representing the
+function of the system. It's not something we purchased, it's representing the
+offered service and it will provide the basis for
+scenario comparison. All inventory emission will be calculated per functional unit. The functional unit is the
+same for all scenarios. It is quantified value. It's an additive value in the sense if I double
+the functional unit, it should double my emission, so functional unit
+is not a ratio, so if you use a unit you're
+taking is something per hour or something per another metric. This will not work
+because it's not an additive metric in that case. If you study the components of, for example a plane engine from a larger product
+which will be my plane. Functional unit
+refer generally to the overall function for the consumer and
+this is the plane, so this will be, we need even if we are
+studying the reactor, we need to put it in
+its context where this object become useful and
+offer really its service. The plane engine is offering
+some service for the plane, but it's useless unless
+the plane is flying and really providing to the
+consumer a given service. You can arbitrarily
+select the amount of fractional unit you fix as
+a reference for comparison. This is your choice, just take a convenient one which
+speaks to people for that, but be careful as the example
+we had here with the lumen, when what you need
+to buy per functional unit changes as a
+service duration. My electricity consumption
+is changing as my service is lasting longer and the amount of service is
+doubling with time. You need to make the
+service duration explicit in the functional
+unit and beware. That will be not per hour. That will be like we
+had 800 lumen during, and that will be expressed by during and during is expressed by multiplication not division. We don't want and I say it's
+not a ratio in that case. Some functional unit already
+implicitly account for the duration of the service
+like one kilowatt-hour. In fact it's already
+multiply by an hour. It's one kilowatt during
+an hour in that case. If I would compare different electricity
+mix, for example. That was the functional unit, so now let's look at the corresponding
+reference flows and environmental parameter. The reference flow
+is what you buy, and it provide for
+each scenario, and that's different
+specific for each scenario. It differs here
+for each scenario, the quantity needed
+per functional unit. Don't put too many things, don't in your reference
+flow put the aluminum needed because you don't buy the aluminum independently
+of the bulb, you buy a bulb, so think
+what am I purchasing, what am I buying to
+get my service and put the fraction of what I'm
+buying and remember, with a fixture it could be less than one that
+you have depending on the functional
+unit that you have chosen and it needs
+to be quantified, it's not glass or it's not bulb. It's how many bulbs
+per functional unit. . The key parameters for the
+environmental optimization are multiplicative
+factors that relate the functional unit to
+the reference flow. It's which parameter is
+making what I need to purchase high and they may be directly proportional
+to this factor. The product lifetime
+might be important. The number of reuses might
+be important because if you can reuse the number
+of use is increasing, you need less purchase in that case, and
+the consumption, which is linked to the
+efficiency that we have seen here with our
+different types of bulb.

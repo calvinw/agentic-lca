@@ -1,0 +1,121 @@
+How do we handle when
+a process is producing simultaneously different core-products. How to separate and attribute part
+of the emission to one product and the other part to the second one,
+that's what we are going to see. And our objective is how to handle
+core-product in life cycle assessment. And we will identify suited
+allocation method to the problem and rules for
+good versus inappropriate practice. So let's look at the allocation
+between two products and let's take an example to decide
+how to separate two products. So let's take a wheat crop. And this wheat crop, you have different
+operations like the plowing and harvesting and all this operation and at the end you have your wheat
+that you were intending to obtain. But in addition you also have some
+straw that you have produced. And the question is the raw
+material extraction for the detail of the tractor for example or
+the emission from that same tractor, how to separate them and allocated partly
+to the straw and partly to the wheat, because in general we are interested in
+the wheat for example for bread making. So to do that,
+we need an allocation procedure and keyword here is causality. We only will accept to do it if there
+is a causality relationship and we will use method based on causality. Let's look at what 14 or 44 is proposing as a preference order,
+okay? So the allocation method
+can be applied and each of these allocation only
+if they fulfill the respective condition of use and
+have this causality principle and this should be done in
+the following order of preference. First we propose to do process separation. If it is possible to disassociate
+the different production system. So let's take our straw and our wheat. So the straw here and
+the wheat product A, okay? And let's think of plowing our field,
+okay? Does plowing belong to wheat or to straw? We cannot separate that
+we need the plowing, we need the sowing of the wheat and
+this will both produce wheat and straw. So this approach is not
+applicable in this situation but it could be partly apply
+when we think that for the straw bales and
+the baling here of my straw. This really only belong to B. So from the point of harvest
+everything which is downstream from that should be attributed
+either to the straw or to the wheat, but
+not to both of them in that case, okay? But not really possible to
+apply fully in that case. The second method to apply in
+order of preference is what is called system expansion. The idea is to say,
+my core product B, okay, is in fact substituting another product in
+the economy that we don't need to produce. Let's call it product product B prime,
+which has a similar function but not necessarily exactly the same or
+not the same way to produce. Let's take an example,
+if you're in Denmark and you produce straw,
+straw is often used for producing heat. And if you produce heat here, okay, you may be substituting heat
+production from natural gas. Okay, so now the idea is to say
+we can subtract to process A and B, the emission associated
+with the heat of natural gas that we haven't avoided burden
+sort of bonus for that. And so we will say that the emission of product A equal to the emission of product (A + B)- the emission of product B prime, okay? And that's away which is
+relatively rigorous but and there is a bad this is only valid
+if B is indeed substituting B prime. So if the substituted core product
+is fully defined known and it really happens okay,
+but if it's the case, this is this is really a good procedure. The third possibility is to
+do physical allocation and for example, on the basis of mass or
+energy content, but this is only valid if there is
+a causality between the mass and the amount of each of these
+products of the emission associated with each
+of these two products. So if we take the case of the wheat and
+the straw, we could think that if you feed both
+the wheat and the straw to a cow and that can happen in in in in
+some cases not very common, but it happens okay,
+you could take X as typically the nutritional content
+of the of the feet, Okay. Or the the energy in the feet and allocate proportionally to the energy
+produced via the wheat and the energy produce and
+fed to the cow via the stroke. But now if wheat is used for bread making,
+we are not eating the stroke. So we cannot use the energy content
+as a basis for allocating this. So in that case we we were not
+going to use this approach and we jump on the fourth approach
+which is generally nearly always applicable is a financial and
+economic allocation. Okay.
+And here the economic allocation is a measure of the incentive for producing. And so we will assess the value of process
+a product A the value of product B. And we reallocate
+proportionally to these values. two points linked to that some people
+will argue, But prices fluctuating. So how how can we have a reliable
+method If if price can fluctuate, I would say this is really realistic
+because when you look at people and the producer will adapt
+their production and what they are doing
+according to the price. If I take the example,
+presently the price of straw is about 1% okay of
+the price of the wheat Which represent 9 99% of the overall value. But if the price of straw
+would become 10 times higher, I'm sure that the the producer
+will change the variety. For example of the wheat he is
+producing to get longer stro or to produce maestro versus the wheat. And presently the contrary as
+the value of straw is low producer and farmer will use growth regulator
+to limit the height of the weed so that the we'd stay and doesn't break and
+the windy condition so that when the harvest comes
+the wheat is still standing and we don't lose part of the yield
+because the stem have been broken and the yield cannot the grain
+cannot be harvested. Okay so this varying price would
+correspond also to varying practices. So I think we we we reflect
+well the incentive for production last choice which is not
+really a good one is value choices or arbitrary parameter which lead
+also to arbitrary results in that case does allocation matters. It does matter. Let's take our example of wheat and
+stroke. If we use the straw for heating and apply the system expansion
+a pros we see that for a total of about 27,000 mega jewel, okay. For the total of the of
+the crop which is the sum of these two flow here we
+will have 93% attributed to the straw because
+the straw is able to produce 25,690 mega jewel of
+heat which substitutes an equivalent amount from the natural gas. But look if we now Say
+it was not just heating, it was a co generation of heat and
+power which is I think often the case then even we will
+produce more than the production. So we will attribute 126% of
+the energy to the stroke. Because my wheat crop
+becomes productive of energy, it's not consuming, it's producing
+more and we get the bun use for the wheat because we have
+produced more energy and we have minus 20% of energy
+associated with that. On the other hand when So
+here these two cases it's very small amount of energy which is allocated to
+the straw and the same for the C02. You see only 17% and 4%. Now look what you do if you rain,
+cooperate you throw in the soil and replace some basically
+first fade fertilizer. In that case it's only a a small bonus,
+a small compensation of substitution and you allocate only 1.5% to the stroke and
+you get 98% to the wheat. So really inverse results compared
+to the stroke for heating for example and the financial
+allocation as we saw is 99% for the wheat and 1% for the stroke. So radically different results
+according to the method and so that's why these hierarchy
+of approaches is important. But again we can only apply
+the system expansion if we know the substituted product and
+it really happens. So in summary for allocation allocation
+can play a substantial role and bias results if not appropriate. One of the mostly common bias is to apply
+mass of physical allocation without underlying causality relationship,
+which is not good practice. In such cases,
+even an economic allocation is more appropriate as representative
+of economic causality and incentive for producing each core product.

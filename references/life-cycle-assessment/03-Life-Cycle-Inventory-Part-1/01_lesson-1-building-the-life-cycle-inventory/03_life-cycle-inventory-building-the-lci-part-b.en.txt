@@ -1,0 +1,122 @@
+How do we do that? We want to use a
+step-wise procedure. This step-wise procedure
+works as follow, and we're going to illustrate
+it with a case of aluminum. This is an aluminum tube which was used in fact
+for Delta plane. When I did my first internship
+nearly 40 years ago and when the person doing
+that had some extra one. I'm using them for
+volleyball poles, but they are extremely rigid, very light and this is the basic material
+for transportation, especially air transportation, everything in a plane is made
+either of light aluminum or very light plastic in certain
+fibers in certain cases. Very interesting materials. What are the impacts
+and the emission for one-kilo aluminum
+liquid that we produce? Let's take the example
+of heat waste. It's an emission of heat and emission of megajoule
+to the environment, waste heat to the environment. First, we need to find
+the direct emission and extraction factors
+of each process per kilo for each process. The megajoule heat waste
+per kilo aluminum liquid, but also the megajoule
+heat rate for example, for the kilo aluminum hydroxide that we had when we
+built our system. Second, we have
+already identified the intermediary flow
+per functional unit when we were building the process system so
+we know how to do that, we don't need to redo again. But we have this kilo aluminum hydroxide
+per functional unit, which was 2.96 kilo
+per functional unit. Now, we multiply basically the kilo aluminum hydroxide
+per functional units times megajoule heat waste per
+kilo aluminum hydroxide and the kilo aluminum
+hydroxide go away and you get your inventory flow
+per functional unit. This is what we want in megajoule heat waste
+per functional unit, so all the flow. Then we sum them, we do the sum of it and the sum will give me my total
+inventory flow. I can know what is the
+contribution of each of these unit processes to the
+total that we are obtaining. Let's do that for the
+aluminum primary liquid. Direct emission
+of heat is large, is 56 megajoule
+per kilo aluminum because in the electrolysis, which is done to get my
+aluminum primary liquid, I'm consuming a lot
+of electricity. We have 15-kilowatt-hour
+electricity which is consumed here. This electricity
+becomes all heat. We have 3.6 megajoule per kilowatt-hour that
+gave us the amount of 56 megajoule per kilo
+aluminum plus a few from the heat server
+that we have here. But we have also all
+these intermediary flows. Either the disposal side or which means I need to account
+for the supply chain. This is just what's happening in the final manufacturing
+of my aluminum here that I need to go now and collect data in the
+entire supply chain. We have designed
+our process system and we know the quantity
+now which is used. For example, we had these 2.96, which was the combination
+of the amount of aluminum oxide per functional unit per
+kilo aluminum time, the amount aluminum hydroxide
+per kilo aluminum oxide. We have all these data and now we will multiply this
+data by what we need to find first and it's
+really the first step now for our different
+processes of the supply chain is to get now the direct emission of
+each unit processes. For example, for
+aluminum hydroxide, we have 0.503
+megajoule heat waste per kilo aluminum hydroxide. How do you get these data? They can be found first in
+databases because we want to be efficient or we are lazy. I'm not sure I'm lazy, but I love efficiency
+so if I can find data, this is much quicker. You can find it from
+the literature. For a given product, you might have people
+who have done a study, not necessarily put
+it in a database. But that could help you or a similar product which
+will help you along. Some website, but you
+have to peer-review the quality in that case and
+if you don't find anything, you make a direct
+data collection and this is by a
+questionnaire with the company who are producing it or direct measurements here. When you collect it, you collect usually all the flow for
+unit process altogether, either from the literature or from measurement or databases, so that you get both
+the elementary and the intermediary
+flow together so that you can even
+perform a mass balance. Once you have that we see here we've collected
+for each of the process, in addition to the 56 megajoules direct I have here the 0.5, and this is here
+megajoule heat waste per kilo aluminum hydroxide. I have a little per
+kilo aluminum oxide. I have a bit more
+megajoule heat waste per kilo and all, etc. I do it for each of the process. We have determined now the amount here per
+functional unit of each of these process and we
+have now the amount of heat. We can basically multiply the intermediary flow by the elementary flow
+per unit process. Here it's megajoule
+heat waste per kilo aluminum hydroxide
+and when I do that, I get rid of the kilo
+aluminum hydroxide and I obtain 2.96 times
+0.5 is nearly 1.5 or 1.49 and that will be megajoule heat per
+kilo aluminum liquid, which is our
+functional unit here. Per functional unit, it's a cradle to gate. This is the output of the aluminum liquid
+industry, which is here. I can repeat that for
+each of the process. I repeated 0.449 time 1.4, 57.7 time 0.049 and I get a certain amount
+per functional unit. It's all reported to the
+aluminum primary liquids. But I have the contribution from each different processes here, then I find my 1.49 megajoule heat waste
+per kilo aluminum. When I do that, then next step, we sum it up and we want the total for my aluminum
+primary liquid will be the sum of all these
+megajoule heat waste per functional unit and
+that's what you get here. Fifty six, this is a
+direct 0.07 is small the aluminum oxide and you can identify what are the
+big contribution. You can see that after the direct contribution of
+my electrolyzer is here, I have the truck transportation, then the electricity mix, and the transoceanic freight, and then comes the
+aluminum hydroxide, for example, in our case. You sum them up and you
+arrive here to 66.6 megajoule heat waste
+functional unit here that we are obtaining. Now we can repeat that not only with the
+megajoule heat waste, but with each of the
+different flows. The arsenic, the benzo[a]pyrene, which is PAHs, and of course, some carbon dioxide,
+fossil carbon monoxide. I repeat that, accounting
+for the entire supply chain. This is now my
+aggregated inventory for my one-kilo aluminum
+primary liquids at plants. Question, among these which one we should
+color in green as elementary flow and which one we should color in blue
+as intermediary? Think a bit and look at these
+flows. You can pause even. First hint when you look
+at what is entering, you see that you have in ground. All these are in ground, so they are really apart
+from the occupation forest, but which is also directly from the occupation of the land. But these are therefore
+elementary flow. They are taken from the environment and
+on the emission side, you see these are all
+different type of emission. We don't have anymore
+disposal process because the intermediary was used to calculate the
+elementary per functional unit, but then we don't
+need to have it. In fact by definition, we sum only elementary flows. All these flows are
+elementary on both sides. When we look, of course, at an aggregated inventory,
+which is higher, we have 66.6, whereas the
+direct emission were only 56. The 10 additional
+megajoule or 10.6, are coming from the anti, supply chain and this is valid. It will vary according
+to each flow, depending what is the
+dominant process.

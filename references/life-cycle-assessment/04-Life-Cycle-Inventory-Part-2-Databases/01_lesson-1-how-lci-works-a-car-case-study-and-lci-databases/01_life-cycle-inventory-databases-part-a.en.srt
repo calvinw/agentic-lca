@@ -1,0 +1,697 @@
+1
+00:00:10,148 --> 00:00:15,877
+Where to find consistent and
+high quality data.
+
+2
+00:00:15,877 --> 00:00:19,657
+How how can we recognize what data,
+
+3
+00:00:19,657 --> 00:00:24,573
+good quality and
+where the place to find them.
+
+4
+00:00:24,573 --> 00:00:26,262
+This is our goal for today.
+
+5
+00:00:26,262 --> 00:00:31,194
+And the learner objective is
+to describe the different life
+
+6
+00:00:31,194 --> 00:00:35,248
+cycle inventory database
+which are available.
+
+7
+00:00:35,248 --> 00:00:38,654
+It's to illustrate the data
+format of one specific and
+
+8
+00:00:38,654 --> 00:00:41,774
+mostly used database,
+the ecoinvent database.
+
+9
+00:00:41,774 --> 00:00:46,182
+The database is to recognize
+different types of data and
+
+10
+00:00:46,182 --> 00:00:50,794
+energies based inventory flows and
+use them adequately.
+
+11
+00:00:50,794 --> 00:00:55,316
+And finally, to identify source for
+direct data,
+
+12
+00:00:55,316 --> 00:01:01,853
+life cycle inventory, data collection,
+LCI for life cycle inventory.
+
+13
+00:01:01,853 --> 00:01:04,921
+Good.
+So, first in the life cycle inventory
+
+14
+00:01:04,921 --> 00:01:11,505
+database, we have two types of modeling
+which are answering different questions.
+
+15
+00:01:11,505 --> 00:01:15,193
+The first time is the attributional LCA.
+
+16
+00:01:15,193 --> 00:01:19,928
+Where we look at a product and
+we look at what
+
+17
+00:01:19,928 --> 00:01:24,929
+are the share of the activity
+in the world that
+
+18
+00:01:24,929 --> 00:01:29,678
+have really contributed to that product.
+
+19
+00:01:29,678 --> 00:01:34,146
+So can be attributed,
+allocated to the given products.
+
+20
+00:01:34,146 --> 00:01:40,476
+What is the average share of the impact
+that this product is responsible of?
+
+21
+00:01:40,476 --> 00:01:45,546
+And for this we use typically
+average electricity mix
+
+22
+00:01:45,546 --> 00:01:51,178
+that we consider because if
+this process use electricity,
+
+23
+00:01:51,178 --> 00:01:55,118
+we assume that it will
+use the same share of
+
+24
+00:01:55,118 --> 00:01:59,076
+electricity as the other in the same mix.
+
+25
+00:01:59,076 --> 00:02:05,433
+Making with the same proportion between
+nuclear gas power plants or hydro
+
+26
+00:02:05,433 --> 00:02:12,215
+that we get our coal power plant that we
+get this average sort of contribution.
+
+27
+00:02:12,215 --> 00:02:16,827
+The other approach is
+called consequential.
+
+28
+00:02:16,827 --> 00:02:19,912
+And in consequential approach,
+
+29
+00:02:19,912 --> 00:02:24,769
+you want to study what is
+expected to change, okay?
+
+30
+00:02:24,769 --> 00:02:29,285
+In the environmental impact
+when suddenly you add
+
+31
+00:02:29,285 --> 00:02:33,059
+a product to the present economy, okay?
+
+32
+00:02:33,059 --> 00:02:37,010
+So, when producing consuming and disposing
+the product, what are the change?
+
+33
+00:02:37,010 --> 00:02:41,595
+So you want to identify marginal change,
+
+34
+00:02:41,595 --> 00:02:44,742
+here marginal is a key word.
+
+35
+00:02:44,742 --> 00:02:46,917
+And it means you will look,
+
+36
+00:02:46,917 --> 00:02:51,646
+for example, if I add a certain
+electricity consumption,
+
+37
+00:02:51,646 --> 00:02:56,660
+what is the likely additional
+technology which will either for
+
+38
+00:02:56,660 --> 00:03:03,204
+example, in the growing market is likely
+that the new plants are gas power plant.
+
+39
+00:03:03,204 --> 00:03:06,728
+So you will use only electricity from gas.
+
+40
+00:03:06,728 --> 00:03:09,488
+Or if you are in a decreasing market,
+
+41
+00:03:09,488 --> 00:03:14,739
+it's likely that coal power plants
+are the ones which are fazed off and
+
+42
+00:03:14,739 --> 00:03:18,937
+which will be considered for
+the marginal change here.
+
+43
+00:03:18,937 --> 00:03:23,741
+You have to be careful when you
+do consequential because you
+
+44
+00:03:23,741 --> 00:03:28,267
+have the risk that you are only
+taking marginal change.
+
+45
+00:03:28,267 --> 00:03:31,977
+But within the time of
+your product system,
+
+46
+00:03:31,977 --> 00:03:36,289
+if you study for
+example electricity production or
+
+47
+00:03:36,289 --> 00:03:41,114
+energy production,
+a power plant will stay 40 years.
+
+48
+00:03:41,114 --> 00:03:45,521
+During 40 years, it's unlikely
+that the change are marginal.
+
+49
+00:03:45,521 --> 00:03:50,952
+So personally, I'm a bit more tendentially
+using by default attributional.
+
+50
+00:03:50,952 --> 00:03:56,366
+But I have colleagues who are very
+strongly in favor of consequential but
+
+51
+00:03:56,366 --> 00:03:59,650
+it really depends on
+the type of question and
+
+52
+00:03:59,650 --> 00:04:03,931
+I would say the timescale of
+the product you are looking.
+
+53
+00:04:03,931 --> 00:04:07,237
+If you're just looking
+at one point in time or
+
+54
+00:04:07,237 --> 00:04:11,241
+if you're looking on the longer
+term of the decision.
+
+55
+00:04:11,241 --> 00:04:16,595
+So now, where do you find
+life cycle inventory data?
+
+56
+00:04:16,595 --> 00:04:21,733
+And to do that first you rely on
+existing databases if you can.
+
+57
+00:04:21,733 --> 00:04:26,218
+Because it's a lot of work to make your
+data some people are really good at that.
+
+58
+00:04:26,218 --> 00:04:32,367
+But when you do that and you use database
+for all your background processes the one
+
+59
+00:04:32,367 --> 00:04:38,711
+you don't study perhaps in priority you
+need to ensure consistency between data.
+
+60
+00:04:38,711 --> 00:04:40,664
+Data coming from two different database.
+
+61
+00:04:40,664 --> 00:04:45,719
+You have to be very careful if you
+mix them in in a common LCA here.
+
+62
+00:04:45,719 --> 00:04:50,507
+The good news is a lot
+of data are available.
+
+63
+00:04:50,507 --> 00:04:54,723
+The bad news is which one to choose
+because you need to make choices because
+
+64
+00:04:54,723 --> 00:04:57,321
+you have several possibilities sometimes.
+
+65
+00:04:57,321 --> 00:05:04,353
+Second, you could adapt existing
+data to your product or services.
+
+66
+00:05:04,353 --> 00:05:09,590
+And accounting from what type of
+technology and three technology is really
+
+67
+00:05:09,590 --> 00:05:14,753
+important and the age of the technology or
+the country or region studies.
+
+68
+00:05:14,753 --> 00:05:17,485
+I think the type of
+technology is more important.
+
+69
+00:05:17,485 --> 00:05:21,368
+I was told by people from
+the aluminum production for example,
+
+70
+00:05:21,368 --> 00:05:26,066
+that it's not very relevant where
+the plant is in China or in South America.
+
+71
+00:05:26,066 --> 00:05:30,812
+But it's very relevant
+if the plant has been
+
+72
+00:05:30,812 --> 00:05:34,925
+built after 2010 or in the 90s.
+
+73
+00:05:34,925 --> 00:05:39,950
+In contrast to some of the, for
+example, the plant which have been
+
+74
+00:05:39,950 --> 00:05:45,606
+built in Canada and in Switzerland
+which are substantially older plant and
+
+75
+00:05:45,606 --> 00:05:49,488
+with not as efficient
+technology than the new one.
+
+76
+00:05:49,488 --> 00:05:55,397
+And then if you don't find the data,
+[INAUDIBLE] you can collect new LCI data.
+
+77
+00:05:55,397 --> 00:05:59,832
+This is especially for the foreground
+system which is under the control of
+
+78
+00:05:59,832 --> 00:06:03,631
+the industry you are studying or
+the product you are studying.
+
+79
+00:06:03,631 --> 00:06:07,816
+For that it's hard work and
+you need to be systematic.
+
+80
+00:06:07,816 --> 00:06:12,439
+This is really underlying twice
+because this is really important.
+
+81
+00:06:12,439 --> 00:06:14,416
+I'll come back on that.
+
+82
+00:06:14,416 --> 00:06:19,643
+Now, I'm very I mean interested,
+and proud of what the life
+
+83
+00:06:19,643 --> 00:06:26,323
+cycle initiative has been doing colleague
+work on our life cycle inventory.
+
+84
+00:06:26,323 --> 00:06:29,817
+I'm really especially from
+life cycle impact assessments.
+
+85
+00:06:29,817 --> 00:06:31,847
+Not so much of inventory.
+
+86
+00:06:31,847 --> 00:06:37,774
+But 20 years ago working on life
+cycle inventory we were thinking that
+
+87
+00:06:37,774 --> 00:06:43,305
+we needed in addition to a scientific
+society which was at that time
+
+88
+00:06:43,305 --> 00:06:48,860
+SeaTac the society for
+Environmental Toxicology and Chemistry.
+
+89
+00:06:48,860 --> 00:06:53,510
+That we would really profit
+to have an institutional
+
+90
+00:06:53,510 --> 00:06:58,266
+partner who will motivate
+people to expand either for
+
+91
+00:06:58,266 --> 00:07:04,412
+impact assessment or for the inventory,
+the availability of data.
+
+92
+00:07:04,412 --> 00:07:10,631
+And we wrote an email in May 1999 to UN.
+
+93
+00:07:10,631 --> 00:07:15,322
+And at that time the UN secretary Kofi
+Annan had just mentioned the importance
+
+94
+00:07:15,322 --> 00:07:16,411
+of supply chain.
+
+95
+00:07:16,411 --> 00:07:20,941
+So in two weeks, we were in Paris and
+
+96
+00:07:20,941 --> 00:07:26,077
+we really started with the colleague and
+
+97
+00:07:26,077 --> 00:07:33,944
+the director of the UN environmental
+program Mrs. Jaqueline Aloisi de Larderel.
+
+98
+00:07:33,944 --> 00:07:39,693
+We started in fact what is now called the
+life cycle initiative has been running for
+
+99
+00:07:39,693 --> 00:07:45,132
+the last 20 years and has now produced
+this global LCI data access network.
+
+100
+00:07:45,132 --> 00:07:50,779
+Where you can put data set you're
+looking for strawberries you search and
+
+101
+00:07:50,779 --> 00:07:54,798
+here you see you find 74
+data asset worldwide.
+
+102
+00:07:54,798 --> 00:08:00,105
+Here you have dataset from Japan but
+you have the ecoinvent dataset which
+
+103
+00:08:00,105 --> 00:08:05,764
+are there and you know what exists
+basically all the main datasets are there.
+
+104
+00:08:05,764 --> 00:08:09,145
+This is really cool that
+didn't exist even a year ago.
+
+105
+00:08:09,145 --> 00:08:12,270
+It's two months old and really precious.
+
+106
+00:08:12,270 --> 00:08:15,130
+Just to have a look at that and
+a small demo.
+
+107
+00:08:15,130 --> 00:08:21,939
+Let's go on their website and
+see how it's working.
+
+108
+00:08:21,939 --> 00:08:26,859
+Okay, so you arrive here the global
+LCA data access network.
+
+109
+00:08:26,859 --> 00:08:29,253
+And you can search a dataset and
+
+110
+00:08:29,253 --> 00:08:33,589
+let's take coconut as an example
+that we could search.
+
+111
+00:08:33,589 --> 00:08:37,633
+So we searched datasets for coconuts.
+
+112
+00:08:37,633 --> 00:08:41,824
+And you see that you get a lot of dataset,
+
+113
+00:08:41,824 --> 00:08:45,530
+203 dataset that you have here.
+
+114
+00:08:45,530 --> 00:08:49,754
+And that goes from
+Japanese that I said here.
+
+115
+00:08:49,754 --> 00:08:54,320
+Which could be all sorts of
+use of coconut here, soap,
+
+116
+00:08:54,320 --> 00:08:58,006
+synthetic detergent here for coconut oil.
+
+117
+00:08:58,006 --> 00:09:02,431
+You will have some eco invent
+processes with different
+
+118
+00:09:02,431 --> 00:09:06,672
+perhaps type of allocation which are here,
+and so.
+
+119
+00:09:06,672 --> 00:09:12,316
+So that's a bit intimidating in some
+respect to have so many process
+
+120
+00:09:12,316 --> 00:09:18,767
+you have in fact 20 pages here of 21
+pages of different existing process.
+
+121
+00:09:18,767 --> 00:09:23,894
+So perhaps if you're interested more in
+
+122
+00:09:23,894 --> 00:09:29,322
+milk alternative you
+can put in quotes like
+
+123
+00:09:29,322 --> 00:09:34,919
+coconut milk for
+example and search for it.
+
+124
+00:09:34,919 --> 00:09:41,069
+And in addition here you have here
+two datasets which have coconut milk.
+
+125
+00:09:41,069 --> 00:09:45,949
+And you have some filters you can look
+the one which are free or for sale.
+
+126
+00:09:45,949 --> 00:09:49,123
+You can look the location here,
+it's only France.
+
+127
+00:09:49,123 --> 00:09:54,049
+But when you're want coconuts you
+would have all sorts of data.
+
+128
+00:09:54,049 --> 00:09:59,149
+And there are these two datasets
+are here from French database,
+
+129
+00:09:59,149 --> 00:10:02,656
+the AGRIBALYSE database that we have here.
+
+130
+00:10:02,656 --> 00:10:08,057
+And you have the coconut milk itself,
+okay?
+
+131
+00:10:08,057 --> 00:10:13,170
+And you can start looking at
+the description of this process.
+
+132
+00:10:13,170 --> 00:10:18,437
+Or you also have in that case
+a chicken with curry and
+
+133
+00:10:18,437 --> 00:10:23,839
+coconut milk sauce where
+it's part of the process.
+
+134
+00:10:23,839 --> 00:10:29,387
+And I think in this AGRIBALYSE
+databases the process is there and
+
+135
+00:10:29,387 --> 00:10:31,246
+you could look at it.
+
+136
+00:10:31,246 --> 00:10:34,598
+If you go to the dataset
+you press here and
+
+137
+00:10:34,598 --> 00:10:40,718
+you arrive if you select the English
+as a language to some documentation.
+
+138
+00:10:40,718 --> 00:10:45,714
+You can get the spreadsheet of
+all the raw agricultural product.
+
+139
+00:10:45,714 --> 00:10:49,739
+You can look for the column when
+you have everything in English.
+
+140
+00:10:49,739 --> 00:10:52,651
+This is at farm gate and
+then the ready-to-eat for
+
+141
+00:10:52,651 --> 00:10:54,486
+the product that you have here.
+
+142
+00:10:54,486 --> 00:10:59,493
+Also you have the composition of
+different means which is pretty cool.
+
+143
+00:10:59,493 --> 00:11:04,887
+And as I say you can there
+find where to access the data.
+
+144
+00:11:04,887 --> 00:11:08,878
+This dataset is in fact
+available in semi-pro.
+
+145
+00:11:08,878 --> 00:11:13,344
+So you will be able
+a priority to access it for
+
+146
+00:11:13,344 --> 00:11:17,707
+your different inventory for UK studies.

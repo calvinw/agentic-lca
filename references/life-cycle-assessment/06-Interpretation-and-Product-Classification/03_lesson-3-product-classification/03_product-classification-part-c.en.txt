@@ -1,0 +1,69 @@
+If we look on the transportation and
+especially on remediation project. We made a study with one
+of my master students. We published in 2019 with
+Jacob Gasnika a study on the environmental dredging and
+remediation from the Hudson River. So we compared and
+that was a broad study on health, as we like to do the environmental
+dredging benefits first. And this is the avoided burden
+because when we dredge the river, the concentration in
+PCB in the following 70 years will be reduced and
+we get people fishing. In fact,
+the lower river is allowed to fish, but you have restriction on
+the amount you fish and the upper river on the other end is
+forbidden, but some people still do it. We estimated that the dredging operation reduced here the burden of health
+by a limited amount of 15 Dally. This is about one person, one death or
+something of this order of magnitude. Now you have to realize the dredging
+program there has costed $1.5 billion. So 15 Dally for $1.5 billion. There are other benefits in addition
+to that, but it's really debatable. Could we find better alternative
+which will save more life and be more profitable to
+the local community rather than spending that for effort like that? Now, what is interesting was to
+compare this is the benefit, but I'm bringing machine, I'm bringing
+heavy equipment, I'm moving the PCB. So what would be the impact of that? We can see that in term of
+local impact on the community Air PCB is really low, 210 minus 3 Dally. So the community was well protected. The heavy equipment,
+which are emitting fine particulate here, that's about 0.4 Dally. So it's also limited impact,
+but and there is a but, instead of bringing the sediment
+at 300 kilometer or miles that they could have done. Because they were landfill,
+which could receive the sludges extracted from the river full of PCB,
+instead of sending that, it was cheaper because
+there was a better price. In fact, and
+transportation is cheap to ship them 1500 kilometer, 1500 miles to Texas. And most of the dredge
+strategies went to Texas. When we calculate with an up to
+date train emission in the US, the amount of tonne kilometer transported, which was huge in that case,
+we have in fact 32 Dally lost disability adjusted life years lost due
+to train transportation. It's not in the region mostly
+it's along the whole railroad. But this is at least in the same
+order of magnitude as the benefit. Now, if in addition to that,
+we consider the risk to workers. The PCB, the worker were okay, the PM, this was really high quality equipment
+they chose and they did a very good job with that with very low PM
+emission, which is not the case for old heavy equipment, but
+here that was restricted for the worker. But dredging is a very dangerous job. You are on boats, you have locks. It's a risky job. And based on the statistic long term, we could predict that there are about
+14 as a Dally lost on average for a 1.5 billion work that we had here. And sadly, in fact, on the Hudson River, someone who was checking the work
+got stuck in a boat which passed over one of the small cascades,
+but got drawn in this guide. And that was nearly 45 Dally in this case. So on summary here the main
+things was if you want to do that you should do a better job
+with your transportation. The transportation of waste is really
+an important point don't ship it the other side of the country when
+you could put it more locally. But people locally didn't want
+really sludges in a sense, since they had been polluted. So all this was due in fact,
+I should have mentioned to General electric which had
+produced transformers and had emitted during years
+PCBs into the river. What was very interesting is on the one
+hand, the dredging is debatable but preventing the source with the source
+control that makes perfect sense. To avoid that what is in
+the soil could reach the river at the production site and that was done. If we don't recycle, or
+don't treat in a sense, when very toxic because it's
+too much transportation or energy we can always for several products
+which have some carbon in them and energy is to recover
+energy with co-generation. Incineration but
+you really have to have high quality incinerator which reject not more
+waste emission than a normal heating system and
+there are possibility to filter there. Also with waste and
+recovering energy digesting like manure or wastewater treatment plant
+sludges enabled to recuperate some of the methane also limit in fact,
+the emission, which is really interesting in our case. So let's conclude. In summary, the dominant stage
+of the lifecycle of a product can guide the optimization and can be
+applied at the early stage of the design. Classification we've developed
+here are able to identify the improvement priority minimum
+weight for mobile product, maximum efficiency for the active product. Maximum useful, effective lifetime and recycling rate or for
+fixed passive product or minimum transport distance for
+weight disposal in our case.

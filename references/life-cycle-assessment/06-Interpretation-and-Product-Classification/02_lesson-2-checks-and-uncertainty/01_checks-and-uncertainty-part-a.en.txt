@@ -1,0 +1,84 @@
+We have so many number in LCA. Millions of number. How can we ensure
+the quality of this number. How do we? Can we estimate the uncertainty
+associated with them? So learning objective is to perform
+the quality control of your LCA. Is to define types and
+possible sources of uncertainty and the methods to evaluate and
+reduce these uncertainties. We also want you to be able to define
+the minimum significant difference between two scenario depending on
+which flow we are considering or which type of impact we are considering. We want to understand the steps
+of an uncertainty assessment. Be able to estimate
+the uncertainty on input data and also interpret the outcome of
+a simple uncertainty study. So first, quality control,
+this is about verifying results, verifying the consistency of results,
+and looking for anything unexpected. Now, if you find something
+which is surprising or when you control you have two
+results who doesn't fit between your hand calculation and
+your software for example. Never let it go, okay? Either you've made a mistake
+which is often the case or you have the opportunity to
+learn something interesting and new by understanding why this difference,
+why the surprising results. So the analyst has no option but
+to understand and explain any surprise or discrepancy. Second point on quality control
+is being systematic, okay? Sort of German mind like that. We need to be the square. And this is the last chapter
+of our book is about a study on wastewater treatment sludges,
+okay? From a wastewater treatment plant. And different treatment
+going from spreading in agriculture to land filling
+with different paralyzes or cemetery scenario,
+wet oxidation or incineration. I don't want to enter in that study. It's an interesting study if you want
+to have an overview of the whole LCA, you can read this chapter. But what was very interesting, Gregory was
+my collaborator at that time who did that, was very systematic. And look at the way the process
+tree is shown, where for each of the scenario you have
+the different dehydration module. Each module could be different possibly or
+for the lining. And the disinfection of your sludges
+you have some time different modules like that. But they're on the same line to show
+that it's the same process steps. And this is really extremely useful and
+to do that, so be systematic. We have clean spreadsheet in Excel. That's really important. And start of course by checking
+your functional unit that it really represent the function and
+nothing else of your system. Then we have our tool. Use the unit control basics from physics
+that you must have the right units. When you multiply each of your number,
+you check the number of each. You have the output unit that you wanted. To do that when you are using spreadsheet. We want a proper user spreadsheet. And the rule in my team,
+sometimes my team doesn't like or has to make an effort to do it. Is never have a formula
+which contains a number. If there is a number,
+you create a separate cell, okay? And you enter this number
+like let's say 1000 grams per kilogram as a conversion factor,
+you create a separate cell and you refer to that cell this as units. You can check your units in that case. And in addition,
+if you come back six months later, you know exactly why I have this factor
+of 1000 or if I'm using the same number in different parts of my spreadsheets,
+then you change it in one place, it will update everything and you don't
+forget to change it in another place. If you would have put it inside a formula. So never never put a number in a formula. Always create a cell documented and use
+always the same cell for the same number. Okay, now energy and CO2 balance is very
+useful to perform by hand or in Excel and then compare it with you software,
+just to check what's going on for software and
+explain any difference higher than 30%. Be sure so that the combustion has
+been considered during the use phase, especially if you use input output data. The use phase of the mission
+are often missing. And then, when you do this energy and
+see to balance your ratio of CO2 and
+that's not CO2 equivalent but CO2 emission to renewable
+primary energy usage is a good way to check where
+overall oil product you are around 65g CO2 per megajoule and
+nonrenewable. And you can start if you have
+different number for that. Think about it. Is it because it's a plastic,
+could be half or because we were missing the combustion. If you are around 10g CO2 per megajoule. Also, if you have big differences
+in ranking between energy and global warming, you might have
+in fact a problem in that case. Now, also is to display, you can check the contribution of
+the most important substances. If you're surprised here
+you need to understand why. Keep damaged categories separate. This is a small tick to be done in the
+parent [INAUDIBLE] category in SIMAPRO. This is important that you interpret
+your results accounting for orders that makes you difference and key here is to display the most
+uncertain one on the log scale. Document your project file
+with understandable name, reference sources, okay? Always when you use a number
+put below it or side it or in a comment, the source reference
+you have been using because on the spot you know very
+well where it's coming from. But if someone else comes or
+you take it back six months later you will not remember necessarily where it was
+coming from and you want that documented. Finally, check the non-considered
+emission in the software like SIMAPRO for a given impact assessment method. And sometimes they are just stupid
+spelling problems which are problematic. How do you do that? You go in SIMAPRO and
+after you've run your scenario you have here tab which is called check, and
+here you see that with impact 2002 and I think this was a handwriting towel
+scenario with the paper towel, okay? You see it here these are all the flow
+which were not considered, okay? Substance not defined in Impact 2002. A lot by basically a lot of toxics. They were not considered. So look through that, and
+here it's 961 substances and look that there is nothing obvious
+that should have been considered because they might not consider if
+you have just a comma too much or a space additional will not be recognized. And we need to check that. And long term you want
+to use a method also which minimize these
+different missing flow.

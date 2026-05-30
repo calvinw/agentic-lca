@@ -1,0 +1,94 @@
+Let's look at these
+inventory results and perform important two
+sensitivity study. You will see we can do it from two different perspectives. First results we find
+back are reserved for the steel resolve
+14043 and with CO_2, we have 233.9, and now we have the
+results for the composite, the virgin aluminum, and
+the recycled aluminum. The highest of the
+scenario is in red here, and the lowest is in green. What is the best scenario? Can we decide at this stage without even doing an
+impact assessment? Look at these numbers a bit. We see that we have
+a lot of reds in the steel and a lot of green
+in the recycled aluminum. Likely, the steel will be the worst and the
+recycled aluminum the best. We know this is the case for
+energy, that's for sure. But overall, we still
+have some exception. The main exception, for example, is here for lead, Pb. We see that in fact the
+scenario which is emitting the most and that's
+probably linked to the recycling of the aluminum. He's is here this recycled
+aluminum scenario. Now, if lead, even small
+amounts of lead can have a huge impact,
+we know that. So if lead would be dominating
+over all the impacts, we couldn't really be sure. We're not sure that
+the steel is the worst and the recycled
+aluminum, the best. Recycled aluminum could be the best if lead is a
+dominant impact. We really need to complement these results by an impact
+assessment to really look at the result and
+the robustness, and the trade-offs between our
+different impacts. Eventually, we have more higher inventory flows with the steel lower with the recycled
+aluminum, and in the middle, it changes according to
+the different flows. We will have to look between the composite and the virgin
+aluminum that we have here. Now, a big uncertainty was how long do we drive this car? We assume 200,000 kilometer, which is not necessarily match my own prayers presently
+we are a 140,000 miles which is already passed the 230,000 kilometer
+about that. With that, I hope to drive
+it until 200,000 miles, which will be more than
+300,000 kilometer. This is pretty uncertain. One way to look at that is to do a sensitivity study with
+the primary energy. We need to graph per inventory flow separate graph for CO_2, for example, as a function of the transportation
+distance here. We can look, and let's
+do it for the steel. If you remember a few minutes ago, we have been looking here that the steel at manufacturing, just after the manufacturing, we needed 584 mega-joule to manufacture this steel front and panel that we have here. Then we drive. We can say here, this is the use phase and we
+were going to 4,002 here. We have another two mega-joule. You have another two mega-joule. We don't really see it. It's so small in for
+the landfill here. Here we had our 3,456 plus
+the last two mega-joule, which are for the landfill,
+which make our total. We can re-distinguish with that. I like these cumulative
+graph where we can put manufacturing here, then we have what increases with the transportation
+distance. It could be also with
+a number of use. You could have that which as
+a number of use increases, you increase your total
+energy in that case. Now, we can compare the
+scenarios and what do you see, you see that the steel scenario is worse than the
+aluminum scenario. At zero, the aluminum requires most and more energy
+around 850 mega-joule. That's from 20,000-25,000
+kilometer here, we have the aluminum
+becoming better, and compared to the composite, the aluminum become better
+around 50,000 kilometer here. The recycled aluminum is
+always better in that case. We can do this representation, we can do also another
+representation. This is to take the slope. We calculate what are the mega-joule per
+kilometer driven. In the cumulative one, this was the cumulative
+perspective, it's only increasing with time. Now, if I take the
+mega-joule per kilometer, this is the slope. Here, the slope is
+in fact infinite. As I'm increasing, my
+slope per kilometer is going down, is decreasing here. We can represent the mega-joule
+per kilometer driven as a function of the
+distance that we have. This is what we have and
+we see this decrease. If we go with the recycled
+aluminum at zero, we would be infinite, and now we come down as we increase our
+transportation distance. Basically, the manufacturing is divided by more kilometer. In the end, we are
+reaching ranking, which is based mostly on
+the use phase when we go to 200,000 kilometer. Again, we will
+find that we cross the two scenario at about 25,000 and here around the 50,000 that we had in that case for when one
+scenario becomes better. The two representation now, this is a more complex
+in fact representation. I personally prefer the
+cumulative representation, which is easier to
+understand in our case. In summary, the inventory can be determined by matrix
+multiplications. It's a way to structure a lot of number in an elegant way. This is what is
+used, for example, in SimaPro, all the
+different software. In our case here, we were
+based not on the unit process, but the aggregated flows. We were providing the inventory
+of all aggregated flow from cradle to gate or cradle to grave in
+the case of our car. These aggregated flow are the cumulative extraction and emission per functional
+units that we have. This is the initial step
+for product comparison, but is rarely conclusive
+as we saw with the lead, so without performing
+the impact assessments. We basically need an
+impact assessment if we want to go beyond a prior. This sensitivity
+study is interesting, especially from some of the most uncertain
+usage parameter like the product lifetime, the total distance
+over a lifetime, or the number of reuse
+that we can have, or the number of books
+read with the Kindle, or this number where there
+is no a true answer, but the results
+vary depending on the number of these
+lifespan or reuse. Doing a sensitivity studies
+is an efficient way to analyze trade-off and enables a practitioner to discuss minimum product lifeline for
+a scenario to become best. As we say, there's
+a break-even point where express here with
+25,000 or 50,000 kilometer, and so avoid to make arbitrary assumption that
+this car will drive so much. We don't know when we build it, or how long it will be driven.

@@ -1,0 +1,315 @@
+1
+00:00:08,660 --> 00:00:14,130
+The ecoinvent database provide
+these two types of data.
+
+2
+00:00:14,130 --> 00:00:17,715
+It provides unit process level.
+
+3
+00:00:17,715 --> 00:00:20,460
+These are processes which
+are called with U,
+
+4
+00:00:20,460 --> 00:00:22,650
+which have the detail of
+
+5
+00:00:22,650 --> 00:00:26,235
+direct elementary flow
+and intermediary.
+
+6
+00:00:26,235 --> 00:00:29,970
+It means with any data
+you always account
+
+7
+00:00:29,970 --> 00:00:33,035
+for the 4,000 other
+processes to get it.
+
+8
+00:00:33,035 --> 00:00:37,385
+It's complicated, but you
+have a high level of detail,
+
+9
+00:00:37,385 --> 00:00:39,230
+which is really nice
+when you want to just
+
+10
+00:00:39,230 --> 00:00:41,540
+modify one of these process.
+
+11
+00:00:41,540 --> 00:00:43,700
+You just modify
+exactly what you want
+
+12
+00:00:43,700 --> 00:00:46,595
+and you can rerun it
+and get your results.
+
+13
+00:00:46,595 --> 00:00:50,165
+The second level, which is
+easier to use and I recommend,
+
+14
+00:00:50,165 --> 00:00:51,650
+I would say that you use
+
+15
+00:00:51,650 --> 00:00:53,000
+the system level by
+
+16
+00:00:53,000 --> 00:00:55,489
+default when you will
+work on SimaPro.
+
+17
+00:00:55,489 --> 00:00:59,450
+It's the aggregated
+elementary flow that you have
+
+18
+00:00:59,450 --> 00:01:01,280
+for a given product summed
+
+19
+00:01:01,280 --> 00:01:03,440
+up over the entire supply chain.
+
+20
+00:01:03,440 --> 00:01:05,195
+No intermediary flow here,
+
+21
+00:01:05,195 --> 00:01:09,740
+only total elementary flow
+per functional unit or
+
+22
+00:01:09,740 --> 00:01:14,405
+per kilo of the commodity
+that we are defining.
+
+23
+00:01:14,405 --> 00:01:17,524
+Many other databases don't
+have the same resolution,
+
+24
+00:01:17,524 --> 00:01:19,940
+only offer aggregated flow,
+
+25
+00:01:19,940 --> 00:01:22,174
+which is problematic because
+
+26
+00:01:22,174 --> 00:01:24,500
+you cannot modify them easily.
+
+27
+00:01:24,500 --> 00:01:26,660
+So you have to ask the
+people who've done
+
+28
+00:01:26,660 --> 00:01:28,880
+the data to modify them,
+
+29
+00:01:28,880 --> 00:01:31,940
+which some company like to keep
+
+30
+00:01:31,940 --> 00:01:36,350
+their customer
+dependent on them,
+
+31
+00:01:36,350 --> 00:01:39,725
+but personally and in
+our quantities company,
+
+32
+00:01:39,725 --> 00:01:44,135
+we are trying to affect
+our customer independence.
+
+33
+00:01:44,135 --> 00:01:46,370
+They will need us because
+we didn't need to be
+
+34
+00:01:46,370 --> 00:01:49,735
+always cutting edge and
+we'll have the next ID.
+
+35
+00:01:49,735 --> 00:01:52,190
+Such aggregate
+inventory flow for
+
+36
+00:01:52,190 --> 00:01:55,460
+different processes can
+be directly used to build
+
+37
+00:01:55,460 --> 00:02:01,530
+the inventory of new
+products and we see with
+
+38
+00:02:01,530 --> 00:02:04,475
+a car example how
+
+39
+00:02:04,475 --> 00:02:07,820
+once you have these
+aggregated system level flow,
+
+40
+00:02:07,820 --> 00:02:10,475
+you can use them
+relatively easy,
+
+41
+00:02:10,475 --> 00:02:13,715
+even Excel spreadsheet to build
+
+42
+00:02:13,715 --> 00:02:17,870
+the impact of a given
+product so in summary,
+
+43
+00:02:17,870 --> 00:02:20,000
+the inventory phase
+of the LCA determine
+
+44
+00:02:20,000 --> 00:02:21,620
+the elementary flow or
+
+45
+00:02:21,620 --> 00:02:24,470
+emission and extraction
+per functional unit.
+
+46
+00:02:24,470 --> 00:02:28,720
+Accounting for the
+entire processes
+
+47
+00:02:28,720 --> 00:02:31,880
+which contribute to
+the project function.
+
+48
+00:02:31,880 --> 00:02:35,120
+The inventory is
+calculating by combining
+
+49
+00:02:35,120 --> 00:02:38,360
+the intermediary flow
+per functional unit and
+
+50
+00:02:38,360 --> 00:02:41,630
+the elementary flow per unit of
+
+51
+00:02:41,630 --> 00:02:44,510
+the same unit process to get the
+
+52
+00:02:44,510 --> 00:02:47,810
+total per functional
+unit at each level.
+
+53
+00:02:47,810 --> 00:02:49,850
+So it's important that we don't
+
+54
+00:02:49,850 --> 00:02:52,070
+mix the intermediary direct
+
+55
+00:02:52,070 --> 00:02:54,725
+and the aggregated
+elementary flow
+
+56
+00:02:54,725 --> 00:02:57,050
+over our products system.
+
+57
+00:02:57,050 --> 00:02:59,480
+Finally, the good news
+
+58
+00:02:59,480 --> 00:03:01,745
+is that we have a lot
+of inventory data.
+
+59
+00:03:01,745 --> 00:03:04,790
+The bad news is correcting
+even one process for
+
+60
+00:03:04,790 --> 00:03:07,190
+inventory data on
+the intermediary and
+
+61
+00:03:07,190 --> 00:03:10,510
+elementary flow is
+really hard work.
+
+62
+00:03:10,510 --> 00:03:15,110
+So you need direct
+contact with company,
+
+63
+00:03:15,110 --> 00:03:16,610
+or you need to go
+in the literature,
+
+64
+00:03:16,610 --> 00:03:18,425
+it's pretty hard work.
+
+65
+00:03:18,425 --> 00:03:20,570
+But the beauty is we have
+
+66
+00:03:20,570 --> 00:03:23,180
+a lot of processes
+which are existing.
+
+67
+00:03:23,180 --> 00:03:26,255
+We can rely on that and
+just do it for what is
+
+68
+00:03:26,255 --> 00:03:30,720
+needed as a complement
+to what we already have.

@@ -1,0 +1,73 @@
+So let's look a bit
+further in detail how this will complement each other and
+complement LCA. LCA Is cradle to grave or
+when we have a loop and a recycling cradle to cradle and
+it's a global tool. And locally you will then use for
+a new project as we were saying environmental impact assessment
+which has really a local scope not trying to do
+the supply chain is focusing on. Is the noise created by this company? Is the traffic created and
+the pollution created due to this new installation exceeding the boundaries
+that you can have in this region, okay? And now for the risk assessment we
+relate impact per kilo of substance or for a certain usage of the substance
+in a given environment. It focuses only on toxicity, whereas LCA as we said is related
+to the product function and look at multiple impact in our case here. And again risk assessment will be
+more local where LCA will be global regional and cover the entire supply chain
+which risk assessment will usually not do. It will focus on the company
+which is specifically a study. If we look at the substance and
+material flow analysis, this time instead of being linked to
+a function, it's for a given region and usually it's study one substance and
+report everything in kilogram. Our colleague from SFA don't like
+to go to impact because there is somewhat some uncertainty
+in the impact assessment. But sometimes they sum up kilogram, they from my point of view should not and
+keep the different flow separate. But LCA Is really impact and
+damage oriented. Try to make things
+comparable on an impact and damage basis on the DPSIR
+on the impact side or equivalent impact at this level. So finally carbon and water footprint and
+as we say it has the same scope. It's all related to the same product
+function should go all to cradle to grave. So water footprint which doesn't go
+cradle to grave is not compliant. But with focus and
+that's what we call this area of concern. Either the climate change related problem,
+global warming related or water related problems and so
+we call that area of concern. LCA here look at a damage on
+what we call area of protection, what we are trying to protect which is
+more the receptor side of the problem. It's not linked to one type of problem but
+more to who are, and what are the subject, and area which
+are affected by the different impact. And this is human health, ecosystem
+quality, natural resources which can be affected by several of the impact category
+that we have on the left side, okay? So let's compare everything and
+two things I would like to insist. So LCA Is studying a product or
+a system and this is different from SFA which
+look at the substance material EIA new localized activity
+are an installation chemical and carbon, could be also a product but
+also an individual company. Clearly what is really key is,
+what type of question do you answer? Clearly a life cycle assessment is about
+comparing it ask what is best, okay? Product A versus product B,
+one part of the life cycle versus another. SFA MFA look at where
+are the main sources or think in a region or
+in the company where if I need to reduce this amount,
+where should I reduce it? Or on the contrary, if I need this
+material, where could I find it? This is really the type of
+question that we are asking. The environmentalist impact assessment
+is really about exceeding the local boundaries. So are we exceeding the different
+boundary that we have here? Risk assessment is about safety, is it safe to carry out this
+activity in this region? And carbon or water footprint
+is really about what is best for this area of concern similar to SEA,
+but this time for water related or carbon related problems. Are not going all detail but the basic
+elements what is interesting is they are sometimes common to
+this different tools. And in fact in LCA for
+example, in the early 1990, we borrowed a lot from Risk assessment,
+they were using multimedia model. Those respond assessments and we really borrowed them
+quoting of course the work, and adapting here to be here comparative. We adapted risk assessment to be
+comparative because we wanted to compare. Whereas to be safe here, usually risk
+assessment tend to be conservative. They do conservative sense
+assumption where in LCA, we use the same tool but
+we want to be the best estimate, okay? Whereas in a risk assessment
+we tend to be looking for conservative estimates that we have here. Different tools for different problems and it's important that you learn and
+will practice through some exercises which tool will be adequate
+appropriate for a given question. In summary, if we focus back to LCA. LCA is a mature ring method with well defined standards. L. C. A specificity. It's a quantified approach. It's from cradle to grave, cradle to cradle relates impact to
+a function of a product it covers. Multiply impact. So it has a scope of encompassing
+the anti problem because why? Because we want to analyze trade offs so we want to not to displace
+a problem to another part. So we want to be able to analyze that. So we need to be comprehensive
+in that case and has come an element and we can borrow and
+have interaction with our colleagues from different communities and
+learn from each other

@@ -1,0 +1,104 @@
+What do you need to
+buy then to illuminate, and that's what we will
+look at in the next slide? If I look and we have this template we will use
+for several products here, what do I need to buy to illuminate and produce
+my main function? I need electricity. This is typically a
+60-watt bulb that I have here that I will need. I need a 60-watt electricity and I need some incandescent bulb, and probably I need
+also a fixture because this bulb without
+fixture, I cannot do much. That's what I need. Now, if I take my
+incandescent bulb, what do I need? I will need this time, not 60 watts, but only
+13 watts electricity. This is the beauty of
+my fluorescent bulb. That was a huge difference, factor five difference nearly. I need some
+fluorescent bulb and I also need a fixture
+that I have here. Now, what is the other difference
+between these two bulbs, beyond the consumption from 60 watts and 30 watts and
+beyond the aesthetic itself? You might know that
+a fluorescent bulb, if it's a good
+quality one at least, its lifetime is higher
+than this bulb. We realize that
+we cannot compare them without considering
+the lifetime. That brings us to the left here, which is our functional unit. What functional units do
+we want to have here? The functional unit with
+basis comparison should be related to this illuminate. What is the service provided? How do you measure light? How do you measure the intensity of light inside a building? There is a unit for that
+and it's called lumen. The lumen, it's a
+flow measurement, it's candela per second that are related to the number of
+photons arriving per second. Typically a bulb like that
+will produce 800 lumen. This 800 lumen, it's important that we
+say the duration of the service because it's different if I provide
+light for an hour, for a day, or for a year. Typically a light bulb will
+be used 1000 hours a year, and this bulb will last one year or this bulb
+will last five years. We can arbitrarily define in the functional
+unit, the duration. Let's take the duration here
+of five years or 5,000. It's 800 lumen, LM, during 5,000 hours, which would be about
+five years equivalent. This is what we have here, 800 lumen for a duration
+of 5,000 hours. What is important is
+we don't need just to say it's lumen during
+a certain time, the functional unit
+needs to be quantified. We need to give a number. We can choose a
+number because if we say 1,000 hours
+instead of 5,000, our result we'll just
+multiply it by five. But we need to define this
+number here accurately. Now, we don't want to say incandescent bulb here
+in the reference flow. In the reference
+flows, which are here, we also want to quantify the corresponding
+reference flow which corresponds to the amount of functional units that I have
+defined here to my left. How much do we have? Sixty-watt electricity
+during 5,000 hours. That will be how much? That will be? 300,000 watt hours
+or in that case, 300 kilowatt hours
+that I have here. Okay. By opposition, if I have 13 watt
+electricity time 5,000 hour, I will get only 65
+kilowatt-hour instead of the 300 that we had here and that's a substantial
+reduction in my use. Now, in condenser bulb, how many bulbs do you need? People will say, I need a bulb. But if it's 5,000
+hours and, typically, an incandescent bulb will
+only last a single year, so I will need every
+1,000 hours a new bulb. So to do that, I need five incandescent
+bulb in that case. If I move here, we will need our five
+incandescent bulb and in the fluorescent, the fluorescent one is
+lasting the full five years, so I only need for
+the fluorescent, a single bulb here. Now what about the fixture? Again, people will think, Oh, I need one fixture. But do you change fixture for
+your bulb every five years? Probably a fixture will last, let's assume it lasts 30 years. It has a lifetime
+of 30 years here. So I need to buy one at a time, but LCA is a construct
+of the mind. In fact, for this function
+here of 1,000 hours, I don t need one fixture. I will need how many? I can do 6 times 5,000 hours, so I will need 1/6
+of a fixture here. In fact, for both scenario, if we assume that the bulb is not changing the
+lifetime of the fixture, which is probably
+the case because fixture we change
+them because of design or we renovate a house
+rather than being worn out. The incandescent light, in fact, might change the
+lifetime of the fixture because it has substantially
+more heat in that case, but let's assume it's
+about equal in there too. So giving the reference flow, once we have defined the quantity of the
+functional unit, is defining the quantity
+that we are using here. Well, the third question is, what are the key factors that determine the different
+reference flows? We can define many key factors, but I would like that we
+specifically focus on the factors which
+are directly linking the reference flows to
+the functional unit. What are the parameters
+which made this number high? So first, for the electricity, what was making the
+electricity high or low? What was making such a
+difference between the two bulb? Which parameter could we
+used to characterize that? This is what we
+call an efficiency parameter and we have
+differences here in efficiency. How would we measure
+the efficiency? It's basically, what
+we want to obtain, which are the lumen divided in fact by the
+electricity needed to produce it. So the lumen per what? Which is two power
+measurements in that case, is what we'll characterize
+our bulb in our case. This is one for the efficiency. Now, what about the other
+parameter which are important? What about the parameter
+which are determining here, these five incandescent bulb? What was it depending on? How did we calculate these five? These five was related to what? Was related to the
+lifetime of my bulb. So second parameter is usable lifetime of my bulb. Interestingly, what this
+lifetime is changing, is it affecting the consumption during usage or the consumption
+during manufacturing? Think a minute. In fact, we see this lifetime was not changing the electricity
+consumption. Doesn't matter if it
+lasts short or long. This is really linked
+to the efficiency. It was changing the number
+of bulbs, so in fact, it affects here the
+manufacturing and the material extraction stage of my LCA here, which
+is interesting. So if we summarize here, the efficiency is
+really important, the bulb lifespan and then
+we can add as a parameter, the amount and type
+of material used, which will play a role but not directly on the
+reference flow. But what effect these reference flow and
+what was relating the reference flow to
+the functional unit is really interesting to look at.

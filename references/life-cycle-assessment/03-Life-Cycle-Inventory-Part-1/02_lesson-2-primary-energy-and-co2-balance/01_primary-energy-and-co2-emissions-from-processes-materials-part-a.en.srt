@@ -1,0 +1,622 @@
+1
+00:00:09,140 --> 00:00:14,505
+Now that we know
+how to aggregate
+
+2
+00:00:14,505 --> 00:00:17,010
+the different
+elementary flow across
+
+3
+00:00:17,010 --> 00:00:22,380
+the entire supply chain and
+get aggregated results,
+
+4
+00:00:22,380 --> 00:00:25,500
+I would say cradle to gate
+for different material,
+
+5
+00:00:25,500 --> 00:00:28,860
+it's very interesting to
+compare the primary energy
+
+6
+00:00:28,860 --> 00:00:32,400
+we are getting or
+the CO_2 emission.
+
+7
+00:00:32,400 --> 00:00:34,175
+But to do that,
+
+8
+00:00:34,175 --> 00:00:36,210
+we first need to define well,
+
+9
+00:00:36,210 --> 00:00:38,225
+what type of energy
+because there are
+
+10
+00:00:38,225 --> 00:00:43,580
+several term which are used
+for describing the energy.
+
+11
+00:00:43,580 --> 00:00:47,300
+We want to define as a
+learning objective primary,
+
+12
+00:00:47,300 --> 00:00:50,065
+final, and useful energy.
+
+13
+00:00:50,065 --> 00:00:53,000
+Second, we will then compare
+
+14
+00:00:53,000 --> 00:00:56,930
+aggregated processes
+for primary energy
+
+15
+00:00:56,930 --> 00:01:01,030
+for various materials
+and processes.
+
+16
+00:01:01,030 --> 00:01:03,240
+Let's look at this definition.
+
+17
+00:01:03,240 --> 00:01:06,230
+Primary energy is
+defined as the energy
+
+18
+00:01:06,230 --> 00:01:09,245
+contained in the energy carrier
+
+19
+00:01:09,245 --> 00:01:11,455
+at the point of extraction.
+
+20
+00:01:11,455 --> 00:01:14,060
+It's the total energy
+you extract from
+
+21
+00:01:14,060 --> 00:01:17,600
+the environment and that will
+
+22
+00:01:17,600 --> 00:01:21,575
+include the upstream
+energy usage
+
+23
+00:01:21,575 --> 00:01:25,265
+that you need to
+do the extraction,
+
+24
+00:01:25,265 --> 00:01:27,110
+to do the refinery,
+
+25
+00:01:27,110 --> 00:01:30,350
+the preparation, and to
+distribute all that.
+
+26
+00:01:30,350 --> 00:01:33,605
+You need to extract
+all that so that
+
+27
+00:01:33,605 --> 00:01:37,160
+you have the final
+energy which is
+
+28
+00:01:37,160 --> 00:01:40,760
+delivered to the consumer or
+
+29
+00:01:40,760 --> 00:01:43,070
+purchased by the consumers if
+
+30
+00:01:43,070 --> 00:01:45,635
+we take his or her
+point of view.
+
+31
+00:01:45,635 --> 00:01:47,210
+The final energy is what is
+
+32
+00:01:47,210 --> 00:01:50,600
+consumed whereas the
+primary energy is
+
+33
+00:01:50,600 --> 00:01:52,670
+what needs to be extracted to
+
+34
+00:01:52,670 --> 00:01:55,990
+deliver this energy consumed.
+
+35
+00:01:55,990 --> 00:01:59,960
+The useful energy
+is the portion of
+
+36
+00:01:59,960 --> 00:02:02,630
+the final energy
+which is actually
+
+37
+00:02:02,630 --> 00:02:05,495
+delivered inside the
+house for example,
+
+38
+00:02:05,495 --> 00:02:08,405
+or available after
+final conversion
+
+39
+00:02:08,405 --> 00:02:13,355
+for the respective
+use of the consumer.
+
+40
+00:02:13,355 --> 00:02:18,090
+Let's look at an example
+to understand that.
+
+41
+00:02:18,090 --> 00:02:20,760
+Let's take natural gas first.
+
+42
+00:02:20,760 --> 00:02:24,980
+We have here some
+gas and I buy one
+
+43
+00:02:24,980 --> 00:02:31,195
+megajoule final which
+is at my gas meter.
+
+44
+00:02:31,195 --> 00:02:35,235
+First, what's happening
+when you have a heating,
+
+45
+00:02:35,235 --> 00:02:39,470
+usually you have a
+small stack on the roof
+
+46
+00:02:39,470 --> 00:02:44,950
+and you in fact are
+ejecting some heat.
+
+47
+00:02:44,950 --> 00:02:49,640
+The efficiency will be
+a key parameter here
+
+48
+00:02:49,640 --> 00:02:55,555
+which will relate the final
+energy to the useful energy.
+
+49
+00:02:55,555 --> 00:02:58,655
+For a gas heater it has
+
+50
+00:02:58,655 --> 00:03:01,145
+a recuperation of condensation
+
+51
+00:03:01,145 --> 00:03:04,180
+which most of
+modern heater have,
+
+52
+00:03:04,180 --> 00:03:06,030
+you get a high efficiency.
+
+53
+00:03:06,030 --> 00:03:10,215
+You can get like 95
+percent efficiency so
+
+54
+00:03:10,215 --> 00:03:15,275
+one megajoule final,
+0.95 megajoule useful.
+
+55
+00:03:15,275 --> 00:03:19,600
+How much energy do you
+need to produce that?
+
+56
+00:03:19,600 --> 00:03:22,930
+You might have a tanker
+or the pipeline,
+
+57
+00:03:22,930 --> 00:03:24,640
+have some losses
+on the pipeline,
+
+58
+00:03:24,640 --> 00:03:26,365
+you need to transport that.
+
+59
+00:03:26,365 --> 00:03:28,720
+You will have order of magnitude
+
+60
+00:03:28,720 --> 00:03:37,555
+1.2-1.25 megajoule primary
+per megajoule final.
+
+61
+00:03:37,555 --> 00:03:41,150
+Now let's move to electricity.
+
+62
+00:03:41,150 --> 00:03:43,425
+One megajoule final,
+
+63
+00:03:43,425 --> 00:03:47,445
+how much in the house?
+Hundred percent.
+
+64
+00:03:47,445 --> 00:03:50,355
+Everything degrade in heat.
+
+65
+00:03:50,355 --> 00:03:54,040
+You get here one
+megajoule useful,
+
+66
+00:03:54,040 --> 00:03:58,720
+so great, 100 percent
+efficiency for the electricity.
+
+67
+00:03:58,720 --> 00:04:02,210
+That's pretty good.
+
+68
+00:04:02,210 --> 00:04:05,675
+Now, what upstream
+from the electricity?
+
+69
+00:04:05,675 --> 00:04:08,540
+The electricity is high exergy,
+
+70
+00:04:08,540 --> 00:04:14,600
+high-quality and we
+measure the quality of
+
+71
+00:04:14,600 --> 00:04:17,435
+energy in exergy which is
+
+72
+00:04:17,435 --> 00:04:19,580
+the potential to create
+
+73
+00:04:19,580 --> 00:04:22,745
+mechanical energy
+with this energy.
+
+74
+00:04:22,745 --> 00:04:27,635
+Electricity has more than
+95 percent potential
+
+75
+00:04:27,635 --> 00:04:30,380
+for creating the
+mechanical work,
+
+76
+00:04:30,380 --> 00:04:33,560
+much higher than heat.
+
+77
+00:04:33,560 --> 00:04:36,530
+But that means that
+when you want to
+
+78
+00:04:36,530 --> 00:04:39,590
+transform heat into high exergy,
+
+79
+00:04:39,590 --> 00:04:42,470
+you have losses and
+substantial losses.
+
+80
+00:04:42,470 --> 00:04:44,570
+In fact, we are heating
+
+81
+00:04:44,570 --> 00:04:48,140
+the part at either
+nuclear power station,
+
+82
+00:04:48,140 --> 00:04:50,405
+gas power station,
+
+83
+00:04:50,405 --> 00:04:52,820
+or coal power station;
+
+84
+00:04:52,820 --> 00:04:56,165
+you have these big
+towers and you will lose
+
+85
+00:04:56,165 --> 00:04:59,690
+about 2/3 in the
+atmosphere or you
+
+86
+00:04:59,690 --> 00:05:03,890
+have your longer
+lake or river and
+
+87
+00:05:03,890 --> 00:05:08,760
+you will heat fishes in that
+case and heat the water.
+
+88
+00:05:08,760 --> 00:05:11,490
+One megajoule final,
+
+89
+00:05:11,490 --> 00:05:17,650
+3.4 mega joule primary
+are necessary.
+
+90
+00:05:17,650 --> 00:05:21,110
+Who was saying that for
+heating electricity is
+
+91
+00:05:21,110 --> 00:05:24,305
+a good idea and efficient
+because in fact,
+
+92
+00:05:24,305 --> 00:05:27,220
+it's a ratio of 3.4:1?
+
+93
+00:05:27,220 --> 00:05:33,495
+Again approximately 1.3:
+1 delivered in the house.
+
+94
+00:05:33,495 --> 00:05:35,600
+The gas is much more
+
+95
+00:05:35,600 --> 00:05:38,255
+efficient and should
+be kept for heating,
+
+96
+00:05:38,255 --> 00:05:41,810
+whereas electricity should
+be kept for producing
+
+97
+00:05:41,810 --> 00:05:44,465
+mechanical work in cars
+
+98
+00:05:44,465 --> 00:05:49,360
+or different application
+in our case.
+
+99
+00:05:49,360 --> 00:05:52,535
+Now, electricity
+is often expressed
+
+100
+00:05:52,535 --> 00:05:56,345
+not in mega joule but
+in kilowatt hour final.
+
+101
+00:05:56,345 --> 00:05:58,595
+That's what usually you buy.
+
+102
+00:05:58,595 --> 00:06:00,560
+As you have 3,600
+
+103
+00:06:00,560 --> 00:06:05,760
+seconds and a joule
+is watt times second,
+
+104
+00:06:05,760 --> 00:06:07,235
+we have in fact,
+
+105
+00:06:07,235 --> 00:06:13,585
+one kilowatt-hour final
+is 3.6 megajoule final.
+
+106
+00:06:13,585 --> 00:06:15,390
+One kilowatt-hour final,
+
+107
+00:06:15,390 --> 00:06:19,340
+one kilowatt-hour useful but
+in terms of primary energy,
+
+108
+00:06:19,340 --> 00:06:22,105
+this will be in fact
+
+109
+00:06:22,105 --> 00:06:29,180
+3.4 and these are
+megajoule primary per
+
+110
+00:06:29,180 --> 00:06:37,980
+megajoule final time
+the 3.6 we have
+
+111
+00:06:37,980 --> 00:06:47,655
+here which is megajoule final
+per kilowatt-hour final.
+
+112
+00:06:47,655 --> 00:06:49,500
+When you get that,
+
+113
+00:06:49,500 --> 00:06:52,260
+you get 3.4 times 3.6,
+
+114
+00:06:52,260 --> 00:06:57,020
+this is equal to 12.1 mega joule
+
+115
+00:06:57,020 --> 00:07:02,460
+primary energy per kilowatt-hour
+final in that case.
+
+116
+00:07:02,460 --> 00:07:05,990
+You have to be really
+careful that we always say
+
+117
+00:07:05,990 --> 00:07:10,010
+what type of energy
+we are using.
+
+118
+00:07:10,010 --> 00:07:13,430
+What are the typical values for
+
+119
+00:07:13,430 --> 00:07:19,490
+different ores or
+energy vectors,
+
+120
+00:07:19,490 --> 00:07:23,960
+energy carrier that
+you have available?
+
+121
+00:07:23,960 --> 00:07:29,230
+We have a whole survey
+which is around 40 here.
+
+122
+00:07:29,230 --> 00:07:32,490
+Down here kerosene,
+
+123
+00:07:32,490 --> 00:07:34,530
+light fuel, heavy fuel oil.
+
+124
+00:07:34,530 --> 00:07:37,980
+The oil-based material
+are around 42,
+
+125
+00:07:37,980 --> 00:07:42,780
+43 megajoule per kilo,
+relatively high density,
+
+126
+00:07:42,780 --> 00:07:45,480
+higher than for example,
+
+127
+00:07:45,480 --> 00:07:52,590
+the bio-gas or the
+hard coal or the lower
+
+128
+00:07:52,590 --> 00:07:56,270
+quality coal which is even
+lower here which can be
+
+129
+00:07:56,270 --> 00:08:01,260
+even lower than 10
+megajoule per kilogram.
+
+130
+00:08:02,270 --> 00:08:04,790
+This is useful. When we want to
+
+131
+00:08:04,790 --> 00:08:06,460
+calculate the primary energy,
+
+132
+00:08:06,460 --> 00:08:08,690
+we will take the amount of
+
+133
+00:08:08,690 --> 00:08:11,450
+crude oil extracted and
+multiply by this value,
+
+134
+00:08:11,450 --> 00:08:12,665
+and that will give us
+
+135
+00:08:12,665 --> 00:08:18,780
+this total megajoule
+primary energy extracted.

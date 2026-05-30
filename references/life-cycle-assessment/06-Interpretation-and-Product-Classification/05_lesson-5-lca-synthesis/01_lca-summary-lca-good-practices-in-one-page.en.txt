@@ -1,0 +1,112 @@
+We have looked at the different
+phases of LCA in details, looking at all the data methods,
+way to interpret for good practice. It's now time to wrap up everything and
+summarize what are the key parameters the cree criteria for
+a good practice in LCA. And let's do that in 12 minutes. The learning objective is to identify the
+critical points that affect LCA results. Provide principles for good practice for
+each of these influential points. Synthesize LCA strengths and limitations. We have been looking through
+the lifecycle impact the LCA chapter of our course at
+the four phases here of LCA, at the impact of particulate and
+chemical in product on human health. And we are now doing
+the synthesis before going from product to sustainable consumption, which will constitute our last chapter. It's pretty cool that we can
+summarize the key points and the critical points for
+good LCA practice in a single slide, okay? And this slide,
+you could use it when you do a review or want to use an LCA looking
+how the author have been addressing all these critical points. And this gives you a sort of checklist
+to look what are the good practice for each of these points. So let's look at them. First, we recommend to perform
+an LCA with a screening approach. So carry it in two steps. A first screening phase, okay, which will
+take about half of the total time and where you cover the entire LCA but
+look at orders of magnitude. And then you choose what
+needs to be improved, refined because it's important or
+brings substantial uncertainty, and you perform a detailed analysis
+of these points which are important. And that's valid for
+many scientific approach. Second, for the goal definition,
+remember the popcorn, how the functional unit was crucial and
+could completely change results. So be sure and check that the functional
+unit is really representing the main function and the service of the product
+and is a good representation of that. Should be metric which increases
+if the functional unit doubles. For example,
+the emission should also double. So it's an extensive metric which
+is not a ratio, so it's not. Units are not something per
+something in that case. System boundaries, third critical point
+of the goal and system definition. It should cover the same
+functional reality. Remember the fast food example where if
+we use geographical or business boundary, this is likely not to represent the same
+functional reality in all scenarios. You can exclude negligible processes and
+for this you can define a cutoff where
+processes can only be excluded if they contribute to less than this
+cutoff percentage to the total impact. Processes that are identical
+in the different scenario can potentially be excluded, but
+only if the intermediary flows of these processes are strictly
+equal between scenario. So if the quantity use of this process
+per functional unit is exactly the same, and beware, because if the yield,
+the outcome is different, the total output is different, it's likely
+that this flow will also be different. Allocation between co-products,
+like between wheat and stroke. What are the hierarchy recommended by ISO? First, we try to separate the process and
+attribute all or some of the processes to one co-product or
+the other. Could we separate them? Second, we want to consider
+the possibility to do to use system expansion where
+we will extend the system boundary to include a proven
+substituted product. And then account for the avoided emission
+of this product as a bonus to our impacts. Third, we can use physical
+allocation based on mass or energy content, but
+only if there is a direct causality. So don't use mass if total impact
+are not directly related to mass. Finally, we can use
+financial allocation nearly in every case as a comparative
+allocation method or as a default allocation method when
+we cannot apply the other method. And again,
+we are based on causality as a measure of the incentive here for production. On the inventory sides of extraction and
+emission of resources and emission, data consistency and
+quality is crucial. So, beware to take the database
+which are consistent, which are comprehensive,
+covering all necessary inventory flows, and don't mix easily databases
+unless you really need to. And check in that case that for
+example electricity mix provide comparable results in
+the different databases. Otherwise, you might have
+real biases in your results. Third, if we move to the impact
+assessment phase of the LCA, you first select LCA methods that cover
+the entire cause effect chain, okay? And I would recommend in fact
+to go presently to damage and use methods which go to damage by default. We need to include many information
+on fate, transport, dilution, degradation, and effect like intrinsic
+toxicity, soil species sensitivity. Consider and compare the contribution of
+each impact category to total damages. Don't aggregate everything and
+you get a final score, and you base all your interpretation
+on the final score. Check that the conclusions are robust for
+the main impact category which are contributing to more than
+a percent to the total impact. And use several impact
+assessment methods in parallel to test results robustness like
+IMPACT World+ or ReCiPe that we have here. Finally, for interpretation, compare
+results from different angles, okay? Look at each LCA phase, the inventory
+results, the midpoint characterization results and the damage characterization
+of the impact assessment, and the normalization or
+weighting results that we have. Look at the contribution
+of each life cycle stage, raw material extraction,
+product manufacturing, production, use, waste and disposal, and
+of each component of your product. And especially focus on the one
+generating the largest impact or those where low cost enabled
+to have efficient solution. Consider each substance, okay? Each elementary flow and
+each impact category contribution. Perform a sensitivity study to
+look at the significance and test the significance of
+the differences between scenario and the robustness of your main conclusions. LCA, in conclusion, has really
+matured tremendously in the last year. And one sign among other is
+publication now in Nature on LCA of international trade
+which drives biodiversity, which was from a colleague in Australia. And this paper on looking at
+the rethinking of the global supply chain which was presenting to
+a large republic the basis of LCA. Now to conclude and get an overview, I would recommend you to
+have a look at the chapter 8 of our book on
+Environmental Life Cycle Assessment, which give you LCA through
+an example from A to Z. From treating urban sewage sludge, which is an interesting,
+and will enable you to have a sort of recap
+of the anti method. In conclusion for this chapter three,
+the LCA system approach and the system character of this
+approach is a strength. And provide the ability to screen and identify hotspots across
+the entire product lifecycle, looking at multiple types of impacts and
+analyzing multiple trade-offs. The good news is that data
+availability for both inventory and impact assessment has substantially
+increased and really facilitates LCA application as you did in relatively
+a short time in your case study. As a system approach,
+uncertainty remains high and need to be acknowledged and
+accounted for when informing decision. Finally, so
+far we looked one product at a time. This is useful, but this might not be
+sufficient to bring us to sustainable consumption and that's why we have
+a fourth chapter in this class.

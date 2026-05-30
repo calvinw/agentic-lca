@@ -1,0 +1,45 @@
+The ecoinvent database provide
+these two types of data. It provides unit process level. These are processes which
+are called with U, which have the detail of direct elementary flow
+and intermediary. It means with any data
+you always account for the 4,000 other
+processes to get it. It's complicated, but you
+have a high level of detail, which is really nice
+when you want to just modify one of these process. You just modify
+exactly what you want and you can rerun it
+and get your results. The second level, which is
+easier to use and I recommend, I would say that you use the system level by default when you will
+work on SimaPro. It's the aggregated
+elementary flow that you have for a given product summed up over the entire supply chain. No intermediary flow here, only total elementary flow
+per functional unit or per kilo of the commodity
+that we are defining. Many other databases don't
+have the same resolution, only offer aggregated flow, which is problematic because you cannot modify them easily. So you have to ask the
+people who've done the data to modify them, which some company like to keep their customer
+dependent on them, but personally and in
+our quantities company, we are trying to affect
+our customer independence. They will need us because
+we didn't need to be always cutting edge and
+we'll have the next ID. Such aggregate
+inventory flow for different processes can
+be directly used to build the inventory of new
+products and we see with a car example how once you have these
+aggregated system level flow, you can use them
+relatively easy, even Excel spreadsheet to build the impact of a given
+product so in summary, the inventory phase
+of the LCA determine the elementary flow or emission and extraction
+per functional unit. Accounting for the
+entire processes which contribute to
+the project function. The inventory is
+calculating by combining the intermediary flow
+per functional unit and the elementary flow per unit of the same unit process to get the total per functional
+unit at each level. So it's important that we don't mix the intermediary direct and the aggregated
+elementary flow over our products system. Finally, the good news is that we have a lot
+of inventory data. The bad news is correcting
+even one process for inventory data on
+the intermediary and elementary flow is
+really hard work. So you need direct
+contact with company, or you need to go
+in the literature, it's pretty hard work. But the beauty is we have a lot of processes
+which are existing. We can rely on that and
+just do it for what is needed as a complement
+to what we already have.

@@ -1,0 +1,246 @@
+1
+00:00:09,812 --> 00:00:13,187
+Now, so
+lifecycle assessment in this context,
+
+2
+00:00:13,187 --> 00:00:17,810
+in this area of producer responsibility
+is used in different way.
+
+3
+00:00:17,810 --> 00:00:25,224
+Using business strategy and R & D that
+the two main usage where respondents 60%.
+
+4
+00:00:25,224 --> 00:00:30,385
+Where for each of them it can exceed 100%
+because some people are using it for
+
+5
+00:00:30,385 --> 00:00:32,477
+several goals at the same time.
+
+6
+00:00:32,477 --> 00:00:35,240
+It's used in product design, okay?
+
+7
+00:00:35,240 --> 00:00:36,922
+That's an important use.
+
+8
+00:00:36,922 --> 00:00:38,433
+Education.
+
+9
+00:00:38,433 --> 00:00:41,899
+Is used today in education
+that's what we are doing.
+
+10
+00:00:41,899 --> 00:00:46,098
+Policy development,
+the EU in particular is using quite
+
+11
+00:00:46,098 --> 00:00:50,657
+a bit the LCA approach to adapt
+their policy and development.
+
+12
+00:00:50,657 --> 00:00:54,166
+But also in company we
+have that happening.
+
+13
+00:00:54,166 --> 00:01:00,323
+Product declaration labeling Aiso
+label free level needs kind of LCA or
+
+14
+00:01:00,323 --> 00:01:04,234
+to be accepted and recognized, certified.
+
+15
+00:01:04,234 --> 00:01:07,816
+Sales and
+procurement is not negligible but
+
+16
+00:01:07,816 --> 00:01:12,862
+it's it's substantially lower
+than in business strategy.
+
+17
+00:01:12,862 --> 00:01:17,251
+So, what type of problem
+are we addressing with LCA?
+
+18
+00:01:17,251 --> 00:01:21,092
+It's how to decide priorities.
+
+19
+00:01:21,092 --> 00:01:26,468
+And because the world just cannot
+afford to do everything as Barlow who
+
+20
+00:01:26,468 --> 00:01:32,497
+was the head of the International Academy
+for Technical Science at that time.
+
+21
+00:01:32,497 --> 00:01:37,377
+Was quoting and saying he had the
+engineering view that the problem is not
+
+22
+00:01:37,377 --> 00:01:41,700
+how to tackle, the problem
+engineering can solve everything.
+
+23
+00:01:41,700 --> 00:01:44,643
+But what we just cannot afford that.
+
+24
+00:01:44,643 --> 00:01:47,296
+So, we need priority.
+
+25
+00:01:47,296 --> 00:01:51,043
+And in many cases LCA
+is there to bring and
+
+26
+00:01:51,043 --> 00:01:56,234
+choose among the different
+environmental proposals.
+
+27
+00:01:56,234 --> 00:02:00,803
+Those who are efficient,
+those who will bring
+
+28
+00:02:00,803 --> 00:02:05,840
+the maximum benefits for
+a minimum investments and
+
+29
+00:02:05,840 --> 00:02:11,127
+improve our worlds an affordable and
+efficient way.
+
+30
+00:02:11,127 --> 00:02:16,754
+So, in summary, the main life
+cycle stages of a product here,
+
+31
+00:02:16,754 --> 00:02:19,633
+is material extraction first.
+
+32
+00:02:19,633 --> 00:02:23,572
+Then we move to transformation
+of the raw material.
+
+33
+00:02:23,572 --> 00:02:27,988
+We have the manufacturing and assembly of
+the product, packaging and distribution.
+
+34
+00:02:27,988 --> 00:02:31,645
+Use and reuse and recycling and
+finding the disposal.
+
+35
+00:02:31,645 --> 00:02:35,294
+These are all the stage which
+need to be accounted for and
+
+36
+00:02:35,294 --> 00:02:37,321
+considered in the product..
+
+37
+00:02:37,321 --> 00:02:40,478
+In this proactive era,
+LCA meet the needs for
+
+38
+00:02:40,478 --> 00:02:44,729
+producer responsibility beyond
+its own production sites.
+
+39
+00:02:44,729 --> 00:02:49,260
+And we've seen that there
+are multiple
+
+40
+00:02:49,260 --> 00:02:53,495
+types of application by
+multiple actors for LCA.
+
+41
+00:02:53,495 --> 00:02:57,470
+So, now to further discover LCA,
+
+42
+00:02:57,470 --> 00:03:03,235
+you will take the second
+chapter of our book here.
+
+43
+00:03:03,235 --> 00:03:07,427
+Download the book on on your system and
+
+44
+00:03:07,427 --> 00:03:13,849
+take the second chapter and
+just read the case study here.
+
+45
+00:03:13,849 --> 00:03:20,007
+Where we look for
+a sport event at single use paper or
+
+46
+00:03:20,007 --> 00:03:28,185
+polyethylene cup versus
+polycarbonate reusable up to 150 times.
+
+47
+00:03:28,185 --> 00:03:33,712
+Because they are recuperated
+in our scenario by
+
+48
+00:03:33,712 --> 00:03:38,961
+the organizer of the sport event,
+washed and
+
+49
+00:03:38,961 --> 00:03:43,949
+reused over many different sport events.
+
+50
+00:03:43,949 --> 00:03:48,357
+So, let's look what is best for
+the environment.
+
+51
+00:03:48,357 --> 00:03:53,666
+Is this single use paper cup or
+is it this polycarbonate cup?
+
+52
+00:03:53,666 --> 00:03:58,081
+And on what factor will
+that depends in our case.

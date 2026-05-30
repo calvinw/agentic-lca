@@ -1,0 +1,991 @@
+1
+00:00:08,690 --> 00:00:12,570
+Now we have these two bulbs,
+
+2
+00:00:12,570 --> 00:00:15,135
+and it's great to have
+the fluorescent bulb
+
+3
+00:00:15,135 --> 00:00:18,090
+because we have reduced
+our consumption.
+
+4
+00:00:18,090 --> 00:00:20,220
+What could be the
+problem with it?
+
+5
+00:00:20,220 --> 00:00:24,060
+Problem could be this one
+needs a bit more time,
+
+6
+00:00:24,060 --> 00:00:27,490
+so what I did when we
+were using this one,
+
+7
+00:00:27,490 --> 00:00:29,040
+now I've moved to LED,
+
+8
+00:00:29,040 --> 00:00:30,405
+but when I was using that,
+
+9
+00:00:30,405 --> 00:00:34,230
+I was using slightly
+higher intensity
+
+10
+00:00:34,230 --> 00:00:36,570
+so that when I switch it on,
+
+11
+00:00:36,570 --> 00:00:38,460
+my wife will not complain,
+
+12
+00:00:38,460 --> 00:00:46,185
+and we will directly get the
+good light in that case.
+
+13
+00:00:46,185 --> 00:00:48,750
+Second problems on this,
+
+14
+00:00:48,750 --> 00:00:51,245
+remember this was especially
+
+15
+00:00:51,245 --> 00:00:53,855
+when it appeared in the 1990s,
+
+16
+00:00:53,855 --> 00:00:57,660
+this was substantially
+more expensive.
+
+17
+00:00:59,900 --> 00:01:03,740
+The service here
+more expensive with
+
+18
+00:01:03,740 --> 00:01:07,115
+the fluorescent or
+nowadays the LED,
+
+19
+00:01:07,115 --> 00:01:11,560
+then with an incandescent
+bulb, let's look at that.
+
+20
+00:01:11,560 --> 00:01:14,960
+To look at that, it's
+not anymore LCA,
+
+21
+00:01:14,960 --> 00:01:18,185
+we're going out of a
+life cycle assessment,
+
+22
+00:01:18,185 --> 00:01:23,660
+we are starting to do
+life cycle costing.
+
+23
+00:01:23,660 --> 00:01:27,860
+And the beauty is
+that reference flow
+
+24
+00:01:27,860 --> 00:01:29,810
+was what is needed to be
+
+25
+00:01:29,810 --> 00:01:32,315
+purchased to ensure
+the function.
+
+26
+00:01:32,315 --> 00:01:35,375
+So this is also the basis,
+
+27
+00:01:35,375 --> 00:01:37,670
+the same reference flow can be
+
+28
+00:01:37,670 --> 00:01:40,490
+used to do a life cycle costing,
+
+29
+00:01:40,490 --> 00:01:45,020
+adding as an information
+the price of my purchase
+
+30
+00:01:45,020 --> 00:01:47,060
+in addition to the
+quantity we have
+
+31
+00:01:47,060 --> 00:01:50,185
+already determined in
+the reference flows.
+
+32
+00:01:50,185 --> 00:01:52,800
+Let's try to do it together.
+
+33
+00:01:52,800 --> 00:01:57,710
+We have here our 300 kilowatt-hour
+per functional unit,
+
+34
+00:01:57,710 --> 00:02:00,215
+which was the electricity use.
+
+35
+00:02:00,215 --> 00:02:02,980
+Price of electricity,
+
+36
+00:02:02,980 --> 00:02:05,440
+we could say here,
+
+37
+00:02:05,440 --> 00:02:11,470
+$0.1 or 10 cent
+per kilowatt-hour.
+
+38
+00:02:11,480 --> 00:02:15,170
+Here we would have a total of
+
+39
+00:02:15,170 --> 00:02:20,030
+$30 consume over five
+years in our case.
+
+40
+00:02:20,030 --> 00:02:22,760
+Let's compare here, and we have
+
+41
+00:02:22,760 --> 00:02:28,290
+65 kilowatt-hour times
+$0.1 per kilowatt-hour.
+
+42
+00:02:28,390 --> 00:02:30,800
+Over these five years,
+
+43
+00:02:30,800 --> 00:02:34,835
+we only have $6.5 here,
+
+44
+00:02:34,835 --> 00:02:37,160
+that's a substantial difference,
+
+45
+00:02:37,160 --> 00:02:42,515
+we've saved here about $23.5.
+
+46
+00:02:42,515 --> 00:02:45,080
+Now, if we take our bulb,
+
+47
+00:02:45,080 --> 00:02:48,810
+first we needed five bulb here,
+
+48
+00:02:48,810 --> 00:02:50,555
+so we need five times,
+
+49
+00:02:50,555 --> 00:02:54,020
+I assume they are
+like 50 cent each,
+
+50
+00:02:54,020 --> 00:02:58,460
+that's $2.5 for the bulbs.
+
+51
+00:02:58,460 --> 00:03:01,210
+Whereas with the incandescent,
+
+52
+00:03:01,210 --> 00:03:05,400
+the fluorescents, I
+will use only one here.
+
+53
+00:03:05,400 --> 00:03:09,050
+So even the bulb themselves
+in this hypothesis
+
+54
+00:03:09,050 --> 00:03:11,330
+is in fact cheaper with
+
+55
+00:03:11,330 --> 00:03:13,705
+the fluorescent
+than incandescent.
+
+56
+00:03:13,705 --> 00:03:16,460
+If we move it
+further to the LED,
+
+57
+00:03:16,460 --> 00:03:19,190
+which should last even
+longer if they are
+
+58
+00:03:19,190 --> 00:03:22,220
+of reasonable quality
+than the incandescent,
+
+59
+00:03:22,220 --> 00:03:24,680
+will also not really increase
+
+60
+00:03:24,680 --> 00:03:28,255
+substantially as the price of
+the purchase at the start.
+
+61
+00:03:28,255 --> 00:03:33,560
+Now we have $30 doing for
+the electricity $2.5,
+
+62
+00:03:33,560 --> 00:03:37,985
+we get $32.5 here,
+and here $8.5.
+
+63
+00:03:37,985 --> 00:03:41,330
+We saved a substantial amount
+
+64
+00:03:41,330 --> 00:03:44,565
+of money in these difference.
+
+65
+00:03:44,565 --> 00:03:47,360
+Making it efficient, in fact,
+
+66
+00:03:47,360 --> 00:03:50,900
+make us here in a
+win-win situation,
+
+67
+00:03:50,900 --> 00:03:55,115
+which is very interesting
+because we saving both for
+
+68
+00:03:55,115 --> 00:03:57,230
+the environment related to
+
+69
+00:03:57,230 --> 00:04:00,260
+electricity consumption
+and also money,
+
+70
+00:04:00,260 --> 00:04:04,070
+which is also related to the
+same energy consumption.
+
+71
+00:04:04,070 --> 00:04:07,295
+Life cycle costing
+can be made on
+
+72
+00:04:07,295 --> 00:04:10,280
+a similar basis
+combining the quantity,
+
+73
+00:04:10,280 --> 00:04:13,230
+obtaining the LCA with
+the price to get that.
+
+74
+00:04:13,230 --> 00:04:14,300
+But as I said,
+
+75
+00:04:14,300 --> 00:04:15,560
+this is not anymore LCA,
+
+76
+00:04:15,560 --> 00:04:19,760
+we were not going to study
+that in detail in the future.
+
+77
+00:04:19,760 --> 00:04:23,030
+Let's look a bit at these
+key parameter we've seen,
+
+78
+00:04:23,030 --> 00:04:26,000
+and the first is a
+light efficiency here
+
+79
+00:04:26,000 --> 00:04:29,150
+in lumen per watt on this graph.
+
+80
+00:04:29,150 --> 00:04:33,640
+You see the low efficiency
+of the incandescent bulb,
+
+81
+00:04:33,640 --> 00:04:35,565
+which are down here,
+
+82
+00:04:35,565 --> 00:04:37,850
+and the fluorescent bulb
+
+83
+00:04:37,850 --> 00:04:42,260
+already better in terms of
+efficiency in that case.
+
+84
+00:04:42,260 --> 00:04:44,450
+You have light which have
+
+85
+00:04:44,450 --> 00:04:48,290
+even higher efficiency like
+sodium lamps in the past,
+
+86
+00:04:48,290 --> 00:04:50,960
+which were used in the streets.
+
+87
+00:04:50,960 --> 00:04:54,170
+Nowadays it's interesting
+that was when I
+
+88
+00:04:54,170 --> 00:04:57,200
+studied or finished my study
+
+89
+00:04:57,200 --> 00:05:00,175
+I was doing my PhD
+between '83 and '88,
+
+90
+00:05:00,175 --> 00:05:01,715
+we didn't have LED.
+
+91
+00:05:01,715 --> 00:05:06,330
+LED came really at
+the end of the '90s,
+
+92
+00:05:06,330 --> 00:05:09,110
+I remember buying an
+LED for my class,
+
+93
+00:05:09,110 --> 00:05:12,285
+but the light used was really a
+
+94
+00:05:12,285 --> 00:05:16,375
+perhaps 100 lumen instead
+of 800 at that time.
+
+95
+00:05:16,375 --> 00:05:19,610
+But now we see that
+if I look here at
+
+96
+00:05:19,610 --> 00:05:23,510
+the electrical consumption
+for a given flow,
+
+97
+00:05:23,510 --> 00:05:28,685
+if I put my 800 lumen
+here that we have,
+
+98
+00:05:28,685 --> 00:05:30,455
+we have this reduction,
+
+99
+00:05:30,455 --> 00:05:32,255
+substantial reduction for
+
+100
+00:05:32,255 --> 00:05:34,835
+incandescent to the fluorescent.
+
+101
+00:05:34,835 --> 00:05:37,714
+Small increase, but
+still important increase
+
+102
+00:05:37,714 --> 00:05:41,039
+from the fluorescence
+to the LED,
+
+103
+00:05:41,039 --> 00:05:43,640
+but less gain than what we
+
+104
+00:05:43,640 --> 00:05:46,970
+have had in the previous stage.
+
+105
+00:05:46,970 --> 00:05:51,080
+Also technological
+improvement needs time.
+
+106
+00:05:51,080 --> 00:05:54,125
+We see that compared
+to a candle.
+
+107
+00:05:54,125 --> 00:05:59,840
+This is a log scale which
+was 0.1 percent efficiency.
+
+108
+00:05:59,840 --> 00:06:02,390
+Here we are now with
+
+109
+00:06:02,390 --> 00:06:07,220
+the LEDs rather close to
+the 50 percent efficiency,
+
+110
+00:06:07,220 --> 00:06:09,590
+so much better and
+that's the reason why
+
+111
+00:06:09,590 --> 00:06:12,440
+now inside the house it's really
+
+112
+00:06:12,440 --> 00:06:16,400
+interesting to change all
+your bulb to LED because in
+
+113
+00:06:16,400 --> 00:06:20,615
+fact you're paying electricity
+at a much higher level,
+
+114
+00:06:20,615 --> 00:06:22,265
+so when you move,
+
+115
+00:06:22,265 --> 00:06:25,805
+just change all the bulb
+that's cost-effective
+
+116
+00:06:25,805 --> 00:06:27,650
+and that's good for
+the environment
+
+117
+00:06:27,650 --> 00:06:29,750
+that you want to do that.
+
+118
+00:06:29,750 --> 00:06:32,450
+This change has
+made time we needed
+
+119
+00:06:32,450 --> 00:06:36,755
+150 years to reach the
+level we have with LED.
+
+120
+00:06:36,755 --> 00:06:39,680
+The same with motor
+engine efficiency
+
+121
+00:06:39,680 --> 00:06:41,090
+have increased with time,
+
+122
+00:06:41,090 --> 00:06:43,460
+but have increased
+relatively slowly between
+
+123
+00:06:43,460 --> 00:06:46,490
+the first steam engine and
+
+124
+00:06:46,490 --> 00:06:48,710
+the gas turbine that
+we start having
+
+125
+00:06:48,710 --> 00:06:51,920
+here with high efficiencies.
+
+126
+00:06:51,920 --> 00:06:55,880
+If we summarize our
+different results,
+
+127
+00:06:55,880 --> 00:06:59,120
+the functional unit
+is the common unit
+
+128
+00:06:59,120 --> 00:07:02,720
+representing the
+function of the system.
+
+129
+00:07:02,720 --> 00:07:04,775
+It's not something we purchased,
+
+130
+00:07:04,775 --> 00:07:08,330
+it's representing the
+offered service and it will
+
+131
+00:07:08,330 --> 00:07:12,320
+provide the basis for
+scenario comparison.
+
+132
+00:07:12,320 --> 00:07:14,960
+All inventory emission will be
+
+133
+00:07:14,960 --> 00:07:18,590
+calculated per functional unit.
+
+134
+00:07:18,590 --> 00:07:22,925
+The functional unit is the
+same for all scenarios.
+
+135
+00:07:22,925 --> 00:07:25,100
+It is quantified value.
+
+136
+00:07:25,100 --> 00:07:27,080
+It's an additive value in
+
+137
+00:07:27,080 --> 00:07:29,870
+the sense if I double
+the functional unit,
+
+138
+00:07:29,870 --> 00:07:31,850
+it should double my emission,
+
+139
+00:07:31,850 --> 00:07:36,095
+so functional unit
+is not a ratio,
+
+140
+00:07:36,095 --> 00:07:40,280
+so if you use a unit you're
+taking is something per hour
+
+141
+00:07:40,280 --> 00:07:45,260
+or something per another metric.
+
+142
+00:07:45,260 --> 00:07:47,360
+This will not work
+because it's not
+
+143
+00:07:47,360 --> 00:07:50,990
+an additive metric in that case.
+
+144
+00:07:50,990 --> 00:07:54,650
+If you study the components of,
+
+145
+00:07:54,650 --> 00:07:57,365
+for example a plane engine
+
+146
+00:07:57,365 --> 00:08:01,115
+from a larger product
+which will be my plane.
+
+147
+00:08:01,115 --> 00:08:04,580
+Functional unit
+refer generally to
+
+148
+00:08:04,580 --> 00:08:06,530
+the overall function for
+
+149
+00:08:06,530 --> 00:08:09,575
+the consumer and
+this is the plane,
+
+150
+00:08:09,575 --> 00:08:11,630
+so this will be,
+
+151
+00:08:11,630 --> 00:08:14,000
+we need even if we are
+studying the reactor,
+
+152
+00:08:14,000 --> 00:08:17,120
+we need to put it in
+its context where
+
+153
+00:08:17,120 --> 00:08:21,770
+this object become useful and
+offer really its service.
+
+154
+00:08:21,770 --> 00:08:25,730
+The plane engine is offering
+some service for the plane,
+
+155
+00:08:25,730 --> 00:08:29,345
+but it's useless unless
+the plane is flying
+
+156
+00:08:29,345 --> 00:08:33,395
+and really providing to the
+consumer a given service.
+
+157
+00:08:33,395 --> 00:08:37,040
+You can arbitrarily
+select the amount
+
+158
+00:08:37,040 --> 00:08:40,820
+of fractional unit you fix as
+a reference for comparison.
+
+159
+00:08:40,820 --> 00:08:44,210
+This is your choice, just take
+
+160
+00:08:44,210 --> 00:08:48,605
+a convenient one which
+speaks to people for that,
+
+161
+00:08:48,605 --> 00:08:53,090
+but be careful as the example
+we had here with the lumen,
+
+162
+00:08:53,090 --> 00:08:55,400
+when what you need
+to buy per functional
+
+163
+00:08:55,400 --> 00:08:58,175
+unit changes as a
+service duration.
+
+164
+00:08:58,175 --> 00:09:02,090
+My electricity consumption
+is changing as my service is
+
+165
+00:09:02,090 --> 00:09:04,460
+lasting longer and the amount
+
+166
+00:09:04,460 --> 00:09:06,695
+of service is
+doubling with time.
+
+167
+00:09:06,695 --> 00:09:09,185
+You need to make the
+service duration
+
+168
+00:09:09,185 --> 00:09:13,715
+explicit in the functional
+unit and beware.
+
+169
+00:09:13,715 --> 00:09:16,415
+That will be not per hour.
+
+170
+00:09:16,415 --> 00:09:21,275
+That will be like we
+had 800 lumen during,
+
+171
+00:09:21,275 --> 00:09:23,390
+and that will be expressed by
+
+172
+00:09:23,390 --> 00:09:26,120
+during and during is expressed
+
+173
+00:09:26,120 --> 00:09:31,310
+by multiplication not division.
+
+174
+00:09:31,310 --> 00:09:36,080
+We don't want and I say it's
+not a ratio in that case.
+
+175
+00:09:36,080 --> 00:09:39,410
+Some functional unit already
+implicitly account for
+
+176
+00:09:39,410 --> 00:09:42,680
+the duration of the service
+like one kilowatt-hour.
+
+177
+00:09:42,680 --> 00:09:46,340
+In fact it's already
+multiply by an hour.
+
+178
+00:09:46,340 --> 00:09:50,030
+It's one kilowatt during
+an hour in that case.
+
+179
+00:09:50,030 --> 00:09:51,620
+If I would compare
+
+180
+00:09:51,620 --> 00:09:55,130
+different electricity
+mix, for example.
+
+181
+00:09:55,130 --> 00:09:57,560
+That was the functional unit,
+
+182
+00:09:57,560 --> 00:09:59,840
+so now let's look at
+
+183
+00:09:59,840 --> 00:10:02,420
+the corresponding
+reference flows
+
+184
+00:10:02,420 --> 00:10:04,325
+and environmental parameter.
+
+185
+00:10:04,325 --> 00:10:08,055
+The reference flow
+is what you buy,
+
+186
+00:10:08,055 --> 00:10:11,440
+and it provide for
+each scenario,
+
+187
+00:10:11,440 --> 00:10:14,500
+and that's different
+specific for each scenario.
+
+188
+00:10:14,500 --> 00:10:17,110
+It differs here
+for each scenario,
+
+189
+00:10:17,110 --> 00:10:20,365
+the quantity needed
+per functional unit.
+
+190
+00:10:20,365 --> 00:10:22,360
+Don't put too many things,
+
+191
+00:10:22,360 --> 00:10:26,079
+don't in your reference
+flow put the aluminum
+
+192
+00:10:26,079 --> 00:10:27,850
+needed because you don't buy
+
+193
+00:10:27,850 --> 00:10:30,010
+the aluminum independently
+of the bulb,
+
+194
+00:10:30,010 --> 00:10:33,580
+you buy a bulb, so think
+what am I purchasing,
+
+195
+00:10:33,580 --> 00:10:36,760
+what am I buying to
+get my service and put
+
+196
+00:10:36,760 --> 00:10:40,385
+the fraction of what I'm
+buying and remember,
+
+197
+00:10:40,385 --> 00:10:41,540
+with a fixture it could be
+
+198
+00:10:41,540 --> 00:10:43,970
+less than one that
+you have depending on
+
+199
+00:10:43,970 --> 00:10:46,490
+the functional
+unit that you have
+
+200
+00:10:46,490 --> 00:10:49,115
+chosen and it needs
+to be quantified,
+
+201
+00:10:49,115 --> 00:10:52,040
+it's not glass or it's not bulb.
+
+202
+00:10:52,040 --> 00:10:55,940
+It's how many bulbs
+per functional unit. .
+
+203
+00:10:55,940 --> 00:10:59,870
+The key parameters for the
+environmental optimization are
+
+204
+00:10:59,870 --> 00:11:01,940
+multiplicative
+factors that relate
+
+205
+00:11:01,940 --> 00:11:05,315
+the functional unit to
+the reference flow.
+
+206
+00:11:05,315 --> 00:11:09,590
+It's which parameter is
+making what I need to
+
+207
+00:11:09,590 --> 00:11:11,900
+purchase high and they
+
+208
+00:11:11,900 --> 00:11:14,900
+may be directly proportional
+to this factor.
+
+209
+00:11:14,900 --> 00:11:17,510
+The product lifetime
+might be important.
+
+210
+00:11:17,510 --> 00:11:20,765
+The number of reuses might
+be important because
+
+211
+00:11:20,765 --> 00:11:24,305
+if you can reuse the number
+of use is increasing,
+
+212
+00:11:24,305 --> 00:11:26,285
+you need less purchase
+
+213
+00:11:26,285 --> 00:11:28,790
+in that case, and
+the consumption,
+
+214
+00:11:28,790 --> 00:11:32,330
+which is linked to the
+efficiency that we have
+
+215
+00:11:32,330 --> 00:11:37,290
+seen here with our
+different types of bulb.

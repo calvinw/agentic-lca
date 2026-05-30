@@ -1,0 +1,65 @@
+Good. So now let's look at one of this unit
+process as it comes out of a database, and we have here the ecoinvent
+life cycle inventory database which is the mostly
+used database in the world. Develop in Switzerland, in fact,
+I was in the board of this database when I was faculty at
+the Swiss Federal Institute of Technology. It has been a joint
+venture between different institute who was
+developing this database. I will come back and
+give you some more history on that. But this database is
+interesting because it gives you a very detailed view of
+what a given process like here aluminum primary liquid, and
+we want to produce one kg. This is not really a functional unit, strictly speaking because this aluminum
+will be then used in a given product. But this is typical of
+a cradle to gate life cycle inventory where we
+produce a certain material as output. And you see that there will be on the one
+hand a lot of different inputs and a lot of different outputs. Let's do a small exercise and I suggest
+you stop the video for one minute. Look at each of these
+flow of the unit process, aluminum primary liquid and
+decide which of these is intermediary flow which is coming from
+other economical processes. Or leading to other economic processes and which of these are direct
+extraction from the environment or emmission of pollutants to the environment
+which are the elementary fuel. So mark them for example in blue and
+in green in that case. So if we look at the results that we have,
+we see that in the case of aluminum, primary liquid, all the inputs are in
+fact intermediary flows in that case. Many input flow are in fact
+intermediary in many cases unless you have in front of you mining process
+which is re extracting from the ground. The exception might be water. We have quite a few process
+where we are taking water and using it directly inside our process,
+okay? And on the output on the other hand, this is where we have a lot of elementary
+flows, and we will set them aside. And I say for keep them for
+the inventory, this one and these are a mission like benzyo(a)pyrene
+which is one of the pH. Other pH you have here, carbon dioxide
+fossil and then carbon monoxide. Different nitrogen oxide or sulfur
+dioxide which lead to particulate and direct emission of primary
+particulate here and flow that we will follow a bit and go in further detail in the inventory
+which is the heat waste. We see that, but for now,
+as I say, we park that information, and we will news now the information on
+the intermediary flow and for the outputs. Any flow sent to disposal any amount
+of materials sent to disposal, disposal itself is still
+part of the economy. So this flow is in blue and is an intermediary not
+an elementary flow in in that. So basically what we're saying is that
+the disposal is part of our system here. And if if we look more generically
+than this particular process will have in our system the mining of
+rural resources and transformation. We will have some infrastructure
+the plant and transportation in any LCA. Of course the manufacturing phase
+which lead to our use phase. And in the end either
+the disposal waste treatment or if we can we can reuse our product or
+if we cannot reuse it we might be able to recycle part of it and
+use it as an input to another. Manufacturing perhaps for
+the same product or different product. So waste disposal and treatment
+are included in the system boundary and our intermediary not elementary flow. The level of detail
+required to achieve this. Okay. Is depending on your goals or finish
+you can be very refined and I've seen LCA or flooring material
+with 1000 different process or you can have process
+grouping things together. And this is really up to
+the person developing the LCA to define that. What what makes sense for
+the type of product? We we we have here perhaps
+one precision on the eco- invent database that I want
+to emphasize is on the input side only flows which
+are mentioned as ores or in grounds are elementary flow. All the other from ecoinvents are in
+blue they are intermediary flows. Okay so good so now let's let's build and
+for a given product function. The system is best built by designing
+a process tree of flow chart or flow diagram that we have, and
+that's what we are learning in our part B of this chapter, taking
+the aluminum liquid as a detailed example.

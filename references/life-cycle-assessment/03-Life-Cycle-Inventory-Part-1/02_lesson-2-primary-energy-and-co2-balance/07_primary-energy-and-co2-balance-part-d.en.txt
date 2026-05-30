@@ -1,0 +1,64 @@
+So let's now come back to our bulb and
+let's check the data that we had. And we can check with this ratio
+of gram CO2 per mega joule all the different individual
+database flows that we had. So if we take the glass that we had here,
+how do we calculate the ratio? We had 1.2 mega joule per functional unit 0.6063 kg CO2 perfection in unit. So that will be in fact
+if we take time 1000 to get gram that will be 63 g
+CO2 divided by 1.2 mega joule. And this is equal to
+the number we have here 53 gram CO2 per mega joule
+that we have here and now we can check each of these data. We have the 53 here and aluminum is
+around 59 if I jump here packaging 50. So all these number are really
+reasonable between 50 and 69. The tungsten here is relatively
+high when you look 95. And that means we might have some
+inconsistency in the database. Pretty likely in that case
+which can sometimes that come that the mega joule renewable
+come from a different source and the CO2 and
+that would be need to be checked here. And so this is the beauty of that. We can start identifying where we
+have problems don't look too much at this ratio for the disposal because in
+the disposal phase you can have carbon which were fixed inside
+the material which are released. So we could have very huge
+amount released per my joule. The disposal requires only
+a little energy in that case. So we lose in the disposal this fixed
+ratio here now very important as I say, don't look at that for the check,
+this is step number four but for comparing result that was
+step number three we rely on and we will compare to other scenario. We will rely here on the energy
+per functional unit. The CO2 emitted per functional unit. So all comparison are always
+made per functional unit. So if we summarize our data
+check that we can rely on we can say most of oil, diesel cars and petrol in transportation
+which are oil based gas line will work around 55
+g CO2 per mega joules. And that includes the 10 g
+of pre combustion that we have to make our fuel available
+from primary to final energy natural gas around 50 about 85 for
+the coal and electricity us we say is also very
+close to 60 g zero to Per mega joule. So not very great in that case. When I get value with plastic,
+if I find a value of 30 this means this is only the manufacturing if
+I find a value of 60 g CO2 Per mega joule this means that
+incineration has been considered and when it's landfill we probably at least
+on the shorter term of 100 years or a few 1000 years only will only have
+the 30 g emitted during the manufacturing. Concrete and cement around
+200 g of CO2 per mega joules. Other things,
+many of the other are in fact at 65 g CO2 per mega joule non repairable. Beware if you get a negative number, okay, that's if your number is
+negative at the bottom here, it means that only fixation
+of non fossil CO2 has been considered and
+I might have a problem. So negative member it means
+that that's why I'm using usually only the fossil CO2 in the balance
+knowing that if it's negative, it will be released back at one point or
+another. So I don't need to
+consider it separately or you need to be very sure your database has
+all the re-emission at the end of life. If you get a number of around
+10 g of CO2 per mega joule very likely the combustion is not considered. And that's very useful to check
+papers when it's not yours and to know what people have done. And if plastic around 30 g of CO2 per mega
+joule, this would be that incineration emission have not been considered all
+plastic is deposited in my landfill. So let's conclude this section
+on the energy balance. The primary energy balance and
+inventory of CO2 emission is calculated by multiplying the amount
+of each database process by the aggregated emission per kilo or
+per unit of this database process. And we sum up to get the total. So it's a simple way and
+I like to do it in Excel in any new LCA. First before moving to LCA software
+because I can check my data, I can compare it and
+we will do that in our practice after. Energy content and
+carbon are related. And it means that the ratio of
+gram CO2 to prime a joule non renewal prime energy can you be used to check
+consistencies or inventory data. Crucial to account for
+additional resources either during the use phase in combustion emission or during
+disposal in the incinerator emissions.

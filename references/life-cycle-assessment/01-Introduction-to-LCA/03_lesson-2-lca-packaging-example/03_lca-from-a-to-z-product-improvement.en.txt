@@ -1,0 +1,124 @@
+We could conclude popcorn, after the quantitative
+assessment is 3-4 times better
+than polystyrene. Really? Think a bit, take a critical view of how
+the assessment is performed. Don't we have some bias
+somewhere? Think of it. That's where the
+goal definition, where the scope and goal is
+important because what is the function of our
+filling material? Is it to get kilogram because
+my assessment here I told was an impact per kilo material but our goal is not to
+have the maximum kilogram. On the contrary,
+that will cost at the post office when
+we are sending it. What really we are
+after is to fill in my package here, and to have to fill it in the
+lightest way possible. Unit instead of kilogram
+should be rather volume unit. A volume for one use, probably if we start
+reusing it but if a function is
+packaged filling then this best represented by a cubic meter, and what links
+kilogram to cubic meter? This is a density. It happens that in fact, my popcorn is several time better 4.6 times heavier
+than my polystyrene. What does it mean? It means that the results for my popcorn relative to polystyrene I'll multiply
+by these key factor 4.6. What do we get? This
+is our results. Intact this time per cubic meter material
+or gallon or liter material, and we see
+that the popcorn is in fact equivalent or
+rather worse in fact, that my polystyrene, disappointing for the bio
+material in that case. Now, what is the key parameters
+which made popcorn worse? This is in fact
+essentially the density. The key and from an environmental point of view is in fact not in the hands of an environmental engineer or an environmental health
+practitioner, but is in the hands of a
+material scientist. That's pretty interesting here. Number of reuse would
+be also important. We see that we have in fact 460 percent
+improvement potential here by changing the density. If we can reach
+the same density, that will be great. We know that we had a
+good potential, but it was ruined by the
+largest weight. Generally speaking,
+if packaging is four times heavier than the plastic, it's likely that
+it will be worse. I would say that the cutoff
+is around 3-4 times. If you start having 3-4 time
+heavier bio-based material, you are in trouble. I was relatively furious
+when we republished in 1994 this study, and one NGO took it and concluded that bio-based
+material are bad, and that's not the
+point we were making. They are bad only
+because they don't treat the same properties
+and these properties, these function are really
+key and should be done. We have to be careful how
+we interpret things here. The second thing which
+was interesting is here, natural is different from
+environmental friendly. We have a good sense
+of what is natural, we have a relatively bad
+sense and we could be biased on what is
+environmental friendly. The third point is that material function and
+the service offered by a product is essential, and we can have some synergy between
+technological solution, environmental
+economy for example, in our case, to reduce weight. Let me come back on the
+question of ethical. When doing the survey people had a problem that we
+were using popcorn which can be eaten here,
+and use this for packaging but my point of view on that is if you start thinking about
+that a bit seriously, what are we doing presently? Our economy is largely oil-based and fossil
+based and with that, we are consuming, in fact the
+square meter of the past. We are using
+millions of hectares and square feet yards
+at very high speeds. Once we will have used that, we will need to use our area, our land area and
+our forest, and our production to produce both food for people
+and also material. It's interesting because when
+people have this sort of material here which is
+also in fact bio-based, they're made of starch but this time they're expanded properly, and reach a density factor of 1.6 higher than
+the polystyrene. This is already better for the environment than the
+polystyrene in our case. If you put them; this one in water, I put here 20 minutes ago the same as this one, look
+what's happening. This is my polystyrene, it will stay forever. Now, this is my starch-based
+material and I'm getting here completely dissolved
+in a while that we can see. Pretty cool to see that. What was really hard with
+this study I can tell you is I worked with a
+farmer during a whole day, he took his time to welcome
+me to work with him. We measured this half a
+cubic popcorn and waited the propane bottles before and after producing our popcorn. It was really nice a person about 65 to 70 years old
+innovating new things, and I had to tell
+him that what he was doing was not environmental
+friendlier than polystyrene. That was humanly speaking
+pretty hard in fact, but we're scientists
+and LCA is often surprising, and sometime we don't please our sponsors
+and that's okay. He was not sponsoring
+us in that case, but that was that. Let's finish and come
+back to my packaging. Now if I open it here, see what I'll get. I'm curious, what
+do we find here? We see what is here, and I was expecting that. Nowadays we don't use
+polystyrene peanuts. That's the type of material,
+and it's a factor of 10 even better than the
+polystyrene peanut. This is really smart because
+this is packing lots of air really compared to the
+polystyrene chips, but look what they put in here. My connector now is
+inside a cardboard, I weighted it as I say and
+this was 20 gram here. This is 220 gram
+that we have here, and inside there is another plastic and in the
+plastic what do we have? We have the envelope. They could have sent me that directly,
+this is a bit crazy. Let's open my envelope. I hope to find my connector
+otherwise I'll be in trouble. This is hard work. Lucky enough there
+is another plastic and indeed in there, you can see my connector. What really would have
+been the best is really sending me that and we
+get completely rid, and that's where also we need to think out of the box in
+term of alternative, how can we avoid
+completely that here? It also raises the question of environmental friendliness of having delivery at your house which could be debated because
+if I have to go express to the next Best Buy or
+whatever with the car, usually I go well
+by bike but if it's further I might go with a
+car, and my wife's car. In that case you would in fact consume quite a lot
+of energy and a truck who would stop in the different houses might be more efficient in that case. In summary, we have identify
+through this example the different LCA phases
+and their main objective. The goal and scope
+definition phase is there to set up the problem,
+and the way to address it. The inventory then determine the extraction and emission
+which are crossing the system boundary defined in the first phase and calculate them per
+functional unit here, a cubic meter
+transported, in our case. The impact assessment phase is there to make this
+different emission comparable, and arrive to interpret the results
+after each phase here. This example make us
+recognize that function is critical and a main point of departure for
+comparing products. This is really crucial. We'll come back in the
+goal definition to define this functional unit
+is unit to compare products. LCA enable us to go beyond
+sometime biased intuition. I would say about one
+out of three LCA I'm doing, I'm really surprised
+by what we are thinking, and I
+come out of it with a different view and what was key on the problem
+in many cases. It's a fun domain to
+work and to explore even after 30 years
+of work in that area.

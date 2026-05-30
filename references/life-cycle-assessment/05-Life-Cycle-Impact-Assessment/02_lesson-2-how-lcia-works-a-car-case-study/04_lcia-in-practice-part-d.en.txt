@@ -1,0 +1,127 @@
+We've done that
+for the steel now, and let's go and look
+at the results for the four different types of material that we
+are considering. What is the best material and what is the worst
+material in our case? We see that, this time,
+recycled aluminum, and we look here at the
+damage on human health, all the category which are
+contributing to human health. So all the units
+here are the same DALY per functional unit, and these things could
+be summed up apriori, but it's nice to display
+them separately. When we look at that, we see that first the
+recycled aluminum is usually the
+smallest of the four. Except here we have a small
+inversion with the composite. But apart from
+that, it is better. The question to decide, and we could look here
+on the steel side. This is also the highest, apart again for this
+ionizing radiation category, where it is just below
+the aluminum one. The question is, now, which impact category
+are relevant? We have the privilege
+now to have scaled them and put
+them in the same units. First, to do that, we display everything
+in log scale. Differences seem relatively
+small between category, but you typically
+have a factor 2 here between the steel and
+the recycled aluminum. So it's still a
+substantial difference. Now regarding the uncertainty, you want to be sure
+to consider all the categories which
+are still relevant, and relevant would
+be the factor 100 typically from the
+highest category effect, 100-1,000 uncertainty. But I would say factor 100, we start to be sure that
+we are on the right side. Factor 100 here bring us about at this level. This mean what is below this level is irrelevant. The photochemical oxidants or respiratory inorganic
+is irrelevant. Ionizing radiation where we have the tendency is irrelevant, and the ozone layer depletion for this case study
+is irrelevant. It's not irrelevant in general, but for the present
+case study, it is. What we see is, putting
+in perspective, this magnitude is really
+important based on natural science to give
+the relative importance. For this case, the
+global warming, the water use impact,
+the fine particulate, carcinogen, and non-carcinogen
+are the category which we should
+relatively look at. In that case, we can
+say the steel is the highest and the
+recycled aluminum is the best composite
+aluminum having mixed results depending on
+the impact category. Last point on this graph,
+which is interesting, these are these
+error bar up there. You see that these upper error
+bar goes to 110 minus 3, but we are about at 0.110
+minus 3 when we don't consider the impact
+occurring after 100 years. The top of the error
+bar represents the impact over the
+entire duration of the considered impact, which is typically 1,000 year
+considered in that case, where the top of
+the bar themselves are 0-100 years in time. I think this is a much
+smarter way to represent the time horizontally in an LCA study than
+choosing a time horizontal from 100 years and forgetting everything
+which happens afterwards. Here, instead of saying
+we stop at 100 year and we don't care about the
+future generation after that, we say, okay, let's display
+separately and show impact from 0-100 and
+impact after 100 years. We could put and present as many category as we are
+interested in this case. This was for human health. Let's show now the results and similar results for
+the ecosystem damage. Again, we see that,
+in most category, steel is the highest and recycled aluminum
+is the lowest. We only have here
+for the water use some mixed results
+and some inversion. Again, we can ask how
+relevant is the water use. We can look and we say, if we take two orders of
+magnitude from the tops here, that we want two
+order magnitude, probably anything
+which is below that is not really relevant. Here we would have a sort
+of debate on the water use and scrutinize a bit more
+whether it is relevant. But for the most and
+the highest impact, we see that the ranking
+is very stable. We get that. We get the same ranking
+if we consider 100 years. These one are also
+very consistent. These one are also
+very consistent. The only one where we should
+really look at is for water which behave
+often a bit slightly different than the
+other categories. To finish with damage
+characterization, so far we have calculated
+our damage based on the midpoint score and using these MDF is midpoint
+to damage factor. Now we could also impact well because that in fact directly calculated from the
+inventory flow U_i by considering that the midpoint itself is the midpoint
+characterization factor time my inventory emission, and we sum up over all
+the inventory flow corresponding to this
+midpoint category. Instead of doing
+the grouping here, we could also in fact
+do the grouping as such here and directly represent here a damage characterization
+factor that we put here, that we multiply the
+emission flow by two. We take the MDF and the CF
+midpoint to get the damage. By definition, this characterization factor
+will be the MDF time, the CF at midpoint. We get also a direct
+calculation and score with a direct characterization
+factor at damage level. You must always care when
+you use some other factor. Are they directly
+at damage level? Are they just for the midpoint? We need to look at that. In summary here, if we look
+at the different factor, we can have either the damage
+characterization factor, which is in the unit
+of your damage like the DALY per kilo_i
+or here we had a kilo reference
+substance per kilo_i, whereas the MDF makes a link between the two in having the damage unit per kilo
+reference substance. Summary, the
+characterization factors for both midpoint
+and damage levels are derived from environmentally relevant
+characterization of the cause-effect chain from
+inventory flow to impact. This means that we don't have here social
+preferences included. There are some value choices
+when you choose the DALY, but this is a choice
+which is taken by World Health Organization,
+endorsed by a lot of people. But then to determine
+best estimate of DALY, this is all based
+on natural science. However, these damage score, we have presented them on log scale to account for the often large uncertainty of the midpoint
+to damage factor. It's especially true
+for the climate change, and we are revising
+partly this factor. For the time horizon, it is interesting to separate damage for the first 100 years from damages after 100 years, rather than arbitrary fixing
+and discounting anything suddenly from a
+fixed time horizon of 100 years, for example. Damage on human health
+can be compared between this damage
+on ecosystem, or the midpoint
+category contributing can be compared among them. But we cannot compare damage on human
+health and ecosystem. They are not on the same unit, and there is no way we
+can compare this number until we proceed to
+the optional phases of the life cycle
+impacts assessment, which are normalization
+and weighting that we will see next.

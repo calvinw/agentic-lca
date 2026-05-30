@@ -1,0 +1,41 @@
+we have seen with the popcorn example,
+that function is a crucial part of LCA. LCA is all about function and how can we avoid the same problem and
+make mistake. How can we provide good rule to
+define this function well and the basis for
+the comparison in a reasonable way. This is our learning objective for today. So define function and
+functional unit as a basis for consistent comparison of products and
+services. We will select the functional unit for
+multiple type of application to reflect the product function and
+service offered to its user. We will then determine the reference
+flow as what is needed to be purchased per functional unit to be
+purchased to ensure this function. And third, we will qualitatively
+identify key environmental factors that are essential to product performance. And can be already used very
+early in the design stage of a product to improve and
+optimize our product. So let's look, we've seen with our
+popcorn versus polystyrene example. That LCA relates the environmental
+impact to a product function. So products and system can only be compared on
+the basis of a similar function. And we want to ask ourselves
+every time we do a new LCA study, are there differences in the secondary
+function between the scenario, that we would need to account for? Okay, so,
+let's take a slightly different example, and I'll take here the example
+of an incandescent bulb, okay. And this bulb, we want to
+discuss what is its function and then what are secondly other performances. So function of a bulb,
+this is pretty straightforward. It's to illuminate our room or
+where we stay or outside, but let's assume it's indoor and
+we want to illuminate indoor. Now, depending on the alternative you
+look at, I mean the fluorescent bulb that you could have here, or LED that you could
+have here at stake as an alternative. The fluorescent light bulb, they could
+have different secondary performance. Most of them want to eliminate that,
+they produce different amounts of heat. The other function of security
+ambience can be different. The fluorescent can have some time,
+a whiter type of life. And the style,
+I mean is it aesthetic, this one? Often we put it inside the bulb to
+make it a bit nicer, in that case. By the way the secondary function of heat
+is that positive and negative, okay. To bring heat,
+I mean our goal is to eliminate but if in addition I bring heat,
+is it positive? Of course it depends because,
+if you are in the winter in Michigan yes, it's positive because you avoid
+from heating inside your building. But if you are in Michigan
+a very warm day and you are in an air conditioned building,
+then it's rather negative and will increase the amount of heat that you
+need in your heating or cooling system

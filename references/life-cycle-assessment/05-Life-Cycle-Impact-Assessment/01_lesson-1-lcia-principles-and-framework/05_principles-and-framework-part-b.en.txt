@@ -1,0 +1,103 @@
+Let's understand this a little bit
+better by applying it to climate change. So in the LCI results we calculate
+the amount of greenhouse gas emissions associated with different scenarios and this is assigned to the climate
+change impact category. We calculate this midpoint damage
+by using the radiative forcing that each emission causes to the atmosphere. How much is it warming the atmosphere? And then add this up because it's
+all now in the same ultimate impact. And we can then convert this if we want
+to end point damages to human health and ecosystem quality by indicating
+how it can lead to wildfires, flooding, heat stress etcetera. And let me break that down a little bit
+more into a cause effect flow diagram for climate change. We have the emissions into the atmosphere, we have the time integrated concentration
+of having those emissions stick around in the atmosphere and
+absorb that extra radiation. This leads to a radiative forcing
+a warming of the atmosphere which causes climate change, increased temperature,
+extreme weather, precipitation, droughts. And that can have effects on ecosystems
+such as affecting their net primary production or effects on humans
+such as flooding or malnutrition. And so, we can see that
+the climate change part and rated enforcing is our midpoint level. And then the ultimate damage
+to effects on humans and ecosystems is our end point level. I put this slide in here because I know
+I'm throwing around a lot of terms and so we wanted to collect them all
+on the slide for your reference. We have an example of LCI results or
+our greenhouse gas emissions. Example of our midpoint impact
+category as climate change, example of our category indicator
+is our global warming potential or kilograms equivalent CO2
+per kilogram emitted. The characterization model used for this example is IPCC model that
+connects emissions to impacts. Our result indicator is our
+kilograms equivalent CO2. We bring everything back to that. And our end point damaged categories that
+we've talked about here are human health like heat stress and ecosystem qualities
+such as coral impacts on coral reefs. To understand the types of modeling
+that can go into this impact assessment, let's better understand this category
+indicator of a global warming potential. So Global Warming Potential of
+a substance i measures the increase in radiative forcing of the atmosphere
+due to the emission i. Or basically,
+how much radiation is it absorbing and causing the atmosphere to warm up by? And this is all measured relative
+to what a kilogram of CO2 would be? So, our climate change midpoint impact
+score, S here, of course depends on the mass of substance i admitted and
+its Global Warming Potential. How much is it increasing
+the warming of the atmosphere? And the total score is the sum of all
+the different substances emitted, their mass and
+their Global Warming Potential. Now, what's helpful to understand here
+is this isn't necessarily simple. The Global Warming Potential has
+another complicated equation with integrations that involves
+the concentration of our substance i, the absorption of thermal
+radiation of that molecule. The time horizon considered because
+different substances have different lifetimes in the atmosphere. And let me dive just a little bit deeper
+into that as you can follow me in so that we can see how the choices that
+need to be made when we're comparing different things. So the magnitude of climate change impacts
+depends on her time horizon considered. And the reason is that each molecule has
+a different lifetime in the atmosphere. CO2 hurricanes around for 300 to 1000
+years, so it's considered indefinite here. And it's short and long term impacts
+by definition are 1kg equivalent CO2. But if we want to compare this to a
+different scenario that results in methane emissions, methane lifetime is only
+12 years in the atmosphere, but it has a higher reading
+enforcing than CO2. So shorter term, it has a higher global
+warming potential than CO2, 34 is its GWP. But if we wanted to look longer term
+since the methane decays faster over longer timescales, it's not quite as
+much greater than carbon dioxide, it only has a factor of 11. Another example to help us understand
+a little better is nitrous oxide. Its lifetime is 120 years,
+so a bit closer to CO2. Which means that it's shorter term impacts
+of 298 aren't that much different from its longer term impacts of 297 because it
+lives relatively long in the atmosphere. And I hope this helps illustrate that even
+with all of our equations and modeling, there's definitely uncertainty in
+these models and choices that we make that we need to make explicit so
+that the results can be trusted. Now, to qualitatively understand this
+uncertainty at various midpoint and end points parts in our interpretation,
+we can see this figure. And this figure tells us that when
+we just look at the LCI inventory, we know the emissions and
+extractions relatively well. So our model uncertainty is low,
+but we don't know what they mean. I can't compare a kilogram admitted of
+one chemical to a kilogram admitted of another chemical without knowing
+the impact that they have. So our interpretation uncertainty is
+relatively high at LCI inventory stage. And we try to reduce that interpretation
+uncertainty better understand the impact by connecting these
+to midpoint impact categories. But in doing that, we increase our model
+uncertainty because we have to add these equations and models to estimate
+what impact the emissions will have. And even at the midpoint level,
+we haven't yet connected it to these big categories
+of human and environmental health. So if we want to go further to our
+endpoint damage, that leads to greater ability to interpret, so
+lower interpretation uncertainty. If I just say, this one has more human
+health damage than this other one, you know a little bit
+more what I mean by that. But it has greater model uncertainty and
+that it depends on the time horizons considered and
+it depends on how we waited things and how we combine different midpoint
+impacts into our endpoint damage. So as we increase our model uncertainty,
+we are increasing our relevance that leads to a balance
+that LCA folks need to make. Where in the LCI inventory, we have
+relatively high overall uncertainty. At the endpoint damage, we have relatively
+high uncertainty due to our modeling. And so this midpoint damage is often
+what a lot of LCA folks like to focus on because it's where we are minimizing
+our overall uncertainty, by balancing out our model uncertainty and
+our interpretation uncertainty. So to summarize what we talked about
+today is how to take our LCI framework, LCIA framework and how that connects
+our life cycle inventory results of emissions to air water,
+soil and resource extractions. Can connect these to their
+midpoint damage categories, which we've listed here including ozone
+depletion, ecotoxicity, eutrophication in order to better understand
+the impacts on humans and environments. And then if we want,
+we can add these up and sum them up in different ways to
+ultimately lead to end point damage or to human health, ecosystem quality,
+natural resources, etcetera. These things that we ultimately
+want to protect or value. But as we move over to the right,
+we are increasing our model uncertainty. And so, we need to balance this balance
+of making the results more relevant, but also knowing they're
+becoming more uncertain. Thank you very much.

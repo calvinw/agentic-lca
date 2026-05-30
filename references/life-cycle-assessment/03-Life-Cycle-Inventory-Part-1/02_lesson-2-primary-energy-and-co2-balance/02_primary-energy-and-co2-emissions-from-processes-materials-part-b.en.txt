@@ -1,0 +1,99 @@
+Now that we know what we want and which type of energy which is
+the non-renewable primary energy. Let's compare different processes and
+material. What is in fact the best material, is it stone from an environmental
+point of view, tin, woods? I mean, we have all sorts of
+material around this paper, what will be the best one? So, for this we look at
+the non-renewable primary energy and this aggregated inventory for
+a series of first energy carriers. And we can see large differences in
+electricity, if we take the US as a reference, we see that for C02 emission,
+okay, it's among the high one. It's substantially higher than Europe, it's only lower than China here which
+goes to 0.98kg C02 per kilowatt. If you get the other extreme for
+Switzerland or Norway which is mostly hydro and nuclear. You see that instead of 0.71kg C02 per kilowatt then you go
+down to 0.11 in that case. So, ratio of C02 to energy
+which vary a lot according to the type of electricity that we have,
+and the reason is, even when we have nuclear power plant,
+we are still heating the world as well. So, for
+the energy is not very efficient but it's efficient because there is
+no carbon for the CO2 considered. If now we look at the gasoline, we have this refined in
+the liter gasoline, this 42.9, which is the energy content
+of my gasoline basically. And this has been all extracted
+when you receive a liter gasoline. But for C02 you see the difference,
+if there is no combustion, only 0.5,
+this was the supply chain emission of C02, with combustion, you add a 2.3 or
+4 kilos C02 per liter gasoline. And we can see that in the ratio
+the gC02/MJ around 65, which is the normal value for
+oil-based system with combustion. Whereas when you have no combustion,
+you only have 11, that's typical of processes
+without combustion. Transportation will be mostly oil-based,
+so we find back ratio which is close
+to the 65 that we have here. And we get for
+transportation data on here, 1000 km-kg, not per kilo, but time kilo. So, 1000 kg transported
+over a kilometer or one kilo transported over 1000 kilometer, and we get around 2.6MJ here per 10 kilometer transported and 0.15 kg C02. If we compare different modes of
+transportation, this is always interesting to look a train is about three times
+more efficient than either the plane, the intercontinental or
+the car in that case. And we find about the same ratio with the
+C02 the train being substantially lower. Now, these are electric-intercity train,
+Europe, I think an Amtrak train would be somewhere in between
+that because of the diesel emission. And also the lower occupancy here of train compared to European
+where you have two-story, usually number of people which is really
+higher in the modern European trades. But interesting to see that plane and
+car are relatively similar for the transport of person. But here it was intercontinental,
+so for short trip, the car is better for a longer trip,
+it's probably relatively close. Material, okay, materials,
+what is the worst material? You say, that's what is big here, 1kg gold is 269,000MJ, and 16.5 tons of C02 for 1kg, why this big? Because to extract 1kg gold,
+you need to extract tons of material, you refine it and
+extract your gold, this is really energy intensive processes. Then we see,
+we have primary aluminum 160MJ which is substantially higher than the recycled
+aluminum, which is only at 22MJ. So, we'll see the importance
+between primary and recycled which might might vary
+quite a bit in these situations, is also reflected in the ratio here for
+the C02. What about my question,
+what is the best and the worst material? Do you do exactly the same
+thing with kilo aluminum and a kilo gold or a kilo polyethylene? Okay so, we have seen with the popcorn,
+we have to be careful when not to compare things just based on the kilogram
+because the function is different. Aluminum will be used in
+typically mobile application where you can really have lighter pieces. And components that will
+reduce the amount of energy needed to transport either in a plane or in the car what we want to bring
+from one point to the other. Paper you see around 20MJ,
+glasses is relatively low intensity with 11.5 but a lot of kilogram,
+I mean much heavier. And steel and copper around
+30MJ per kilogram in that case. 1000 kg water is only 5MJ, so the water, we are pretty efficient to
+extract that and use it. Let's have a look at plastics,
+and I've taken here the HDP, high density polyethylene,
+and you see around 76.4. So, from the 76.4 you can say, a kilo oil itself in it you
+have about 45MJ per kilo oil. And it means that in
+addition to being pure oil, the plastic requires another
+about 20MJ for its manufacturing. When we look at the emission,
+okay, the emission is 1.56, it's only 20gC02/MJ,
+because on the extraction side we had already extracted the energy
+when we receive a kilo polyethylene. But on the emission side, it's only
+if I put it in an incinerator that we will release the carbon which
+are still in my plastic, okay? So, in that case you have to be careful
+that if you incinerate it at the end of its life,
+these are the end of life processes. You will have huge emission of up to 3 kg per kilo incinerated P or polyethylene. Plastic also need to be manufactured, so this is just the raw plastic,
+and we need to add another 9.2MJ if you
+do the film extrusion, and about 27MJ for
+injection molding in this case. For the landfill,
+as we said the emission can be substantial depending on the composition. But the energy is relatively small,
+that's not very relevant and don't need to be further
+assessed in further detail. We've looked at just a few metals here,
+and we can now look at different type of
+metal, be it be a copper or silver. And we see here the platinum
+being one of the higher together with the gold which is not exactly
+the same value but close to value, and this is was in Nuss and
+Eckelman in 2014 Pios one. We can have the same type of table and
+it just reflects the energy here with 12,500 for gold,
+same value here for platinum. And like silver would be
+substantially here lower than gold, or copper will be even here
+around 3kg here to make it. So, small useful table and elegant to
+put it in that format we are used. Let's conclude the ratio
+between final energy and primary energy defined the energy
+efficiency of the supply chain and that's where we want to choose
+which energy we use for what which to carefully and avoid. For example, the use of electricity for
+degrading it to heat, which is a low quality energy. Parts of the primary
+energy is non renewable. That means that the basic resource of
+this energy is non replaceable or is replaced very slowly through millions of
+years which will be needed in that case. And we're using it at a rapid pace. There are large differences of several
+other magnitude between the energy and the c. 02 per kilo of different material. And these cannot be directly compared
+because they have usually different functions in our product and they need all
+to be considered but not really compared. That one is better than the other.

@@ -1,0 +1,81 @@
+So now it's interesting to
+use the primary energy and the CO2 balance both of them together. And check the data that we have
+obtained for light bulb example and check that using the gram CO2
+per megajoule primary energy. Let's look how to do this. The first thing is when we look at
+different types of fuels like coal for example, the energy
+content is associated with the number of hydrogen
+bonds we have in our fuel. Whereas the carbon emission associated
+with a number of carbon atoms. So if we look at coal,
+we have in fact a lot of carbon atoms for restricted number of hydrogen bonds. And we have in fact only half the number
+of hydrogen compared to the carbon. If we have now oil,
+we still have quite an important part of carbon but
+we have far more hydrogen and we have two hydrogen hydro atoms for
+one carbon. CH4 four methane, one C,
+four H, so ratio of 4 to 1 and for the hydrogen,
+this is the ideal situation, where we only have hydrogen and that means when we oxidized
+the hydrogen H become H2O. Okay, and with H2O,
+it means out of a fuel cell motor vehicle, we will only have as an emission water,
+which is really cool to only have that because
+pollution will be limited. So the question is why don't we have
+all our motors with fuel cells? And the answer is it's great for
+the car itself, but we don't get renewable hydrogen. We don't find hydrogen like that. We need to produce it. And to produce it, we are using usually
+natural gas and then create the hydrogen. And when doing that, we will lose
+the carbon, which also will emits CO2. So literally the present
+solution unless we find renewable sources to produce the hydrogen. What is important here is
+the ratio of CO2 emissions, but mega joule energy is associated
+because of this carbon to hydrogen ratio with the ratio of H to C. This provide us a way to check that. It means all fuel will have
+quite a fixed ratio and that enables us to check the data. This ratio has been
+changing with time with and since the first models in the 1840, we had about 0.85 ton
+carbon per kilowatt here. And in 2020 we are at 0.45. So nearly a factor to
+over nearly 200 years. So progress is important, but
+relatively slow, when we look at that. Now, to check our data, let's look at all the data from
+the ecoinvent database. And we look here at
+the grams CO2/megajoule, non renewable energy on the left side. And what we see is many of the processes are working close to what
+we have here with oil. Okay, oil is here nearly our
+reference with 65 gCO2/MJ, nonrenewable primary energy. And you see it's logic that plane,
+road transportation, oil based material and
+many of the materials are related to oil. There are oil based or using gasoline and in that case this ratio will always be the
+same because when you burn the gasoline, it will emit the carbon proportional
+to the number of carbon atoms. Now, compared to that, we can see
+that coal here is a bit higher and that around 80 gCO2/MJ. And that reflects that coal
+had a higher number or proportion of carbon atom,
+gas on the contrary is about 50 g/CO2. Small reduction but
+still important compared to oil, which means natural gas is
+pretty good here for heating. What deviates from that? Okay, on the low end we have nuclear
+power, which in terms of carbon emission is really great because
+as you are using nuclear energy, there is no combustion of carbon. And in that case we don't have emission
+apart from building the power plant, which is very small compared to the amount
+which is produced over lifetime. That means that the electricity here
+in Switzerland or in Europe is lower. Whereas in US we have so much coal in
+the power plant that we reach nearly 0.6. That would be about here for
+the electricity in the US. So not really better than oil in
+our case here for the US situation. We have two things which are interesting, the oil based material
+are around here 30gCO2/MJ, why? Because the carbon is still
+inside my plastic and will only be released when we
+incinerate for example our plastic. So if we incinerate it will go after
+incineration up to the 65 gCO2/MJ. But if we put it in a landfill, at least
+for the next 50,000 years we will keep or at least a few 1000 year,
+we will keep the plastic and the emission overall will remain at
+the 30 gCO2/MJ, that we have here. Fuel without combustion. Then nearly everything is inside the fuel. We just have the supply chain which
+was about 20% of the emission. So we are around 10 here
+gCO2/MJ in that case. Now, what's happening on the high end? You see here, cement concrete mortar,
+are really high compare to the other. So there is something different happening. When I asked the question why people say, that's because concrete
+requires a lot of energy. That's true. But that should go the other
+direction because we divide by the non-renewable energy. Okay, so if we have would have
+high energy and high CO2 emission, this should be about the same as the rest. So the answer is elsewhere. The answer is that cement is made of what,
+it's made of carbon, it's made of calc. And when we put the cement inside a wall
+or it's liquid, when it will solidify, we have a chemical reaction which make
+it become solid and really holding well. And this is where the carbon
+atom are emitted and generate important emission of CO2 in
+this drying period of the concrete. Okay, so this is the reason that we are about a
+factor of three higher than with the oil. The hydraulic is interesting. Okay, the hydraulic energy is
+interesting because it's higher and you think why a renewable
+energy would be higher. Because we are looking only at
+the megajoule nonrenewable here. And that means the hydraulic energy
+has very low CO2 emission and very low non renewable. But the ratio is high because
+we need to build the dam and the dam is partly or made out of concrete. And that bring it at a relatively
+high level compared to the rest. That shows very well,
+don't use this ratio for measuring the performance of a given
+technology is just to check the data. The performance must be
+measured per functional unit. Okay, not a ratio here between two flows. But this ratio is very
+useful to check the data.

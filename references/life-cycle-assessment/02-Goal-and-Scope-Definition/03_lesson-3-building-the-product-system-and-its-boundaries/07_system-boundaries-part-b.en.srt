@@ -1,0 +1,1013 @@
+1
+00:00:08,930 --> 00:00:13,230
+Based on that, if we
+want to avoid this bias,
+
+2
+00:00:13,230 --> 00:00:15,330
+what are the rule for
+
+3
+00:00:15,330 --> 00:00:20,175
+good practice in setting
+our system boundary?
+
+4
+00:00:20,175 --> 00:00:22,964
+The general rule is include
+
+5
+00:00:22,964 --> 00:00:25,080
+all the necessary processes to
+
+6
+00:00:25,080 --> 00:00:27,510
+assure the desired function,
+
+7
+00:00:27,510 --> 00:00:32,325
+you want to have everything
+which is necessary included.
+
+8
+00:00:32,325 --> 00:00:35,180
+Second, the system
+boundary should
+
+9
+00:00:35,180 --> 00:00:38,870
+cover the same
+functional reality,
+
+10
+00:00:38,870 --> 00:00:43,905
+not geographical, not
+company boundary,
+
+11
+00:00:43,905 --> 00:00:47,515
+or business boundary, why?
+
+12
+00:00:47,515 --> 00:00:51,200
+Because business boundary
+will depend on what is
+
+13
+00:00:51,200 --> 00:00:55,020
+outsourced to other company
+versus what is produced,
+
+14
+00:00:55,020 --> 00:00:56,810
+and when you compare
+two companies,
+
+15
+00:00:56,810 --> 00:01:00,000
+you cannot take the
+whole of the company,
+
+16
+00:01:00,000 --> 00:01:02,839
+you need to take the
+functional reality,
+
+17
+00:01:02,839 --> 00:01:05,585
+which is including the
+whole supply chain
+
+18
+00:01:05,585 --> 00:01:08,875
+of your company in both cases.
+
+19
+00:01:08,875 --> 00:01:11,880
+Functional reality. Second,
+
+20
+00:01:11,880 --> 00:01:14,765
+only processes
+contributing to more
+
+21
+00:01:14,765 --> 00:01:18,425
+than a certain
+percentage are retained,
+
+22
+00:01:18,425 --> 00:01:20,795
+or said as otherwise,
+
+23
+00:01:20,795 --> 00:01:25,190
+you need to ensure that
+all processes contributing
+
+24
+00:01:25,190 --> 00:01:30,920
+to more than a certain
+percentage are included.
+
+25
+00:01:30,920 --> 00:01:34,160
+This percentage depend
+on the level of
+
+26
+00:01:34,160 --> 00:01:37,515
+detail of the study,
+and why that?
+
+27
+00:01:37,515 --> 00:01:40,010
+Because one of the
+first study I made
+
+28
+00:01:40,010 --> 00:01:42,965
+or I peer-reviewed in fact,
+
+29
+00:01:42,965 --> 00:01:48,025
+was a study on flooring
+from a Swedish company,
+
+30
+00:01:48,025 --> 00:01:51,860
+and this flooring was
+studied very much
+
+31
+00:01:51,860 --> 00:01:56,060
+in detail with a thousand
+different unit processes.
+
+32
+00:01:56,060 --> 00:02:00,755
+That means that if you
+would put a one percent,
+
+33
+00:02:00,755 --> 00:02:05,030
+for example, cutoff and you
+have such a level of detail,
+
+34
+00:02:05,030 --> 00:02:07,940
+you are really in trouble if you
+
+35
+00:02:07,940 --> 00:02:11,315
+start cutting everything
+off or leaving out,
+
+36
+00:02:11,315 --> 00:02:14,540
+which is all the processes
+which are lower than
+
+37
+00:02:14,540 --> 00:02:19,610
+a percent because you would
+leave most processes.
+
+38
+00:02:19,610 --> 00:02:21,260
+If we have, on the other hand,
+
+39
+00:02:21,260 --> 00:02:24,440
+about 10 different
+processes considered,
+
+40
+00:02:24,440 --> 00:02:28,730
+one percent would be
+goods as the basis
+
+41
+00:02:28,730 --> 00:02:31,440
+because things
+which contribute to
+
+42
+00:02:31,440 --> 00:02:34,515
+lesser percent are small
+compared to the other which,
+
+43
+00:02:34,515 --> 00:02:40,620
+on average, would be of 5-20
+or 30 percent as a whole.
+
+44
+00:02:40,620 --> 00:02:44,045
+This cut-off really
+depends on your own study.
+
+45
+00:02:44,045 --> 00:02:47,585
+Second thing, the
+cut-off criteria
+
+46
+00:02:47,585 --> 00:02:51,500
+is really a minimum
+inclusion requirement.
+
+47
+00:02:51,500 --> 00:02:54,740
+We could formulate it as
+we want to be sure that
+
+48
+00:02:54,740 --> 00:02:59,375
+these processes are
+included and are retained.
+
+49
+00:02:59,375 --> 00:03:02,210
+Third rule is, when do we have
+
+50
+00:03:02,210 --> 00:03:05,900
+identical processes in
+a production system?
+
+51
+00:03:05,900 --> 00:03:08,170
+Exactly the same processes,
+
+52
+00:03:08,170 --> 00:03:10,130
+perhaps we could exclude between
+
+53
+00:03:10,130 --> 00:03:12,650
+two scenario because we
+have it in scenario 1,
+
+54
+00:03:12,650 --> 00:03:14,345
+we have it in scenario 2,
+
+55
+00:03:14,345 --> 00:03:16,145
+and if you're interested,
+
+56
+00:03:16,145 --> 00:03:19,580
+one versus two, these
+two things are equal.
+
+57
+00:03:19,580 --> 00:03:21,740
+We could say, "I don't
+need to study that,
+
+58
+00:03:21,740 --> 00:03:22,790
+I know they are the same,
+
+59
+00:03:22,790 --> 00:03:24,510
+I can disregard them."
+
+60
+00:03:24,510 --> 00:03:27,345
+Let's look when we
+can disregard them.
+
+61
+00:03:27,345 --> 00:03:29,765
+We are saying that we can do it
+
+62
+00:03:29,765 --> 00:03:32,090
+only if the intermediary flow
+
+63
+00:03:32,090 --> 00:03:36,560
+affected by these processes
+are strictly equal.
+
+64
+00:03:36,560 --> 00:03:39,905
+Let's take an
+example to do that,
+
+65
+00:03:39,905 --> 00:03:45,630
+and I'll take the example
+of my toothpaste.
+
+66
+00:03:46,790 --> 00:03:51,485
+We'll compare three different
+types of toothpaste.
+
+67
+00:03:51,485 --> 00:03:54,920
+We have here self-standing
+tube compared to
+
+68
+00:03:54,920 --> 00:03:57,110
+packaged tube that you receive
+
+69
+00:03:57,110 --> 00:03:59,765
+inside a cardboard altogether,
+
+70
+00:03:59,765 --> 00:04:02,270
+and a dosing tube where
+
+71
+00:04:02,270 --> 00:04:04,850
+you could take your
+toothbrush and push it here
+
+72
+00:04:04,850 --> 00:04:07,010
+and you would have
+the exact amount of
+
+73
+00:04:07,010 --> 00:04:10,550
+toothpaste which is
+coming on the top.
+
+74
+00:04:10,550 --> 00:04:13,580
+When we compare
+different packaging,
+
+75
+00:04:13,580 --> 00:04:14,750
+I'm just interested in
+
+76
+00:04:14,750 --> 00:04:16,925
+the packaging of
+toothpaste, question,
+
+77
+00:04:16,925 --> 00:04:21,720
+can we exclude the
+toothpaste itself?
+
+78
+00:04:22,730 --> 00:04:27,090
+Haydock in 1995, they made
+
+79
+00:04:27,090 --> 00:04:31,595
+this comparison with our
+three different packaging
+
+80
+00:04:31,595 --> 00:04:32,960
+that we have here.
+
+81
+00:04:32,960 --> 00:04:34,790
+The normal package where
+
+82
+00:04:34,790 --> 00:04:36,740
+the tube is inside
+another package,
+
+83
+00:04:36,740 --> 00:04:38,090
+a self-standing tube,
+
+84
+00:04:38,090 --> 00:04:39,610
+and the dosing tube.
+
+85
+00:04:39,610 --> 00:04:43,910
+You see the self-standing
+tube had the advantage to
+
+86
+00:04:43,910 --> 00:04:46,250
+have lower packaging because
+
+87
+00:04:46,250 --> 00:04:48,790
+you didn't need the
+cardboard to do that.
+
+88
+00:04:48,790 --> 00:04:50,490
+Can we exclude them?
+
+89
+00:04:50,490 --> 00:04:52,925
+You see the three
+toothpastes had
+
+90
+00:04:52,925 --> 00:04:57,110
+exactly the same
+amount of toothpaste,
+
+91
+00:04:57,110 --> 00:05:01,055
+the three tube, so
+can we exclude them?
+
+92
+00:05:01,055 --> 00:05:05,580
+The answer is no
+because when you
+
+93
+00:05:05,580 --> 00:05:10,290
+look the wasted toothpaste
+is not the same.
+
+94
+00:05:10,290 --> 00:05:13,615
+The self-standing tube
+they have is certainly
+
+95
+00:05:13,615 --> 00:05:15,095
+the case with that brand
+
+96
+00:05:15,095 --> 00:05:16,850
+but the self-standing
+tube they had,
+
+97
+00:05:16,850 --> 00:05:21,925
+had more waste in one
+case than the other tube.
+
+98
+00:05:21,925 --> 00:05:27,260
+Even if the amounts inside
+was the same, in fact,
+
+99
+00:05:27,260 --> 00:05:30,350
+to provide the same amount
+to brush your teeth for
+
+100
+00:05:30,350 --> 00:05:35,150
+one mouth well brushed or one
+set of teeth well brushed,
+
+101
+00:05:35,150 --> 00:05:39,755
+you will need in fact a bit
+more every time because
+
+102
+00:05:39,755 --> 00:05:41,710
+when you cannot empty
+
+103
+00:05:41,710 --> 00:05:44,910
+your self-standing tube
+as well as the other.
+
+104
+00:05:44,910 --> 00:05:47,105
+Now, question is,
+
+105
+00:05:47,105 --> 00:05:49,130
+if you are a designer
+and you would
+
+106
+00:05:49,130 --> 00:05:51,110
+like to make toothpaste
+
+107
+00:05:51,110 --> 00:05:52,235
+environmentally
+
+108
+00:05:52,235 --> 00:05:55,750
+friendlier with my packaging,
+what could you do?
+
+109
+00:05:55,750 --> 00:05:58,550
+What would be the
+simplest things to do to
+
+110
+00:05:58,550 --> 00:06:02,760
+make it environmental
+friendlier?
+
+111
+00:06:03,300 --> 00:06:06,560
+Think a minute about it.
+
+112
+00:06:07,110 --> 00:06:12,250
+My proposal is for
+what's a problem?
+
+113
+00:06:12,250 --> 00:06:14,860
+You see here the toothpaste has
+
+114
+00:06:14,860 --> 00:06:19,180
+a dominant impact here
+compared to the packaging.
+
+115
+00:06:19,180 --> 00:06:20,740
+The toothpaste is more important
+
+116
+00:06:20,740 --> 00:06:22,855
+than my packaging itself.
+
+117
+00:06:22,855 --> 00:06:25,420
+Now, have you ever seen
+
+118
+00:06:25,420 --> 00:06:29,575
+advertisements for
+different toothpaste?
+
+119
+00:06:29,575 --> 00:06:32,960
+Usually, when they fill it,
+they feel it like that.
+
+120
+00:06:33,960 --> 00:06:38,155
+Have you ever tried to
+put that in your mouth?
+
+121
+00:06:38,155 --> 00:06:40,435
+I will not try now because
+I would have bubbles
+
+122
+00:06:40,435 --> 00:06:43,810
+coming out of my
+ears if I do that.
+
+123
+00:06:43,810 --> 00:06:47,530
+In fact, the main thing is if we
+
+124
+00:06:47,530 --> 00:06:51,730
+could regulate exactly the
+amount of toothpaste we're
+
+125
+00:06:51,730 --> 00:06:55,960
+putting in our mouth
+that would be really
+
+126
+00:06:55,960 --> 00:06:58,030
+convenient and probably
+where we could
+
+127
+00:06:58,030 --> 00:07:01,045
+gain by adjusting that.
+
+128
+00:07:01,045 --> 00:07:03,415
+To do that would be simple.
+
+129
+00:07:03,415 --> 00:07:05,575
+Just reduce the size
+
+130
+00:07:05,575 --> 00:07:10,450
+of the diameter of the
+opening of that tube.
+
+131
+00:07:10,450 --> 00:07:13,210
+That would be much easier to put
+
+132
+00:07:13,210 --> 00:07:15,940
+exactly the same quantity that
+
+133
+00:07:15,940 --> 00:07:19,420
+you want and not this
+large quantity here.
+
+134
+00:07:19,420 --> 00:07:24,190
+Why companies are doing that?
+
+135
+00:07:24,190 --> 00:07:25,810
+Because here it's not
+
+136
+00:07:25,810 --> 00:07:28,330
+a win-win situation for
+them because if you
+
+137
+00:07:28,330 --> 00:07:34,210
+start being able to regulate
+exactly how much you put,
+
+138
+00:07:34,210 --> 00:07:36,400
+you will put probably less
+
+139
+00:07:36,400 --> 00:07:42,130
+and they will sell less
+toothpaste in that case.
+
+140
+00:07:42,130 --> 00:07:49,510
+But that's a good example of
+where we need to move out of
+
+141
+00:07:49,510 --> 00:07:53,710
+the model where you
+
+142
+00:07:53,710 --> 00:07:54,970
+always try to sell
+
+143
+00:07:54,970 --> 00:07:57,895
+as much as you can in
+terms of consumption.
+
+144
+00:07:57,895 --> 00:08:01,570
+You have that now with
+the powder where we
+
+145
+00:08:01,570 --> 00:08:03,220
+have this smaller quantity
+
+146
+00:08:03,220 --> 00:08:05,455
+of powder which is compressed,
+
+147
+00:08:05,455 --> 00:08:08,530
+and where you don't waste too
+
+148
+00:08:08,530 --> 00:08:12,025
+much and they found
+a solution to still
+
+149
+00:08:12,025 --> 00:08:16,030
+sell this dishwasher
+powder or washing
+
+150
+00:08:16,030 --> 00:08:20,050
+machine powder which are
+more efficient in that case,
+
+151
+00:08:20,050 --> 00:08:23,680
+without losing money
+which is key of course,
+
+152
+00:08:23,680 --> 00:08:26,740
+for the business
+side of the problem.
+
+153
+00:08:26,740 --> 00:08:30,385
+Let's finish with
+the last example.
+
+154
+00:08:30,385 --> 00:08:33,145
+We're comparing two
+herbicides here.
+
+155
+00:08:33,145 --> 00:08:36,535
+We're comparing a
+first herbicide
+
+156
+00:08:36,535 --> 00:08:39,460
+I would say all traditional
+where you need to
+
+157
+00:08:39,460 --> 00:08:43,290
+apply 10 kilogram
+per hectare versus
+
+158
+00:08:43,290 --> 00:08:45,870
+a more modern
+pesticide with only
+
+159
+00:08:45,870 --> 00:08:49,500
+0.2 kilogram per hectare,
+and this reduces.
+
+160
+00:08:49,500 --> 00:08:53,160
+You need to have more run
+with your tractor here,
+
+161
+00:08:53,160 --> 00:08:55,475
+so it reduces your tractor.
+
+162
+00:08:55,475 --> 00:08:58,780
+What about the
+plowing of my field?
+
+163
+00:08:58,780 --> 00:09:02,875
+This is strictly equal
+operation is the same tractor,
+
+164
+00:09:02,875 --> 00:09:05,770
+the same field which
+will be plowed and
+
+165
+00:09:05,770 --> 00:09:09,505
+require the same amount
+of diesel in both cases.
+
+166
+00:09:09,505 --> 00:09:13,840
+Could we exclude it
+in our case because
+
+167
+00:09:13,840 --> 00:09:15,580
+it's the same between
+scenario when
+
+168
+00:09:15,580 --> 00:09:19,130
+I am interested in
+comparing the herbicide?
+
+169
+00:09:19,620 --> 00:09:22,885
+Answer is no.
+
+170
+00:09:22,885 --> 00:09:28,615
+Because even if the two
+processes are the same,
+
+171
+00:09:28,615 --> 00:09:31,780
+you see, the yield here was
+
+172
+00:09:31,780 --> 00:09:36,250
+different between
+my two herbicides.
+
+173
+00:09:36,250 --> 00:09:41,770
+I have here 4,000
+kilogram yield against
+
+174
+00:09:41,770 --> 00:09:43,945
+the five tons here
+per hectare with
+
+175
+00:09:43,945 --> 00:09:47,455
+herbicide A which was
+apparently more efficient.
+
+176
+00:09:47,455 --> 00:09:50,800
+In that case, that means that my
+
+177
+00:09:50,800 --> 00:09:54,190
+20 liter diesel even if
+they're identical here,
+
+178
+00:09:54,190 --> 00:09:56,500
+when they are divided by 5,
+
+179
+00:09:56,500 --> 00:10:00,130
+I get four liter diesel per
+functional unit or per ton,
+
+180
+00:10:00,130 --> 00:10:03,160
+whereas 20-liter
+diesel divided by 4 I
+
+181
+00:10:03,160 --> 00:10:06,625
+get here 5 liter
+of diesel per ton.
+
+182
+00:10:06,625 --> 00:10:11,485
+In that case even if I'm
+studying just the herbicide,
+
+183
+00:10:11,485 --> 00:10:15,369
+I need to consider every things
+which have been affected
+
+184
+00:10:15,369 --> 00:10:19,420
+by my herbicide which is
+indirectly via the yield,
+
+185
+00:10:19,420 --> 00:10:23,395
+the amount produced per
+functional unit difference.
+
+186
+00:10:23,395 --> 00:10:25,630
+We need to be careful
+
+187
+00:10:25,630 --> 00:10:27,910
+basically when we exclude
+processes to be sure
+
+188
+00:10:27,910 --> 00:10:30,145
+we have exactly the same
+
+189
+00:10:30,145 --> 00:10:33,340
+intermediary flows
+in both cases.
+
+190
+00:10:33,340 --> 00:10:36,460
+To summarize, the system
+boundary must cover
+
+191
+00:10:36,460 --> 00:10:40,370
+the same functional
+reality in all scenario.
+
+192
+00:10:40,370 --> 00:10:42,900
+We have cut-off criteria for
+
+193
+00:10:42,900 --> 00:10:45,360
+the inclusion of process
+
+194
+00:10:45,360 --> 00:10:47,970
+that we need to
+clearly describe them,
+
+195
+00:10:47,970 --> 00:10:51,985
+we need to give what is the
+cut-off percentage for which
+
+196
+00:10:51,985 --> 00:10:56,725
+all scenario need to be
+included inside my boundary.
+
+197
+00:10:56,725 --> 00:10:59,020
+This cut-off
+criteria is fixed in
+
+198
+00:10:59,020 --> 00:11:01,810
+advance when you put
+your goal and scope
+
+199
+00:11:01,810 --> 00:11:04,930
+definition before
+you go and produce
+
+200
+00:11:04,930 --> 00:11:08,410
+the inventory of emission
+or resource use.
+
+201
+00:11:08,410 --> 00:11:11,695
+The percentage could be a
+percentage on the impact,
+
+202
+00:11:11,695 --> 00:11:13,419
+percentage on the emission,
+
+203
+00:11:13,419 --> 00:11:15,790
+or percentage on the
+resource use and
+
+204
+00:11:15,790 --> 00:11:19,150
+energy use depending
+on the study.
+
+205
+00:11:19,150 --> 00:11:21,190
+Processes that are identical in
+
+206
+00:11:21,190 --> 00:11:23,620
+different scenario can only be
+
+207
+00:11:23,620 --> 00:11:26,140
+excluded if the
+intermediary flow
+
+208
+00:11:26,140 --> 00:11:28,645
+affected are strictly equal.
+
+209
+00:11:28,645 --> 00:11:31,240
+Same quantity of each
+process is required
+
+210
+00:11:31,240 --> 00:11:34,180
+per functional unit of
+the different scenario.
+
+211
+00:11:34,180 --> 00:11:36,910
+Even if sometime you can exclude
+
+212
+00:11:36,910 --> 00:11:38,260
+them because they are the same
+
+213
+00:11:38,260 --> 00:11:39,880
+and the intermediary
+flow are the same,
+
+214
+00:11:39,880 --> 00:11:41,230
+you might still have
+
+215
+00:11:41,230 --> 00:11:44,155
+a rough estimate to
+be able to compare
+
+216
+00:11:44,155 --> 00:11:46,840
+these processes
+which are common to
+
+217
+00:11:46,840 --> 00:11:51,050
+both scenario to those who
+are different in this study.

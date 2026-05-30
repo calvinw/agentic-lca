@@ -1,0 +1,377 @@
+1
+00:00:10,510 --> 00:00:14,710
+A warm welcome to this
+class on healthy and
+
+2
+00:00:14,710 --> 00:00:19,350
+sustainable foods and product,
+very important topics for
+
+3
+00:00:19,350 --> 00:00:25,800
+world that you can use them during
+your career and make a lot of good.
+
+4
+00:00:25,800 --> 00:00:27,670
+My name is Olivier Joliet.
+
+5
+00:00:27,670 --> 00:00:31,730
+I'm a Swiss physicist
+working as a professor
+
+6
+00:00:31,730 --> 00:00:34,770
+in an Environmental Health Science
+at the school of Public Health
+
+7
+00:00:34,770 --> 00:00:37,500
+of the University of Michigan.
+
+8
+00:00:37,500 --> 00:00:43,760
+And just to introduce myself,
+what I love beyond,
+
+9
+00:00:43,760 --> 00:00:49,490
+of course my wife and
+my two sons who are now young adults,
+
+10
+00:00:49,490 --> 00:00:53,340
+is lake and mountains.
+
+11
+00:00:53,340 --> 00:00:59,030
+I love biking up the Swiss passes
+in the Alps, I like hiking and
+
+12
+00:00:59,030 --> 00:01:03,050
+sometime making some amazing encounters.
+
+13
+00:01:03,050 --> 00:01:06,040
+The nature is so beautiful.
+
+14
+00:01:06,040 --> 00:01:10,490
+I like taking photos like here, or
+
+15
+00:01:10,490 --> 00:01:16,960
+here looking at the Lake of Geneva area,
+Luzern on the area where I grew up,
+
+16
+00:01:16,960 --> 00:01:20,985
+and where I'm from in the French
+speaking part of Switzerland.
+
+17
+00:01:20,985 --> 00:01:24,078
+That's on the professional side,
+
+18
+00:01:24,078 --> 00:01:29,953
+I would like to introduce you
+an amazing person who will co-teach or
+
+19
+00:01:29,953 --> 00:01:33,779
+co-instruct this class with me this year.
+
+20
+00:01:33,779 --> 00:01:37,133
+And, she is Dr. Shanna Shaked.
+
+21
+00:01:37,133 --> 00:01:41,794
+She's Adjunct Assistant Professor
+at UCLA and
+
+22
+00:01:41,794 --> 00:01:47,510
+also a Adjunct Clinical
+Assistant Professor here at UofM.
+
+23
+00:01:47,510 --> 00:01:50,940
+She has made her PhD ten years ago.
+
+24
+00:01:50,940 --> 00:01:56,180
+We collaborated assessing the impact
+of global consumption and
+
+25
+00:01:56,180 --> 00:02:02,120
+the impact that our consumption here,
+from goods which are produced in China has
+
+26
+00:02:02,120 --> 00:02:07,610
+impact on particulate matter emission and
+impact in China itself.
+
+27
+00:02:07,610 --> 00:02:10,830
+And you will have some
+look at that together.
+
+28
+00:02:10,830 --> 00:02:13,990
+But then, Shanna reoriented herself and
+
+29
+00:02:13,990 --> 00:02:17,517
+found her true passion,
+which is education.
+
+30
+00:02:17,517 --> 00:02:19,500
+Her passion is you.
+
+31
+00:02:19,500 --> 00:02:24,890
+She is now the Senior Associate Director
+at the UCLA Center for
+
+32
+00:02:24,890 --> 00:02:29,220
+Education, Innovation and
+Learning in the sciences, only that.
+
+33
+00:02:29,220 --> 00:02:34,440
+And she has set up also, and is directing
+an undergraduate learning assistant
+
+34
+00:02:34,440 --> 00:02:40,040
+program, making the assistant learning and
+helping each other in an amazing way.
+
+35
+00:02:40,040 --> 00:02:44,120
+So she is extremely good at teaching,
+us as teacher how to teach, and
+
+36
+00:02:44,120 --> 00:02:47,320
+that's why I took her with me for
+this class.
+
+37
+00:02:47,320 --> 00:02:52,670
+And is herself an outstanding
+teacher you will see that.
+
+38
+00:02:52,670 --> 00:02:58,588
+She's passionate about making
+quality education available for all,
+
+39
+00:02:58,588 --> 00:03:03,692
+and in particular helping
+more people to realize and
+
+40
+00:03:03,692 --> 00:03:09,803
+assess the impacts and the consequences
+of their daily life and actions.
+
+41
+00:03:09,803 --> 00:03:15,205
+>> Hi, I'm Shanna Shaked, I am Adjunct
+Professor at University of Michigan School
+
+42
+00:03:15,205 --> 00:03:20,060
+of Public Health and I'm the Senior
+Associate Director at UCLA Center for
+
+43
+00:03:20,060 --> 00:03:23,766
+Education, Innovation and
+Learning in the Sciences.
+
+44
+00:03:23,766 --> 00:03:29,453
+A little bit about me, my mother is
+from Tunisia, my father was from Israel,
+
+45
+00:03:29,453 --> 00:03:33,580
+my partners from the Netherlands and
+I am from Arizona.
+
+46
+00:03:33,580 --> 00:03:38,250
+I got my PhD in Applied Physics
+working with Professor Juliet at
+
+47
+00:03:38,250 --> 00:03:39,745
+the University of Michigan.
+
+48
+00:03:39,745 --> 00:03:44,970
+I'm focusing on the human health impacts
+of global consumption and global trade.
+
+49
+00:03:44,970 --> 00:03:48,206
+And then I discovered that
+teaching was my real passion.
+
+50
+00:03:48,206 --> 00:03:51,910
+So I got a Master of Arts in Teaching,
+focusing on physics.
+
+51
+00:03:51,910 --> 00:03:57,010
+At UCLA and I founded our Undergraduate
+Learning Assistant program, where we
+
+52
+00:03:57,010 --> 00:04:02,410
+have more than 400 learning assistance
+every quarter that are transforming
+
+53
+00:04:02,410 --> 00:04:08,262
+introductory stem learning for
+more than 10,000 students at UCLA.
+
+54
+00:04:08,262 --> 00:04:16,020
+I also have two kids, and I refused to
+drive a car, Even though I live in LA.
+
+55
+00:04:16,020 --> 00:04:17,880
+So I try to bike everywhere.
+
+56
+00:04:17,880 --> 00:04:22,580
+And I also like rock climbing and
+swing dancing, but
+
+57
+00:04:22,580 --> 00:04:25,490
+not doing both at the same time.
+
+58
+00:04:25,490 --> 00:04:30,330
+My current mission is to empower others
+to make the world a more equitable place
+
+59
+00:04:30,330 --> 00:04:34,738
+through educational,
+environmental, and social justice.
+
+60
+00:04:34,738 --> 00:04:38,188
+Dr. Olivier Jolliet is a professor
+in life cycle impact and
+
+61
+00:04:38,188 --> 00:04:42,190
+risk modeling at the Department of
+Environmental Health Sciences in
+
+62
+00:04:42,190 --> 00:04:45,646
+the School of Public Health at
+the University of Michigan.
+
+63
+00:04:45,646 --> 00:04:50,716
+He is also one of the founders of Qantas
+International, which provides lifecycle
+
+64
+00:04:50,716 --> 00:04:55,134
+assessment expertise to companies and
+governments around the world.
+
+65
+00:04:55,134 --> 00:05:00,601
+He is a pioneer in the Field of Life Cycle
+Assessment, or LCA, as you will become
+
+66
+00:05:00,601 --> 00:05:06,396
+very familiar with it, leading teams of
+researchers in designing LCA approaches,
+
+67
+00:05:06,396 --> 00:05:10,989
+including those used by
+the United Nations Environment Program.
+
+68
+00:05:10,989 --> 00:05:16,074
+He also pioneered the application of LCA,
+to food sustainability back
+
+69
+00:05:16,074 --> 00:05:21,005
+in the early 1990s and
+continues to pioneer in that realm today.
+
+70
+00:05:21,005 --> 00:05:25,257
+He's co-authored more than 200
+peer-reviewed publications or
+
+71
+00:05:25,257 --> 00:05:28,878
+book chapters,
+including one of the few textbooks on LCA.
+
+72
+00:05:28,878 --> 00:05:32,920
+And he's taught more than
+40 LCA related courses and
+
+73
+00:05:32,920 --> 00:05:35,540
+20 short courses for professionals.
+
+74
+00:05:35,540 --> 00:05:40,275
+Through his work, he provides scientific
+knowledge to assess environmental risks,
+
+75
+00:05:40,275 --> 00:05:45,240
+and impacts of chemicals,
+food systems and innovative technologies.
+
+76
+00:05:45,240 --> 00:05:48,767
+As a researcher,
+he's mentored 15 PhD students and
+
+77
+00:05:48,767 --> 00:05:51,613
+I am very fortunate to
+have been one of them.
+
+78
+00:05:51,613 --> 00:05:52,113
+He is also one of the kindest and most
+of compassionate people that I have had
+
+79
+00:05:52,113 --> 00:05:52,613
+pleasure of working with.

@@ -1,0 +1,626 @@
+1
+00:00:09,486 --> 00:00:15,102
+We have looked at the different
+phases of LCA in details,
+
+2
+00:00:15,102 --> 00:00:22,010
+looking at all the data methods,
+way to interpret for good practice.
+
+3
+00:00:22,010 --> 00:00:27,622
+It's now time to wrap up everything and
+summarize what are the key
+
+4
+00:00:27,622 --> 00:00:32,531
+parameters the cree criteria for
+a good practice in LCA.
+
+5
+00:00:32,531 --> 00:00:35,723
+And let's do that in 12 minutes.
+
+6
+00:00:35,723 --> 00:00:42,809
+The learning objective is to identify the
+critical points that affect LCA results.
+
+7
+00:00:42,809 --> 00:00:49,134
+Provide principles for good practice for
+each of these influential points.
+
+8
+00:00:49,134 --> 00:00:54,732
+Synthesize LCA strengths and limitations.
+
+9
+00:00:54,732 --> 00:00:59,493
+We have been looking through
+the lifecycle impact the LCA
+
+10
+00:00:59,493 --> 00:01:03,855
+chapter of our course at
+the four phases here of LCA,
+
+11
+00:01:03,855 --> 00:01:09,728
+at the impact of particulate and
+chemical in product on human health.
+
+12
+00:01:09,728 --> 00:01:14,722
+And we are now doing
+the synthesis before going from
+
+13
+00:01:14,722 --> 00:01:18,558
+product to sustainable consumption,
+
+14
+00:01:18,558 --> 00:01:22,637
+which will constitute our last chapter.
+
+15
+00:01:22,637 --> 00:01:27,074
+It's pretty cool that we can
+summarize the key points and
+
+16
+00:01:27,074 --> 00:01:32,355
+the critical points for
+good LCA practice in a single slide, okay?
+
+17
+00:01:32,355 --> 00:01:37,495
+And this slide,
+you could use it when you do a review or
+
+18
+00:01:37,495 --> 00:01:42,180
+want to use an LCA looking
+how the author have been
+
+19
+00:01:42,180 --> 00:01:46,082
+addressing all these critical points.
+
+20
+00:01:46,082 --> 00:01:51,024
+And this gives you a sort of checklist
+to look what are the good practice for
+
+21
+00:01:51,024 --> 00:01:52,551
+each of these points.
+
+22
+00:01:52,551 --> 00:01:53,920
+So let's look at them.
+
+23
+00:01:53,920 --> 00:02:01,116
+First, we recommend to perform
+an LCA with a screening approach.
+
+24
+00:02:01,116 --> 00:02:03,067
+So carry it in two steps.
+
+25
+00:02:03,067 --> 00:02:09,213
+A first screening phase, okay, which will
+take about half of the total time and
+
+26
+00:02:09,213 --> 00:02:14,091
+where you cover the entire LCA but
+look at orders of magnitude.
+
+27
+00:02:14,091 --> 00:02:18,147
+And then you choose what
+needs to be improved,
+
+28
+00:02:18,147 --> 00:02:24,387
+refined because it's important or
+brings substantial uncertainty,
+
+29
+00:02:24,387 --> 00:02:30,843
+and you perform a detailed analysis
+of these points which are important.
+
+30
+00:02:30,843 --> 00:02:35,072
+And that's valid for
+many scientific approach.
+
+31
+00:02:35,072 --> 00:02:39,172
+Second, for the goal definition,
+remember the popcorn,
+
+32
+00:02:39,172 --> 00:02:44,349
+how the functional unit was crucial and
+could completely change results.
+
+33
+00:02:44,349 --> 00:02:50,715
+So be sure and check that the functional
+unit is really representing the main
+
+34
+00:02:50,715 --> 00:02:57,186
+function and the service of the product
+and is a good representation of that.
+
+35
+00:02:57,186 --> 00:03:03,073
+Should be metric which increases
+if the functional unit doubles.
+
+36
+00:03:03,073 --> 00:03:07,087
+For example,
+the emission should also double.
+
+37
+00:03:07,087 --> 00:03:13,688
+So it's an extensive metric which
+is not a ratio, so it's not.
+
+38
+00:03:13,688 --> 00:03:19,778
+Units are not something per
+something in that case.
+
+39
+00:03:19,778 --> 00:03:26,411
+System boundaries, third critical point
+of the goal and system definition.
+
+40
+00:03:26,411 --> 00:03:29,929
+It should cover the same
+functional reality.
+
+41
+00:03:29,929 --> 00:03:36,742
+Remember the fast food example where if
+we use geographical or business boundary,
+
+42
+00:03:36,742 --> 00:03:43,188
+this is likely not to represent the same
+functional reality in all scenarios.
+
+43
+00:03:43,188 --> 00:03:46,710
+You can exclude negligible processes and
+for
+
+44
+00:03:46,710 --> 00:03:51,714
+this you can define a cutoff where
+processes can only be excluded
+
+45
+00:03:51,714 --> 00:03:57,660
+if they contribute to less than this
+cutoff percentage to the total impact.
+
+46
+00:03:57,660 --> 00:04:02,326
+Processes that are identical
+in the different scenario can
+
+47
+00:04:02,326 --> 00:04:07,179
+potentially be excluded, but
+only if the intermediary flows
+
+48
+00:04:07,179 --> 00:04:11,767
+of these processes are strictly
+equal between scenario.
+
+49
+00:04:11,767 --> 00:04:17,923
+So if the quantity use of this process
+per functional unit is exactly the same,
+
+50
+00:04:17,923 --> 00:04:22,866
+and beware, because if the yield,
+the outcome is different,
+
+51
+00:04:22,866 --> 00:04:29,514
+the total output is different, it's likely
+that this flow will also be different.
+
+52
+00:04:29,514 --> 00:04:35,907
+Allocation between co-products,
+like between wheat and stroke.
+
+53
+00:04:35,907 --> 00:04:40,269
+What are the hierarchy recommended by ISO?
+
+54
+00:04:40,269 --> 00:04:45,543
+First, we try to separate the process and
+attribute all or
+
+55
+00:04:45,543 --> 00:04:50,505
+some of the processes to one co-product or
+the other.
+
+56
+00:04:50,505 --> 00:04:52,411
+Could we separate them?
+
+57
+00:04:52,411 --> 00:04:57,459
+Second, we want to consider
+the possibility to do to
+
+58
+00:04:57,459 --> 00:05:02,510
+use system expansion where
+we will extend the system
+
+59
+00:05:02,510 --> 00:05:07,577
+boundary to include a proven
+substituted product.
+
+60
+00:05:07,577 --> 00:05:16,229
+And then account for the avoided emission
+of this product as a bonus to our impacts.
+
+61
+00:05:16,229 --> 00:05:20,862
+Third, we can use physical
+allocation based on mass or
+
+62
+00:05:20,862 --> 00:05:25,811
+energy content, but
+only if there is a direct causality.
+
+63
+00:05:25,811 --> 00:05:33,740
+So don't use mass if total impact
+are not directly related to mass.
+
+64
+00:05:33,740 --> 00:05:37,836
+Finally, we can use
+financial allocation nearly
+
+65
+00:05:37,836 --> 00:05:42,030
+in every case as a comparative
+allocation method or
+
+66
+00:05:42,030 --> 00:05:47,799
+as a default allocation method when
+we cannot apply the other method.
+
+67
+00:05:47,799 --> 00:05:52,173
+And again,
+we are based on causality as a measure of
+
+68
+00:05:52,173 --> 00:05:55,346
+the incentive here for production.
+
+69
+00:05:55,346 --> 00:06:00,618
+On the inventory sides of extraction and
+emission of resources and
+
+70
+00:06:00,618 --> 00:06:04,958
+emission, data consistency and
+quality is crucial.
+
+71
+00:06:04,958 --> 00:06:09,907
+So, beware to take the database
+which are consistent,
+
+72
+00:06:09,907 --> 00:06:16,122
+which are comprehensive,
+covering all necessary inventory flows,
+
+73
+00:06:16,122 --> 00:06:21,401
+and don't mix easily databases
+unless you really need to.
+
+74
+00:06:21,401 --> 00:06:26,349
+And check in that case that for
+example electricity mix provide
+
+75
+00:06:26,349 --> 00:06:30,281
+comparable results in
+the different databases.
+
+76
+00:06:30,281 --> 00:06:35,027
+Otherwise, you might have
+real biases in your results.
+
+77
+00:06:35,027 --> 00:06:40,266
+Third, if we move to the impact
+assessment phase of the LCA,
+
+78
+00:06:40,266 --> 00:06:47,068
+you first select LCA methods that cover
+the entire cause effect chain, okay?
+
+79
+00:06:47,068 --> 00:06:50,818
+And I would recommend in fact
+to go presently to damage and
+
+80
+00:06:50,818 --> 00:06:53,640
+use methods which go to damage by default.
+
+81
+00:06:53,640 --> 00:06:58,016
+We need to include many information
+on fate, transport, dilution,
+
+82
+00:06:58,016 --> 00:07:03,144
+degradation, and effect like intrinsic
+toxicity, soil species sensitivity.
+
+83
+00:07:03,144 --> 00:07:09,003
+Consider and compare the contribution of
+each impact category to total damages.
+
+84
+00:07:09,003 --> 00:07:12,605
+Don't aggregate everything and
+you get a final score, and
+
+85
+00:07:12,605 --> 00:07:15,857
+you base all your interpretation
+on the final score.
+
+86
+00:07:15,857 --> 00:07:20,936
+Check that the conclusions are robust for
+the main impact category
+
+87
+00:07:20,936 --> 00:07:26,026
+which are contributing to more than
+a percent to the total impact.
+
+88
+00:07:26,026 --> 00:07:31,261
+And use several impact
+assessment methods in parallel
+
+89
+00:07:31,261 --> 00:07:38,553
+to test results robustness like
+IMPACT World+ or ReCiPe that we have here.
+
+90
+00:07:38,553 --> 00:07:46,083
+Finally, for interpretation, compare
+results from different angles, okay?
+
+91
+00:07:46,083 --> 00:07:51,238
+Look at each LCA phase, the inventory
+results, the midpoint characterization
+
+92
+00:07:51,238 --> 00:07:55,863
+results and the damage characterization
+of the impact assessment, and
+
+93
+00:07:55,863 --> 00:07:59,381
+the normalization or
+weighting results that we have.
+
+94
+00:07:59,381 --> 00:08:03,046
+Look at the contribution
+of each life cycle stage,
+
+95
+00:08:03,046 --> 00:08:07,907
+raw material extraction,
+product manufacturing, production,
+
+96
+00:08:07,907 --> 00:08:12,700
+use, waste and disposal, and
+of each component of your product.
+
+97
+00:08:12,700 --> 00:08:19,169
+And especially focus on the one
+generating the largest impact or
+
+98
+00:08:19,169 --> 00:08:25,056
+those where low cost enabled
+to have efficient solution.
+
+99
+00:08:25,056 --> 00:08:27,706
+Consider each substance, okay?
+
+100
+00:08:27,706 --> 00:08:33,465
+Each elementary flow and
+each impact category contribution.
+
+101
+00:08:33,465 --> 00:08:38,305
+Perform a sensitivity study to
+look at the significance and
+
+102
+00:08:38,305 --> 00:08:43,437
+test the significance of
+the differences between scenario and
+
+103
+00:08:43,437 --> 00:08:46,941
+the robustness of your main conclusions.
+
+104
+00:08:46,941 --> 00:08:54,256
+LCA, in conclusion, has really
+matured tremendously in the last year.
+
+105
+00:08:54,256 --> 00:08:59,163
+And one sign among other is
+publication now in Nature on LCA
+
+106
+00:08:59,163 --> 00:09:03,672
+of international trade
+which drives biodiversity,
+
+107
+00:09:03,672 --> 00:09:07,192
+which was from a colleague in Australia.
+
+108
+00:09:07,192 --> 00:09:12,799
+And this paper on looking at
+the rethinking of the global
+
+109
+00:09:12,799 --> 00:09:19,970
+supply chain which was presenting to
+a large republic the basis of LCA.
+
+110
+00:09:19,970 --> 00:09:23,725
+Now to conclude and get an overview,
+
+111
+00:09:23,725 --> 00:09:28,935
+I would recommend you to
+have a look at the chapter 8
+
+112
+00:09:28,935 --> 00:09:34,390
+of our book on
+Environmental Life Cycle Assessment,
+
+113
+00:09:34,390 --> 00:09:39,380
+which give you LCA through
+an example from A to Z.
+
+114
+00:09:39,380 --> 00:09:43,673
+From treating urban sewage sludge,
+
+115
+00:09:43,673 --> 00:09:48,934
+which is an interesting,
+and will enable you
+
+116
+00:09:48,934 --> 00:09:53,787
+to have a sort of recap
+of the anti method.
+
+117
+00:09:53,787 --> 00:09:59,731
+In conclusion for this chapter three,
+the LCA system approach and
+
+118
+00:09:59,731 --> 00:10:04,519
+the system character of this
+approach is a strength.
+
+119
+00:10:04,519 --> 00:10:07,541
+And provide the ability to screen and
+
+120
+00:10:07,541 --> 00:10:12,319
+identify hotspots across
+the entire product lifecycle,
+
+121
+00:10:12,319 --> 00:10:18,574
+looking at multiple types of impacts and
+analyzing multiple trade-offs.
+
+122
+00:10:18,574 --> 00:10:22,968
+The good news is that data
+availability for both inventory and
+
+123
+00:10:22,968 --> 00:10:28,126
+impact assessment has substantially
+increased and really facilitates
+
+124
+00:10:28,126 --> 00:10:33,303
+LCA application as you did in relatively
+a short time in your case study.
+
+125
+00:10:33,303 --> 00:10:37,548
+As a system approach,
+uncertainty remains high and
+
+126
+00:10:37,548 --> 00:10:43,153
+need to be acknowledged and
+accounted for when informing decision.
+
+127
+00:10:43,153 --> 00:10:47,823
+Finally, so
+far we looked one product at a time.
+
+128
+00:10:47,823 --> 00:10:53,873
+This is useful, but this might not be
+sufficient to bring us to sustainable
+
+129
+00:10:53,873 --> 00:10:59,355
+consumption and that's why we have
+a fourth chapter in this class.

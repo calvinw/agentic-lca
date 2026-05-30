@@ -1,0 +1,569 @@
+1
+00:00:09,668 --> 00:00:12,971
+Let's understand this a little bit
+better by applying it to climate change.
+
+2
+00:00:12,971 --> 00:00:16,763
+So in the LCI results we calculate
+the amount of greenhouse gas emissions
+
+3
+00:00:16,763 --> 00:00:18,941
+associated with different scenarios and
+
+4
+00:00:18,941 --> 00:00:21,945
+this is assigned to the climate
+change impact category.
+
+5
+00:00:21,945 --> 00:00:26,577
+We calculate this midpoint damage
+by using the radiative forcing that
+
+6
+00:00:26,577 --> 00:00:29,331
+each emission causes to the atmosphere.
+
+7
+00:00:29,331 --> 00:00:31,513
+How much is it warming the atmosphere?
+
+8
+00:00:31,513 --> 00:00:37,231
+And then add this up because it's
+all now in the same ultimate impact.
+
+9
+00:00:37,231 --> 00:00:42,420
+And we can then convert this if we want
+to end point damages to human health and
+
+10
+00:00:42,420 --> 00:00:46,718
+ecosystem quality by indicating
+how it can lead to wildfires,
+
+11
+00:00:46,718 --> 00:00:49,169
+flooding, heat stress etcetera.
+
+12
+00:00:49,169 --> 00:00:53,097
+And let me break that down a little bit
+more into a cause effect flow diagram for
+
+13
+00:00:53,097 --> 00:00:54,014
+climate change.
+
+14
+00:00:54,014 --> 00:00:56,641
+We have the emissions into the atmosphere,
+
+15
+00:00:56,641 --> 00:01:01,540
+we have the time integrated concentration
+of having those emissions stick around
+
+16
+00:01:01,540 --> 00:01:04,675
+in the atmosphere and
+absorb that extra radiation.
+
+17
+00:01:04,675 --> 00:01:09,178
+This leads to a radiative forcing
+a warming of the atmosphere which causes
+
+18
+00:01:09,178 --> 00:01:14,857
+climate change, increased temperature,
+extreme weather, precipitation, droughts.
+
+19
+00:01:14,857 --> 00:01:19,947
+And that can have effects on ecosystems
+such as affecting their net primary
+
+20
+00:01:19,947 --> 00:01:24,571
+production or effects on humans
+such as flooding or malnutrition.
+
+21
+00:01:24,571 --> 00:01:27,774
+And so, we can see that
+the climate change part and
+
+22
+00:01:27,774 --> 00:01:30,378
+rated enforcing is our midpoint level.
+
+23
+00:01:30,378 --> 00:01:34,764
+And then the ultimate damage
+to effects on humans and
+
+24
+00:01:34,764 --> 00:01:37,765
+ecosystems is our end point level.
+
+25
+00:01:37,765 --> 00:01:41,467
+I put this slide in here because I know
+I'm throwing around a lot of terms and so
+
+26
+00:01:41,467 --> 00:01:44,640
+we wanted to collect them all
+on the slide for your reference.
+
+27
+00:01:44,640 --> 00:01:49,227
+We have an example of LCI results or
+our greenhouse gas emissions.
+
+28
+00:01:49,227 --> 00:01:52,883
+Example of our midpoint impact
+category as climate change,
+
+29
+00:01:52,883 --> 00:01:57,040
+example of our category indicator
+is our global warming potential or
+
+30
+00:01:57,040 --> 00:02:00,133
+kilograms equivalent CO2
+per kilogram emitted.
+
+31
+00:02:00,133 --> 00:02:03,328
+The characterization model used for
+
+32
+00:02:03,328 --> 00:02:08,903
+this example is IPCC model that
+connects emissions to impacts.
+
+33
+00:02:08,903 --> 00:02:12,182
+Our result indicator is our
+kilograms equivalent CO2.
+
+34
+00:02:12,182 --> 00:02:15,343
+We bring everything back to that.
+
+35
+00:02:15,343 --> 00:02:19,893
+And our end point damaged categories that
+we've talked about here are human health
+
+36
+00:02:19,893 --> 00:02:24,248
+like heat stress and ecosystem qualities
+such as coral impacts on coral reefs.
+
+37
+00:02:24,248 --> 00:02:28,948
+To understand the types of modeling
+that can go into this impact assessment,
+
+38
+00:02:28,948 --> 00:02:34,035
+let's better understand this category
+indicator of a global warming potential.
+
+39
+00:02:34,035 --> 00:02:38,855
+So Global Warming Potential of
+a substance i measures the increase in
+
+40
+00:02:38,855 --> 00:02:43,019
+radiative forcing of the atmosphere
+due to the emission i.
+
+41
+00:02:43,019 --> 00:02:46,372
+Or basically,
+how much radiation is it absorbing and
+
+42
+00:02:46,372 --> 00:02:48,761
+causing the atmosphere to warm up by?
+
+43
+00:02:48,761 --> 00:02:53,266
+And this is all measured relative
+to what a kilogram of CO2 would be?
+
+44
+00:02:53,266 --> 00:02:58,561
+So, our climate change midpoint impact
+score, S here, of course depends
+
+45
+00:02:58,561 --> 00:03:03,532
+on the mass of substance i admitted and
+its Global Warming Potential.
+
+46
+00:03:03,532 --> 00:03:07,756
+How much is it increasing
+the warming of the atmosphere?
+
+47
+00:03:07,756 --> 00:03:11,959
+And the total score is the sum of all
+the different substances emitted,
+
+48
+00:03:11,959 --> 00:03:14,844
+their mass and
+their Global Warming Potential.
+
+49
+00:03:14,844 --> 00:03:18,305
+Now, what's helpful to understand here
+is this isn't necessarily simple.
+
+50
+00:03:18,305 --> 00:03:22,801
+The Global Warming Potential has
+another complicated equation with
+
+51
+00:03:22,801 --> 00:03:27,218
+integrations that involves
+the concentration of our substance i,
+
+52
+00:03:27,218 --> 00:03:30,872
+the absorption of thermal
+radiation of that molecule.
+
+53
+00:03:30,872 --> 00:03:34,973
+The time horizon considered because
+different substances have different
+
+54
+00:03:34,973 --> 00:03:36,670
+lifetimes in the atmosphere.
+
+55
+00:03:36,670 --> 00:03:41,449
+And let me dive just a little bit deeper
+into that as you can follow me in so
+
+56
+00:03:41,449 --> 00:03:46,231
+that we can see how the choices that
+need to be made when we're comparing
+
+57
+00:03:46,231 --> 00:03:47,606
+different things.
+
+58
+00:03:47,606 --> 00:03:51,559
+So the magnitude of climate change impacts
+depends on her time horizon considered.
+
+59
+00:03:51,559 --> 00:03:56,218
+And the reason is that each molecule has
+a different lifetime in the atmosphere.
+
+60
+00:03:56,218 --> 00:04:02,503
+CO2 hurricanes around for 300 to 1000
+years, so it's considered indefinite here.
+
+61
+00:04:02,503 --> 00:04:08,951
+And it's short and long term impacts
+by definition are 1kg equivalent CO2.
+
+62
+00:04:08,951 --> 00:04:14,054
+But if we want to compare this to a
+different scenario that results in methane
+
+63
+00:04:14,054 --> 00:04:18,995
+emissions, methane lifetime is only
+12 years in the atmosphere, but
+
+64
+00:04:18,995 --> 00:04:22,074
+it has a higher reading
+enforcing than CO2.
+
+65
+00:04:22,074 --> 00:04:30,034
+So shorter term, it has a higher global
+warming potential than CO2, 34 is its GWP.
+
+66
+00:04:30,034 --> 00:04:34,840
+But if we wanted to look longer term
+since the methane decays faster over
+
+67
+00:04:34,840 --> 00:04:39,888
+longer timescales, it's not quite as
+much greater than carbon dioxide,
+
+68
+00:04:39,888 --> 00:04:41,830
+it only has a factor of 11.
+
+69
+00:04:41,830 --> 00:04:45,907
+Another example to help us understand
+a little better is nitrous oxide.
+
+70
+00:04:45,907 --> 00:04:50,250
+Its lifetime is 120 years,
+so a bit closer to CO2.
+
+71
+00:04:50,250 --> 00:04:55,419
+Which means that it's shorter term impacts
+of 298 aren't that much different from
+
+72
+00:04:55,419 --> 00:05:00,600
+its longer term impacts of 297 because it
+lives relatively long in the atmosphere.
+
+73
+00:05:00,600 --> 00:05:05,133
+And I hope this helps illustrate that even
+with all of our equations and modeling,
+
+74
+00:05:05,133 --> 00:05:09,206
+there's definitely uncertainty in
+these models and choices that we make
+
+75
+00:05:09,206 --> 00:05:12,771
+that we need to make explicit so
+that the results can be trusted.
+
+76
+00:05:12,771 --> 00:05:17,098
+Now, to qualitatively understand this
+uncertainty at various midpoint and
+
+77
+00:05:17,098 --> 00:05:20,769
+end points parts in our interpretation,
+we can see this figure.
+
+78
+00:05:20,769 --> 00:05:24,686
+And this figure tells us that when
+we just look at the LCI inventory,
+
+79
+00:05:24,686 --> 00:05:28,002
+we know the emissions and
+extractions relatively well.
+
+80
+00:05:28,002 --> 00:05:32,900
+So our model uncertainty is low,
+but we don't know what they mean.
+
+81
+00:05:32,900 --> 00:05:37,480
+I can't compare a kilogram admitted of
+one chemical to a kilogram admitted of
+
+82
+00:05:37,480 --> 00:05:41,153
+another chemical without knowing
+the impact that they have.
+
+83
+00:05:41,153 --> 00:05:46,137
+So our interpretation uncertainty is
+relatively high at LCI inventory stage.
+
+84
+00:05:46,137 --> 00:05:51,171
+And we try to reduce that interpretation
+uncertainty better understand
+
+85
+00:05:51,171 --> 00:05:55,637
+the impact by connecting these
+to midpoint impact categories.
+
+86
+00:05:55,637 --> 00:06:00,489
+But in doing that, we increase our model
+uncertainty because we have to add
+
+87
+00:06:00,489 --> 00:06:05,505
+these equations and models to estimate
+what impact the emissions will have.
+
+88
+00:06:05,505 --> 00:06:08,135
+And even at the midpoint level,
+we haven't yet
+
+89
+00:06:08,135 --> 00:06:12,225
+connected it to these big categories
+of human and environmental health.
+
+90
+00:06:12,225 --> 00:06:16,458
+So if we want to go further to our
+endpoint damage, that leads to greater
+
+91
+00:06:16,458 --> 00:06:20,350
+ability to interpret, so
+lower interpretation uncertainty.
+
+92
+00:06:20,350 --> 00:06:24,378
+If I just say, this one has more human
+health damage than this other one,
+
+93
+00:06:24,378 --> 00:06:26,903
+you know a little bit
+more what I mean by that.
+
+94
+00:06:26,903 --> 00:06:30,076
+But it has greater model uncertainty and
+that it depends
+
+95
+00:06:30,076 --> 00:06:34,194
+on the time horizons considered and
+it depends on how we waited things and
+
+96
+00:06:34,194 --> 00:06:38,198
+how we combine different midpoint
+impacts into our endpoint damage.
+
+97
+00:06:38,198 --> 00:06:43,241
+So as we increase our model uncertainty,
+we are increasing our
+
+98
+00:06:43,241 --> 00:06:48,204
+relevance that leads to a balance
+that LCA folks need to make.
+
+99
+00:06:48,204 --> 00:06:54,125
+Where in the LCI inventory, we have
+relatively high overall uncertainty.
+
+100
+00:06:54,125 --> 00:06:59,377
+At the endpoint damage, we have relatively
+high uncertainty due to our modeling.
+
+101
+00:06:59,377 --> 00:07:04,022
+And so this midpoint damage is often
+what a lot of LCA folks like to focus
+
+102
+00:07:04,022 --> 00:07:08,513
+on because it's where we are minimizing
+our overall uncertainty,
+
+103
+00:07:08,513 --> 00:07:13,738
+by balancing out our model uncertainty and
+our interpretation uncertainty.
+
+104
+00:07:13,738 --> 00:07:18,682
+So to summarize what we talked about
+today is how to take our LCI framework,
+
+105
+00:07:18,682 --> 00:07:23,470
+LCIA framework and how that connects
+our life cycle inventory results of
+
+106
+00:07:23,470 --> 00:07:27,331
+emissions to air water,
+soil and resource extractions.
+
+107
+00:07:27,331 --> 00:07:31,107
+Can connect these to their
+midpoint damage categories,
+
+108
+00:07:31,107 --> 00:07:36,852
+which we've listed here including ozone
+depletion, ecotoxicity, eutrophication
+
+109
+00:07:36,852 --> 00:07:41,590
+in order to better understand
+the impacts on humans and environments.
+
+110
+00:07:41,590 --> 00:07:44,776
+And then if we want,
+we can add these up and
+
+111
+00:07:44,776 --> 00:07:50,059
+sum them up in different ways to
+ultimately lead to end point damage or
+
+112
+00:07:50,059 --> 00:07:55,638
+to human health, ecosystem quality,
+natural resources, etcetera.
+
+113
+00:07:55,638 --> 00:07:58,912
+These things that we ultimately
+want to protect or value.
+
+114
+00:07:58,912 --> 00:08:04,541
+But as we move over to the right,
+we are increasing our model uncertainty.
+
+115
+00:08:04,541 --> 00:08:09,505
+And so, we need to balance this balance
+of making the results more relevant, but
+
+116
+00:08:09,505 --> 00:08:12,583
+also knowing they're
+becoming more uncertain.
+
+117
+00:08:12,583 --> 00:08:13,795
+Thank you very much.

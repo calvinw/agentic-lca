@@ -1,0 +1,78 @@
+If you do comparative assertion, you will have to have
+a peer-review work and this peer-review
+will ensure that the interpretation
+reflect the identified, limitation and goal of the
+study that you don't suddenly have conclusion which were not really well grounding the study, and that the study report is
+transparent and consistent. It's optional. But as I say, to be ISO-compatible, if you involve a
+comparative assertion, you need to have a peer-review, and a peer review in fact, with three reviewers,
+at least a president, a chair, and then two other reviewers which would
+provide their advice. It needs to be planned and budgeted from the
+start for a small LCA, that would be perhaps 10% of
+the cost for a larger LCA. About 5% of the cost. What is small and large? I mean, a small LCA would be something in the range 5-10,000. Large LCA would be rather
+in the range 20-30,000, but I've carried out some LCA, one LCA, for $600,000
+because we were doing a product in
+every state in the US. With a high level of complexity govern all
+different impacts. When you involve the reviewer, involve them from the start. Discussed already, the
+scope and goal definition, discuss the basis for
+comparison with them, discuss after the inventory or also get from them what they suggest to use
+as data sources. Because if you just involve
+them at the end of your LCA, you will be in
+trouble because you don't have time to correct, your budget is gone, you cannot take advantage
+of their advice properly. Really, peer-review are
+usually very knowledgeable and I've been doing one of my
+first large peer review I did. In fact, the three
+peer reviewer had probably about 40 years
+of LCA experience, whereas the people
+doing the LCA had only three or four years
+experience cumulatively. There we really brought a lot of information
+and knowledge to the LCA so that in fact the
+final results were good. But it would not have been without the peer
+review at the same level. These people now in fact, I've learned a lot and now themselves experts
+since that time, which was very
+interesting and we were working on a regular
+basis with them in fact. Peer review, the importance
+to have that clearly stated from the star.t
+The scope definition, the scope of an LCA must take
+into account and clearly describe a bit all
+the steps of the LCA. But in particular here four steps which are part
+of the goal definition. Product system to be studied; function of the system, functional unit
+system boundaries. A series of points
+which are more on the inventory side like the allocation procedure will
+define all what it means. Data requirement,
+assumption, value choices, limitatation data
+quality requirements. Typical of critical review and the type and format of the
+report which is there. Then it should also define the life cycle impact
+assessment methods and interpretation to
+be used in that case. Just to be clear, in
+the golden scope, you don't do all that. But I will say up a posteriori. Once you've done that, you define exactly what is
+going to come in the study and how it will be made or has been made in some respect if you
+define that a posteriori. Now, how do you
+perform your LCA? How do you best invest
+the time you have, you have a limited
+amount of money. It limits the time you can
+invest if the consultant, you need to bill at
+least $1,000 a day for younger scientists,
+or young analyst. If you have a 5,000 LCA, you have basically 10 days. How to best involve
+these ten days. I recommend to
+carry out the LCA, this is not an eyesore itself, but in two steps. That's valid for many
+scientific approach with about equal
+effort in each step. First step you do a
+first screening phase, and that will last until
+halfway of your LCA. If you have 10 days
+after five days, you come back to your sponsor with the first screening
+phase covering the whole LCA and
+assessing orders of magnitude of the
+emission inventory and impacts. Or if your LCA was 30 days work, or $30,000 typically, after 15 days work, you will come and present the first screening
+of all the study. Then you identify
+with your sponsor and use your advisory group. What to do in priority in a default detailed analysis
+to then invest your time in the most important
+life-cycle stages or most important components
+of your products, or the most important
+substances impact that you have so that you don't give equal importance
+to every stage, but you really emphasize and get the maximum benefit and accuracy and improvements
+in your study with the time that is left
+to invest for this. In summary, the goal and scope definition phase is crucial and it defines the
+main hypothesis and method used in the LCA. It's really crucial step to ensure the steady consistency. It requires discussion and interaction between the
+clients, the sponsor, the analysts
+performing the study, the potential stakeholders, and potentially if any of the
+independent peer reviewer.

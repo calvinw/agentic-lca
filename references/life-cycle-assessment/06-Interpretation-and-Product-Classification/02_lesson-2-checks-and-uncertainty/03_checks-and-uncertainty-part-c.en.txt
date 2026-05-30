@@ -1,0 +1,103 @@
+So let's take an example how
+this uncertainty can be applied, and let's of course take our
+hands drying case study. We'll consider here functional unit
+of 260,000 pairs of hands dried. And this study was in fact
+commissioned by the XLERATOR Dryer company which wanted to compare
+their 10 seconds at the same power of about 1800 watt drying
+compared to a Conventional Dryer which takes 30 seconds, and
+paper towel as a third alternative. And we look here 0% recycled paper, and 100% recycled paper as alternative. And this study was done
+in collaboration with my colleague John Diddling from Quantis, a consulting company for XLERATOR. What is the results for
+these 250,000 hands dried? We see clearly the XLERATOR here, okay, has substantially lower
+impact than the other, and it's about a third of the impact
+here compared to the standard dryer because you are here 10 seconds
+drying against the 30 seconds. So you have you have a direct
+gain which is straight forward. The standard dryer is about
+equivalent to the recycled paper, which is slightly different
+as we see here to the basic paper with 0% recycled
+content in that case. So, little gain in recycling,
+that's one thing. And we know that these
+two are very similar. So the comparison between these two
+will be much more robust than when we compare two very different cases here. Like the paper, we see the use stage
+was dominating the electricity for the air dryer,
+whereas the manufacturing of my towel and the raw material were
+the important part for the material production plus the disposal
+that we have at the end of life, okay? So the question now, let's perform
+an uncertainty assessment and identify which of these
+differences are significant. For example, here's the difference between
+this 100% here and 0% significant. Or is the difference here
+between my hairdryer and my conventional paper towel significant,
+okay? Or is this different here sufficient here? So according to my rule,
+we probably at the limit to be, I mean, significance, because we are around 10%
+bar 15% here differences on the CO2. So we might be borderline. That's where it's interesting
+to go a bit further and apply this tailored series
+expansion that we have. So how do we proceed? First you have to determine the
+uncertainty on the input parameters for each unit's process, both for
+the elementary and the intermediary flows. Then you can use this uncertainty
+on the input parameter to calculate the uncertainty distribution and parameterize this distribution for
+your output variable. For example, your windows gas
+score per functional unit or 260,000 hands dried. And then you can analyze
+the significance of the ratio or difference between scenario,
+and I'll come back on that, because scenario can vary in parallel and
+not always independent. So you need to not just compare
+each scenario for itself, but look at the scenario 2 by 2,
+the ratio or difference in final score. Let's apply that to our case. First, which type of distribution
+are we using in LCA? Very often log normal distribution, why? Because we are limited usually for most of our data at 0,
+we are bounded at 0. Why we are there,
+because you cannot have negative emission, or you cannot have consumption
+of a resource which is negative. So when you have data which is limited on
+the lower side but not on the upper side, often you will have a distribution
+like a log normal distribution which has a longer tail on the upper part
+because here you have no limitation. So the uncertainty is higher on that side. How is a log normal
+distribution parameterized? We start from here. The geo means the mean of the log,
+which is not the top by the way of the distribution,
+it's a bit on the right of the top. And this mean of the log we will
+consider what we call the GSD square or the square geometric standard deviation, also called sometime in certain cases,
+the coefficient of variation. And this is a multiplicative parameters,
+okay? So the 95th confidence interval will
+be between an upper and a lower limit. And you see that the upper limit
+is bigger than the lower limit. And if I have a GSD square of 2,
+this means that the lower limit will be equal to the geo
+mean divided by 2 and the upper. So I will have here 280 divided by 2, that's about 140, okay? And on the upper side, I will have in fact around here 500 that will be twice the GSD square, okay? And that would be in fact more than
+500 in term of the distribution. So we should have in fact
+to be really equal the same area here, 2.5% of the points here, and 2.5% should be down on this side. So this really a way to define my
+distribution would be the geo-mean, which corresponds often to the best estimate
+plus this GSD square which is defined. What are the typical
+value of this GSD square? This is given in ecoinvent by
+the basic uncertainty, and this depends on the type of flow. If I look first at intermediary flows,
+okay, and we say energy semi-finished product amount
+of material, small uncertainty, 1.05. So divided by 1.05 of multiplied by 105,
+that's about 5%, okay? And because it's well defined. Transportation services or infrastructure
+are higher with the factor 2 or 3, multiplied by 3, or
+divided by 3 in that case. What about the elementary flow? And first the resources, we know pretty
+well how much energy we're using. How much metal we have for
+a piece of front end panel for example. Again, about 5% uncertainty here,
+whereas for the lane use, it's higher uncertainty,
+factor 1.5 or 2 here. Pollutant emitted to air,
+we can see that for CO2, this is relatively accurate, also the 5%. But when we move to it's a factor 1.5. And if you go to VOC here, factor 2
+to 3 on the fine particulate matter, but certain substances you go
+up to a factor 5 uncertainty. And for example, heavy metal for
+combustion is really high. Same story with water with high
+uncertainty under heavy metal, and the total organic content of things that
+are more accurate with the factor 1.5. Agriculture emission are better known for water emission,
+which are better defined here. From this basic uncertainty, you then add some additional factor as
+a function of the quality of the data. And the idea is to use
+a semi-quantitative here approach. And it's called the pedigree
+approach where for each data, okay, for example, my emission of CO2 at my power plant,
+okay, you look,
+is the data highly reliable or not? And you give it a score of 1 to 5. So I would say by data reliability,
+this is good. Do I have several samples here
+that a completeness covering all the different case, no. So that could be a 4 out
+of 5 representativeness. Is it representative of my technology,
+that could be perhaps a three geographic. Is it from the same region? Yes, perhaps. And it's all these data reason,
+not necessarily. So you will have a three, and technological creation
+is the same technology. Know in that case that would be a 5. And based on the value here,
+you have a method in ecoinvent. And you can have a look in the chapter
+of the book looking at that which will define additional
+factor to combine with this basic uncertainity of typically
+a factor 1 if I have 1, 1, 1,1, 1, okay, in all this number. Or up to a factor 2 if this is more a 5,
+5, 5, 5, 5, okay, in that case. This we do it for
+each of the input of my parameter. And the beauty is that
+ecoinvent has done that for us, has defined a default uncertainty
+that you can find semi-pro. But the version you're using for your case
+study cannot run the uncertainty measure, but the PhD version or
+the expert version can.
