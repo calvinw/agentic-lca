@@ -24,6 +24,11 @@ build/
 *.log
 .cache/
 
+# Auto-generated skill manifests
+.*/skills/.skillshare-manifest.json
+.skillshare/skills/.metadata.json
+.devcontainer/devcontainer-lock.json
+
 # OS
 Thumbs.db
 .DS_Store
