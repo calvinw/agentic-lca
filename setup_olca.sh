@@ -14,6 +14,10 @@ DATA_DIR="$HOME/olca-data"
 
 mkdir -p "$DATA_DIR/databases"
 
+echo "[olca] Installing required Python packages..."
+pip install olca-ipc olca-schema pyyaml numpy matplotlib --break-system-packages -q
+echo "[olca] Python packages ready."
+
 # Build the image if it doesn't exist yet
 if ! docker image inspect "$IMAGE" > /dev/null 2>&1; then
     echo "[olca] Building gdt-server image (this only happens once)..."
