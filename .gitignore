@@ -24,8 +24,14 @@ build/
 *.log
 .cache/
 
-# Auto-generated skill manifests
-.*/skills/.skillshare-manifest.json
+# Auto-generated agent skill directories (source of truth is .skillshare/skills/)
+.agents/
+.claude/skills/
+.crush/
+.gemini/
+.github/skills/
+.opencode/skills/
+.skillshare/registry.yaml
 .skillshare/skills/.metadata.json
 .devcontainer/devcontainer-lock.json
 
