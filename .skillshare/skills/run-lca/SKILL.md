@@ -93,6 +93,8 @@ products:
 elementary_flows:
   emissions:
     - { name: <flow name>, unit: <symbol> }
+  resources:                              # optional — extractions from nature
+    - { name: <flow name>, unit: <symbol> }
 
 # Unit processes.
 # reference_output  → the product this process "sells" (diagonal of A)
@@ -105,6 +107,8 @@ processes:
       - { flow: <product name>, amount: <number> }
     emissions:
       - { flow: <emission name>, amount: <number> }
+    resources:                            # optional — extractions from nature
+      - { flow: <resource name>, amount: <number> }
 
 # Must match one of the process names above.
 reference_process: <process name that delivers the functional unit>
@@ -198,8 +202,12 @@ Ask the user for:
 4. **Products** (technosphere flows) — one entry per intermediate good or
    service that flows between processes.
 
-5. **Emissions** (biosphere flows) — CO₂, CH₄, NOₓ, freshwater, etc.
+5. **Emissions** (biosphere flows out) — CO₂, CH₄, NOₓ, wastewater, etc.
    For a real database, these must match ecoinvent elementary flow names exactly.
+
+5b. **Extractions** (biosphere flows in, optional) — coal, crude oil, water from river,
+    land use, etc. Listed under `resources` in `elementary_flows` and `processes`.
+    In the B matrix these appear as negative values (inputs from nature).
 
 6. **Processes** — for each process:
    - What is the reference output (the "product" it sells)?

@@ -6,6 +6,3 @@ targets:
   - gemini
   - crush
   - codex
-skills:
-  - name: skill-creator
-    source: github.com/anthropics/skills/skill-creator

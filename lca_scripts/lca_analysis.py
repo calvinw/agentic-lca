@@ -93,12 +93,18 @@ def build_model(client: RestClient, spec: dict) -> tuple[dict, o.Ref]:
         reg[p["name"]] = flow
         print(f"    {p['name']}  [{p['unit']}]")
 
-    step(5, "Elementary Flows  (biosphere — emissions / extractions)")
-    for ef in spec.get("elementary_flows", {}).get("emissions", []):
-        flow = o.new_elementary_flow(ef["name"], reg[ef["unit"]])
+    step(5, "Elementary Flows  (biosphere — emissions & extractions)")
+    ef = spec.get("elementary_flows", {})
+    for em in ef.get("emissions", []):
+        flow = o.new_elementary_flow(em["name"], reg[em["unit"]])
         client.put(flow)
-        reg[ef["name"]] = flow
-        print(f"    {ef['name']}  [{ef['unit']}]  → emission to nature")
+        reg[em["name"]] = flow
+        print(f"    {em['name']}  [{em['unit']}]  ↑ emission to nature")
+    for res in ef.get("resources", []):
+        flow = o.new_elementary_flow(res["name"], reg[res["unit"]])
+        client.put(flow)
+        reg[res["name"]] = flow
+        print(f"    {res['name']}  [{res['unit']}]  ↓ extraction from nature")
 
     step(6, "Unit Processes")
     for ps in spec["processes"]:
@@ -110,14 +116,18 @@ def build_model(client: RestClient, spec: dict) -> tuple[dict, o.Ref]:
             o.new_input(p, reg[inp["flow"]], inp["amount"])
         for em in ps.get("emissions", []):
             o.new_output(p, reg[em["flow"]], em["amount"])
+        for res in ps.get("resources", []):
+            o.new_input(p, reg[res["flow"]], res["amount"])
         client.put(p)
         reg[ps["name"]] = p
         print(f"    {ps['name']}")
-        print(f"      output:  {ro['amount']} {ro['flow']}")
+        print(f"      output:    {ro['amount']} {ro['flow']}")
         for inp in ps.get("inputs", []):
-            print(f"      input:   {inp['amount']} {inp['flow']}")
+            print(f"      input:     {inp['amount']} {inp['flow']}")
         for em in ps.get("emissions", []):
-            print(f"      emits:   {em['amount']} {em['flow']} → biosphere")
+            print(f"      emits:     {em['amount']} {em['flow']} → biosphere")
+        for res in ps.get("resources", []):
+            print(f"      extracts:  {res['amount']} {res['flow']} ← nature")
 
     step(7, "Product System  (auto-link by matching flows)")
     ref_proc   = reg[spec["reference_process"]]
@@ -133,19 +143,28 @@ def build_model(client: RestClient, spec: dict) -> tuple[dict, o.Ref]:
 def build_matrices(spec: dict):
     prod_names = [p["name"] for p in spec["products"]]
     proc_names = [p["name"] for p in spec["processes"]]
-    em_names   = [e["name"] for e in
-                  spec.get("elementary_flows", {}).get("emissions", [])]
+
+    ef = spec.get("elementary_flows", {})
+    emissions_list = ef.get("emissions", [])
+    resources_list = ef.get("resources", [])
+
+    # env_flows: all biosphere flows with type info for display and sign logic
+    env_flows = (
+        [{"name": e["name"], "unit": e["unit"], "type": "emission"} for e in emissions_list] +
+        [{"name": r["name"], "unit": r["unit"], "type": "resource"} for r in resources_list]
+    )
+    env_names = [f["name"] for f in env_flows]
 
     prod_idx = {n: i for i, n in enumerate(prod_names)}
     proc_idx = {n: i for i, n in enumerate(proc_names)}
-    em_idx   = {n: i for i, n in enumerate(em_names)}
+    env_idx  = {n: i for i, n in enumerate(env_names)}
 
     n_prod = len(prod_names)
     n_proc = len(proc_names)
-    n_em   = len(em_names)
+    n_env  = len(env_names)
 
     A = np.zeros((n_prod, n_proc))
-    B = np.zeros((n_em,   n_proc))
+    B = np.zeros((n_env,  n_proc))
 
     for ps in spec["processes"]:
         j = proc_idx[ps["name"]]
@@ -156,10 +175,13 @@ def build_matrices(spec: dict):
             if inp["flow"] in prod_idx:
                 A[prod_idx[inp["flow"]], j] = -inp["amount"]
         for em in ps.get("emissions", []):
-            if em["flow"] in em_idx:
-                B[em_idx[em["flow"]], j] = em["amount"]
+            if em["flow"] in env_idx:
+                B[env_idx[em["flow"]], j] = +em["amount"]    # positive: output to nature
+        for res in ps.get("resources", []):
+            if res["flow"] in env_idx:
+                B[env_idx[res["flow"]], j] = -res["amount"]  # negative: input from nature
 
-    return A, B, prod_names, proc_names, em_names
+    return A, B, prod_names, proc_names, env_names, env_flows
 
 # ── Generate product_graph.png ────────────────────────────────────────────────
 
@@ -201,10 +223,10 @@ def generate_graph(spec: dict, output_path: str):
     ax.axis("off")
     fig.patch.set_facecolor("#f5f5f5")
 
-    Y_NATURE_IN  = 5.8    # From Nature zone centre
-    Y_PROCESS    = 3.2    # process boxes
-    Y_BUS        = 4.3    # bus line — above processes, within Supply Chain zone
-    Y_NATURE_OUT = 1.0    # To Nature zone centre
+    Y_NATURE_IN  = 5.8
+    Y_PROCESS    = 3.2
+    Y_BUS        = 4.3
+    Y_NATURE_OUT = 1.0
     C_PROC = "#3a7ebf"; C_FU = "#7b4ea6"; C_IN = "#3a9957"
     C_OUT  = "#c45c1a"; C_ARROW = "#444444"; C_EM_ARR = "#c0392b"
     BOX_W  = 2.2;  BOX_H = 0.8;  EM_W = 2.0;  EM_H = 0.5
@@ -232,10 +254,10 @@ def generate_graph(spec: dict, output_path: str):
                     arrowprops=dict(arrowstyle="->", color=color, lw=1.6), zorder=2)
         if label:
             mx, my = (x1+x2)/2, (y1+y2)/2
-            if abs(x2-x1) >= abs(y2-y1):   # horizontal → label above midpoint
+            if abs(x2-x1) >= abs(y2-y1):
                 ax.text(mx, my + 0.16, label, ha="center", va="bottom",
                         color=color, **LABEL_PROPS)
-            else:                            # vertical → label to the right
+            else:
                 ax.text(mx + 0.12, my, label, ha="left", va="center",
                         color=color, **LABEL_PROPS)
 
@@ -245,7 +267,7 @@ def generate_graph(spec: dict, output_path: str):
     ax.text(fig_w/2, ROW_H - 0.65, "Product Graph", ha="center",
             fontsize=9, color="#666", zorder=5)
 
-    # ── Zone bands (each defined by bottom and top y coordinates)
+    # ── Zone bands
     for label, color, y_bot, y_top in [
         ("From Nature",  "#e8f5ec", 5.1, 6.4),
         ("Supply Chain", "#e8f0f8", 2.4, 5.0),
@@ -276,8 +298,7 @@ def generate_graph(spec: dict, output_path: str):
                 key = (src, inp["flow"], unit_sym)
                 flow_groups.setdefault(key, []).append((pname, inp["amount"]))
 
-    # ── Draw arrows — single destination: straight arrow at process level
-    #                  multiple destinations: bus line below with drop arrows
+    # ── Draw technosphere arrows
     for (src, flow, unit_sym), dsts in flow_groups.items():
         src_cx = proc_col[src]
 
@@ -287,36 +308,35 @@ def generate_graph(spec: dict, output_path: str):
                            proc_col[dst] - BOX_W/2, Y_PROCESS,
                            label=f"{amount} {unit_sym}")
         else:
-            # Bus line — electricity goes UP from source, RIGHT along bus,
-            # then DOWN into each consuming process
             dst_cxs     = [proc_col[d] for d, _ in dsts]
             x_bus_start = src_cx
             x_bus_end   = max(dst_cxs)
-
-            # Vertical rise from source box top UP to bus level
             ax.plot([src_cx, src_cx], [Y_PROCESS + BOX_H/2, Y_BUS],
                     color=C_ARROW, lw=1.5, zorder=2)
-            # Horizontal bus line (dashed)
             ax.plot([x_bus_start, x_bus_end], [Y_BUS, Y_BUS],
                     color=C_ARROW, lw=1.5, ls="--", zorder=2)
-            # Flow name label on bus
             ax.text((x_bus_start + x_bus_end)/2, Y_BUS + 0.1, flow,
                     ha="center", va="bottom", color=C_ARROW, **LABEL_PROPS)
-
-            # Drop arrows DOWN from bus into each consumer's top
             for dst, amount in dsts:
                 dcx = proc_col[dst]
                 labelled_arrow(dcx, Y_BUS, dcx, Y_PROCESS + BOX_H/2,
                                label=f"{amount} {unit_sym}")
 
-    # ── From Nature boxes
+    # ── From Nature boxes (named resources if defined, generic fallback otherwise)
     for pname in order:
-        if not any(inp["flow"] in produces
-                   for inp in proc_map[pname].get("inputs", [])):
-            cx = proc_col[pname]
+        ps  = proc_map[pname]
+        cx  = proc_col[pname]
+        resources     = ps.get("resources", [])
+        has_tech_inputs = any(inp["flow"] in produces for inp in ps.get("inputs", []))
+
+        if resources:
+            label = "\n".join(f"{r['amount']} {r['flow']}" for r in resources)
+            box(cx, Y_NATURE_IN, label, C_IN, w=EM_W, h=EM_H, fs=7.5)
+            labelled_arrow(cx, Y_NATURE_IN - EM_H/2,
+                           cx, Y_PROCESS + BOX_H/2, color=C_IN)
+        elif not has_tech_inputs:
             box(cx, Y_NATURE_IN, "Raw materials\n(from nature)", C_IN,
                 w=EM_W, h=EM_H, fs=7.5)
-            # Arrow from bottom of From Nature box down to top of process box
             labelled_arrow(cx, Y_NATURE_IN - EM_H/2,
                            cx, Y_PROCESS + BOX_H/2, color=C_IN)
 
@@ -345,7 +365,7 @@ def generate_graph(spec: dict, output_path: str):
     ax.legend(handles=[
         mpatches.Patch(facecolor=C_PROC, label="Supply chain process"),
         mpatches.Patch(facecolor=C_FU,   label="Functional unit"),
-        mpatches.Patch(facecolor=C_IN,   label="Input from nature"),
+        mpatches.Patch(facecolor=C_IN,   label="Extraction from nature"),
         mpatches.Patch(facecolor=C_OUT,  label="Emission to nature"),
     ], loc="lower right", fontsize=7.5, framealpha=0.9, edgecolor="#ccc")
 
@@ -355,8 +375,8 @@ def generate_graph(spec: dict, output_path: str):
 
 # ── Generate lca_results.md ───────────────────────────────────────────────────
 
-def write_results_md(spec, A, B, s, Bs, olca_outputs,
-                     proc_names, prod_names, em_names, system_id):
+def write_results_md(spec, A, B, s, Bs, olca_by_name,
+                     proc_names, prod_names, env_names, env_flows, system_id):
     fu   = spec["functional_unit"]
     name = spec["name"]
     now  = datetime.datetime.now().strftime("%Y-%m-%d %H:%M")
@@ -416,11 +436,13 @@ def write_results_md(spec, A, B, s, Bs, olca_outputs,
 
     ln("## Step 4 — Intervention Matrix B")
     ln()
-    ln("Columns = processes, rows = elementary flows (biosphere).")
+    ln("Columns = processes, rows = elementary flows.  "
+       "`+` = emission to nature, `−` = extraction from nature.")
     ln()
     ln(header); ln(sep)
-    for i, en in enumerate(em_names):
-        row = "| **" + en + "** |"
+    for i, ef in enumerate(env_flows):
+        tag = "↑" if ef["type"] == "emission" else "↓"
+        row = f"| **{tag} {ef['name']}** |"
         for j in range(len(proc_names)):
             v = B[i, j]
             row += f" {v:+.2f} |" if v != 0 else "  0   |"
@@ -429,41 +451,47 @@ def write_results_md(spec, A, B, s, Bs, olca_outputs,
 
     ln("## Step 5 — LCI Results  B · s")
     ln()
-    ln("| Flow | Numpy result | openLCA result | Unit | Match |")
-    ln("|---|---:|---:|---|:---:|")
-    for i, en in enumerate(em_names):
-        olca_val = olca_outputs.get(en)
+    ln("| Flow | Type | Numpy result | openLCA result | Unit | Match |")
+    ln("|---|---|---:|---:|---|:---:|")
+    for i, ef in enumerate(env_flows):
+        olca_val = olca_by_name.get(ef["name"])
         np_val   = Bs[i]
-        unit     = spec["units"].get(
-            next(e["unit"] for e in spec["elementary_flows"]["emissions"]
-                 if e["name"] == en), "kg")
+        unit     = ef["unit"]
         match    = "✓" if olca_val is not None and abs(olca_val - np_val) < 1e-4 else "✗"
         olca_str = f"{olca_val:.4f}" if olca_val is not None else "—"
-        ln(f"| **{en}** | {np_val:.4f} | {olca_str} | {unit} | {match} |")
+        ftype    = "emission ↑" if ef["type"] == "emission" else "extraction ↓"
+        ln(f"| **{ef['name']}** | {ftype} | {np_val:.4f} | {olca_str} | {unit} | {match} |")
     ln()
 
     ln("## Step 6 — Contribution Analysis")
     ln()
-    ln("Which process is responsible for each emission?")
+    ln("Which process is responsible for each elementary flow?")
     ln()
-    ln("| Process | Scale (s) | Direct emissions | % of total |")
-    ln("|---|---:|---:|---:|")
-    total = Bs[0] if len(Bs) > 0 else 1
-    for j, pn in enumerate(proc_names):
-        direct = sum(B[k, j] * s[j] for k in range(len(em_names)))
-        pct    = direct / total * 100 if total != 0 else 0
-        ln(f"| {pn} | {s[j]:.4f} | {direct:.4f} kg | {pct:.0f}% |")
-    ln()
+    for i, ef in enumerate(env_flows):
+        flow_total = Bs[i]
+        if abs(flow_total) < 1e-10:
+            continue
+        ftype = "emission ↑" if ef["type"] == "emission" else "extraction ↓"
+        ln(f"### {ef['name']}  ({ftype})")
+        ln()
+        ln("| Process | Scale (s) | Direct amount | % of total |")
+        ln("|---|---:|---:|---:|")
+        for j, pn in enumerate(proc_names):
+            direct = B[i, j] * s[j]
+            pct    = direct / flow_total * 100 if flow_total != 0 else 0
+            ln(f"| {pn} | {s[j]:.4f} | {direct:.4f} {ef['unit']} | {pct:.0f}% |")
+        ln()
 
     ln("## Summary")
     ln()
     ln("$$")
-    ln(r"\text{Total emissions} = B \cdot A^{-1} \cdot f")
+    ln(r"\text{Total inventory} = B \cdot A^{-1} \cdot f")
     ln("$$")
     ln()
-    for i, en in enumerate(em_names):
-        ln(f"> **{en}: {Bs[i]:.4f} kg** per {fu['amount']} {fu['unit']} "
-           f"of {fu['description']}")
+    for i, ef in enumerate(env_flows):
+        sign = "released" if ef["type"] == "emission" else "extracted"
+        ln(f"> **{ef['name']}: {abs(Bs[i]):.4f} {ef['unit']} {sign}** "
+           f"per {fu['amount']} {fu['unit']} of {fu['description']}")
     ln()
     ln("---")
     ln(f"*Generated by `lca_scripts/lca_analysis.py` using openLCA gdt-server v2*")
@@ -483,7 +511,7 @@ def main():
     except Exception as e:
         print(f"\n  ERROR: Cannot reach openLCA server at {SERVER_URL}")
         print(f"  {e}")
-        print(f"\n  Start it with:  bash .devcontainer/start_olca.sh")
+        print(f"\n  Start it with:  bash start_olca.sh")
         sys.exit(1)
 
     spec = load_spec(ANALYSIS_FILE)
@@ -508,24 +536,27 @@ def main():
         print(f"    f[{i+1}] = {fv}  ({pn})")
 
     step(2, "Product Graph")
-    print(f"\n  Processes : {len(spec['processes'])}")
-    print(f"  Products  : {len(spec['products'])}")
-    n_em = len(spec.get("elementary_flows", {}).get("emissions", []))
-    print(f"  Emissions : {n_em}")
+    ef = spec.get("elementary_flows", {})
+    print(f"\n  Processes   : {len(spec['processes'])}")
+    print(f"  Products    : {len(spec['products'])}")
+    print(f"  Emissions   : {len(ef.get('emissions', []))}")
+    print(f"  Extractions : {len(ef.get('resources', []))}")
     print()
     for ps in spec["processes"]:
         ro  = ps["reference_output"]
         ins = ", ".join(f"{i['amount']} {i['flow']}" for i in ps.get("inputs", []))
         ems = ", ".join(f"{e['amount']} {e['flow']}" for e in ps.get("emissions", []))
+        res = ", ".join(f"{r['amount']} {r['flow']}" for r in ps.get("resources", []))
         print(f"  {ps['name']}")
-        print(f"    → outputs {ro['amount']} {ro['flow']}")
-        if ins:  print(f"    ← needs   {ins}")
-        if ems:  print(f"    ↑ emits   {ems}")
+        print(f"    → outputs  {ro['amount']} {ro['flow']}")
+        if ins:  print(f"    ← needs    {ins}")
+        if ems:  print(f"    ↑ emits    {ems}")
+        if res:  print(f"    ↓ extracts {res}")
 
     client = RestClient(SERVER_URL)
     reg, system_ref = build_model(client, spec)
 
-    A, B, prod_names, proc_names, em_names = build_matrices(spec)
+    A, B, prod_names, proc_names, env_names, env_flows = build_matrices(spec)
 
     step(8, "Technology Matrix A")
     print()
@@ -545,9 +576,11 @@ def main():
 
     step(10, "Intervention Matrix B")
     print()
-    if len(em_names) > 0:
-        print_matrix(em_names, proc_names, B.tolist(),
-                     row_label="emissions", col_label="processes")
+    if env_names:
+        print("  + = emission to nature   − = extraction from nature")
+        print()
+        print_matrix(env_names, proc_names, B.tolist(),
+                     row_label="elementary flows", col_label="processes")
     else:
         print("  (no elementary flows defined)")
 
@@ -559,38 +592,46 @@ def main():
     print(f"  Calculation complete.")
 
     flows = result.get_total_flows()
-    olca_outputs = {f.envi_flow.flow.name: f.amount
-                    for f in flows if not f.envi_flow.is_input}
+    # Signed to match B matrix convention: positive = emission, negative = extraction
+    olca_by_name = {
+        f.envi_flow.flow.name: (-f.amount if f.envi_flow.is_input else f.amount)
+        for f in flows
+    }
     result.dispose()
 
     step(12, "LCI Results  B · s")
     Bs = B @ s
     print()
-    print(f"  {'Flow':<32} {'Numpy':>10}  {'openLCA':>10}  Unit")
+    print(f"  {'Flow':<32} {'Type':<12} {'Numpy':>10}  {'openLCA':>10}  Unit")
     rule()
-    for i, en in enumerate(em_names):
-        olca_val = olca_outputs.get(en)
-        unit_sym = next((e["unit"] for e in spec["elementary_flows"]["emissions"]
-                         if e["name"] == en), "?")
+    for i, ef in enumerate(env_flows):
+        olca_val = olca_by_name.get(ef["name"])
+        ftype    = "emission ↑" if ef["type"] == "emission" else "extract ↓"
         match    = "✓ MATCH" if olca_val is not None and abs(olca_val - Bs[i]) < 1e-4 else "✗ DIFF"
         olca_str = f"{olca_val:.4f}" if olca_val is not None else "—"
-        print(f"  {en:<32} {Bs[i]:>10.4f}  {olca_str:>10}  {unit_sym}  {match}")
+        print(f"  {ef['name']:<32} {ftype:<12} {Bs[i]:>10.4f}  {olca_str:>10}  {ef['unit']}  {match}")
     print()
-    print(f"  Core equation:  CO₂ = B · A⁻¹ · f = {Bs[0]:.4f} kg")
 
     step(13, "Contribution Analysis (Hotspot Identification)")
-    total = Bs[0] if len(Bs) > 0 else 1
     print()
-    print(f"  {'Process':<30} {'Scale':>8}  {'Direct emiss.':>14}  % of total")
-    rule()
-    for j, pn in enumerate(proc_names):
-        direct = float(sum(B[k, j] * s[j] for k in range(len(em_names))))
-        pct    = direct / total * 100 if total != 0 else 0
-        bar    = "█" * int(pct / 5)
-        print(f"  {pn:<30} {s[j]:>8.4f}  {direct:>10.4f} kg  {pct:5.1f}%  {bar}")
+    for i, ef in enumerate(env_flows):
+        flow_total = Bs[i]
+        if abs(flow_total) < 1e-10:
+            continue
+        ftype = "emission ↑" if ef["type"] == "emission" else "extraction ↓"
+        print(f"  {ef['name']}  ({ftype})  total = {flow_total:.4f} {ef['unit']}")
+        print()
+        print(f"  {'Process':<30} {'Scale':>8}  {'Direct amount':>14}  % of total")
+        rule()
+        for j, pn in enumerate(proc_names):
+            direct = B[i, j] * s[j]
+            pct    = direct / flow_total * 100 if flow_total != 0 else 0
+            bar    = "█" * int(abs(pct) / 5)
+            print(f"  {pn:<30} {s[j]:>8.4f}  {direct:>10.4f} {ef['unit']}  {pct:5.1f}%  {bar}")
+        print()
 
-    write_results_md(spec, A, B, s, Bs, olca_outputs,
-                     proc_names, prod_names, em_names, system_ref.id)
+    write_results_md(spec, A, B, s, Bs, olca_by_name,
+                     proc_names, prod_names, env_names, env_flows, system_ref.id)
 
     step(14, "Product Graph")
     generate_graph(spec, GRAPH_FILE)

@@ -20,9 +20,12 @@ if ! docker image inspect "$IMAGE" > /dev/null 2>&1; then
     BUILD_DIR=$(mktemp -d)
     curl -fsSL https://raw.githubusercontent.com/GreenDelta/gdt-server/main/Dockerfile \
         -o "$BUILD_DIR/Dockerfile.upstream"
-    sed 's|eclipse-temurin:21-jre|eclipse-temurin:17-jre|' \
+    sed \
+        -e 's|eclipse-temurin:21-jre|eclipse-temurin:17-jre|' \
+        -e 's|RUN chmod +x /app/run.sh||' \
+        -e 's|ENTRYPOINT \["/app/run.sh"\]|ENTRYPOINT ["/bin/sh", "/app/run.sh"]|' \
         "$BUILD_DIR/Dockerfile.upstream" > "$BUILD_DIR/Dockerfile"
-    docker build -t "$IMAGE" "$BUILD_DIR"
+    docker build --platform linux/amd64 --no-cache -t "$IMAGE" "$BUILD_DIR"
     rm -rf "$BUILD_DIR"
 fi
 
