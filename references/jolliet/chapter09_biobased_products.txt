@@ -1,0 +1,870 @@
+      9        Metacomparison
+               of the Life Cycle
+               Environmental Impacts
+               of Bio-Based Products
+               Gregory Houillon, Josef Kaenzig, Jinglan Hong,
+               Andrew Henderson, and Olivier Jolliet
+
+One can produce a large variety of products from biomass, including energy (heat
+and power), biofuels, chemicals, lubricants, surfactants, solvents, and biopolymers.
+Often, expected environmental benefits can induce a designer, manufacturer, or
+industry to switch from a conventional, petrochemical-based product to one derived
+from biomass. While use of bioproducts often leads to important environmental ben-
+efits, there is the potential for negative repercussions, and this balance needs to be
+better understood. This chapter illustrates the systematic use of life cycle assessment
+(LCA) for meta-analysis, reviewing the LCA state of the art for a wide range of bio-
+based products. Such metastudies are usually commissioned by agencies or sponsors
+that are primarily interested in obtaining a broad overview of the field, rather than
+detailed results for a single product.
+
+9.1 INTRODUCTION
+Bio-based raw materials (e.g., agricultural and forest resources) and products derived
+from them (e.g., biofuels) have received attention of late as potentially environmen-
+tally friendly substances, due to their renewable nature and their ability to substi-
+tute for fossil fuels in various applications (Perez-Garcia et al. 2005; Malça and
+Freire 2006; Gabrielle and Gagnaire 2008; Kim and Dale 2008; Schmehl et al.
+2008). Indeed, unlike the case of their fossil-based counterparts, the materials and
+renewable energies produced from biomass (agriculture, silviculture) can potentially
+reduce energy consumption and greenhouse gas emissions, and lessen deleterious
+impacts on air, water, and soil (e.g., Perez-Garcia et al. 2005; Kim and Dale 2008).
+It is commonly hoped that their use would preserve fossil resources while promoting
+the adoption of sustainable agricultural practices (Clift 2007; Goldemberg 2007).
+However, bio-based products can also generate additional environmental impacts
+that can vary widely from one supply chain to another. Therefore, environmental
+
+
+
+                                                                                   243
+244                                            Environmental Life Cycle Assessment
+
+
+assessments that quantify these impacts must be conducted to identify the most
+promising alternatives.
+    Quantitative analytical tools such as LCA contribute to such assessments, helping
+to replace preconceived ideas with data-driven findings. One of the challenges and
+limitations of LCA is to create meaningful comparisons across products and studies,
+because of variability of assessments, even with the International Organization for
+Standardization (ISO) framework.
+    The environmental impact of some classes of bio-based products has been exten-
+sively studied using LCA methods, showing important variation depending on the
+product and the study. Though individual analyses may show positive results—for
+example, for polylactic acid-based products (Vink et al. 2003, 2004)—broader
+reviews have not proved a systematic advantage with respect to reduced emissions
+and energy consumption (Meyer-Aurich et al. 2008). Patel et al. (2005) reviewed
+bio-based polymers and natural fibers, evaluating the available LCA studies using
+comparisons based on weight and functional unit (FU). Quirin et al. (2004) and
+Von Blottnitz and Curran (2007) reviewed the environmental impacts of bioethanol,
+which is made from varying feedstocks for use as a transportation fuel, in com-
+parison with conventional fuels. However, these reviews usually focus on a single
+application of biomass and do not allow for comparison across different uses of
+biomass. Since bio-based material resources are also limited by available land areas,
+it is of great interest to compare application, identify tendencies, and provide recom-
+mendations that may lead to efficient use of biomass. The present chapter therefore
+addresses the following challenges, aiming at
+
+   • The qualitative and quantitative analysis of the environmental impact of a
+     wide range of bio-based products, based on a meta-analysis of LCA studies
+   • The development of a method to compare nonrenewable energy consump-
+     tion and greenhouse gas emissions, as well as eutrophication and acidifica-
+     tion across various biomass supply chains
+   • The application of the method to 10 nonfood plant supply chains, helping
+     identify general tendencies in environmental performance
+   • The identification of key parameters, strengths, and limitations of the LCA
+     approach applied to this field
+
+    To address these needs, a meta-analysis was carried out to improve the evalu-
+ation of possible environmental gains resulting from switching to plant resource
+supply chains. This work was adapted from a study initially carried out for the
+French National Agency for Environmental and Energy Management (Houillon
+et al. 2004a, 2004b) that reviewed the state of the art in LCA of bio-based products,
+updating it and extending it to a second stage to additional studies on bioethanol
+and biodiesel. Rather than presenting data on each supply chain, a comprehensive,
+quantitative, qualitative, and critical inventory of all available data was created
+and used to select the most appropriate studies for detailed analysis. Second, we
+present a unique approach to compare both the absolute and relative gains offered
+by 10 categories of bioproduct applications (agrimaterials, bioethanol, biodiesel, and
+agricultural biomass for energy production, biopolymers, surfactants, lubricants and
+Metacomparison of Bio-Based Products                                                     245
+
+
+hydraulic fluids, solvents and intermediate chemical products) compared with their
+fossil counterpart. The metastudy specifically compares the nonrenewable primary
+energy use and environmental impacts (greenhouse gas emissions, acidification, and
+eutrophication) of various uses of biomass. Finally, we give recommendations for the
+development of biomass resource supply chains and suggest avenues for improving
+LCA knowledge.
+
+9.2 METHODS: META-ANALYSIS OF LCA STUDIES
+9.2.1 Overview of LCA Studies
+The following approach was developed to compare the results of available LCA stud-
+ies on bio-based products. Based on criteria including completeness, system bound-
+aries, data consistency, year of publication, and ISO 14044 compliance, a number of
+LCA studies on 10 nonfood plant supply chains (agrimaterials, bioethanol, biodiesel,
+and agricultural biomass for energy production, biopolymers, surfactants, lubricants
+and hydraulic fluids, solvents and intermediate chemical products) were selected for
+detailed analysis for the different product applications. The meta-analysis was car-
+ried out as a stepwise procedure (Table 9.1). Based on a large number of more than
+900 LCA references, a first subset of LCA studies was collected. A critical analysis
+was carried out on these collected studies and only the most relevant in each sec-
+tor were selected, leading to a limited number of studies of high interest that were
+analyzed in further detail (see Table 9.1 and CRC Press website, Meta compari-
+son). The supply chains were divided into two groups (Group 1 = more commonly
+studied areas; Group 2 = less-studied areas) based on the number of LCA studies.
+The number of available LCA studies varied strongly from one field of application
+to another. In general, there are many LCA studies on biofuels, energy crops, and
+timber that have been performed according the ISO 14044 norms. However, fewer
+
+
+
+   TABLE 9.1
+   Summary of Biomass Supply Chains and LCA Studies Analyzed
+                                            LCA References   LCA Studies   LCA Studies
+   Group        Bio-Based Product             Collected       Collected     Analyzed
+   1        Agrimaterials (fiber/wood)          36/132          17/82          5/7
+   1        Ether alcohols (bioethanol)          216             148           12
+   1        Ester oils (biodiesel)               203             127           10
+   1        Forest biomass                       114              75            8
+   2        Agricultural biomass                  76              55            5
+   2        Biopolymers                           40              27            9
+   2        Surfactants                           26              13            6
+   2        Hydraulic oils and lubricants         27              11            4
+   2        Solvents                               9               6            3
+   2        Chemicals and other                   11               7            2
+             intermediate products
+246                                             Environmental Life Cycle Assessment
+
+
+studies have been carried out on chemical bioproducts and biomaterials following
+the ISO standards.
+
+9.2.2 Analysis of Quality and Selection of Studies Analyzed in Detail
+These selected studies were then systematically evaluated according to a set of
+specific criteria: range of scenarios, reliability of studies, technological sensitivity,
+geographic sensitivity, consistency of results, and additional needs. A qualitative
+indication of the literature available for the 10 biomass supply chains is shown in
+Figure 9.1. These criteria are briefly discussed in the following paragraphs.
+    The diversity of scenarios shows a trend according to the end point for biomass;
+there is a wider range of scenarios represented in the literature for those applications
+with a solid product (e.g., fiber and wood), while those applications with a liquid
+end product (e.g., surfactants) have a lower diversity of scenarios represented in the
+literature. The available literature contains relatively few studies that are compli-
+ant with ISO standards, except in the case of agrimaterials (particularly solid wood
+materials), biofuels, and forest biomass (bioenergy; heat and electricity). As a result,
+many LCA results have not been subject to external review, particularly in the case
+of biopolymers, surfactants, hydraulic oils and lubricants, solvents, and chemical and
+other intermediates.
+    In terms of technological development, many biomass supply chains are still in
+the prototype stages; in contrast, conventional fossil fuel supply chains have been in
+development for decades. Therefore, the continued development and optimization
+of biomass supply chains will likely result in higher efficiency and improve their
+environmental performance, resulting in medium to high sensitivity to technologi-
+cal developments (Figure 9.1). Unlike the technological sensitivity, the geographic
+sensitivity is largely moderate for plant supply chains as a whole. Geographic effects
+are most notable in the agricultural production stage, due to climatic differences, and
+are more rarely seen in the conversion and processing stages.
+    The consistency of results is highly variable, depending on the supply chain and
+impact categories. The variations observed are due to the following: differences in
+LCA methodology among the various studies (boundaries of the system studied,
+methods of impact assessment, etc.), uncertainties (related to specific pollutant emis-
+sions data, knowledge of the agricultural production stage, and biomass conversion
+processes), and technological knowledge of the supply chains. The exception to the
+latter is in the case of surfactants, for which technological knowledge is satisfactory,
+but LCA knowledge is limited. Finally, additional data needs have been identified.
+These fall broadly into the following categories of difficulty in characterizing sup-
+ply chains (e.g., changing supply chains and processes) and lack of complete LCA
+studies (e.g., failure to take all impact categories into account, problems with the
+selection of appropriate FUs, and failure to take the complete life cycle into account).
+
+9.2.3 Quantitative Comparison of Various Supply Chains across Studies
+The comparison of biomass supply chains requires a new methodology. The objec-
+tive is not to provide typical, specific values for each chain (the state of current
+                                                        Diversity of        Reliability of       Technological           Geographic        Consistency of   Additional
+                                                         scenarios            studies              sensitivity           sensitivity          results         needs
+                                  Agrimaterials
+                                (fiber and wood)                4           2                           4                   3              2                      4
+                                 Ether alchohols
+                                   (bioethanol)         2                        3                          5               3                       4             4
+                                     Ester oils
+
+
+
+
+                     Group 1
+                                    (biodiesel)         2                        3                      4                   3                       4             4
+
+                                 Forest biomass                 4                3                      4                   3                       4             4
+                                  Agricultural
+                                   biomass                          5   1                                   5                   4          2                          5
+                                                                                                                                                                          Metacomparison of Bio-Based Products
+
+
+
+
+                                  Biopolymers                       5            3                          5        2                              4         3
+
+                                   Surfactants      1                            3                      4                   3                   3                 4
+                                 Hydraulic oils
+
+
+
+
+                     Group 2
+                                 and lubricants             3               2                               5               3              2                      4
+
+                                    Solvents            2                   2                           4                   3              2                      4
+                               Chemical and other
+                                                                    5   1                    ?                   ?                     ?                              5
+                                 intermediates
+
+
+FIGURE 9.1 Summary of criteria applied to LCA references (1 = very weak, 3 = medium, 5 = very strong). (Adapted from Houillon, G. et al., Bilan
+environnemental des filières végétales pour la chimie, les matériaux et l’énergie. Etat des connaissances: Analyse cycle de vie (ACV), Synthèse pub-
+lique, Paris, ADEME. Available from www.ademe.fr/partenaires/agrice/publications/documents_francais/ACV_Synthese.pdf. 2004a).
+                                                                                                                                                                          247
+248                                                          Environmental Life Cycle Assessment
+
+
+knowledge does not always allow for this), but to reveal certain trends based on
+available LCA studies. The nonrenewable primary energy consumption and envi-
+ronmental impacts of bio-based products may be compared with conventional,
+petrochemical-based products on three levels. One metric is per kilogram of prod-
+uct, but this is possible only if the mass per FU is the same, which is rarely the
+case. Secondly, products with the same functional unit can be compared in a classic
+LCA, that is, per functional unit. Such a comparison provides an analysis of gains or
+emission reduction per functional unit, identifying supply chains and products that
+require less energy for product manufacture.
+   However, in a meta-analysis, functions between compared products differ widely
+when comparing across the various uses of products; furthermore, energy gain or
+reduction in emissions per functional unit cannot be directly compared between
+different biomass supply chains. Therefore, a new approach is needed to bring all
+biomass uses to a similar comparative metric valid across different supply chains.
+We propose two metrics, an absolute (A) and a relative (B), which are presented in
+the following subsection (Houillon et al. 2004).
+
+9.2.3.1 (A) Absolute Gain per Hectare of Cultivated Land
+First, if the use of available agricultural area is considered, a comparison of absolute
+gains per hectare of cultivated land is carried out, while taking into account that the
+biomass is replacing a reference fossil product with a consistent functional unit (e.g., bio-
+fuels produced on all available farmland in France could not replace all the fossil fuels
+used in that country). This absolute comparison pertains to the use of biomass in terms
+of agricultural production, addressing the question of what kind of biomass and which
+products make best use of the limited area available for agriculture and lead to the
+highest environmental benefits, as compared with conventional products. Equation 9.1
+represents this metric, namely the gain (or reduction) in impact per biocultivated hectare
+and year for a given study (Gper ha biocultivated-year [in e.g., MJ/ha-year]):
+
+                                      (  per FU
+          G per biocultivated ha-year = Sconventional           per FU
+                                                                         )    per biocultivated ha-year
+                                                      fossil − Sbio-based × N FU                          (9.1)
+
+where:
+   per FU
+  Sconventional  fossil (MJ/FU) indicates the total impact per FU of the considered study
+          for the conventional fossil scenario of reference
+   per FU
+  Sbio-based  (MJ/FU) indicates the total impact per functional unit of the bio-based
+          scenario
+    per biocultivated ha-year
+  N FU                        (FU/ha-year) is the annual production of functional units per
+          cultivated hectare in the bio-based scenario
+
+   The studied impacts are the nonrenewable primary energy (in MJ) as well as the
+global warming impact (in kgCO2-eq), the eutrophication impacts (in kgPO4-eq), and the
+acidification impacts (kgSO2-eq).
+   A similar metric was also developed independently and used by Dornburg et al.
+(2004), comparing the land requirements, energy savings, and reduction in green-
+house gas emissions of bio-based polymers and bioenergy.
+Metacomparison of Bio-Based Products                                                               249
+
+
+9.2.3.2 (B) Gain Relative to the Substituted Part
+A more classical metric is to calculate the relative gain due to the bio-based product,
+relative to the conventional product. However, care must be taken when comparing
+in a consistent way products that are entirely substituted by the bio-based product
+and those in which only a part is substituted. In the case where only a part of the total
+product is substituted, we only divide by the part of the conventional product that is
+substituted by the biomass, as shown in Equation 9.2.
+
+
+                           G% =
+                                   (S per FU
+                                      conventional fossil
+                                                               per FU
+                                                            − Sbio-based   ) × 100%
+                                        (S  subsituted part per FU
+                                            conventional fossil      )                            (9.2)
+
+
+                                       subsituted part per FU    per FU                 per FU
+In Equation 9.2, the denominator Sconventional      fossil    = Sconventional fossil − Scommon parts (in
+e.g., MJ/FU) is the impact score per functional unit associated only with the part of
+the conventional fossil product that is substituted by the biofuels. For example, if a
+bio-based circuit board is to be compared with a conventional circuit board, the non-
+board components (chips, transistors, solder, etc.) that are common to the fossil and
+the biofuel scenarios must not be included in the denominator. These common parts
+can be kept in the numerator of both the total fossil and the total bio-based scenario,
+since these cancel when calculating the difference.
+
+
+9.3 RESULTS AND DISCUSSION
+9.3.1 Comparison of the Environmental Impacts of Bio-Based Products
+9.3.1.1 Comparison across the 10 Categories of Bio-Based Products
+Figures 9.2 and 9.3 show comparisons of the environmental benefits for 10 bio-based
+products categories using the two metrics discussed in the previous subsection: (A)
+Figure 9.2 per hectare-year of land cultivated and (B) Figure 9.3 for relative environ-
+mental efficiency per FU. The CRC Press website provides the detailed references
+and data used. Data are presented as modified boxplots. Minimum and maximum
+values for each category are represented by horizontal bars connected to the main
+box body by vertical lines. The main box body indicates the twenty-fifth and sev-
+enty-fifth percentiles of the data, and the middle line indicates the median value, to
+look at general tendencies. In cases of product categories with few data points, some
+of these statistical descriptors may be nonexistent. Since the data are not necessar-
+ily a representative sample of any of the considered product categories, and because
+each application leads to individually potentially valid results, it is important to also
+account for the full ranges of variation in the interpretation.
+    For energy consumption and global warming (panels a and b of Figures 9.2
+and 9.3), almost all of the bioproduct LCAs show significant benefits over conven-
+tional fossil products (positive gains). However, eutrophication impacts (Figures 9.2c
+and 9.3c) are often increased due to emissions, mainly of phosphate or nitrogen
+applied as fertilizer, during the agricultural production stage of the bioproduct. As
+far as acidification impacts (Figures 9.2d and 9.3d) are concerned, reported data on
+                                                                                                                                                                                                                             50
+                                                                                                                                                                                                                                                                                                                                                            250
+
+
+                                                 800                                                                                                                                                                         40
+                                                                                                                                                                                                                             30
+                                                 600                                                                                                                                                                         20
+                                                                                                                                                                                                                             10
+                                                 400
+                                                                                                                                                                                                                              0
+                                                                                                                                                                                                                            −10
+                                                 200
+                                                                                                                                                                                                                            −20
+
+
+
+
+              Primary energy (GJ/ha-year)
+                                                   0                                                                                                                                                                        −30
+                                                                                                                                                                                                                            −40
+
+
+
+
+                                                                                                                                                                                 Global warming potential (tCO2e/ha-year)
+                                                −200
+
+                                                                                                                                                                                                                            200
+                                                   0
+
+                                                −10
+                                                                                                                                                                                                                            150
+                                                −20
+
+                                                −30                                                                                                                                                                         100
+
+                                                −40
+                                                                                                                                                                                                                             50
+                                                −50
+
+
+
+
+                                                                                                                                                                                 Acidification (kgSO2e/ha-year)
+                                                −60                                                                                                                                                                           0
+
+
+
+
+              Eutrophication (kgPO4e/ha-year)
+                                                −70
+
+
+
+
+                                                                                                                                                                         Other
+                                                                                                                                                                                                                                                                                                                                                    Other
+
+
+
+
+                                                                                                                                                              Solvents
+                                                                                                                                                                                                                                                                                                                                         Solvents
+
+
+
+
+                                                       Agrimat.
+                                                                                                                                                                                                                                  Agrimat.
+
+
+
+
+                                                                                                                       Biodiesel
+                                                                                                                                                                                                                                                                                                  Biodiesel
+
+
+
+
+                                                                  Biopolym.
+                                                                                                                                                                                                                                             Biopolym.
+
+
+
+
+                                                                                                                                   Lubricants
+                                                                                                                                                                                                                                                                                                              Lubricants
+
+
+
+
+                                                                              Agr. Biom.
+                                                                                                                                                                                                                                                         Agr. Biom.
+
+
+
+
+                                                                                                          Bioethanol
+                                                                                                                                                                                                                                                                                     Bioethanol
+
+
+
+
+                                                                                                                                                Surfactants
+                                                                                                                                                                                                                                                                                                                           Surfactants
+
+
+
+
+                                                                                           Forest Biom.
+                                                                                                                                                                                                                                                                      Forest Biom.
+
+
+
+
+FIGURE 9.2 Advantages and limitations of comparison metrics between plant resource supply chains and their reference fossil resource counterparts.
+Environmental gain per hectare and year (metric A) due to the use of bio-based products compared with conventional products for (a) nonrenewable
+                                                                                                                                                                                                                                                                                                                                                            Environmental Life Cycle Assessment
+
+
+
+
+primary energy, (b) global warming, (c) eutrophication, (d) acidification impact changes.
+                                                         100
+                                                                                                                                                                                                                                  120
+                                                                                                                                                                                                                                  100
+                                                          80
+                                                                                                                                                                                                                                   80
+                                                          60                                                                                                                                                                       60
+                                                                                                                                                                                                                                   40
+                                                          40
+                                                                                                                                                                                                                                   20
+                                                                                                                                                                                                                                    0
+                                                          20
+                                                                                                                                                                                                                                  −20
+
+
+
+
+               Relative primary energy efficiency (%)
+                                                                                                                                                                                         Relative global warming efficiency (%)
+                                                           0                                                                                                                                                                      −40
+
+
+                                                                                                                                                                                                                                  100
+                                                           0
+                                                                                                                                                                                                                                   50
+                                                                                                                                                                                                                                                                                                                                                                  Metacomparison of Bio-Based Products
+
+
+
+
+                                                        −500
+                                                                                                                                                                                                                                    0
+                                                −1000
+                                                                                                                                                                                                                                  −50
+                                                −1500
+                                                                                                                                                                                                                          −100
+                                                −2000
+
+
+
+                                                                                                                                                                                         Relative acidification efficiency (%)
+
+
+
+
+               Relative eutrophication efficiency (%)
+                                                                                                                                                                                                                          −150
+
+
+
+
+                                                                                                                                                                                 Other
+                                                                                                                                                                                                                                                                                                                                                          Other
+
+
+
+
+                                                                                                                                                                      Solvents
+                                                                                                                                                                                                                                                                                                                                               Solvents
+
+
+
+
+                                                               Agrimat.
+                                                                                                                                                                                                                                        Agrimat.
+
+
+
+
+                                                                                                                               Biodiesel
+                                                                                                                                                                                                                                                                                                        Biodiesel
+
+
+
+
+                                                                          Biopolym.
+                                                                                                                                                                                                                                                   Biopolym.
+
+
+
+
+                                                                                      Agr. Biom.
+                                                                                                                                                                                                                                                               Agr. Biom.
+
+
+
+
+                                                                                                                                           Lubricants
+                                                                                                                                                                                                                                                                                                                    Lubricants
+
+
+
+
+                                                                                                                  Bioethanol
+                                                                                                                                                                                                                                                                                           Bioethanol
+
+
+
+
+                                                                                                                                                        Surfactants
+                                                                                                                                                                                                                                                                                                                                 Surfactants
+
+
+
+
+                                                                                                   Forest Biom.
+                                                                                                                                                                                                                                                                            Forest Biom.
+
+
+
+
+FIGURE 9.3 Relative gain (metric B) due to the bio-based product, relative to the substituted part of the conventional product (with a maximum value
+of 100%), based on common functional units, for (a) nonrenewable primary energy, (b) global warming, (c) eutrophication, (d) acidification impact
+                                                                                                                                                                                                                                                                                                                                                                  251
+
+
+
+
+changes.
+252                                            Environmental Life Cycle Assessment
+
+
+biomaterials, lubricants, and surfactants tend to show environmental benefits, while
+LCAs for biofuel and energy crops tend to report a higher acidification potential
+than petrochemical products. For correct interpretation, it is important to note that
+the availability and reliability of data on primary energy consumption and global
+warming are significantly greater than eutrophication and acidification, for which
+data are limited.
+   In terms of the gain in nonrenewable primary energy and in global warming
+potential per cultivated hectare, the following general tendency can be observed
+(Figure 9.2a and b): Reported gains may be high (> 300 GJ/ha-year, > 20 tCO2-eq/
+ha-year) for certain agrimaterials and highly variable—from negative to high for
+biopolymers. The two biomass categories (agriculture and forest) lead to moderate
+(100–300 GJ/ha-year, 10–20 tCO2-eq/ha-year) gains per cultivated hectare. These
+gains are more limited for biofuels and other uses of biomass (< 100 GJ/ha-year,
+< 10 tCO2-eq/ha-year), with a few individual exceptions. These gains are compa-
+rable with those obtained by Dornburg et al. (2004) for bio-based polymers and
+bioenergy.
+   For the relative gain in nonrenewable primary energy and in global warming
+potential, the following general tendency can be observed (Figure 9.3a and b): As
+was the case with the comparison per cultivated hectare, reported gains may be high
+for some agrimaterials yet highly variable—from limited to moderate for biopoly-
+mers. Agriculture and forest biomass are associated with high relative gains due to
+limited use of energy in their supply chain. These relative gains are moderate for the
+biofuels and other uses of biomass.
+   The reason for these differences and the limitation for these categories is further
+discussed in the following subsections for each specific group of bioproducts.
+
+9.3.1.2 Agrimaterials
+Transportation applications often show strong relative and absolute gains that are
+possible with agrimaterials, because plant-source products (e.g., pallets, car parts
+with natural vs. glass fibers) can be much lighter than their conventional fossil
+counterparts. When a bio-based replacement is used, the energy gain linked to less
+energy-intensive material can result in an energy gain of up to 200 GJ of primary
+nonrenewable energy per hectare of fiber crop. In addition, in transportation, the
+reduced weight of the agrimaterial allows for indirect gain and a corresponding
+reduction in vehicle fuel consumption during the use stage, with a gain of sev-
+eral hundred gigajoules per hectare of crop. This additional gain is only valid if
+the change in weight of the considered part is reflected in the final weight of the
+vehicle.
+   Across all applications, useful lifetime and end-of-life recovery options are
+important factors for the agrimaterials sector.
+   Although interesting results are seen in the agrimaterials supply chain, great
+potential exists for improvement. This is particularly true in the case of fiber materi-
+als, because this is a relatively young technology that has not yet been optimized.
+Uncertainty is relatively low for certain types of agrimaterials: The supply chain for
+wood products is fairly well understood in terms of LCA data needs, but fiber sub-
+supply chains have not been as extensively studied.
+Metacomparison of Bio-Based Products                                                253
+
+
+9.3.1.3 Biopolymers
+The gains achieved from biopolymers are highly variable, because this supply chain
+is highly variable and depends strongly on the application and the material that is
+being substituted. Life cycle inventory knowledge of the biopolymer supply chain
+is moderate (i.e., strong diversity of scenarios, with uncertainties). In addition, end-
+of-life recovery of biopolymers and the choice of products replaced are important
+parameters for the supply chain. Biopolymer biodegradability can be an asset or a
+liability, depending on the end-of-life option chosen for the product. Given the rapid
+development of the biopolymer supply chain, future environmental gains may be
+more significant thanks to mass production and improved production technologies.
+
+9.3.1.4 Agricultural and Forest Biomass
+The relative gains achieved from bioenergy derived from agricultural and forest
+biomass are strong (Figure 9.3: from 85% to close to 100%) because their supply
+chains offer strong relative gains associated with the low energy requirements for
+product manufacture. The absolute gain, normalized by cultivated area, is moderate.
+This gain per cultivated area is slightly higher in the case of bioenergy from agri-
+cultural biomass because of greater crop yield. However, combustion technology
+must be improved to lessen the impact of these two supply chains on human health.
+Although not included in the analysis, particulate emissions from the combustion of
+biofuels can have significant human health implications and need to be mitigated.
+
+9.3.1.5 Biofuels
+Similar positive gains achieved from bioethanol and biodiesel are observed for
+energy and greenhouse gases in Figures 9.2 and 9.3. However, the relative gain is
+moderate, and the absolute gain is weak. This trend is because, in the case of bio-
+fuels, the upstream supply chain is sometimes longer and more complex than in the
+case of fossil resources.
+   Reviewed studies show that the ether alcohol sector is fairly well understood in
+terms of the cereal (wheat, corn) and sugar (sugar cane and sugar beet) subsupply
+chains. However, the lignocellulose (wood, straw, grass, etc.) subsupply chains have
+been far less well studied. Of note is that environmental gains in the lignocellulose
+subsupply chains appear promising, since this chain can make use of coproducts that
+are not yet well utilized (e.g., forest waste, pulp and paper, agricultural and munici-
+pal coproducts). Therefore, improvement in the environmental performance of ether
+alcohols may be possible through pairing with other plant supply chains (agricultural
+biomass, etc.). Because data are contradictory, this gain remains to be validated.
+
+9.3.1.6 Other Uses
+Variable positive gains achieved from surfactants, lubricants, solvents, and other
+chemicals are observed. However, knowledge of the supply chain of those products is
+poor, so these positive gains should be interpreted with caution. Results show the fol-
+lowing trends: (1) the conditions of use, allocation of coproduct emissions, and quan-
+tities needed are important parameters for the lubricants supply chain; (2) the impact
+of fossil solvents can be reduced through the use of other solvents not derived from
+the plant resources supply chain (e.g., water-based paints instead of paints containing
+254                                             Environmental Life Cycle Assessment
+
+
+organic solvents); (3) for other chemicals, not enough information is available to
+permit identification of general trends or trends associated with individual subsupply
+chains. For the small sample of products studied, the environmental impact in the
+various impact categories seems to follow trends similar to those of the other plant-
+based supply chains. As far as the other impact categories are concerned, results are
+not sufficiently reliable or well documented to permit identification of trends.
+
+
+9.3.2 Key Parameters and Comparative Metrics
+One of the outcomes of this study is the characterization of key factors that contribute
+to the environmental benefits of different bio-based applications. The parameter most
+directly associated with bio-based products is biodegradability. However, biodegrad-
+ability is only an advantage when there is a need and opportunity for it. For instance,
+chainsaw lubricants are completely lost during use and directly emitted into nature,
+so biodegradability is an important benefit. Another example is waste bags that are
+composted together with their contents (Heyde 1998) or biodegradable films used in
+agriculture that can be left on fields after use and degrade into the soil. Such products
+save the time and resources normally needed to remove conventional films and avoid
+the need for the disposal of plastic waste. In most of the LCA studies analyzed, the
+selected end-of-life options are crucial to the outcomes. Other factors to consider
+when evaluating and comparing environmental impacts of bio-based products are the
+type and yield of the biomass, the allocation of environmental impacts to coproducts
+(e.g., straw), the definition of the FU, the amount of product necessary to fulfill the
+FU, the technology for the production, and the lifetime of the product.
+    As shown in the preceding sections, metrics to compare absolute change per hectare
+of cultivated land (metric A) and change relative to a substituted part (metric B) allow
+a comparison across studies and constitute an interesting basis for analyzing different
+supply chains. Table 9.2 summarizes these metrics and shows their relation, as well as
+inherent advantages and limitations, to comparisons possible for specific products or
+applications. The quality of the land and the substitutability of the land is also impor-
+tant and deserves further attention. Energy gains per hectare are especially interest-
+ing when the considered area cannot easily be used for food production (e.g., forest),
+avoiding competition between food and bio-based product or bioenergy.
+    When land is readily available, cost often becomes the main limiting factor. In
+that case, combining environmental and economic analyses is key, considering the
+energy substituted per dollar of additional cost. The combined application of envi-
+ronmental LCA and life cycle costing (as discussed in Section 6.8.1) may be used for
+such analyses.
+
+
+9.4 CONCLUSIONS
+9.4.1 Comparison of Bioproducts
+Results show that almost all of the bioproduct LCAs indicate significant positive
+benefits over conventional products with respect to energy savings and reduced
+global warming impacts, both per hectare of cultivated land and in terms of impact
+TABLE 9.2
+Advantages and Limitations of Comparison Metrics between Plant Resource Supply Chains and Their Reference Fossil
+Resource Counterparts
+Level of Comparison           Comparison Metrics                         Advantages                             Limitations                         Results
+Meta-analysis          Absolute impacts (fossil − plant) per   Allows a comparison for all plant    Adds further uncertainties (yield,      Absolute value
+                        hectare-year of cultivated biomass      and fossil supply chains.            quantity of plant material necessary
+                                                               Shows optimization of available       per functional unit, coproducts)
+                                                                agricultural areas
+                                                                                                                                                                       Metacomparison of Bio-Based Products
+
+
+
+
+Meta-analysis          Relative gain (fossil − plant)/fossil   Allows a comparison for all plant    Does not show absolute gain             Relative value (relative
+                        product substituted per functional      and fossil supply chains.                                                    to fossil-derived
+                        unit                                   Highlights products that use small                                            product replaced)
+                                                                amounts of nonrenewable energy
+                                                                for product manufacture
+Application-specific   Impacts (fossil − plant) per            Respects system operation            Cannot compare systems that have        Absolute value
+                        functional unit                                                              different functional units
+Material/energy        Impacts (plant) and impacts (fossil)    Allows for easier comparison         May distort the comparison (e.g., if
+                        per kilogram or per megajoule of                                             there are different quantities per
+                        useful energy                                                                functional unit)
+                                                                                                                                                                       255
+256                                              Environmental Life Cycle Assessment
+
+
+per FU. However, acidification and especially eutrophication often show increases in
+impact. Results point out those products with the highest environmental benefits per
+hectare of cultivated land: Natural fibers may exceed 300 GJ/ha-year, agricultural
+and forest biomass achieve between 100 and 200 GJ/ha-year, and biofuel production
+less than 100 GJ/ha-year. This comparison suggests that, given the limited areas
+available for biomass production, applications such as bioethanol are of secondary
+priority when land area is the limiting factor. For all bio-based products, the differ-
+ent stages of development and optimization of production processes must inform the
+interpretation of results.
+    Overall, the use of biomass for bio-based materials and as energy crops offers a
+higher potential for energy savings and greenhouse gas reduction than biofuels or prod-
+ucts based on vegetable oils (e.g., lubricants and surfactants). As agricultural and forest
+biomass require little processing when used for energy, their relative environmental
+efficiency is very high. Although a similar trend is observed when comparing the envi-
+ronmental impact per hectare of cultivated land, uncertainty increases somewhat due
+to additional parameters such as yield, biomass content, and data on the environmental
+impacts of the coproducts and their economic value. Despite these uncertainties, this
+land-based metric can be used to compare possible uses of limited arable land.
+    In addition, the comparison of plant and fossil resource supply chains illustrates
+several important lessons that are generalizable to all the supply chains studied.
+(1) No one plant resource supply chain stands out above all the others in all impact
+categories. (2) The replacement of fossil fuels by plant supply chains reduces impacts
+related to nonrenewable primary energy consumption and the global warming poten-
+tial, except in the case of bacterial polymers and certain applications that involve the
+use of other biopolymers. (3) With regard to the eutrophication impact category,
+plant resource supply chains are often higher in impact than their fossil counterparts,
+as they may require significant amounts of fertilizer. Plant resource supply chains
+based on the use of coproducts may have lower eutrophication impacts. (4) Most of
+the studies reviewed show that plant supply chains that produce chemicals have a
+weaker acidification impact than fossil fuel chains. Conversely, these same studies
+indicate that plant supply chains that produce energy have a greater acidification
+impact than the reference fossil fuel supply chains. (5) The lack of data or poor data
+reliability, and the variety in units used, prevent a meta-analysis of the supply chains
+in terms of the following impact categories: destruction of the ozone layer, photo-
+chemical pollution, terrestrial and aquatic toxicity, and human health.
+
+9.4.2 Plant Resource Supply Chains
+The following recommendations are intended to optimize the benefits from plant
+resource supply chains, based on environmental considerations alone. However, con-
+straints other than those of an environmental nature may create other priorities.
+
+   • Focus on supply chains where the potential energy and global warming
+     benefits are moderate to high (agrimaterials, biopolymers, agricultural bio-
+     mass for bioenergy, and forest biomass for bioenergy), while taking excep-
+     tions into account.
+Metacomparison of Bio-Based Products                                               257
+
+
+  • Emphasize supply chains in which the intrinsic characteristics of materials
+    or energy from plant resources are superior to those of their fossil counter-
+    parts (resistance, weight, useful life, biodegradability, quantities required to
+    perform the same function, etc.), and look for both:
+     • Direct advantages (low energy requirement for product manufacture,
+         less than or comparable with that of fossil resources, longer useful life
+         for materials, etc.).
+     • Indirect advantages (fuel economy resulting from vehicle weight reduction
+         giving the plant resource supply chain a greater than 100% advantage over
+         fossil supply chain).
+  • Promote synergies among supply chains (through the use of coproducts,
+    etc.).
+  • Support technological improvement in all supply chains. With the excep-
+    tion of surfactants, plant resource supply chains are much less developed
+    than their fossil counterparts, from both a technology and market share
+    perspective. The gains to be achieved here are manifold. For example,
+    advances in energy conversion technology will significantly impact supply
+    chains for agrimaterials (fibers), biopolymers, forest biomass for bioenergy,
+    and agricultural biomass for bioenergy.
+
+   Consistent integration of other factors that currently limit the development of
+plant resource supply chains, including market potential and economic viability, is
+also desirable.
+
+9.4.3 Improvement of LCA Knowledge
+The following gaps in LCA knowledge are to be addressed in priority order to better
+evaluate the environmental impacts of plant resource supply chains:
+
+  • Broadening LCA knowledge in growth areas (strong potential in limited
+    markets or moderate potential in larger markets or both) and improving the
+    quantification of environmental gains associated with the supply chains in
+    question: collect missing LCA data and update obsolete data. Integration
+    of logistic chains (long-distance transportation) receives little attention in
+    LCA studies and must also be a priority.
+  • Using LCA approaches in R&D to investigate and invest in the most prom-
+    ising plant supply chains.
+  • Extending LCA to other limiting factors; for example, to a link to an eco-
+    nomic study (or life cycle cost analysis) and to a study of the potential for
+    substitution on a market scale.
+
+9.4.4 Methodological Outlook
+Bio-based products and conventional, petrochemical products have associated
+environmental impacts. This study has not attempted to highlight a product or class
+of products as “preferable,” for any such conclusions would depend on the weighting
+258                                            Environmental Life Cycle Assessment
+
+
+of the different impact categories within a sustainability framework. Rather, this
+meta-analysis used two main cross-product and cross-supply chain metrics to indi-
+cate that bio-based products, in general, present benefits in terms of nonrenewable
+energy consumption and global warming impacts relative to conventional products.
+However, when agricultural production is involved, the eutrophication potential is
+usually higher for bio-based products than for petrochemical products. These con-
+clusions might not hold when non-bio-based materials are lighter or have better
+characteristics (e.g., for transport applications). Furthermore, technological advances
+may have large influences on the production—and hence impacts—of bio-based
+products, as many of these processes supply chains are still relatively young in com-
+parison with comparable petrochemical systems.
+    In terms of methodology development, such metastudies provide interesting
+insights to compare different uses of a given resource or different processing or
+treatment alternatives (e.g., waste treatment strategies). A thorough analysis of the
+background hypotheses of each individual study and a selection of the best avail-
+able studies is key for providing useful insights. Another crucial point is to define
+a common metric that puts studies on a comparable basis across different types of
+application, such as the change in impact per hectare of cultivated land between
+the biomass and fossil scenarios. The present metastudy has focused on data for
+the period 2000–2008. Since the number of LCAs of food and agriproducts have
+substantially increased in recent years, an update to this metastudy would be of
+high interest, whereas the general trends are expected to be robust. Metastudies do
+not lend themselves to updates or to following the evolution in the environmental
+performances of a given technology (here, additional data were collected for the
+biodiesel five years after the initial study). Variations of hypotheses and background
+data across different LCA studies make it difficult to identify gradual changes in
+emissions and impacts per FU, unless there are dramatic changes. For this purpose
+of trend analyses, scenario analysis within one consistent study is likely better suited
+to follow up incremental changes in the performance of a given technology.
+

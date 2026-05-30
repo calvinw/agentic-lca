@@ -1,0 +1,2777 @@
+      6        Interpretation
+
+This chapter discusses interpretation, the fourth phase of an LCA. The majority of
+interpretation is performed after goal definition, inventory, and impact assessment,
+but should also be applied throughout each phase in an iterative process. This chap-
+ter defines the interpretation principle and identifies its key points. Interpretation
+is illustrated here with an example that compares a desktop computer to a laptop
+computer. One section is devoted to quality control, followed by a section dedicated
+to the calculation of uncertainties, an important topic that is still being developed
+in LCA. This chapter also elaborates upon the social and economic perspectives of
+LCA to create a more complete assessment.
+
+6.1 INTERPRET! INTERPRET! INTERPRET!
+The purpose of the interpretation phase is to identify the life cycle stages at which
+intervention can substantially reduce the environmental impacts of the system or
+product, as well as analyze the uncertainties involved. This LCA phase thus enables
+the analyst to evaluate results, draw conclusions, explain the limitations of the study,
+and make recommendations, all based on the results of the preceding inventory and
+impact assessment phases. This phase should provide clear and usable information
+for decision-making.
+   To achieve these goals, the interpretation phase involves identification of critical
+points in the life cycle (e.g., where much of the impact occurs), as well as assessment
+of the quality and robustness of results using a series of checks (e.g., quality con-
+trol, sensitivity analysis, and uncertainty analysis). The results from previous phases
+must be combined with information on data quality, methodological choices (such as
+allocation rules, limits of the system, and models used), value choices (which could
+differ for the study and the analysis), and data from similar studies if they exist.
+   LCA results requiring months of work are often only rapidly and superficially
+interpreted. To avoid this misallocation of time, we recommend thorough interpreta-
+tion at all possible levels as follows:
+
+   • Interpretation must be conducted in a systematic way for each LCA phase,
+     including after the goal and scope definition, after the inventory of pollutant
+     emissions, after midpoint and damage characterization, and after the evalu-
+     ation of overall impact. Interpretation is particularly useful for discussing
+     and analyzing the results of the complete inventory before moving on to the
+     impact assessment.
+   • The contributions of each stage of the life cycle should be compared and
+     analyzed, including extraction and preparation of raw materials, and energy,
+     transportation, manufacturing, use, and disposal.
+
+
+                                                                                    149
+150                                            Environmental Life Cycle Assessment
+
+
+   • The contributions of each system component should be reviewed, such as
+     the CPU, monitor, keyboard, and computer peripherals when analyzing a
+     computer.
+   • Finally, the respective contributions of each pollutant and extracted sub-
+     stance should be analyzed, identifying which emissions and extractions
+     generate the most impact for each impact category.
+
+6.2 IDENTIFICATION OF ACTION PRIORITIES
+The goal of interpretation is to examine various ways of reducing environmental
+impacts and then identify priorities for taking action. The inventory and impact
+assessment results are used to identify key points of environmental impact, and
+improvements are then identified to reduce resource consumption, energy demand,
+or emissions (Heijungs et al. 1992).
+    A first step is to focus on the life cycle stages and groups of processes that gen-
+erate the greatest impact. However, the grouping of processes can be arbitrary and
+depends on how the system is modeled. For example, the product’s manufacturing
+stage may be divided into five substeps, whereas the use stage is often considered as
+a single step. In such a case, each individual manufacturing substep appears small,
+even if the stage as a whole is significant. One should be careful to include large sets
+of individual processes that each appear to have small impacts but lead to substantial
+impacts when summed.
+    In the process of interpretation, we can also focus on life cycle stages that have
+the highest potential to reduce impacts with limited investment. In some win-win
+cases, both impacts and costs can be reduced at the same time. In other cases, even
+a limited low-cost intervention can be extremely efficient in reducing impacts. For
+example, changing uninsulated doors to well-insulated doors does not drastically
+decrease impacts, but also may cost little enough to be a very efficient improvement
+per unit area.
+    The importance of interpretation is demonstrated by the common practice of
+companies to study and invest in changes related to their own business operations,
+even when most of the environmental impacts occur upstream or downstream from
+these operations. Some agribusiness industries put 80% of environmental efforts into
+production sites that represent only 20% of the impacts, without analyzing the other
+80% of impacts that occur upstream or downstream of the production site. A com-
+prehensive interpretation over the entire life cycle of the product enables companies
+to improve their own operations as well as their upstream and downstream impacts.
+    Interpretation also allows optimization of investment over the life cycle, based on
+a cost–benefit analysis (Section 6.8.3).
+
+6.3 INTERPRETATION EXAMPLE: DESKTOP
+     VERSUS LAPTOP COMPUTER
+To demonstrate how to apply interpretation throughout the LCA process, we discuss
+the comparison of a desktop and a laptop computer. This example, used for instruc-
+tional purposes, is based on the studies of Tekawa (1998) and Atlantic Consulting
+Interpretation                                                                          151
+
+
+(1998), and the data should not be used as a basis for new projects. These data are
+then compared with the more recent, extensive, and reliable computer data from the
+ecoinvent database.
+
+6.3.1 Goal and Scope Definition
+The comparison presented here is one meant to inform the development of a sustain-
+able, ecofriendly computer, by performing a life cycle assessment of two different
+types of PCs. The two studied scenarios are a desktop computer with a cathode ray
+tube screen and a laptop with a liquid crystal display screen, where each is used for
+10,000 hours (Table 6.1). It should be noted that the secondary functions of these
+two computers are significantly different, with different key characteristics for each
+computer in term of flexibility of use and adaptation ability. However, since a laptop
+is often primarily used at a fixed location, it is considered in this study as a replace-
+ment of a desktop computer.
+    The considered function is the processing of information, and the functional
+unit(FU) is a PC operating for 10,000 hours (Table 6.1).
+
+6.3.1.1 Definition of System Boundaries
+The system boundaries are defined to account for all processes that induce more than
+2% of the total resource consumption (Figure 6.1). The infrastructure of the building
+used to manufacture the computer is thus not taken into account. The disposal of the
+laptop battery was not included in the initial study due to lack of data availability.
+
+6.3.2 Inventory
+The emissions inventory (Table 6.2) shows that the desktop computer has consis-
+tently higher emissions and energy use than the laptop (by at least a factor of two).
+The mass of CO2 emitted over the life cycle of the desktop computer is more than
+
+TABLE 6.1
+Functional Unit and Reference Flows for Computer Comparison
+                                                                                 Key
+Product or       Function/     Functional   Duration        Reference       Environmental
+System            Service        Unit       of Service        Flows          Parameters
+Scenario 1:   Information      1 PC with    2,000 h/     1 desktop with     Useful lifetime
+ desktop PC    processing:      speed of     year over    cathode ray        (until it
+              word              200 MHz;     5 years      tube screen        becomes
+               processing,     medium                    160 W               obsolete)
+               calculations,    usage                     electricity use   Electricity
+Scenario 2:    drawing, etc.                             1 laptop with       consumption
+ laptop PC                                                liquid crystal     rate
+                                                          display screen
+                                                         33 W electricity
+                                                          use
+152                                                   Environmental Life Cycle Assessment
+
+
+                                       Resources
+
+
+                                   Raw material and
+                                 energy ores extraction
+                                                                                Air, water,
+                                                                                and soil
+                                                                                emissions
+        Infrastructure:
+          Buildings,                 Manufacturing              Recycling
+        administration,
+              etc.
+                                          Use                                   10,000
+                                                                                hours of PC
+                                                                                operation
+                                    Waste treatment
+                                                          System boundary
+
+
+FIGURE 6.1 System boundary for personal computer comparison.
+
+
+
+         TABLE 6.2
+         Partial Emissions Inventory
+                                                 Desktop (26 kg)        Laptop (3 kg)
+
+         Resource Use
+         Nonrenewable primary energy (MJ)             23,000                  8,500
+
+         Emissions to Air (kg)
+         CO2                                            860                    322
+         CH4                                             1.9                   0.7
+         HC                                              1.5                   0.6
+         NOx                                             2.0                   0.7
+         SO2                                             5.0                   2.1
+         Pb                                           0.00011               0.000039
+
+         Emissions to Water (kg)
+         Pb                                           0.00018               7.0 × 10–6
+
+
+
+30 times the mass of the computer itself. The energy consumption of the laptop, and
+thus the many emissions associated with energy consumption, is considerably lower.
+Because a secondary function of the laptop is to work when not plugged in, its vari-
+ous components are optimized to decrease energy use. In interpreting this inventory,
+however, it is essential to recall that the system boundary does not include the laptop
+battery, and thus may neglect key elements such as heavy metal emissions that can
+greatly affect the overall environmental impact.
+   As would be expected from the energy-saving design of the laptop, less than
+half of its nonrenewable primary energy consumption is due to use, compared with
+use being responsible for three-quarters of the energy consumption in the desktop
+Interpretation                                                                                          153
+
+
+(Figure 6.2). The laptop production, however, requires almost as much energy as the
+desktop production. In both scenarios, the distribution and waste treatment stages
+consume less than 2% of the total energy.
+   To further compare the energy consumption in the two scenarios, the manufactur-
+ing stage can be divided into the different computer parts, each of which involves
+material production, parts production, and assembly. Figure 6.3 compares these
+manufacturing stages for computer monitors and printed circuit boards. The energy
+for materials production is significant only for the desktop monitor, so this is the
+only component that has the potential to save energy by being recycled. For other
+
+                                 Desktop PC
+                Distribution                    Waste
+                                              treatment                     Laptop PC
+                                                                                              Waste
+                                                             Distribution
+                                                                                            treatment
+
+              Manufacturing
+
+                                                                                      Use
+                                           Use                   Manufacturing
+
+
+
+
+FIGURE 6.2 Primary nonrenewable energy consumption at each stage in the PC life cycle,
+scaled to indicate absolute consumption in each scenario.
+
+                                        Assembly      Parts production      Material production
+
+                          3000                                   3000
+
+
+                          2500                                   2500
+
+
+                          2000                                   2000
+        Energy use (MJ)
+
+
+
+
+                          1500                                   1500
+
+
+                          1000                                   1000
+
+
+                           500                                    500
+
+
+                             0                                       0
+                          Desktop cathode-ray tube Laptop                   Desktop         Laptop
+                                            Screen                              Circuit board
+
+
+FIGURE 6.3 Primary nonrenewable energy consumption for production of monitors and
+circuit boards.
+154                                            Environmental Life Cycle Assessment
+
+
+components, any recycling benefits would be primarily to prevent the dispersal of
+toxins into the environment (such as heavy metals).
+   Both computers also use a large amount of energy for production of electronic
+components and assembly of circuit boards. The importance of the circuit board
+assembly stage is likely due to its manufacture and assembly in clean rooms, which
+require substantial infrastructure and high consumption of energy for air condition-
+ing and ventilation.
+
+6.3.3 Impact Assessment
+The desktop computer clearly dominates all the considered impact categories
+(Figure 6.4), with the contribution of the monitor representing more than half of the
+impact in every considered category. Although the laptop impact is less than 40% of
+the desktop impact in all categories, note that the emissions and impacts associated
+with the laptop battery have not been taken into account and could substantially
+increase impacts on human health or ecosystems. Furthermore, the service life of
+both the desktop and laptop has been set at 5 years when defining each scenario, yet
+a desktop computer generally has a longer service lifetime than a laptop due to its
+sturdiness and immobility. To further interpret the implications of these assump-
+tions, a sensitivity analysis (Section 6.6.2) on the lifetime of computers could be
+undertaken.
+    The interpretation of the impact assessment phase must also note other contribu-
+tions that have not been accounted for in this study, such as air transportation. An
+estimated 5% of the impact of a computer is due to the transportation by air during
+its manufacture (Kaenzig 2003). The impact of air transportation due to a laptop as a
+passenger carry-on is also not included here, but would further increase this impact.
+For long-distance transportation by air, every extra kilogram causes additional con-
+sumption of 0.004 L of jet fuel per 100 km. If the laptop were transported 40,000 km
+
+
+
+                                                Ecran
+               Energy
+
+                                                                      Desktop
+          Greenhouse                            Ecran
+               effect
+
+
+           Damage to                               Ecran
+         human health                                                 Laptop
+
+            Damage to                           Ecran
+            ecosystem
+
+                        0%   20%     40%     60%        80%   100%
+
+
+FIGURE 6.4 Impact assessment based on the critical surface-time method. Results are nor-
+malized to the desktop PC scenario.
+Interpretation                                                                                                                                                  155
+
+
+per year by plane, the 200,000 km of transportation over the life of the laptop would
+induce an additional 954 MJ of energy consumption, or 20% of nonrenewable pri-
+mary energy.
+
+6.3.4 Assessment Based on Updated Data and Method
+This study has been updated using the ecoinvent v.2 inventory data for computer
+and computer equipment. The laptop battery manufacturing and disposal is included
+in this update. Figure 6.5 shows relative impacts comparable to those in Figure 6.4,
+where the laptop does not exceed 40% of the impact of the desktop in most impact
+categories, except for ozone layer depletion.
+   Although the relative impacts of the updated analysis are similar to those of the
+old analysis, the absolute values for primary energy and greenhouse gas emissions
+differ, demonstrating the importance of using recent data. The new ecoinvent based
+study estimates 7300 MJ/FU of nonrenewable primary energy and emissions of
+370 kgCO2-eq/FU, compared with 23,000 MJ/FU and 860 kgCO2-eq/FU in the old study.
+   Using the updated ecoinvent data, the impact categories with the highest nor-
+malized damages are greenhouse effects, nonrenewable primary energy, respiratory
+effects, and inorganic carcinogenic effects (Figure 6.6). In all these categories, the
+laptop clearly has lower impacts.
+   For both types of PC, the impact assessment identifies the contributions of each
+pollutant to each impact category, such as the human health category (Figure 6.7).
+Human health impacts are dominated by primary particulates (PM2.5) and secondary
+particulates (sulfur dioxides transformed into sulfates and nitrogen oxides converted
+to nitrates). These are common dominant sources of human health impacts.
+
+
+ 120%
+ 100%
+  80%
+  60%
+  40%
+  20%
+    0%
+                 c          c              s          n            n            s          ty          ty    n     n     n           n        g         y        n
+              ni        eni          nic           tio        et
+                                                                io        nic           ci          ci   tio    tio  tio         tio       in        rg       tio
+          og
+             e
+                     og           ga           di
+                                                  a
+                                                           pl          ga             xi          xi        ic
+                                                                                                               a
+                                                                                                    pa ifica hica arm                             ne        ac
+       in        in             or
+                                 a                       de          or             to          to
+                                                                                                c u      ph
+                                                                                                                                                e         tr
+    rc        rc     in       g r er          r y c ec
+                                                             o             co        o        oc            id           p         l w able l ex
+  Ca nca tory izin lay                     to          i                l e utr             d            ac           tro ba                        a
+                                          a          t            r i a            e      n          i c          e u        l o         ew       er
+      N
+         o
+                i ra  I on      n e
+                                      spir
+                                                 q ua        e st           i t y/     La       u at         t ic          G         r en Min
+             sp              zo     Re        A           rr             id                  Aq qua                              on
+           Re              O                           Te l ac                                      A                          N
+                                                               i a
+                                                            tr
+                                                         es
+                                                     e rr
+                                                   T
+                                                                                    Desktop                    Laptop
+
+
+FIGURE 6.5 Comparison of relative midpoint impacts of a desktop and laptop PC, based
+on the IMPACT 2002+ impact assessment method.
+156                                                   Environmental Life Cycle Assessment
+
+
+  0.05
+  0.04
+  0.03
+  0.02
+  0.01
+      0
+                                       in ic
+
+
+
+
+                                                  ng
+                                     id ion
+                                                    n
+
+
+
+
+                                                    n
+                                     co ics
+
+
+
+
+                                                    n
+                      ne g ra cs
+
+
+
+                                                    n
+
+
+
+
+                                     l w on
+                                     co ity
+
+                                                   ty
+
+
+                         at ccu n
+                                                   ic
+
+
+
+
+                                                  gy
+                  Re yer atio
+
+
+
+
+                                               tio
+                                               tio
+                                                 io
+
+
+
+
+                                               tio
+                                               en
+
+                                               en
+
+
+
+
+                                                ci
+                                               ni
+
+
+
+
+                               wa rmi
+
+                                               er
+                                                c
+
+
+
+
+                                 ba ati
+                                                n
+
+
+
+
+                                               t
+                                             et
+
+
+
+                                             xi
+
+                                             xi
+                                              a
+                                              a
+
+
+
+
+                                           pa
+
+
+
+
+                                            ac
+                                            ca
+                          on inog
+
+
+
+
+                            nd ica
+                                           og
+
+
+
+
+                                          en
+                                          rg
+                                          rg
+
+                                            i
+
+                                          pl
+
+
+
+
+                                           c
+                                           o
+
+                                          o
+                                          d
+
+
+
+
+                                          a
+
+
+
+                                        tr
+                                        ifi
+
+                                        hi
+                                         t
+
+                                         t
+
+                                        h
+                                      de
+
+                      qu y o
+                                        o
+
+
+
+
+                                      le
+
+                                     ex
+                                    op
+                                      p
+                                      n
+                                    rc
+
+                                    rc
+
+
+
+
+                                    b
+                                  ro
+                                    i
+
+
+
+
+                                 ce
+
+
+
+
+                                   o
+                                 le
+                                   r
+
+
+
+
+                                 ac
+                               Ca
+
+                                ca
+
+
+
+
+                                 tr
+
+
+
+
+                                 al
+                                 n
+                                ry
+
+
+
+
+                               to
+
+
+
+
+                              ut
+                              zi
+
+
+
+
+                           ria
+
+
+
+
+                               o
+                           eu
+
+
+
+
+                            er
+                               i
+
+
+
+
+                            ic
+                           to
+
+
+
+
+                          ira
+                           la
+
+
+
+
+                          ne
+                           at
+
+
+
+
+                             l
+                          ni
+
+
+
+
+                          /e
+
+
+
+
+                          G
+                         La
+
+
+
+
+                         in
+                         st
+                      ira
+
+
+
+
+                        ic
+                       N
+
+
+
+
+                       re
+                      sp
+
+
+
+
+                       ty
+                      Io
+
+
+
+
+                     M
+                    qu
+                     re
+
+
+
+
+                    at
+
+
+
+                  on
+                    di
+                   sp
+
+
+
+
+                    A
+                  zo
+
+
+
+
+                  er
+
+
+
+
+                 qu
+                  A
+                 ci
+               Re
+
+
+
+
+                O
+
+
+
+
+                N
+                T
+
+              la
+
+
+
+
+               A
+            ia
+         tr
+      es
+   rr
+Te
+
+
+
+
+                                            Desktop     Laptop
+
+
+FIGURE 6.6 Normalized endpoint impact scores for the desktop and laptop PC scenarios,
+based on the IMPACT 2002+ impact assessment method.
+
+                        3.0E–04
+
+                                                         Others
+                        2.5E–04
+                                                         Airborne radon-222
+      Human health (DALY)
+
+
+
+
+                        2.0E–04                          Airborne dioxins
+                                                         Airborne aromatic hydrocarbons
+                        1.5E–04                          Airborne arsenic
+                                                         Arsenic, ion in water
+                        1.0E–04
+                                                         Airborne nitrogen oxides
+                                                         Airborne sulfur dioxides
+                        5.0E–05
+                                                         Particulates, < 2.5 µm airborne
+                        0.0E+00
+                                  Desktop   Laptop
+
+
+FIGURE 6.7 Contribution of different pollutants to the human health damage, using the
+IMPACT 2002+ impact assessment method.
+
+
+6.4 QUALITY CONTROL
+Because of the intensive use of data in a life cycle assessment, the interpretation
+phase includes double-checking and verification at critical points, looking at impor-
+tant data sets and key assumptions. This section presents a series of procedures
+to ensure the validity of LCA results. Some checks are done at specific life cycle
+assessment phases, and some are performed throughout the study. The main point
+of quality control is to verify the consistency of results and look into anything that
+is unexpected. In the case of the slightest unexpected or surprising result, never let
+it go—either a mistake has been made (which is usually the case) or you have the
+Interpretation                                                                       157
+
+
+opportunity to learn something interesting and new. The analyst has no option but to
+understand and explain the discrepancy.
+
+6.4.1 Controls at Every Phase of LCA
+6.4.1.1 Goal and Scope Definition: System Modeling
+A properly conducted study requires a transparent and understandable representa-
+tion of the system. For this, a systematic flow chart depicts each scenario and system-
+atically numbered modules (see Figure 8.1) to avoid forgetting processes.
+
+6.4.1.2 Inventory Analysis: Unit Control
+Errors too often come from careless mistakes, especially when different units are
+involved in large data sets. To minimize errors, the analyst must systematically
+check units for each calculation, always carefully accounting for the factor of 1000
+when converting between such units as grams, kilograms, tons, megajoules, and
+gigajoules. Moreover, it is not always legitimate to add two quantities that have the
+same units. For example, although the normalized scores for human health and eco-
+systems are both expressed in person-years per FU, they cannot be summed directly
+without implicitly or explicitly assuming weighting factors for the total normalized
+impacts of these two categories.
+
+6.4.1.3 Inventory Analysis: Mass Balance
+One way to verify inventory results is to check the mass balances of certain elements.
+The carbon balance is most commonly calculated (see the example in Section 8.2.4)
+but balances of nitrogen, phosphorus, and heavy metals can also be checked.
+
+6.4.1.4 Inventory Analysis: Energy and CO2 Balances “by Hand”
+Several key steps are needed to establish consistent energy and CO2 balances for each
+unit process and across the entire system. First, for each major foreground unit process,
+we check the assumptions, intermediary flows, energy use per reference unit, CO2
+emissions per reference unit, and finally the contribution of each intermediary flow to
+the energy and CO2 emissions per FU (Tables 4.2 and 4.3). Particular attention should
+be paid to the electricity mix chosen. Indeed, electricity mixes have very different
+energy efficiencies and CO2 emission factors depending on their region or country of
+origin (Section 4.2.2). Because this choice can greatly influence the LCA results, it is
+important to clarify the assumptions under which calculations have been made.
+   When calculating the CO2 balance, do not forget to account for the use stage and
+the end of life, since a large part of CO2 emissions occur during the use stage through
+combustion and during the waste disposal stage through combustion or eventual
+decomposition. This aspect is often overlooked when using an ecoinvent data set in
+which combustion is not included and can thus result in substantially underestimat-
+ing CO2 emissions.
+   LCA software programs (e.g., SimaPro) are extremely useful in performing the
+large sets of calculations necessary for a full LCA, but can also lead to errors when
+not properly handled. It is thus advisable to check that this software provides the
+same results as those obtained “by hand” or spreadsheet calculations for a few key
+158                                            Environmental Life Cycle Assessment
+
+
+substances or flows. If differences concerning energy, CO2, or NOx exist, they must
+be understood and explained.
+
+6.4.1.5 Inventory Analysis: Comparing CO2 and Energy
+One way to check the consistency of the inventory results is to compare energy con-
+sumption and CO2 emissions for each submodule and for the entire FU.
+   First, the ranking of scenarios based on CO2 emissions should in most applica-
+tions be equivalent to the ranking based on nonrenewable primary energy consump-
+tion. If they are different, either an error has been made or something new can be
+learned from this difference.
+   The ratio of CO2 emissions to nonrenewable primary energy usage (gCO2/MJ) is
+calculated for each life cycle stage. The calculated ratios are then checked against
+the values of the stage’s dominant processes and materials, using the typical values
+in Figure 4.2 to check orders of magnitude. This step helps the analyst check whether
+the results are totally absurd, or whether certain major stages in the life cycle were
+not taken into account.
+   One example of the importance of such a step is when petrochemical materials
+and fuels are considered. Figure 4.2 shows that when the whole life cycle is accounted
+for, including precombustion, usage, combustion, and waste treatment, petrochemi-
+cal materials and fuels have ratios around 60 gCO2/MJ. Thus, an emissions-to-
+energy ratio of 6–10 gCO2/MJ for diesel or fossil fuels means that the inventory has
+only accounted for the fuel emissions before combustion. A value of 30 gCO2/MJ
+for a plastic means that emissions during the elimination stage were neglected. It is,
+therefore, important to check this ratio to avoid omissions of life cycle stages and
+other calculation errors.
+
+6.4.1.6 Inventory Analysis: Comparison of Inventory
+          Results with Other Studies
+Similar studies should obviously be taken into account when available. If the inven-
+tory results differ from the results of previous studies, these differences and their
+causes must be highlighted and explained, such as in a comparative table. The ori-
+gins of these differences must be identified, such as underlying assumptions and
+FUs, system boundaries, reference flows, coefficients of energy consumption, and
+CO2 emissions per flow unit.
+
+6.4.1.7 Impact Assessment: Toxicity Check
+Because the calculation of human toxicity and ecotoxicity is still under development
+and can vary between impact assessment methods, the impact analysis should be per-
+formed using several different impact assessment methods, with careful consideration
+for the contribution of each pollutant. The results obtained by different methods often
+give different orders of magnitude, and these differences must be explained. It is also
+crucial to test the robustness of results using a sensitivity analysis (Section 6.5.1).
+
+6.4.1.8 Impact Assessment: Rules for Proper Use of LCA Software
+When using LCA software, keep checking that all expected emissions and extrac-
+tions are considered in the given impact assessment method. Sometimes an emission
+Interpretation                                                                     159
+
+
+is not properly included simply because its name is not strictly identical between
+the inventory results and the impact assessment method (e.g., “nonmethane volatile
+organic compounds” vs. “nonmethane hydrocarbons,” or “PM” vs. “particles” vs.
+“particulate matter”). Since a given chemical can have hundreds of different names,
+checks should be based on the chemical’s Chemical Abstracts Service (CAS) number
+when possible.
+
+6.4.1.9 Project Management: Recommended Use of Spreadsheets
+Because of the large amounts of data considered, some rules must be followed when
+using spreadsheets to minimize errors and increase transparency. First, no cell con-
+taining a formula should contain a number. All data required for calculation should
+be entered in separate cells, including unit conversion factors and constants. For
+example, 1000 g/kg should be in a separate cell and documented as a unit conversion
+factor rather than entering “1000” as part of a formula. If a given constant is later
+updated (i.e., a new toxicity study updates the effect factor of particulates on human
+health), this update will then automatically be reflected in all the formulas in which
+this constant is used. Second, the units should be clearly indicated for each variable
+and the units of the final results should be checked. Finally, each calculation must
+be documented, including the assumptions made, explanation of the variables, and
+origins of values.
+
+6.4.1.10 Project Management: Rules for Project Documentation
+Many LCA projects and data end up as unusable by anyone other than the creator,
+because the associated computer files are too poorly annotated. To enable further use
+of these projects, some precautions should be taken.
+   First, the main results of the report should include enough information for a reader
+to trace these back to their original spreadsheet(s). This may be a table or separate
+document listing the files that contain the data for each figure of the report.
+   Each of these files should be clearly documented, including a descriptive name,
+the creator, and the date of the last major change.
+   Similarly, to allow use of the individual processes in future studies, each process
+should be given an understandable name, with the author and source of information
+specified. Processes should also be entered in such a way that they can be verified by
+matching the data format of the original data source.
+   In summary, the data obtained during the study must be sufficiently and clearly
+annotated, and the assumptions must be well defined and expressed in a transparent
+manner for a later use by someone outside the project.
+
+6.4.2 Critical or Peer Review to Check for a
+       Comprehensive and Consistent Study
+Once these more practical controls are complete for each life cycle assessment
+phase, you should check that the assumptions, methods, and data are consistent
+with the objectives of the study and that the results are comprehensive enough to
+support a conclusion based on the objectives listed in the goal and scope defini-
+tion phase.
+160                                            Environmental Life Cycle Assessment
+
+
+    Called a “critical review,” this ensures that the methods used to perform the life
+cycle assessment are consistent with ISO 14040, that they are valid from a technical
+and scientific point of view, and that the data used are appropriate and reasonable
+regarding the objective of the study. It ensures that the interpretations reflect the
+identified limitations and goals of the study and that the study report is transparent
+and consistent. A critical review can be carried out internally or externally, but is
+always performed by an expert independent of the study. ISO 14040 (pp. 9–11) pro-
+vides more details on the procedure, and the SETAC code of practice (SETAC 1993)
+provides key elements of the issues to be discussed in a critical review.
+    The critical review task should be budgeted for as approximately 5%–10% of the
+total LCA cost. It is preferable to involve the reviewers as soon as possible to be able
+to take their comments into account before the end of the project. In addition to the
+ISO and SETAC guidelines listed above, Klöpffer (2005) helps detail the mandate
+and the modalities of such a review.
+
+
+6.5 OVERVIEW OF UNCERTAINTY,
+     VARIABILITY, AND DATA QUALITY
+6.5.1 General Principles and Types of Uncertainty
+How much confidence can we have in the results of an LCA study? In the case of a
+comparative study, how do we know when the difference between two scenarios is
+significant? To answer these questions, it is, firstly, important to know where these
+uncertainties come from, what types of uncertainty they are, and how to take them
+into account.
+   Because of the many judgments made within an LCA, analysis of uncertainty and
+sensitivity concerning various parameters is critical to understanding the robustness
+of results. We describe here the types of uncertainty (Huijbregts 1998), how uncer-
+tainty of input data can be characterized, and then how to assess uncertainty propaga-
+tion through the system (Section 6.6). These assessment methods are then illustrated
+through the instructional example of the front-end panel of a car (Section 6.6.5).
+
+6.5.1.1 Uncertainties in the Four LCA Phases
+When conducting an LCA, uncertainties arise based on the choices made during the
+goal and scope definition, the inventory data of the inventory phase, and the char-
+acterization factors and pollutant transport models of the impact assessment phase.
+Table 6.3 and the subsequent sections briefly describe the various types of uncer-
+tainty that occur in these LCA phases.
+
+6.5.1.2 Parameter Uncertainty
+Parameter uncertainty is expressed as a distribution of the possible values of a
+parameter: the probability distribution function (Hogg and Tanis 1993). Examples
+of such probability distributions are the normal, lognormal, or uniform distributions
+(Figure 6.8).
+   In the case of a lognormally distributed variable, the probability distribution func-
+tion can be characterized by a geometric mean µ and the squared geometric standard
+TABLE 6.3
+Types of Uncertainty Occurring at Each Phase of the Life Cycle Assessment
+                                                                                                                                                       Interpretation
+
+
+
+
+                                                                                 Type of Uncertainty
+                                                                                                                                    Technological/
+                                Parameter and                                                       Spatial          Temporal         Population
+                                  Input Data            Model                  Choice              Variability       Variability      Variability
+LCA      Goal and scope                                                FU, system boundaries
+ Phase   Inventory             Inaccurate or no    Linear instead of   Allocation methods,      Variations in       Temporal        Differences in
+                                input flows and     nonlinear           technology level         intermediary        evolution of    technology
+                                emission factors    modeling                                     flow provenance     emission        among factories
+                                                                                                                     factors
+         Choice of impact                          Undefined           Leaving out known        Spatial level of
+          categories and                            impact              impact categories,       detail in method
+          classification                            categories,         choice of                and factors
+                                                    unknown             characterization
+                                                    contributions       method(s)
+         Midpoint and damage   Uncertainty on      Regional            Time horizon             Regional            Variation due   Differences in
+          characterization      environmental       differences in      considered (e.g., 100    differences in      to seasonal     human exposure
+                                model               emissions           vs. 500 years)           environmental       change in       patterns
+                                parameters          factors                                      sensitivity         temperature
+         Normalization and     Inaccurate          Weighting           Choice of weighting      Change in                           Variations in
+          weighting             normalization       criteria are not    method                   normalization                       social
+                                data                operational                                  data                                preferences
+                                                                                                                                                       161
+162                                                                  Environmental Life Cycle Assessment
+
+
+      Probability distribution function    1
+
+
+
+
+                                          0.5
+
+
+
+
+                                           0
+                                                                     x
+                                                      Normal         Lognormal          Uniform
+
+
+FIGURE 6.8 Schematic representation of normal, lognormal, or uniform distributions,
+which can be used to characterize parameter uncertainties.
+
+
+deviation GSD2. The GSD2 of a lognormal distribution defines the 2.5th and 97.5th
+percentiles, which bound the 95% confidence interval around the geometric mean μ
+(Equation 6.1):
+
+                                                     ⎛ µ                     ⎞
+                                                Prob ⎜       < x < µ × GSD 2 ⎟ = 0.95               (6.1)
+                                                     ⎝ GSD 2                 ⎠
+
+A GSD2 of 2 means that the parameter has a 95% probability of falling between 0.5
+and 2 times the value of the geometric mean µ.
+   In the specific context of LCA, the lognormal distribution is often applied by
+default because the parameter values sometimes vary over several orders of mag-
+nitude. In this case, the lognormal distribution has the advantage of automatically
+excluding several impossible scenarios, such as negative emissions or negative uses
+of processes, which are meaningless in most cases and could lead to erroneous
+uncertainty estimates.
+
+6.5.1.2.1 Model Uncertainty
+To encompass the entire system, some of the system characteristics must be sim-
+plified in the modeled system. For example, impact assessment models often
+assume linearity of environmental processes, without considering possible non-
+linear effects. Moreover, certain parameters are calculated based on correlations
+with associated uncertainties. Bioconcentration factors in foods, for example,
+are used to estimate the concentrations of substances in the food chain, and they
+are often calculated based on correlations with the substance’s octanol-water
+partition coefficient (Kow). The best strategy to reduce this type of uncertainty
+is to take the time to search for and obtain measured rather than extrapolated
+parameters, focusing on the most influential parameters identified during the
+screening phase.
+Interpretation                                                                     163
+
+
+6.5.1.2.2 Uncertainty Due to Choices and Assumptions
+Despite the LCA rules and guidelines, analysts still need to make certain choices
+or assumptions, such as selection of the FU, the system boundaries, or the alloca-
+tion procedure; these can each greatly impact the final result and thus introduce
+uncertainty.
+
+6.5.1.2.3 Data Variability
+In addition to the intrinsic uncertainties discussed above, technological and envi-
+ronmental processes may vary in space and time. When using lower levels of spatial
+or temporal resolution, or if the location, temporal dynamics, or exact technology is
+not specified, then this variability can lead to additional uncertainty on the results.
+
+   • Spatial variability: Inventories and impacts associated with system pro-
+     cesses can vary greatly with where these processes occur, yet most LCAs
+     only account for spatial variability in a limited way. This is partly because
+     the spatial distribution of emissions associated with an FU is often unavail-
+     able. Every FU involves global supply chains, which make a spatial analy-
+     sis of associated impacts highly complex. Therefore, calculations for the
+     impact assessment often use generic factors (at a continental level), but new
+     impact assessment methods such as IMPACT World+ provide the option
+     of having factors spatially differentiated by country or by emission type.
+     These more specific factors can only be used if the type or location of
+     inventory data is specified.
+   • Temporal variability: Technologies, their performance, and their impacts
+     change over time. Due to the large data sets considered in an LCA, it is
+     often difficult to properly account for the change in impacts based on when
+     the technology was developed.
+   • Technological variability: Differences between similar processes (due, for
+     example, to the use of different technologies among factories producing the
+     same product) may be another source of variability in the life cycle.
+
+   In addition to these uncertainty types, errors can occur at any phase of the life
+cycle and need to be identified by systematic verification and checking of results (see
+Section 6.4).
+
+
+6.5.2 Data Quality and Uncertainty Distribution for Input Data
+6.5.2.1 Probability Distribution of an Individual Variable
+Figure 6.8 illustrates three types of probability distributions used in the quantifica-
+tion of uncertainty on the parameters of a life cycle assessment. In LCA, uncertain-
+ties are often important and represented by lognormal distributions, thus avoiding
+the possibility of negative emissions. It is rare, however, to actually have sufficient
+measurements (over 30) to parameterize a lognormal (or Gaussian) distribution. In
+such a case, uncertainties are estimated based on qualitative indicators that are then
+transformed into semiquantitative distributions.
+164                                               Environmental Life Cycle Assessment
+
+
+6.5.2.2 Quality Indicators
+Several quality indicators have been developed (Weidema and Wesnaes 1996;
+Weidema 1998), including the following:
+
+  • The reliability of data is based on the measurement method used and the
+    verification procedures.
+  • The completeness depends on the representativeness of the available data
+    and the number of companies considered over a given time period.
+  • The temporal, geographical, and technological correlations indicate
+    whether the place, time, and technology of the collected data correspond
+    well to the process studied.
+
+    Each inventory data point is given a qualitative score between 1 (best) and 5
+(worst) for each of these indicators. Table 6.4 presents the criteria for assigning
+scores.
+    To transform these qualitative indicator scores into a quantitative score, an
+uncertainty factor can be assigned to each of the pedigree matrix scores using
+Table 6.5.
+    A supplementary factor characterizes the base uncertainty (UB), which is spe-
+cific to certain demands of energy and resources and certain pollutant emissions
+(Table 6.6). This factor is low for CO2 emissions because they are mainly due to
+well-understood combustion processes, but it is relatively high for substances such
+as heavy metals whose emissions vary with multiple parameters.
+    The square of the geometric standard deviation (95% confidence interval) of the
+considered value is then calculated based on Equation 6.2 (as derived from the gen-
+eralized Equation 6.3 in Section 6.6.4):
+
+
+ GSD 2 = exp ln(U R )2 + ln(UC )2 + ln(UG )2 + ln(UT )2 + ln(U L )2 + ln(U S )2 + ln(U B )2 		
+		(6.2)
+
+where U indicates the uncertainty factors based on reliability (UR), completeness
+(UC), geographic correlation (UG), temporal correlation (UT), technological correla-
+tion (UL), sample size (US), and the base uncertainty (UB).
+   Taking the example of a process requiring aluminum, let us assume that the data
+on the necessary quantity of aluminum required by this process have the following
+characteristics:
+
+  • Peer-reviewed and based on measurements (quality score of 1 for reliability)
+  • Representative of a small number of enterprises and for an adequate time
+    period (quality score of 2 for completeness)
+  • Obtained less than 3 years prior to the current study (temporal correlation
+    score of 1)
+  • Coming from a geographical area having similar conditions to the condi-
+    tions of the case study (geographical correlation score of 4)
+TABLE 6.4
+Data Quality Indicators with Five Levels of Quality as Described in a Pedigree Matrix
+Quality Score                  1                                2                                3                              4                                5
+                                                                                                                                                                                    Interpretation
+
+
+
+
+Reliability       Verified data based on         Verified data partially based on   Nonverified data partially    Qualified estimate (e.g., by     Nonqualified estimate
+                   measurements                   assumptions or nonverified         based on qualified            industrial expert)
+                                                  data based on measurements         estimates
+Completeness      Representative data from all   Representative data                Representative data from      Representative data from only    Representativeness unknown
+                   sites relevant for the         from > 50% of the sites            only some sites (< 50%)       one site relevant for the        or data from a small number
+                   market considered, over an     relevant for the market            relevant for the market       market considered or from        of sites and from shorter
+                   adequate period to even        considered, over an adequate       considered or from > 50%      some sites but from shorter      periods
+                   out normal fluctuations        period to even out normal          of sites but from shorter     periods
+                                                  fluctuations                       periods
+Temporal          Less than 3 years of           Less than 6 years of difference    Less than 10 years of         Less than 15 years of            Age of data unknown or
+ correlation       difference to the time         to the time period of the data     difference to the time        difference to the time period    more than 15 years of
+                   period of the data set         set                                period of the data set        of the data set                  difference to the time period
+                                                                                                                                                    of the data set
+Geographical      Data from area under           Average data from larger area      Data from area with similar   Data from area with slightly     Data from unknown area or
+ correlation       studied                        in which the area under study      production conditions         similar production               distinctly different area
+                                                  is included                                                      conditions                       (North America instead of
+                                                                                                                                                    Middle East; OECD-Europe
+                                                                                                                                                    instead of Russia)
+Further           Data from enterprises,         Data from processes and            Data from processes and       Data on related processes or     Data on related processes on
+ technological     processes. and materials       materials under study (i.e.,       materials under study but     materials                        laboratory scale or from
+ correlation       under study                    identical technology), but         from different technology                                      different technology
+                                                  from different enterprises
+Sample size       >100, continuous               >20                                >10                           >=3                              Unknown
+                   measurements
+
+Source: Ciroth, A. et al. 2013. International Journal of Life Cycle Assessment. With permission.
+                                                                                                                                                                                    165
+166                                                     Environmental Life Cycle Assessment
+
+
+
+   TABLE 6.5
+   Default Uncertainty Factors (Dimensionless) Applied to Quality Matrix
+   Indicator Score                  Abbreviation        1          2         3           4         5
+   Reliability                          UR             1.00      1.05      1.10      1.20      1.50
+   Completeness                         UC             1.00      1. 02     1.05      1.10      1.20
+   Temporal correlation                 UT             1.00      1.03      1.10      1.20      1.50
+   Geographical correlation             UG             1.00      1.01      1.02       —        1.10
+   Technological correlation            UL             1.00       —        1.20      1.50      2.00
+   Sample size                          US             1.00      1.02      1.05      1.10      1.20
+
+   Source: Frischknecht, R. et al., 2004. International Journal of Life Cycle Assessment, 10, 3–9.
+           With permission.
+
+
+   • Exactly corresponding to the type of desired aluminum (technological cor-
+     relation score of 1)
+   • Obtained from a sample of unknown size (quality score of 5 for sample size)
+
+    For a demand of materials, the basic uncertainty factor is 1.05 (Table 6.6). Having
+determined the default uncertainty factors corresponding to the quality scores
+defined for each data characteristic (Table 6.5), the variance of the aluminum quan-
+tity is then
+                                2        2         2        2       2       2        2
+         GSD 2 = exp ln(1.00) +ln(1.02) +ln(1.00) +ln(1.02) +ln(1.00) +ln(1.20) +ln(1.05) = 1.21
+
+Note that the final GSD2 (dimensionless) does not depend on the required quantity
+of aluminum.
+   Once the uncertainty over each individual component is determined as above,
+these individual uncertainties are combined using Monte Carlo methods or a Taylor
+series expansion. This yields the overall uncertainty of the inventory flows or impacts
+per functional unit, as described further in Section 6.6, which also discusses the
+essential concept of comparative uncertainty based on which parameters are com-
+mon among scenarios.
+
+6.6 ASSESSMENT AND MITIGATION OF UNCERTAINTY
+Table 6.7 describes the appropriate methods for evaluating or mitigating each type of
+uncertainty and variability. Each method is described in more detail in the subsec-
+tions below.
+
+6.6.1 Semiquantitative Approaches and Expert Judgment
+6.6.1.1 LCA Standardization
+For uncertainties associated with choice, standardization processes such as the ISO
+14040 series promote sets of default choices that limit inconsistencies between stud-
+ies and thus reduce the influence of different choices.
+Interpretation                                                                                    167
+
+
+
+   TABLE 6.6
+   Ecoinvent Base Uncertainty Factors (UB, dimensionless) Applied to the
+   Inputs and Outputs of the Technosphere and the Elementary Flows
+   Input/Output                                               Input/Output
+   Uncertainty on Intermediary                      Pollutants Emitted to Air:
+    Flows: Demand of:
+   Thermal energy                         1.05      CO2 [combustion, process]              1.05
+   Electricity                            1.05      SO2 (sulfur dioxide)                   1.05
+                                                     [combustion]
+   Semifinished products                  1.05      NOx, NMVOCs, CH4, N2O, NH3a            1.50
+                                                     [combustion]
+   Materials                              1.05      CH4, NH3 [agricultural]                1.20
+   Transportation services (ton-km)       2.00      N2O, NOx [agricultural]                1.40
+   Waste treatment services               1.05      Individual VOCs [process]              2.00
+   Infrastructure                         3.00      CO (carbon monoxide)                   5.00
+                                                     [combustion]
+   Uncertainty on Elementary                        Individual hydrocarbons, TSMb          1.50
+    Flows: Resources:                                [combustion]
+   Primary energy carriers                1.05      TSM [process]                          1.50
+   Metals, salts                          1.05      PM10c                                  2.00
+   Land use, occupation                   1.50      PM2.5                                  3.00
+   Land use, transformation               2.00      PAHsd [combustion]                     3.00
+   Pollutants Emitted to Water:                     Heavy metals [combustion]              5.00
+   BOD, COD, DOC, TOCe                    1.50      Inorganic emissions, others            1.50
+                                                     [process]
+   Inorganic compounds (NH4, PO4,         1.50      Radionuclides (e.g., radon-222)        3.00
+    NO3, Cl, etc.)f                                  [process]
+   Individual hydrocarbons, PAHs          3.00      Pollutants emitted to soil:
+   Heavy metals                           5.00      Oil, total hydrocarbons [process]      1.50
+   Heavy metals [agricultural]            1.80      Pesticides [agricultural]              1.20
+   Pesticides [agricultural]              1.50      Heavy metals [process,                 1.50
+                                                     agricultural]
+
+   Source: Frischknecht, R. et al., 2004. International Journal of Life Cycle Assessment, 10, 3–9.
+            With permission.
+   Note: Factors Apply to Combustion, Process and Agricultural Emissions, unless Otherwise
+          Specified in Square Brackets.
+   a Respectively, nitrates (NO, NO ), nonmethane volatile organic compounds, methane, and
+                                      2
+     ammonium.
+   b Total suspended matter.
+
+   c Particulate matter smaller than 10 μm.
+
+   d Polycyclic aromatic hydrocarbons.
+
+   e Respectively, biological oxygen demand, chemical oxygen demand, dissolved organic carbon,
+
+     and total organic carbon, defined in Section 4.2.2.
+   f Respectively, ammonia, phosphate, nitrate, chlorine, etc.
+                                                                                                                                                           168
+
+
+
+
+TABLE 6.7
+Methods for Calculating and Reducing Different Types of Uncertainty
+                                                                                                    Types of Uncertainty
+                                                                                               Uncertainty
+                                                             Parameter         Model             Due to         Spatial      Temporal      Technological
+                                                            Uncertainty      Uncertainty        Choices        Variability   Variability     Variability
+LCA standardization                                                                                  *
+Expert judgment/independent reviewers                              *               *                 *              *             *              *
+Sensitivity study                                                 **              **                **             **            **             **
+Scenario analysis                                                                                   **                            *
+Correlation and regression analysis                               *               **                                                            *
+Nonlinear modeling                                                                **
+Dynamic or spatialized modeling                                                    *                               ***          ***
+Taylor expansion                                                 ***                                                **           *              **
+Probabilistic simulation and Monte Carlo analysis               ****                                                **           *              **
+Measurement comparison and additional data collection           ****             ****                                                          ****
+
+Note: The number of stars reflects the adequacy of the method to address the considered type of uncertainty.
+                                                                                                                                                           Environmental Life Cycle Assessment
+Interpretation                                                                         169
+
+
+6.6.1.2 Expert Judgment and Default Uncertainty Estimates
+Many LCAs do not include a comprehensive and detailed uncertainty analysis.
+Expert judgment has led to generally accepted default rules that can be used and
+adapted when no other uncertainty analysis is available.
+
+   • For energy and CO2, any difference less than 10% can be considered insig-
+     nificant at first glance.
+   • For respiratory inorganic effects or acidification and eutrophication, the
+     difference between two scenarios should typically be greater than 30%
+     to be significant. These percentages have to be adjusted depending on the
+     required quality of the study and according to the impact category.
+   • For toxicity characterization, the calculation of impacts often involves more
+     uncertainty, requiring a difference of at least one to two orders of magni-
+     tude between scenarios to be considered significant. This is especially true
+     if the dominant emissions differ among scenarios, or if they correspond to
+     the long-term emissions of a landfill, where the impacts are highly uncertain.
+     For impact categories with such high uncertainties, it is often appropriate to
+     represent differences in results on a log scale rather than a typical linear scale.
+   • As described by Rosenbaum et al. (2008), the large uncertainties over the
+     characterization factors for carcinogenic effects, noncarcinogenic effects, and
+     ecotoxicity (one to three orders of magnitude) should be interpreted within
+     the context of the large variation between characterization factors of chemi-
+     cals (up to 12 orders of magnitude). This means, for example, that contribu-
+     tions of 1%, 5%, or 90% of the total human toxicity impact can be considered
+     equivalent but significantly higher than the impacts due to an emission that
+     contributes less than 1% or less than one-millionth of the total impact.
+
+   Failing to account for these variations in characterization factors is the principal
+cause of misinterpretation of toxicity results in the different impact assessment meth-
+ods. In calculating life cycle toxicity impacts, we can then identify substances that
+contribute to, for example, at least 1% of the total score. This generally leads to the
+identification of 10–30 chemicals to focus on, while the remaining 400 substances
+can be ignored as not significant to this case study. The 10–30 important substances
+are not necessarily in the accurate order of their impacts, and further analysis can
+thus be performed to decrease uncertainties for each substance, including over the
+relevant stage of the life cycle, the processes responsible for each emission, and the
+respective importance of the fate, exposure, and effect in the total impact of this
+substance.
+   LCA software increasingly integrates methods of uncertainty propagation,
+which enables a more detailed analysis of uncertainties using a variety of methods
+described in the following subsections.
+
+6.6.2 Sensitivity Study
+The goal of a sensitivity analysis is to test the robustness of results and their sensitiv-
+ity to data, assumptions, and models used. To do this, we move beyond preconcep-
+tions to identify the key parameters that most influence the outcome.
+170                                             Environmental Life Cycle Assessment
+
+
+   One option is to vary each input parameter by a certain percentage and then
+examine the resulting percentage variation of the model results. If the goal of the
+LCA is to compare two products, the sensitivity analysis should relate parameter
+variations to the difference between the two scenarios. Because many scenarios have
+common processes, variations in certain processes will not cause significant varia-
+tions in the differences between scenarios. The variation in differences between sce-
+narios is generally smaller than the independent variation within a given scenario, so
+this independent variation can be misleading. Another type of sensitivity analysis is
+to vary the parameters between their reasonable minimum and maximum values and
+to analyze the impact on the final result.
+
+6.6.2.1 Scenario Analysis
+A final option, called a scenario analysis (Huijbregts 1998), is to study the effect
+of certain assumptions on the outcome of the assessment. For example, we test
+the importance of the method of allocation (Chapter 4) by comparing how differ-
+ent substitution assumptions or other allocation methods (e.g., financial allocation)
+affect the final results (see Section 8.5 for another example). In addition, different
+impact assessment methods involve different assumptions about the aggregation and
+weighting of inventory results, which introduces uncertainties that can be quantified
+by a sensitivity study on results from three different impact assessment methods.
+   From an ecodesign perspective, a sensitivity study identifies the main factors that
+can be adjusted to improve the environmental performance of a product.
+
+
+6.6.3 Model Improvement Strategies
+6.6.3.1 Nonlinear Modeling
+Many LCA models assume linear responses in nonlinear phenomena, which intro-
+duces uncertainties that nonlinear modeling can help mitigate. In dose–response
+modeling used in impact assessment, for example, a default linear dose–response
+curve is often used, yet in reality, the slope of the dose–response curve may vary
+depending on background concentrations. With enough available data, this model
+uncertainty can be reduced by fitting a nonlinear model to the data and then pro-
+viding factors as a function of background concentration. The danger of such an
+approach is that nonlinear models can have asymptotes. If an LCA predicts such
+high impacts that, for example, all species will disappear, a nonlinear consequential
+approach could suggest that decreasing the load slightly yields no improvement. In
+such a case, a simpler linear relationship yields the more realistic result that decreas-
+ing the load leads to the long-term reduction of impacts.
+
+6.6.3.2 Dynamic or Spatialized Modeling
+Model refinements that explicitly account for spatial or temporal variability are
+increasingly available for both the inventory (e.g., ecoinvent 3.0) and impact assess-
+ment phases (e.g., IMPACT World+). Thus, studies with enough information on the
+location and timing of emissions can reduce the uncertainty of results by accounting
+for local emission or characterization factors, rather than using generic aspatial or
+Interpretation                                                                                171
+
+
+steady-state factors. Chapter 5 discusses the spatial aspects of IMPACT World+ in
+much greater detail.
+   When studies consider a limited time horizon (e.g., a 100-year time horizon for
+global warming), it becomes important to account for the temporal dynamics of both
+releases and impact assessment factors. In the case of greenhouse gas emissions, six
+different methods are proposed to account for the temporal dynamics (Brandão et al.
+2013). The Levasseur et al. (2010, 2012) approach, in particular, is both rigorous and
+easy to apply, since the authors provide a freely available Excel tool to account for
+the temporal dynamic of releases (see website in Appendix I). This tool helps ensure
+consistency between the dynamics of emissions and impacts in the case of global
+warming and will thus reduce uncertainties associated with time horizons.
+
+6.6.4 Monte Carlo Analysis and Taylor Series Expansion in LCA
+6.6.4.1 Monte Carlo
+Because inventory and impact assessment models can be very complex with large
+amounts of data, it is difficult to algebraically propagate parameter uncertainties
+to uncertainties on the model results. A Monte Carlo analysis uses a data-intensive
+method to estimate the uncertainty on the final results by running through thousands
+of simulations based on the possible input parameter values. When applied correctly,
+it also determines the significance of a difference between two scenarios.
+    A Monte Carlo analysis (Figure 6.9) first identifies each model input parameter
+(p1, p2, p3, etc.) and its probability distribution (e.g., normal, lognormal, or uniform
+as shown in Figure 6.8), by, for example, using the pedigree method presented in
+Section 4.3.3. The model result Si is then calculated by randomly selecting a value
+for each input parameter (p1,i, p2,i, p3,i, etc.) based on its probability distribution.
+Repeating this operation many times (typically 1,000 to 100,000 times) yields a set
+of results Si that can be statistically analyzed to define the distribution of the final
+result S.
+
+
+              p1
+
+
+
+                                                                    S
+              p2
+                               p1,i
+                               p2,i      Model          Si
+                               p3,i
+                             Run model for a large number of is
+
+              p3
+
+
+
+FIGURE 6.9 Uncertainty propagation using Monte Carlo analysis, propagating parameter
+uncertainties to uncertainties on the model results. The distribution of each model result S is
+based on a set i of input parameter values (e.g., p1,i, p2,i, p3,i) that are randomly selected from
+the distribution of each parameter and then repeated for a large number of is.
+172                                                     Environmental Life Cycle Assessment
+
+
+    An LCA is often used to find the difference between two or more scenarios, so
+one might be tempted to estimate the uncertainty over this difference by calculating
+the results probability distribution of the results for each scenario and then finding
+the probability distribution of the difference. This would only be acceptable if every
+parameter of each scenario were independent, which is never the case in an LCA.
+Different scenarios always involve common variables, such as the electricity or fuel
+consumption that occurs in any production line. The characterization factors are also
+not independent, as they are equivalent for a given pollutant regardless of the scenario.
+    We use a concrete example to demonstrate this dependence. Imagine that, for a given
+electricity mix, approximately 5 g of particulate matter are emitted per kilowatt-hour
+of electricity produced, with an uncertainty of ±4 g (so emissions can range from 1 to
+9 g/kWh). In the case of independence between the electricity mixes, we would calcu-
+late a distribution of impacts for each scenario based on this range of particulate emis-
+sion factors. We find that the largest difference in impacts between the two scenarios
+occurs when Scenario B uses the highest possible particulate emission value (9 g/kWh),
+and Scenario A uses the lowest emission value (1 g/kWh). In the case of both sce-
+narios using the same electricity mix, it does not make sense to compare results where
+Scenario B uses a different emission factor for that mix than Scenario A. For variations
+of such shared input parameters, the two scenarios vary in parallel and the uncertainty
+is overestimated if the Monte Carlo method is applied successively to each scenario.
+    To properly compare two scenarios, one must compare the difference or the ratio
+between the scenarios (Figure 6.10). For a given set of input parameter values, we
+calculate the score of Scenario A (SA), the score of Scenario B (SB), and the relative
+difference (SB − SA)/SA. Repeated simulation using an array of input parameter values
+yields a distribution of scenario differences, from which we can calculate the prob-
+ability that (SB − SA)/SA is less than or greater than zero.
+    The reality may often prove to be between the full independence assumption—
+that tends to overestimate the uncertainty—and the full dependence assumption that
+
+         p1
+
+
+
+                                                                              (SA – SB)/SA
+         p2              p1,i
+                         p2,i       Model       SA,i     (SA,i – SB,i)/SA,i
+                         p3,i                   SB,i
+                                Run model for a large number of is
+         p3
+
+
+FIGURE 6.10 Distribution of the difference between two scenarios based on Monte Carlo
+analysis, and accounting for shared input parameters. Parameter values p1,i, p2,i, and p3,i
+are randomly selected from the distributions of each parameter and used to calculate rela-
+tive differences between model results for Scenarios A and B, (SA,i − SB,i)/SA,i. This yields
+a distribution of the percentage difference between the two scenario results, assuming the
+same parameter value for any shared input parameters. When most of the curve lies left of
+the x-axis, there is a relatively high probability that Scenario B has a bigger impact than
+Scenario A.
+Interpretation                                                                               173
+
+
+assumes that the same electricity mix is always used in different scenarios—that
+may underestimate the uncertainty if different electricity sources are eventually
+used. It is therefore useful to make both calculations, assuming independence and
+full dependence, to provide an upper and a lower limit to the uncertainty.
+
+6.6.4.2 Analytical Uncertainty Propagation Using Taylor Series Expansion
+As an alternative to a more computationally intensive Monte Carlo simulation, Morgan
+and Henrion (1990) proposed an analytical and transparent uncertainty propagation
+method using a Taylor series expansion, which was later adapted, described, and
+applied to a multimedia fate model by MacLeod et al. (2002) and to LCA by Ciroth
+et al. (2004) and Heijungs (2010). Hong et al. (2010) further developed the Taylor
+series expansion method, applying it to lognormally based uncertainty analysis to be
+relevant for scenario comparisons. They applied the developed method to an auto-
+mobile case study (see Sections 4.2.3 and 4.4.3) to explicitly estimate uncertainty
+propagation simultaneously in life cycle inventory (LCI) and LCIA. This Taylor
+series expansion method calculates the geometric standard deviation (GSD, defined
+in Section 6.5) of the output as a function of the GSDs of the input parameters.
+
+6.6.4.2.1 Single Scenario
+In the case where all input factors are independent from one another, the GSD of the
+output S is calculated as a function of the GSD of each input parameter p as follows
+(MacLeod et al. 2002, Equation 6.3):
+
+          ( lnGSDS )2 = s12 ( lnGSDp ) + s22 ( lnGSDp ) + …+ sn2 ( lnGSDp )
+                                              2                        2                2
+                                      1                            2                n       (6.3)
+
+where the relative sensitivity (si) of the model output to the input parameter i describes
+the relative change in the model output (ΔS) due to the relative change in this input
+parameter i (Δpi) from the mean (Equation 6.4):
+
+                                                      ΔS S
+                                              si =                                          (6.4)
+                                                     Δpi pi
+
+6.6.4.2.1 Scenario Comparison
+When comparing Scenarios A and B, the geometric standard deviation of the ratio
+of the two scenarios (GSDA/B) can be expressed as a function of the difference in
+sensitivity between Scenarios A and B to each input parameter pi (sAi − sBi ) and the
+GSD of each input parameter (GSDpi), as in Equation 6.5:
+
+                                 2
+                   ⎛            ⎞
+                                      ∑ ⎡⎣( s − s ) × (1n GSD ) ⎤⎦
+                                                               2                2
+                   ⎜⎝ 1n GSD A ⎟⎠ =                  Ai   Bi               pi               (6.5)
+                             B            i
+
+
+   The degree of confidence that the impact of Scenario A is lower than B is based
+on the probability that A/B < 1. For a lognormal distribution, this probability can be
+calculated according to Hong et al. (2010, equation 9, p. 503).
+174                                            Environmental Life Cycle Assessment
+
+
+   As the case study in the next subsection will show, the Taylor series expansion
+method gives results similar to those of a Monte Carlo analysis. This is especially
+the case when one particular process or impact dominates the total impact. When
+the total impact is a combination of several similarly important components, the two
+methods deviate more from one another.
+
+6.6.5 Application of Monte Carlo and Taylor Series to Case Study
+We will use the automobile front-end panel case study (Section 4.2.3) to illustrate
+the Monte Carlo and the Taylor series expansion methods, comparing the climate
+change impacts of steel with that of virgin aluminum. We find that the two different
+methods predict similar impacts and uncertainties, with uncertainties influenced by
+which parameters are common and which are considered independent (as described
+in the previous subsection).
+    Figure 6.11 presents a simplified flow chart for the steel and aluminum base cases.
+The width of each arrow is proportional to climate change impacts of that process
+over the product life cycle. Gasoline is a major contributor to the climate change
+impact in both the aluminum and steel scenarios, and aluminum primary production
+is another major contributor in the aluminum scenario.
+    Each input parameter of the LCI has an uncertainty characterized by a log-
+normal distribution, as defined by its data pedigree within the ecoinvent database
+(Section 4.3.2, Frischknecht et al. 2005). The LCA software SimaPro 6.0 provides
+the corresponding GSD2 for each parameter in each of the ecoinvent unit processes,
+with 74% of all processes being characterized as lognormally distributed and 26%
+undefined. SimaPro 6.0 was used to calculate the sensitivity of climate change
+impacts to each parameter, as well as to run Monte Carlo simulations with 1000
+iterations on these climate change impacts. To reflect the 35% uncertainty on the
+global warming potential (GWP) indicated by the IPCC 2007 report, this study used
+a squared geometric standard deviation (GSD2) of 1.35 as a close approximation. For
+gasoline consumption, we run a low-uncertainty scenario (GSD2 of gasoline = 1.03)
+and a high-uncertainty scenario (GSD2 = 1.77) assuming independence between steel
+and aluminum (i.e., a high gasoline consumption in the steel scenario does not imply
+a high consumption in the aluminum scenario). For petrol extraction and treatment
+impacts, we also run a low (GSD2 = 1.1) and a high (GSD2 = 2.0) uncertainty sce-
+nario, but assume that these vary in parallel in the steel and the aluminum scenarios.
+    This study first used the Taylor series expansion method to calculate the two log-
+normal probability distribution functions of climate change impacts of the steel and
+aluminum scenarios (Figure 6.12). At first, one might assume that the probability
+that the aluminum scenario has a higher impact than steel is the fractional area of
+overlap between the two distributions, which would be the case if the two scenarios
+used entirely independent sets of parameters. However, since the impact scores of
+two LCA scenarios are generally based on multiple common LCI processes and
+LCIA characterization factors, we cannot compare the impacts as if they were inde-
+pendently calculated.
+    To address the issue of common parameters, we can use a Monte Carlo simula-
+tion to calculate the difference in climate change impacts between scenarios based
+Interpretation                                                                                                175
+
+                                                                                        1 piece
+                                                                                    Steel front-end
+                                                                                         panel
+                                                                                   (ecoinvent data)
+                                                                                263
+
+
+
+
+                                                                                    80 L gasoline
+                                                                             GSD2independent = 1.03 or 1.77
+                1 piece                                                              0.08 m
+                                                                                              3
+              Steel front-                                                           Gasoline
+               end panel                                                           consumption
+              production
+       38.2                                                                     225
+
+
+
+
+             15.5 kg                140 MJ                98.3 MJ                      60 kg
+       Steel, low-alloyed,        Electricity,     Light fuel oil, burned       Gasoline, unleaded,
+        at plant/RER U         production mix        in boiler 100 kW,              at regional
+                               UCTE/UCTE U         nonmodulating/CH               storage/RER U
+       20.7                  17.5                  8.51                         39.2
+            15.5 kg steel        19.7 kWh               98.3 MJ             CO2 emissions: 2.4 kgCO2/kg gas
+            GSD2 = 1.1           GSD2 = 1.1            GSD2 = 1.1             GSD2common = 1.1 or 2.0
+      (a)
+
+             1 piece
+          Al front-end
+              panel
+        (ecoinvent data)
+       173
+
+
+
+
+                                                                                   30 L gasoline
+                                                                            GSD2independent = 1.03 or 1.77
+
+             1 piece                                                                 0.0304 m3
+        Aluminum front-                                                               Gasoline
+            end panel                                                               consumption
+           production
+       87.1                                                                     85.4
+
+
+
+
+             5.91 kg                83 MJ                77 MJ                         22.8 kg
+          Aluminum,            Electricity, high      Light fuel oil,           Gasoline, unleaded,
+           primary, at       voltage, production    burned in boiler                 at regional
+          plant/RER U             UCTE, at               10 kW,                   storage/RER U
+       73.4                  10.5                  6.72                         14.9
+               5.9 kg Al         15.2 kWh                77 MJ              CO2 emissions: 2.4 kgCO2/kg gas
+              GSD2 = 1.1         GSD2 = 1.1            GSD2 = 1.1             GSD2common = 1.1 or 2.0
+      (b)
+
+
+FIGURE 6.11 Flow chart and climate change impacts of the (a) steel and (b) aluminum
+scenarios according to Hong et al. (2010). Associated squared geometric standard deviations
+on the uncertainty of the most influential parameters are given as GSD 2 .
+176                                                                                                              Environmental Life Cycle Assessment
+
+
+                                                                                         0.02
+
+
+
+
+                                                    Probabiblity distribution function
+                                                                                                                       Aluminum
+                                                                                                                       scenario
+                                                                                                                       Steel scenario
+
+
+                                                                                         0.01
+
+
+
+
+                                                                                           0      µAl     µsteel
+                                                                                           100       200         300     400        500
+                                                                                                 Climate change impact (kgCO2-eq)
+
+
+FIGURE 6.12 Lognormally distributed climate change impacts (in units of equivalent kilo-
+grams of CO2) of the steel and aluminum scenarios, using the high uncertainty value on the
+independent parameter of gasoline consumption (GSD 2independent = 1.77).
+
+
+                                     0.09
+
+                                     0.08
+ Probability distribution function
+
+
+
+
+                                     0.07
+
+                                     0.06
+
+                                     0.05
+
+                                     0.04
+
+                                     0.03
+
+                                     0.02
+
+                                     0.01
+
+                                       0
+                                            –100        0               100             200                  300                               400
+                                                   Difference in climate change impacts, Ssteel – Saluminum (kgCO2-eq)
+
+
+FIGURE 6.13 Probability distribution of the difference between steel and aluminum cli-
+mate change impacts, using Monte Carlo analysis (independent case with GSD 2gasoline = 1.77
+varying independently between the two scenarios).
+
+on the same set of parameters. We repeat the operation a large number of times (e.g.,
+10,000 times) to determine the probability distribution function of the difference,
+and ultimately calculate the probability that the steel scenario has a higher climate
+change impact than the aluminum scenario: P(steel − aluminum > 0). This probabil-
+ity is equal to 7.5%, corresponding to the light gray bars in Figure 6.13.
+    The Taylor series expansion method can also account for common parameters
+and calculate the probability that one scenario has a greater impact than another, in
+Interpretation                                                                                                           177
+
+
+a very similar way (Equation 6.5). Rather than plotting the probability distribution
+function of the differences between the two scenarios, we use the ratios of the two
+impacts. The probability that the impact of aluminum is greater than that of steel—
+P(steel/aluminum > 1)—is found to be 7.5% (shaded area of Figure 6.14), which is
+virtually equal to the probability calculated with the Monte Carlo method.
+   In addition to calculating the probability that one scenario has a higher impact
+than the other, the analytic Taylor series expansion method provides the explicit
+contributions of each parameter to the overall uncertainty (Figure 6.15). For the
+steel scenario, gasoline consumption contributes most to uncertainty in the climate
+change impact, followed by light fuel oil consumption. These processes contribute
+more moderately to the uncertainty in the climate change impacts of the aluminum
+scenario, which also has substantial contributions from electricity production and
+aluminum primary production. By so easily identifying the sources of uncertainty,
+future work can be better focused on minimizing these uncertainties and better pre-
+dicting impacts and comparisons.
+   This automobile case study illustrates application of the Monte Carlo analysis and
+Taylor series expansion method to calculate uncertainties in inventory (Figure 6.11)
+and impact assessment (Figure 6.12), predicting probabilities in comparing the
+impacts of different scenarios. It addresses the importance of accounting for depen-
+dencies on common parameters in LCA, both for common LCI processes and com-
+mon LCIA characterization factors.
+   The probability distributions obtained with the Taylor series expansion method
+are very close to those from a classical Monte Carlo simulation, while being
+
+                                               8
+                                                                                         Base scenario
+                                               7                                         GSD2steel/aluminum = 1.08
+           Probability distribution function
+
+
+
+
+                                               6                                         High GSDindependent
+                                                                                         GSD2steel/aluminum = 1.77
+                                               5
+                                                                                         High GSDcommon
+                                               4                                         GSD2steel/aluminum = 1.25
+
+                                               3
+
+                                               2
+
+                                               1
+
+                                               0
+                                                   0   0.5          1         1.5          2           2.5           3
+                                                        Ratio of climate change impacts, Ssteel/Saluminum
+
+
+FIGURE 6.14 Probability distributions for the ratio of steel impact score (SSteel) to alumi-
+num impact score (Saluminum) according to the Taylor series expansion for the base case (dotted
+line), for the case where the gasoline impact is considered an independent parameter with
+high uncertainty (dashed line), and for the case where the gasoline impact is considered a
+common parameter with high uncertainty (solid line).
+178                                                          Environmental Life Cycle Assessment
+
+
+                                        100
+
+
+
+                                        80                         Other
+             Process contribution (%)
+                                                                   Aluminum production
+
+                                        60                         Electricity production
+                                                                   Gas burned
+                                                                   Oil burned
+                                        40
+                                                                   Gasoline
+
+                                        20
+
+
+
+                                         0
+                                              Steel   Aluminum
+
+
+FIGURE 6.15 Process contribution to the overall uncertainty of climate change scores cal-
+culated by the Taylor series analytical approach for steel and aluminum.
+
+
+significantly easier to obtain. Moreover, the Taylor series expansion method provides
+each parameter’s contribution to uncertainty in a very transparent way. Note that
+results between the two methods are generally similar when there is one dominat-
+ing process or impact, but may differ more when multiple processes are somewhat
+equally combined to yield the total impact. One limitation of this application of the
+Taylor series method is that the input and output parameters must be assumed to
+be lognormally distributed. Lognormal distributions are quite applicable to LCA,
+because emission factors, characterization factors, and other parameters are usually
+positive and can vary over orders of magnitude. Being confined to lognormal dis-
+tributions for all input and output variables, however, is a significant limitation with
+implications that must be further explored.
+    Finally, application of both these methods illustrates that although an LCA can
+have high absolute uncertainties, it is powerful in comparative settings, where, for
+example, characterization factors are common among scenarios.
+
+6.6.6 Comparison to Measurements and Additional Data Collection
+The final results of an LCA cannot be verified by comparison to measurements,
+since the impact of an FU throughout its life cycle is not measurable. Certain
+elements of an LCA, however, can be verified experimentally, either at the unit
+processes level for inventory, or for the assessment of certain environmental pro-
+cesses and impacts. For the impact of toxic substances and their distribution in the
+environment, it is possible to evaluate multimedia models (transfer of air, water,
+soil, food) by comparing model-predicted substance concentrations resulting from
+the known total emissions of a substance to concentrations measured in water, air,
+soil, or the food chain.
+Interpretation                                                                    179
+
+
+    This approach of comparing modeled concentrations to measured values was used
+to validate the impact assessment model, IMPACT 2002, based on one of the dioxin
+congeners (Margni 2003). In this study, the substance properties were defined, and
+emission data were collected from the literature to be used as the model input. The
+verification of the IMPACT 2002 model focused on three complementary levels: A
+first comparison involved the environmental concentrations (air, water, soil), a sec-
+ond was related to the concentrations linked to ingestion (plants, meat, milk, eggs,
+fish), and the final comparison was related to the fraction ingested by the population
+(intake fraction). The results were compared with exposure estimates found in the
+literature.
+    Another way to improve the quality of the models and parameter estimates is
+by collecting additional data on the parameters that contribute most to the uncer-
+tainty of the results. Correlation and regression analysis can be used to identify and
+thus prioritize the contribution of individual parameters to the total uncertainty
+(Huijbregts 1998).
+
+6.7 LCA SOFTWARE
+LCA studies clearly involve a large amount of data, making hand calculations tedious,
+and specialized software valuable for interpretation. Chapters 4 and 5 describe soft-
+ware programs specific to inventories and impact assessment, and many of these
+same programs are used for interpretation.
+    The main commercial software programs available for conducting LCA are
+SimaPro (Goedkoop et al. 2003) and GaBi (GaBi 2003). SimaPro is well designed
+to simply present and interpret the inventory and impact assessment results, and to
+easily review detailed contributions of each unit process. V. 7 allows for simultane-
+ous analysis using both the process-based and input–output approaches (Chapter 4),
+while estimating uncertainty propagation with the Monte Carlo method. GaBi uses
+more aggregated processes based on industrial data, and is thus particularly rel-
+evant for industrial applications in the automotive and electronics sectors and for
+modeling nonlinear processes. The Quantis Suite software has been developed
+recently to achieve the balance of a company as a whole and over all of its life cycle
+(Section 7.3.7).
+    Several free LCA software programs are also available. A first open-source
+free program is being created within the framework of the openLCA project
+(Appendix 1) to provide a modular software program for life cycle analysis and
+sustainability assessments. Initially, it will begin with a basic framework for LCA
+calculations of results and uncertainty, along with a tool to convert among differ-
+ent data formats. The Open-IO project (Ciroth 2007) has already released a U.S.
+input–output database specifically for openLCA. Second, Brightway2 is a powerful
+recently developed tool allowing analysts to quickly perform cutting-edge calcu-
+lations and visualizations (Appendix I). Third, CMLCA (Chain Management by
+Life Cycle Assessment; Heijungs and Frischknecht 2005) is a program intended to
+support the technical aspects of LCA. Although its user interface is not very flex-
+ible, it can be used for rich data analysis, including a complete matrix algebra tool
+with matrix inversion, as well as integrated methods for sensitivity analysis and
+180                                            Environmental Life Cycle Assessment
+
+
+uncertainty assessment. CMLCA supports fully hybrid inventories that consist of
+both process-based and IO-based data, though the comprehensive IO database is
+not free. The EORA input–output database also offers several assessment tools on
+its website that can be highly useful in interpreting multiregional IO results (see
+website listed in Appendix I). Finally, there are various non-LCA-specific tools
+that use a life cycle approach, such as the carbon tool of the Association Bilan
+Carbone (BC Bilan Carbone 2010), originally developed by the French Ministry of
+the Environment (ADEME).
+    Appendix II provides additional details on these various programs and other
+available software.
+
+
+6.8 ENVIRONMENTAL EVALUATION AND
+     SOCIOECONOMIC EVALUATION
+LCA can be undertaken for various decision-making applications (Chapter 3), such
+as whether to accept or select a certain product, and whether to choose a certain pol-
+icy. Although this book focuses on environmental considerations, decision-makers
+often also consider economic and social dimensions. These aspects are not part of
+traditional LCA, which focuses on the environmental assessment, but it is important
+to see how they can be evaluated consistently with the LCA approach. This section
+thus first describes life cycle costing and the cost–benefit analysis, followed by a
+short overview of accounting for social aspects.
+
+
+6.8.1 Life Cycle Costing
+6.8.1.1 Introduction
+Just as we can account for the extracted materials or emitted substances over the life
+cycle of a product or a service, it is also possible to track and analyze the financial
+flows over its life cycle. This economic evaluation of a product or service over all
+stages of its life cycle requires knowledge of costs at every stage. The concept of
+life cycle costing (LCC) can be defined similarly to that of environmental life cycle
+assessment (Rebitzer 2002). According to Blanchard and Fabrycky (1998), “the life
+cycle costing refers to all costs associated with the system for a given life cycle.”
+Swarr et al. (2013) provide an LCC code of practice, presenting a comprehensive
+model of all costs incurred by producers, ownership costs of consumers, and the
+real costs imposed on other affected stakeholders, with consistent system boundaries
+aligned with the requirements of ISO 14040.
+    As is the case for an LCA, financial flows must be considered not only for the
+production stage, but also for the use and other stages of the life cycle (Figure 6.16).
+For the total cost of production, the producer must account for the costs of research
+and development, as well as the actual manufacturing. This is then added to the costs
+of wages and benefits to yield the sale price of the product that the consumer sees.
+Since this sale price should include all of the preceding costs, it may not be neces-
+sary to examine the upstream costs over the production chain in all detail. The user
+also generally pays for costs associated with using and disposing of the product, such
+Interpretation                                                                          181
+
+
+           Costs for product manufacturer                Costs for product user
+
+           Research and
+                              Production                Use              End-of-life
+           development
+                                 costs                 costs               costs
+               costs
+
+
+
+                                            Feedback
+
+                               Producer’s responsibility (when applicable)
+
+
+FIGURE 6.16 Life cycle costing distinguishing production and consumption costs of a
+product over its life cycle. (Adapted from Rebitzer, G. et al., 2003. Environmental Progress,
+22, 241–249. With permission.)
+
+as the electricity to run a product and any disposal costs. In some cases, legislation
+requires that disposal costs are included in the purchase.
+    There could be a feedback from savings in consumer costs back to the producer
+(Figure 6.16). If the producer offers products that enable the consumer to lower
+costs during use, they could, in theory, increase the sale price of the product without
+costing the consumer more over the life of the product. For example, for a €18,000
+car driving 15,000 km/year, the fixed costs (cost of car, insurance, etc.) amount to
+€4000/year and the variable costs (oil, gasoline, services, tires, etc.) amount to €2700
+(TCS 2003), of which gasoline consumption amounts to approximately €1000/year.
+Thus, a car that can save the consumer 20% on fuel consumption represents a saving
+of €200/year, which corresponds to an initial cost saving of €1500 (for an interest
+rate of 2% and a term of 7 years). It would, therefore, be theoretically possible for
+the manufacturer to sell the car for €1500 more without costing the consumer more
+over the life cycle of the car. In principle, the manufacturer could use this increased
+income to offset any additional costs involved in developing a more environmentally
+friendly car. The automotive sector, however, generally follows a different logic,
+whereby the most expensive cars are often the least fuel-efficient, in which case
+the user of a car with a big engine is losing doubly in economic terms. In this case,
+it is different performances or secondary functions that are sought, such as pres-
+tige, comfort, aesthetics, and a sense of security. The increase in popularity of low-
+energy-consumption light bulbs represents a successful example of increasing the
+initial price of a product while decreasing total life cycle costs.
+    In general, an LCC includes all costs associated with physical processes, materi-
+als and energy flows, labor costs, costs of knowledge use (patents), and transaction
+costs. We can use the inventory data obtained during an LCA to determine most of
+these costs. The flows of materials and energy captured in an LCA inventory can be
+multiplied by the unit prices paid by the company or by the market prices. The costs
+that cannot be derived from the LCA inventory are those associated with labor and
+research and development (R&D) of the product or service, so these must be deter-
+mined separately.
+    An important and influential choice is the selection of a discount rate to com-
+pare costs that occur at different points in time over the life cycle. As discussed by
+182                                                                           Environmental Life Cycle Assessment
+
+
+Asselin-Balençon and Jolliet (2014), we suggest using the effective cost of capital
+as a default discount rate which is linked to the long-term financing rate. For a pro-
+ducer, this may be equal to the average of the interest rate and the rate associated
+with the cost of capital as retributed to its shareholders. For a consumer, the long-
+term interest rate may be more appropriate, but the inflation rate may also be con-
+sidered from a societal perspective. The internal rate of return (IRR)—the rate that
+makes the difference in life cycle cost between two scenarios equal to zero—is also
+a useful metric and well suited for decision-making purposes. The higher the IRR of
+a scenario, the more profitable it is. The advantage of the IRR is that it is independent
+of both the chosen discount rate and the interest rate. The IRR can be then compared
+to the long-term financing rate (e.g., 6.5%) that represents a breakeven situation.
+
+6.8.1.2 Example: Sewage Sludge Treatment and Transport
+We present an example of the transport of sewage sludge (Rebitzer 2003) to illustrate
+an LCC. This study finds the contribution of each stage of the sludge treatment to the
+total environmental impacts and total cost. More details on the treatment of sewage
+sludges and their environmental impacts from a broader perspective are presented
+in Chapter 8.
+   Figure 6.17 shows the climate change impacts of each stage in the treatment and
+transport of sewage sludge, where the drying and transport of sludge contribute most
+
+                                       70
+
+                                       60       Others
+                                              Solid waste
+                                              management
+                                       50
+   Climate change impacts (kgCO2-eq)
+
+
+
+
+                                              Sludge drying
+                                       40
+
+                                       30                       Polymers
+                                             Sludge transport   Iron sulfate
+                                       20                        (inorganic
+                                                                flocculant)
+                                       10     Electricity for            Natural gas
+                                                treatment              substituted by
+                                               installation             digestion gas
+                                        0
+                                                                    Heat substituted by
+                       –10                                          sludge incineration
+
+                       –20
+                                            Treatment impacts        Avoided impacts         Total impacts
+
+
+FIGURE 6.17 Climate change impacts (in equivalent kilograms of CO2) from different ele-
+ments of sewage sludge treatment and transport, assuming a transport distance of 40 km
+and a dry solid content under 30% at the exit of the station purification. The third column
+represents the sum of the impacts of the first two columns (emissions from consumption
+minus any emissions avoided through substitution). (Adapted from Rebitzer, G. et al., 2003.
+Environmental Progress, 22, 241–249. With permission.)
+Interpretation                                                                                          183
+
+
+to climate change impacts. These two stages also contribute most to the life cycle
+costs (Figure 6.18). Acting on these stages is therefore likely to be both profitable and
+environmentally beneficial, such as increasing the dry solid content of the sludge at
+the outlet of the treatment plant, which would decrease the energy needed for both
+sludge drying and transportation.
+   A sensitivity analysis on the sludge dry solid content (Figure 6.19) shows that
+when a flocculating agent is applied to increase sludge dry solid content, there are
+substantial reductions in the costs of drying and transport. One can save up to 65%
+when dry solid content is increased from 15% to 45%. Because this increased dry
+solid content also decreases the transported loads and the energy needed to dry the
+sludge, climate change impacts are similarly reduced.
+
+6.8.2 Cost Internalization
+When the life cycle costs and environmental impacts are known, how can the two be
+compared? One approach is to express environmental impacts in financial terms, so
+they can be combined with economic costs. This is commonly referred to as inter-
+nalization of external costs.
+   To internalize environmental costs, a cost must be estimated for each environmental
+impact, including damages to human health and ecosystems. These cost estimates can
+be based on a variety of approaches, such as costs reimbursed by insurance or someone’s
+
+                                    80
+
+                                    70   Sludge incineration
+                                                               Solid waste
+                                                               management
+                                    60
+    Costs ($ per person per year)
+
+
+
+
+                                    50     Sludge drying
+
+                                    40
+
+                                    30
+
+                                    20    Sludge transport
+
+
+                                    10       Polymers
+                                            Iron sulfate
+                                             Electricity
+                                     0
+                                                                         Natural gas
+                       –10                                             substituted by
+                                                                        digestion gas
+                                          Treatment costs            Substitution costs   Total costs
+
+
+FIGURE 6.18 Financial costs (in U.S. dollars per person per year) from different elements
+of sewage sludge treatment and transport, assuming a transport distance of 40 km and a dry
+solid content of the sludge of 30% at the exit of the station purification. The third column rep-
+resents the sum of the costs of the first two columns. (Adapted from Rebitzer, G. et al., 2003.
+Environmental Progress, 22, 241–249. With permission.)
+184                                                                        Environmental Life Cycle Assessment
+
+
+                                             140
+                                                                         Transportation costs (40 km)
+                                             120                         Flocculant
+                                                                         Drying costs
+             Costs ($ per person per year)
+                                             100
+
+
+                                              80
+
+
+                                              60
+
+
+                                              40
+
+
+                                              20
+
+
+                                               0
+                                                   15   20        25       30        35      40    45
+                                                             Dry solid content of sludge (%)
+
+
+FIGURE 6.19 Dominant costs of municipal sewage treatment and their variation with the
+dry solid content of sludge. (Adapted from Rebitzer, G. et al., 2003. Environmental Progress,
+22, 241–249. With permission.)
+
+
+willingness to pay to avoid this damage. Estimates can account for the costs necessary
+to deal with an impact or the extra cost generated by the damage (such as through nec-
+essary health care), but this risks confounding the measurement of the impact severity
+with its ease of remedy. In any case, these estimates involve value judgments.
+   It is possible, for example, to calculate the equivalent cost of pollution from
+Swiss traffic. One way is to calculate the cost per kilometer driven C (€/km) as in
+Equation 6.6:
+
+                                                        C = SHuman Health × CDALY                        (6.6)
+
+where SHuman Health is the human health damage score due to traffic, calculated in
+units of disability-adjusted life years (years lost due to ill health, disability, or early
+death) per kilometer driven (DALY/km). CDALY is the cost assigned to one year lost
+(€/DALY).
+   In 1997, Switzerland had a fleet of 3.3 million gasoline cars and 110,000 diesel
+cars, with each vehicle traveling an average of 13,800 km per year. The exhaust emis-
+sions from such a fleet result in approximately 3600 DALY of human health damage
+every year (Tauxe 2002). Assuming that society is willing to pay €100,000 to avoid
+the equivalent of one year of life lost (ExternE 1998), this would correspond to an
+external cost of €360 million. As a side note from LCC, such a health analysis can be
+used to compare environmental impacts to more typical impacts, such as accidental
+traffic deaths. Once we account for the particles emitted from road abrasion and tires,
+environmental emissions are predicted to result in 12,000 DALY per year, which is
+the same order of magnitude as traffic accidents (600 deaths and 23,800 DALY).
+Interpretation                                                                     185
+
+
+
+                     TABLE 6.8
+                     Comparison of Fuel Cost to Cost
+                     Associated with Human Health
+                     Impacts
+                                   Fuel Cost     Human Health Cost
+                     Gasoline         8.1               0.7
+                     Diesel           4.5               2.9
+
+                     Note: € per 100 km of driving.
+
+
+
+    On this basis, Tauxe (2002) show that, for diesel, the external costs associated
+with human health damage are of the same order of magnitude as the cost of the fuel
+itself (Table 6.8).
+    Some impact assessment methods, such as EPS (Section 5.5.2), directly give the
+results of the characterization and weighting in monetary values, values that could
+potentially be summed to the direct costs. However, care must be taken when sum-
+ming and comparing different types of costs to ensure that adding them is legitimate.
+    As another example, Fantke et al. (2012) determined the external costs associ-
+ated with the overall use of pesticides in Europe. They quantified health impacts
+and related damage costs from exposure to 133 pesticides applied in 24 European
+countries in 2003, adding up to almost 50% of the total pesticide mass applied in
+that year. They found that only 13 substances applied to three crop classes (grapes/
+vines, fruit trees, and vegetables) contributed to 90% of the overall health impacts of
+about 2000 DALY in Europe per year. Considering the high uncertainties along the
+full impact pathway, mainly attributable to noncarcinogenic dose–response relation-
+ships and residues in treated crops, they obtained an average burden of lifetime lost
+per person of 2.6 hours. Accounting for the high uncertainties along the full impact
+pathway, which were mainly attributable to noncancer dose–response relationships
+and residues in treated crops, they calculated a 95% confidence interval between 22 s
+and 45.3 d. The costs per person over their lifetime amounted to €12, with a 95%
+confidence interval between €0.03 and €5142.
+
+6.8.3 Cost-Environmental Performance Representation
+Where should you invest $1 to achieve the greatest reduction of environmental
+impact? Accounting for economic and environmental aspects in parallel can help
+you choose the scenario that optimizes investment. Figure 6.20 suggests how to
+depict different scenarios that increase or decrease the environmental impacts and
+economic costs, by representing the change in cost compared to a reference scenario
+on the x-axis and the change in environmental performance on the y-axis.
+   Compared to a reference scenario, four types of alternative scenarios can be
+defined:
+   1. The first case corresponds to a “win-win” situation, in which the alternative
+      scenario reduces both the environmental burdens and the costs.
+186                                                                    Environmental Life Cycle Assessment
+
+
+                                                   Purely
+                                                                           Loser
+                                                 economical
+                                                     4                       3
+
+
+
+
+                          Environmental impact
+                                                                     Reference scenario
+
+
+
+
+                                                     1                       2
+                                                  Win-win             Environmentally
+                                                                         motivated
+                                                              Cost
+
+
+FIGURE 6.20 Representation of different scenarios with respect to a reference scenario,
+based on the change in environmental impacts as a function of the change in economic costs.
+
+
+   2. The second case corresponds to a scenario with decreased environmental
+      impacts, but increased costs. The vector from the reference scenario to this
+      second scenario would ideally have a steep negative slope. We can perform
+      an analysis to determine which investment provides the greatest environ-
+      mental improvement per unit investment. To this end, the ecological effi-
+      ciency η is (Equation 6.7):
+
+
+                                                              η = ΔS                                 (6.7)
+                                                                  ΔC
+    where:
+   		 Δ S is the reduction in environmental impact score (e.g., kgCO2-eq or DALY)
+   		 Δ C is the cost increase (in e.g., €)
+
+		 This ratio can be calculated to discriminate among different scenarios, but
+    also to determine, within a given scenario, in which life cycle stage to invest
+    in as a priority.
+ 3. The third case corresponds to losing both environmentally and financially,
+    since it leads to greater environmental and economic burdens.
+ 4. Finally, the fourth case corresponds to a financially beneficial but envi-
+    ronmentally unfavorable scenario. This corresponds to a purely short-term
+    economic view, as illustrated by the following example comparing different
+    car bumpers (Rebitzer et al. 2001).
+
+   This study includes an environmental life cycle assessment and an LCC compar-
+ing three types of car bumpers (Figure 6.21).
+   Compared to the polyamide bumper reinforced with glass fiber, the hemp-fiber-
+reinforced polypropylene scenario has the lowest environmental impact and lowest
+cost and is thus a win-win situation. The magnesium bumper is environmentally and
+economically unfavorable.
+Interpretation                                                                                                187
+
+
+                                            160
+
+                                            140
+                                                                                        Magnesium
+         Climate change impact (kgCO2-eq)
+                                            120
+
+                                            100
+
+                                             80
+
+                                             60
+                                                                                          Polyamide
+                                             40                                        reinforced with
+                                                       Polypropylene
+                                                                                          fiberglass
+                                             20       reinforced with
+                                                        hemp fiber
+                                              0
+                                                  0    10               20                  30           40
+                                                                Life cycle costs (€)
+
+
+FIGURE 6.21 Relationship between cost and climate change impact for three car bum-
+per scenarios. (From Rebitzer, G. et al., 2001. Systematische Auswahlkriterien für die
+Entwicklung von Verbundwerkstoffen unter Beachtung ökologischer Erfordernisse—
+Abschlussphase (euroMat 2001), Forschungsbericht, BMBF-Förderprogramm Sicherung
+des Industriestandorts Deutschland, Projektträger DLR, 637–688. With permission.)
+
+   The win-win case (1) seems ideal. In practice, however, many decision-makers
+and consumers will reinvest this saved money in an equally or even more polluting
+activity (e.g., a vacation in the Bahamas), making this scenario ultimately result in
+equal or higher environmental impacts. It is thus important to consider such rebound
+effects, as described in the following section.
+
+6.8.4 Rebound Effect
+As mentioned above, win-win situations only lead to environmental improvements
+when the financial gain is reinvested in less polluting activities, or rather, used to
+further reduce environment impacts. Another risk is that because of cost reduc-
+tion, people will consume more of the goods and therefore limit the environmental
+gain. For example, as light bulbs become more energy efficient, the light level has
+increased in parallel in households and streetlamps, thus reducing the environmental
+benefits (Herring 1999). Dahmus (2014) analyzed the historical efficiencies of the
+following 10 activities: pig iron production, aluminum production, nitrogen fertil-
+izer production, electricity generation from coal, oil, and natural gas, freight rail
+travel, passenger air travel, motor vehicle travel, and refrigeration. Over long time
+periods, improvements in efficiency have not succeeded in outpacing increases in the
+quantity of goods and services provided, resulting in a sizable increase in resource
+consumption across all 10 sectors.
+   In such situations, an LCA can be misleading, since the impacts per FU are
+reduced, but the ultimate environmental burden could increase. Such effects can
+be addressed by using a life cycle perspective to analyze the overall impact of a
+188                                            Environmental Life Cycle Assessment
+
+
+consumer, company, or country, which would then account for all types of consump-
+tion, including the reinvestment of saved money (Kaenzig and Jolliet 2007).
+   Policies can be implemented to help avoid such rebound effects, in which stan-
+dards or incentives are given to ensure that financial benefits from win-win solutions
+are reinvested to further reduce environmental loads.
+
+6.8.5 Accounting for Social Aspects
+Using the input–output method described in Section 4.4, it is possible to quantify the
+creation of jobs throughout the life cycle of a product or for an investment in a given
+industry (Frei 2000). This method replaces the emissions per euro from each sector
+by the number of jobs created per euro; thus, the number of jobs created per FU is
+calculated as in Equation 6.8:
+
+                                   t = P(I − A
+                                             % )−1y%                              (6.8)
+
+where:
+     t is the vector of created jobs
+    P is the employment matrix per monetary unit invested in a sector
+   Ã is the economic matrix expressing the expenses of each sector in every
+       other sector
+   y% is the demand expressing the amount spent in each sector per FU
+
+   This method was applied in a study conducted by Corbière-Nicollier and Jolliet
+(2003) to assess the environmental, economic, and social sustainability of various
+regional actions. This study determined the CO2 emissions, employment, and added
+value generated by an increase in investment of SF1 million in one of various eco-
+nomic sectors of the canton of Vaud in Switzerland. Figure 6.22 presents the result-
+ing impacts for three sectors: food and lodging, communication, and construction.
+   Investing in the food and lodging sector would result in the greatest CO2 emis-
+sions (66 tons/year), but would also create the most jobs (15 persons/year). The added
+value does not vary much among sectors.
+   In 2009, a working group published guidelines for the social life cycle assessment
+(SLCA) of products (UNEP 2009). This was done through the UNEP-SETAC Life
+Cycle Initiative, and in partnership with the International Reference Centre for the
+Life Cycle of Products, Processes and Services (CIRAIG), the Québec Action Fund
+for Sustainable Development (FAQDD), and the Belgian Federal Public Planning
+Service. The objective of a social LCA is to analyze and improve social and envi-
+ronmental performances of human activities to contribute to greater profitability
+and greater well-being in the long term. The guidelines describe the history, key
+concepts, and scope of application of various tools, focusing on the concepts of sus-
+tainable production and consumption, as well as corporate social responsibility. The
+SLCA includes the main phases of the classic LCA according to ISO 14040 and
+14044, modified to integrate social and socioeconomic considerations.
+   Building on this work, Table 6.9 presents the impact categories in a manner simi-
+lar to the LCIA framework of the Life Cycle Initiative (Jolliet et al. 2004, table 1),
+                                     70                                                                                                  16
+                                     60                                                                                                  14
+                                                                                                                                                                                              Interpretation
+
+
+
+
+                                     50                                                                                                  12
+                                                                                                                                         10
+                                     40
+                                                                                                                                          8
+                                     30
+                                                                                                                                          6
+                                     20
+
+
+
+
+                                                                                                                    Jobs (person/year)
+                                                                                                                                          4
+
+
+
+
+            CO2 emissions (t/year)
+                                     10                                                                                                   2
+                                      0                                                                                                   0
+                                          Food and lodging Communication                         Construction                                 Food and lodging Communication   Construction
+
+
+                                                                                       1
+
+                                                                                      0.8
+
+                                                                                      0.6
+
+                                                                                      0.4
+
+
+
+
+                                                              Added value (SF/year)
+                                                                                      0.2
+
+                                                                                       0
+                                                                                            Food and lodging    Communication                      Construction
+
+
+FIGURE 6.22 Impact on CO2 emissions, employment, and added value of the investment of SF1 million in the canton of Vaud (Switzerland) in three
+economic sectors (food and lodging, communication, and construction).
+                                                                                                                                                                                              189
+                                                                                                                                                                                  190
+
+TABLE 6.9
+Table to Indicate the Types of Impact (Row) and Damage (Columns) Categories Considered in Social LCA
+                                                                                     Damages Related to Intrinsic Values            Damages Related to Functional Values
+                                                                                      Human Health,           Human Rights +         Governance            Socioeconomic
+                                                                                         Safety +             Equality: Society                             Repercussions
+                                                                                   Psychological Health          + Workers
+Human health and environmental         Human toxicity, societal and workers                  ⊗
+ impacts
+                                       Human toxicity, worker                                ⊗
+                                       Casualties, societal                                  ⊗
+                                       Casualties, worker                                    ⊗
+                                       Freshwater depletion                                  ⊗
+Labor and production                   Local employment                                                                                                           ⊗
+                                       Fair salary                                                                    ⊗                     x                     x
+                                       Working hours                                                                  ⊗
+                                       Forced labor                                                                   ⊗
+                                       Child labor                                                                    ⊗
+                                       Gender equity                                                                  ⊗
+                                       Labor and company governance                                                   ⊗                    ⊗
+Local community and social life        Access to resources                                    x                                                                   (x)
+                                       Education
+                                       Community engagement                                                                                                       (x)
+                                       Interpersonal relations                                x
+                                       Indigenous rights                                                              ⊗                     x
+                                       Societal private + public governance                                                                 x                      x
+
+Note: “⊗” indicates links that could be quantitatively modeled, “x” indicates other links, and “()” indicates links that are only relevant if the corresponding damage category
+      were included in the LCA
+                                                                                                                                                                                  Environmental Life Cycle Assessment
+Interpretation                                                                         191
+
+
+defining impact categories grouped by stakeholder along the life cycle in rows and
+damage categories or area of protection in the columns. Further work is needed in
+this area, but the attributional LCA approach proposed by Norris (2006) and its
+adaptation to social LCA by Benoit-Norris et al. (2012; also see the Social Hotspots
+Database listed in Appendix I) represent an interesting initial operationalization
+toward a more complete social LCA.
+
+
+EXERCISES
+Exercise 6.1: Comparing Hand-Drying Scenarios Using LCA Software
+You will now use LCA software (e.g., SimaPro) to calculate results that can be com-
+pared to your previous hand calculations from Exercises 4.2 and 5.2.
+
+   • Step 1: Enter data for the two scenarios in the software (see guidelines for
+     performing calculations in SimaPro on the CRC Press website, Exercise
+     6.1) and calculate the emissions inventory and impacts.
+   • Step 2: Compare the energy use, CO2 emissions, and other inventory flows
+     of the two scenarios by using an impact assessment method (e.g., IMPACT
+     2002+).
+
+   Answer the following questions:
+
+   1. Compare your software results for energy use and CO2 emissions to the
+      hand calculations from the previous exercise, and explain any discrepan-
+      cies. Fill in a copy of Table 6.10 for each scenario.
+   2. Based on the software results, which scenario is better from an energy use
+      perspective? What about from a global warming perspective?
+   3. Use the software to determine which scenario results in more lead
+      emissions.
+
+   The scenarios can be built based on Figure 6.23. Note: To facilitate later work
+(sensitivity analyses, etc.), we recommend you create a process based on the measur-
+ing unit considered (one towel, 1 MJ, one apparatus) and then adjust the reference
+flow of each process to apply to the considered FU. For detailed instructions on how
+to build these scenarios in SimaPro, see the CRC Press website, Exercise 6.1.
+
+Exercise 6.2: Determining Uncertainty with Pedigree
+For the PM2.5 emissions associated with 1 kg liquid aluminum, the emission factor
+amounts to 0.0026 kg; and the uncertainty pedigree characterizing this emission
+flow is (1, 1, 2, 1, 1, 3) corresponding to, respectively, (UR, UR, UG, UT, UL , US), for a
+lognormal distribution.
+
+   1. Obtain the base uncertainty UB for PM2.5 from Table 6.6.
+   2. Determine the default uncertainty factors UR, UR, UG, UT, UL , US scores
+      using Table 6.5.
+                                                                                                                                         192
+
+
+
+
+TABLE 6.10
+Table of Values to Calculate and Compare
+                             Hand Calculations                 Software Calculations                  Differences
+Life Cycle Stage
+Process (unit)       Energy (MJ/unit)   Energy (MJ/FU)   Energy (MJ/FU)      CO2 (kg/FU)   Energy (MJ/unit)   Energy (MJ/FU)   Comment
+Materials
+Cast iron (kg)
+Steel (kg)
+Transport
+Transport (ton-km)
+Use
+Electricity (kWh)
+Waste
+Landfill
+Total
+                                                                                                                                         Environmental Life Cycle Assessment
+                     Process        Process        Process               Process             Process           Process               Process            Process
+                                                                                                                                                                     Interpretation
+
+
+
+
+       Existing      Plastic       Transport         Paper           Paper-landfilled         Steel           Cast iron          Metal-landfilled      Electricity
+      processes      output:        output:         output:              output:             output:           output:               output:            output:
+                   1 kg plastic      1 tkm        1 kg paper       1 kg paper landfilled    1 kg steel      1 kg cast iron     1 kg metal landfilled   1 TJ used
+
+
+
+                                 Process               Process                                                Process
+                                Dispenser              Towel                                                 Air-dryer
+          New              - Plastic              - Paper                                                - Steel + cast iron
+      processes            - Transport            - Transport                                            - Transport
+                           - Plastic landfilled   - Paper landfilled                                     - Metal landfilled
+                            Output: 1 device       Output: 1 towel                                       Output: 1 device
+
+
+
+                                         Process paper towel FU                                                        Process air-dryer FU
+                                    - Towel                                                                  - Electricity
+      Assembly
+                                    - Dispenser                                                              - Device
+                                        Output: 1 pair dry hands                                                    Output: 1 pair dry hands
+
+
+
+      Calculate/
+                                                                          Scenario comparison
+       compare
+
+
+FIGURE 6.23 Diagram of useful processes for the comparison of hand-drying scenarios in LCA software.
+                                                                                                                                                                     193
+194                                          Environmental Life Cycle Assessment
+
+                        2
+   3. Calculate the GSD0 for PM2.5 using Equation 6.2.
+                                 2
+   4. Interpret the obtained GSD0 , providing the 95% confidence interval on
+      the PM2.5 emission factors of 0.0026 kg PM2.5 per kilogram of liquid
+      aluminum.
+
+Exercise 6.3: Interpretation of Steel Front-End Panel
+You have been hired by Tesla Motors to work in collaboration with the material sci-
+ence department to develop new front-end panels. A front-end panel is a structural
+component that bears other elements and equipment such as the headlights and the
+radiator grill. Use the results presented throughout the book on the front-end panel
+scenarios to make recommendations for future designs.
+   First, you would like to determine which substances contribute most to human
+health impacts in the steel front-end panel scenario.
+
+   1. Use Figure 5.6 in Chapter 5 to determine the two midpoint categories that
+      contribute most to the human health damage considering both short- and
+      long-term damage.
+   2. Use Table 6.11 to calculate the following quantities:
+       • Midpoint impact for each substance
+       • Total impact for each midpoint impact category
+       • Total damage for human health
+       • Normalized damage for human health
+   3. Assume carcinogenic impacts generally have a factor 100 uncertainty
+      (meaning that the actual value ranges between 100 times higher and 100
+      times smaller) and respiratory inorganic impacts have a factor 10 uncer-
+      tainty. Which substances should be treated as having significant and
+      equivalent damage in this case, and which can be considered as having a
+      negligible contribution?
+   4. In Chapter 4, the CO2 emissions of the steel scenario are calculated as
+      follows:
+
+		1.28 kgCO2/kg steel × 10.0 kg steel/FU + 0.45 kgCO2/kWh electric-
+  ity × 19.7 kWh electricity + 3.67 kgCO2/kg oil × 2.3 kg oil + 2.80 kgCO2/L
+  gas × 80.0 L gas + 0.01 kgCO2/kg steel landfilled × 10.0 kg steel land-
+  filled = 253.9 kg CO2/FU
+
+		 Use this calculation to determine the priority of each of the following
+    ecodesign actions: recycling, extending lifetime, increasing motor effi-
+    ciency, reducing component weight.
+ 5. Using Figure 4.3, discuss how these priorities can change depending on the
+    distance traveled during the lifetime of the vehicle.
+
+
+Exercise 6.4: Comparison of Two Front-End Panels
+You are comparing two front-end panels for a car—one made out of aluminum and
+one made out of steel.
+Interpretation                                                                             195
+
+
+
+  TABLE 6.11
+  Midpoint Impacts for Pollutants Emitted to Air and Damage Factors
+                                                           Midpoint Impacts
+                                              Carcinogenic          Respiratory Inorganics
+                                            Characterization          Characterization
+  Pollutant               Emission (kg)   Factor (kgC2H3Cl-eq/kg)    Factor (kgPM2.5-eq/kg)
+  NOx                          0.22                  0                        0.127
+  PM2.5                       0.038                  0                          1
+  SO2                          0.44                  0                        0.078
+  Aromatic hydrocarbons      0.0041                3537                         0
+  Dioxin (2,3,7,8 TCDD)    77.4 × 10–12         1.72 × 109                      0
+                          Normalization
+                             Factor                 Damage Factors by Category
+                            (DALY/pt)      (DALY/kgC2H3Cl-eq)          (DALY/kgPM2.5-eq)
+  Human health               0.0071             2.8 × 10 –6               7.0 × 10–4
+
+
+
+
+   1. Figure 6.24 presents the probability distribution function of total primary
+      energy use for the aluminum front-end panel. The median primary energy
+      use is 2780 MJ/FU, and the GSD2 of this distribution is 1.6. What are the
+      upper and lower limits of the 95% confidence interval?
+   2. Figure 6.25 presents the frequency distribution of total primary energy use
+      for the steel front-end panel. The median primary energy use is 4400 MJ/
+      FU, and the upper and lower limits of the 95% confidence interval are 5060
+      and 3830 MJ. Which scenario is better according to the information of
+      Parts a and b—the steel or aluminum (notice the difference in the x-axis
+      range)?
+   3. Figure 6.26 shows the distribution of energy differences between the two
+      scenarios (steel minus aluminum). The median energy difference between
+      the two scenarios is 1620 MJ (i.e., steel uses 1620 MJ more than aluminum).
+      Given the high uncertainty over the energy used for the two scenarios, one
+      would expect the difference in energy between the scenarios to also be
+      widely distributed. Why is the distribution of energy difference narrower
+      than the distribution for each individual scenario? Using the information in
+      the graph, describe how you could approximately calculate the probability
+      that one scenario is better than the other (in two short sentences).
+
+Exercise 6.5: Monte Carlo Analysis and Taylor Series Expansion
+Instead of using a Monte Carlo analysis, you can use the Taylor series expansion
+approach (Equation 6.3) to analytically calculate the uncertainty distributions of the
+preceding exercises.
+   The steel component requires 15.4 kg steel/FU for its manufacturing, with an
+emission of 2.39 kg CO2/kg steel. Assume a GSD2 of 1.1 for these factors.
+196                                                                                      Environmental Life Cycle Assessment
+
+
+                                          0.2
+
+
+         Probability distribution     0.15
+              function (–)
+
+                                          0.1
+
+
+                                      0.05
+
+
+                                                 0
+                                                 2000 2500 3000 3500 4000 4500 5000 5500 6000 6500
+                                                                                Primary energy (MJ/FU)
+
+
+FIGURE 6.24 Probability distribution function of primary energy use for aluminum front-
+end panel.
+
+
+
+                                                                0.1
+                                    Probability distribution
+
+
+
+
+                                                               0.08
+                                         function (–)
+
+
+
+
+                                                               0.06
+
+                                                               0.04
+
+                                                               0.02
+
+                                                                 0
+                                                                 4000      4500      5000       5500         6000
+                                                                               Primary energy (MJ/FU)
+
+
+FIGURE 6.25 Probability distribution function of primary energy use for steel front-end
+panel.
+
+
+
+                                                      0.1
+                      Probability distribution
+
+
+
+
+                                                 0.08
+                           function (–)
+
+
+
+
+                                                 0.06
+
+                                                 0.04
+
+                                                 0.02
+
+                                                               0
+                                                               4000       4500          5000        5500         6000
+                                                                        Difference in primary energy use (MJ/FU)
+
+
+FIGURE 6.26 Probability distribution function of the difference in primary energy use for
+the two scenarios.
+Interpretation                                                                   197
+
+
+   The fuel consumption per marginal weight change is further assumed to be equal
+to 0.00004 l/kg-km over 200,000 km; thus, an 80 L gasoline consumption/FU
+(assume GSD2 of 1.1), with an emission of 2.8 kgCO2/L gasoline, which is assumed
+to have a higher uncertainty with a GSD2 of 1.77.
+
+   1. Calculate sensitivities: Assume steel manufacturing and gasoline consump-
+      tion are the only contributions to CO2 emissions over the life cycle of the
+      front-end panel. Calculate the percentage contributions of manufacturing
+      and gasoline consumption to the total front-end panel CO2 emissions. These
+      percentages are equivalent to the sensitivities of the output results to the
+      reference flow and emission factor input parameters for manufacturing and
+      gasoline consumption.
+   2. Use the four sensitivities calculated in Part a and the GSD2s provided above
+      to calculate the GSD2 of the output, and compare this value to the result of
+      Exercise 6.3a.
+

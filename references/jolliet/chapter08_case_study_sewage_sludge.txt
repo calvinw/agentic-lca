@@ -1,0 +1,1368 @@
+      8       LCA through Example
+              from A to Z
+              Treating Urban
+              Sewage Sludge
+              Gregory Houillon, Olivier Jolliet,
+              Shanna Shaked, and Myriam Saadé-Sbeih
+
+This chapter provides a concrete and complete example of a life cycle assessment
+(LCA) application. It compares alternative treatments of sewage sludge from munici-
+pal wastewater, as addressed in a detailed study (Houillon and Jolliet 2005) car-
+ried out in collaboration with a group of French and Swiss industries. Following a
+short introduction, this example illustrates the four phases of LCA: goal and scope
+definition, inventory of resource extractions and emissions, impact assessment, and
+interpretation. For each of these phases, the calculations will be detailed for each
+considered scenario. The analysis of environmental impact is calculated using two
+methods: IMPACT 2002+ (Jolliet et al. 2003) and Eco-indicator 99 (Goedkoop et al.
+1998).
+   This study is based on the Ecosludge project carried out at the Swiss Federal
+Institute of Technology Lausanne (EPFL), in partnership with Bonnard &
+Gardel (BG) Consulting Engineers, Ondéo Degrémont, Omnium de Traitement et
+Valorisation (OTV), Stéreau, and the Interdepartmental Syndicate for the Sanitation
+of Greater Paris (SIAAP). The authors gratefully acknowledge the inputs of the
+steering committee from this Ecosludge project.
+
+8.1 INTRODUCTION
+8.1.1 Overview of Case Study Application:
+       Urban Wastewater and Sewage Sludge Treatment
+Before describing the study objectives and the system studied, we first provide a
+basic understanding of sewage sludge treatment.
+
+8.1.1.1 Urban Wastewater Treatment
+Due to domestic usage and runoff, wastewater becomes loaded with organic and
+inorganic substances, either dissolved or suspended. Key substances found in
+wastewater include organic carbon, nitrogen, and phosphorus compounds, as well
+
+
+                                                                                211
+212                                          Environmental Life Cycle Assessment
+
+
+as traces of heavy metals and organic compounds. Wastewater is then transported
+to the wastewater treatment plant, where it is treated with physicochemical and
+biological processes. The most basic plants eliminate organic pollution (carbon,
+nitrogen, and phosphorus compounds), while the more sophisticated ones also
+capture micropollutants. The plant capacity is defined in terms of equivalent
+habitants (eq-hab), where 1 eq-hab represents the daily wastewater produced by
+a person.
+
+8.1.1.2 Urban Sewage Sludge Treatment
+The process of treating wastewater results in sewage sludge that can be one of two
+types.
+
+   1. Primary sludge is obtained by simply decanting wastewater. The solids that
+      are thus separated from the water are generally rich in minerals (such as
+      microsands and dirt) and also contain volatile organic materials.
+   2. Biological or secondary sludge results from biologically treating wastewa-
+      ter and is made up of bacterial bodies and their secretions.
+
+   Since wastewater treatment results in a substantial amount of sewage sludge, the
+sludge must undergo various treatment steps. Such treatment first reduces the sludge
+volume (e.g., by gravity thickening, in which the sediments are deposited), and at
+times a secondary volume reduction is needed (such as dehydration or centrifuga-
+tion). Depending on the sector, the sludge may then undergo stabilization (such as
+through direct drying, liming, or anaerobic digestion), followed by case-specific
+treatments. Section 8.2.3 describes the different sludge treatments accounted for in
+this study.
+   Urban sewage sludges differ from industrial sewage sludges, which come from
+the treatment of industrial wastewater and have different characteristics. This study
+focuses on the treatment of urban sewage sludge for a wastewater treatment plant
+of an equivalent capacity of 300,000 inhabitants. These results may thus have to be
+adapted for different sizes or types of wastewater treatment plants.
+
+8.1.2 Review of Environmental Assessment of Wastewater
+       Sludge: Treatments and Key Challenges
+Treatment of urban wastewater sludge is an environmentally sensitive problem
+due to the energy, costs, and pollutants involved. Laws concerning agricultural
+spreading of sludge (Spinosa 2001) and thermal oxidation processes are becoming
+increasingly restrictive. Controversy over the use of sludge is ongoing, and scien-
+tific arguments, as well as stakeholder values, need to be considered (Bengtsson
+and Tillman 2004). New treatment processes, such as pyrolysis and wet oxidation,
+have been introduced on to the market, but it is not yet clear which alternatives
+effectively reduce overall environmental impacts. The present study compares
+the life cycle environmental impacts of 12 wastewater sludge treatments, focusing
+on alternative processes and identifying key parameters to reduce environmental
+impacts.
+LCA through Example from A to Z                                                    213
+
+
+    A number of studies have been published comparing various sludge treatment
+processes, all of which add to the state of knowledge while leaving unanswered
+the question of which treatment processes reduce overall environmental impacts.
+Bridle and Skrypski-Mantele (2000) accounted for some additional processes (gas-
+ification) and demonstrated the benefit of phosphorus recovery, but only consid-
+ered input–output methods, without including metal transfers. Hwang and Hanaki
+(2000) presented energy and CO2 balances of sludge incineration processes using
+input–output methods, but did not consider other substance emissions. AERM
+(1999) included social aspects in their analysis of sludge treatment, but excluded
+alternative processes such as wet oxidation and pyrolysis and did not account
+for micropollutants, dioxins, and related human toxicity. Moreover, energy and
+coproduct recovery are not clearly described, though they can be very important
+for a comparative LCA (Lundin et al. 2000). Müller et al. (1999) presented a site
+analysis in Switzerland that cannot be used to analyze treatment processes on a
+general basis. Benz et al. (1995) carried out an LCA on sludge treatment processes,
+but using an outdated LCA methodology. Neumayr (1999) only considered digested
+sludges. Suh (1999) and Suh and Rousseaux (2002) performed a detailed analysis
+demonstrating the advantages of anaerobic digestion and the importance of heavy
+metals, but only compared agricultural spreading with fluidized bed incineration
+and landfilling. Huybrechts and Dijkmans (2001) accounted for many processes,
+but did not include the full life cycle approach. Lundin et al. (2004) discussed the
+potential advantages and drawbacks of recycling phosphorus in sludges compared
+with incineration scenarios, but performed no comparison with other thermal pro-
+cesses. Houillon and Jolliet (2005) presented preliminary results of this chapter’s
+case study, but focused only on energy and greenhouse gas impacts of digested and
+undigested sludges.
+    Several scientific challenges must therefore be addressed to provide a clearer
+understanding of environmental impact pathways and key parameters:
+
+   1. How well do alternative technologies for sludge treatment, such as pyrolysis
+      or wet oxidation, perform from an environmental point of view? Are they
+      significantly better than high performance incineration?
+   2. What is the importance of avoiding energy use and emissions by using
+      coproducts? How should the substitutions of fertilizers, natural gas, coal, or
+      methanol be consistently compared in different treatments?
+   3. What are the environmental advantages of digesting sludges before land-
+      spreading or thermal treatment?
+   4. How important are the human health and ecosystem impacts of indirect
+      emissions due to transport and to the production of auxiliary inputs relative
+      to the impacts of direct emissions of respiratory inorganics and heavy met-
+      als during treatment?
+
+    This chapter addresses these questions by quantifying environmental impacts of
+alternative processes applied to wastewater sludge treatment (wet oxidation, pyroly-
+sis, incineration in cement kilns) compared with processes typically used in Europe
+(agricultural spreading, fluidized bed incineration, landfilling). This work improves
+214                                             Environmental Life Cycle Assessment
+
+
+on previous studies in the following ways: Most data are provided from existing
+industrial plants; and substitutions, sensitivity analysis, and micropollutant trans-
+fers have been taken into account, which constitutes an important step forward for
+sound decision-making in this very sensitive domain. Going through each phase
+of an LCA, we first define the functional unit, system boundaries, and considered
+scenarios. Results of the inventory analysis and of the impact assessment are then
+presented, comparing the 12 scenarios. In the interpretation and discussion section,
+each reference scenario is discussed in detail, and a sensitivity analysis finally identi-
+fies key parameters leading to policy recommendations.
+
+
+8.2     GOAL AND SCOPE DEFINITION
+8.2.1    Objectives
+The goal of this study is to evaluate several systems to treat wastewater sludge
+from a treatment plant for 300,000 equivalent inhabitants and to determine the
+key parameters influencing the environmental performance. This study quanti-
+fies the environmental impacts of six treatment processes applied both to undi-
+gested and digested mixed sludge, where each process is described in more detail
+in Section 8.2.3:
+
+   1. Agricultural landspreading of limed pasty sludge (AGRI)
+   2. Incineration in fluidized beds of pasty sludge (INCI)
+   3. Wet oxidation of liquid sludge (WETOX)
+   4. Pyrolysis of dried sludge (PYRO)
+   5. Incineration in cement kilns of dried sludge (CEME)
+   6. Landfilling of limed pasty sludge (LANDF)
+
+   Processes applied to digested sludge are noted by adding a “d” to each acronym.
+
+8.2.2 Functional Unit
+The function considered in all scenarios is the treatment of urban wastewater sludge
+at the output of the wastewater treatment plant (WWTP) before sludge thickening
+has occurred. The chosen functional unit used as the basis for comparison is the
+sludge resulting from 1 t of disposed dry matter (tDM), so all emissions, mate-
+rials, and energy consumption are expressed relative to this functional unit (ISO
+2006). The considered sludge is composed of 60% primary sludge and 40% bio-
+logical sludge. The WWTP water is treated for organics, nitrogen, and phosphate
+compounds.
+
+8.2.3 System Definition
+8.2.3.1 Description of Studied Scenarios
+This study considers 12 scenarios of sewage sludge treatment, where the first 6 treat-
+ments are without digestion and defined as follows.
+LCA through Example from A to Z                                                      215
+
+
+  1. Agricultural landspreading of limed pasty sludge (AGRI): Sludges are
+     thickened, dehydrated, and stabilized (limed) in the WWTP, thus becom-
+     ing limed pasty sludge (30% dry solid content). They are then stored an
+     average of eight months in a controlled and deodorized storage area, since
+     spreading over agricultural land can only take place at given periods in the
+     year. The sludge is transported by 40 t trucks to the field, where it is then
+     stored for an average of one month at the edge of the agricultural land,
+     before being distributed over the land using a tractor. This spreading takes
+     advantage of the fertilizing elements in the sludge, but micropollutants in
+     the sludge are also spread on to the agricultural land.
+  2. Incineration in fluidized bed of pasty sludge (INCI): Incineration is a ther-
+     mal process that leads to the destruction of the sludge organic matter. The
+     process considered here is incineration at the WWTP, in a fluidized bed fur-
+     nace at 850°C. The pasty sludge (25% dry solid content after dehydration)
+     is burned and releases combustion gases that experience dry gas treatment
+     before their emission into the atmosphere. The fly ash and other residues
+     are then sent to a final waste storage center, where they may be stabilized in
+     cement. The incineration process destroys pathogens and organic matter, so
+     that transportation is limited to residues.
+  3. Wet oxidation of liquid sludge (WETOX): This WWTP process consists
+     of using oxygen for aqueous oxidation of thickened sludge (6.8% dry solid
+     content), at a temperature of 235°C and a pressure of 40 bar (Luck 1999).
+     Operating at a higher pressure than fluidized bed incineration, this process
+     generates a mineral residue that is then transported to a waste storage center.
+     Wet oxidation breaks down the organic matter into carbon dioxide and water
+     vapor that are emitted to air, along with other organic materials (aqueous
+     effluent) that are then reprocessed by the WWTP. The carbon load in the
+     effluent can be used in place of methanol for the WWTP, but this is not a stan-
+     dard substitution and has thus only been considered in a sensitivity analysis.
+  4. Pyrolysis of dried sludge (PYRO): Sludge is thickened, dehydrated to 95%
+     dry solid content and thermolyzed at 500°C. Pyrolysis (or thermolysis) is
+     thermochemical decomposition of organic matter without oxygen. This
+     reaction produces a thermolysis gas, which can be reused for other applica-
+     tions (such as drying and heating), and a carbonaceous residue that is trans-
+     ported to a waste storage center. This process reduces flue gas treatment.
+     The carbonaceous residue can be burned on or off the WWTP site. The
+     thermolysis gas produced can be transported over longer distances than the
+     heat recovered from the incineration process described in (2), thus decou-
+     pling production from recovery in both space and time.
+  5. Incineration of dried sludge in cement kilns (CEME): In this process, sludge is
+     dried at the WWTP to 95% dry solid content and transported to the cement fac-
+     tory. Then, sludge is burned in an oven at 1400°C, with other fuels, to destroy
+     organic matter and produce clinker (a type of cement). After use of the cement
+     produced with sludge ash, it is deposited into an inert waste storage center. The
+     mineral component of the sludge thus becomes valuable as building material.
+     Some micropollutants are emitted into the air during sludge combustion.
+216                                              Environmental Life Cycle Assessment
+
+
+   6. Landfilling of limed pasty sludge (LANDF): After liming (described in 1.),
+      sludge is stored in a deodorized building for 15 days at the WWTP. Then,
+      the limed pasty sludge (30% dry solid content) is transported to an organic-
+      waste storage center. Landfills generally only require that sludges must be
+      at least 30% dry solid content. But, French and Swiss legislation trends are
+      restricting the amounts of such landfills (those with organic matter, since
+      this is not considered a final residue). 60% of the landfill methane is col-
+      lected and flared off to reduce methane emissions.
+
+   The incineration (INCI), wet oxidation (WETOX), pyrolysis (PYRO), and cement
+kiln (CEME) scenarios all use thermal oxidation processes, the impacts of which are
+discussed in Section 8.4.
+   The next six scenarios use the same treatments as the first six, with the addition of
+anaerobic digestion prior to the treatment process. Through this process, the organic
+materials present in the sewage sludge are degraded by bacteria in the absence of
+oxygen, thus producing biogas. The scenarios using digested sewage sludge are rep-
+resented by a lowercase letter d:
+
+   7. AGRI d: Spreading of digested, limed paste-like sewage sludge.
+   8. INCI d: Fluidized bed incineration of digested paste-like sewage sludge.
+   9. WETOX d: Oxidization of digested, thickened sewage sludge.
+  10. PYRO d: Pyrolysis of digested, dried sewage sludge.
+  11. CEME d: Incineration in cement kiln of digested, dried sewage sludge.
+  12. LANDF d: Landfilling of digested, limed paste-like sewage sludge.
+
+   Details of each scenario, the sludge composition, and the main characteristics of
+the WWTP are given in Houillon and Jolliet (2005).
+8.2.3.2 System Boundaries and Flow Chart
+Along with the extraction, transport, and use of materials and energy, the system boundar-
+ies include: site infrastructure, sludge thickening, main sludge treatment processes, mat-
+ter losses, sludge and residue transport, and solid waste treatment. The sludge treatment
+systems consist of different substeps for each type of treatment, ordered by their position
+in the treatment chain (Figure 8.1), which enables identification of common modules
+among the different scenarios. These modules can be structured into seven treatment
+steps common to most scenarios, which are indicated by the left integer in each module
+number of Figure 8.1, corresponding to each row. The right integers indicate different
+ways of performing this treatment step. The input quantities and specific aspects of each
+module differ for each scenario:
+
+   1. Primary volume reduction (thickening)
+   2. Secondary volume reduction (dehydration, centrifugation, etc.)
+   3. Stabilization (direct drying, liming, anaerobic digestion)
+   4. Storage (dried sludge, paste-like sludge, etc.)
+   5. Sludge and residue transportation (40 t truck)
+   6. Main sludge treatment (spreading, incineration, etc.)
+   7. Treatment of by-products (e.g., storage)
+                                                                                       Combined sludge
+
+
+
+                                                                                             Module 11
+                                                                                             thickening
+
+                                                                                             Module d
+                                                                                             digestion
+
+
+
+
+               Module 21                    Module 21                                                           Module 21                  Module 21                  Module 21
+              dehydration                  dehydration                                                         dehydration                dehydration                dehydration
+
+
+
+               Module 31                                                                                        Module 32                  Module 32                 Module 31
+                liming                                                                                       storage + drying           storage + drying              liming
+                                                                                                                                                                                           LCA through Example from A to Z
+
+
+
+
+                Module 42                    Module 43                   Module 41                              Module 45                  Module 45                  Module 44
+             storage of pasty             storage of pasty               storage of                             storage of                 storage of              storage of pasty
+       sludge before landspreading   sludge before incineration        liquid sludge                           dried sludge               dried sludge         sludge before landfilling
+
+
+
+               Module 51                                                                                                                   Module 51                 Module 51
+         transport by 40 t truck                                                                                                     transport by 40 t truck   transport by 40 t truck
+
+
+
+              Module 61                      Module 62                  Module 63                              Module 64 d               Module 65
+        storage + landspreading      fluidized bed incineration        wet oxidation                            pyrolysis           cement kiln incineration
+
+
+
+                                            Module 51                    Module 51                              Module 51
+                                      transport by 40 t truck      transport by 40 t truck                transport by 40 t truck
+
+
+
+                                            Module 71                   Module 72                              Module 73                  Module 75                   Module 74
+                                            storage of                   storage of                            storage of           storage of sludge ashes           storage of
+                                       incineration residues       wet oxidation residues                   pyrolysis residues      encapsulated in cement           pasty sludge
+
+             AGRI scenario            INCI scenario               WETOX scenario                           PYRO scenario                CEME scenario             LANDF scenario
+                                                                                                                                                                                           217
+
+
+
+
+FIGURE 8.1     Sludge treatment scenarios expressed as series of common types of modules. In the digestion scenarios, digestion occurs after thickening.
+218                                                   Environmental Life Cycle Assessment
+
+
+   The treatment processes of the digested sludge, represented by d, take into account
+the digestion module, indicated in a dashed box.
+
+8.2.4 System Modeling: Reference Flows, Direct
+       Emissions, Substitutions, and Data Quality
+Table 8.1 summarizes the main reference flows for each scenario, showing that
+electricity and fuel are used in all disposal routes. Drying before pyrolysis and
+
+
+
+TABLE 8.1
+Main Reference and Intermediary Flows for the Treatment of the Undigested
+and Digested (in Italics) Sludges
+                    Unit        AGRI       INCI      WETOX         PYRO       CEME        LANDF
+                               AGRI d     INCI d    WETOX d       PYRO d     CEME d      LANDF d
+Acid               kg/tDM        1.8        —           —           5.4         5.4          1.2
+ (hypochloric,
+ nitrous,
+ sulfuric)
+                  kg/tDMd        1.8        —           —           5.4         5.4          1.2
+Active coal        kg/tDM         —          2          —            —          —            —
+                  kg/tDMd         —          2          —            —          —            —
+Copper sulfate     kg/tDM         —         —           14           —          —            —
+                  kg/tDMd         —         —           14           —          —            —
+Electricity       kWh/tDM       233.7      400.4       796.8       944.3      336.8        159.8
+                 kWh/tDMd       236.6       284        490.9       488.2      305.9        186.4
+Fuel               kg/tDM        11.1      14.4         1.8         37.4        38          14.3
+                  kg/tDMd         6.5      10.3         1.8         37.4       37.7          8.8
+Lime               kg/tDM        400        30          —            30         —           400
+                  kg/tDMd       185.6      20.3         —           20.3        —          185.6
+Natural gas      Nm3/tDM          —         65          —          314.5      314.5          —
+                 Nm3/tDMd         —        131.6        —          212.3      212.3          —
+Nitrogen           kg/tDM         —         —           —           0.4         —            —
+                  kg/tDMd         —         —           —           0.2         —            —
+Polymer            kg/tDM        7.1        7.1         0.1         7.1         7.1          7.1
+                  kg/tDMd        4.9        4.9         0.1         4.9         4.9          4.9
+Oxygen           Nm3/tDM          —         —          810           —          —            —
+                 Nm3/tDMd         —         —          270           —          —            —
+Weld               kg/tDM         —         —          35.5          6          —            —
+                  kg/tDMd         —         —          23.9          1          —            —
+
+Note: tDM(d) represents tons of dry matter (digested) and Nm3 represents normal cubic meters. Dashes
+      indicate that data is not relevant to that scenario.
+LCA through Example from A to Z                                                     219
+
+
+incineration in cement kilns requires substantial amounts of natural gas (315 Nm3/
+tDM, where Nm3 is a normal cubic meter) and electricity (166 kWh/tDM). Wet oxi-
+dation demands most electricity for oxygen production and the actual wet oxidation
+process. For agricultural spreading and landfilling, lime is needed for stabilization
+(400 kgCaO/tDM).
+   Resource extractions and pollutant emissions associated with the supply chains of
+each reference flow are then calculated by multiplying each flow by emission factors
+from standard LCA databases, as described in Section 8.2.4.3.
+
+8.2.4.1 Direct Emissions and Micropollutant Transfers
+In addition to the indirect emissions associated with intermediary flows, there are also
+direct emissions of substances contained in the sludge. For carbon-based emissions,
+CO2 is emitted during combustion, and methane is emitted by landfilling. Human and
+ecosystem toxicity is impacted by emissions due to dry matter losses, heavy metal
+transfers, and wastewater treatment generated by sludge treatment processes. Table 8.2
+characterizes the amount of micropollutants in the sludge, which are then multiplied
+by transfer factors based on measurements and literature data (Carpi and Lindberg
+1997). These transfer factors describe, for each scenario, the fraction of each micro-
+pollutant transferred from the sludge to air, water, and soil, summed over all treatment
+steps (Figure 8.2). We consider here 6 organic and 16 metallic micropollutants.
+
+8.2.4.2 Substitutions
+To account for the coproducts of the various sludge treatments, we first identify
+for each scenario the type and amount of product substituted in the technosphere
+(Table 8.3). Emissions and resource use associated with these substitutions are
+avoided and thus subtracted from the inventory of each scenario, following the sys-
+tem expansion approach described in Section 4.5.3. Sludge treatment can lead to
+scenario-specific substitutions of both matter and energy.
+   For matter substitution, agricultural spreading (AGRI) decreases the need for N-,
+P-, and K-fertilizers due to the presence of nitrogen, phosphorus, potassium, and
+
+
+
+        TABLE 8.2
+        Micropollutants Contained in Sludge (kg/tDM)
+        Metallic   kg/tDM    Metallic   kg/tDM         Organic           kg/tDM
+        Ag          0.01       Mn        0.3      Benzo[b]fluoranthene   0.0006
+        Al          0.01       Mo        0.005    Fluoranthene           0.0015
+        As          0.005      Ni        0.05     Benzo[a]pyrene         0.0006
+        Cd          0.01       Pb        0.3      Dioxins                0.00005
+        Co          0.005      Sb        0.01     Furans                 0.000005
+        Cr total    0.1        Se        0.003    PCBs                   0.0005
+        Cu          0.5        Sn        0.01
+        Hg          0.005      Zn        1.4
+220                                                 Environmental Life Cycle Assessment
+
+ 100%
+
+  90%
+                                           AGRI
+
+  80%                                      INCI
+                                           WETOX
+  70%                                      PYRO
+                                           CEME
+  60%                                      LANDF
+
+  50%
+
+  40%
+
+  30%
+
+  20%
+
+  10%
+
+   0%
+         Ag   Al   As    Cd   Co    Cr   Cu    Hg   Mn   Mo    Ni    Pb   Sb    Se   Sn   Zn
+
+
+FIGURE 8.2 Fraction of each type of sludge micropollutant that is transferred to the envi-
+ronment (air, soil, or water) for the different scenarios. All values are normalized relative to
+the agriculture scenario.
+
+
+
+limestone in sludge. Wet oxidation (WETOX), on the other hand, produces an easily
+degradable effluent, which can substitute methanol in the process of denitrification
+in the WWTP. This methanol substitution is addressed in the sensitivity analysis of
+the energy use in each scenario (Section 8.4.1). Finally, sludge incineration in cement
+kilns (CEME) substitutes the use of limestone by providing mineral matter for clin-
+ker production (Obrist and Lang 1986).
+   Fluidized bed sludge incineration (INCI) leads to energy substitution by recover-
+ing heat from the flue gas, and therefore substituting natural gas used for heating.
+For wet oxidation (WETOX), heat is recovered from the processed wastewater, also
+reducing natural gas needs. For pyrolysis (PYRO) and cement kilns (CEME), the
+pyrolysis gas and heat recovered from the direct sludge drying system both replace
+natural gas use. The cement kiln sludge treatment also replaces fuel and coal by
+producing heat for the cement production process.
+   Finally, adding the process of sludge anaerobic digestion prior to any treatment
+allows for the substitution of natural gas and reduction in organic matter. Digested
+sludges, however, reduce substitution capabilities of subsequent thermal oxidation
+processes due to the lower calorific value.
+
+8.2.4.3 Data Sources and Quality
+Thanks to the direct involvement of industries in the study, most reference and inter-
+mediary flows and direct emission factors come from measurements on industrial
+plants or plant design models (Houillon and Jolliet 2001), reducing uncertainties
+by making them as close as possible to real conditions. Additional emission factors
+TABLE 8.3
+Amounts of Materials and Energy Carriers Substituted for the Scenarios without/with Digestion
+                                                        AGRI/         INCI/     WETOX/    PYRO/     CEME/     LANDF/
+Treatment Step           Substitutions         Unit     AGRI d       INCI d     WETOX d   PYRO d    CEME d    LANDF d
+                                                                                                                        LCA through Example from A to Z
+
+
+
+
+Anaerobic digestion   Natural gas             Nm3/tDM     0/152       0/152       0/152    0/152     0/152     0/152
+Stabilization         Natural gas             Nm3/tDM       —           —           —      80/54     80/54      —
+Main treatment        Natural gas             Nm3/tDM       —       180.5/123    192/96   450/175      —        —
+                      Ammonium nitrate         kg N     20.8/17.8       —           —        —         —        —
+                      Triple superphosphate    kg P      28.7/33       —          —         —         —         —
+                      Potassium chloride       kg K      2.4/2.4       —          —         —         —         —
+                      Lime                    kg CaO    200/137.5      —          —         —         —         —
+                      Fuel                      kg         —           —          —         —       104/63      —
+                      Coal                      kg         —           —          —         —       170/103     —
+                      Marl and limestone        kg         —           —          —         —       350/350     —
+                                                                                                                        221
+222                                                     Environmental Life Cycle Assessment
+
+
+
+TABLE 8.4
+Nonrenewable Primary Energy Use and CO2 and CH4 Emissions per Unit of
+the Main Inputs in Sludge Treatment, Based on Ecoinvent 1.0 Data
+                              Nonrenewable
+Products                      Primary Energy         Unit          CO2           CH4                Unit
+Active coal                         70.5             MJ/kg         5.2        1.2 × 10−2        kg/kg
+Ammonium nitrate                    49.4             MJ/kg          1         9.2 × 10−3       kg/kgN
+Chemical organic                    41.8             MJ/kg         1.8        3.0 × 10−3        kg/kg
+Coal                                33.85            MJ/kg        122.7           0.4           kg/GJ
+Copper sulfate crystallized         89               MJ/kg         0.8        1.8 × 10−3        kg/kg
+ (36% wet)
+Electricity                         13.6          MJ/kWh          150.4           0.3           kg/GJ
+Fuel                                46.7           MJ/kg           93.5           0.1           kg/GJ
+Hydrochloric acid                   22.5           MJ/kg            0.8       1.6 × 10−3        kg/kg
+Lime                                 2.8          MJ/kgCaO          1.4       1.3 × 10−3      kg/kgCaO
+Limestone                            0.11          MJ/kg         6.0E−3       1.0 × 10−5        kg/kg
+Marl                                 0.11          MJ/kg         6.1E−3       1.0 × 10−5        kg/kg
+Methanol                            35             MJ/kg            0.9      Not available      kg/kg
+Natural gas                         39.25          MJ/Nm3          64.4           0.2           kg/GJ
+Nitric acid                         11.8           MJ/kg           0.56       1.6 × 10−3        kg/kg
+Nitrogen                             6.8           MJ/kg            0.3       5.2 × 10−4        kg/kg
+Oxygen                              10.5           MJ/kg            0.3       5.2 × 10−4        kg/kg
+Polymer                             41.8           MJ/kg            1.9      Not available      kg/kg
+Potassium                           11.8          MJ/kgK2O         0.63       1.7 × 10−3      kg/kgK2O
+Sulfuric acid                        5.22          MJ/kg            0.2       5.1 × 10−4        kg/kg
+Superphosphate triples              46             MJ/kgP          2.46       3.8 × 10−3       kg/kgP
+Transport by 40 t trucks             2.6           MJ/tkm           0.1       2.6 × 10−4       kg/tkm
+Weld                                22             MJ/kg            0.8       1.6 × 10−3        kg/kg
+
+Note: For future studies, we recommend instead using the latest ecoinvent data for these factors.
+
+
+
+
+come from OFEFP (1998) and Suter et al. (1996a,b). Table 8.4 presents a sample of
+emission factors for CO2 and CH4 emissions associated with each input in sludge
+treatment.
+   Sensitivity studies comparing these original data with those from the ecoinvent
+database (Frischknecht et al. 2005) do not show major differences for the considered
+processes and did not justify a full update in the final study stage. For a selection of
+the same flows, ecoinvent 2.2 data are available in Appendix 3.
+   To check that emissions are reasonable, we calculate and check the mass balances
+for carbon, nitrogen, and phosphorus. Figure 8.3 shows the carbon mass flows in the
+agricultural landspreading scenario, with the carbon that starts in the sludge eventu-
+ally all being accounted for. A ton of dry sludge matter contains 338.7 kg carbon,
+which leaves the system as suspended matter in wastewater and as gases (CH4, CO,
+LCA through Example from A to Z                                                     223
+
+
+  Remaining carbon                                      Exchange with environment
+
+               338.7                Carbon                Air        CO2       –338.7
+                               in sludge (kg C)
+
+                                                       Wastewater    MeS         –7.0
+               306.9             Module 11             Wastewater    MeS         –4.5
+                                 Thickening            Wastewater    MeS        –20.3
+
+
+               306.9             Module d
+                                 Digestion
+
+
+
+               292.4            Module 21              Wastewater    MeS        –14.5
+                                Dehydration
+
+
+
+               292.4             Module 31
+                                  Liming
+
+
+
+               292.4             Module 42
+                               Storage of pasty
+                         sludge before landspreading
+
+
+
+               292.4            Module 51
+                           Transport by 40 t truck
+
+                                                       Wastewater    MeS       –0.003
+                 0.0            Module 61.a               Air        CH4        –10.5
+                           Storage + landspreading                   CO2       –281.9
+
+
+FIGURE 8.3 Carbon balance of sludge for agricultural landspreading of limed pasty sludge
+scenario (expressed in kg carbon per ton dry matter).
+
+
+
+CO2, and volatile organic compounds) during sludge digestion and combustion. The
+amount of carbon remaining in the system after the last process is zero and thus
+closes the balance. Carbon dioxide emissions linked to fossil fuel consumption are
+added in a second step.
+    Uncertainties arise for various reasons, including data quality, as well as approxi-
+mations in the inventory data, transfer coefficients, and substituted flows. Moreover,
+since the net inventory flows are the differences between the large flows associated
+with treatment emission/consumption and the large substituted flows, the relative
+uncertainties over these net flows are high. This LCA methodology is also limited
+in the types of impacts it considers; pathogenic and sanitary risks are not taken into
+account, and neither are noise, odors, or visual impacts.
+224                                             Environmental Life Cycle Assessment
+
+
+8.3      INVENTORY RESULTS
+8.3.1 Intermediary Flows and Detailed Calculation of the
+       Energy Consumption of the INCI d Scenario
+We first illustrate the inventory calculation by presenting a detailed determination
+of the energy consumption for the incineration scenario that includes digestion. The
+INCI d scenario contains seven unit processes (Figure 8.1): thickening, digestion,
+dehydration, storage, and sludge recovery, followed by fluidized bed incineration,
+transportation of residue by 40 t truck, and incineration residue storage. The inter-
+mediary flows for each unit process are presented in Figure 8.4. They correspond to
+the flows of matter and energy required per functional unit, namely per ton of treated
+dry matter sludge. For example, to digest 1 t of dry matter sludge, 65 kWh of electric-
+ity and 38 Nm3 of biogas are necessary, whereas 59 Nm3 of excess gas are produced.
+    These intermediary flows are determined from various sources, with preference
+for values obtained or calculated from data supplied by wastewater treatment plant
+
+                                         Combined sludge
+
+                                                  1 t DMS (dry matter sludge)
+
+   Electricity    42 kWh/FU                 Module 11
+   Polymer        0.13 kg/FU                Thickening
+                                                   1 t DMS
+
+   Electricity    65 kWh/FU                 Module d                   59 Nm3/FU biogas
+   Biogas         38 Nm3/FU                 Digestion
+                                                 0.675 t DMS
+
+   Electricity    47 kWh/FU                Module 21
+   Polymer          5 kg/FU                Dehydration
+                                                0.675 t DMS
+
+                                            Module 43
+   Electricity    20 kWh/FU              storage of pasty
+                                    sludge before incineration
+                                                  0.675 t DMS
+   Electricity    176 kWh/FU
+   Biogas         132 Nm3/FU                 Module 62
+   Whitewash        20 kg/FU         fluidized bed incineration
+   Active coal       1 kg/FU
+   Diesel           0 kg/FU                       336 kg ashes
+                                                  45 kg residue
+                                            Module 51
+      Transport   45 tkm/FU           transport by 40 t truck
+                                                  336 kg ashes
+                                                  45 kg residue
+   Diesel            1 kg/FU                Module 71
+   Electricity    0.2 kWh/FU                storage of
+   Heating oil     0.06 kg/FU          incineration residues
+
+
+FIGURE 8.4 Intemediary flows of the INCI d scenario.
+LCA through Example from A to Z                                                     225
+
+
+operators and by project industrial partners. Other data has been taken from previ-
+ous studies.
+    It is possible to calculate the nonnewable primary energy consumed per ton of
+dry sludge matter in the INCI d scenario (Table 8.5) by multiplying each interme-
+diary flow in Figure 8.4 by the required energy consumed to make each unit of
+these flows available. For the thickening module (11), 41.6 kWh of electricity and
+0.13 kg of polymers are required for thickening 1 t of dry sludge; 1 kWh requires
+the consumption of 13.6 MJ of nonrenewable primary energy, and 1 kg of polymer
+consumes 41.8 MJ of nonrenewable primary energy. The energy consumption of the
+module is thus given by: 41.6 kWh/FU × 13.6 MJ/kWh + 0.13 kg/FU × 41.8 MJ/kg =
+566 + 5 = 571 MJ of nonrenewable primary energy.
+    The substituted energy part of Table 8.5 corresponds to the various processes that
+can be used to replace other energy sources. The biogas production during digestion
+can be substituted for natural gas used to generate hot water. Moreover, heat gener-
+ated by the incineration fumes can also be recovered to heat water. These two types
+of substitutions generate energy savings of 9227 MJ nonrenewable primary energy
+per ton of dry sludge.
+    In this scenario, the nonrenewable primary energy consumed (10,768 MJ) exceeds
+the 9,227 MJ saved. The largest energy consumption occurs during incineration
+(8000 MJ), but the incineration module also allows for the substitution of 3257 MJ
+for heating hot water. The net consumption would thus be higher if the various sub-
+stitutions were not actually realized.
+
+8.3.2 Overall Inventory Results
+The process described to inventory energy use in Section 8.3.1 is applied to
+inventory-pollutant emissions across all scenarios, and presented in Table 8.6. The
+analysis of the different transfer rates of heavy metals (Figure 8.2) shows that results
+are similar for the different thermal oxidation processes (incineration, wet oxidation,
+pyrolysis, and cementary incineration), representing 25% of the significantly higher
+transfers in case of agricultural application. For cadmium, mercury, and zinc, the
+landfill scenario transfers amount to approximately double the thermal oxidation
+transfers.
+
+8.4 IMPACT ASSESSMENT
+Two methods were used for impact assessment: Eco-indicator 99 (Goedkoop et
+al. 1998; Goedkoop and Spriensma 1999) and Impact 2002+ (Jolliet et al. 2003).
+Since Eco-indicator 99 did not have factors available for some sludge micropol-
+lutants, complementary factors were developed for these substances. The present
+analysis focuses on four impact categories: nonrenewable primary energy, global
+warming, human toxicity, and ecotoxicity. Impacts in other impact categories,
+such as acidification and resource use, are highly correlated with nonrenewable
+primary energy (Huijbregts et al. 2010) and are therefore not reported separately
+here.
+226                                                           Environmental Life Cycle Assessment
+
+
+
+TABLE 8.5
+INCI d Nonrenewable Primary Energy Assessment Calculations
+                                                 Intermediary       Energy per Unit
+Energy Consumption                               Flows per FU            Flowa             Energy per FU
+11      Thickening
+                Electricity                      41.6 kWh/FU          13.6 MJ/kWh           566 MJ/FU
+                  Polymer                         0.13 kg/FU           41.8 MJ/kg            5 MJ/FU
+33      Digestion
+                 Electricity                      65 kWh/FU           13.6 MJ/kWh           884 MJ/FU
+21      Dehydration
+                Electricity                      46.6 kWh/FU          13.6 MJ/kWh           633 MJ/FU
+                  Polymer                          4.7 kg/FU           41.8 MJ/kg           198 MJ/FU
+44      Storage and pasty sludge recovery prior to incineration
+                 Electricity                  19.8 kWh/FU             13.6 MJ/kWh           269 MJ/FU
+62      Fluidized bed incineration
+                 Electricity                     175.5 kWh/FU         13.6 MJ/kWh          2,387 MJ/FU
+                  Natural gas                    131.6 Nm /FU
+                                                          3          39.25 MJ/Nm    3      5,166 MJ/FU
+                  Whitewash                       20.3 kg/FU         2.8 MJ/kgCaO           57 MJ/FU
+                  Active coal                      1.4 kg/FU           70.5 MJ/kg           99 MJ/FU
+                  Diesel                           7.2 kg/FU           46.7 MJ/kg           336 MJ/FU
+51      Residue transport by 40 t truck
+                 Transport                        45.3 tkm/FU          2.6 MJ/tkm           118 MJ/FU
+71      Incineration residue storage
+                  Diesel                            1 kg/FU            46.7 MJ/kg           44 MJ/FU
+                  Electricity                     0.2 kWh/FU          13.6 MJ/kWh            3 MJ/FU
+                  Heating oil                     0.06 kg/FU           44.4 MJ/kg            3 MJ/FU
+Total                                                                                     10,768 MJ/FU
+
+          Substituted Energy                    Substituted Fuel    Energy per Unit       Energy per FU
+33      Digestion biogas production
+                 Produced biogas                  234 Nm3/FU
+                  Substituted natural gas   b    152.1 Nm3/FU        39.25 MJ/Nm3          5,970 MJ/FU
+62      Fluidized bed incineration: Heat recovery
+                 Energy savings                2 390 MJ/FU
+                  Substituted natural gas        83.0 Nm3/FU         39.25 MJ/Nm3          3,257 MJ/FU
+Total                                                                                      9,227 MJ/FU
+Balance                                                                                    1,776 MJ/FU
+
+a   Nonrenewable primary energy.
+b   The substituted energy is calculated by multiplying the volume of biogas produced by the lower heat
+    value of 23.4 MJ/Nm3 for biogas. The volume of natural gas substituted is then calculated by dividing
+    this energy by the heat production efficiency of 0.8, then by assuming a natural gas substitution (lower
+    heat value of 36 MJ/Nm3).
+TABLE 8.6
+Detailed Pollutant Emissions Inventory for the Different Sludge Treatment Scenarios
+Substance       Category   Unit   AGRI     AGRI d    INCI     INCI d    WETOX     WETOX d   PYRO     PYRO d    CEME      CEME d    LANDF    LANDF d
+Ag                Soil      g      9.6      9.6      1.23      1.23      1.25       1.25     1.25     1.25      1.25      1.25      1.25       1.25
+Ag                Air      mg      —         —       125       125        0          0        0        0         0         0         0          0
+Ag               Water      g     0.401     0.4      1.23      1.23      1.25       1.25     1.25     1.25      1.25      1.25      1.25       1.25
+Al                Soil      g      11.6     9.27     0.662     1.17      0.842     −0.85     3.86     3.67      2.97      1.37      4.09       1.57
+Al               Water      g      111      92.8     102       84.6      303        224      233      153       −389      −209      162        134
+Al                Air       g      8.42     6.71     4.98      4.01      12.5       9.2      10.3     6.62      −51.6     −30.1     13.5       10.2
+Aldehydes         Air       g     −0.359   −0.416   0.00231   0.00187   0.00956   0.00677   0.0057   0.00367   0.00228   0.00197     6          5.7
+Alkanes           Air       g     −4.06    −3.98     0.997     0.836     2.88       2.15     4.81      3.3      −4.74     −2.43     2.53       2.05
+                                                                                                                                                         LCA through Example from A to Z
+
+
+
+
+Alkenes           Air       g     0.0625   0.0127    0.417     0.339     1.15      0.856     1.06     0.686     −2.43     −1.35    0.859      0.685
+AOX              Water     mg      1.92     1.36     0.952     0.848     2.46       1.75     3.9      2.79      −2.16     −1.04     3.84       3.06
+As                Soil      g      4.68     4.68     0.617     0.617      0.5      0.499    0.522     0.522     0.476     0.475    0.626      0.625
+As               Water     mg      144      52.4     819       781       607        449      565      407       −699      −330      958        888
+As                Air      mg      30.5     23.4     78.7      75.8      49.2       37.8     37.9     26.2      301       367       45.5       34.1
+B                 Air       g      3.3      3.07     3.88      3.23      10.5       8.16     9.05     5.79      −1.79    −0.0647    3.3        3.08
+Ba               Water      g      10.3     6.94     9.78      8.15      28.4       21.1     26.7     17.6      −39       −21       17.9       13.8
+Benzene          Water     mg      181      112      77.8      70.5      213        136      425      306       −345      −189      385        293
+Benzo[a]          Soil     mg      576      576       —         —         —         —        —         —         —         —        —           —
+ pyrene
+Benzo[a]         Water     mg      24        24       —         —         —         —        —         —         —         —        12          12
+ pyrene
+Benzo[a]          Air      µg      951      641      148       123       514        361      591      467       431       308       922        685
+ pyrene
+Benzo[b]          Soil     mg      576      576       —         —         –         —        —         —         —         —        150        150
+ fluoranthene
+Benzo[b]         Water     mg      24        24       —         —         —         —        —         —         —         —        12          12
+ fluoranthene
+                                                                                                                                           (Continued)
+                                                                                                                                                         227
+                                                                                                                                                            228
+
+
+
+
+TABLE 8.6 (Continued)
+Detailed Pollutant Emissions Inventory for the Different Sludge Treatment Scenarios
+Substance   Category   Unit    AGRI      AGRI d      INCI      INCI d     WETOX     WETOX d   PYRO      PYRO d     CEME      CEME d     LANDF     LANDF d
+BOD          Water      g       1.15      0.741      0.191      0.206      0.524     0.349     0.834     0.669     −1.01     −0.558      1.24      0.902
+Cd            Soil      g       6.36       5.87       1.4        1.4       1.08       1.08     1.15      1.15       1.02       1.02      1.98       1.98
+Cd           Water      g      0.147      0.0939      1.41       1.41     0.0574     0.0523    0.294     0.288     0.834      0.844      2.03       2.02
+Cd            Air       g     −0.00354   −0.00916    0.0198     0.0187     0.067     0.0627   0.0499    0.0451     0.459      0.461      1.99       1.99
+Chloride     Water     kg       1.27      0.711       1.1       0.946      2.97       2.18     3.36      2.33      −3.26      −1.68      6.15       5.31
+CO            Air      kg      0.355      0.169      0.491      0.318      1.39      0.759     1.54      1.06      0.982      0.673      0.505     0.309
+CO2           Air      kg       370       −35.2       129        39.5      133        16.7     324       58.1      −75.1      −133       569        93.1
+Cobalt        Soil      g       4.36       4.42      0.617      0.617      0.624     0.624     0.625     0.625     0.492      0.492      0.625     0.625
+Cobalt       Water      g      0.429      0.381      0.818       0.78      1.22       1.06     1.09      0.927     0.229      0.596      0.955     0.886
+Cobalt        Air      mg       23.4       20.3       88         83.6      87.8       65.6     60.9      40.4       386        448       23.3       20.4
+COD          Water     kg       1.68       1.68       1.5        1.5       36.4       36.4     1.51       1.5       1.5        1.5       1.82       1.82
+Cr            Soil      g       79.4       77        0.883      0.886      0.873     0.864     0.891     0.89      0.937      0.928      12.5       12.5
+Cr            Air       g      0.0401     0.0313     0.537      0.533      0.172     0.153    0.0595    0.0397      13         13       0.0479     0.0369
+Cr (III)     Water      g       3.78       3.27       1.89       1.71      3.03       2.23     2.46      1.65       7.41       9.2       14.2       13.8
+Cr (VI)      Water     mg       0.48      0.353      0.219      0.176      0.603     0.446     0.478     0.306     −1.93      −1.11      0.541      0.41
+Cu            Soil      g       477        476        4.43       4.43      31.2       31.2     31.2      31.2       29.5       29.5      72.6       72.6
+Cu           Water      g       19.1       18.8       0.54      0.452      32.7       32.3     32.4       32        55.4       56.3      73.4       73.3
+Cu            Air       g       0.11      0.0869      2.75       2.74      0.474     0.419     0.309     0.258    −0.198     −0.107      0.159     0.123
+Cyanide      Water     mg       36.5       22.5       10.5       9.71      30.8       22.8     37.1       28        14.7       12.5      44.8       34.8
+Dioxin        Soil     mg       48         48         —          —          —         —         —         —         —          —         12.5       12.5
+Dioxin       Water     mg        2          2         —          —          —         —         —         —         —          —          1          1
+Dioxin        Air      µg       —          —          541        362        0          0        0         0         438        438        0          0
+F            Water     kg      −4.79      −5.51     0.000373   0.000374   0.00118   0.00078   0.00148   0.00115   0.000464   0.000339   0.00257   0.00195
+Fe            Soil      g       4.06      −0.661     −1.08     −0.146     −0.966     −4.34     4.97      4.73       3.38      0.195      5.74      0.608
+                                                                                                                                                            Environmental Life Cycle Assessment
+Fe              Water    kg      −279       −320     0.193     0.16       0.555        0.419        0.456        0.288       0.0429       0.0774        0.141         0.137
+Fluoranthene    Soil      g      1.44       1.44      —         —          —            —            —            —            —            —           0.375         0.375
+Fluoranthene    Water    mg       60         60       —         —          —            —            —            —            —            —            30             30
+Formaldehyde     Air      g      0.647      0.276    0.182    −0.072      1.74         0.963        1.39         0.981       −0.745       −0.479        0.842         0.451
+Furan           Soil     mg       4.8        4.8      —         —          —            —            —            —            —            —           1.25           1.25
+Furan           Water    µg       200       200       —         —          —            —            —            —            —            —            100           100
+Furan            Air     µg       —          —       541       362          0            0            0            0           438          438           0             0
+H2S              Air      g      0.321      −1.26   −0.981    −0.533      −1.76        −2.69       −0.807       −0.101        5.06         2.13         1.02          −0.636
+HCl              Air      g       61        50.3     58.1       48         157          113          169         99.4         −219         −120          134           115
+Heat losses     Soil     MJ      2.42       −2.81    −6.61     −8.92      10.6         1.29         −0.73        0.932        7.87         1.87         10.7           4.73
+Heat losses     Water    kWh     −12.2      −7.52    12.4      −17.3       589          427       1.05 × 107   7.28 × 106   1.05 × 107   7.28 × 106     2.04           3.55
+Heat losses      Air     kWh   1.30 × 103   93.5     340       −659     2.69 × 103   1.31 × 103   2.42 × 103   1.92 × 103   2.34 × 103   1.11 × 103   2.49 × 103    1.15 × 103
+                                                                                                                                                                                 LCA through Example from A to Z
+
+
+
+
+HF               Air      g      5.38       4.76      7        5.77       18.8         14.6          19          11.6         −2.01        0.572        10.3           9.46
+Hg              Soil      g      3.65       3.65    0.0372    0.0372      0.37         0.37         0.324        0.324        0.329        0.329        0.882         0.882
+Hg               Air      g      1.16       1.16     0.837     0.835     0.0893       0.0774        0.723        0.711        0.221        0.224        0.896         0.894
+Hg              Water    mg      −72.1      −113     37.2      37.2       2.74         2.41           2            2           401          401          883           882
+Hydrocarbons    Water    mg      14.8       11.5     19.5      15.9       77.9         55.4         57.7          38          8.13         10.6          27            24.2
+Land use       Nonmat.   m2y     12.1       8.31     2.68      2.88       3.61         3.62         3.39         3.41         2.95         2.33         17.4           12.2
+ II–IV
+Methane          Air     kg      14.4       6.78     0.177     0.136      0.894        0.307        0.711        0.606       0.0958       −0.145         112           47.8
+Mn              Soil      g       288       288      18.7      18.7       37.5         37.4         37.6         37.6         35.5         35.4         37.6           37.5
+Mn               Air      g      0.435      0.301    0.439     0.436      0.419        0.371        0.374        0.313        13.4         13.4         0.311         0.222
+Mn              Water     g      14.9       14.4      21       20.5       44.5         42.6         42.8         40.9         31.1         34.8         41.1           40.4
+Mo               Air     mg      10.6       8.96     16.1      14.3       33.1         25.2          25          16.8          171          194         12.5           10.3
+Mo              Soil      g       4.8        4.8     0.441     0.441      0.625        0.625        0.625        0.625        0.589        0.589        0.625         0.625
+Mo              Water     g      0.642      0.567    0.771     0.715      1.66         1.39          1.4         1.13        −0.538       0.0167        1.15           1.05
+N               Water     g       170       170      32.4      32.4        417          417         61.7         61.7         61.7         61.7         41.4           41.4
+N2O              Air      g      −159       −133     8.14      7.47        102         96.1         20.5         18.5         8.67         10.7         27.6           23.9
+NH3              Air     kg       1.3       1.32    0.00533   0.00477     0.268        0.158       0.00874      0.00769      0.0067       0.00666       0.855         0.849
+NH3             Water    kg      6.46       6.46     2.58      2.58       38.7         38.7         4.94         4.94         4.94         4.94         10.9           10.6
+                                                                                                                                                                   (Continued)
+                                                                                                                                                                                 229
+                                                                                                                                              230
+
+
+
+
+TABLE 8.6 (Continued)
+Detailed Pollutant Emissions Inventory for the Different Sludge Treatment Scenarios
+Substance   Category   Unit   AGRI      AGRI d    INCI     INCI d   WETOX    WETOX d   PYRO    PYRO d   CEME      CEME d    LANDF   LANDF d
+Ni            Soil      g      44.2       44       6.17     6.17     6.24      6.24    6.25     6.25     5.68      5.68      6.25    6.25
+Ni           Water      g      1.42      1.12      6.68     6.59     7.7       7.35    7.42      7       5.54      6.45      7.09    6.92
+Ni            Air       g     −0.279    −0.429    0.817    0.784    0.644     0.486    0.474    0.328    0.464      1.4     0.266    0.211
+Nitrate      Water     kg     0.00509   0.00383    14       14       203       203     39.8     39.8     42.6      42.6      48.7    47.3
+Nitrite      Water     kg       0         0       0.225    0.225     3.14      3.14    3.52     3.52     0.43      0.43     0.304    0.304
+NMHC          Air      kg      0.162    0.0056    0.118    0.108    0.258     0.147    0.894    0.641   −0.012    0.0319     5.14     2.3
+NOx           Air      kg      1.09      0.748    0.808    0.579     1.55      1.29    2.89     1.97     1.99       1.2      2.03    1.57
+P             Air       g      −5.56     −6.43    0.0633   0.0514   0.177     0.134    0.142   0.0911   −0.473    −0.271     11.1    10.6
+Particles     Air      kg      3.73      2.53     0.758    0.545    0.562      0.42    1.42     0.944    0.363     0.247     7.75    5.39
+Pb            Soil      g      288       288       37.4     37.4     8.62      8.62    8.72     8.72     8.38      8.38     0.755    0.755
+Pb           Water      g      11.5      11.2      38       37.9     1.83      1.38    3.11     2.64     4.01      4.87      1.73    1.53
+Pb            Air       g      0.182     0.111    0.835    0.824    0.347     0.288    0.476    0.431    9.99      10.4     0.302    0.217
+PCBs          Soil     mg      480       480       —        —        —         —        —        —        —         —        125      125
+PCBs         Water     mg       20        20       —        —        —         —        —        —        —         —        10       10
+Phenol       Water     mg      76.5      −24.5     89.5     82.7     248       160     432      315      −289      −151      409      312
+Phosphate    Water     kg      −3.72     −4.31    0.242    0.241    0.0177    0.0134   0.25     0.245   −0.0235   −0.0127    13.4    12.7
+Sb            Soil      g       9.6       9.6      1.24     1.24     1.25      1.25    1.25     1.25     1.17      1.17      1.25    1.25
+                                                                                                                                              Environmental Life Cycle Assessment
+Sb              Air    mg   4.43     3.98     70.5     69.7       19.3          16.2       15.8    11.8     −6.7    −2.83    4.94    4.34
+Sb             Water   g    0.403   0.402     1.24     1.24       1.25          1.25       1.25    1.25     1.79     1.79    1.25    1.25
+Se             Soil    g    2.88     2.88    0.0905   0.0905     0.375         0.375       0.375   0.375   0.335    0.335    0.375   0.375
+Se             Water   g    0.692   0.585    0.603    0.511       1.94          1.49       1.54    1.13    −1.65    −0.734    1.2    1.04
+Se              Air    mg   66.5     54.2     78.3     70.9       147           107        114     75.7     212      269     64.4    53.1
+Sn             Soil    g     9.6     9.6      1.24     1.24       1.25          1.25       1.25    1.25     1.18     1.18    1.25    1.25
+Sn             Water   g    0.401   0.401     1.24     1.24       1.25          1.25       1.25    1.25     1.3      1.3     1.25    1.25
+Sn              Air    mg   1.38     1.21     67.2     66.9       10.4          9.37       4.46     3.3     443      444     1.57    1.35
+SOx (as SO2)    Air    kg   0.236   −0.225    1.51     1.26       4.49          3.3        4.34    2.81    −0.842   −0.289   6.89    6.33
+Sulfide        Water   kg   1.88     1.88     1.88     1.88    6.07 × 10–5   4.31 × 10–5   1.88    1.88     1.88     1.88    1.93    1.93
+Suspended      Water   g    11.7     11.7     —        —           —             —          —       —       —        —        —       —
+ substances
+Tributyl tin   Water   mg   −9.94   −13.1     2.44     2.06       6.92          5.01       7.14    4.87    −11.6    −6.38    6.78     5.3
+                                                                                                                                             LCA through Example from A to Z
+
+
+
+
+V               Air    g    0.683   0.544    0.601    0.486       1.97          1.42       1.48    0.983   −4.54     −2.6    0.779   0.617
+Water          Raw     t    9.37     8.28     11.1     8.93       53.5          23.7       69.1    46.4     54.1     39.1    8.57    7.75
+Zn             Soil    kg   1.32     1.32    0.175    0.175       0.17          0.17       0.153   0.153   0.172    0.172    0.361   0.361
+Zn             Water   g    57.5     57.2     176      176        113           112        102     101      273      275     363     362
+Zn              Air    g    1.26    0.873     2.18     2.16       1.4           1.3        0.767   0.65    −0.268   −0.106    1.8    1.26
+                                                                                                                                             231
+232                                            Environmental Life Cycle Assessment
+
+
+8.4.1 Energy Consumption
+As illustrated in Section 8.3.2 for the INCI scenario, the nonrenewable primary
+energy consumption in each scenario (Figure 8.4) is obtained by multiplying the
+intermediary flows of Tables 8.1 and 8.3 by the nonrenewable energy per unit input
+of Table 8.4. Energy consumption includes the feedstock energy in the product, along
+with the energy needed to extract, transform, and transport it. Avoided energy use
+due to substitutions is then subtracted, yielding the net primary energy consumption
+for each scenario (Figure 8.5).
+    Main contributions to the energy consumption include the wet oxidation sludge
+treatment process (20.7 GJ/tDM), drying (16.4 GJ/tDM) used in pyrolysis and cement
+kilns, and the pyrolysis sludge treatment process (8.9 GJ/tDM). Since the sludges
+are dehydrated in these scenarios, transport energy consumption is relatively low,
+as observed by Neumayr (1999). Energy for pure industrial water treatment, site
+infrastructure, dry matter losses, and wastewater treatment from sludge treatment
+processes are negligible. Substitutions are important in the nonrenewable energy
+category, since they can compensate for more than 50% of the energy consumption,
+especially for the wet oxidation, pyrolysis, and cement scenarios. The introduction of
+anaerobic digestion substantially reduces energy consumption for each process (by
+6 GJ/tDM), but its total influence varies with each scenario, because it also reduces
+the lower calorific heating value of the sludge and therefore also reduces the substi-
+tuted energy (see Figure 8.6 for the ultimate energy balance of all scenarios, includ-
+ing ones that account for digestion).
+    As might be expected, agriculture spreading with digestion (AGRI d) has the most
+favorable energy balance, as it provides more energy than it consumes. If digestion
+is not included, however, the agriculture scenario (AGRI) requires more energy than
+high-quality incineration with heat recovery (INCI) (Figure 8.6). Considering all 12
+scenarios, AGRI d, LANDF d, and CEME d have the lowest net energy consump-
+tions as long as the sludge is used to effectively replace fossil fuels in cement kilns;
+if sludge is used to replace other types of waste, cement kiln incineration becomes
+the worst scenario. Wet oxidation has the highest energy consumption (14 GJ/tDM),
+with a net consumption of 8 GJ/tDM even after substitution. For digested sludges,
+thermal oxidation scenarios (incineration [INCI d], pyrolysis [PYRO d], wet oxida-
+tion [WETOX d], and cement [CEME d]) have very similar and relatively limited
+net energy consumptions.
+    To put into context the amounts of energy involved for sludge treatment in
+these scenarios, we can compare them with the primary energy required for
+pumping drinking water. According to Crettaz et al. (1999), 0.43 kWh of Swiss
+average electricity are needed per cubic meter pumped freshwater, correspond-
+ing to 3.7 MJ of nonrenewable primary energy per cubic meter. About 0.27 kg
+DM of sludge is produced per cubic meter of treated water. Since the various
+scenarios range in net energy balance from −4 to +14 MJ/kg DM, this corre-
+sponds to between −1.1 and +3.8 MJ/m 3 treated water and is thus of the same
+order of magnitude as the energy needed to pump the corresponding amount of
+freshwater.
+                                                                                                                Balance
+
+                                                 25                                                             Fuel
+                                                      1. Consumption                                            Natural gas
+
+                                                         2. Substitution                                        Coal
+
+                                                               3. Net balance                                   Marl
+                                                 15
+                                                                                                                Limestone
+                                                                                                                Lime extinct
+                                                                                                                Potassium chloride
+                                                                                                                                                LCA through Example from A to Z
+
+
+
+
+                                                  5
+                                                                                                                Superphosphate triples
+                                                                                                                Ammonia nitrate
+                                                                                                                Residues storage
+                                                 –5                                                             Residues transport
+                                                                                                                Sludge treatment
+
+
+
+
+          Nonrenewable primary energy (GJ/tDM)
+                                                                                                                Sludge transport
+
+                                      –15                                                                       Storage
+                                                                                                                Drying, liming
+                                                                                                                Dehydration
+                                                        AGRI               INCI   WETOX   PYRO   CEME   LANDF   Thickening
+                                      –25
+
+
+FIGURE 8.5 Nonrenewable primary energy used in the undigested sludge treatment scenarios. Each scenario has three columns: 1. Energy used for
+the treatment of 1 tDM; 2. Energy saved by substitutions; 3. Net primary energy consumption.
+                                                                                                                                                233
+                                                                                                                                                        234
+
+
+
+
+                                                          16
+                                                                                             14.0
+                                                          14
+
+                                                          12
+                                                                                                     Methanol
+                                                                                                                                     100% waste
+                                                                                                    substitution
+                                                          10
+
+                                                           8
+                                                                                                                   6.8
+                                                                                                                               5.4
+                                                           6                                                                                      4.9
+                                                                                                       4.1
+                                                           4                                                             3.0
+                                                               2.6
+                                                                               2.1     1.8
+                                                           2
+
+                                                           0
+
+
+
+
+                   Nonrenewable primary energy (GJ/tDM)
+                                                               AGRI   AGRI d   INCI   INCI d WETOX WETOX PYRO PYRO d CEME CEME d LANDF LANDF
+                                                                                                     d                     –0.5          d
+                                                          –2
+                                                                                                                                        –1.4
+                                                          –4
+                                                                       –3.8
+                                                          –6
+
+
+FIGURE 8.6 Net nonrenewable primary energy consumption of the 12 sludge treatment scenarios without and with digestion (d). The dashed lines
+present results in the case where sludges substitute other waste for cement kiln incineration and in the case of methanol recovery for wet oxidation.
+                                                                                                                                                        Environmental Life Cycle Assessment
+LCA through Example from A to Z                                                     235
+
+
+8.4.2 Global Warming
+Global warming scores are calculated by multiplying the intermediary flows of
+Table 8.1 by the emission factors of carbon dioxide and methane per unit input of
+Table 8.4. The direct methane emissions from organic matter degradation are then
+added to yield the total emissions for each greenhouse gas, which are then multiplied
+by the IPCC global warming potentials for a 500-year time horizon (to account for
+long-term effects). Nitrous oxide (N2O) emissions due to input processes are negli-
+gible, and direct N2O emissions in the sludge treatment processes were not included
+due to lack of available data. The avoided emissions associated with substitutions
+(such as production and spreading of fertilizers) are subtracted. The same amount
+of 1241 kgCO2/tDM biogenic CO2 is subtracted from the treatment emissions in all
+scenarios, to account for the CO2 fixed prior to wastewater treatment (e.g., during
+the agricultural production of food consumed by humans). Figure 8.7 presents the
+contributions of each scenario to the greenhouse effect.
+   Methane emissions are substantial in the landfill scenarios for both digested
+and undigested sludge (56% and 76%, respectively), leading these scenarios to have
+the highest global warming scores. The undigested agricultural spreading scenario
+(AGRI) also has a high climate change impact due to carbon dioxide emissions in
+lime production (72%) and methane emissions (21%). In contrast, the agriculture
+spread of digested sludge (AGRI d) results in quite low greenhouse gas impacts,
+since the produced biogas increases the substituted energy, and the amount of
+sludge—and therefore lime—is reduced. In the case of the thermal oxidation sce-
+narios, digested sludges have close to equivalent greenhouse gas impacts, where
+incineration in cement kilns is slightly better than other scenarios if fossil fuels are
+effectively substituted.
+   Other impact categories such as acidification and respiratory inorganics were not
+analyzed by Houillon and Jolliet, but the emissions of associated substances, such
+as NOx, SO2, and particulate matter, are generally correlated with greenhouse gas
+emissions, except for the landfill scenarios.
+
+
+8.4.3 Human Toxicity and Ecotoxicity
+Human and ecosystem toxicity scores were calculated based on pollutant emissions,
+the transfer rates of organic and metallic micropollutants, and the corresponding
+characterization factors for Eco-indicator 99 and IMPACT 2002+. Due the high
+uncertainties over these characterization factors, results must be considered as com-
+parative rather than absolute values, as presented in Table 8.7.
+   LANDF and AGRI lead to higher human toxicity scores than the thermal oxida-
+tion scenarios. For agriculture use, this is due to the micropollutant emissions on
+agricultural lands, leading to their partial transfer into the food chain. This food
+chain exposure is important, as Bennett et al. (2002) demonstrated that intake frac-
+tions of persistent pollutants can be significantly higher through food ingestion than
+through water ingestion or inhalation. The landfill scenario also results in exposure
+to micropollutants, but a fraction is stored in the ground, resulting in lower effects
+on human toxicity. Both the IMPACT 2002+ and Eco-indicator 99 methods show
+                                                                                                                                                                                           236
+
+
+                                                                            1400
+                                                                                                                                                                           1302
+
+                                                                            1200
+
+
+                                                                            1000
+
+
+                                                                             800
+                                                                                                                                                                  100%
+                                                                                                                                                                  waste
+                                                                             600
+                                                                                    437
+                                                                                                                                                                                   408
+                                                                             400                                                           332
+                                                                                                                     Methanol
+                                                                                                                    substitution
+                                                                             200                 132                    156
+
+                                                                                                              42                     35             65
+
+                                                                               0
+                                                                                   CHAU CHAU d   INCI     INCI d       OVH         OVH d   PYRO   PYRO d   CIME   CIME d   DECH   DECH d
+                                                                                         –14                                                                –73
+
+
+
+
+              Global warming impact per treatment scenario (kg CO2-eq/tDM
+                                                                            –200                                                                                   –132
+
+                                                                                                        CO2        CH4 equivalent CO2      N2O equivalent CO2
+                                                                            –400
+
+
+FIGURE 8.7 Net global warming scores for the 12 sludge treatment scenarios. The dashed lines present results in the case where sludge substitutes
+other waste for cement kiln incineration and in the case of methanol recovery for wet oxidation.
+                                                                                                                                                                                           Environmental Life Cycle Assessment
+LCA through Example from A to Z                                                            237
+
+
+
+TABLE 8.7
+Relative Impact Assessment Scores for Human and Ecosystem Toxicity
+                                                       Thermal Oxidation (INCI,
+Scenario                                                WETOX, PYRO, CEME)        AGRI   LANDF
+Average percentage of micropollutants transferred                25%              100%    30%
+Human toxicity (relative to thermal oxidation)                    1                 8      4
+Ecotoxicity (points) (relative to thermal oxidation)              1                 8      2
+
+
+that all scenarios involving thermal oxidation lead to similar and better results. The
+ranking of scenarios for ecotoxicological impacts is similar to human toxicity, with
+all scenarios involving thermal oxidation also scoring best.
+    When looking at overall impact on human health and ecosystems, accounting
+for all other impact categories of the IMPACT 2002+ method, the scenario rank-
+ing remains similar to the results expressed for human toxicity and ecotoxicity in
+Table 8.7.
+
+
+8.5     INTERPRETATION AND RECOMMENDATIONS
+Energy consumption and carbon emission results for each reference scenario are
+discussed in more detail and compared with other literature values in Section 8.5.1,
+and sensitivity studies are carried out in Section 8.5.2, leading to the final recom-
+mendations in Section 8.5.3.
+
+
+8.5.1 REFERENCE SCENARIOS
+8.5.1.1 Agricultural Landspreading of Limed Pasty Sludge
+The energy consumption of potassium chloride in this scenario is negligible com-
+pared with that of ammonium nitrate (1 GJ/tDM) and superphosphate triples (1.3 GJ/
+tDM). Liming and storage require substantial amounts of energy (Figure 8.4), which
+is confirmed by Kobayashi and Sago (2000). The minor energy consumption of
+dehydrated sludge transport is confirmed by Neumayr (1999), whereas transport can
+play an important role for sludges with higher water content and greater transport
+distances (Rebitzer et al. 2003). Digesting sludge reduces the amount of dry matter
+and thus also limits the impacts of liming and transportation. Compared with undi-
+gested sludge, the energy saved from fertilizer substitution of digested sludge is simi-
+lar, while digestion enables an additional substitution of natural gas. The total energy
+balance of agricultural landspreading of digested sludge (−3.8 GJ/tDM in Figure 8.5)
+is close to the value of −3.5 GJ/tDM obtained by Remelle (1995).
+    In terms of greenhouse gas emissions, lime production emits a significant amount
+of CO2 (583 kgCO2/tDM), whereas lime substitution avoids the emission of 270 kgCO2/
+tDM. Methane is emitted due to anaerobic digestion of organic matter during storage
+and spreading. Similar to energy consumption, the transport contributions to CO2
+emissions are low (32.6 kg tDM), as also observed by Müller et al. (1999).
+238                                           Environmental Life Cycle Assessment
+
+
+8.5.1.2 Incineration in Fluidized Bed of Pasty Sludge
+Fluidized bed incineration energy consumption is mainly due to electricity con-
+sumption and the burning of natural gas, as also observed by Ministerium für
+Umwelt und Naturschutz (2001; 2.65 GJ/tDM). Heat recovery reduces the primary
+energy requirements by a factor of three and avoids the emission of 335 kgCO2/tDM.
+The net balance of 42 kgCO2/tDM for the incineration of digested sludge is close to
+the results obtained by Suh (1999), Suh and Rousseaux (2002), with 50 kgCO2/tDM.
+For this sludge treatment process, there is little difference between the digested and
+undigested scenarios (Figure 8.5). This is due to the need for additional natural gas
+to burn digested sludges, thus reducing the benefit of the recuperated gas during the
+digestion process. In France, according to Prouve (1994), most fluidized beds treat
+undigested sludges.
+
+8.5.1.3 Wet Oxidation of Liquid Sludge
+The main energy consumption and carbon emissions during wet oxidation arise from
+the use of electricity (405 kgCO2/tDM) and the energy-intensive production of oxy-
+gen (281 kgCO2/tDM). The avoided energy and emissions linked to heat recovery
+(−7.5 GJ/tDM and −356 kgCO2/tDM) are similar to those of fluidized bed incineration
+(−7.1 GJ/tDM). Digestion allows for a large reduction of energy consumption, due to
+greatly reduced organic matter and thus electricity and oxygen consumption.
+   Methanol recovery is considered a viable option for only the undigested sludge
+(175 kg methanol/tDM), as it is rather low for digested sludge (20 kg methanol/tDM).
+Such a methanol recovery substantially reduces the energy consumption from 14
+down to 7.9 GJ/tDM and enables the greenhouse gas balance to become close to zero
+by avoiding the emission of 154 kgCO2/tDM (dashed lines in the WETOX scenarios
+of Figures 8.5 and 8.6).
+
+8.5.1.4 Pyrolysis of Dried Sludge
+The energy demand and greenhouse gas emissions of pyrolysis are dominated by
+electricity and natural gas consumption in the drying process (6.8 GJ/tDM and
+997 kgCO2/tDM). Pyrolysis gas substitution is essential to this treatment, in that it
+replaces 75% of the process consumption (−17.7 GJ/tDM and −835 kgCO2/tDM),
+making it important to have it fully recovered. Heat recovery during the drying pro-
+cess results in another smaller reduction in CO2 emissions (−148 kgCO2/tDM). For
+digested sludge, drying still requires a substantial amount of energy.
+
+8.5.1.5 Incineration of Dried Sludge in Cement Kilns
+Although the direct drying system of incineration requires substantial energy con-
+sumption, dried sludge enables fuel and coal substitution in the cement factory.
+This leads to a better energy and greenhouse gas balance than for pyrolysis, as also
+observed by Chassot and Candinas (1997). Applied to digested sludge, even more
+energy is substituted, leading to a net avoidance of energy (−0.5 GJ/tDM) and CO2
+emissions (negative balance of −132 kgCO2/tDM), as also found by Sasse et al. (1999).
+   Substitutions compensate for about 72% of the energy consumed in this dis-
+posal option, making it essential to know the types of fuel that are substituted. This
+LCA through Example from A to Z                                                     239
+
+
+scenario assumes a substitution of coal and fuel in the cement factory, but the cement
+industry also uses waste (such as tires and plastics) as substitution fuels. If sludges
+are not substituting other waste rather than fossil fuels, no bonus should be credited
+in the LCA methodology. This would increase energy consumption to 16 GJ/tDM for
+undigested sludge and 6 GJ/tDM for digested sludge, making it the worst scenario in
+terms of greenhouse gas emissions and energy consumption. Benz et al. (1995) also
+noticed this problem, indicating that cement kiln incineration is better than fluidized
+bed incineration only if coal is chosen as a substitution. Using coal has such a high
+impact that some may propose simply eliminating the use of coal rather than credit-
+ing the sludge substitution.
+
+8.5.1.6 Landfilling of Limed Pasty Sludge
+The energy demand for landfilling is substantial (4.9 GJ/tDM), being about double
+that for incineration in fluidized beds or agricultural spreading. This is due to dehy-
+dration, liming, and transport, and to the lack of substitutions for undigested sludges.
+Both energy consumption and greenhouse gas emissions are strongly reduced by
+sludge digestion, due to its reduction in liming, storage, and transport. Another draw-
+back to landfilling is that biogas burned in the landfill is generally not recovered, in
+contrast to biogas produced at the WWTP. Figure 8.6 shows how important it is for
+landfill disposal to burn methane emitted into the air by the organic fermentation to
+convert it into carbon dioxide. This operation is considered in the study by assuming
+that 60% of the methane is burned in a flare (Suh 1999). The remaining 40% of the
+methane still provides a substantial contribution of about 50% of the landfill global
+warming balance, leading to the worst score of all disposal routes. Landfilling undi-
+gested sludge cannot therefore be recommended.
+
+8.5.2 Sensitivity Analyses
+8.5.2.1 Transport Distances
+Changing transport distances affects each scenario differently. For the agricultural
+spreading of sludge, multiplying transport distances by a factor of two increases
+energy consumption by about 0.6 GJ/tDM and CO2 emissions by 32 kgCO2/tDM.
+So, although AGRI and INCI have similar energy uses in their reference scenarios,
+doubling the transport distance leads to a 50% higher energy consumption for the
+agricultural spreading of undigested sludge compared with undigested sludge incin-
+erated in a fluidized bed (Figure 8.8). The energy consumption of the landfill scenario
+also increases by 0.9 GJ/tDM when transport distances are doubled. Otherwise, the
+transport distance does not greatly influence the energy balance, because the sludge
+has become dried or pasty before being transported (decreasing its weight). This
+conclusion may be different with liquid sludge, as observed by Dennison et al. (1997)
+and Rebitzer et al. (2003). The influence of transportation is even lower for digested
+sludge, due to the decrease in organic matter.
+
+8.5.2.2 Residue Stabilization
+The residue of incineration, wet oxidation, and pyrolysis can be stabilized instead
+of being directly landfilled, so we consider the influence of cement stabilization
+240                                                                         Environmental Life Cycle Assessment
+
+
+                                              16
+
+       Nonrenewable primary energy (GJ/tDM)   14
+
+                                              12                                           Transport
+                                                                                           distances doubled
+                                              10
+
+                                               8                                           Residue
+                                                                                           stabilization
+                                               6
+
+                                               4                                           Reference
+                                                                                           scenarios
+                                               2
+
+                                               0
+                                                   AGRI   INCI WETOX PYRO   CEME LANDF
+
+
+FIGURE 8.8 Sensitivity analyses of the nonrenewable energy balance of the six sludge
+treatment scenarios without digestion, including residue stabilization and doubling of trans-
+port distance.
+
+here. Cement stabilization only moderately increases the energy balances by about
+1.2 GJ/t for the three scenarios (INCI, WETOX, and PYRO) to which it is applied
+(Figure 8.8). Residue stabilization has a greater influence on greenhouse gas emis-
+sions, increasing these emissions by 185 kgCO2/tDM for the incineration and wet
+oxidation scenarios. Consequently, stabilization can only be justified by a substantial
+reduction in toxicity impacts associated with leachate, which need further studies.
+
+8.5.3 Recommendations and Outlook
+As a result of the preceding interpretation and sensitivity studies, we have identified
+several key processes and areas of improvement:
+
+   1. Substitutions (e.g., heat recovery for digestion and thermal oxidation pro-
+      cesses and fertilizer replacement) play an important role in all 12 treat-
+      ments, emphasizing the importance of these flows being recovered and
+      carefully considered in any environmental assessment.
+   2. Anaerobic sludge digestion should likely be integrated in all processes
+      except incineration, as it simultaneously recovers natural gas while reduc-
+      ing sludge mass, thereby decreasing energy consumption and greenhouse
+      gas emissions during treatment. Digestion also limits the increase in energy
+      consumption if heat is not fully recovered in subsequent processes.
+   3. Energy and greenhouse gas balances for agricultural spreading are only
+      favorable compared with thermal oxidation processes if sludges are digested.
+      Sludges for agricultural spreading must be stabilized using the minimum
+      amount of lime to limit related carbon dioxide emissions. Micropollutant
+      emissions and their impacts on human and ecosystem toxicity remain sub-
+      stantially higher for spreading than for all other treatments. The removal of
+      heavy metals from sludge could be one solution to improve this scenario,
+LCA through Example from A to Z                                                  241
+
+
+     as well as measures to reduce heavy metal emissions into wastewater at
+     source.
+  4. Sludge landfilling is unfavorable for most impacts, especially for undi-
+     gested sludges. If carried out, it is strongly recommended to treat biogas
+     by burning it in a flare, as this dramatically decreases the greenhouse gas
+     emissions by avoiding additional methane releases, thus reducing green-
+     house gas emissions from 2381–1302 kgCO2-eq/tDM.
+  5. The environmental impacts of the different thermal processes (INCI,
+     WETOX, PYRO, and CEME) are approximately equivalent, but high-
+     quality incineration in a fluidized bed remains one of the most promising
+     scenarios. Wet oxidation and pyrolysis do not provide significant impact
+     reductions compared with incineration and require specific conditions
+     to remain competitive; wet oxidation requires the recovery of effluent as
+     methanol and pyrolysis requires the recovery and use of pyrolysis gas. For
+     cement kiln incineration, a drying system at the cement factory site could
+     improve the energy savings and greenhouse gas balance. But, in practice,
+     fresh sludge transport is difficult because of odor, transport, and handling
+     problems. The results obtained by cement kiln incineration are only valid
+     if sludges are used to substitute coal and fuel. Otherwise, this scenario
+     would be the worst of all thermal options; moreover, the less stringent legal
+     requirements for cement kiln emissions compared with incineration plants
+     could also lead to higher human health effects. There are other potential
+     substitutions of by-products resulting from thermal processes, but these
+     require improved residue quality. Roads can be constructed using incinera-
+     tion ashes and wet oxidation mineral residue, and coal can be substituted by
+     the carbonaceous residue from pyrolysis. For future studies, further meth-
+     odological developments are needed to increase the assessment reliability,
+     especially to account for micropollutant speciation as a function of soil
+     characteristics. As this LCA focuses only on environmental issues, these
+     also have to be balanced against economic costs and social criteria.
+

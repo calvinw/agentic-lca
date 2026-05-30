@@ -1,0 +1,1229 @@
+      3         Goal and System
+                Definition
+                Olivier Jolliet, Gabrielle Soucy, Shanna Shaked,
+                Myriam Saadé-Sbeih, and Pierre Crettaz
+
+The goal and system definition is the first phase of a life cycle assessment (LCA). It
+may seem trivial, but the LCA results are often strongly dependent on the choices
+made in this key phase. In the International Organization for Standardization (ISO)
+norm 14040 (described in Chapter 1), this phase is referred to as the goal and scope
+definition. In this book, we refer to it as the goal and system definition to highlight to
+the reader the importance of clearly delineating and describing a system. This phase
+consists of, firstly, describing the objectives—what is the purpose of the LCA, what
+are the results going to be used for, who is the audience, and who are the stakehold-
+ers? Secondly, the function of the system considered is analyzed to define a unit that
+represents this function. Different scenarios are described to achieve this functional
+unit (FU). Finally, the system boundaries are specified.
+
+3.1 OBJECTIVES
+The goal and system definition begins with a description of the study objectives, which
+determines the problem and defines the intended application for the LCA results,
+including the intended audience, the stakeholders, and the scope of the study. In con-
+trast to the subsequent more technical stages in an LCA, this step is more descriptive.
+Moreover, it requires discussion of all options and possible alternatives among the
+different stakeholders in order to increase credibility and ensure relevant results.
+
+3.1.1 Goal: Type of Application, Intended Audience, and Stakeholders
+According to ISO 14044 (section 4.2.2),
+
+   in defining the goal of an LCA, the following items shall be unambiguously stated:
+      • The intended application,
+      • The reasons for carrying out the study,
+      • The intended audience i.e., to whom the results of the study are intended to
+        be communicated, and
+      • Whether the results are intended to be used in comparative assertions
+        intended to be disclosed to the public.
+The intent of a given LCA should be clearly specified to avoid ambiguity among the
+potential applications and audiences, as demonstrated by the following examples.
+
+                                                                                        23
+24                                              Environmental Life Cycle Assessment
+
+
+     • Information on an existing product: LCA has often been used to provide
+       information on the environmental impacts of products, most commonly as
+       a comparison of available alternatives.
+     • Development of a new product: In developing a new product, an LCA can
+       first be conducted on the existing or initial product prototype. Improvement
+       options are then selected and evaluated based on environmental, technical,
+       or financial factors. The different production variants are compared against
+       one another and the initial product.
+     • Elaboration of political strategies: Because of its potential for broad appli-
+       cation, an LCA can also be used to compare different political strategies.
+       For example, to provide input on future European agricultural policy, a
+       comparison of the environmental impacts of intensive, integrated, and bio-
+       logical production systems would be relevant. ADEME (France’s agency
+       for environment and energy management) has published several state-of-
+       the-art reviews on LCAs of waste treatment, biomass use, and agricultural
+       systems (BIO Intelligence Service S.A. 2002; Houillon et al. 2004).
+     • Regulation of an existing product: LCA can also be used to evaluate a prod-
+       uct to provide information for regulatory purposes. It is, however, primarily
+       intended as a voluntary tool rather than a compliance-oriented tool.
+
+   Even if all audiences are interested in decreasing environmental impacts, con-
+sumers, producers, and governments each have different perspectives on how to
+do so. Consumers want to know product impacts to make wise purchasing choices.
+Manufacturers generally want to know how to reduce the pollution caused by
+their products or, less frequently, to highlight their environmental advantages.
+Governments need reliable information to refine environmental policies or to devise
+incentives to promote environmental behaviors.
+   The identity and addresses of the main stakeholders should also be provided,
+including the sponsors, authors, advisory board, analysts, and optional independent
+peer reviewers (as addressed in Section 6.4.2). If the intended audience is external,
+the credibility of the LCA is increased by having the LCA commissioners, analysts,
+and peer reviewers all be independent entities.
+   An external review is generally optional, but becomes necessary for an ISO-
+compatible study involving a comparative assertion. Section 6.4 further addresses the
+peer review process, which needs to be planned and budgeted from the start of the study.
+
+3.1.2 Scope
+Once the goal is determined, the scope of an LCA must take into account and clearly
+describe the following elements (ISO 14044, Section 4.2.3.1):
+
+     • The product system to be studied (in this work, we refer to this as the system
+       rather than the product system term used by ISO, because the system can
+       also be used to analyze services)
+     • The function of the system, or of the systems in the case of comparative
+       studies
+Goal and System Definition                                                             25
+
+
+   •   The functional unit (FU)
+   •   The system boundary
+   •   Allocation procedures (Chapter 4)
+   •   Life cycle impact assessment (LCIA) methodology and types of impacts
+       (Chapter 5)
+   •   Interpretation to be used (Chapter 6)
+   •   Data requirements
+   •   Assumptions
+   •   Value choices and optional elements
+   •   Limitations
+   •   Data quality requirements
+   •   Type of critical review, if any
+   •   Type and format of the report required for the study
+
+    The scope of the study must be sufficiently well defined to ensure that the breadth,
+depth, and level of detail match the set objective. LCA is an iterative approach
+(Section 2.2); thus, the scope may be adjusted based on information collected during
+the analysis.
+    In the following sections, we describe and provide examples of the most funda-
+mental elements of the goal and scope definition: a description of the system func-
+tion, a definition of the FU (and associated reference flows), and, finally, how the
+system is defined and bounded. The remaining key elements, such as the allocation
+of impacts among coproducts and by-products and the selection of LCIA methods,
+are described in more detail in Chapters 4 and 5.
+    When considering the scope of an LCA, we can broadly distinguish between two
+types of modeling approaches, attributional and consequential LCA, as defined by
+Finnveden et al. (2009, p. 3): “Attributional LCA is defined by its focus on describing
+the environmentally relevant physical flows to and from a life cycle and its subsystems.
+Consequential LCA is defined by its aim to describe how environmentally relevant
+flows will change to possible decisions (Curran et al. 2005).” A typical example of the
+difference between these two approaches is the choice of the electricity mix to model
+the electricity production in a process LCA. An attributional LCA would typically
+consider the average electricity mix in the considered region of interdependent electric-
+ity distribution, such as the average European electricity mix, with the risk that a given
+decision would affect only one mode of production (e.g., natural gas). A consequential
+LCA would aim at first identifying and using the marginal mode of electricity produc-
+tion in a growing market (e.g., gas power plants could be built in Europe if electricity
+demand increases) or in a shrinking market (e.g., coal power plants could be shut down
+if demand decreases), with the risk that the marginal technology could be misidentified
+(e.g., when using a general equilibrium model in a rapidly changing world).
+    As discussed by Zamagni et al. (2012) and Suh and Yang (2014), both approaches
+have various strengths and weaknesses and still tend to overlap in LCA applications.
+In this book, we will help the reader to pragmatically consider the question raised by
+Suh and Yang (2014, p. 1183): “How can a model, or a combination of models, best
+be used to answer a question recognizing both strengths and weaknesses of different
+modeling frameworks and available data?”
+26                                                        Environmental Life Cycle Assessment
+
+
+3.2 SYSTEM FUNCTION
+Once the goal of a comparative study is defined, various systems or products must
+be compared based on a common function. Scenarios, which represent the different
+alternatives, are chosen to satisfy the same function. This system function needs a
+clear definition, because it is the basis for determining two essential LCA elements:
+the functional unit (Section 3.3) and the system boundaries (Sections 3.4 and 3.5). To
+most objectively consider each alternative, the function should be determined before
+defining the FU or the system boundaries.
+    It is not always easy to select one exact function of a system, because a single
+product can have multiple functions. In such a case, the main function and the sec-
+ondary functions should be identified (see examples in Table 3.1). The primary func-
+tion, by definition, is common to the different alternatives. The secondary functions
+are specific to each scenario, and if they differ greatly between alternatives, they can
+reveal bias in the comparison. For example, one might try to compare a pair of boots
+with a pair of sandals, because they both meet a primary function of protecting the
+feet. However, the boots additionally protect the feet from cold; thus, a direct com-
+parison of the two types of shoes is not generally useful.
+    When a component of a larger system is studied, the function chosen is generally that
+of the whole system. For example, although the main function of a car door is to provide
+access to the vehicle and passenger protection, it only becomes effective when the vehicle
+is used to transport passengers. Thus, a more meaningful function is to provide access
+and protection for the transportation of passengers over the car’s lifespan. In this way,
+the LCA would consider not only the impacts related to door manufacturing, but also
+the influence of the weight of the car door on subsequent fuel consumption during use.
+
+     When reviewing an LCA, the system function must be checked for validity in all
+     scenarios, making explicit any differences between scenarios. Particular atten-
+     tion should be given when secondary functions of alternative scenarios differ.
+
+
+
+     TABLE 3.1
+     Primary and Secondary Functions of Some Sample Products
+     Product                Primary Function                        Secondary Functions
+     Pair of shoes   Protect feet                         Protection from weather
+                                                          Protection from cold
+                                                          Social stature
+     Restaurant      Serve meals                          Socializing
+                                                          Heated space
+     Car door        Help to ensure safe use of the car   Protection from theft
+                                                          Safety in case of accident
+                                                          Sealing the car shut
+     Potato          Food for humans, animal feed, or     Maintenance of arable land
+                      raw material (starch)               Protection of the landscape and environment
+Goal and System Definition                                                             27
+
+
+3.3 FUNCTIONAL UNIT AND REFERENCE FLOW
+3.3.1 Definitions
+Once the system function is determined, the functional unit (FU) can be defined.
+
+   According to ISO 14044 (2006), the FU is the “quantified performance of a
+   product system for use as a reference unit.” This measure quantifies the func-
+   tion of a system in terms of the service offered. The FU is the same for all
+   scenarios, with inventory flows and impacts for each scenario calculated per
+   FU (Chapters 4 and 5). For example, different transportation methods are often
+   compared based on a FU of transporting one person over a distance of 1 km
+   (i.e., 1 person-km).
+
+
+    The FU is not a ratio and must be quantifiable and additive, such that the impact
+of two FUs is double that of one FU. The FU for assessing one component of a larger
+system is based on the FU of the system as a whole, analogous to the choice of a
+system function described in the previous section. Thus, the FU for a car door can
+be one car door ensuring access and safety during the transportation of a person over
+1 km.
+    For a given FU, the reference flows are the amounts of goods or services purchased
+to fulfill the function and generate this FU. In the case of transporting 1 person-km,
+key reference flows include (a) the gasoline used for 1 vehicle-km divided by the
+number of passengers and (b) the fraction of a vehicle needed to transport one person
+over 1 km (i.e., one divided by the number of person-kilometers transported over
+the vehicle’s lifespan). These reference flows usually vary among scenarios, and are
+discussed in greater detail in Section 3.4.1.
+    Table 3.2 presents examples of FUs and reference flows. In the shoe example, the
+FU is chosen to be one pair of shoes in good condition for 1 year (the time period
+is arbitrary, but must remain consistent). Thus, in the case of high-quality shoes
+that last 2 years, only half a pair of shoes needs to be purchased per year to satisfy
+this FU (i.e., one pair every 2 years). For lower-quality shoes with a life span of six
+months, two pairs of shoes must be purchased to be able to wear a suitable pair of
+shoes for 1 year. In this example, the effective lifetime of the shoes has a direct effect
+on the reference flows.
+    In the case of hand-drying with a paper towel or an electric hand-dryer, the FU
+selected is one pair of dried hands. Since doubling this number simply doubles all
+corresponding reference flows in all scenarios, the chosen number of pairs of hands
+is arbitrary but must be consistent among scenarios and explicitly defined. In these
+two scenarios, the main reference flow needed to dry a pair of hands is either an
+average of 1.5 paper towels or a consumption of 30 s of electric hand-drying (at a
+power of 1800 W, this consumes 15 Wh of electricity). The reference flows must also
+include a fraction of the towel dispenser and of the hand-drying devices. Assuming
+the paper towel dispenser is operational for about 10 years, with 50 uses per day, it
+dries about 182,625 hands; thus, 1/182,625 of a holder is required for one pair of
+28                                                     Environmental Life Cycle Assessment
+
+
+
+TABLE 3.2
+Sample Functional Units and Reference Flows for Various Scenarios
+                 Functional Unit          Reference Flows (What is            Key Parameters (Linking
+System          (Service Offered)                Purchased)                   Reference Flows to FU)
+Pair of shoes   1 pair of functional   0.5 pair of high-quality shoes         Lifetime of shoe
+                 shoes for 1 year       (2 year lifespan)
+                                       2 pairs of low-quality shoes
+                                        (6 month lifespan)
+Hand-dryer      1 pair of dried        1.5 paper towels                       Number of towels per
+                 hands                 1/182,625th paper towel dispenser       usage
+                                       1800 W for 30 s                        Power of dryer and
+                                       1/365,250th electric dryer              duration of use
+Wall paint      100 m2 of wall         30 kg of long-lasting paint that       Amount of paint applied
+                 painted for            lasts 20 year                          per square meter
+                 20 year               2 × 25 kg of less durable paint that   Lifetime of paint
+                                        lasts 10 year
+
+
+
+dried hands. Assuming the electric hand-dryer is operational for 20 years, with the
+same frequency of use, 1/365,250 of a dryer is required per pair of hands.
+   The parameters relating reference flows to the FU can often be identified as key
+parameters directly affecting environmental impacts (Table 3.2), such as the number
+of towels per usage in the hand-drying example. In the electric-dryer scenario, the
+amount of electricity per usage is key, expressed in more tangible parameters as the
+power use and duration of use. For such products where the use dominates impacts,
+the product efficiency plays a dominant role. In applications where the manufactur-
+ing or disposal stages have the dominant impact, such as for a shoe, which requires
+no energy during use, the product lifetime and amount of material used often play
+an essential role, as does the number of uses. Doubling the lifetime of such a product
+cuts its emissions almost in half.
+   Key parameters often measure environmental performance as ratios of material
+needed per function, whereas the FU itself is additive and not a ratio (when the FU
+doubles, so do the impacts).
+
+     To summarize, a meaningful comparison among systems or scenarios must all
+     be based on the same function characterized by the same (FU). The reference
+     flows for each scenario represent the amounts of goods or services purchased
+     per FU and constitute the basis for establishing the environmental inventory.
+
+
+3.3.2 Critical Choice of a Functional Unit: Popcorn as a
+       Packaging Material
+To show the importance of choosing the right FU, we describe a study comparing various
+packing materials (Jolliet et al. 1994). Plastic packaging materials (such as polystyrene
+Goal and System Definition                                                                                                 29
+
+
+peanuts) are traditionally used for economic and technological reasons, despite being
+nonbiodegradable and produced from nonrenewable raw materials (oil). Various renew-
+able and biodegradable materials have been proposed as alternatives, including pop-
+corn, an “all-natural” option that feels greener. Even if the ethical issue of using food as
+industrial raw material is still controversial, is popcorn preferable over polystyrene from
+an environmental perspective? Answering such questions is the role of LCA.
+   Figure 3.1a compares the environmental impacts of polystyrene and popcorn
+by mass, showing that polystyrene results in three to four times more impacts per
+
+                                                            Impacts per kg material
+                                     100
+                                                                                                              Phosphates
+                                     90
+                                                                                                              Nitrates
+    Environmental impact (% of PS)
+
+
+
+
+                                     80
+                                                                                                              NH3
+                                     70
+                                                                                                              SO2
+                                     60
+                                                                                                              NOx
+                                     50
+                                                                                                              HC
+                                     40
+                                                                                                              CO
+                                     30
+                                     20                                                                       PM
+
+                                     10                                                                       N2O
+
+                                      0                                                                       CO2
+                                            PS       PC           PS        PC             PS       PC
+      (a)                                  Eco-factors 97       Critical volumes      Critical surface-time
+
+                                                            Impacts per m3 material
+                                     200                                                                      Phosphates
+                                     180                                                                      Nitrates
+    Environmental impact (% of PS)
+
+
+
+
+                                     160
+                                                                                                              NH3
+                                     140
+                                                                                                              SO2
+                                     120
+                                                                                                              NOx
+                                     100
+                                                                                                              HC
+                                     80
+                                                                                                              CO
+                                     60
+                                                                                                              PM
+                                     40
+                                     20                                                                       N2O
+
+                                      0                                                                       CO2
+                                            PS       PC           PS        PC             PS       PC
+     (b)                                   Eco-factors 97       Critical volumes      Critical surface-time
+
+
+FIGURE 3.1 Comparison of total environmental impacts due to filling a package with poly-
+styrene peanuts (PS) or popcorn (PC) (a) per mass of material and (b) per volume. Impacts
+of pollutant emissions were characterized and weighted based on three impact assessment
+methods (as discussed in Chapter 5), where the lower impacts correspond to the more envi-
+ronmentally friendly option. Representation (b) is relevant to the function of filling a package.
+Substance abbreviations are defined at the front of the book. (Adapted from Jolliet, O., et al.,
+Agriculture, Ecosystems and Environment, 49, 253–266, 1994.)
+30                                               Environmental Life Cycle Assessment
+
+
+kilogram than popcorn (relative impacts vary slightly depending on the impact
+assessment method). This analysis may suggest that popcorn is the more environ-
+mentally friendly alternative.
+    However, mass is not the relevant quantity for the function at hand, which is the
+filling of cardboard to ensure safe transit. Thus, a suitable FU is the filling of one unit
+of volume, with reference flows corresponding to the mass needed to achieve this.
+Since popcorn is 4.6 times denser than polystyrene peanuts, the resulting compara-
+tive impacts per FU of volume (Figure 3.1b) are reversed relative to the impacts per
+mass.
+    The key parameter determining the differences in environmental impacts between
+polystyrene and popcorn is not primarily the nitrate leaching or fertilizer use from
+growing the corn, but rather the density of the popcorn. Reducing nitrate leaching and
+fertilizer use can slightly reduce the impacts of popcorn, but a reduction in density
+is necessary to make any substantial improvement over polystyrene packaging. This
+leads to what some may consider a surprising result: the industrial non-natural prod-
+uct (polystyrene) is more environmentally friendly. The concept of “natural” is not
+necessarily consistent with that of “environmentally friendly”! This density reduction
+is now achieved industrially by extracting the corn starch and expanding it in a man-
+ner similar to that for polystyrene or by using plastic bags filled with air.
+    Another common key factor is the reuse of materials. For example, assuming that
+the popcorn is used once on average, compared with the polystyrene peanut, which
+is used twice, the polystyrene emissions and subsequent impacts should be halved
+for each FU (i.e., only half the impacts are allocated to each use). This would further
+enhance the advantage in this study of using polystyrene.
+
+3.3.3 Electric Light Bulbs: Setting Up the Life Cycle Assessment
+The comparison of two light bulbs illustrates how to identify the FU, the reference
+flows, and the key environmental parameters (Table 3.3), along with how this can
+inform product design from the beginning (Section 7.3.2). This example will be
+referred to throughout the book.
+    The main function of most light bulbs is, of course, to illuminate; thus, the FU
+must account for a reference amount of visible light, or luminous flux, chosen here
+to be 800 lm. The FU must also specify a reference duration of illumination, chosen
+here to be 5000 h. The secondary functions, such as heating, creating a pleasant
+atmosphere, and being fashionable, can vary according to the bulb type, but are
+not addressed by the FU and could be considered as complementary performances.
+The reference flows purchased to fulfill the FU of 800 lm over 5000 h include one
+fluorescent bulb or five incandescent bulbs (as the latter’s service life is only 1000 h).
+This adds up to 5 × 35 g = 175 g of materials for the incandescent light bulbs and
+160 g (one bulb) of materials for the fluorescent bulb. Electricity consumption must
+also be purchased, with 60 W × 5000 h = 300 kWh for the incandescent bulbs, and
+13 W × 5000 h = 65 kWh for the fluorescent one. The key environmental parameters
+can now be identified as ratios that relate the FU to the reference flows. For the
+use stage, the key environmental parameter is the luminous efficacy, which is how
+efficiently the bulb produces visible light, expressed in lumens per watt (LPW). The
+Goal and System Definition                                                                      31
+
+
+
+TABLE 3.3
+Function and Functional Unit for Different Light Bulbs
+                    Main
+Products          Function          Secondary Functions
+Scenario 1:     Illumination     Heat
+ Incandescent                    Security
+Scenario 2:                      Ambience/style
+ Fluorescent
+
+Product or        Functional      Reference flow (what is     Key environmental parameters
+system           unit (service           bought)                (linking reference flows to
+                   offered)                                           functional unit)
+
+Scenario 1:                      60 W × 5000 h/FU = 300      Lumens per watt (use stage)
+ Incandescent                    kWh/FU                      Bulb lifespan (manufacturing
+ bulbs          800 lumens for   5 bulbs (=5 × 35 g = 175 g) stage)
+                 a duration of
+Scenario 2:      5000 h          13 W × 5000 h/FU = 65       Amount and type of materials per
+ Fluorescent                     kWh/FU                      bulb (material extraction and
+ bulbs                           1 bulb (160 g)              manufacturing stages)
+
+
+
+key parameters of bulb service life and materials are more relevant to the manu-
+facturing stage. Of course, designers generally aim to maximize luminous efficacy
+and lifespan while minimizing materials, but outlining the FU and reference flows
+helps to quantify and prioritize the various parameters and may also identify less
+obvious parameters. The subsequent LCA stages more clearly quantify the relative
+importance of these key parameters, as well as the impacts caused by toxic substance
+emissions. Section 4.2.2 presents the next step of detailing energy and CO2 balances
+for this case study.
+
+3.3.4 Functional Unit and Reference Flows: A Common
+       Basis for Both Environmental and Cost Analyses
+In addition to estimating the environmental impacts of existing products and provid-
+ing information to guide the design of new products, the FU and reference flows can
+also be used to estimate costs over the whole life cycle of the product. This process
+of life cycle costing (LCC) is not technically part of the environmentally focused
+LCA, but since it uses life cycle thinking and the same framework and concepts, the
+two are easily combined. A short LCC example is given in the next subsection, with
+further details in Chapter 6.
+
+3.3.4.1 Electric Light Bulbs: Life Cycle Costs
+A fluorescent light bulb is generally more expensive than an incandescent one at
+purchase, but a fluorescent bulb lasts longer and saves electricity and thus money.
+Since the reference flows represent what must be purchased to achieve the FU, it
+32                                                Environmental Life Cycle Assessment
+
+
+
+TABLE 3.4
+Analysis of Life Cycle Costs for the Light Bulb Example
+                       Functional Unit     Reference Flow
+Product or System     (Service Offered)   (What Is Bought)           Life Cycle Cost
+Scenario 1:                               300 kWh/FU         300 kWh/FU × $0.1/kWh = $30/FU
+ Incandescent bulbs                       5 bulbs            5 × $1.5 = $7.5/FU
+                      800 lm for a
+                                                             Total = $37.5/FU
+                       duration of
+Scenario 2:                               65 kWh/FU          65 kWh/FU × $0.1/kWh = $6.5/FU
+                       5000 h
+ Fluorescent bulbs                        1 bulb             1 × $8 = $8/FU
+                                                             Total = $14.5/FU
+
+
+
+is only logical to use them as a starting point in LCC (Table 3.4 and Section 6.8.1).
+To provide the service of 800 lm for 5000 h, the five incandescent bulbs cost $7.50/FU,
+compared with $8/FU for one low-energy fluorescent bulb. Even at a competitive
+rate of $0.1/kWh, the cost of electricity during the use stage comes to $30/FU for the
+incandescent bulbs and $6.5/FU for the fluorescent bulbs. Thus, despite their higher
+retail price, fluorescent bulbs generate significant savings of approximately $23 per
+bulb over the course of 5000 h or 5 years.
+    The results of these environmental and cost comparisons are thus ideal, where
+the fluorescent bulbs are better from both an energetic and economic point of view.
+Because of this, the sale of incandescent bulbs has recently been phased out in many
+countries. Why, then, do people continue to purchase incandescent bulbs that con-
+sume more energy and end up costing more than fluorescent bulbs? Incandescent
+bulbs are not fully socially accepted for a variety of reasons. First, a higher initial
+cost is a barrier, emphasizing the importance of information on future benefits when
+purchasing the product. Also, fluorescent bulbs can take up to a minute to reach full
+brightness after being turned on, which can be partially compensated by purchas-
+ing a bulb with higher luminous intensity (i.e., a compact fluorescent lamp [CFL]
+of 1100 lm at 18 W can replace an incandescent bulb of 800 lm at 60 W) or by
+purchasing the even more energy-efficient light-emitting diode (LED) bulbs. These
+behavioral factors illustrate the importance of the social dimension in the following
+statement by the Food and Agriculture Organization: “sustainable development …
+is environmentally non-degrading, technically appropriate, economically viable and
+socially acceptable” (FAO 1995).
+
+     To summarize, the FU and reference flows are a starting point for two comple-
+     mentary tools: environmental LCA and LCC.
+
+
+3.3.5 Multifunctional Products
+When comparing products or services, if their functions are close but not identical,
+it is important to clearly indicate this and evaluate the potential consequences on the
+study results.
+Goal and System Definition                                                                                 33
+
+
+   Functions may differ in the performance of the product or service. When compar-
+ing environmental impacts of different modes of transport (rail, road, and air), the
+time to travel a given distance can vary greatly, yet this travel time cannot be directly
+included in the FU. Still, as is done with economic performance, this technical per-
+formance can be measured and compared with the environmental performance in
+the final interpretation phase.
+   In cases where the multifunctional aspect changes the necessary reference flows,
+the FU can be adjusted to account for this. This adjustment approach is practically
+identical to that used for allocating emissions to coproducts, using the same hierar-
+chy of methods applied in Section 4.5.
+   There are some systems which simultaneously achieve many different functions,
+in which case the function chosen for analysis is important to identify. For example,
+the system of wheat crop production (Charles et al. 2006) can have many functions:
+landscape upkeep, basic wheat production, or production of quality wheat for bread
+making. For landscape upkeep, the FU is 1 ha, with environmental impacts reported
+per unit of surface area. For wheat production as the function, the FU is 1 t of pro-
+duced grains. Bread making implies not only a given quantity of flour but also a min-
+imal protein content of 13%; thus, the FU is 1 t of grains with a 13% protein content.
+   Different choices of system function can yield different environmental impact
+rankings between scenarios. Figure 3.2 shows that choice of system function can
+actually reverse the ranking of nonrenewable primary energy consumption in wheat
+production systems for different fertilization levels. For example, the low fertiliza-
+tion intensity option is energetically favorable for landscape upkeep, but it is the
+most energy-intensive option when growing bread-quality wheat. This is because
+low fertilization reduces both yield and protein content, necessitating the use of a
+
+                                              200
+                                              180
+                Nonrenewable primary energy
+
+
+
+
+                                              160
+                 (% of 100 kgN/ha scemario)
+
+
+
+
+                                              140
+                                              120
+                                              100
+                                               80
+                                               60
+                                                              per hectare
+                                               40             per ton
+                                               20             per ton, 13% protein
+                                                0
+                                                    60     100        140         180        220     260
+                                                         Nitrogen fertilization intensity (kgN/ha)
+
+
+FIGURE 3.2 Consumption of nonrenewable primary energy necessary for wheat produc-
+tion as a function of nitrogen fertilization intensities for three different functional units: per
+surface area (hectare), per mass of wheat (ton), and per mass of bread-quality wheat (ton,
+13% protein). (Adapted from Charles, R., et al. Agriculture Ecosystems & Environment, 113,
+216–225, 2006.)
+34                                               Environmental Life Cycle Assessment
+
+
+high-protein wheat variety that leads to a further reduction in yield and thus higher
+impacts per unit mass of bread with a 13% protein content.
+
+3.4 SYSTEM DEFINITION
+3.4.1 Principles of System Modeling
+The reference flows and subsequent impacts for each FU are calculated based on a
+well-defined system. System modeling is based on a holistic approach that provides a
+global understanding of the system by considering it as a whole, in all of its dynamics
+and complexity (Le Moigne 1990). The system is more than the sum of its elements.
+The system modeling approach focuses on the relationships between elements that
+make up the system rather than the elements themselves. The system is then described
+in terms of these relationships and their significance to the function of the system. In
+LCA, the world can be schematically decomposed into the environment, the system
+providing a product or function, and the rest of the economic activity (Figure 3.3).
+    The system here is defined as a group of dynamically interacting elements, orga-
+nized to achieve one or more functions. It is identified by the elements it contains, called
+processes, the links between these elements, and the boundaries that delineate it from
+the surroundings (environment plus economy). The inputs of the environment into the
+system are the extracted resources, which include the energy and the land used; the out-
+puts of the system into the environment are emissions to air, water, and soil. The output
+of the system into the economic world is the service provided by the product.
+    The assessed and modeled system is built by linking different process modules.
+The processes and elements required to fulfill the function are identified, and these
+are expressed as a series of unit processes (Figure 3.4), the smallest elements in
+the analysis, for each of which inputs and outputs are quantified. Unit processes are
+linked to one another within the system by intermediary flows, expressing the quan-
+tity of each unit process needed for the subsequent unit process. The outputted prod-
+uct flows to the economy are any products that leave the system. Unit processes are
+linked to the environment by elementary flows, with input elementary flows corre-
+sponding to the use of natural resources, such as extracted raw material, energy, and
+land use. Elementary flows exiting a unit process are emissions to water, air, or soil.
+
+
+                        Economy                      Environment
+
+
+                                                Resource extraction
+                  Product                       (minerals, land, water, etc.)
+                                Assessed
+                 Input = 0       system         Emission (to air, water and
+                                                soil; of substances, noise, etc.)
+
+
+
+                             System boundary
+
+
+FIGURE 3.3 Relationships and exchanges between the studied system, the economic world,
+and the environment.
+Goal and System Definition                                                                                        35
+
+
+
+
+                                                   Unit process
+
+
+                                                          Intermediary
+                                                          product flow
+
+        Input elementary flows                     Unit process          Exiting elementary flows
+         (extractions from the                                               (emissions to the
+             environment)                                                      environment)
+                                                          Intermediary
+                                                          product flow
+
+                                                   Unit process
+
+
+
+
+FIGURE 3.4 Example of a set of unit processes in a system. (After ISO, ISO 14040
+Environmental Management—Life Cycle Assessment—Principles and Framework, 2006.)
+
+
+                                                                         Benzo[a]pyrene 1.30 mg
+                     Aluminum oxide 1.92 kg                              Carbon dioxide, fossil 1.50 kg
+      Anode, aluminum electrolysis 0.448 kg                              Carbon monoxide, biogenic 91.7 g
+
+   Cathode, aluminum electrolysis 0.0181 kg                              Hydrogen fluoride 539 mg
+                                                        Aluminum,        Nitrogen oxides 63.9 mg
+  Aluminum electrolysis plant 1.54 × 10–10 p             primary,
+                                                          liquid         PAH 45.7 mg
+Electricity mix, aluminum industry 15.9 kWh                1 kg          Particulates, < 2.5 μm 2.61 g
+                  Heat, light fuel oil 0.089 MJ                          Sulfur dioxide 8.83 g
+                   Heat, natural gas 0.084 MJ                            Heat, waste 56.0 MJ
+    Transport, transoceanic freight ship 3.8 tkm                         Disposal, filter dust Al electrolysis 2.00 g
+                                                                         Disposal, red mud from bauxite
+                                                                         digestion 1.36 kg
+
+
+FIGURE 3.5 Unit process flows associated with liquid primary aluminum at plant, ecoin-
+vent 2.2. Elementary flows from and to the environment are shown in italics.
+
+
+   Figure 3.5 presents the intermediary and elementary flows of primary liquid
+aluminum, as described in ecoinvent 2.2. The manufacturing of liquid aluminum
+makes use of the following intermediary flows: aluminum oxide, electricity and
+quantities of anode and cathode for electrolysis, and heat produced by burning light
+fuel oil and natural gas. It also involves transoceanic freight and treatment of wastes
+from aluminum production. Direct air emissions during liquid aluminum manu-
+facturing results in some of the following elementary flows: benzo[a]pyrene and
+other polycyclic aromatic hydrocarbon emissions, carbon dioxide and chlorofluo-
+rocarbon-14 (CFC-14), sulfur dioxide, nitrogen oxides, and PM2.5, as well as waste
+heat. Each of the intermediary flows requires other intermediary flows and generates
+36                                                        Environmental Life Cycle Assessment
+
+
+                                   Disposal, red mud from          Disposal, filter dust
+                                      bauxite digestion              Al electrolysis
+                                           1.36 kg                       2.00 g
+
+
+
+                                                        Aluminum,
+                                                       primary, liquid
+                                                           1 kg
+
+
+
+               Aluminum oxide        Anode, aluminum           Cathode, aluminum           Electricity mix
+                                       electrolysis                electrolysis
+                     1.93 kg             0.449 kg                   0.0181 kg                 57.4 MJ
+
+
+
+         Aluminum                     Petroleum coke
+         hydroxide
+          2.96 kg                         0.292 kg
+
+
+
+         Bauxite               Heat, light fuel              Transport,                     Natural gas
+                                     oil                 transoceanic freight
+         4.14 kg                  14.9 MJ                     34.1 tkm                        3.19 MJ
+
+
+FIGURE 3.6 Flowchart for the manufacturing of liquid primary aluminum at plant, based
+on ecoinvent 2.2.
+
+
+additional direct emissions. For example, the manufacturing of aluminum oxide will
+itself use aluminum hydroxide, as well as additional electricity and heat from light
+fuel oil and natural gas, and will generate some more waste heat.
+    The level of detail required in modeling a unit process depends on the objectives
+of the study. Each unit process can be further subdivided into other unit processes
+down to the level of necessary detail (Figure 3.6). Since this is a physical system,
+mass and energy balances can be carried out to check that unit processes and the
+global system respect conservation of mass and energy (see example in Figure 8.3).
+    The theoretically ideal system is one defined such that the economic world has no
+inputs to the system and only one output from the system, namely the product cor-
+responding to the studied function (Figure 3.3). All processes required to fulfill the
+system function should be part of the system. In practice, this is often not possible,
+either because of a lack of data or time to carry out the LCA. Moreover, the system
+may have outputs other than the studied product, resulting in coproducts of value to
+which a portion of the emissions must be allocated (Section 4.5).
+
+3.4.2 Flowchart
+The flowchart or flow diagram or process tree (such as the one depicted in Figure 3.6)
+provides a clear overview of the processes and their relationships. It depicts each unit
+process considered within the system and quantifies the intermediary flows linking
+these unit processes. The flow diagram is built starting from the reference flows
+Goal and System Definition                                                          37
+
+
+(what you need to buy for one FU), then identifying the first-tier intermediary flows
+(quantities of preceding unit processes) associated with each reference flow. The
+operation is then repeated, starting from the Tier 1 intermediary flow, yielding a
+second set of Tier 2 elementary flows. In practice, for a new study, the flow diagram
+will display all linkages from reference flows up to existing database unit processes,
+whose upstream and downstream links are described in further detail in the database
+itself and therefore do not necessarily need to be shown in the flowchart. Figure 3.6
+presents the flowchart for liquid aluminum production. With the goal of displaying
+all key unit processes, the system boundaries also include the upstream Tier 2 pro-
+cesses, such as aluminum hydroxide.
+
+3.4.3 Description of Scenarios
+Each scenario being compared in the LCA must have its own flowchart to be prop-
+erly visualized and broken down into unit modules. Each scenario must cover the
+same functional reality and yield the same FU, which means having the same pri-
+mary function. Of course, scenarios may share certain unit processes, as described
+in a case study in Chapter 8 (Figure 8.1).
+
+
+3.5 SYSTEM BOUNDARIES
+3.5.1 Principles of System Boundaries
+The system boundaries determine which specific modules are included and excluded
+when modeling the system. They are defined to ideally include all the required
+processes, from cradle to grave, to fulfill the function. This may sound simple, but
+quickly becomes complicated in actual applications.
+   A complete LCA would require coverage and modeling of all global production
+processes occurring at any point in the production, use, or disposal chain. In
+agricultural production, for example, an LCA should account for emissions from
+the use of a tractor, but is it necessary to consider the emissions associated with
+manufacturing the tractor, or associated with making the machinery that helped
+to manufacture the tractor? For the LCAs described thus far, based on sets of
+processes, it is important to determine the criteria for the inclusion or exclusion
+of certain processes and apply them according to ISO 14000 standards. This sec-
+tion first describes the main types of processes to consider, and then presents an
+example to describe how consistency rules are defined to best determine system
+boundaries.
+   Note that the input–output method of LCA avoids many of these issues associ-
+ated with cutting off the supply chain, with advantages and disadvantages discussed
+further in Section 4.4.4.
+
+   According to ISO 14044, the system boundary is the “set of criteria specifying
+   which unit processes are part of a product system” (p. 5).
+38                                               Environmental Life Cycle Assessment
+
+
+                                                     Infrastructure,
+                                                         inputs,
+                                                     transportation
+
+
+
+                                                     Manufacturing                Recycling
+                       Raw materials and
+                          energy ores
+     Resources
+                           extraction
+                         and refining
+                                                            Use                 Reuse
+
+
+                                                          Waste
+                                                        treatment
+
+                   System boundary
+                                                Emissions to air, water, soil
+
+
+FIGURE 3.7 Flowchart of major processes and stages in the life cycle of a product.
+
+3.5.2 Main Considered Processes
+Starting from the reference flows, the system should include all flows required
+to fulfill the function and cover the main life cycle stages (ISO 14040, p. 12 and
+Figure 3.7):
+
+     •   Extraction and refining of raw materials and energy
+     •   Provision of infrastructure, machinery, inputs, and transport
+     •   Main manufacturing stage
+     •   Use stage, including maintenance
+     •   Waste treatment, taking into account the recovery of used products (including
+         reuse, recycling, and energy recovery)
+
+   Since eliminating waste generates emissions, waste treatment must be included
+within the system boundaries. Waste flows (e.g., kilograms of anode waste sent to a
+landfill) are intermediary flows rather than elementary ones and, therefore, should
+not be reported in the inventory as such. It is the emissions and other elementary
+flows associated with the waste treatment stages (e.g., kilograms of aluminum emit-
+ted to ground and surface water) that are reported in the inventory.
+
+3.5.3 Importance of System Boundaries: Comparing a
+       Fast-Food and a Traditional Restaurant
+An LCA study compared a fast-food restaurant with a traditional one in the early
+1990s. The results obtained (Figure 3.8) indicate that the fast-food restaurant con-
+sumed six times less energy and seven times less water, and produced five times less
+waste per customer.
+Goal and System Definition                                                           39
+
+
+                                        2
+
+
+
+
+                  (kWh/customer)
+                                      1.5
+
+
+
+
+                     Energy
+                                        1
+                                      0.5
+                                        0
+                                            Fast food   Traditional
+                   (a)                                  restaurant
+                  Water consumption
+
+
+
+                                       20
+                    (L/customer)
+
+
+
+                                       15
+                                       10
+                                        5
+                                        0
+                                            Fast food   Traditional
+                   (b)                                  restaurant
+
+                                      100
+                  (g/customer)
+
+
+
+
+                                       75
+                     Waste
+
+
+
+
+                                       50
+                                       25
+                                        0
+                                            Fast food   Traditional
+                   (c)                                  restaurant
+
+
+FIGURE 3.8 Initial results comparing the impacts of a fast-food restaurant with a tradi-
+tional restaurant: (a) energy, (b) water, (c) waste.
+
+
+
+    Faced with these rather surprising results, the considered system boundaries and
+other assumptions underlying this study should be closely examined. Table 3.5 lists
+the main life cycle stages for each scenario, including those that were not considered
+in the original study. Can you see some of the flaws of this study?
+    The first flaw with this study is that the system boundaries are chosen as the walls
+of the restaurant, only accounting for the processes that occur within the restau-
+rant. This is a physical rather than functional basis for a system boundary, and thus
+excludes initial food preparation and packaging from the fast-food system. Moreover,
+the dish production and waste management also occur outside the restaurant and are
+not included for either system, thus preventing a comparison of their differences.
+These excluded processes are generally unfavorable to fast-food restaurants and
+therefore falsely bias the study. A second criticism of this work is that the function
+of a fast-food restaurant is different from that of a traditional one, which offers more
+space to customers to linger (Table 3.1).
+    The study described was repeated by Lang et al. (1994), who addressed these
+key criticisms. To compare two restaurants with the same function, the first fast-
+food restaurant (FF1), using all disposable dishes, was compared with a restaurant
+of the same style in which cutlery is washed and reused (FF2). Moreover, the system
+40                                                      Environmental Life Cycle Assessment
+
+
+
+  TABLE 3.5
+  Comparison of Food Preparation Steps for Fast-Food and Traditional
+  Restaurants
+  Fast-Food Restaurant                                          Traditional Restaurant
+  Agricultural production chain                   Agricultural production chain (same as fast-food)
+  Transport                                       Transport (same)
+  Production chain for plastic tableware          Production chain for reusable dishes
+   (knives, forks, cups, etc.)
+  Initial preparation and packaging of food
+   (preparation of burgers, salads, etc.)         Preparation of food and cooking
+    Final cooking
+  Cleaning, heating, and lighting of restaurant   Cleaning, heating, and lighting of restaurant (same)
+                                                  Clean reusable dishes
+  Management of packaging and food waste
+                                                  Management of food and packaging waste
+
+  Note: Items in italic were not included in the system boundary of the original study.
+
+
+
+boundaries were chosen to account for all the processes needed to achieve equivalent
+functions (Figure 3.9), thus accounting for dishwashing and waste treatment. Finally,
+the number of meals served at FF1 was recounted and revised to a lower value than
+in the original study.
+    For these more consistent system boundaries, Figure 3.10 shows the environmen-
+tal impact comparison obtained by Lang et al. (1994). Using the Ecoscarcity method
+to aggregate different impacts (see Section 5.5.5), the environmental load due to FF1
+is about twice that of FF2. Therefore, the corrected system boundaries and compari-
+son between similar functions (along with improved data for FF1) reverse the results
+of the flawed original study, finding that the fast-food restaurant with reusable dishes
+is more environmentally friendly.
+
+3.5.4 Rules to Define System Boundaries
+The example in the previous subsection illustrates the need to identify rules for
+consistency when defining system boundaries, to provide a framework that helps to
+reveal and avoid errors.
+
+     Rule 1 The system boundaries must cover the same functional reality in all
+     scenarios.
+
+
+   The first study, comparing the fast-food with the traditional restaurant, had two
+system boundaries that clearly did not cover the same reality, including all food prep-
+aration and dishwashing for the traditional scenario without including analogous
+processes for the fast-food one. The system boundaries are not physical boundaries,
+but functional ones.
+Goal and System Definition                                                                  41
+
+
+                                                    System boundary
+
+       Raw material extraction       Water treatment                   Energy supply
+
+
+             Materials                   Water                            Energy
+
+
+
+
+           Production                Transport                        Restaurant
+
+               Food                     Food                      Food          Heating
+                                                               preparation
+                                                                               Lighting
+              Dishes                   Dishes                                 Ventilation
+                                                                                Cooling
+                                                                 Dish
+                                                                washing        Cleaning
+            Packaging                 Packaging
+
+
+
+
+            Used water                                                    Waste
+
+
+       Wastewater treatment                                           Waste treatment
+
+
+             Effluents                                                   Landfills
+
+
+
+               Water                          Air                            Soil
+
+
+
+
+  Legend                                 Intermediary               Excluded from system
+                      Process
+                                           product
+
+                                 Water flow            Other flow
+
+
+FIGURE 3.9 System boundary to compare environmental impacts of two fast-food restau-
+rants. (After Lang, B., et al., GAIA, 3, 108–115, 1994.)
+
+
+
+
+  Rule 2 Cut-off criteria for the inclusion of processes in the system boundary
+  must be clearly described, including assumptions, reasoning, and effects on
+  study results. Processes should only be excluded if they contribute less than the
+  cut-off percentages (e.g., 1%) to the mass of the product, the energy consump-
+  tion of the system, or the environmental impacts (e.g., emissions of a given
+  pollutant) (ISO 14044, 2006). These cut-off criteria are fixed in advance.
+42                                                        Environmental Life Cycle Assessment
+
+
+                                           50,000
+                                           45,000                           Transport
+
+           Ecopoint per customer per day   40,000                           Dishes
+                                           35,000
+                                                                            Secondary
+                                           30,000                           packaging
+                                           25,000                           Use
+
+                                           20,000
+                                           15,000
+                                           10,000
+                                            5,000
+                                               0
+                                                    FF1            FF2
+
+
+FIGURE 3.10 Comparison of environmental impacts (in ecopoint) per customer served in
+fast-food restaurants FF1 and FF2. (After Lang, B., et al., GAIA, 3, 108–115, 1994.)
+
+
+
+   This rule is consistent with the iterative process of LCA, in which a preliminary
+assessment (screening) is conducted over all phases (inventory, impact assessment,
+and interpretation) to determine the order of magnitude of different contributions.
+The subsequent detailed analysis further examines the processes that exceed the cut-
+off criteria. Because of the array of LCA modules and applications, it is not possible
+to determine an overarching cut-off threshold that applies to all LCAs. In practice,
+the cut-off criteria are applied as a minimum inclusion requirement, ensuring that all
+processes contributing to more than the cut-off are included. All existing processes
+available in databases or collected data on new processes are usually kept, even if
+they contribute to less than the cut-off.
+
+     Rule 3 Processes that are identical in the different scenarios can only be
+     excluded if the reference and intermediary flows affected by these processes
+     are strictly equal (i.e., the intermediary flows of each excluded process per FU
+     are exactly the same for the different scenarios).
+
+
+   In other words, the LCA must still account for identical processes occurring in all
+scenarios if the scenarios require different quantities of processes.
+   As an example, imagine comparing the use of two herbicides, A and B, for the
+harvest of a given quantity of wheat. Clearly, the system boundaries must include the
+processes of herbicide manufacturing and treatment. But, can we exclude the gaso-
+line required for plowing the field and other wheat cultivation steps that must occur
+in both scenarios? These steps are identical regardless of the herbicide and thus
+appear unnecessary in the comparison (Figure 3.11).
+   To answer this question, it is essential to consider the necessary intermediary
+flows per FU rather than per other default quantities. Per hectare, it is true that the
+Goal and System Definition                                                                         43
+
+
+                                    Plowing                         Plowing
+                                   20 L diesel                     20 L diesel
+
+
+                                  Application                   Application
+                                  Herbicide A                   Herbicide B
+                               10 kg A, 5 L diesel          0.2 kg B, 2 L diesel
+
+
+                                     Yield                           Yield
+                                    5000 kg                         4000 kg
+
+
+FIGURE 3.11 Treatment of a hectare of wheat with Herbicide A and Herbicide B.
+
+
+same amount of diesel is used to plow a field of wheat. In these scenarios, however,
+the yield per hectare is not identical between the scenarios, due to the differences
+in the effectiveness of the herbicides. Thus, the tractor needs to plow a larger area
+for Herbicide B to yield a given amount of wheat; the Herbicide B scenario requires
+0.005 L of diesel per kilogram of wheat compared with 0.004 L for Herbicide A. In
+other words, when the results are calculated per FU (per kilogram of wheat), emis-
+sions per hectare plowed remain the same, but must be divided by different yields.
+Since the herbicide affects the ultimate yield, it is not only the herbicide stage but all
+wheat production stages that must be accounted for.
+   A second example shows how seemingly identical stages of a product must still
+be included in the system boundaries because of other product differences. A study
+compared three kinds of toothpaste packaging (Haydock 1995): a standard tube in
+cardboard packaging, a self-standing tube not needing the outer box, and a dos-
+ing toothpaste pump. Although the type and amount of toothpaste considered in
+each packaging was identical, the packaging influenced how much toothpaste was
+ultimately discarded (Figure 3.12). More wasted toothpaste increases the effective
+
+
+                      10
+                       9
+                       8                                                              Wasted
+                       7                                                              toothpaste
+        Energy (MJ)
+
+
+
+
+                       6                                                              Packaging
+                       5
+                       4                                                              Toothpaste
+                       3
+                       2
+                       1
+                       0
+                           Packaged tube      Self-standing tube        Dosing tube
+
+
+FIGURE 3.12 Total energy requirements associated with the use of toothpaste and
+its packaging. (From Haydock, R., SETAC Case Studies Symposium, 1995.)
+44                                                   Environmental Life Cycle Assessment
+
+
+energy used and the emissions associated with that packaging. Another effect of
+packaging (not shown in Figure 3.12) is the influence of the tube opening on the
+amount of toothpaste used per brushing. Therefore, the production energy and emis-
+sions associated with toothpaste manufacturing should still be included in the system
+boundaries to consider differences in waste, even if it is the packaging that is being
+compared.
+
+EXERCISES
+Exercise 3.1: Paper or Plastic?
+You want to decide whether to use a plastic or paper bag at the supermarket. The
+plastic bag weighs 40 g with a capacity of 9 L, and you estimate you will use it twice
+on average (reuse one additional time after the first use). The paper bag weighs 30 g
+with a capacity of 6 L and cannot be reused. Use the forms AIV.2 and AIV.3 in
+Appendix IV to
+
+     a. Determine the FU, assuming the bags carry their maximum load.
+     b. Determine the reference flows and key parameters linking the reference
+        flows to the FU for the two scenarios, assuming manufacturing and dis-
+        posal are negligible.
+
+Exercise 3.2: Paper Towels or Hot-Air Dryer?
+Use LCA to compare the use of paper towels in a public restroom with that of a
+hot-air dryer. Many key assumptions and parameter values are provided as bullet
+points and in Table 3.6. Use the forms IV.2 through IV.4 in Appendix IV to
+
+     a. Describe the function and any secondary functions of the system.
+     b. Choose an FU that represents the function of the system.
+     c. For each case, list the reference flows and key parameters corresponding to
+        the selected FU.
+     d. System boundary.
+
+
+
+              TABLE 3.6
+              Table of Parameter Values for Exercise Comparing
+              Hand-Drying Options
+              Hot-Air Hand-Dryer                              Paper Towel
+              Device carcass     8 kg cast iron   Dispenser weight     3 kg plastic
+              Devise base        4 kg steel
+              Device lifetime    20 year          Dispenser lifetime   10 year
+              Electricity rate   1800 W           Paper towel weight   3.58 g
+              Drying time        30 s
+              Transport          100 km truck     Transport            100 km truck
+Goal and System Definition                                                                                 45
+
+
+    i. Starting from the FU and the reference flows, draw the flowchart and
+       system boundary for each scenario; you may want to stop when you link
+       to the process of an existing database.
+   ii. For each scenario, find a secondary function that may save energy and
+       draw it on the diagram.
+  iii. Based on the masses of the various reference flows involved, decide
+       whether the transportation of the paper towel dispenser should be
+       included in the system boundary, and explain.
+		 Assume the following:
+    • Fifty uses per day for both scenarios.
+    • The hot-air hand-dryer device is made out of cast iron. It is activated by
+       a button that blows hot air for 30 s.
+    • On average, 1.5 paper towels are used for each pair of hands.
+    • Manufacturing energy for towels, towel dispenser, and air-dryer device
+       are negligible.
+
+Exercise 3.3: Elementary and Intermediary
+Flows of 1 kg Aluminum Hydroxide
+Based on Figure 3.13, determine the elementary and the intermediary flows related
+to the production of 1 kg of aluminum hydroxide.
+
+
+                                                                                 Key Environmental
+Product or    Functional Unit                                                   Parameters (Linking
+System        (Service Offered)           Reference Flow (What Is Bought)      Reference Flows to FU)
+Scenario 1:                               60 W × 5000 h/FU = 300 kWh/FU        Lumens per watt (use stage)
+ Incandescent                             5 bulbs (= 5 × 35 g = 175 g)         Bulb lifespan
+ bulbs        800 lm for a                                                      (manufacturing stage)
+Scenario 2:    duration of                13 W × 5000 h/FU = 65 kWh/FU         Amount and type of
+ Fluorescent   5000 h                     1 bulb (160 g)                        materials per bulb
+ bulbs                                                                          (material extraction and
+                                                                                manufacturing stages)
+
+
+
+
+                                                                            Heat, waste (0.503 MJ)
+                  Water (1.05E–5 m3)
+                                                                            Sodium, ion (1.28 g)
+              Bauxite at mine (1.4 kg)
+                                                      Aluminum
+                                                      hydroxide,            Suspended solids (0.17 g)
+          Electricity, medium voltage
+                           (0.14 kWh)                    1 kg
+                                                                            Total organic carbon (18 mg)
+         Heat, light fuel oil (3.59 MJ)
+
+  Transport, transoceanic freight ship                                      Red mud from bauxite digestion
+                           (7.11 tkm)                                       (0.47 kg)
+
+
+
+FIGURE 3.13 Unit process flows of aluminum hydroxide at plant, ecoinvent 2.2.
+

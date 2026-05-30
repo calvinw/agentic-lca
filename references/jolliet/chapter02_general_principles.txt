@@ -1,0 +1,703 @@
+      2        General Principles of
+               Life Cycle Assessment
+               Olivier Jolliet, Gabrielle Soucy, Shanna Shaked,
+               Myriam Saadé-Sbeih, and Pierre Crettaz
+
+This chapter defines the life cycle assessment (LCA), its goals, and key phases. It
+explains the main characteristics of LCA and compares them with other environ-
+mental analysis tools. A real-life example illustrates the approach by presenting a
+comparison between different types of cups used in stadiums. At the end, two exer-
+cises encourage the reader to apply and practice the topics covered in the chapter.
+
+2.1 DEFINITION OF THE FOUR LCA PHASES
+LCA evaluates the environmental impact of a product or service (sometimes referred
+to just as a product for brevity); the assessment is based on a particular function and
+considers all life cycle stages. It helps identify where environmental improvements
+can be made in a product’s life cycle and aids in the designing of new products.
+Primarily, this tool is used to compare various products, processes, or systems, as
+well as the different life cycle stages of a particular product.
+    According to the definitions provided in the International Organization for
+Standardization (ISO) standards and by the Society of Environmental Toxicology
+and Chemistry (SETAC), an LCA consists of a goal and scope definition, inventory
+analysis, impact assessment, and interpretation of results (Figure 2.1). These four
+phases are defined as follows:
+
+   1. In the goal and scope definition (Chapter 3), the problem is described and the
+      objectives and scope of the study are defined. A number of crucial elements
+      are determined at this point: the function of the system, the functional unit on
+      which the emissions and the extractions will be based, and the system bound-
+      aries. The base scenario and the alternatives are described in detail.
+   2. In the inventory analysis (Chapter 4), the polluting emissions to air, water,
+      and soil are quantified, as well as the extractions of renewable and nonre-
+      newable raw materials. The resource use required for the function of the
+      system is also determined here.
+   3. The impact assessment (Chapter 5) evaluates the environmental impacts
+      due to the inventoried emissions. It can be broken down into the following
+      steps (Jolliet et al. 2004):
+      a. Selection of the impact categories, category indicators, and character-
+           ization models
+
+                                                                                         7
+8                                                Environmental Life Cycle Assessment
+
+
+
+                         Goal and scope
+                           definition
+
+
+                           Inventory
+                                                       Interpretation
+                            analysis
+
+
+                             Impact
+                           assessment
+
+
+
+
+FIGURE 2.1 The four iterative phases of life cycle assessment.
+
+       b. Classification of the emissions that contribute to each environmental
+            impact category (global warming, human toxicity, ecotoxicity, resource
+            use, etc.)
+       c. Midpoint characterization weights and aggregates the emissions into
+            midpoint impact categories
+       d. Damage characterization aggregates impact categories into damage
+            categories (damage to human health, ecosystem quality, resources, etc.)
+       e. An additional normalization step may be carried out to show the con-
+            tribution of the studied product as a fraction of the global impact in a
+            given impact category
+        f. Finally, the impact assessment can be completed with a socially based
+            weighting to account for the relative importance—or, ideally, dam-
+            age—of the midpoint impacts
+    4. The interpretation (Chapter 6) is where the results obtained so far are
+       interpreted and the uncertainties are evaluated. The key parameters and
+       improvement options can be identified using sensitivity studies and uncer-
+       tainty propagation, and a critical analysis evaluates the influence of the cho-
+       sen boundaries and hypotheses. Finally, the environmental impacts can be
+       compared with economic or social impacts.
+       These four phases of LCA will be examined in detail in the following chap-
+       ters, but it is important to note that they have not all reached the same level
+       of maturity.
+       a. The goal and scope definition phase is well developed.
+       b. New developments are required to further the inventory phase, par-
+            ticularly in allocation, where it is necessary to allocate emissions and
+            extractions from one product to another coproduct (Section 4.5). Also,
+            data availability and reliability need to be improved.
+       c. Major progress has recently been made in impact assessment. Analysis
+            frameworks are now well defined in most impact categories. Midpoint
+            characterization factors are now available for classical categories such as
+            global warming and acidification, and a first consensus at international
+General Principles of Life Cycle Assessment                                             9
+
+
+         level has been reached for toxicity impacts. Further work on spatializa-
+         tion is ongoing. Initial damage characterization methods are available
+         but require additional refinements. Many questions remain undecided
+         regarding weighting and the final evaluation of damages.
+      d. Few studies include an uncertainty analysis at the interpretation phase,
+         but there have been recent developments in uncertainty methods that
+         can be applied to LCA. This gap should be filled as a priority in future
+         LCA practice.
+
+   Chapters 7 and 8 provide a complementary overview, identifying the key point
+and critical issues of each LCA phase and illustrating them through a comprehensive
+application of LCA to urban sewage sludge treatment.
+   LCA has been increasingly used to perform meta-analyses, reviewing all avail-
+able LCAs about a given topic (e.g., solid waste treatment options and use of biomass)
+to provide ranges of main environmental life cycle indicators. Chapter 9 presents an
+example of such a meta-analysis applied to the life cycle environmental impacts of
+bio-based products.
+
+2.2     PERFORMING AN LCA
+2.2.1 Iterative Method
+It is strongly recommended to perform an LCA in two steps:
+
+   1. The preliminary evaluation or screening is a quick and simple analysis
+      where the order of magnitude of each life cycle stage contribution is evalu-
+      ated. An initial sensitivity study gives an indication of the key processes
+      and impacts so that less time is spent on aspects which have a negligible
+      overall contribution.
+   2. Secondly, a more detailed analysis is performed by repeating in greater
+      depth the goal and scope definition, inventory, and impact assessment
+      phases. The information gathered in the preliminary evaluation is used to
+      identify emissions, processes, and stages with the greatest environmental
+      impacts that need to be further explored in priority order. The final interpre-
+      tation phase includes a detailed sensitivity study and uncertainty analysis.
+      The study may be finalized by a comparison of environmental impacts with
+      socioeconomic performance.
+
+2.2.2    Calculations by Hand and Using Software
+Preliminary calculations, generally for energy consumption and CO2 emissions, can
+be made by hand or by using a spreadsheet. When more substances in the inven-
+tory are considered, it is recommended to use software specifically designed for
+LCA, while still carrying out energy and CO2 balances by hand as a check (see
+Section 4.2.2). The most commonly used software programs are described in
+Section 6.7 and Appendix II.
+10                                              Environmental Life Cycle Assessment
+
+
+2.3 CHARACTERISTICS SPECIFIC TO LCA AND COMPARISON
+     WITH OTHER ENVIRONMENTAL ANALYSIS TOOLS
+2.3.1 Characteristics Specific to Life Cycle Assessment
+Characteristics specific to LCA are as follows:
+
+     • LCA focuses on the environmental impacts of a product or service. When
+       choosing among various alternatives, the final decision is made by combin-
+       ing the results of the LCA with other aspects such as costs, social implica-
+       tions, economic performance, and technical feasibility. These aspects are
+       evaluated with other complementary analysis tools, such as life cycle cost-
+       ing (Section 6.8.1).
+     • LCA links these environmental impacts to the system’s function, which
+       facilitates a comparison between alternatives.
+     • Quantified balances are made over the entire life cycle of a product
+       or service, from cradle to grave, from raw material acquisition to waste
+       management.
+     • LCA accounts for all major environmental issues known today (global
+       warming, resource extraction, impacts of toxic substances on humans and
+       ecosystems, land use, etc.).
+
+    A partial LCA can also be conducted by considering only the direct activities of
+a company from gate to gate. Due to global supply chains, however, this does not
+yield a complete overview of the considered system and can lead to biased results.
+If a company creates a product, it is essential to account for the entirety of the prod-
+uct’s life cycle activities to avoid suggesting local environmental improvements that
+effectively export pollution to other parts of the life cycle. These life cycle activities
+take place upstream from the business in question as well as downstream, including,
+for example, the type of material that needs to be extracted, the electricity required
+during the use stage, or the disposal required in waste management.
+
+2.3.2 Comparison with Other Environmental Analysis Tools
+LCA provides information that can be used by governments, businesses, and con-
+sumers when making a decision. Other decision-making tools are available, each
+with its specific role and set of complementary information. Figure 2.2 illustrates the
+positioning of LCA in relation to other environmental instruments and other more
+general approaches to sustainable development.
+   In general, actions and policies are directly influenced by overarching concepts
+and procedural environmental methods. Such procedural tools include ecolabeling,
+which labels a set of products or services within a specific functional category as
+environmentally friendly, and environmental audits, which assess the environmental
+performance of an individual business and provide follow-up suggestions. An envi-
+ronmental impact assessment (EIA) focuses on predicting the impact of a planned
+installation at a precise location; thus, it corresponds more to a legal procedure than
+a quantitative tool.
+General Principles of Life Cycle Assessment                                            11
+
+
+                                  Management, decision-making
+
+                                      Technological system
+                                      Performance, lifetime
+
+                         Environmental aspects                    Socioeconomic
+                  Concepts                                           aspects
+          Life cycle thinking
+          Environmental design
+                                           Procedural methods     Life cycle costing
+          Industrial ecology
+                                           Environmental
+           Quantitative assessment         management systems     Social life cycle
+                                                                  assessment
+          Life cycle assessment            Environmental impact
+          Substance flow analysis          assessment
+          Risk assessment
+                                           Ecolabel
+          Material flow analysis
+          Carbon or water footprint        Environmental audit
+
+
+
+FIGURE 2.2 Relationships between various tools to assess the sustainability of a good or
+service, inspired by Wrisberg et al. (2002).
+
+  These procedural methods are often based on environmental quantitative assess-
+ment tools, the most commonly used of which are described as follows:
+
+   • A life cycle assessment quantifies a large number of resource uses, sub-
+     stance flows, and environmental accumulations to estimate multiple envi-
+     ronmental impacts associated with a given function.
+   • A substance flow analysis (SFA) quantifies the flows and environmental
+     accumulation of either a single substance, such as mercury, or a group of
+     substances, such as inorganic nitrate compounds.
+   • A risk assessment (RA) studies the risk or the probability of severe impacts
+     occurring from an installation (such as a nuclear power plant) or the risks of
+     using a chemical substance.
+   • A material flow analysis (MFA) tracks the flow of material in the economy
+     of a given region. This is usually a raw material, such as paper, glass, con-
+     crete, or plastics.
+   • A carbon footprint (CF) determines the direct and indirect emissions of
+     greenhouse gases due to a product, a human activity, or a business.
+   • A water footprint (WF) determines the impacts associated with water as
+     an area of concern, including water usage and environmental exposures
+     related to water quality.
+
+   These tools cover a range of objects, scales, and effects (Table 2.1), and some
+basic elements can be common to several tools.
+
+2.3.2.1 Comparison between Substance Flow Analysis and LCA
+SFA focuses on the transfers among various environmental media (e.g., air, water, or
+soil) of a single substance associated with a given region or industry, whereas LCA
+                                                                                                                                                     12
+
+
+
+
+TABLE 2.1
+Main Characteristics of Environmental Analysis Tools
+                                                                         Considered Substances
+Tool                      Object of Study         Scale and Scope             and Impacts             Basis for Comparison       Basic Elements
+Life cycle assessment    Product or service      Global or regional     Many substances               Function of the product   Mass balance
+ (LCA)                                           Entire life cycle      Multiple impacts on humans     or service               Multimedia model
+                                                                         and ecosystems                                         Effects assessment
+Substance flow           Polluting substance     Regional or global     Single substance              Given time and region     Mass balance
+ analysis (SFA)                                  Substance cycle        No impact                                               Multimedia model
+Risk assessment (RA)     Installation or         Local or regional      Relevant substances           Maximum level of risk     Multimedia model
+                          chemical substance     Selected stage         Toxicity                                                Effects assessment
+Material flow analysis   Raw material or         Regional or national   Single or multiple material   Given time and region     Mass balance
+ (MFA)                    compound               Material life cycle    No impact                                               Material flow
+                                                                                                                                 tracking
+Carbon footprint (CF)    Product, activity, or   Global                 Greenhouse gases              Product function,         Mass balance
+                          company                Entire life cycle      Climate change                 activity, or company     Global warming
+                                                                                                                                 potential
+Water footprint (WF)     Product, activity, or   Local or regional      Water consumed and            Product function,         Water balance
+                          company                                        water-related exposure        activity, or company     Consumption
+                                                 Most important life    Water quantity and                                      Competition
+                                                  cycle stages           quality-related impacts                                Adaptation
+Environmental impact     New localized           Local scale            Highly variable               Local carrying capacity   Highly variable
+ assessment (EIA)         activity               Local activity
+                                                                                                                                                     Environmental Life Cycle Assessment
+General Principles of Life Cycle Assessment                                                   13
+
+
+considers the environmental fate of a large number of substances associated with a
+product function, and then estimates impacts by accounting for the multiple effects
+of these substances. Both methods rely on mass balances to perform calculations and
+validate the emissions and extraction inventory.
+
+2.3.2.2 Comparison between Environmental Impact Assessment and LCA
+The comparison between LCA and EIA is presented in Figure 2.3, depicting the
+complementary temporal and spatial scales over which each tool is usually applied.
+LCA is applied to a product or service, from resource extraction (cradle) to the end
+of life (grave), on a global scale if needed, whereas the analysis in an EIA is carried
+out on a specific site. For a site-specific evaluation, an EIA better considers condi-
+tions particular to the area, such as the number of inhabitants close to the site, the
+distance between the site and residential neighborhoods, and the presence of certain
+ecosystems. The ideal tool capable of covering local and global scales from cradle to
+grave does not yet exist because of the amount of data and computational resources
+needed, but one prototype of a multiscale multimedia model is currently in develop-
+ment at the University of Michigan (Wannaz et al. 2012).
+
+2.3.2.3 Comparison between Risk Assessment and LCA
+LCA has some common elements with RA, particularly in the evaluation of human
+toxicity and ecotoxicity. Both methods consider the transfer of pollutants among
+air, water, soil, and food, and they both use dose–response models to quantify the
+impacts of human and ecosystem exposure to substances. RA differs from LCA
+in that it is a regulatory-oriented approach, in which hazard-based indicators are
+based on conservative assumptions and include safety factors to ensure that expo-
+sure levels are substantially below the no-observable-effect levels. Such indicators,
+however, may not provide a consistent basis for relative comparison across chemi-
+cals. Rather than maximum estimates, LCA aims to assess comparative risk and the
+
+                                             Global
+
+
+                                              LCA
+
+
+                            “Cradle”                         “Grave”
+
+
+
+                                               EIA
+
+
+
+                                              Local
+
+
+FIGURE 2.3 Comparison between environmental impact assessment and life cycle assess-
+ment, based on production cycle covered and localization scale. “Cradle” refers to the begin-
+ning of the life cycle (raw material extraction), and “grave” refers to the end of the life cycle
+(waste disposal).
+14                                            Environmental Life Cycle Assessment
+
+
+average contribution of a product or service to a number of environmental impacts
+(Pennington et al. 2006). Local maximum permissible concentrations or acute toxic-
+ity events are thus not usually addressed by an LCA.
+
+2.3.2.4 Comparison between Material Flow Analysis and LCA
+MFA and LCA both use mass balance modeling. An MFA merely tracks material
+flows in a region, whereas an LCA uses these flows in modeling the economic system
+and unit processes, calculating the emissions and extractions of raw materials related
+to these material flows.
+
+2.3.2.5 Comparison between Carbon Footprint and LCA
+The CF is simply the global warming component of the LCA, and can thus be
+applied to a product, activity, or company. While an LCA can estimate how various
+scenarios can shift impacts among different impact categories, a CF focuses solely
+on the greenhouse effect category.
+
+     In summary, an LCA quantifies material flows throughout the life cycle of a
+     product or service, from which the impacts can be estimated for a comprehen-
+     sive set of environmental impact categories. LCA is the only method to relate
+     multiple environmental impacts to the function of a product or service.
+
+
+   The life cycle concept is not limited to environmental impacts; the results
+of an environmental LCA can be combined with those of an economic analysis
+(Section 6.8.1), a technical analysis (life cycle engineering, Lundquist et al. 2000),
+or a social analysis (social LCA, Section 6.8.5), thereby integrating the different
+aspects of sustainability.
+
+2.4 SIMPLE APPLICATION: COMPARING DIFFERENT TYPES
+     OF CUPS
+This section presents a comparison among different types of cups to illustrate how
+an LCA is carried out. The basic hypotheses for this example were adapted from
+Bättig (2002), where single-use cups are compared with multiuse cups. Chapter 8
+presents a more elaborate case study demonstrating the application of LCA, compar-
+ing different options for sewage sludge treatment.
+
+2.4.1 Goal and Scope Definition of Cup Case Study
+The main objective of this LCA is to compare the environmental impacts of different
+types of cups used in stadiums during sporting or cultural events.
+   The functional unit used as a basis for comparison must be common to all sce-
+narios and represent the considered function (Section 3.3). Since the purpose of the
+cup is to contain a certain volume of drink, the corresponding functional unit is
+one use of a 300 mL cup. Therefore, the various substance emissions and resource
+extractions listed in the inventory will be calculated for one use of one cup.
+General Principles of Life Cycle Assessment                                                         15
+
+
+
+ TABLE 2.2
+ Processes Included within the System Boundaries
+ Single-Use Cup                                                    Multiuse Cup
+ Cup manufacturing                                  Cup manufacturing
+ Transportation (from production site to stadium)   Transportation (from production site to stadium)
+ Cleaning of the stadium
+                                                    Transportation (to and from washing facility)
+                                                    Washing of the cup
+ Elimination (incineration)                         Elimination (incineration)
+
+
+
+   The system processes considered are presented in Table 2.2. For a single-use cup,
+this includes the manufacturing of the cup, its transportation to the stadium where
+the event takes place, the cleaning of the stadium using air blowers, and the elimina-
+tion of the cup. For a multiuse cup, the stadium cleaning is assumed to be unneces-
+sary, since cups are collected and reused rather than left on the stadium floor, but
+washing the cup and its transportation to and from the washing facility must be
+included. The production and use of detergent for washing the cup are not considered
+here. The manufacturing and elimination of the infrastructure for cup production
+are excluded because their impact per cup produced over the entire lifetime of the
+production infrastructure is considered negligible.
+   Some of the key parameters in this study are the transportation variables and
+the number of times a cup is reused, both of which can vary considerably depend-
+ing on event logistics and user behavior. The important transportation variables are
+the distance traveled, the mode of transportation, and the size of the load, all of
+which are necessary data for the calculation of the impacts of any transportation.
+The number of cup uses is also an important parameter, since any process that
+occurs only once in a cup’s life (such as raw material extraction, manufacturing,
+and elimination) has its impacts distributed over each use. For a multiuse cup made
+of polycarbonate (PC) or polypropylene that can be reused 150 times, the impacts
+of the one-time processes (shaded in Table 2.2) should be divided by 150 to yield
+the impact contribution of one use of a cup (assuming no losses). The actual number
+of reuses, however, is much lower due to losses during the event or in transit (cups
+may be damaged, discarded, etc.). This can be accounted for by introducing a loss
+percentage.
+   To examine the influence of these parameters on the total impacts, the material,
+number of uses, and transportation parameters are varied as follows:
+
+   • A paper cup, used once
+   • A polyethylene (PET) cup, used once
+   • A PC cup, used 150 times, without accounting for transportation between
+     the stadium and the washing facility
+   • A PC cup, used 150 times, with 5% losses at every event, and 50 km trans-
+     portation distance to be washed (round trip to the cleaning facility by car
+     loaded with 1000 cups)
+16                                             Environmental Life Cycle Assessment
+
+
+   Note that the last scenario derives from a sensitivity study carried out by the
+authors of this book and was not presented in the original study.
+
+2.4.2 Inventory Analysis of Cup Case Study
+The inventory quantifies the pollutant emissions to water, air, and soil, as well as the
+extractions of raw material from the environment, over all processes in the life cycle
+of each scenario. It does so by first quantifying the main intermediary flows required
+per cup use (e.g., key transportation distances and amounts of paper or PET used per
+functional unit), and then finding the pollutant emissions and resource extraction
+factors associated with each of these flows (see Section 4.1 for more details on the
+inventory). Table 2.3 shows an excerpt of this inventory for each scenario.
+   The PC multiuse cup, without losses or transport to washing facility systemati-
+cally has the lowest emissions and extractions per functional unit. For the remain-
+ing three scenarios, it is not possible to define a ranking from the inventory results
+alone; the single-use paper cup has the highest emissions of cadmium in air and
+hexavalent chromium in water, while the single-use PET cup requires the extrac-
+tion of a large amount of crude oil. When losses and transportation to the washing
+facility are taken into account, the PC cup emits more CO and N2O in air than the
+other scenarios.
+   Therefore, it is difficult, based solely on the inventory results, to draw conclu-
+sions about the relative impacts of the different scenarios, or about the processes and
+emissions that contribute most to these impacts. This is precisely the purpose of the
+impact assessment phase, as demonstrated in the following section.
+
+2.4.3 Impact Assessment of Cup Case Study
+The impact assessment phase estimates the impacts of the inventory’s emissions and
+extractions on various areas of protection (human health, ecosystem quality, natural
+resources, etc.). Different impact assessment methods can be used for this evalu-
+ation, each of which uses different models to calculate environmental impacts by
+category. In this example, the Eco-indicator 99 method is used, which is described in
+more detail in Section 5.5, along with other impact assessment methods.
+   Based on Eco-indicator 99 calculations, the single-use PET cup has the highest
+damage score for all three damage categories considered: human health, ecosystem
+quality, and resource degradation (Figure 2.4). The multiuse PC cup (assuming no
+losses or transportation to the washing facility) results in the least impact. The other
+two scenarios fall in the middle, with the paper cup having slightly less impact
+than the PC cup with losses and transportation for the three damage categories
+considered.
+   Since the relative ranking of scenarios is identical in all three damage categories,
+we simplify the remaining discussion by using the total aggregated impact.
+(Section 5.2.3 explains how different categories can be combined into a single score.)
+As defined in the Eco-indicator 99 method (Section 5.5.3), the total impact is calcu-
+lated as a weighted sum of each area of protection. Here, we express this total impact
+score by contribution from each process (Figure 2.5).
+General Principles of Life Cycle Assessment                                                   17
+
+
+
+TABLE 2.3
+Excerpt from the Inventory of Pollutant Emissions and Resource Extractions
+for Each Scenario (per Functional Unit, i.e., One Use of One 300 mL Cup)
+                                                                     PC with Transportation
+Substance           Unit     Paper          PET           PC              and Losses
+
+Emissions to Air
+Benzo[a]pyrene       g     3.4 × 10−9    3.2 × 10−9    4.9 × 10−10         3.0 × 10−9
+Cd                   g     4.4 × 10−7    2.4 × 10−7    1.1 × 10−8          3.9 × 10−8
+CH4                  g       0.0277        0.0358        0.0016              0.0279
+CO                   g        0.013         0.148         0.006               0.277
+CO2                  g         9.2           18.2          0.9                 18.5
+Hg                   g     2.3 × 10−7    2.6 × 10−7    1.2 × 10−8          1.2 × 10−7
+N2O                  g     2.0 × 10−4    1.1 × 10−4    1.0 × 10−5          9.1 × 10−4
+NH3                  g     2.0 × 10−4    9.0 × 10−6    1.0 × 10−6          6.0 × 10−6
+NMVOC                g        0.029         0.294         0.011               0.172
+NOx                  g        0.044         0.161      7.0 × 10−3             0.089
+Particles            g        0.014         0.028      1.0 × 10−3             0.011
+Pb                   g     2.7 × 10−6    2.4 × 10−6    3.0 × 10−7          1.3 × 10−5
+SOx                  g        0.044         0.185      7.0 × 10−3             0.074
+
+Emissions to Water
+Al                 g        0.00125       0.00155       0.00011             0.00078
+As                 g       2.5 × 10−6    3.1 × 10−6    2.1 × 10−7          1.7 × 10−6
+BOD                g         0.0554        0.0096        0.0003              0.0025
+Cr (VI)            g       1.3 × 10−6    3.7 × 10−10   4.1 × 10−11         2.0 × 10−10
+Cu                 g       6.6 × 10−6    7.8 × 10−6    5.2 × 10−7          4.3 × 10−6
+NH4+               g       6.3 × 10−5    2.6 × 10−4    1.0 × 10−5          4.7 × 10−4
+Ni                 g       6.5 × 10−6    8.0 × 10−6    5.2 × 10−7          4.5 × 10−6
+Pb                 g       9.7 × 10−6    1.1 × 10−5    1.0 × 10−6          5.2 × 10−6
+
+Emissions to Soil
+As                   g     5.0 × 10−8    3.1 × 10−8    9.0 × 10−10         5.8 × 10−9
+Cd                   g     2.5 × 10−9    1.7 × 10−9    1.0 × 10−10         7.0 × 10−10
+Cr                   g     6.2 × 10−7    3.9 × 10−7    1.1 × 10−8          7.2 × 10−8
+Cu                   g     1.4 × 10−8    8.6 × 10−9    2.0 × 10−10         1.2 × 10−9
+Hg                   g     3.9 × 10−10   2.4 × 10−10   6.0 × 10−12         3.7 × 10−11
+Ni                   g     2.1 × 10−8    1.3 × 10−8    3.0 × 10−10         1.9 × 10−9
+Pb                   g     6.4 × 10−8    3.9 × 10−8    9.0 × 10−10         5.7 × 10−9
+Zn                   g     2.0 × 10−6    1.3 × 10−6    3.0 × 10−8          2.0 × 10−7
+
+Resource Extraction
+Coal                g         0.78          1.17          0.07                0.55
+Natural gas       dm3         2.14          3.28          0.14                1.31
+Copper ore          g      3.0 × 10−4    2.2 × 10−4    1.8 × 10−5          1.0 × 10−4
+Lead ore           G       3.5 × 10−4    3.6 × 10−4    5.5 × 10−5          4.1 × 10−4
+Crude oil          G          2.74          9.87          0.36                6.37
+18                                                                                Environmental Life Cycle Assessment
+
+
+                                         100
+                                          90
+                                          80
+                                          70
+                  Damage score (%)
+
+
+
+                                          60
+                                          50
+                                          40
+                                          30
+                                          20
+                                          10
+                                           0
+                                                     Human health        Ecosystem quality            Resources
+
+                                                  Paper cup    PET cup    PC cup      PC cup w/transport and losses
+
+
+FIGURE 2.4 Proportional damage scores for the different cups, relative to the PET (poly-
+ethylene) cup. “PC cup” refers to the multiuse polycarbonate cup. Damage calculated using
+Eco-indicator 99.
+
+
+                                        5.0E–03
+                                        4.5E–03
+     Aggregated impact score (points)
+
+
+
+
+                                        4.0E–03
+                                                                                                    Disposal
+                                        3.5E–03
+                                                                                                    Cup washing
+                                        3.0E–03
+                                                                                                    Transport to washing
+                                        2.5E–03
+                                                                                                    Stadium cleaning
+                                        2.0E–03
+                                                                                                    Transport to stadium
+                                        1.5E–03
+                                                                                                    Manufacturing
+                                        1.0E–03
+                                        5.0E–04
+                                        0.0E+00
+                                                   Paper cup   PET cup   PC cup       PC cup
+                                                                                  w/transport and
+                                                                                       losses
+
+
+FIGURE 2.5 Total aggregated environmental impacts of the different cup scenarios and dis-
+tribution by life cycle stage. The Eco-indicator 99 method was used to compare total impacts
+of a paper cup, a single-use polyethylene (PET) cup, and multiuse polycarbonate (PC) cups.
+
+
+   For all cups, the manufacturing stage (including raw material extraction) accounts
+for most of the total impact. The impacts of transportation to the stadium and clean-
+ing of the stadium are limited. Assuming a 5% loss in the multiuse PC cup greatly
+increases each cup’s manufacturing impact to a level equivalent to that of the single-
+use paper cup. Moreover, a 50 km round-trip between the stadium and the washing
+facility would almost double the impact of the PC cup with losses. The stadium
+General Principles of Life Cycle Assessment                                          19
+
+
+cleaning stage is small in single-use cup scenarios (and assumed not to occur in the
+multiuse scenarios). The elimination at the end of the cup’s life has a small contribu-
+tion in all four scenarios.
+
+2.4.4 Interpretation of Cup Case Study
+The single-use PET cup is clearly the least advantageous scenario, and a multiuse
+PC cup with no losses or transportation for washing is clearly the best scenario.
+But, there is no clear-cut conclusion about which is the better scenario between the
+paper cup and the more realistic multiuse PC cup that assumes losses and washing
+transportation. A comparison of the two PC cup scenarios clearly shows the nega-
+tive environmental impacts of losses and transportation for washing; we find that
+accounting for these reverses the relative ranking of the PC cup and the paper cup.
+This is partly because a 5% loss per event reduces the actual number of reuses from
+150 to 20, increasing the manufacturing impact per functional unit by more than a
+factor of seven. Moreover, transportation to the washing facilities leads to consider-
+able impacts. This study assumes a 50 km journey by a fully loaded truck with 1000
+cups, but the actual impacts will depend on the type of vehicle and the load; a cup
+carried by a smaller or only partially loaded car has a bigger impact than a cup car-
+ried in a large truck containing 20,000 cups. The large impact contributions of losses
+and transportation demonstrate the sensitivity of the results to the hypotheses made,
+and the need to best reflect the actual situation.
+   Finally, it should be noted that the results of the impacts of washing do not account
+for the washing agent and should, therefore, be treated with caution. The impact of
+soap can indeed be significant, particularly on ecosystem quality (eutrophication and
+ecotoxicity).
+
+2.4.5    Conclusions of Cup Case Study
+For a single-use cup, this example finds that a paper cup has less environmental
+impact than a PET cup. It also shows the value of using multiuse cups if there are
+negligible losses and transportation needs. In practice, the losses should be assessed
+and included, since a loss of 5% causes the impacts of multiuse cups to become
+equivalent to or even more harmful than those of single-use paper cups.
+   Zooming out to consider such large entertainment events as a whole, it is clearly
+beneficial to reduce the environmental impacts of cups, but it is even better to act
+where the impacts are highest. For a sporting event, for example, the impact of the
+cups is relatively small compared with that of the transportation of people to the
+location of the event; in fact, the impact of one paper cup is approximately equivalent
+to the impact of transporting one person by car over only 100 m (Figure 2.6). This
+means that a 10 km trip is 100 times more harmful to the environment than a paper
+cup. Based on these results, efforts to reduce the impacts of such an event should
+focus first on the transportation of people to the stadium; for example, by active
+promotion of the use of public transport. Materials and waste management should be
+addressed as a second priority.
+20                                                                                 Environmental Life Cycle Assessment
+
+
+                                                 1.4 × 10–2
+
+
+
+              Aggregated impact score (points)
+                                                 1.2 × 10–2
+                                                 1.0 × 10–2
+                                                 8.0 × 10–3
+                                                 6.0 × 10–3
+                                                 4.0 × 10–3
+                                                 2.0 × 10–3
+                                                         0
+                                                              1 person-km by car            Paper cup
+
+
+FIGURE 2.6 Comparison between the environmental impact of a single-use paper cup and
+the transportation of one person by car over 1 km (1 person-km).
+
+
+
+EXERCISES
+Exercise 2.1: Choose the Best Environmental Evaluation Method
+and Key Metrics
+Decide which assessment method listed in Table 2.1 is most appropriate for the
+following situations. List key reasons for using this method, and find an appropriate
+metric/basis for comparison.
+
+     1. An electricity company is investing $50 million to integrate photovoltaics
+        into the design of commercial and residential buildings. It wants to estimate
+        the environmental benefits of this design, assuming 1000 buildings will be
+        constructed around the country.
+     2. An airline company would like to optimize its company’s greenhouse gas
+        emissions.
+     3. You need decide whether to use paper or plastic bags to carry your grocer-
+        ies home.
+     4. An electricity company is deciding in which of two cities to build its new
+        power plant.
+     5. You want to decide whether to take the car, bus, train, or airplane from
+        Chicago to New York City based on environmental impacts.
+     6. A chemical leak occurs in a manufacturing plant, and it needs to decide
+        whether or not to evacuate people from the area.
+     7. Afterward, the manufacturing plant in (6) must determine the best decon-
+        tamination method for the site where this leak occurs.
+     8. Regional authorities are considering creating a recycling auction for old
+        materials and want to decide which materials to include.
+     9. Congress wants to examine the impacts of using biofuels in the federal fleet
+        of vehicles.
+General Principles of Life Cycle Assessment                                          21
+
+
+Exercise 2.2: Comparing Cups for a Stadium Event
+Based on the information and example provided in Section 2.4, answer the following
+questions.
+
+   1. List two preliminary conclusions you can make based solely on the num-
+      bers in the inventory on Table 2.2. List two benefits of subsequently apply-
+      ing impact assessment to this inventory.
+   2. What are the key parameters affecting the environmental impact of the
+      multiuse PC cup?
+   3. What is the approximate total aggregated impact score (in points) of a mul-
+      tiuse PC cup, still assuming 5% loss, but assuming that the washing facility
+      is right next to the stadium (use Figure 2.5 for help)?
+   4. Which result surprised you most about the cup case study and why?
+   5. In performing an environmental assessment of a sports game, list two other
+      factors to consider (and provide reasoning) (other than cup usage and trans-
+      portation of spectators to the game).
+   6. Provide a functional unit that would enable you to compare the relative
+      impacts of a spectator drinking from a cup at the game and the transporta-
+      tion of a spectator to the game.
+

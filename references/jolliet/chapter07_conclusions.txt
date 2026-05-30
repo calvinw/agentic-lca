@@ -1,0 +1,548 @@
+      7        Conclusions and
+               Key Points
+
+7.1 KEY POINTS OF A LIFE CYCLE ASSESSMENT
+Life cycle assessment (LCA) requires an iterative approach through various phases,
+in which one first performs a preliminary evaluation of the system to determine the
+order of magnitude of the different contributions, and then performs a more detailed
+study of the important points previously highlighted. Each phase of an LCA has
+major objectives and pitfalls to be avoided. The following paragraphs summarize the
+key points of each phase (Figure 7.1) and highlight critical issues on which to focus
+attention. Moreover, Appendix IV summarizes the forms to fill out for each LCA
+phase, reminding the reader of the key points in each phase, as well as the informa-
+tion that needs to be gathered and analyzed.
+
+7.1.1 Goal and System Definition
+Before performing or analyzing an LCA, it is important to consider the function of
+the product or system. A poor definition of the function of the system can lead to the
+comparison of alternatives that are not actually achieving the same function and thus
+jeopardize the relevance of the study. To test the validity of the function definition,
+one should ask the following questions:
+
+      1. Does the primary function differ between scenarios? If so, the com-
+         parison between scenarios does not make sense.
+      2. Do the secondary functions differ between scenarios? If so, this is
+         important to account for in the interpretation.
+
+
+   Based on the product or system function, the comparative unit, or functional unit
+(FU), must be carefully defined and be the same for all scenarios. This is the variable
+that quantifies the system function of the system and to which all inventory flows
+are related. The reference flows are the amounts of products and energy that need
+to be directly purchased to achieve this FU; in other words, the first tier of required
+processes and materials. The ratio of each reference flow to the FU can be used to
+identify key environmental parameters that are critical to optimizing the system,
+such as the lifetime and number of uses.
+   Note that the FU is not a ratio. Moreover, the FU of a component of a com-
+plex system (e.g., car door) generally refers to the function of the entire system (e.g.,
+passenger protection over 1 person-mile). It is important to avoid confusing the FU
+
+
+                                                                                     199
+                General Principle (Ch. 2)    1. Goal and system definition (Ch. 3)                                         1c. System boundaries
+                                                                                                                                                                             200
+
+                It is recommended to carry 1a. System function                                                             System boundaries include all the necessary
+                out the LCA in two steps:    The LCA assesses the environmental impacts associated with a product          processes to assure the desired function.
+                • A first screening step     function. Products or systems can only be compared on the basis of a          • Rule 1: System boundaries must cover the
+                  covers the whole LCA       similar function.                                                               same functional reality in all scenarios.
+                  and assesses the order of                                                                                • Rule 2: A cut-off should be defined,
+                  magnitude of emissions,    1b. Functional unit and reference flows                                         where processes should be excluded if
+                  resource use, and impacts. • The functional unit is the common unit in all scenarios, quantifying the      they contribute less than the cut-off
+                • A detailed analysis          function of the system. Emissions and extractions are calculated per          percentage (e.g., 1%).
+                  improves the assessment      functional unit.                                                            • Rule 3: Processes that are identical in the
+                  for the most important     • The reference flows differ for each scenario, representing the amounts of      different scenarios can only be excluded if
+                  impacts.                     goods or services purchased to generate one functional unit.                   the reference and intermediary flows
+                                             • Lifetime, number of uses, use phase efficiency, and other parameters           affected by these processes are strictly
+                                               linking reference flows to functional unit can all be key parameters for       equal (i.e., total output of each system
+                                                                environmental optimization.                                   must also be identical).
+                2. Inventory (Ch. 4)
+                                                                                 Goal and                                                4. Interpretation (Ch. 6)
+                2a. Definition                                                                                                           Interpretation should be carried
+                The inventory is the quantified elementary flows of               system
+                                                                                                                                         out at all levels, looking at:
+                matter, energy, and substances that cross the system             definition
+                                                                                                                                         • The contribution of each life
+                boundary, including pollutant emissions and                                                                                cycle stage and process, to
+                extracted resources.                                            Inventory of                                               prioritize improvements that
+                2b. Allocation                                                   extractions                        Interpretation         generate the largest impact at
+                • Avoid allocation through process separation (if it is              and                                                   the lowest cost
+                  possible to dissociate the different product systems)           emissions                                              • The contribution of each
+                  or through system expansion (if it is possible to                                                                        substance
+                  extend the system boundaries to include a proven                                                                       • Each phase of the life cycle
+                  substituted product and avoided impacts).                       Impact                                                   assessment
+                • Use physical allocation based on mass or energy               assessment                                               • Uncertainty to identify if
+                   content only if there is a direct causality, or use                                                                     scenarios are significantly
+                   marginal allocation when it is possible to marginally                                                                   different
+                   vary the proportion between coproduct and product.
+                                                                             3. Impact assessment (Ch. 5)
+                • Use financial allocation based on market value as a
+                                                                             The impact assessment quantifies the impact of each emission and extraction to enable
+                   measure of the incentive for production.
+                                                                              comparison of scenarios and the contributions of different life cycle stages and pollutants.
+                • Use arbitrary assumption without causality only if
+                                                                             • Impact assessment methods must at least incorporate the fate (transport, dilution, and
+                  necessary.
+                                                                               degradation) and effects (e.g., intrinsic toxicity) of emissions and extractions.
+                2c. Input–Output                                             • More sophisticated methods accounting for spatial differentiation should be used when it
+                The input–output approach deconstructs the functional          substantially reduces variability.
+                unit into industrial spending to create the inventory.       • Several impact assessment methods should be used in parallel to test result robustness.
+                                                                                                                                                                             Environmental Life Cycle Assessment
+
+
+
+
+FIGURE 7.1 Summary of key concepts in life cycle assessment.
+Conclusions and Key Points                                                          201
+
+
+(the service) with the reference flow (what to buy). The following questions help
+avoid this problem:
+
+      3. Does the chosen FU represent the service offered (rather than an
+         impact or consumption)?
+      4. How are the material quantities, densities, or lifetimes taken into
+         account to determine the reference flows?
+      5. How are differences in the secondary function accounted for among
+         scenarios?
+
+
+   Continuing to stay centered on the system function, the system boundaries must
+be defined based on function rather than geography. (Thus, a fast-food restaurant
+cannot simply be compared to a family restaurant without accounting for the food
+preparation of the fast food before it reaches the restaurant). Remember the three
+rules of system delimitation defined in Section 3.5: (1) Do not forget about any
+upstream processes needed to achieve the function; (2) use cut-off criteria and inclu-
+sion of processes in a methodical and systematic manner; and (3) do not exclude pro-
+cesses common to the different scenarios if their reference flows differ. Help yourself
+follow these three rules by asking yourself the following questions:
+
+      6. Do the system boundaries cover the same reality in all scenarios?
+      7. What is the cut-off threshold percentage to exclude minor processes,
+         and based on which inventory or intermediary flow (mass, inventory
+         flow, impact)?
+      8. Are certain production stages common to all scenarios? Do the quan-
+         tities of the manufactured product or the reference or intermediary
+         flows of common steps vary among scenarios? (If so, it is not possible
+         to exclude the common steps.)
+      9. Do any of the production steps or components indirectly affect the
+         quantity of product used or lost? (For example, the type of packaging
+         can affect amount of product losses. If so, the product itself must also
+         been considered when assessing its packaging options.)
+
+
+
+7.1.2 Inventory
+Based on the processes and references flows included in the system boundary, the
+next phase calculates the inventory of raw material extractions and substance emis-
+sions associated with each FU. This is often based on existing databases of pro-
+cesses, supplemented by first-hand product-specific data.
+   When the product studied is associated with other coproducts, it is necessary
+to allocate which emissions and extractions should be assigned to each of these
+coproducts. Allocation should be avoided whenever possible, either by separating
+out only the processes associated with the considered product or by expanding the
+202                                            Environmental Life Cycle Assessment
+
+
+system boundaries to count the avoided emissions due to substituting an existing
+product with the coproduct. A poor choice of the substituted product, however, can
+give totally false results; thus, it is important to consider the following questions:
+
+      10. Is the substituted product actually replaced by the coproduct? (If not,
+          it is not legitimate to apply this system expansion.)
+      11. Can the coproduct be used to replace other substituted products? Which
+          substituted product is the most unfavorable for the environment?
+
+
+   When allocation cannot be avoided, physical, marginal, or financial allocations
+are all methods of distributing the emissions among coproducts, listed in order of
+preference. Each method should only be applied if a causal relationship can be estab-
+lished for using that allocation method. For example, an allocation by mass (a type
+of physical allocation) has no meaning if there is no physical reason for the emissions
+to scale with mass. You thus want to ask yourself:
+
+      12. Is there a causal underlying physical relationship between the physi-
+          cal parameter (e.g., mass or volume) and emissions and amounts of
+          raw materials used?
+
+
+   Use marginal allocation when it is possible to marginally vary the proportion
+between the coproduct and the product. The financial allocation applies in all other
+cases and can always be tested as part of a sensitivity analysis.
+   Whether or not allocation is used, it is important to characterize the quality of
+available data to ensure the quality of the results provided by the study. For this, the
+following quality indicators can be used: data reliability; data representativity; and
+temporal, geographic, and technological correlations. You want to ask yourself:
+
+      13. What is the quality of the data used in the inventory?
+      14. To what extent are the data measured in situ?
+      15. Do the unit processes correspond to the technology used?
+      16. Are some of the data old or from other geographic areas? How does
+          this affect the results?
+
+
+
+7.1.3 Impact Assessment
+Using the inventory of raw material extractions and substance emissions, the impact
+assessment phase calculates the resulting impacts on humans and ecosystems. The
+chosen impact assessment method should include information on the fate and effect
+(e.g., transport, degradation, and toxicity). Because of the broad array of substances
+and locations, current methods may only accurately predict impacts to within an
+order of magnitude (which is still very useful in prioritizing actions, because impacts
+Conclusions and Key Points                                                        203
+
+
+can vary among substances by 12 orders of magnitude). It is thus important to apply
+several methods of impact assessment to test the robustness of the conclusions. So,
+be critical of the results and consider:
+
+     17. Do the main conclusions change according to the impact assessment
+         method used?
+     18. What impact categories may be critical for the considered problem
+         and how well do the selected impact methods address them?
+     19. Are certain methods better suited to this study? And why?
+
+
+
+7.1.4 Interpretation
+Throughout the LCA phases, the results should be regularly interpreted, focus-
+ing on the dominant pollutants of each life cycle stage that generate the greatest
+impacts and on those stages that have the greatest potential for impact reduction.
+Similarly, the uncertainties of the results must be considered in the context of the
+analysis, along with the conditions of the study and any assumptions made. To
+avoid common pitfalls in the interpretation phase, the following questions should
+be asked:
+
+    20. Have results been interpreted at each phase of the LCA (raw inven-
+        tory, impact at midpoint level, and impact at damage level)?
+    21. Which life cycle stage(s) and which pollutant(s) contribute most to the
+        environmental impacts?
+    22. Are the differences among scenarios significant? What is the signifi-
+        cance criteria based on? What is the level of certainty of the major
+        conclusions?
+    23. What are the “key” parameters from an environmental perspective
+        (based on sensitivity studies)?
+
+
+
+7.2 LIMITATIONS OF AN LCA
+There are many practical and conceptual limitations when conducting an LCA.
+First, depending on the level of detail required and the availability of data, an
+LCA can take time, especially during data collection. Moreover, especially if
+not applying the rules of good practice, the results can be influenced by many
+subjective factors, including the people conducting the LCA, and the choice of
+assumptions or impact assessment method. This possible subjectivity could cast
+doubt on the reliability and quality of the obtained information and thus call the
+results into question. It is therefore necessary to adopt a critical approach and
+to carefully check the assumptions and their consequences on the results of the
+study. Particular care should be paid to the interpretation and communication
+of the results. Finally, for certain substances in some impact categories, such as
+204                                            Environmental Life Cycle Assessment
+
+
+toxicity, the results only indicate orders of magnitude; these uncertainties should
+be accounted for during interpretation by, for example, looking at and presenting
+results on a logarithmic scale.
+    An LCA consists of key underlying assumptions that limit its applicability. First
+of all, the analysis generally only addresses adverse environmental effects, with-
+out addressing the social and economic effects, which must be evaluated using
+additional tools such as life cycle costing or social LCA. The spatial and temporal
+dimensions are generally not differentiated, and results are often aggregated spa-
+tially and temporally. The environment in which the system lies is assumed to be
+uniform, with only the studied system being adapted. Moreover, the impacts are
+considered to be additive, which means that the high scores of one category can be
+compensated by lower scores in other categories depending on the weight assigned
+to each category.
+    To summarize, an LCA may not be appropriate in the following cases:
+
+   • When only the social or economic dimension needs to be analyzed
+   • When impacts are highly spatially variable or associated with differences
+     in local or regional sensitivities
+   • When major changes occur that deeply modify the studied system and
+     involve nonlinear responses in the system
+   • When systems other than the studied system change as well (such as changes
+     in the economic structure or consumer behavior)
+   • When aiming at checking whether toxicity limits have been exceeded
+
+   Once the LCA suggests certain advantageous improvements or adjustments,
+what are the real consequences of these choices? There are limitations in the abil-
+ity to predict real-life consequences, because implementing an action designed
+to reduce one kind of impact can cause other “collateral” impacts that can be
+positive or negative. The LCA does not account for many potential consequences,
+such as the risks to human health and the natural environment due to changes in
+behaviors induced by the alternative; the risks to health caused by changes in avail-
+able income; and the risks to health and environment due to structural changes or
+innovations.
+   The example of fluorescent light bulbs, as discussed in Section 3.3.3, illustrates
+this concept of unintended consequences. Fluorescent light bulbs pollute less and are
+cheaper than incandescent light bulbs when compared over the entire life cycle. What
+are the consequences of these financial savings to consumers? They may decide to
+install more bulbs in less well-lit areas or they may be less attentive in turning off
+the light when leaving a room. They can use the money saved to purchase other con-
+sumer goods. In such a case, the actual environmental improvement would be lower
+than that foreseen by the LCA. Two scenarios that do not generate the same costs
+can therefore lead to different indirect impacts, which are not accounted for in an
+LCA. It is thus important to identify these potential indirect effects and, if relevant,
+complement functional-based recommendations with qualitative consumption-based
+recommendations on overall effects when communicating LCA results (as discussed
+in Section 6.8.4).
+Conclusions and Key Points                                                            205
+
+
+7.3 POTENTIAL APPLICATIONS OF AN LCA
+7.3.1 Overview of LCA Publications
+LCAs have been applied for multiple purposes and to multiple products. Figure 7.2
+depicts how LCAs have been applied as a word cloud, in which the size of each word
+scales with how frequently it appeared in the title of any publication containing the
+words “life cycle assessment” in its title.
+    Figure 7.2 indicates how and why LCAs are being applied and studied, at least
+for publication purposes. LCAs are often used to “compare” the “impacts,” “energy,”
+and “emissions” associated with “production” “systems,” “integrating” over the entire
+lifetime of the product.
+    LCA publications still have a strong methodological emphasis, frequently mention-
+ing “methodology,” “sustainability,” “evaluation,” and “management.” Many address
+the “carbon” “footprint” and “greenhouse” “gas” (“GHG”) emissions as part of the
+most common mention of “impacts”.
+    The impacts in LCA are considered from a “production” or product-oriented per-
+spective in contrast to, for example, risk assessment, which is receptor-oriented. The
+“design” stage of a product is thus also a prominent application type.
+    The most prominent application domain is clearly “energy,” with additional related
+terms such as “electricity,” “fuels,” “power,” and “solar.” A second application domain
+is associated with “buildings” and “materials,” including “construction.” Other impor-
+tant domains are “technology,” “waste” and “recycling,” and “water.” Agriculture and
+forestry applications are also represented by multiple words such as “food,” “plants,”
+“biomass,” “crops,” “wood,” “biodiesel,” “biofuel,” and “bioethanol.” “Transportation”
+and “vehicle” are present but not in a prominent way.
+
+
+
+
+FIGURE 7.2 Most common words in the title of the 7920 papers in the Scopus database
+with “LCA” and “life cycle assessment” in their title (search conducted March 20, 2015).
+The title of each paper was pasted into Wordle, which then created this word cloud based on
+frequency of occurrence of each word. The words “LCA,” “life cycle assessment,” “environ-
+mental,” “case study,” and other commonly used English words were excluded; synonyms
+were grouped (e.g., “impacts”/“impact,” “compare”/“comparing”).
+206                                             Environmental Life Cycle Assessment
+
+
+   Finally, the most frequently mentioned global region is China (166 citations),
+followed by Europe (96) and Brazil (68), which may indicate an interesting shift
+from the traditional use of LCA in developed countries toward emerging countries.
+   We now discuss some of these application domains in more detail.
+
+7.3.2 Application to Ecodesign
+LCA has many potential applications due to the large amount of information
+obtained. These applications can be in the context of company management or in
+the public domain.
+    LCA provides valuable information for the evaluation and improvement of a
+product, identifying critical points where the environmental performance of a prod-
+uct can be improved. LCA can thus be used to help define certain principles of
+ecodesign (design of environmentally friendly products). The first principle is that it
+is necessary to dematerialize, and work in terms of services rather than products. For
+example, a store where you can print and make copies does not sell photocopiers, but
+only rents use of the copier to make the copies. To be successful, the designer must
+therefore build devices that are more reliable.
+    The second ecodesign principle stemming from life cycle thinking is the impor-
+tance of reducing manufacturing impacts by minimizing the amount of material
+used for a given product function, removing toxic substances used in manufacturing,
+and minimizing production waste and the diversity of materials used to facilitate
+recycling.
+    The third principle focuses on the use stage, aiming to reduce energy consump-
+tion and the product weight for all processes where transport is important, and to
+minimize the waste during the use stage.
+    Finally, the last set of ecodesign principles addresses the end of life, including the
+importance of using recycled materials and an easily dismantled product to make the
+product recyclable, especially when the production of toxic materials and waste is
+important. We must also try to extend the life of the product, especially if the impact
+of the production stage is greater than that of the use stage. However, if the studied
+product is continually developing to reduce impacts over an otherwise dominant use
+stage, a longer lifetime is not recommended. For example, driving an old car without
+a catalytic converter produces more emissions than producing and driving a new car.
+    One problem in using LCA for ecodesign is that it may come too late in the design
+process of a product, thus limiting the flexibility. We recommend applying the tool as
+soon as possible in the development of a new product, even if only partially, or utiliz-
+ing results obtained and lessons learned from a previous similar product.
+
+7.3.3 Application to Product Comparisons
+LCA enables the comparison of existing products and services within a company or
+between competitors, providing information that can be used to select a particular
+product or service. A comparative study can also provide ideas for improving pro-
+duction and design processes of products. This is currently one of the most common
+uses of LCA.
+Conclusions and Key Points                                                         207
+
+
+7.3.4 Application to Long-Term Decision-Making
+LCA also applies in the context of strategic planning, and more globally at the
+environmental management and decision-making levels, whether in a company or
+in a government or nongovernmental agency. Companies define and utilize long-
+term environmental strategies for various reasons. First, a company may realize that
+environmental improvements following “end-of-pipe” approaches are significantly
+more expensive, since, for example, it is often more costly to treat waste and solve
+toxicity problems at the end of a pipe rather than simply avoid or minimize this
+waste in the production and use of the product. It is then advantageous to make
+radical changes in the life cycle of products, and LCA effectively helps to identify
+bottlenecks in production, possible alternative production processes, and best pos-
+sible design opportunities.
+   Secondly, an organization that anticipates future legislation or changes in public
+perception can use LCA results to plan better and more flexible production strategies
+and technologies. This reduces the long-term risk of losing customers or business
+based on environmentally sensitive consumers or legislation. LCA results allow a
+company or administration to account for the environmental performance of their
+processes and products when choosing its partners (suppliers, subcontractors, etc.).
+Indeed, suppliers used to generally be selected based only on the cost and perfor-
+mance of their product. Now, customers are increasingly demanding that companies
+comply with quality standards and environmental criteria, which implies taking into
+account environmental aspects when choosing suppliers. For governments, LCA can
+be used to define priorities regarding environment and energy development, and to
+generally help guide environmental policies.
+   Finally, LCA can contribute to the development of standards. In fact, LCA is the
+mandatory basis for the environmental declaration of products and the definition of
+ecolabel criteria. LCA also has potential in legislation, public information, advertis-
+ing, and marketing.
+
+
+7.3.5 Application to Different Types of Products
+LCAs are applied to a variety of systems and products (Figure 7.2, Table 7.1), with
+some of the main domains in packaging, motor vehicles/transport, construction, syn-
+thetic materials, and energy (Frankl and Rubik 2000). Note that the emphasis on
+packaging and transport found by Frankl and Rubik in 2000 does not show up in
+the 2015 literature survey (Figure 7.2), showing a shift toward energy, building, and
+waste (see Section 7.3.1).
+
+
+7.3.6 LCA: A Tool for Life Cycle Thinking
+Life cycle assessment is part of the larger framework of life cycle thinking, which
+generalizes LCA results with the goal of linking technology and sustainable devel-
+opment. It includes other concepts, such as industrial ecology (where wastes from
+one process are used as raw materials for another), risk analysis, ecolabels (environ-
+mental labels), environmental management systems, ecodesign (creation of a more
+208                                                 Environmental Life Cycle Assessment
+
+
+
+             TABLE 7.1
+             Life Cycle Assessment by Type of Product
+                                                Absolute Number        % of Total
+             Motor vehicles/transport                   95                 15
+             Synthetic materials                        61                 10
+             Packaging                                 103                 17
+             Hygiene/cleaning                           28                  5
+             Construction/building materials            78                 13
+             Food                                       26                  4
+             Energy                                     52                  8
+             Paper/printing                             21                  3
+             Electronic equipment                       31                  5
+             Waste                                      33                  5
+             Metals                                     11                  2
+             Furniture                                   8                  1
+             Textiles                                    6                  1
+             Other                                      39                  6
+             Unknown                                    29                  5
+             Total                                     621                100
+
+             Source: Frankl, P. and Rubik, F., Life Cycle Assessment in Industry and
+                       Business: Adoption Patterns, Applications and Implications,
+                       Springer, Germany, 2000. With permission.
+             Note: Study based on all LCAs performed until 1996 in Switzerland,
+                    Italy, and Sweden.
+
+
+
+
+environmentally friendly product), and life cycle management. Currently, life cycle
+thinking is being developed within the methodological framework of the Life Cycle
+Initiative (Section 1.3).
+
+7.3.7 Example of Life Cycle Management of a Company
+Life cycle management, one aspect of life cycle thinking, aims to integrate environ-
+mental aspects into industrial processes by considering the impacts and costs of the
+supply chain. It seeks to increase the competitiveness of new and existing products,
+by examining the strengths and weaknesses of a product within its market, combined
+with the environmental and social aspects throughout its life cycle. Thus, life cycle
+management can be seen as a way to improve the environmental performance of a
+company within its temporal and financial constraints.
+    An example of a life cycle management tool is Quantis Suite 2.0 (see website
+listed in Appendix I), which applies the principles of a product LCA to the whole
+company, taking into account the supply and user chain. This tool is developed by
+Quantis, an environmental consulting spin-off from the Swiss Federal Institute of
+Technology, Lausanne (EPFL).
+Conclusions and Key Points                                                                209
+
+
+    The Quantis software quantifies the carbon footprint and environmental
+performance of a company, accounting for both direct and indirect impacts as
+required by the international ISO 14000 standard. The impacts of the production
+site are evaluated and compared with those of the supply chain, use stage, and dis-
+posal. The software compares this environmental analysis to a cost analysis to iden-
+tify improvement opportunities that offer the highest benefits at the lowest costs. It
+includes an analysis of legal compliance to quickly position the company within its
+legal environment without getting lost in increasingly complex legislation.
+    The user enters basic company data related to its products and activities. Data
+can be entered geographically by production site, production unit, or type of prod-
+uct. Results are presented as tables summarizing the primary energy consumption,
+equivalent CO2 emissions, and emissions of important pollutants at a variety of lev-
+els for the product or factory, including the supply chain, company or production site,
+and waste disposal chain (Figure 7.3). Inventory results, which can also be provided
+in detail for each step, are then used in a second module to calculate impact. Finally,
+the costs are considered and combined with the impacts calculated in the first two
+
+               Upstream                      Direct                   Downstream
+
+                Upstream              Direct emissions        Product disposal and
+                emissions              on factory site         recycling emissions
+ Factory
+
+
+
+
+             Suppliers for                  Factory                    Disposal of
+           factory processes               processes                  factory waste
+
+
+
+
+             Consumption of               Consumption of              Consumption of
+             natural resources            natural resources           natural resources
+
+               Upstream              Direct emissions         Product disposal and
+               emissions             from usage phase          recycling emissions
+ Product
+
+
+
+
+             Suppliers for                Product use                  Disposal of
+           product use phase                 phase                      product
+
+
+
+
+             Consumption of               Consumption of              Consumption of
+             natural resources            natural resources           natural resources
+
+
+FIGURE 7.3 Life cycle stages considered in Quantis software for life cycle management.
+(From Della Croce, F. et al., Company-LCA: an innovative analytical tool for the quantifica-
+tion of companies environmental performances, internal report EPFL-GECOS, 2005. With
+permission.)
+210                                           Environmental Life Cycle Assessment
+
+
+modules to calculate the economic benefit derived from a marginal reduction of
+impact for each step of the life cycle and each process of the company. This helps to
+identify action priorities that account for both financial and environmental aspects.
+One of the advantages of this approach is to offer to a broad array of companies
+the opportunity to evaluate their performance over the course of the life cycle and
+account for their specific structures without having to hire internal LCA specialists.
+
+EXERCISES
+Exercise 7.1: Critical Analysis of an LCA Case Study
+Select an LCA case study paper and analyze it from a critical point of view, using
+Figure 7.1 and the key questions boxed in this chapter to look for biased, missing,
+and well-studied elements in the goal definition, inventory, impact assessment, and
+interpretation.
+   Search by keyword “LCA case study” in a literature search engine or use the arti-
+cle by Humbert et al. (2009), presenting the comparison of two packaging materials.
+

@@ -1,0 +1,225 @@
+      1        Introduction
+               Olivier Jolliet, Gabrielle Soucy, Shanna Shaked,
+               Myriam Saadé-Sbeih, and Pierre Crettaz
+
+1.1 PRIORITIES FOR THE ENVIRONMENT
+Environmental issues are playing an ever-increasing role in the decision-making
+process at every level: political, economic, industrial, and individual. More than
+just a passing trend, the increasing attention given to environmental problems stems
+from a basic observation: because of its limited capacity to absorb the effects of
+human activities, the environment sets a limit to society’s development. This limit
+has already been reached in many regions of the planet (UNEP 2012).
+    Sustainability concepts are constantly discussed in the headlines, but it is
+considerably harder to take action. To ensure a sustainable future, statements and
+studies must be followed by meaningful actions that effectively reduce environmen-
+tal impact, and which can even improve the situation. For an action to be efficient,
+three conditions must be fulfilled:
+
+   • Technological solutions must be available.
+   • Different solutions must be prioritized and best practices selected, account-
+     ing for environmental efficiency, cost, and resulting economic constraints.
+   • Actions should be optimized to further reduce impacts.
+
+    Life cycle assessment (LCA) is a decision-making tool which specifically
+addresses this need of selecting and optimizing available technological solutions.
+Doing so is fundamental when financial resources are limited, as Barlow (1993,
+p. 10) stated in a slightly provocative way: “The problem is not one of how to tackle
+the individual problem—the engineering is either available or can be developed to
+deal with that. Rather the problem is how to decide priorities. The world just cannot
+afford to do everything.” LCA is a complement to technological developments, since
+it highlights which processes should be improved in priority order.
+    LCA is particularly relevant from a sustainability perspective, because it covers
+the entire life cycle of a product or service, avoiding that local improvements only
+result in shifting the environmental impact elsewhere. LCA differs from other envi-
+ronmental methods by linking environmental performance to functionality, quanti-
+fying the pollutant emissions and the use of raw materials based on the function of
+the product or system.
+    The expression life cycle assessment conveys the breadth of this approach, encom-
+passing all the impacts of a product from the design stage to its final disposal. LCA is
+called ecobalance in some other languages (e.g., Oekobilanz in German), emphasizing
+the quantified balance and inventory of polluting emissions and resource extraction.
+
+                                                                                      1
+2                                              Environmental Life Cycle Assessment
+
+
+1.2 CRITICAL APPROACH, OBJECTIVES, AND BOOK STRUCTURE
+1.2.1 Being Critical
+Even though LCA has many advantages, it is not devoid of shortcomings. Analogous
+to economic accounting for the estimation of a product’s actual cost, ecological
+accounting requires a certain number of assumptions that must be logical and coher-
+ent. Some applications of LCA have been harshly criticized, suggesting that a given
+LCA method was selected to obtain the results expected by the sponsor of the study.
+    For this environmental tool to have the greatest robustness, one must be able to
+identify the potential biases of a study. The objective of this book is to explain how
+to identify the critical aspects of an LCA and how to use consistent criteria to realize
+and evaluate an LCA independently of individual interests.
+
+1.2.2 Objectives
+This book aims to enable the reader to
+
+    • Understand LCA methodology
+    • Become familiar with existing databases and methods based on the latest
+      results of international research
+    • Be able to analyze and criticize a completed LCA
+    • Be able to apply LCA methodology to a simple case study
+
+1.2.3 Book Structure
+First, Chapter 2 presents the general principles and characteristics of LCA, along
+with the first application to a simple example. Subsequent chapters detail each phase
+of the LCA methodology: the goal and scope definition (Chapter 3), the emissions
+and extractions inventory (Chapter 4), the analysis of their environmental impacts
+(Chapter 5), and the interpretation of results (Chapter 6). Finally, the last chapters
+(7–9) provide various detailed examples of LCA application and analysis. At each
+step, problems and solutions are illustrated with concrete examples from diverse fields
+such as water management, the automotive industry, electronics, and packaging.
+
+1.3 BACKGROUND AND STANDARDIZATION
+This section outlines the historical development of LCA (Table 1.1) and the corre-
+sponding standards for good practice determined by the International Organization
+for Standardization (ISO; Table 1.2). The 1972 publication of Limits to Growth
+(Meadows and Club of Rome 1972) by the then recently founded Club of Rome
+spread the concept of a limit to growth and development based on predictions of
+limited resource availability. Twenty years later, this idea of a limit was confirmed,
+but in the form of the environment’s inability to absorb all polluting emissions
+(Meadows et al. 1992).
+   The 1973 energy crisis strongly stimulated the conducting of energy balance
+assessments, in which energy consumption was tracked for a process or system.
+Introduction                                                                                         3
+
+
+
+TABLE 1.1
+Historical Dates of LCA Development
+1972            Publication of Limits to Growth by the recently founded Club of Rome, which
+                 broadly increased awareness of the limited availability of resources and development
+                 based on simulations. Early LCA studies on bottle packaging in the United States.
+1973            Energy crisis: Generalization of the balance approach (mainly energy balance).
+1977            First life cycle impact assessment method: Swiss ecoscarcity.
+1984 and 1991   Ecological balance of packaging materials I (Bus 1984; Habersatter and Widmer
+                 1991): Comprehensive packaging LCA that also provided data on energy and
+                 materials, acting as a precursor to existing LCA databases.
+1992            Club of Rome’s founder claimed that the first limitation encountered was typically
+                 environmental pollution rather than lack of resources.
+1992            CML guide to LCA published by the University of Leiden (the Netherlands)
+                 (Heijungs et al. 1992). Rather than focusing simply on air, water, or soil damage,
+                 this guide organized environmental impacts into effect-oriented categories, such as
+                 acidification and climate change.
+1993            LCA “code of practice” published by SETAC (Society of Environmental Toxicology
+                 and Chemistry) (SETAC 1993). SETAC is one of the main international scientific
+                 organizations involved in developing structural aspects of LCA through various
+                 SETAC working groups.
+1996            Creation of International Journal of Life Cycle Assessment.
+1997–2006       ISO (International Organization for Standardization) published a series of ISO 14000
+                 norms on LCA, in response to the demand to internationally harmonize various
+                 methodologies used in LCA. The most recent ISO 14040/14044 standards were
+                 published in 2006 (ISO 2006).
+2002            Launch of the Life Cycle Initiative, a collaboration between UNEP (United Nations
+                 Environmental Program) and SETAC.
+2003            Ecoinvent life cycle inventory database released by the ecoinvent center within the
+                 Swiss Federal Institutes of Technology.
+2008            USEtox toxicity model by UNEP-SETAC Life Cycle Initiative.
+2008            Marked interest by large global distributors and manufacturers in life cycle
+                 approaches and evaluation of their products.
+2009            Extension of LCA application to non-OECD countries—conference on life cycle
+                 management in South Africa.
+2010            ReCiPe released as a successor to the impact assessment methods Eco-indicator 99
+                 and CML 2002 (Goedkoop et al. 2009).
+2011            Global guidance principles for LCA databases by UNEP-SETAC Life Cycle
+                 Initiative.
+2012            European impact assessment method (Hauschild et al. 2012) in conjunction with a
+                 new database proposed by the Joint Research Center (JRC)
+                 (Sala et al. 2012) (http://www.mdpi.com/ 2071–1050/4/7/1412).
+2012            IMPACTWorld+ released as a successor to IMPACT2002+.
+2013–present    Flagship project of the Life Cycle Initiative on global guidance for LCA methods
+                 with initial focus on climate change, water use, land use, particulate matter impacts,
+                 and LCIA framework.
+4                                                  Environmental Life Cycle Assessment
+
+
+
+TABLE 1.2
+Selected ISO 14000 Standards on Environmental Management and LCA
+Key Standards on Environmental Management
+ISO 14001      Environmental management systems—Requirements with guidance for use (2004)
+ISO 14004      Environmental management systems—General guidelines on principles, systems and
+                support techniques (2004)
+ISO 14020–25 Environmental labels and declarations (1999–2006)
+ISO 14031      Environmental management—Environmental performance evaluation—Guidelines
+                (1999)
+ISO 14040      Environmental management—Life cycle assessment—Principles and framework (2006)
+ISO 14050      Environmental management—Vocabulary (2009)
+
+Additional Standards Specific to LCA
+ISO 14044      Environmental management—Life cycle assessment—Requirements and guidelines
+                (2006)
+ISO 14046      Environmental management—Water footprint—Principles, requirements and
+                guidelines (2014)
+ISO 14048      Environmental management—Life cycle assessment—Data documentation format
+                (2002)
+ISO 14049      Environmental management—Life cycle assessment—Examples of application of
+                ISO 14041 to goal and scope definition and inventory analysis (2000)
+
+
+
+To cover a broader set of environmental impacts, the need for the accounting of
+pollutant emissions to air, water, and soil also became apparent. This led to meth-
+odological developments, initially within the packaging industry, which were even-
+tually applied to all economic sectors, as it turned out that the product often had a
+much larger impact than its packaging.
+   Eventually, the LCA combined these various types of accounting into a function-
+based analysis. Three organizations were and are involved in the development and
+standardization of LCA: the Society of Environmental Toxicology and Chemistry
+(SETAC), the United Nations Environment Program (UNEP), and the ISO. Starting
+in the early 1990s, SETAC offered a scientific exchange platform for LCA develop-
+ments, still continuing today through conference presentations and working groups.
+Since 2002, the Life Cycle Initiative has been an important institutional framework
+for the development of LCA methods and their use in industry (website provided in
+Appendix I). Launched by SETAC and UNEP, this initiative aims to develop and
+disseminate practical tools for evaluating solutions, risks, advantages, and disad-
+vantages associated with products and services throughout their life cycle. The first
+phase spanned the period from 2002 to 2007, developing consensus on life cycle
+approaches. This was followed by a second phase from 2007 to 2011, with the aim
+of spreading awareness and use of life cycle approaches throughout the world. The
+third phase (2012 to date) is developing consensus on impact indicators and provid-
+ing guidance for organizational LCA, which considers the life cycle impacts of a
+given company or organization, including the supply, use, and disposal of its prod-
+ucts and services.
+Introduction                                                                           5
+
+
+   ISO produces international standards for most technological fields. ISO standards
+are adapted to industrial applications and result from a consensus between experts
+from various backgrounds, including industry, technology, economy, and academia.
+During the 1980 and 1990s, ISO published over 350 standards relating to environ-
+mental issues. In particular, the ISO 14000 series on environmental management
+systems was edited, updating and providing a framework for businesses to man-
+age the environmental impact of their activities and to measure their environmental
+performance.
+   The ISO 14040 series (14040 to 14049) is devoted to LCA (Table 1.2). The first
+standard (ISO 14040) establishes the guidelines to perform an LCA. ISO 14044
+replaced ISO 14041, 14042, and 14043 in 2006 to describe the phases of inventory,
+impact assessment, and interpretation (Finkbeiner et al. 2006). ISO 14046:2014 pro-
+vides guidelines for LCA-based water footprint assessment of products, processes,
+and organizations. Examples of its application are presented in ISO 14047 and 14049,
+and ISO 14048 describes data documentation format. For carbon footprints, ISO and
+the Greenhouse Gas Protocol from the World Resources Institute (WRI) and World
+Business Council for Social Development (WBCSD) provide more detailed recom-
+mendations (WRI and WBCSD 2011).
+
+1.4 USE OF THE LCA TOOL
+While the method and its use mainly expanded in Europe and Japan until the mid-
+2000s, LCA is also increasingly used in North America and developing countries.
+This is largely due to the interest of major international distributors that want to bet-
+ter assess the sustainability of their products.
+    In terms of the application of LCA (Cooper and Fava 2006), it can be used indus-
+trially for a variety of purposes, including support of a corporate strategy (63% of
+respondents), research and development (62%), and the design of products or pro-
+cesses (52%). LCA is also used in education (46%) as well as for labels and prod-
+uct descriptions (11%). The importance of LCA studies is increasing as companies
+increasingly apply them to their own products and require LCA data from their
+suppliers. LCA has been increasingly used to perform meta-analyses, reviewing all
+available LCAs about a given topic (e.g., solid waste treatment options; use of bio-
+mass) (see Chapter 9). A more detailed analysis of the most prominent LCA applica-
+tion domains is presented in Section 7.3.
+
