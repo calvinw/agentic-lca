@@ -1,0 +1,12 @@
+Food item,Life Cycle Inventory data description,Database,Loss and waste adjustment factor,kg CO2 eq/kg,"Loss-Adjusted Carbon footprint
+(kg CO2eq/kg consumed)"
+"Cheese, cheddar","Hard cheese, Emmental-style, at dairy (WFLDB 3.1)/GLO S",WFLDB,1.1953143676786995,8.64232951689138,10.330300641753979
+Refried beans,"beans, IP, at farm/kg/CH S",ESU,1.549117294926479,0.153529005417724,0.23783443756545733
+Tortilla,"wheat flour, at plant/kg/CH S",ESU,1.1430534590130645,0.84345520737095,0.964114392307946
+"Rice, white","white rice, at regional storage/kg/US S",ESU,1.6960651289009494,4.57922939229882,7.766671289516314
+Added sodium,"Sodium chloride, powder {GLO}| market for | Alloc Rec, U",Ecoinvent,1,0.289058841375451,0.289058841375451
+Ground beef,"Beef, fresh meat, at slaughterhouse (WFLDB 3.1)/US S",WFLDB,1.1081560283687946,27.2152286570983,30.158719699798656
+"Rice, brown","brown rice organic, at farm/kg/JP S",ESU,1.6960651289009494,3.55024122504661,6.021440340988143
+"Tortilla, whole wheat","wholemeal flour, wheat, at plant/kg/CH S",ESU,1.1430534590130645,0.736892712023712,0.8423077634002221
+"Tortilla, Non specific","Bread, from wheat flour, at plant (WFLDB 3.1)/GLO S",WFLDB,1.1430534590130645,1.47353265778608,1.684326601451093
+"Vegetable combination (green beans, broccoli, onions, mushrooms)",Vegetables,Meier and Christen 2012,2.4386817108682073,0.36999999999999994,0.9023122330212365

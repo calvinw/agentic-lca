@@ -1,0 +1,44 @@
+kg/t conversion factor,1000,,,,,,,,
+g/kg,1000,,,,,,,,
+,,,,,,,,,
+Towel hand drying                        FU= 1 pair of dried hands                            Life Cycle stage,Quantity per FU,Unit,Energy/Unit  [MJ/Unit],Energy per FU [MJ/FU],fraction,CO2/Unit [kg/unit],CO2/FU,fraction2,Check g CO2/MJ
+Materials,,,,,,,,,
+Paper (towel),,kg,,,#DIV/0!,,,#DIV/0!,#DIV/0!
+PP plastic (dispenser),,kg,,,#DIV/0!,,,#DIV/0!,#DIV/0!
+Processing,,,,,,,,,
+PP Plastic dispenser manufacturing,,kg,27.1,,#DIV/0!,1.24,,#DIV/0!,#DIV/0!
+Transportation,,,,,,,,,
+Towel - 100 km truck 3.5t,,t-km,,,#DIV/0!,,,#DIV/0!,#DIV/0!
+Dispenser - 2000 km truck 32t,,t-km,,,#DIV/0!,,,#DIV/0!,#DIV/0!
+Use phase,,,,,,,,,
+-,,,,,#DIV/0!,,,#DIV/0!,#DIV/0!
+Disposal,,,,,,,,,
+PP plastic (dispenser),,kg,,,#DIV/0!,,,#DIV/0!,#DIV/0!
+Towel incineration,,kg,,,#DIV/0!,,,,
+Towel energy recovery (extra credit),,kWh,-12.1,0,#DIV/0!,-0.71,0,#DIV/0!,#DIV/0!
+Total,,,,,,,,,
+Total,,-,,0,#DIV/0!,,0,#DIV/0!,#DIV/0!
+,,,,,,,,,
+,,,,,,,,,
+Electric air drying                                           FU= 1 pair of dried hands                            Life Cycle stage,Quantity per FU,Unit,Energy/Unit  [MJ/Unit],Energy per FU [MJ/FU],fraction,CO2/Unit [kg/unit],CO2/FU,fraction2,Check g CO2/MJ
+Materials,,,,,,,,,
+Cast Iron air dryer,,kg,,,#DIV/0!,,,#DIV/0!,#DIV/0!
+Steel air dryer,,kg,,,,,,,
+Processing,,,,,,,,,
+Air Dryer manufacturing,,kg,27.1,,#DIV/0!,1.24,,#DIV/0!,#DIV/0!
+Transportation,,,,,,,,,
+Air dryer - 2000 km truck 32t,,t-km,,,#DIV/0!,,,#DIV/0!,#DIV/0!
+Use phase,,,,,,,,,
+Electricity,,kWh,,,#DIV/0!,,,#DIV/0!,#DIV/0!
+Disposal,,,,,,,,,
+Drying device at landfill,,kg,,,#DIV/0!,,,#DIV/0!,#DIV/0!
+Total,,,,,,,,,
+Total,,-,,0,#DIV/0!,,0,#DIV/0!,#DIV/0!
+,,,,,,,,,
+Result discussion ,,,,,,,,,
+3a.Towel - dominant contributions ,,,,,,,,,
+3b.Air dryer- dominant contributions,,,,,,,,,
+3c. Comparison between scenarios,,,,,,,,,
+4. Interpretation of ratios gCO2/MJ ,,,,,,,,,
+5. Importance of heat recovery and electricity substitution related to towel incineration,,,,,,,,,
+,,,,,,,,,

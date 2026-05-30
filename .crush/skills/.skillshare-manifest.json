@@ -1,0 +1,9 @@
+{
+  "managed": {
+    "github-pages": "symlink",
+    "hello-world": "symlink",
+    "run-lca": "symlink",
+    "skill-creator": "symlink"
+  },
+  "updated_at": "2026-05-30T15:29:13.884697049Z"
+}

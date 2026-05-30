@@ -1,0 +1,14 @@
+per 100 g,,,,,,,,,,,,,,,,,,,,,,
+ID,,Cycle,Foodcode,Foodcode Description,"Main
+Group No",Main Group Description,"Subgroup
+No",Subgroup Description,"Category
+No",Category Description,Racc,fiber_fvlw,sfat,calc,fiber_non_fvlw,pfat,whole_grain,legumes,vegetable,sodi,red_meat,transfat
+4_14104010,"Cheese, cheddar (g/100g)",4,14104100,"Cheese, Cheddar",1,Milk and Dairy,16,Cheese,1602,Cheese,30,0,18.867,0.71,0,1.421,0,0,0,0.6529999999999999,0,0.9170000000000001
+4_52215200,Tortilla (g/100g),4,52215200,"Tortilla, flour (wheat)",4,Grains,42,"Breads, Rolls, Tortillas",4208,Tortillas,55,0,2.9240000000000004,0.146,3.5000000000000004,2.29,0,0,0,0.736,0,0.052
+4_41205010,Refried beans (g/100g),4,41205010,Refried beans,2,Protein Foods,28,Plant-based Protein Foods,2802,"Beans, peas, legumes",130,5.261927769230769,0.9662569230769231,0.03431976923076923,0,2.1324946153846156,0,88.05373846153846,7.1475153076923075,0.31658376923076925,0,0.06333184615384616
+4_21501000,Ground beef (g/100g),4,21501000,"Ground beef, less than 80% lean, cooked (formerly regular)",2,Protein Foods,20,Meats,2004,Ground beef,85,0,6.228679058823529,0.031933411764705884,0,0.44724317647058826,0,0,0,0.4091304705882353,91.36999176470587,1.0432368235294118
+4_56205010,"Rice, white (g/100g)",4,56205001,"Rice, white, cooked, NS as to fat added in cooking",4,Grains,40,Cooked Grains,4002,Rice,140,5.551428571428571e-17,0.07651571428571428,0.010088071428571429,0.3974842857142858,0.075522,0,0,0,0.24475471428571427,0,0
+,,,,,,,,,,,,,,,,,,,,,,
+4_56205110,"Rice, brown (g/100g)",4,56205011,"Rice, brown, cooked, NS as to fat added in cooking",4,Grains,40,Cooked Grains,4002,Rice,140,1.5918367142857142,0.2586735,0.003107142857142857,0,0.36413264285714286,34.410535714285714,0,0,0.2017245,0,0
+4_75340140,Vegetable combination (g/100g),4,75200121,"Vegetables, NS as to type, cooked, made with oil",7,Vegetables,64,"Vegetables, excluding Potatoes",6420,Other vegetables and combinations,85,2.1349884705882354,0.3613104705882353,0.02439529411764706,2.1349884705882354,1.0674294117647058,0,0,48.522464705882356,0.24064082352941177,0,0.008581882352941177
+4_52215260,"Tortilla, whole wheat (g/100g)",4,52215260,"Tortilla, whole wheat",4,Grains,42,"Breads, Rolls, Tortillas",4208,Tortillas,55,9.799999999999999,4.878,0.24400000000000002,0,0.992,68,0,0,0.512,0,0

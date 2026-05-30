@@ -1,0 +1,48 @@
+Conversion factor,g/kg,1000,,,
+,,,,,
+Meat Burrito (140g/serving),,,,,
+Ingredients,Composition,gingredient/serving,kg CO2 eq/kgingredient,kg CO2 eq/serving,Contribution
+"Cheese, cheddar",0.0672721157080391,9.418096199125475,10.330300641753979,0.0972917652099266,0.06467049040415866
+Refried beans,0.14463504877228422,20.248906828119793,0.23783443756545733,0.00481588736678122,0.003201152708751112
+Added sodium,0.006754296536073097,0.9456015150502336,0.289058841375451,0.0002733344783432916,0.00018168726531669522
+Tortilla,0.35317860746720436,49.445005045408614,0.964114392307946,0.047670640992017455,0.03168699554563959
+"Rice, white",0.14463504877228422,20.248906828119793,7.766671289516314,0.15726660330604883,0.10453616848305233
+Ground beef,0.283524882744115,39.69348358417611,30.158719699798656,1.1971046453237266,0.7957235055930817
+Total,1,140,,1.504422876676844,1
+,,,,,
+Veggie Burrito (140g/serving),,,,,
+Ingredients,Composition,gingredient/serving,kg CO2 eq/kgingredient,kg CO2 eq/serving,Contribution
+"Cheese, cheddar",0.0672721157080391,,,,
+Refried beans,0.14463504877228422,,,,
+Added sodium,0.006754296536073097,,,,
+"Tortilla, whole wheat",0.35317860746720436,,,,
+"Rice, brown",0.14463504877228422,,,,
+"Vegetable combination (green beans, broccoli, onions, mushrooms)",0.283524882744115,,,,
+Total,1,,,,
+,,,"you can either manually copy or link the value from the ""ingredients carbon footprint tab and table in this column, or copy the powerful and magic index-match formula from D5 or D8 - see explanation how it works below - could be life changing if you use excel regularly",,
+Use of Index-match to find automatically a cell in a range,,,,,
+"The combination of the Index and match function in excel is a very powerful way to automatically find values in a reference table, that is not ranked in the same order than the table you are using",,,,,
+It is more reliable than the Vlookup or Hlookup functions which do not adapt automatically if you e.g. insert a column in your reference table afterwards,,,,,
+,,,,,
+Step 1: return the value at a certain poition in a refrence table,,,,,
+"Index($value_range,n) return the value of the nth cell in $value_range (that must be blocked with $ since you want to keep it fixed when you copy)",,,,,
+"If you look at cell D8,",,,,,
+""" =INDEX('Ingredients carbon footprint'!$F$2:F$11,n)",,,with n= match(…) that we will learn below,,
+" it returns the nth cell in the range 'Ingredients carbon footprint'!$F$2:F$11, that t is the range $F$2:F$11 from the Ingredients carbon footprint tab. That is 0.84 kgCO2/kg",,,,,
+"which gives you what you want, i.e Loss-Adjusted Carbon footprint
+(kg CO2eq/kg consumed)",,,,,
+,,,,,
+Step 2: identify the rank n of this nth cell in the reference table. ,,,,,
+This is where we use the match function,,,,,
+"MATCH(lookup_value, $lookup_range,0) returns the relative position of the lookup_value in the $lookup_range",,,,,
+"Taking cell D8 as an example, MATCH('Carbon footprint'!A8,'Ingredients carbon footprint'!$A$2:$A$11,0) looks for the position of ""tortilla"" in the lookup",,,,,
+and return the value,3,"because ""tortilla"" as defined by Carbon footprint'!A8 is the third item in the table.",,,
+"Again, you need to block the lookup range with $ so that it does not cheng when you copy it",,,,,
+"You also add "" ,0) "" at the end of the match function that indicates that you want an exact match ",,,,,
+,,,,,
+"Thus =INDEX('Ingredients carbon footprint'!$F$2:F$11,3) returns the 3rd value in that table , which is 0.96",,,,,
+"When you copy this cell o the other of column D, you get automatically the right values --> saves a lot of times and mistakes with larger tables!",,,,,
+,,,,,
+and in addition,,,,,
+"Index can also work with an array instead of a single column range, then using two match function, one to identify the column and one to identify the row",,,,,
+"This isused in e.g. cell C7 of the nutritional value , but no need to copy these",,,,,

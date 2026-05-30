@@ -1,0 +1,89 @@
+kg/t conversion factor,1000,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+g/kg and m/km,1000,,,,,,,,,,,,,,,,,,,,,,,,,,,Sensitivity study with travel distance,,,,,,,,,Sensitivity study with travel distance,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,100,500,1000,2000,3000,4000,900,,,100,500,1000,2000,3000,4000,900
+"Almond Milk
+FU= 0.25 L milk consumed
+Life Cycle stage",Quantity per FU,Unit,Energy/Unit  [MJ/Unit],Energy per FU [MJ/FU],fraction,CO2/Unit [kg/unit],CO2 fossil/FU,fraction2,Check g CO2/MJ,CO2equ/Unit [kg/unit]2,CO2equ./FU,fraction3,,"Energy
+MJ/FU",Almond Milk,Dairy Milk,,"Fossil CO2
+ kgCO2/FU",Almond Milk,Dairy Milk,,"Global warming score
+ kgCO2equ/FU",Almond Milk,Almond milk Open LCA,Dairy Milk,Dairy Milk Open LCA,,"Fossil CO2
+ kgCO2/FU",Almond Milk 100 km,Almond Milk 500 km,Almond Milk 1000 km,Almond Milk 2000 km,Almond Milk 3000 km,Almond Milk 4000 km,Dairy Milk 900 km,,"Global warming score
+ kgCO2equ/FU",Almond Milk 100 km,Almond Milk 500 km,Almond Milk 1000 km,Almond Milk 2000 km,Almond Milk 3000 km,Almond Milk 4000 km,Dairy Milk 900 km
+Materials,,,,,,,,,,,,,,Almond Milk Materials,0,,,Almond Milk Materials,0,,,Almond Milk Materials,0,,,,,Almond Milk Materials,0,0,0,0,0,0,,,Almond Milk Materials,0,0,0,0,0,0,
+"Almond, unshelled",,kg,,0,#DIV/0!,,0,#DIV/0!,#DIV/0!,,0,#DIV/0!,,Almond Milk Processing,0,,,Almond Milk Processing,0,,,Almond Milk Processing,0,,,,,Almond Milk Processing,0,0,0,0,0,0,,,Almond Milk Processing,0,0,0,0,0,0,
+Tap water,,kg,,0,#DIV/0!,,0,#DIV/0!,#DIV/0!,,0,#DIV/0!,,Almond Milk Disposal,0,,,Almond Milk Disposal,0,,,Almond Milk Disposal,0,,,,,Almond Milk Disposal,0,0,0,0,0,0,,,Almond Milk Disposal,0,0,0,0,0,0,
+Processing & packaging,,,,,,,,,,,,,,Dairy Milk Materials,,#VALUE!,,Dairy Milk Materials,,#VALUE!,,Dairy Milk Materials,,,#VALUE!,,,Dairy Milk Materials,,,,,,,#VALUE!,,Dairy Milk Materials,,,,,,,#VALUE!
+"Electricity, medium voltage",,kWh,,0,#DIV/0!,,0,#DIV/0!,#DIV/0!,,0,#DIV/0!,,Dairy Milk Processing,,0,,Dairy Milk Processing,,0,,Dairy Milk Processing,,,0,,,Dairy Milk Processing,,,,,,,0,,Dairy Milk Processing,,,,,,,0
+"Steam, in chemical industry",,kg,,0,#DIV/0!,,0,#DIV/0!,#DIV/0!,,0,#DIV/0!,,Dairy Milk Disposal,,0,,Dairy Milk Disposal,,0,,Dairy Milk Disposal,,,0,,,Dairy Milk Disposal,,,,,,,0,,Dairy Milk Disposal,,,,,,,0
+"paper production, woodfree, coated, at integrated mill",,kg,,0,#VALUE!,,0,#VALUE!,#DIV/0!,,0,#VALUE!,,Transportation to sale,0,0,,Transportation to sale,0,0,,Transportation to sale,0,,0,,#VALUE!,Transportation to sale,0,0,0,0,0,0,0,,Transportation to sale,0,0,0,0,0,0,0
+Transportation,,,,,,,,,,,,,,Transportation consumer,0,0,,Transportation consumer,0,0,,Transportation consumer,0,,0,,,Transportation consumer,0,0,0,0,0,0,0,,Transportation consumer,0,0,0,0,0,0,0
+"Milk - 2000 km truck, 16-32t",,t-km,,0,#DIV/0!,,0,#DIV/0!,#DIV/0!,,0,#DIV/0!,,Net value,0,#VALUE!,,Net value,0,#VALUE!,,Net value,,,,,,Net value,,,,,,,#VALUE!,,Net value,,,,,,,#VALUE!
+"Milk - 400 m transport, passenger car",,km,,0,#DIV/0!,,0,#DIV/0!,#DIV/0!,,0,#DIV/0!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Use phase,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+-,,,,0,#DIV/0!,,0,#DIV/0!,,,0,#DIV/0!,,,,,,,,,,,Reduction on production and processing,,,,,,,,,,,,,,,,,,,,,
+Disposal,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Biowaste,,kg,,0,#DIV/0!,,0,#DIV/0!,#DIV/0!,,0,#DIV/0!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Wastewater,,m3,,0,#DIV/0!,,0,#DIV/0!,#DIV/0!,,0,#DIV/0!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Waste paperboard to landfill,,kg,,0,#DIV/0!,,0,#DIV/0!,#DIV/0!,,0,#DIV/0!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Total,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Fo almond milk,,,,,,,,,,,,,,
+Total,,-,,0,#DIV/0!,,0,#DIV/0!,#DIV/0!,,0,#DIV/0!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+"Dairy Milk
+FU= 0.25 L milk consumed
+Life Cycle stage",Quantity per FU,Unit,Energy/Unit  [MJ/Unit],Energy per FU [MJ/FU],fraction,CO2/Unit [kg/unit],CO2/FU,fraction2,Check g CO2/MJ,CO2equ/Unit [kg/unit]2,CO2equ./FU,fraction3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Materials,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+"skimmed milk, from cow milk",34% loss,kg,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Processing & packaging,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+"paper production, woodfree, coated, at integrated mill",,kg,,0,#VALUE!,,0,#VALUE!,#DIV/0!,,0,#VALUE!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Transportation,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Milk - 900 km refrigerated truck 7.5-16t,,t-km,,0,#VALUE!,,0,#VALUE!,#DIV/0!,,0,#VALUE!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+"Milk - 400 m transport, passenger car",,km,,0,#VALUE!,,0,#VALUE!,#DIV/0!,,0,#VALUE!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Use phase,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+-,,,,0,#DIV/0!,,0,#DIV/0!,,,0,#DIV/0!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Disposal,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+waste paperboard at landfill,,kg,,0,#VALUE!,,0,#VALUE!,#DIV/0!,,0,#VALUE!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Total,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Total,,-,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Result discussion ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+3a. Almond Milk- dominant contributions ,"The transportation for almond milk is the dominant process with mor than 60% for energy use, fossil CO2 and CO2 eq emissions",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+3b.Dairy Milk- dominant contributions,The skimmed milk input during the production phase is the dominant source of energy use (38%) and  CO2 eq emissions (58.7%),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+3c. Comparison between scenarios,"The almond milk scenario generates onl slightly lower environmental impacts in terms of energy use compared to the dairy milk scenario. However, the dairy milk scenario generates higher environmental impacts in terms of both fossil CO2 and carbon footprints compared to the almond milk scenario. ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+4. Interpretation of ratios gCO2/MJ ,"The ratios of gCO2/MJ fall within expected limits with manufacturing, processing, and transport by truck in the ~50-60s range. Disposal is either high for almond milk in the 70s or low for only waste paperboard at landfill in the 20s. Skimmed milk production is high at the 90s.",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+5. Importance of tradeoffs substitution related to transportation,Being able to recover energy through paper incineration is important as it could reduce total energy use by 26%,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,27.1,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,Energy/Unit  [MJ/Unit],,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,27.1,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,

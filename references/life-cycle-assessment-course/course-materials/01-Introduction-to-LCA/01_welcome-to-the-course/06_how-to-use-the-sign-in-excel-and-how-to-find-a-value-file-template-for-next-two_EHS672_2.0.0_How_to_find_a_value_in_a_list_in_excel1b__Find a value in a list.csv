@@ -1,0 +1,43 @@
+Carbon footprint from ingredients,,,,,Conversion factor [g/kg],1000,,
+,,,,,,,,
+Food item,"Loss-Adjusted Carbon footprint
+",,,,Meat Burrito [140g/serving],,,
+,[kg CO2eq/kgingredient],,,,Ingredients,[gingredient/serving],[kgCO2 eq/kgingredient],[kgCO2 eq/serving]
+Tortilla,0.964114392307946,,,,"Cheese, cheddar",10,,0
+Refried beans,0.23783443756545733,,,,Refried beans,20,,0
+"Cheese, cheddar",10.330300641753979,,,,Added sodium,1,,0
+"Rice, white",7.766671289516314,,,,Tortilla,50,,0
+Added sodium,0.289058841375451,,,,"Rice, white",20,,0
+Ground beef,30.158719699798656,,,,Ground beef,39,,0
+"Rice, brown",6.021440340988143,,,,Total,140,,0
+"Tortilla, whole wheat",0.8423077634002221,,,,,,,
+"Tortilla, Non specific",1.684326601451093,,,,Veggie Burrito [140g/serving],,,
+"Vegetable combination (green beans, broccoli, onions, mushrooms)",0.9023122330212365,,,,Ingredients,[gingredient/serving],[kgCO2 eq/kgingredient],[kgCO2 eq/serving]
+,,,,,"Cheese, cheddar",10,,0
+,,,,,Refried beans,20,,0
+,,,,,Added sodium,1,,0
+,,,,,"Tortilla, whole wheat",50,,0
+,,,,,"Rice, brown",20,,0
+,,,,,"Vegetable combination (green beans, broccoli, onions, mushrooms)",39,,0
+,,,,,Total,140,,0
+,,,,,,,,
+,,,,,,,,
+Use of Index-match to find automatically a cell in a range,,,,,,,,
+"The combination of the Index and match function in excel is a very powerful way to automatically find values in a reference table, that is not ranked in the same order than the table you are using",,,,,,,,
+It is more reliable than the Vlookup or Hlookup functions which do not adapt automatically if you e.g. insert a column in your reference table afterwards,,,,,,,,
+,,,,,,,,
+Step 1: return the value at a certain position in a reference table,,,,,,,,
+"Index($value_range,n) return the value of the nth cell in $value_range (that must be blocked with $ since you want to keep it fixed when you copy)",,,,,,,,
+,,,,,,,,
+Step 2: identify the rank n of this nth cell in the reference table. ,,,,,,,,
+This is where we use the match function,,,,,,,,
+"MATCH(lookup_value, $lookup_range,0) returns the relative position of the lookup_value in the $lookup_range",,,,,,,,
+"Again, you need to block the lookup range with $ so that it does not cheng when you copy it",,,,,,,,
+"You also add "" ,0) "" at the end of the match function that indicates that you want an exact match ",,,,,,,,
+,,,,,,,,
+"Thus =INDEX($B$5:B$14,3) returns the 3rd value in that table , which is 10.33",,,,,,,,
+"When you copy this cell o the other of column D, you get automatically the right values --> saves a lot of times and mistakes with larger tables!",,,,,,,,
+,,,,,,,,
+and in addition,,,,,,,,
+"Index can also work with an array instead of a single column range, then using two match function, one to identify the column and one to identify the row",,,,,,,,
+"This is used in e.g. cell C7 of the nutritional value , but no need to copy these",,,,,,,,

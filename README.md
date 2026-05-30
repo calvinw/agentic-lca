@@ -17,7 +17,7 @@ For example: a cotton shirt doesn't just emit CO₂ when you buy it. It starts w
 There are three main pieces:
 
 ### 1. The openLCA server
-A professional life cycle assessment software called **openLCA** runs quietly in the background when your Codespace starts. You never see it directly — it just handles the maths when you run an analysis. Think of it like a calculator engine running behind the scenes.
+A professional life cycle assessment software called **openLCA** runs in the background and handles all the maths when you run an analysis. Think of it like a calculator engine running behind the scenes — you never see it directly, but it needs to be switched on before you can do anything. You start it manually using one of the three scripts described in the **Starting the openLCA server** section below.
 
 ### 2. The analysis files (`lca_analysis/`)
 Each analysis lives in its own folder inside `lca_analysis/`. Every folder contains two files:
@@ -76,6 +76,46 @@ The `recipe_card.md` file needs these sections:
 
 ---
 
+## Starting the openLCA server
+
+The openLCA server does **not** start automatically — you need to start it yourself before running any analysis. There are three scripts at the top level of the project for managing it:
+
+### `setup_olca.sh` — First-time setup (use this the very first time)
+
+```bash
+bash setup_olca.sh
+```
+
+This does two things: it builds the openLCA software (like downloading and installing an app — this can take a minute or two and only happens once), then starts the server. Use this the very first time you use a new Codespace, or if you have deleted and rebuilt everything from scratch.
+
+### `start_olca.sh` — Start the server (use this every time after that)
+
+```bash
+bash start_olca.sh
+```
+
+This starts the server using the software that was already built by `setup_olca.sh`. It's much faster than the setup script because it skips the build step. If the server is already running, it will simply say so and do nothing. Use this at the beginning of every working session.
+
+### `stop_olca.sh` — Stop the server (use this when you are done)
+
+```bash
+bash stop_olca.sh
+```
+
+This shuts the server down cleanly. You do not have to run this — closing your Codespace will stop it too — but it is good practice if you want to free up resources while you are still in your session.
+
+### Checking whether the server is running
+
+To confirm the server is up and ready before running an analysis:
+
+```bash
+curl -s http://localhost:8080/api/version
+```
+
+If it replies with a version number, the server is running. If it gives an error or no response, run `bash start_olca.sh` to start it.
+
+---
+
 ## Key files
 
 | File | Purpose |
@@ -85,22 +125,13 @@ The `recipe_card.md` file needs these sections:
 | `lca_analysis/cotton_shirt/` | Cotton shirt — a realistic cradle-to-gate study |
 | `docs/LCACoffeeExlainer.md` | Written guide explaining the maths behind LCA step by step |
 | `docs/LCA_Paper_vs_Plastic_Cup_v2.xlsx` | Spreadsheet comparing paper vs. polystyrene cups |
-| `.devcontainer/start_olca.sh` | Starts the openLCA server (runs automatically on Codespace start) |
+| `setup_olca.sh` | First-time setup — builds the openLCA software and starts the server |
+| `start_olca.sh` | Starts the server (use this at the beginning of each session) |
+| `stop_olca.sh` | Stops the server when you are done |
 
 ---
 
 ## Prerequisites
-
-The openLCA server starts automatically when your Codespace launches. To verify it is running:
-
-```bash
-curl -s http://localhost:8080/api/version
-```
-
-If it is not running:
-```bash
-bash .devcontainer/start_olca.sh
-```
 
 Python packages required (installed automatically on Codespace creation):
 ```bash

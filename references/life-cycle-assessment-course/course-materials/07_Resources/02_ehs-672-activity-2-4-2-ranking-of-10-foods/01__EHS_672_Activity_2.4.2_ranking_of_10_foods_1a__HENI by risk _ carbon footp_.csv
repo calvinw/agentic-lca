@@ -1,0 +1,31 @@
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,g/100g or kcal/100kcal,100,100,,,
+,,,Serving size (g),kcal/serving,"Fiber (f,v,w,l)
+(minutes/serving)","SFA 
+(minutes/serving)","Seafood omega-3 
+(minutes/servng)","Calcium
+(minutes/serving)","Fiber (other)
+(minutes/serving)","PUFA
+(minutes/serving)","Whole grains
+(minutes/serving)","Legumes
+(minutes/serving)","Fruits
+(minutes/serving)","Vegetables
+(minutes/serving)","Milk
+(minutes/serving)","SSB
+(minutes/serving)","Sodium
+(minutes/serving)","Nuts and seeds
+(minutes/serving)","Red meat
+(minutes/serving)","Processed meat
+(minutes/serving)","TFA
+(minutes/serving)",,"Total w/o SFA
+(minutes/serving)",,,,,,,,,,,Carbon footprint per serving,Carbon footprint per serving,Carbon footprint per serving,,,
+Foodcode,Foodcode Description,Simplified food name,racc,kcal,fiber_fvlw,sfat,omega3,calc,fiber_non_fvlw,pfat,whole_grain,legumes,fruit,vegetable,milk,ssb,sodi,nutsd,red_meat,pro_meat,transfat,Simplified food name,HENi per serving,HENI per 100g,HENI per 100 kcal,Ranks nutrition per serving,Ranks nutrition per 100g,Ranks nutrition per kcal,-HENI/serving,-HENI/100g,-HENI/100kcal,,Simplified food name,CO2e per serving,CO2eq per 100g,CO2eq. per 100 kcal,Ranks carbon per serving,Ranks carbon per 100g,Ranks carbon per kcal
+25221405,Pork sausage,Pork Sausage,55,178.75,0,-1.561983,0,0.0133927,0,0.89548,0,0,0,0,0,0,-3.270708,0,0,-19.63552,-0.154126,Pork Sausage,-22.1514813,-40.27542054545455,-12.392437090909091,10,10,10,22.1514813,40.27542054545455,12.392437090909091,,Pork Sausage,0.39049999999999996,0.71,0.21846153846153843,8,9,7
+21101130,"Beef steak, broiled or baked, lean only eaten",Beef Steak (lean),85,156.15083,0,-0.722892,0,0.0369494,0,0.0900844,0,0,0,0,0,0,-2.403579,0,-4.377931,0,-0.34841,Beef Steak (lean),-7.002886200000001,-8.238689647058825,-4.484693549179342,9,9,9,7.002886200000001,8.238689647058825,4.484693549179342,,Beef Steak (lean),3.7910000000000004,4.460000000000001,2.427780883393319,10,10,10
+58106516,"Pizza with pepperoni, from frozen, thick crust","Pepperoni Pizza, Thick Crust",140,375.57966,0.062395,-1.935096,0,0.6501598,1.4328006,0.6618983,0,0,0,1.4445532,0,0,-6.042382,0,0,-1.269193,-0.873788,"Pepperoni Pizza, Thick Crust",-3.9335560999999997,-2.809682928571428,-1.0473293734809814,8,8,8,3.9335560999999997,2.809682928571428,1.0473293734809814,,"Pepperoni Pizza, Thick Crust",0.5180000000000001,0.3700000000000001,0.13792014189479807,9,8,5
+75216136,"Corn, yellow, cooked, from fresh, made with margarine",Yellow Corn (cooked with margarine),85,91.558049,0,-0.144945,0,0.0083471,1.0280445,0.3589202,0,0,0,0,0,0,-1.541363,0,0,0,-0.204386,Yellow Corn (cooked with margarine),-0.35043720000000006,-0.4122790588235295,-0.38274865380759704,7,7,7,0.35043720000000006,0.4122790588235295,0.38274865380759704,,Yellow Corn (cooked with margarine),0.09520000000000002,0.11200000000000003,0.10397775077098904,3,3,4
+11431000,"Yogurt, whole milk, fruit",Whole Milk Yogurt (3.25% fat) with Fruit,170,148.01904,0.0220531,-1.009502,0,0.5007403,0,0.0438046,0,0,0.9172658,0,0,0,-0.550956,0,0,0,-0.142738,Whole Milk Yogurt (3.25% fat) with Fruit,0.7901697999999999,0.4648057647058823,0.5338298370263718,6,6,6,-0.7901697999999999,-0.4648057647058823,-0.5338298370263718,,Whole Milk Yogurt (3.25% fat) with Fruit,0.3672,0.216,0.24807619344106008,7,5,8
+26107140,"Catfish, coated, fried, made with oil",Fried Coated Catfish,85,177.62218,0,-0.643433,1.9349151,0.0728636,0.2346128,1.1506805,0,0,0,0,0,0,-2.190816,0,0,0,-0.180838,Fried Coated Catfish,1.0214179999999997,1.2016682352941173,0.5750509311393429,5,5,5,-1.0214179999999997,-1.2016682352941173,-0.5750509311393429,,Fried Coated Catfish,0.29835,0.35100000000000003,0.1679688876693215,6,6,6
+72201223,"Broccoli, cooked, from fresh, made with oil",Broccoli (cooked in oil),85,49.894368,0.2662362,-0.126039,0,0.0891923,0,0.3577586,0,0,0,3.5782827,0,0,-1.735826,0,0,0,-0.019776,Broccoli (cooked in oil),2.5358677999999997,2.9833738823529408,5.082473035834425,4,4,4,-2.5358677999999997,-2.9833738823529408,-5.082473035834425,,Broccoli (cooked in oil),0.15385000000000001,0.18100000000000002,0.3083514355768571,5,4,9
+41201020,"Baked beans, vegetarian",Baked Beans,130,122.2,0.5238685,-0.0297,0,0.1195874,2.352e-16,0.0500699,0,9.477799,0,1.3884365,0,0,-3.257557,0,0,0,0,Baked Beans,8.302204299999998,6.386310999999998,6.793947872340424,3,3,3,-8.302204299999998,-6.386310999999998,-6.793947872340424,,Baked Beans,0.02366,0.0182,0.019361702127659572,1,1,1
+63107010,"Banana, raw",Fresh Banana,140,124.6,0.3577638,-0.050454,0,0.0189392,0,0.0325311,0,0,13.091943,0,0,0,-0.010228,0,0,0,0,Fresh Banana,13.490949100000002,9.636392214285717,10.8274069823435,2,2,2,-13.490949100000002,-9.636392214285717,-10.8274069823435,,Fresh Banana,0.027720000000000005,0.019800000000000005,0.02224719101123596,2,2,2
+42114140,"Pistachio nuts, salted","Pistachios, Salted",30,172.69545,0,-0.562556,0,0.083609,1.5481401,1.3407996,0,0,0,0,0,0,-0.8537,23.164383,0,0,-0.007374,"Pistachios, Salted",25.275857700000003,84.25285900000002,14.636087806598267,1,1,1,-25.275857700000003,-84.25285900000002,-14.636087806598267,,"Pistachios, Salted",0.1104,0.368,0.0639275672868046,4,7,3

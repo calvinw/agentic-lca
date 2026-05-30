@@ -192,13 +192,21 @@ After every file edit or code change, always provide exactly these 3 points:
 
 ## The openLCA Server
 
-The openLCA server starts automatically when the Codespace launches. Students do not need to start it themselves. If asked whether it is running, check with:
+The openLCA server does **not** start automatically. Students must start it manually before running any analysis. There are three scripts in the project root for managing it:
+
+- **`setup_olca.sh`** — Use this the very first time in a new Codespace. It builds the openLCA software (takes a minute or two, happens only once) and then starts the server.
+- **`start_olca.sh`** — Use this at the beginning of every session after the first. Much faster because the build step is already done.
+- **`stop_olca.sh`** — Use this to shut the server down when done.
+
+To check whether the server is running:
 ```bash
 curl -s http://localhost:8080/api/version
 ```
 Explain the result as: "I just sent a quick 'are you there?' message to the openLCA software running in the background. It replied with its version number, which means it's up and running and ready to do calculations."
 
-If it is not running, start it with `bash .devcontainer/start_olca.sh` and explain: "The openLCA calculation engine wasn't running — I've just started it up. It's a bit like turning on the calculator before you can press any buttons. This only takes a few seconds."
+If it is not running, start it with `bash start_olca.sh` and explain: "The openLCA calculation engine wasn't running — I've just started it up. It's a bit like turning on the calculator before you can press any buttons. This only takes a few seconds."
+
+If it has never been set up before, use `bash setup_olca.sh` instead and explain: "This is the first-time setup — the computer needs to download and build the openLCA software before it can start. This takes a minute or two but only needs to happen once."
 
 ---
 

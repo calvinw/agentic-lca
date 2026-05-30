@@ -1,0 +1,16 @@
+,,Food 1,Food 2,
+,,[kgCO2/serving],[kgCO2/serving],
+,,0.1,0.5,
+,,Food 1,Food 2,Total
+,Consumption,Carbon footprint,Carbon footprint,Carbon footprint
+,[serving/d],[kgCO2/d],[kgCO2/d],[kgCO2/d]
+Person 1,10,,,
+Person 2,20,,,
+Person 3,30,,,
+,,,,
+Conversion factor  [d/year],,365.25,,
+,,Carbon footprint,Carbon footprint,Carbon footprint
+,,[kgCO2/year],[kgCO2/year],[kgCO2/year]
+Person 1,,,,
+Person 2,,,,
+Person 3,,,,

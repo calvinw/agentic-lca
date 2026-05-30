@@ -1,0 +1,21 @@
+Life Cycle stage,"Quantity per FU = per 800 lumen over 5,000 hours",Unit,Energy/Unit  [MJ/Unit],Energy per FU [MJ/FU],fraction,CO2/Unit [kg/unit],CO2/FU     [kg/FU],fraction2,Check g CO2/MJ
+Materials,,,,,,,,,
+Glass (20g/bulb),,kg,,,0,0.63,,0,#DIV/0!
+Aluminum (15g/bulb),0.075,kg,160,12,0.832106265517482,9.5,0.7125,0.816193274567418,59.375
+Tungsten (0.7g/bulb),0.0035,kg,133,0.4655,0.032278788883199,12.6,0.0441,0.0505180679416465,94.7368421052632
+Packaging (10g/bulb),,kg,,0,0,1,0,0,#DIV/0!
+Processing,,,,,,,,,
+Bulb manufacturing,5,bulb,0.38,1.9,0.131750158706935,0.0228,0.114,0.130590923930787,60
+Transportation bulb + packaging,,,,,,,,,
+Truck 3200 km,,t.km,,0,0,,0,0,#DIV/0!
+Freight 10000 km,,t.km,,0,0,,0,0,#DIV/0!
+Use phase,,,,,,,,,
+Electricity lighting,,kWh,12.1,,0,0.71,0,0,#DIV/0!
+Disposal,,,,,,,,,
+Packaging,0,kg,0.71,0,0,0.03,0,0,#DIV/0!
+Bulb,0.0785,kg,0.71,0.055735,0.00386478689238474,0.03,0.002355,0.00269773356014915,42.2535211267606
+Total,,,,,,,,,
+Total,,,,14.421235,,,0.872955,,60.5326104179011
+kg/t conversion factor,1000,,,,,,,,
+g/kg,1000,,,,,,,,
+,,,,,,,,,

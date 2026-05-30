@@ -1,0 +1,30 @@
+,,,,,,,,,,,,,,,,,,,,,
+,,,Serving size (g),kcal/serving,"Fiber (f,v,w,l)
+(g/serving)","SFA 
+(g/serving)","Seafood omega-3 
+(g/servng)","Calcium
+(g/serving)","Fiber (other)
+(g/serving)","PUFA
+(g/serving)","Whole grains
+(g/serving)","Legumes
+(g/serving)","Fruits
+(g/serving)","Vegetables
+(g/serving)","Milk
+(g/serving)","SSB
+(g/serving)","Sodium
+(g/serving)","Nuts and seeds
+(g/serving)","Red meat
+(g/serving)","Processed meat
+(g/serving)","TFA
+(g/serving)"
+Foodcode,Foodcode Description,Simplified food name,racc,kcal,fiber_fvlw,sfat,omega3,calc,fiber_non_fvlw,pfat,whole_grain,legumes,fruit,vegetable,milk,ssb,sodi,nutsd,red_meat,pro_meat,transfat
+11431000,"Yogurt, whole milk, fruit",Whole Milk Yogurt (3.25% fat) with Fruit,170,148.01904,0.2243753,3.1373109,0,0.1850756,0,0.1376169,0,0,9.808873,0,0,0,0.0754157,0,0,0,0.0611236
+42114140,"Pistachio nuts, salted","Pistachios, Salted",30,172.69545,0,1.7483009,0,0.0309022,2.9676238,4.212271,0,0,0,0,0,0,0.1168559,28.792793,0,0,0.0031576
+58106516,"Pizza with pepperoni, from frozen, thick crust","Pepperoni Pizza, Thick Crust",140,375.57966,0.634826,6.0138542,0,0.2403017,2.7465299,2.0794271,0,0,0,33.137288,0,0,0.8270915,0,0,2.8119356,0.3741751
+72201223,"Broccoli, cooked, from fresh, made with oil",Broccoli (cooked in oil),85,49.894368,2.7087692,0.3917028,0,0.0329658,0,1.1239385,0,0,0,82.083916,0,0,0.2376028,0,0,0,0.0084686
+75216136,"Corn, yellow, cooked, from fresh, made with margarine",Yellow Corn (cooked with margarine),85,91.558049,0,0.4504583,0,0.0030851,1.9706546,1.1275878,0,0,0,0,0,0,0.2109844,0,0,0,0.0875226
+21101130,"Beef steak, broiled or baked, lean only eaten",Beef Steak (lean),85,156.15083,0,2.2465911,0,0.0136566,0,0.2830102,0,0,0,0,0,0,0.329006,0,84.009148,0,0.1491968
+25221405,Pork sausage,Pork Sausage,55,178.75,0,4.8543,0,0.00495,0,2.81325,0,0,0,0,0,0,0.4477,0,0,43.503075,0.066
+26107140,"Catfish, coated, fried, made with oil",Fried Coated Catfish,85,177.62218,0,1.9996494,0.0456378,0.0269307,0.4497284,3.6149905,0,0,0,0,0,0,0.2998826,0,0,0,0.0774386
+63107010,"Banana, raw",Fresh Banana,140,124.6,3.64,0.1568,0,0.007,0,0.1022,0,0,140,0,0,0,0.0014,0,0,0,0
+41201020,"Baked beans, vegetarian",Baked Beans,130,122.2,5.33,0.0923,0,0.0442,4.509e-16,0.1573,0,77.35,0,31.85,0,0,0.4459,0,0,0,0
