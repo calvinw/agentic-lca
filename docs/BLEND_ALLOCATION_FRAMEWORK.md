@@ -411,6 +411,338 @@ ALLOCATION: Process separation (single fiber)
 
 ---
 
+## Dyeing Allocation Decision Tree
+
+Dyeing is the most allocation-sensitive shared process in blended fabric production. The reason is that cotton and polyester do not absorb dye equally — and the dye chemicals, water heating, and wastewater treatment are where most of the environmental cost of dyeing sits. Using mass allocation (60/40) here is a simplification that can be off by 15–25 percentage points compared to a process-specific approach.
+
+This sub-tree sits inside **Level 3 (Physical Allocation)** of the main decision tree and should be applied specifically to the dyeing and finishing stage.
+
+---
+
+### The Core Dyeing Problem
+
+In a shared dye bath for a 65/35 cotton-polyester blend:
+- Cotton absorbs approximately **6–8% of the dye in the bath**
+- Polyester absorbs approximately **0.5–2% of the dye in the bath**
+
+That means cotton is responsible for roughly **90% of the dye demand**, even though it is only 65% of the fabric by mass. If you allocate dyeing impacts by mass (65/35), you are under-charging cotton and over-charging polyester for the dye chemicals and associated water and energy.
+
+However, dye absorption is not the only driver of dyeing impacts. Water heating and wastewater treatment scale more with bath volume (shared equally) than with dye uptake. This means the right allocation depends on *which* part of the dyeing impact you are looking at.
+
+---
+
+### Dyeing Allocation Decision Tree
+
+```
+START: You are allocating the dyeing and finishing stage
+
+Q-D1: Do you have fiber-specific dye absorption data
+       for this exact blend and dye type?
+  YES → Continue to Q-D2
+  NO  → Use MASS ALLOCATION (default)
+        Document: "Fiber-specific dye absorption data unavailable;
+        mass allocation used as proxy. Cotton over-credited by
+        approximately 10-15%; flag as limitation."
+        → DONE for dyeing stage
+  ↓
+Q-D2: Can you separate the dyeing impact into components?
+  (i.e., do you have data on: dye chemicals separately,
+   water heating separately, wastewater treatment separately?)
+  YES → Continue to Q-D3 (component-level allocation)
+  NO  → Use DYE ABSORPTION ALLOCATION for full dyeing impact
+        Rationale: Best available physical proxy
+        Example (65/35 cotton-polyester):
+          Cotton:    90% × dyeing impact
+          Polyester: 10% × dyeing impact
+        Document absorption rates used and their source
+        → DONE for dyeing stage
+  ↓
+Q-D3: Component-level allocation (most accurate approach)
+  Split dyeing into three sub-impacts:
+
+  ├─ DYE CHEMICALS (mordants, dyes, auxiliaries)
+  │    Allocate by: DYE ABSORPTION RATE
+  │    Example: cotton 90% / polyester 10%
+  │    Rationale: Chemical demand directly proportional to uptake
+  │
+  ├─ WATER HEATING (energy for hot dye bath)
+  │    Allocate by: MASS (or bath volume share)
+  │    Example: 65/35 for cotton-polyester blend
+  │    Rationale: Heat is shared by the whole bath,
+  │    not proportional to dye uptake
+  │
+  └─ WASTEWATER TREATMENT
+       Allocate by: CHEMICAL OXYGEN DEMAND (COD) contribution
+       If COD data unavailable → use MASS ALLOCATION
+       Rationale: Wastewater burden scales with chemical load,
+       which relates more to dye uptake than mass
+
+  Document each sub-allocation separately.
+```
+
+---
+
+### Worked Example: 65% Cotton + 35% Polyester, Dyeing Stage
+
+**Total dyeing impact:** 1.2 kg CO₂/kg of fabric
+
+**Method A — Mass allocation (current default):**
+```
+Cotton:    65% × 1.2 = 0.78 kg CO₂/kg
+Polyester: 35% × 1.2 = 0.42 kg CO₂/kg
+```
+
+**Method B — Dye absorption allocation (Level 3):**
+```
+Cotton:    90% × 1.2 = 1.08 kg CO₂/kg
+Polyester: 10% × 1.2 = 0.12 kg CO₂/kg
+```
+
+**Method C — Component-level allocation (most accurate):**
+```
+Dye chemicals (0.5 kg CO₂ of total):
+  Cotton:    90% × 0.5 = 0.45 kg CO₂
+  Polyester: 10% × 0.5 = 0.05 kg CO₂
+
+Water heating (0.5 kg CO₂ of total):
+  Cotton:    65% × 0.5 = 0.325 kg CO₂
+  Polyester: 35% × 0.5 = 0.175 kg CO₂
+
+Wastewater treatment (0.2 kg CO₂ of total):
+  Cotton:    90% × 0.2 = 0.18 kg CO₂
+  Polyester: 10% × 0.2 = 0.02 kg CO₂
+
+TOTAL Cotton:    0.45 + 0.325 + 0.18 = 0.955 kg CO₂
+TOTAL Polyester: 0.05 + 0.175 + 0.02 = 0.245 kg CO₂
+```
+
+**Comparison across methods:**
+
+| Method | Cotton share | Polyester share | Cotton kg CO₂ | Polyester kg CO₂ |
+|---|---|---|---|---|
+| Mass allocation | 65% | 35% | 0.78 | 0.42 |
+| Dye absorption | 90% | 10% | 1.08 | 0.12 |
+| Component-level | ~80% | ~20% | 0.955 | 0.245 |
+
+The difference between mass allocation and dye absorption allocation is **0.30 kg CO₂/kg** — equal to about 25% of the total dyeing impact, and a meaningful fraction of the garment's full footprint.
+
+**Key insight (grounded in Jolliet Chapter 4, Section 4.5.3.8):** Mass allocation "should be avoided unless causality has been established." For dye chemicals, mass does NOT cause dye demand — fiber chemistry does. Method B or C is therefore more defensible than Method A, provided you have absorption rate data.
+
+---
+
+### When Disperse vs. Reactive Dye Types Matter
+
+The dyeing chemistry differs fundamentally between fiber types:
+
+- **Cotton** uses **reactive dyes** — high fixation rate (~70–80%), but unfixed dye becomes wastewater pollution
+- **Polyester** uses **disperse dyes** — lower temperature fixation, but typically requires a separate dye bath at 130°C under pressure
+
+In practice, most cotton-polyester blends are dyed in **two sequential baths** (one for each fiber), not one shared bath. If that is the case for the garment you are studying, the allocation problem largely disappears — each dye bath can be assigned 100% to its respective fiber (Level 1: process separation). This is the preferred approach if you can confirm the actual dyeing process used.
+
+**Question to add to documentation checklist:**
+> "Were the fibers dyed in one shared bath or two sequential baths?"
+> - One shared bath → use dyeing allocation decision tree above
+> - Two sequential baths → use process separation; no allocation needed for dyeing
+
+---
+
+## End-of-Life Allocation Decision Tree
+
+End of life (what happens to the garment when it is thrown away or donated) is the stage most commonly **missing** from fashion LCA studies, and yet it can represent 10–20% of a garment's total lifetime impact. For blended fabrics it introduces a specific problem: unlike pure fibres, most blends **cannot currently be mechanically separated and recycled**, which has direct consequences for whether any recycling credit can be claimed.
+
+This section adds an end-of-life branch to the main decision tree, grounded in Jolliet Chapter 4 (Section 4.5.5 on open-loop recycling) and the findings of Dhiwar & Bedarkar (2025), who note that "pathways for garment disposal are often assumed or not well documented."
+
+---
+
+### The Core End-of-Life Problem for Blends
+
+A brand might claim their garment uses "recycled content" or is "recyclable." For blended fabrics, these claims require close scrutiny:
+
+1. **Cutting scraps (manufacturing waste):** Generated during garment construction; typically 15–20% of fabric. For blends, these scraps are mixed fiber and very difficult to recycle.
+2. **Post-consumer garments:** Donated or discarded garments at end of useful life. Sorting and recycling infrastructure for blends is extremely limited today.
+3. **System expansion credit:** Only valid if the recycled output actually displaces something in the market. For most blends currently, it does not.
+
+---
+
+### End-of-Life Decision Tree
+
+```
+START: You are allocating the end-of-life stage for a blended garment
+
+Q-E1: What is the realistic end-of-life pathway for this blend?
+      (Choose based on evidence, NOT best-case assumption)
+
+  ├─ LANDFILL / INCINERATION (most blends today)
+  │    → No allocation needed; no credit possible
+  │    → Assign landfill / incineration emissions 100%
+  │       to the garment (proportional to fiber mass if needed)
+  │    → Document: "End-of-life: landfill assumed based on
+  │       current infrastructure for [blend type]"
+  │    → Continue to Q-E4 for cutting scrap
+  │
+  ├─ MECHANICAL RECYCLING POSSIBLE
+  │    → Continue to Q-E2
+  │
+  └─ CHEMICAL RECYCLING / NOVEL TECHNOLOGY
+       → Continue to Q-E3
+  ↓
+Q-E2: Mechanical recycling — is fiber separation possible?
+  (This is the critical question for blends)
+
+  ├─ SINGLE FIBER (100% cotton, 100% polyester, etc.)
+  │    → Mechanical recycling is realistic
+  │    → Apply SYSTEM EXPANSION:
+  │       Credit = avoided impact of virgin fiber production
+  │       Example: 1 kg recycled cotton displaces 1 kg virgin cotton
+  │       → Subtract 2.1 kg CO₂ per kg recycled (Textile Exchange 2024)
+  │    → Document substitution ratio and data source
+  │
+  ├─ BLENDED FABRIC (cotton-polyester, viscose-elastane, etc.)
+  │    → Ask: Does mechanical separation technology exist
+  │      AND is it used in practice for this blend?
+  │      YES (e.g., near-pure fiber with minor component)
+  │        → Apply system expansion with substitution credit
+  │        → Document technology used and actual market uptake
+  │      NO (most blends currently)
+  │        → NO recycling credit
+  │        → Treat as landfill / incineration (see above)
+  │        → Flag: "Blend cannot be mechanically separated;
+  │           system expansion does not apply"
+  │
+  └─ HIGH ELASTANE (>5% elastane in any blend)
+       → Elastane contamination blocks mechanical recycling
+       → Even if base fiber is recyclable, treat as
+         landfill / incineration
+       → Flag this as a RED FLAG in sensitivity analysis
+  ↓
+Q-E3: Chemical recycling / novel technology
+  (Emerging processes that dissolve and re-spin fibers)
+
+  ├─ Is the technology commercially operational at scale?
+  │    NO → Do NOT claim credit; treat as landfill
+  │         Flag: "Chemical recycling not yet at commercial
+  │         scale for this blend as of 2026"
+  │    YES → Continue
+  │
+  ├─ Is there documented market demand for the output?
+  │    NO → System expansion does not apply (Jolliet §4.5.3.4:
+  │          "only valid when we can demonstrate that the
+  │          substitution has actually happened")
+  │    YES → Apply system expansion with substitution credit
+  │          Document: technology name, scale, market uptake
+  │
+  └─ Is the chemical recycling credit for BOTH fibers
+     or only one?
+       Example: Evrnu technology separates cotton from polyester;
+       cotton is recycled but polyester is currently lost.
+       → Apply credit only to the fiber actually recovered
+       → Assign remaining fiber to landfill
+  ↓
+Q-E4: Cutting scrap (manufacturing waste)
+  This is separate from post-consumer end of life.
+  Applies to the 15-20% of fabric wasted during garment cutting.
+
+  ├─ Is the cutting scrap a single fiber or a blend?
+  │    Single fiber → see Q-E2 (mechanical recycling may apply)
+  │    Blend → most likely landfill / incineration (see Q-E1)
+  │
+  ├─ Is the cutting scrap actually collected and recycled
+  │  in the factory you are studying?
+  │    YES → Apply system expansion or process separation
+  │           as appropriate; document factory practice
+  │    NO  → Assign to landfill; no credit
+  │
+  └─ Is the cutting scrap sold to a third party for use
+     in a different product (e.g., stuffing, insulation)?
+       YES → This is open-loop recycling (Jolliet §4.5.5)
+              Apply financial allocation at the point of separation:
+              If scrap has positive value → split credit proportionally
+              If factory pays to dispose of scrap → it is waste,
+              no credit; assign full disposal impact to garment
+       NO  → Landfill; no credit
+```
+
+---
+
+### End-of-Life Worked Example: 65% Cotton + 35% Polyester T-Shirt
+
+**Scenario A — Realistic current practice (landfill):**
+```
+End-of-life pathway: Municipal waste → landfill
+Allocation: None required
+Emissions: 0.08 kg CO₂/garment (methane from cotton decomposition,
+           weighted by 65% mass share)
+Recycling credit: NONE
+Rationale: 65/35 blend cannot be mechanically separated;
+           no commercial chemical recycling at scale (2026)
+```
+
+**Scenario B — Optimistic claim (recycling credit without evidence):**
+```
+⚠ WRONG APPROACH — included here to show what NOT to do ⚠
+"We assume 15% of garments are collected and recycled."
+Credit claimed: -0.3 kg CO₂/garment
+Problem: No evidence of actual collection AND no separation
+         technology for this blend → system expansion does not apply
+         (Jolliet §4.5.3.4: substitution must "actually happen")
+```
+
+**Scenario C — Novel technology, documented (future):**
+```
+Assumption: Chemical recycling (e.g., Worn Again technology)
+            commercially operational and recovering cotton fibre
+Cotton recovered: 65% of garment mass = 0.13 kg per 200g garment
+Virgin cotton displaced: 0.13 kg × 2.1 kg CO₂/kg = -0.27 kg CO₂
+Polyester: not recovered by this technology → landfill
+Net end-of-life credit: -0.27 kg CO₂/garment
+Document: technology name, scale, market uptake rate, recovery ratio
+```
+
+**Comparison:**
+
+| Scenario | End-of-life impact | Recycling credit | Approach |
+|---|---|---|---|
+| A: Landfill (realistic) | +0.08 kg CO₂ | None | No allocation needed |
+| B: Recycling claim (unjustified) | −0.30 kg CO₂ | Claimed without evidence | **Do not use** |
+| C: Partial chemical recycling | −0.19 kg CO₂ net | Justified, documented | Level 2 system expansion |
+
+The difference between Scenario A and B is **0.38 kg CO₂/garment** — a meaningful number for a garment that may have a total footprint of around 5–8 kg CO₂. Unjustified end-of-life credits are one of the most common sources of greenwashing in fashion sustainability claims.
+
+---
+
+### End-of-Life by Blend Type: Quick Reference
+
+| Blend | Can it be mechanically recycled today? | System expansion credit available? | Recommended approach |
+|---|---|---|---|
+| 65% Cotton + 35% Polyester | No — fibers cannot be separated | No | Landfill; no credit |
+| 85% Viscose + 15% Elastane | No — elastane blocks recycling | No | Landfill; no credit; flag elastane |
+| 90% + 10% Recycled Polyester | Polyester can be recycled | Yes — for polyester fraction only | Level 2 for polyester; landfill for any cotton component |
+| 99% Cotton + 1% Elastane | Borderline — 1% elastane may be low enough | Uncertain — depends on recycler tolerance | Conservative: landfill; document uncertainty |
+| 100% Cotton | Yes — in principle | Yes — if actually collected | Level 2 with evidence of collection and market uptake |
+| 100% Polyester | Yes — PET recycling is mature | Yes — well-documented substitution | Level 2; use Textile Exchange recycled polyester credit |
+
+---
+
+### Updating the Documentation Checklist for End of Life
+
+Add these items to the existing checklist:
+
+```
+☐ END-OF-LIFE PATHWAY
+  ☐ Actual pathway documented (landfill, incineration, collection scheme)
+  ☐ Confirmed whether blend can be separated for recycling
+  ☐ Evidence cited if recycling credit is claimed
+  ☐ Cutting scrap pathway documented separately from post-consumer
+
+☐ RECYCLING CREDIT JUSTIFICATION (if claimed)
+  ☐ Technology named and confirmed at commercial scale
+  ☐ Market uptake documented (not just technically possible)
+  ☐ Credit applied only to fiber fraction actually recovered
+  ☐ Sensitivity analysis: result shown both with and without credit
+```
+
+---
+
 ## Sensitivity Analysis Template
 
 For every blend allocation choice, document the sensitivity:
@@ -612,6 +944,8 @@ If you develop good allocation frameworks for specific blends:
 
 ## Summary Table: Quick Reference
 
+### Upstream & Manufacturing Allocation
+
 | Blend Type | Preferred Method | Why | Uncertainty |
 |---|---|---|---|
 | **65% Cotton + 35% Polyester** | Level 1 (upstream) + Level 4 (shared) | Different supply chains, then mass allocation for shared | ±15% |
@@ -620,8 +954,42 @@ If you develop good allocation frameworks for specific blends:
 | **99% Cotton + 1% Elastane** | Level 4 (mass) with caveat | Include elastane despite minor %; it's high-impact | ±8% |
 | **100% Pure Fiber** | Level 1 (process separation) | Single supply chain; no fiber allocation needed | ±5% (use phase) |
 
+### Dyeing Stage Allocation
+
+| Data available | Recommended method | Cotton share (65/35 blend) | Polyester share |
+|---|---|---|---|
+| No fiber-specific data | Mass allocation (default) | 65% | 35% |
+| Dye absorption rates known | Physical allocation by absorption | ~90% | ~10% |
+| Full component data | Component-level allocation | ~80% | ~20% |
+| Two separate dye baths confirmed | Process separation | 100% cotton bath to cotton | 100% polyester bath to polyester |
+
+### End-of-Life Allocation
+
+| Blend | Realistic pathway (2026) | Recycling credit? | Notes |
+|---|---|---|---|
+| **65% Cotton + 35% Polyester** | Landfill | None | Cannot be mechanically separated |
+| **85% Viscose + 15% Elastane** | Landfill | None | Elastane blocks recycling |
+| **90%+ Virgin Polyester** | PET recycling possible | Yes, if collected | Mature recycling infrastructure |
+| **99% Cotton + 1% Elastane** | Cotton collection scheme | Uncertain | Document recycler tolerance for elastane |
+| **100% Cotton** | Cotton collection scheme | Yes, if actually collected | Must evidence collection and market uptake |
+| **100% Polyester** | PET recycling | Yes — well documented | Use Textile Exchange recycled polyester credit |
+
 ---
 
-**Last Updated:** 2026-05-30  
-**Status:** Ready for student use and practitioner feedback  
+## References & Further Reading
+
+- **ISO 14040:2006 / ISO 14044:2006** — Full standards on allocation procedures; Section 4.5 covers allocation hierarchy
+- **Jolliet et al. (2015)** — Chapter 4 (pp. 87–115); wheat/straw example showing 40× variation by method; Section 4.5.3.8 on causal physical allocation; Section 4.5.5 on open-loop recycling
+- **Dhiwar & Bedarkar (2025)** — Systematic review of 147 fashion LCA studies; documents lack of allocation transparency (*Discover Sustainability*, DOI: 10.1007/s43621-025-02050-7)
+- **Watson & Wiedemann (2019)** — Review of allocation inconsistency across 10+ textile LCA tools (*Sustainability*, vol. 11, no. 14)
+- **Textile Exchange Annual Fiber Benchmark (2024)** — Source for fiber impact data used in examples (cotton 2.1 kg CO₂/kg, polyester 5.5 kg CO₂/kg, recycled polyester 2.1 kg CO₂/kg)
+- **Higg Index (Sustainable Apparel Coalition)** — Industry tool; allocation methods not disclosed to users
+- **EU Product Environmental Footprint (PEF) Category Rules** — Forthcoming regulatory standard; textile-specific guidance expected 2025–2026
+
+See `BLEND_REFERENCES.md` for full citations, access links, and recommended reading order.
+
+---
+
+**Last Updated:** 2026-05-31
+**Status:** Ready for student use and practitioner feedback
 **Feedback:** If you use this framework and find gaps, document what you found
