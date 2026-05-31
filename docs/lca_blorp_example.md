@@ -63,19 +63,16 @@ Before introducing matrices, we can work through the exact same calculation by t
 We need **10 Blorps**. Work backwards through the tree:
 
 **Reference process** makes 10 Blorps per run. We need 10 Blorps, so:
-$$
-\text{Ref runs} = \frac{10}{10} = \mathbf{1\ run}
-$$
+
+> 10 Blorps needed ÷ 10 Blorps per run = **1 run**
 
 **Process A** supplies Zings to the Reference process. One run of Reference needs 30 Zings. Process A makes 2 Zings per run, so:
-$$
-\text{A runs} = \frac{30}{2} = \mathbf{15\ runs}
-$$
+
+> 30 Zings needed ÷ 2 Zings per run = **15 runs**
 
 **Process B** supplies Flums to the Reference process. One run of Reference needs 100 Flums. Process B makes 4 Flums per run, so:
-$$
-\text{B runs} = \frac{100}{4} = \mathbf{25\ runs}
-$$
+
+> 100 Flums needed ÷ 4 Flums per run = **25 runs**
 
 **Check — does every demand get met?**
 
