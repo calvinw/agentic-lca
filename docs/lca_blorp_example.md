@@ -84,6 +84,8 @@ We need **10 Blorps**. Work backwards through the tree:
 
 These run counts are exactly the scaling vector **s = (1.0, 15.0, 25.0)** solved in Step 2.
 
+> **A note on language:** Calling these values "run counts" is a useful intuition, but the more precise term is **activity level** — how much of each process's reference output the system needs, expressed as a multiple of that process's unit output. The word "activity level" works better than "runs" because s can be a fraction (e.g. s = 0.5 means the process operates at half capacity, not "half a run"). You will see "activity level" and "scaling factor" used interchangeably in LCA textbooks.
+
 ---
 
 ### Step 0b — Calculate total emissions and extractions
