@@ -3,7 +3,7 @@
   "features": {
     "ghcr.io/devcontainers/features/docker-in-docker:2": {}
   },
-  "postCreateCommand": "setup-env.sh && install-mcps.sh && install-datascience.sh && setup-skills.sh && skillshare install github.com/anthropics/skills/skill-creator && (sync-skills.sh || true) && pip install olca-ipc olca-schema --break-system-packages",
+  "postCreateCommand": "bash .devcontainer/post-create.sh",
   "secrets": {
     "STITCH_API_KEY": "STITCH_API_KEY"
   },
