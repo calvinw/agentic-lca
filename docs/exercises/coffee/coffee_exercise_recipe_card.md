@@ -1,0 +1,42 @@
+---
+name: "Coffee Exercise — Process Tree"
+subtitle: "Per-run rates (quantities between processes unknown)"
+before: true
+
+functional_unit:
+  description: 200 cups of coffee
+  amount: 200
+  unit: cups
+
+units:
+  cups: Cup count
+  kg:   Mass
+  L:    Volume
+
+products:
+  - { name: Roasted coffee, unit: kg }
+  - { name: Cups,           unit: cups }
+
+elementary_flows:
+  emissions:
+    - { name: CO2, unit: kg }
+  resources:
+    - { name: Water, unit: L }
+
+processes:
+  - name: P1 — Roasting
+    reference_output: { flow: Roasted coffee, amount: 0.1 }
+    resources:
+      - { flow: Water, amount: 0.20 }
+    emissions:
+      - { flow: CO2, amount: 0.05 }
+
+  - name: P2 — Brewing & Serving
+    reference_output: { flow: Cups, amount: 1 }
+    inputs:
+      - { flow: Roasted coffee, amount: 0.01 }
+    emissions:
+      - { flow: CO2, amount: 0.02 }
+
+reference_process: "P2 — Brewing & Serving"
+---

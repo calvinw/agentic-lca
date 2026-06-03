@@ -4,7 +4,8 @@ lca_analysis.py
 
 Reads an LCA specification from a recipe_card.md file (YAML frontmatter), builds
 the model in openLCA via the gdt-server REST API, walks through each step of the
-LCI methodology, writes lca_results.md, and generates product_graph.png.
+LCI methodology, writes lca_results.md, and generates product system graphs
+(product_graph_scaled.svg and product_graph_structure.svg).
 
 Usage:
     python3 lca_scripts/lca_analysis.py lca_analysis/coffee/recipe_card.md
@@ -17,14 +18,10 @@ import yaml
 import numpy as np
 from olca_ipc.rest import RestClient
 import olca_schema as o
-import matplotlib
-matplotlib.use('Agg')
-import matplotlib.pyplot as plt
-import matplotlib.patches as mpatches
+from lca_svg import generate as generate_svg
 
 ANALYSIS_FILE = sys.argv[1] if len(sys.argv) > 1 else "recipe_card.md"
 RESULTS_FILE  = str(pathlib.Path(ANALYSIS_FILE).parent / "lca_results.md")
-GRAPH_FILE    = str(pathlib.Path(ANALYSIS_FILE).parent / "product_graph.png")
 SERVER_URL    = "http://localhost:8080/"
 
 # ── Formatting helpers ────────────────────────────────────────────────────────
@@ -161,197 +158,6 @@ def build_matrices(spec: dict):
 
     return A, B, prod_names, proc_names, em_names
 
-# ── Generate product_graph.png ────────────────────────────────────────────────
-
-def topo_sort(processes):
-    produces = {ps["reference_output"]["flow"]: ps["name"] for ps in processes}
-    deps = {ps["name"]: [] for ps in processes}
-    for ps in processes:
-        for inp in ps.get("inputs", []):
-            if inp["flow"] in produces:
-                deps[ps["name"]].append(produces[inp["flow"]])
-    ordered = []
-    remaining = [ps["name"] for ps in processes]
-    while remaining:
-        for name_p in remaining:
-            if all(d in ordered for d in deps[name_p]):
-                ordered.append(name_p)
-                remaining.remove(name_p)
-                break
-    return ordered
-
-def generate_graph(spec: dict, output_path: str):
-    processes = spec["processes"]
-    ref_name  = spec["reference_process"]
-    fu        = spec["functional_unit"]
-    name      = spec["name"]
-
-    order    = topo_sort(processes)
-    proc_map = {ps["name"]: ps for ps in processes}
-    produces = {ps["reference_output"]["flow"]: ps["name"] for ps in processes}
-
-    n     = len(processes)
-    COL_W = 3.2
-    ROW_H = 6.5
-    fig_w = (n + 1) * COL_W + 1.0
-
-    fig, ax = plt.subplots(figsize=(fig_w, ROW_H))
-    ax.set_xlim(0, fig_w)
-    ax.set_ylim(0, ROW_H)
-    ax.axis("off")
-    fig.patch.set_facecolor("#f5f5f5")
-
-    Y_NATURE_IN  = 5.8    # From Nature zone centre
-    Y_PROCESS    = 3.2    # process boxes
-    Y_BUS        = 4.3    # bus line — above processes, within Supply Chain zone
-    Y_NATURE_OUT = 1.0    # To Nature zone centre
-    C_PROC = "#3a7ebf"; C_FU = "#7b4ea6"; C_IN = "#3a9957"
-    C_OUT  = "#c45c1a"; C_ARROW = "#444444"; C_EM_ARR = "#c0392b"
-    BOX_W  = 2.2;  BOX_H = 0.8;  EM_W = 2.0;  EM_H = 0.5
-
-    LABEL_PROPS = dict(fontsize=7.5, zorder=6,
-                       bbox=dict(boxstyle="round,pad=0.15",
-                                 facecolor="white", edgecolor="none", alpha=0.85))
-
-    def col_x(i):
-        return 0.9 + i * COL_W + COL_W / 2
-
-    proc_col = {pname: col_x(i) for i, pname in enumerate(order)}
-
-    def box(cx, cy, text, color, w=BOX_W, h=BOX_H, fs=8):
-        ax.add_patch(mpatches.FancyBboxPatch(
-            (cx - w/2, cy - h/2), w, h,
-            boxstyle="round,pad=0.06",
-            facecolor=color, edgecolor="white", linewidth=1.5, zorder=3))
-        ax.text(cx, cy, text, ha="center", va="center",
-                fontsize=fs, color="white", fontweight="bold",
-                zorder=4, multialignment="center", linespacing=1.3)
-
-    def labelled_arrow(x1, y1, x2, y2, label="", color=C_ARROW):
-        ax.annotate("", xy=(x2, y2), xytext=(x1, y1),
-                    arrowprops=dict(arrowstyle="->", color=color, lw=1.6), zorder=2)
-        if label:
-            mx, my = (x1+x2)/2, (y1+y2)/2
-            if abs(x2-x1) >= abs(y2-y1):   # horizontal → label above midpoint
-                ax.text(mx, my + 0.16, label, ha="center", va="bottom",
-                        color=color, **LABEL_PROPS)
-            else:                            # vertical → label to the right
-                ax.text(mx + 0.12, my, label, ha="left", va="center",
-                        color=color, **LABEL_PROPS)
-
-    # ── Title
-    ax.text(fig_w/2, ROW_H - 0.28, name, ha="center", fontsize=12,
-            fontweight="bold", color="#222", zorder=5)
-    ax.text(fig_w/2, ROW_H - 0.65, "Product Graph", ha="center",
-            fontsize=9, color="#666", zorder=5)
-
-    # ── Zone bands (each defined by bottom and top y coordinates)
-    for label, color, y_bot, y_top in [
-        ("From Nature",  "#e8f5ec", 5.1, 6.4),
-        ("Supply Chain", "#e8f0f8", 2.4, 5.0),
-        ("To Nature",    "#fdeede", 0.2, 1.7),
-    ]:
-        h = y_top - y_bot
-        ax.add_patch(mpatches.FancyBboxPatch(
-            (0.2, y_bot), fig_w - 0.4, h,
-            boxstyle="round,pad=0.05", facecolor=color, edgecolor="none", zorder=0))
-        ax.text(0.45, (y_bot + y_top) / 2, label, ha="center", va="center",
-                fontsize=7.5, color="#555", fontstyle="italic", rotation=90, zorder=1)
-
-    # ── Process boxes
-    for pname in order:
-        ps = proc_map[pname]
-        ro = ps["reference_output"]
-        box(proc_col[pname], Y_PROCESS,
-            f"{pname}\n→ {ro['amount']} {ro['flow']}", C_PROC)
-
-    # ── Group flows: (src, flow_name, unit) → [(dst, amount)]
-    flow_groups = {}
-    for pname in order:
-        for inp in proc_map[pname].get("inputs", []):
-            if inp["flow"] in produces:
-                src      = produces[inp["flow"]]
-                unit_sym = next((p["unit"] for p in spec["products"]
-                                 if p["name"] == inp["flow"]), "")
-                key = (src, inp["flow"], unit_sym)
-                flow_groups.setdefault(key, []).append((pname, inp["amount"]))
-
-    # ── Draw arrows — single destination: straight arrow at process level
-    #                  multiple destinations: bus line below with drop arrows
-    for (src, flow, unit_sym), dsts in flow_groups.items():
-        src_cx = proc_col[src]
-
-        if len(dsts) == 1:
-            dst, amount = dsts[0]
-            labelled_arrow(src_cx + BOX_W/2, Y_PROCESS,
-                           proc_col[dst] - BOX_W/2, Y_PROCESS,
-                           label=f"{amount} {unit_sym}")
-        else:
-            # Bus line — electricity goes UP from source, RIGHT along bus,
-            # then DOWN into each consuming process
-            dst_cxs     = [proc_col[d] for d, _ in dsts]
-            x_bus_start = src_cx
-            x_bus_end   = max(dst_cxs)
-
-            # Vertical rise from source box top UP to bus level
-            ax.plot([src_cx, src_cx], [Y_PROCESS + BOX_H/2, Y_BUS],
-                    color=C_ARROW, lw=1.5, zorder=2)
-            # Horizontal bus line (dashed)
-            ax.plot([x_bus_start, x_bus_end], [Y_BUS, Y_BUS],
-                    color=C_ARROW, lw=1.5, ls="--", zorder=2)
-            # Flow name label on bus
-            ax.text((x_bus_start + x_bus_end)/2, Y_BUS + 0.1, flow,
-                    ha="center", va="bottom", color=C_ARROW, **LABEL_PROPS)
-
-            # Drop arrows DOWN from bus into each consumer's top
-            for dst, amount in dsts:
-                dcx = proc_col[dst]
-                labelled_arrow(dcx, Y_BUS, dcx, Y_PROCESS + BOX_H/2,
-                               label=f"{amount} {unit_sym}")
-
-    # ── From Nature boxes
-    for pname in order:
-        if not any(inp["flow"] in produces
-                   for inp in proc_map[pname].get("inputs", [])):
-            cx = proc_col[pname]
-            box(cx, Y_NATURE_IN, "Raw materials\n(from nature)", C_IN,
-                w=EM_W, h=EM_H, fs=7.5)
-            # Arrow from bottom of From Nature box down to top of process box
-            labelled_arrow(cx, Y_NATURE_IN - EM_H/2,
-                           cx, Y_PROCESS + BOX_H/2, color=C_IN)
-
-    # ── Emission arrows + boxes
-    em_positions = {}
-    for pname in order:
-        cx = proc_col[pname]
-        for em in proc_map[pname].get("emissions", []):
-            labelled_arrow(cx, Y_PROCESS - BOX_H/2, cx, Y_NATURE_OUT + EM_H/2,
-                           label=f"{em['amount']} {em['flow']}", color=C_EM_ARR)
-            em_positions[em["flow"]] = cx
-    for em_flow, cx in em_positions.items():
-        box(cx, Y_NATURE_OUT, em_flow, C_OUT, w=EM_W, h=EM_H, fs=7.5)
-
-    # ── Functional unit box
-    fu_cx  = proc_col[ref_name] + COL_W
-    ref_ro = proc_map[ref_name]["reference_output"]
-    box(fu_cx, Y_PROCESS,
-        f"Functional Unit\n{fu['amount']} {fu['unit']}\n{fu['description']}",
-        C_FU, w=BOX_W, h=BOX_H + 0.2, fs=7.5)
-    labelled_arrow(proc_col[ref_name] + BOX_W/2, Y_PROCESS,
-                   fu_cx - BOX_W/2, Y_PROCESS,
-                   label=f"{ref_ro['amount']} {ref_ro['flow']}")
-
-    # ── Legend
-    ax.legend(handles=[
-        mpatches.Patch(facecolor=C_PROC, label="Supply chain process"),
-        mpatches.Patch(facecolor=C_FU,   label="Functional unit"),
-        mpatches.Patch(facecolor=C_IN,   label="Input from nature"),
-        mpatches.Patch(facecolor=C_OUT,  label="Emission to nature"),
-    ], loc="lower right", fontsize=7.5, framealpha=0.9, edgecolor="#ccc")
-
-    plt.tight_layout(pad=0.3)
-    plt.savefig(output_path, dpi=150, bbox_inches="tight", facecolor="#f5f5f5")
-    plt.close()
 
 # ── Generate lca_results.md ───────────────────────────────────────────────────
 
@@ -464,6 +270,16 @@ def write_results_md(spec, A, B, s, Bs, olca_outputs,
     for i, en in enumerate(em_names):
         ln(f"> **{en}: {Bs[i]:.4f} kg** per {fu['amount']} {fu['unit']} "
            f"of {fu['description']}")
+    ln()
+    ln("## Product System Graphs")
+    ln()
+    ln("### Scaled (with amounts)")
+    ln()
+    ln("![Scaled](product_graph_scaled.svg)")
+    ln()
+    ln("### Structure (flow names only)")
+    ln()
+    ln("![Structure](product_graph_structure.svg)")
     ln()
     ln("---")
     ln(f"*Generated by `lca_scripts/lca_analysis.py` using openLCA gdt-server v2*")
@@ -592,13 +408,19 @@ def main():
     write_results_md(spec, A, B, s, Bs, olca_outputs,
                      proc_names, prod_names, em_names, system_ref.id)
 
-    step(14, "Product Graph")
-    generate_graph(spec, GRAPH_FILE)
-    print(f"  Graph saved  → {GRAPH_FILE}")
+    step(14, "Product Graphs")
+    graph_dir = str(pathlib.Path(ANALYSIS_FILE).parent)
+    scaled_file    = f"{graph_dir}/product_graph_scaled.svg"
+    structure_file = f"{graph_dir}/product_graph_structure.svg"
+    generate_svg(ANALYSIS_FILE, scaled_file, show_quantities=True)
+    generate_svg(ANALYSIS_FILE, structure_file, show_quantities=False)
+    print(f"  Scaled graph    → {scaled_file}")
+    print(f"  Structure graph → {structure_file}")
 
     banner("Done")
     print(f"  Results written to → {RESULTS_FILE}")
-    print(f"  Graph saved    to → {GRAPH_FILE}")
+    print(f"  Scaled graph    to → {scaled_file}")
+    print(f"  Structure graph to → {structure_file}")
     print()
 
 if __name__ == "__main__":

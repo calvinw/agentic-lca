@@ -64,15 +64,21 @@ We need **10 Blorps**. Work backwards through the tree:
 
 **Reference process** makes 10 Blorps per run. We need 10 Blorps, so:
 
-> 10 Blorps needed ÷ 10 Blorps per run = **1 run**
+$$
+s_\text{Ref} = \frac{10 \ \cancel{\text{Blorps}}}{10 \ \cancel{\text{Blorps}}/\text{run}} = \mathbf{1.0 \ \text{run}}
+$$
 
-**Process A** supplies Zings to the Reference process. One run of Reference needs 30 Zings. Process A makes 2 Zings per run, so:
+**Reference process at activity level 1.0** needs 30 Zings. Process A makes 2 Zings per run, so:
 
-> 30 Zings needed ÷ 2 Zings per run = **15 runs**
+$$
+s_A = \frac{30 \ \cancel{\text{Zings}}}{2 \ \cancel{\text{Zings}}/\text{run}} = \mathbf{15.0 \ \text{runs}}
+$$
 
-**Process B** supplies Flums to the Reference process. One run of Reference needs 100 Flums. Process B makes 4 Flums per run, so:
+**Reference process at activity level 1.0** also needs 100 Flums. Process B makes 4 Flums per run, so:
 
-> 100 Flums needed ÷ 4 Flums per run = **25 runs**
+$$
+s_B = \frac{100 \ \cancel{\text{Flums}}}{4 \ \cancel{\text{Flums}}/\text{run}} = \mathbf{25.0 \ \text{runs}}
+$$
 
 **Check — does every demand get met?**
 
@@ -84,7 +90,7 @@ We need **10 Blorps**. Work backwards through the tree:
 
 These run counts are exactly the scaling vector **s = (1.0, 15.0, 25.0)** solved in Step 2.
 
-> **A note on language:** Calling these values "run counts" is a useful intuition, but the more precise term is **activity level** — how much of each process's reference output the system needs, expressed as a multiple of that process's unit output. The word "activity level" works better than "runs" because s can be a fraction (e.g. s = 0.5 means the process operates at half capacity, not "half a run"). You will see "activity level" and "scaling factor" used interchangeably in LCA textbooks.
+> **A note on language:** Calling these values "run counts" is a useful intuition, but the more precise term is **activity level** — how much of each process's reference output the system needs, expressed as a multiple of that process's output per run. The word "activity level" works better than "runs" because s can be a fraction (e.g. s = 0.5 means the process operates at half capacity, not "half a run"). You will see "activity level" and "scaling factor" used interchangeably in LCA textbooks.
 
 ---
 
@@ -98,33 +104,33 @@ $$
 \text{Smog} = 0.7\ \frac{\text{Smog}}{\text{Blorp}} \times 10\ \text{Blorps} = \mathbf{7.0\ Smog}
 $$
 
-**Process A** — runs 15 times:
+**Process A** — runs 15 times, producing 15 × 2 = **30 Zings** in total:
 
 $$
-\text{Smog} = 0.4\ \frac{\text{Smog}}{\text{Zing-step}} \times 15\ \text{runs} = \mathbf{6.0\ Smog}
-$$
-
-$$
-\text{Aqua} = 2.0\ \frac{\text{Aqua}}{\text{Zing-step}} \times 15\ \text{runs} = \mathbf{30.0\ Aqua}
-$$
-
-**Process B** — runs 25 times:
-
-$$
-\text{Smog} = 0.2\ \frac{\text{Smog}}{\text{Flum-step}} \times 25\ \text{runs} = \mathbf{5.0\ Smog}
+\text{Smog} = 0.4\ \frac{\text{Smog}}{\text{Zing}} \times 30\ \text{Zings} = \mathbf{12.0\ Smog}
 $$
 
 $$
-\text{Haze} = 0.5\ \frac{\text{Haze}}{\text{Flum-step}} \times 25\ \text{runs} = \mathbf{12.5\ Haze}
+\text{Aqua} = 2.0\ \frac{\text{Aqua}}{\text{Zing}} \times 30\ \text{Zings} = \mathbf{60.0\ Aqua}
+$$
+
+**Process B** — runs 25 times, producing 25 × 4 = **100 Flums** in total:
+
+$$
+\text{Smog} = 0.2\ \frac{\text{Smog}}{\text{Flum}} \times 100\ \text{Flums} = \mathbf{20.0\ Smog}
+$$
+
+$$
+\text{Haze} = 0.5\ \frac{\text{Haze}}{\text{Flum}} \times 100\ \text{Flums} = \mathbf{50.0\ Haze}
 $$
 
 **Add across all processes to get the total inventory:**
 
 | Elementary flow | From Ref | From A | From B | **Total** |
 |---|---|---|---|---|
-| Smog (emission) | 7.0 | 6.0 | 5.0 | **18.0** |
-| Haze (emission) | — | — | 12.5 | **12.5** |
-| Aqua (extraction) | — | 30.0 | — | **30.0** |
+| Smog (emission) | 7.0 | 12.0 | 20.0 | **39.0** |
+| Haze (emission) | — | — | 50.0 | **50.0** |
+| Aqua (extraction) | — | 60.0 | — | **60.0** |
 
 ---
 
@@ -133,13 +139,13 @@ $$
 **Murk** is caused by Smog (factor 1.0) and Haze (factor 3.0):
 
 $$
-\text{Murk} = (1.0 \times 18.0) + (3.0 \times 12.5) = 18.0 + 37.5 = \mathbf{55.5}
+\text{Murk} = (1.0 \times 39.0) + (3.0 \times 50.0) = 39.0 + 150.0 = \mathbf{189.0}
 $$
 
 **Depletion** is caused by Aqua (factor 0.8):
 
 $$
-\text{Depletion} = 0.8 \times 30.0 = \mathbf{24.0}
+\text{Depletion} = 0.8 \times 60.0 = \mathbf{48.0}
 $$
 
 ---
@@ -151,11 +157,11 @@ $$
 | Ref runs | 1.0 | s = 1.0 |
 | A runs | 15.0 | s = 15.0 |
 | B runs | 25.0 | s = 25.0 |
-| Inventory: Smog | 18.0 | 18.0 |
-| Inventory: Haze | 12.5 | 12.5 |
-| Inventory: Aqua | 30.0 | 30.0 |
-| **Impact: Murk** | **55.5** | **55.5** |
-| **Impact: Depletion** | **24.0** | **24.0** |
+| Inventory: Smog | 39.0 | 39.0 |
+| Inventory: Haze | 50.0 | 50.0 |
+| Inventory: Aqua | 60.0 | 60.0 |
+| **Impact: Murk** | **189.0** | **189.0** |
+| **Impact: Depletion** | **48.0** | **48.0** |
 
 Every number matches. The matrix approach in Steps 1–5 simply packages this same arithmetic into a compact, scalable form that works even when there are thousands of processes.
 
@@ -218,13 +224,21 @@ The **? Zings** and **? Flums** from the process tree are now resolved: The Refe
 
 ## Step 3 — Build the intervention matrix B
 
-The intervention matrix **B** contains the database rates for each elementary flow per unit of each process's reference product. Entries are always positive — direction (emission vs extraction) is a property of the flow type, not a sign.
+The intervention matrix **B** contains the elementary flow produced or extracted **per run** of each process. Because the scaling vector s counts runs, each entry must be a per-run rate. We convert from the database rate (per Blorp, per Zing, or per Flum) by multiplying by how many of those products each process makes per run:
+
+| Process | Flow | Database rate | Outputs per run | Per-run rate |
+|---|---|---|---|---|
+| Reference | Smog | 0.7 / Blorp | 10 Blorps | **7.0** |
+| Process A | Smog | 0.4 / Zing | 2 Zings | **0.8** |
+| Process A | Aqua | 2.0 / Zing | 2 Zings | **4.0** |
+| Process B | Smog | 0.2 / Flum | 4 Flums | **0.8** |
+| Process B | Haze | 0.5 / Flum | 4 Flums | **2.0** |
 
 $$
 B = \begin{pmatrix}
-0.7 & 0.4 & 0.2 \\
-0   & 0   & 0.5 \\
-0   & 2.0 & 0
+7.0 & 0.8 & 0.8 \\
+0   & 0   & 2.0 \\
+0   & 4.0 & 0
 \end{pmatrix}
 \quad
 \begin{array}{l}
@@ -238,31 +252,31 @@ Columns left to right: Reference process, Process A, Process B.
 
 ---
 
-## Step 4 — Compute the inventory vector g = B · s
+## Step 4 — Compute the inventory vector R = B · s
 
 Multiply each row of B by the scaling vector s:
 
 $$
-g[\text{Smog}] = (0.7 \times 10.0) + (0.4 \times 15.0) + (0.2 \times 25.0) = 7.0 + 6.0 + 5.0 = \mathbf{18.0}
+R[\text{Smog}] = (7.0 \times 1.0) + (0.8 \times 15.0) + (0.8 \times 25.0) = 7.0 + 12.0 + 20.0 = \mathbf{39.0}
 $$
 
 $$
-g[\text{Haze}] = (0 \times 10.0) + (0 \times 15.0) + (0.5 \times 25.0) = 0 + 0 + 12.5 = \mathbf{12.5}
+R[\text{Haze}] = (0 \times 1.0) + (0 \times 15.0) + (2.0 \times 25.0) = 0 + 0 + 50.0 = \mathbf{50.0}
 $$
 
 $$
-g[\text{Aqua}] = (0 \times 10.0) + (2.0 \times 15.0) + (0 \times 25.0) = 0 + 30.0 + 0 = \mathbf{30.0}
+R[\text{Aqua}] = (0 \times 1.0) + (4.0 \times 15.0) + (0 \times 25.0) = 0 + 60.0 + 0 = \mathbf{60.0}
 $$
 
 $$
-g = \begin{pmatrix} 18.0 \\ 12.5 \\ 30.0 \end{pmatrix}
+R = \begin{pmatrix} 39.0 \\ 50.0 \\ 60.0 \end{pmatrix}
 $$
 
 This is the **life cycle inventory** — total elementary flows attributable to producing 10 Blorps, aggregated across all processes.
 
 ---
 
-## Step 5 — Apply the characterization matrix C, get impact vector h = C · g
+## Step 5 — Apply the characterization matrix C, get impact vector h = C · R
 
 The characterization matrix **C** converts elementary flows into impact scores using scientific factors. Both emissions and extractions contribute positively — no sign distinction here either.
 
@@ -285,15 +299,15 @@ C = \begin{pmatrix}
 $$
 
 $$
-h[\text{Murk}] = (1.0 \times 18.0) + (3.0 \times 12.5) + (0 \times 30.0) = 18.0 + 37.5 + 0 = \mathbf{55.5}
+h[\text{Murk}] = (1.0 \times 39.0) + (3.0 \times 50.0) + (0 \times 60.0) = 39.0 + 150.0 + 0 = \mathbf{189.0}
 $$
 
 $$
-h[\text{Depletion}] = (0 \times 18.0) + (0 \times 12.5) + (0.8 \times 30.0) = 0 + 0 + 24.0 = \mathbf{24.0}
+h[\text{Depletion}] = (0 \times 39.0) + (0 \times 50.0) + (0.8 \times 60.0) = 0 + 0 + 48.0 = \mathbf{48.0}
 $$
 
 $$
-h = \begin{pmatrix} 55.5 \\ 24.0 \end{pmatrix}
+h = \begin{pmatrix} 189.0 \\ 48.0 \end{pmatrix}
 $$
 
 ---
@@ -310,9 +324,9 @@ $$
 | $A$ | Technology matrix | $p \times n$ (products × processes) |
 | $s = A^{-1}f$ | Scaling vector | $n \times 1$ (processes) |
 | $B$ | Intervention matrix | $e \times n$ (elementary flows × processes) |
-| $g = Bs$ | Inventory vector | $e \times 1$ (elementary flows) |
+| $R = Bs$ | Inventory vector | $e \times 1$ (elementary flows) |
 | $C$ | Characterization matrix | $k \times e$ (impact categories × elementary flows) |
-| $h = Cg$ | Impact vector | $k \times 1$ (impact categories) |
+| $h = CR$ | Impact vector | $k \times 1$ (impact categories) |
 
 In real LCA software (SimaPro, OpenLCA), **A** is drawn from a background database like ecoinvent and can have thousands of rows and columns — but the matrix structure and the $h = C \cdot B \cdot A^{-1} \cdot f$ equation are identical.
 
@@ -326,8 +340,8 @@ In real LCA software (SimaPro, OpenLCA), **A** is drawn from a background databa
 | $s_\text{Ref}$ | 1.0 run |
 | $s_A$ | 15.0 runs |
 | $s_B$ | 25.0 runs |
-| Inventory: Smog | 18.0 |
-| Inventory: Haze | 12.5 |
-| Inventory: Aqua | 30.0 |
-| **Impact: Murk** | **55.5** |
-| **Impact: Depletion** | **24.0** |
+| Inventory: Smog | 39.0 |
+| Inventory: Haze | 50.0 |
+| Inventory: Aqua | 60.0 |
+| **Impact: Murk** | **189.0** |
+| **Impact: Depletion** | **48.0** |

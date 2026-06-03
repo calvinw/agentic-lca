@@ -13,13 +13,14 @@ description: >
 
 ## How this skill works
 
-The standard workflow produces three files:
+The standard workflow produces four files:
 
 | File | Purpose |
 |---|---|
 | `recipe_card.md` | YAML spec: defines the system (edit this) |
 | `lca_results.md` | Generated report: matrices, scaling vector, results |
-| `product_graph.png` | Visual diagram of the supply chain |
+| `product_graph_scaled.svg` | Scaled diagram — supply chain map with amounts and scaling factors |
+| `product_graph_structure.svg` | Structure diagram — supply chain map with flow names only |
 
 Run the analysis with:
 ```bash
@@ -90,14 +91,19 @@ products:
   - { name: <flow name>, unit: <symbol> }
 
 # Elementary flows crossing the biosphere boundary.
+#   emissions  → substances released to nature (e.g. CO₂ to air)
+#   resources  → substances extracted from nature (e.g. water, crude oil)
 elementary_flows:
   emissions:
+    - { name: <flow name>, unit: <symbol> }
+  resources:
     - { name: <flow name>, unit: <symbol> }
 
 # Unit processes.
 # reference_output  → the product this process "sells" (diagonal of A)
 # inputs            → product flows consumed (negative off-diagonal of A)
 # emissions         → biosphere outputs (entries of B)
+# resources         → biosphere inputs (extracted from nature)
 processes:
   - name: <process name>
     reference_output: { flow: <product name>, amount: <number> }
@@ -105,6 +111,8 @@ processes:
       - { flow: <product name>, amount: <number> }
     emissions:
       - { flow: <emission name>, amount: <number> }
+    resources:
+      - { flow: <resource name>, amount: <number> }
 
 # Must match one of the process names above.
 reference_process: <process name that delivers the functional unit>

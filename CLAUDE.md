@@ -98,7 +98,8 @@ Use these plain-English explanations when you run these common commands:
 
 | Command | What to say before running it |
 |---|---|
-| `python3 lca_scripts/lca_analysis.py ...` | "I'm going to run the LCA analysis now. This is like pressing 'Calculate' — the computer will read the supply chain file, send it to the openLCA software, do the maths, and save a report and diagram." |
+| `python3 lca_scripts/lca_analysis.py ...` | "I'm going to run the LCA analysis now. This is like pressing 'Calculate' — the computer will read the supply chain file, send it to the openLCA software, do the maths, and save a report and two supply chain diagrams." |
+| `python3 lca_scripts/lca_svg.py ...` | "I'm going to generate a supply chain diagram from the recipe card. This creates an SVG image — a picture you can open in VS Code — showing how the processes connect." |
 | `curl -s http://localhost:8080/api/version` | "I'm going to check whether the openLCA software is switched on and ready. Think of it like knocking on a door — if it answers, we know it's running." |
 | `ls` or `tree` | "I'm going to look at what files and folders exist here, like opening a drawer in a filing cabinet to see what's inside." |
 | `git status` | "I'm going to check which files have been changed or added since the last time we saved our work to the project history." |
@@ -117,14 +118,16 @@ If a command produces output, go through it line by line (or group by group) and
 **Bad:**
 ```
 lca_results.md written.
-product_graph.png saved.
+product_graph_scaled.svg saved.
+product_graph_structure.svg saved.
 ```
 > Done.
 
 **Good:**
 > The command finished and reported two things:
 > - **lca_results.md written** — this means the written report (the one with all the numbers and tables) has been saved into the cotton shirt folder. You can open it in VS Code to read it.
-> - **product_graph.png saved** — this means the diagram showing the supply chain has also been saved. Click on it in the file explorer on the left to see the visual.
+> - **product_graph_scaled.svg saved** — this is the scaled diagram (with amounts and scaling factors), saved as a vector image you can open in VS Code.
+> - **product_graph_structure.svg saved** — this is the structure diagram (flow names only), also saved as a vector image.
 > Everything went as expected — no errors.
 
 ---
@@ -147,7 +150,7 @@ product_graph.png saved.
 > Each analysis is isolated in its own subdirectory under `lca_analysis/` with its own `recipe_card.md` spec and generated `lca_results.md` output.
 
 **Good (student-friendly):**
-> Think of the `lca_analysis` folder like a filing cabinet. Inside it, each product you study gets its own drawer — for example, `coffee` or `cotton_shirt`. Inside each drawer, there are exactly two documents: the recipe card (called `recipe_card.md`) where you describe the product, and the report (called `lca_results.md`) where the results are saved after the analysis runs. This way, studying a new product never overwrites the work you did on a previous one.
+> Think of the `lca_analysis` folder like a filing cabinet. Inside it, each product you study gets its own drawer — for example, `coffee` or `cotton_shirt`. Inside each drawer, there are four documents: the recipe card (`recipe_card.md`) where you describe the product, the report (`lca_results.md`) with the calculation results, and two supply chain diagrams (`product_graph_scaled.svg` and `product_graph_structure.svg`). This way, studying a new product never overwrites the work you did on a previous one.
 
 ### Example 3 — Explaining a result
 
@@ -366,7 +369,7 @@ Project-level OpenCode configuration (project root, highest precedence).
 ### `.devcontainer/devcontainer.json`
 Dev container configuration.
 - References container image: `ghcr.io/calvinw/ai-course-devcontainer:latest`
-- Runs setup on creation: `setup-env.sh && install-mcps.sh && setup-skills.sh && skillshare install github.com/anthropics/skills/skill-creator && sync-skills.sh`
+- Runs setup on creation: `setup-env.sh && install-mcps.sh && install-datascience.sh && setup-skills.sh && skillshare install github.com/anthropics/skills/skill-creator && (sync-skills.sh || true) && pip install olca-ipc olca-schema --break-system-packages`
 - Declares secrets for GitHub Codespaces: `STITCH_API_KEY`
 
 ---
@@ -376,9 +379,11 @@ Dev container configuration.
 1. **First container creation** — Runs automatically:
    - `setup-env.sh` — SSH key + PATH setup
    - `install-mcps.sh` — Register MCPs from `configs/mcp-servers.conf`
+   - `install-datascience.sh` — Install Python data science tools
    - `setup-skills.sh` — Initialize skills infrastructure
    - `skillshare install github.com/anthropics/skills/skill-creator` — Install skill-creator tool
    - `sync-skills.sh` — Deploy skills to all agents
+   - `pip install olca-ipc olca-schema` — Install openLCA Python client
 
 2. **Adding new MCPs** — Edit `configs/mcp-servers.conf`, then:
    ```

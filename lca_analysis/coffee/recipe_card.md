@@ -29,6 +29,8 @@ products:
 elementary_flows:
   emissions:
     - { name: CO2 to air, unit: kg }
+  resources:
+    - { name: Water, unit: L }
 
 processes:
   - name: P1 — Make coffee
@@ -43,6 +45,8 @@ processes:
 
   - name: P3 — Burn coal
     reference_output: { flow: Electricity,  amount: 1.0 }
+    resources:
+      - { flow: Water, amount: 0.5 }
     emissions:
       - { flow: CO2 to air,   amount: 1.0 }
 

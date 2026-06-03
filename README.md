@@ -30,7 +30,8 @@ Each product you study gets its own folder inside `lca_analysis/`. Every folder 
 |---|---|
 | `recipe_card.md` | The **recipe card** — you describe the product and its supply chain here |
 | `lca_results.md` | The **report** — automatically generated after the analysis runs |
-| `product_graph.png` | The **diagram** — a visual map of the supply chain |
+| `product_graph_scaled.svg` | The **scaled diagram** — supply chain map with amounts and scaling factors |
+| `product_graph_structure.svg` | The **structure diagram** — supply chain map with flow names only |
 
 Current analyses:
 ```
@@ -65,7 +66,7 @@ Every unit of measurement used anywhere in the recipe card — kilograms, kilowa
 The intermediate goods that flow between steps in the supply chain — things that are made by one process and consumed by another. For a shirt, this would include raw cotton, yarn, fabric, and electricity. These stay *inside* the system boundary.
 
 ### `elementary_flows`
-The flows that cross the boundary between the supply chain and the natural world — substances released *to* nature, such as CO₂ to air or wastewater to rivers.
+The flows that cross the boundary between the supply chain and the natural world — both substances released *to* nature (emissions such as CO₂ to air) and substances extracted *from* nature (resources such as water or crude oil).
 
 ### `processes`
 Each step in the supply chain. For every process you describe:
@@ -108,6 +109,8 @@ products:
 elementary_flows:
   emissions:
     - { name: CO2 to air, unit: kg }
+  resources:
+    # (none in this example — emissions only)
 
 processes:
   - name: P1 — Grow cotton
