@@ -16,7 +16,7 @@ echo "=== 3/7: Installing Python packages ==="
 pip install numpy pandas matplotlib seaborn requests PyYAML olca-ipc olca-schema python-pptx openpyxl --break-system-packages
 
 echo "=== 4/7: Installing Pandoc (for converting reports) ==="
-apt-get update -qq && apt-get install -y -qq pandoc && rm -rf /var/lib/apt/lists/*
+apt-get update -qq && apt-get install -y -qq pandoc graphviz && rm -rf /var/lib/apt/lists/*
 
 echo "=== 5/7: Setting up skillshare CLI ==="
 setup-skills.sh
