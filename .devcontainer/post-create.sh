@@ -22,7 +22,7 @@ echo "=== 5/7: Setting up skillshare CLI ==="
 setup-skills.sh
 
 echo "=== 6/7: Installing skill-creator skill ==="
-skillshare install github.com/anthropics/skills/skill-creator --force
+skillshare install github.com/anthropics/skills/skill-creator --force --all
 
 echo "=== 7/7: Syncing skills to all AI tools ==="
 sync-skills.sh || true
