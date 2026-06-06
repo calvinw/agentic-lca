@@ -2,8 +2,9 @@
   "managed": {
     "github-pages": "symlink",
     "hello-world": "symlink",
+    "product-graph-svg": "symlink",
     "run-lca": "symlink",
     "skill-creator": "symlink"
   },
-  "updated_at": "2026-06-03T03:57:13.136347675Z"
+  "updated_at": "2026-06-06T00:07:27.484048584Z"
 }

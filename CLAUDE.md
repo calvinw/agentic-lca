@@ -213,6 +213,64 @@ If it has never been set up before, use `bash setup_olca.sh` instead and explain
 
 ---
 
+## The `product_graphs/` folder — a testing workshop for supply chain diagrams
+
+The `product_graphs/` folder is a dedicated space for experimenting with the
+`lca_svg.py` script (the tool that draws supply chain diagrams). Think of it
+like a test kitchen: you can cook up any imaginary product or supply chain,
+no matter how simple or weird, and immediately see what the diagram looks
+like.
+
+### What is in there
+
+Two groups of files live side by side:
+
+1. **Recipe cards** — named `<product>_recipe_card.md`. These are copies of
+   the real recipe cards from `lca_analysis/`, plus extra experimental ones
+   with made-up products and unusual combinations of emissions and resource
+   extractions (e.g. 7 different pollutants on a 3-node chain).
+
+2. **SVG diagrams** — two per recipe card:
+   - `<product>_product_graph_scaled.svg` — shows amounts and scaling factors
+   - `<product>_product_graph_structure.svg` — shows flow names only
+
+### What you should do when asked about this folder
+
+When a student asks about `product_graphs/` or wants to test `lca_svg.py`,
+you should:
+
+1. Explain the folder is a safe sandbox — nothing here is tied to the
+   real openLCA server, so there is no risk of breaking anything.
+
+2. Invent hypothetical recipe cards on the spot to demonstrate specific
+   features of the SVG script. For example:
+   - One node, one emission (simplest possible diagram)
+   - Many emissions on a single node (tests arrow stacking)
+   - Many extractions on a single node (tests green arrow spacing)
+   - Convergent supply chains (two suppliers feeding one assembler)
+   - Divergent supply chains (one supplier feeding two downstream processes)
+   - Chains where the reference process is not the first one listed
+   - Very wide or very tall layouts
+
+3. Generate both the scaled and structure SVGs so the student can compare.
+
+4. If the student is curious about the visual style, explain that the box
+   width (`BOX_W`) and arrow spacing (`EMIT_OFFSET`) are just numbers at
+   the top of `lca_svg.py` that can be changed to make the diagram look
+   however you like.
+
+### Naming convention
+
+Every SVG output should follow this pattern so it is easy to find:
+
+- `python3 lca_scripts/lca_svg.py product_graphs/<product>_recipe_card.md product_graphs/<product>_product_graph_scaled.svg`
+- `python3 lca_scripts/lca_svg.py product_graphs/<product>_recipe_card.md product_graphs/<product>_product_graph_structure.svg --structure`
+
+Do not rely on the default output path (which strips `.md` to `.svg`) —
+always pass the output path explicitly.
+
+---
+
 # AI Agentic Tools Dev Container Guide
 
 This dev container is built from [calvinw/ai-agentic-tools](https://github.com/calvinw/ai-agentic-tools) and includes a comprehensive toolkit for AI-assisted development.

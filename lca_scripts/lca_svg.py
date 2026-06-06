@@ -56,7 +56,7 @@ FONT          = 'Helvetica,Arial,sans-serif'
 BOX_W, BOX_H  = 165, 54
 FU_W,  FU_H   = 165, 66
 MARGIN        = 60          # px around the graphviz bounding box
-ELEM_ARM      = 60          # length of elementary flow arrows
+ELEM_ARM      = 30          # length of elementary flow arrows
 EMIT_OFFSET   = 45          # ±px horizontal offset for multiple emissions
 TITLE_HEIGHT  = 38          # px reserved for title above the graph
 
@@ -300,7 +300,8 @@ def svg_rect(rx, ry, rw, rh, fill, corner=8):
 
 # ── Elementary flow injection ──────────────────────────────────────────────────
 def elementary_flows(recipe: dict, nodes: dict, flip_y: float,
-                     show_quantities: bool = True) -> list[str]:
+                     show_quantities: bool = True,
+                     scaling: dict = {}) -> list[str]:
     """
     Generate SVG elements for biosphere inputs (green, top) and
     emissions (red, bottom) for every process node.
@@ -317,17 +318,18 @@ def elementary_flows(recipe: dict, nodes: dict, flip_y: float,
         cy = flip_y - cy
         box_top = cy - nh / 2
         box_bot = cy + nh / 2
+        proc_scaling = scaling.get(name, 1.0)
 
         # ── Resources / biosphere inputs (green arrows, from above into top of box) ──
         resources = p.get('resources', [])
         n_res = len(resources)
         for i, res in enumerate(resources):
             offset = (i - (n_res - 1) / 2) * EMIT_OFFSET
-            rx = cx + offset
+            rx = cx + offset + EMIT_OFFSET / 2
             start_y = box_top - ELEM_ARM      # arrow starts above box
             from_nature_y = start_y - 10      # "from Nature" label above arrow start
 
-            lx, anchor = rx + 5, 'start'
+            lx, anchor = rx - 5, 'end'
 
             els.append(svg_text(rx, from_nature_y, 'from Nature',
                                 anchor='start', size=9, fill=COL_GREEN, baseline='auto',
@@ -339,8 +341,9 @@ def elementary_flows(recipe: dict, nodes: dict, flip_y: float,
                                 res['flow'], anchor=anchor, size=11, fill=COL_GREEN,
                                 weight='bold'))
             if show_quantities:
+                scaled_amount = res['amount'] * proc_scaling
                 els.append(svg_text(lx, shaft_mid + 14,
-                                    f"{res['amount']} {_res_unit(recipe, res['flow'])}",
+                                    f"{scaled_amount:.4g} {_res_unit(recipe, res['flow'])}",
                                     anchor=anchor, size=11, fill=COL_GREEN,
                                     weight='bold'))
 
@@ -349,11 +352,11 @@ def elementary_flows(recipe: dict, nodes: dict, flip_y: float,
         n_em = len(emissions)
         for i, em in enumerate(emissions):
             offset = (i - (n_em - 1) / 2) * EMIT_OFFSET
-            ex = cx + offset
+            ex = cx + offset - EMIT_OFFSET / 2
             end_y = box_bot + ELEM_ARM
             to_air_y = end_y + 12
 
-            lx, anchor = ex + 5, 'start'
+            lx, anchor = ex - 5, 'end'
 
             els.append(svg_line(ex, box_bot, ex, end_y,
                                 COL_RED, marker='arr-red'))
@@ -363,8 +366,9 @@ def elementary_flows(recipe: dict, nodes: dict, flip_y: float,
                                 em['flow'].replace(' to air', ''), anchor=anchor, size=11, fill=COL_RED,
                                 weight='bold'))
             if show_quantities:
+                scaled_amount = em['amount'] * proc_scaling
                 els.append(svg_text(lx, mid_y + 14,
-                                    f"{em['amount']} {unit}", anchor=anchor, size=11, fill=COL_RED,
+                                    f"{scaled_amount:.4g} {unit}", anchor=anchor, size=11, fill=COL_RED,
                                     weight='bold'))
             els.append(svg_text(ex, to_air_y, 'to Air',
                                 anchor='start', size=9, fill=COL_RED, baseline='auto',
@@ -424,7 +428,8 @@ def process_boxes(recipe: dict, nodes: dict, flip_y: float,
 
 # ── Technosphere edge rendering ────────────────────────────────────────────────
 def tech_edges(edges: list, flip_y: float, recipe: dict,
-               nodes: dict, show_quantities: bool = True) -> list[str]:
+               nodes: dict, show_quantities: bool = True,
+               scaling: dict = {}) -> list[str]:
     """
     Draw edges from source box right-edge to dest box left-edge.
     We ignore dot spline control points (they don't clip to box boundaries
@@ -433,6 +438,7 @@ def tech_edges(edges: list, flip_y: float, recipe: dict,
     Label is placed at the midpoint of the line.
     """
     els = []
+    ref_proc = recipe['reference_process']
     for src, dst, pts, label, lx, ly in edges:
         if not pts:
             continue
@@ -460,7 +466,9 @@ def tech_edges(edges: list, flip_y: float, recipe: dict,
                 amount = _edge_amount(recipe, src, dst, label)
                 unit   = _flow_unit(recipe, label)
                 if amount is not None:
-                    lbl = f"{label}\n{amount} {unit}"
+                    dst_scale = scaling.get(dst, 1.0) if dst != 'Functional Unit' else scaling.get(ref_proc, 1.0)
+                    scaled = amount * dst_scale
+                    lbl = f"{label}\n{scaled:.4g} {unit}"
                     els.append(svg_text(mx, my - 14, lbl,
                                         size=11, fill='#444', baseline='auto',
                                         weight='bold'))
@@ -518,7 +526,7 @@ def generate(recipe_path: str, out_path: str, show_quantities: bool = True):
     svg_parts.append('<!--TITLE-->')
 
     svg_parts.extend(elementary_flows(recipe, shifted_nodes, flip_y,
-                                      show_quantities))
+                                      show_quantities, scaling))
 
     shifted_edges = []
     for src, dst, pts, label, lx, ly in edges:
@@ -528,7 +536,7 @@ def generate(recipe_path: str, out_path: str, show_quantities: bool = True):
         shifted_edges.append((src, dst, spts, label, slx, sly))
 
     svg_parts.extend(tech_edges(shifted_edges, flip_y, recipe, shifted_nodes,
-                                show_quantities))
+                                show_quantities, scaling))
     svg_parts.extend(process_boxes(recipe, shifted_nodes, flip_y, scaling,
                                    show_quantities))
     svg_parts.append('</svg>')

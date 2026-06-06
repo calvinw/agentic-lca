@@ -1,0 +1,55 @@
+---
+name: "Experiment 1 — 7 emissions"
+goal: "3-node linear chain with emissions spread across all nodes — 3 on P3, 2 on P2, 2 on P1."
+
+functional_unit:
+  description: One finished Widget
+  amount: 1.0
+  unit: widget
+
+units:
+  widget: Widget count
+  part:   Part count
+  kg:     Mass
+
+products:
+  - { name: Widget,   unit: widget }
+  - { name: Part,     unit: part   }
+  - { name: Material, unit: kg    }
+
+elementary_flows:
+  emissions:
+    - { name: CO2 to air,  unit: kg }
+    - { name: SO2 to air,  unit: kg }
+    - { name: NOx to air,  unit: kg }
+    - { name: CH4 to air,  unit: kg }
+    - { name: CO to air,   unit: kg }
+    - { name: PM to air,   unit: kg }
+    - { name: N2O to air,  unit: kg }
+
+processes:
+  - name: "P1 — Assemble Widget"
+    reference_output: { flow: Widget, amount: 1.0 }
+    inputs:
+      - { flow: Part, amount: 2.0 }
+    emissions:
+      - { flow: CO2 to air, amount: 0.5 }
+      - { flow: SO2 to air, amount: 0.1 }
+
+  - name: "P2 — Make Part"
+    reference_output: { flow: Part, amount: 1.0 }
+    inputs:
+      - { flow: Material, amount: 0.5 }
+    emissions:
+      - { flow: NOx to air, amount: 0.3 }
+      - { flow: CO to air,  amount: 0.2 }
+
+  - name: "P3 — Extract Material"
+    reference_output: { flow: Material, amount: 1.0 }
+    emissions:
+      - { flow: CH4 to air, amount: 2.0 }
+      - { flow: PM to air,  amount: 0.8 }
+      - { flow: N2O to air, amount: 0.4 }
+
+reference_process: "P1 — Assemble Widget"
+---
