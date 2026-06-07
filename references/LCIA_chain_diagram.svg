@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="990" height="415" viewBox="0 0 990 415">
+<defs>
+  <marker id="ah" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+    <polygon points="0 0,8 3,0 6" fill="#374151"/>
+  </marker>
+</defs>
+<rect width="990" height="415" fill="#ffffff"/>
+<rect x="0" y="50" width="990" height="90" fill="#eff6ff"/>
+<rect x="0" y="200" width="990" height="90" fill="#f0fdf4"/>
+<rect x="0" y="336" width="990" height="44" fill="#fefce8"/>
+<text x="45" y="22" font-family="Arial, Helvetica, sans-serif" font-size="9" text-anchor="middle" font-weight="bold" fill="#6b7280">INVENTORY</text>
+<text x="156" y="22" font-family="Arial, Helvetica, sans-serif" font-size="9" text-anchor="middle" font-weight="bold" fill="#6b7280">CLASSIFICATION</text>
+<text x="307" y="22" font-family="Arial, Helvetica, sans-serif" font-size="9" text-anchor="middle" font-weight="bold" fill="#6b7280">CHARACTERISATION</text>
+<text x="514" y="22" font-family="Arial, Helvetica, sans-serif" font-size="9" text-anchor="middle" font-weight="bold" fill="#6b7280">DAMAGE MODELLING</text>
+<text x="695" y="22" font-family="Arial, Helvetica, sans-serif" font-size="9" text-anchor="middle" font-weight="bold" fill="#6b7280">ENDPOINT</text>
+<line x1="0" y1="28" x2="990" y2="28" stroke="#6b7280" stroke-width="0.5" opacity="0.4"/>
+<text x="5" y="76" font-family="Arial, Helvetica, sans-serif" font-size="12" text-anchor="start" font-weight="normal" fill="#111827">1 kg CO&#x2082;</text>
+<line x1="83" y1="72" x2="93" y2="72" stroke="#374151" stroke-width="1.5" marker-end="url(#ah)"/>
+<rect x="95" y="59" width="122" height="26" rx="4" fill="#dbeafe" stroke="#4b5563" stroke-width="1.5"/>
+<text x="156" y="76" font-family="Arial, Helvetica, sans-serif" font-size="11" text-anchor="middle" font-weight="normal" fill="#111827">Climate change</text>
+<line x1="217" y1="72" x2="228" y2="72" stroke="#374151" stroke-width="1.5" marker-end="url(#ah)"/>
+<rect x="230" y="59" width="155" height="26" rx="4" fill="#dcfce7" stroke="#4b5563" stroke-width="1.5"/>
+<text x="307" y="76" font-family="Arial, Helvetica, sans-serif" font-size="11" text-anchor="middle" font-weight="normal" fill="#111827">&#xD7; 1 GWP</text>
+<line x1="385" y1="72" x2="400" y2="72" stroke="#374151" stroke-width="1.5" />
+<text x="5" y="122" font-family="Arial, Helvetica, sans-serif" font-size="12" text-anchor="start" font-weight="normal" fill="#111827">1 kg CH&#x2084;</text>
+<line x1="83" y1="118" x2="93" y2="118" stroke="#374151" stroke-width="1.5" marker-end="url(#ah)"/>
+<rect x="95" y="105" width="122" height="26" rx="4" fill="#dbeafe" stroke="#4b5563" stroke-width="1.5"/>
+<text x="156" y="122" font-family="Arial, Helvetica, sans-serif" font-size="11" text-anchor="middle" font-weight="normal" fill="#111827">Climate change</text>
+<line x1="217" y1="118" x2="228" y2="118" stroke="#374151" stroke-width="1.5" marker-end="url(#ah)"/>
+<rect x="230" y="105" width="155" height="26" rx="4" fill="#dcfce7" stroke="#4b5563" stroke-width="1.5"/>
+<text x="307" y="122" font-family="Arial, Helvetica, sans-serif" font-size="11" text-anchor="middle" font-weight="normal" fill="#111827">&#xD7; 28 GWP</text>
+<line x1="385" y1="118" x2="400" y2="118" stroke="#374151" stroke-width="1.5" />
+<line x1="400" y1="72" x2="400" y2="118" stroke="#374151" stroke-width="1.5"/>
+<circle cx="400" cy="72" r="3" fill="#374151"/>
+<circle cx="400" cy="118" r="3" fill="#374151"/>
+<line x1="400" y1="72" x2="418" y2="72" stroke="#374151" stroke-width="1.5" marker-end="url(#ah)"/>
+<rect x="420" y="59" width="188" height="26" rx="4" fill="#fef9c3" stroke="#4b5563" stroke-width="1.5"/>
+<text x="514" y="76" font-family="Arial, Helvetica, sans-serif" font-size="11" text-anchor="middle" font-weight="normal" fill="#111827">&#xD7; 2.4&#xD7;10&#x207B;&#x2076; DALY/kg</text>
+<line x1="608" y1="72" x2="622" y2="72" stroke="#374151" stroke-width="1.5" marker-end="url(#ah)"/>
+<text x="626" y="76" font-family="Arial, Helvetica, sans-serif" font-size="11" text-anchor="start" font-weight="bold" fill="#1e40af">Human health (DALY)</text>
+<line x1="400" y1="118" x2="418" y2="118" stroke="#374151" stroke-width="1.5" marker-end="url(#ah)"/>
+<rect x="420" y="105" width="188" height="26" rx="4" fill="#fef9c3" stroke="#4b5563" stroke-width="1.5"/>
+<text x="514" y="122" font-family="Arial, Helvetica, sans-serif" font-size="11" text-anchor="middle" font-weight="normal" fill="#111827">&#xD7; 2.8&#xD7;10&#x207B;&#x2077; species-yr/kg</text>
+<line x1="608" y1="118" x2="622" y2="118" stroke="#374151" stroke-width="1.5" marker-end="url(#ah)"/>
+<text x="626" y="122" font-family="Arial, Helvetica, sans-serif" font-size="11" text-anchor="start" font-weight="bold" fill="#166534">Ecosystems (species-yr)</text>
+<text x="5" y="226" font-family="Arial, Helvetica, sans-serif" font-size="12" text-anchor="start" font-weight="normal" fill="#111827">1 kg SO&#x2082;</text>
+<line x1="83" y1="222" x2="93" y2="222" stroke="#374151" stroke-width="1.5" marker-end="url(#ah)"/>
+<rect x="95" y="209" width="122" height="26" rx="4" fill="#dbeafe" stroke="#4b5563" stroke-width="1.5"/>
+<text x="156" y="226" font-family="Arial, Helvetica, sans-serif" font-size="11" text-anchor="middle" font-weight="normal" fill="#111827">Acidification</text>
+<line x1="217" y1="222" x2="228" y2="222" stroke="#374151" stroke-width="1.5" marker-end="url(#ah)"/>
+<rect x="230" y="209" width="155" height="26" rx="4" fill="#dcfce7" stroke="#4b5563" stroke-width="1.5"/>
+<text x="307" y="226" font-family="Arial, Helvetica, sans-serif" font-size="11" text-anchor="middle" font-weight="normal" fill="#111827">&#xD7; 1.2 kg SO&#x2082;-eq</text>
+<line x1="385" y1="222" x2="400" y2="222" stroke="#374151" stroke-width="1.5" />
+<text x="5" y="272" font-family="Arial, Helvetica, sans-serif" font-size="12" text-anchor="start" font-weight="normal" fill="#111827">1 kg NO&#x2093;</text>
+<line x1="83" y1="268" x2="93" y2="268" stroke="#374151" stroke-width="1.5" marker-end="url(#ah)"/>
+<rect x="95" y="255" width="122" height="26" rx="4" fill="#dbeafe" stroke="#4b5563" stroke-width="1.5"/>
+<text x="156" y="272" font-family="Arial, Helvetica, sans-serif" font-size="11" text-anchor="middle" font-weight="normal" fill="#111827">Acidification</text>
+<line x1="217" y1="268" x2="228" y2="268" stroke="#374151" stroke-width="1.5" marker-end="url(#ah)"/>
+<rect x="230" y="255" width="155" height="26" rx="4" fill="#dcfce7" stroke="#4b5563" stroke-width="1.5"/>
+<text x="307" y="272" font-family="Arial, Helvetica, sans-serif" font-size="11" text-anchor="middle" font-weight="normal" fill="#111827">&#xD7; 0.5 kg SO&#x2082;-eq</text>
+<line x1="385" y1="268" x2="400" y2="268" stroke="#374151" stroke-width="1.5" />
+<line x1="400" y1="222" x2="400" y2="268" stroke="#374151" stroke-width="1.5"/>
+<circle cx="400" cy="222" r="3" fill="#374151"/>
+<circle cx="400" cy="268" r="3" fill="#374151"/>
+<circle cx="400" cy="245" r="3" fill="#374151"/>
+<line x1="400" y1="245" x2="418" y2="245" stroke="#374151" stroke-width="1.5" marker-end="url(#ah)"/>
+<rect x="420" y="232" width="188" height="26" rx="4" fill="#fef9c3" stroke="#4b5563" stroke-width="1.5"/>
+<text x="514" y="249" font-family="Arial, Helvetica, sans-serif" font-size="11" text-anchor="middle" font-weight="normal" fill="#111827">&#xD7; 1.2&#xD7;10&#x207B;&#x2075; DALY/kg</text>
+<line x1="608" y1="245" x2="622" y2="245" stroke="#374151" stroke-width="1.5" marker-end="url(#ah)"/>
+<text x="626" y="249" font-family="Arial, Helvetica, sans-serif" font-size="11" text-anchor="start" font-weight="bold" fill="#1e40af">Human health (DALY)</text>
+<text x="5" y="362" font-family="Arial, Helvetica, sans-serif" font-size="12" text-anchor="start" font-weight="normal" fill="#111827">1 kg NO&#x2093; *</text>
+<line x1="83" y1="358" x2="93" y2="358" stroke="#374151" stroke-width="1.5" marker-end="url(#ah)"/>
+<rect x="95" y="345" width="122" height="26" rx="4" fill="#dbeafe" stroke="#4b5563" stroke-width="1.5"/>
+<text x="156" y="362" font-family="Arial, Helvetica, sans-serif" font-size="11" text-anchor="middle" font-weight="normal" fill="#111827">Eutrophication</text>
+<line x1="217" y1="358" x2="228" y2="358" stroke="#374151" stroke-width="1.5" marker-end="url(#ah)"/>
+<rect x="230" y="345" width="155" height="26" rx="4" fill="#dcfce7" stroke="#4b5563" stroke-width="1.5"/>
+<text x="307" y="362" font-family="Arial, Helvetica, sans-serif" font-size="11" text-anchor="middle" font-weight="normal" fill="#111827">&#xD7; 0.13 kg PO&#x2084;-eq</text>
+<line x1="385" y1="358" x2="418" y2="358" stroke="#374151" stroke-width="1.5" marker-end="url(#ah)"/>
+<rect x="420" y="345" width="188" height="26" rx="4" fill="#fef9c3" stroke="#4b5563" stroke-width="1.5"/>
+<text x="514" y="362" font-family="Arial, Helvetica, sans-serif" font-size="11" text-anchor="middle" font-weight="normal" fill="#111827">&#xD7; 1.9&#xD7;10&#x207B;&#x2075; species-yr/kg</text>
+<line x1="608" y1="358" x2="622" y2="358" stroke="#374151" stroke-width="1.5" marker-end="url(#ah)"/>
+<text x="626" y="362" font-family="Arial, Helvetica, sans-serif" font-size="11" text-anchor="start" font-weight="bold" fill="#166534">Ecosystems (species-yr)</text>
+<text x="5" y="411" font-family="Arial, Helvetica, sans-serif" font-size="9" text-anchor="start" font-weight="normal" fill="#6b7280">* Same NO&#x2093; emission appears in both the Acidification and Eutrophication rows — one substance, two separate damage chains.</text>
+</svg>

@@ -1,0 +1,90 @@
+---
+# ─────────────────────────────────────────────────────────────
+# LCA Analysis Specification — ILLUSTRATIVE NUMBERS
+# Based on: Jolliet et al. (1994) Agriculture, Ecosystems and Environment 49, 253–266
+# and Jolliet et al. (2016) Environmental Life Cycle Assessment textbook, Chapter 3
+# ─────────────────────────────────────────────────────────────
+
+name: Polystyrene Packing Peanuts — 1 kg
+goal: >
+  Illustrative supply chain for 1 kg of expanded polystyrene (EPS) packing peanuts.
+  Key fact: 1 kg of polystyrene requires ~2 kg of crude oil — 1 kg becomes the plastic
+  itself, and 1 kg is burned for the energy needed to manufacture it.
+  Numbers are illustrative approximations based on Jolliet et al. (1994).
+
+functional_unit:
+  description: 1 kg of expanded polystyrene packing peanuts
+  amount: 1.0
+  unit: kg
+
+units:
+  kg: Mass
+
+products:
+  - { name: Crude oil,       unit: kg }
+  - { name: Polystyrene,     unit: kg }
+  - { name: Packing peanuts, unit: kg }
+
+elementary_flows:
+  emissions:
+    - { name: CO2 to air, unit: kg }
+    - { name: CH4 to air, unit: kg }
+  resources:
+    - { name: Crude oil in ground, unit: kg }
+
+processes:
+  - name: P1 — Oil extraction
+    reference_output: { flow: Crude oil, amount: 1.0 }
+    resources:
+      - { flow: Crude oil in ground, amount: 1.05 }
+    emissions:
+      - { flow: CO2 to air, amount: 0.05 }
+      - { flow: CH4 to air, amount: 0.02 }
+
+  - name: P2 — PS manufacturing
+    reference_output: { flow: Polystyrene, amount: 1.0 }
+    inputs:
+      - { flow: Crude oil, amount: 2.0 }
+    emissions:
+      - { flow: CO2 to air, amount: 2.3 }
+
+  - name: P3 — Peanut expansion
+    reference_output: { flow: Packing peanuts, amount: 1.0 }
+    inputs:
+      - { flow: Polystyrene, amount: 1.0 }
+    emissions:
+      - { flow: CO2 to air, amount: 0.1 }
+
+reference_process: "P3 — Peanut expansion"
+---
+
+## About this analysis
+
+Illustrative supply chain for polystyrene (EPS) packing peanuts, based on the
+Jolliet et al. (1994) popcorn-vs-polystyrene case study.
+
+Supply chain: crude oil extraction → polystyrene polymerisation → peanut expansion.
+
+### Key insight
+
+Polystyrene is pure oil. For every 1 kg of plastic produced:
+- 1 kg of crude oil becomes the polymer itself
+- ~1 kg of crude oil (energy equivalent) is burned to power the manufacturing process
+
+This gives roughly 2.5 kg CO₂ per kg of packing peanuts.
+
+### Numbers are illustrative
+
+The per-process emission factors are approximate, chosen to reproduce the
+3–4× ratio reported by Jolliet et al. (1994) when compared to popcorn.
+Real values depend on energy mix, plant efficiency, and transport distances.
+
+### Comparison with popcorn (per kg)
+
+| Material | CO₂ (kg/kg) | Ratio |
+|---|---|---|
+| Polystyrene peanuts | ~2.5 | 1× (baseline) |
+| Popcorn packing | ~0.7 | **3.4× better** |
+
+BUT: popcorn is 4.6× denser than polystyrene, so per m³ (the correct
+functional unit for filling a package) the result **reverses** — polystyrene wins.

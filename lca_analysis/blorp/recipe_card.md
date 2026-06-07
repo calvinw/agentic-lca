@@ -1,0 +1,73 @@
+---
+# ─────────────────────────────────────────────────────────────
+# LCA Analysis Specification
+# Run with:  python3 lca_scripts/lca_analysis.py lca_analysis/blorp/recipe_card.md
+# ─────────────────────────────────────────────────────────────
+
+name: "Blorp LCA — 10 Blorps"
+goal: >
+  Calculate the total emissions and resources needed to produce 10 Blorps,
+  tracing through two upstream suppliers: Process A (Zings) and Process B (Flums).
+
+functional_unit:
+  description: 10 Blorps of product
+  amount: 10
+  unit: Blorps
+
+units:
+  Blorps: Blorp count
+  Zings:  Zing count
+  Flums:  Flum count
+  Smog:   Smog units
+  Haze:   Haze units
+  Aqua:   Aqua units
+
+products:
+  - { name: Blorps, unit: Blorps }
+  - { name: Zings,  unit: Zings  }
+  - { name: Flums,  unit: Flums  }
+
+elementary_flows:
+  emissions:
+    - { name: Smog, unit: Smog }
+    - { name: Haze, unit: Haze }
+  resources:
+    - { name: Aqua, unit: Aqua }
+
+processes:
+  - name: "P1 — Reference process"
+    reference_output: { flow: Blorps, amount: 10 }
+    inputs:
+      - { flow: Zings, amount: 30 }
+      - { flow: Flums, amount: 100 }
+    emissions:
+      - { flow: Smog, amount: 7.0 }
+
+  - name: "P2 — Process A"
+    reference_output: { flow: Zings, amount: 2 }
+    emissions:
+      - { flow: Smog, amount: 0.8 }
+    resources:
+      - { flow: Aqua, amount: 4.0 }
+
+  - name: "P3 — Process B"
+    reference_output: { flow: Flums, amount: 4 }
+    emissions:
+      - { flow: Smog, amount: 0.8 }
+      - { flow: Haze, amount: 2.0 }
+
+reference_process: "P1 — Reference process"
+---
+
+## About this analysis
+
+Classic teaching example used in LCA courses to introduce the matrix method.
+Three processes with a convergent supply chain: Blorps are the final product,
+which require Zings from Process A and Flums from Process B.
+
+Expected scaling vector: s = (1.0, 15.0, 25.0)
+- Process A runs 15 times to deliver 30 Zings
+- Process B runs 25 times to deliver 100 Flums
+- The reference process runs once to deliver 10 Blorps
+
+Expected total emissions: 39 Smog, 50 Haze, 60 Aqua extracted.

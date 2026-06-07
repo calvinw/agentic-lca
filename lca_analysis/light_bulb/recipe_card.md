@@ -1,0 +1,93 @@
+---
+name: "Incandescent Light Bulb LCA — 800 lm for 5000 h"
+goal: >
+  Calculate the total CO₂ emitted to provide 800 lumens of illumination
+  for 5000 hours using incandescent light bulbs, tracing through material
+  extraction, manufacturing, packaging, and electricity generation.
+
+functional_unit:
+  description: 800 lumens of illumination for 5000 hours
+  amount: 1
+  unit: FU
+
+units:
+  FU:     Functional unit
+  kg:     Mass
+  count:  Bulb count
+  kWh:    Energy
+  MJ:     Energy
+
+products:
+  - { name: Glass,       unit: kg    }
+  - { name: Copper,      unit: kg    }
+  - { name: Incandescent bulb, unit: count }
+  - { name: Paper,       unit: kg    }
+  - { name: Electricity, unit: kWh   }
+  - { name: Lighting service, unit: FU }
+
+elementary_flows:
+  emissions:
+    - { name: CO2, unit: kg }
+  resources:
+    - { name: Nonrenewable energy, unit: MJ }
+
+processes:
+  - name: "P1 — Glass production"
+    reference_output: { flow: Glass, amount: 1.0 }
+    resources:
+      - { flow: Nonrenewable energy, amount: 11.5 }
+    emissions:
+      - { flow: CO2, amount: 0.63 }
+
+  - name: "P2 — Copper production"
+    reference_output: { flow: Copper, amount: 1.0 }
+    resources:
+      - { flow: Nonrenewable energy, amount: 31.2 }
+    emissions:
+      - { flow: CO2, amount: 1.86 }
+
+  - name: "P3 — Manufacture bulb"
+    reference_output: { flow: Incandescent bulb, amount: 1.0 }
+    inputs:
+      - { flow: Glass,  amount: 0.02 }
+      - { flow: Copper, amount: 0.015 }
+    emissions:
+      - { flow: CO2, amount: 0.035 }
+
+  - name: "P4 — Produce paper"
+    reference_output: { flow: Paper, amount: 1.0 }
+    resources:
+      - { flow: Nonrenewable energy, amount: 24.3 }
+    emissions:
+      - { flow: CO2, amount: 1.59 }
+
+  - name: "P5 — Generate electricity"
+    reference_output: { flow: Electricity, amount: 1.0 }
+    resources:
+      - { flow: Nonrenewable energy, amount: 12.1 }
+    emissions:
+      - { flow: CO2, amount: 0.711 }
+
+  - name: "P6 — Deliver lighting"
+    reference_output: { flow: Lighting service, amount: 1.0 }
+    inputs:
+      - { flow: Incandescent bulb, amount: 5.0 }
+      - { flow: Paper,            amount: 0.05 }
+      - { flow: Electricity,      amount: 300  }
+
+reference_process: "P6 — Deliver lighting"
+---
+
+## About this analysis
+
+Based on the incandescent bulb scenario from Jolliet et al. Chapter 4 (Tables 4.2 and 4.3).
+The functional unit is 800 lumens of illumination for 5000 hours.
+
+Key facts:
+- Each bulb lasts 1000 hours, so 5 bulbs are needed per FU
+- Each bulb contains 20 g glass and 15 g copper
+- Packaging uses 0.01 kg paper per bulb (0.05 kg per FU)
+- U.S. electricity mix: 0.711 kg CO₂ per kWh
+- The use phase dominates: 300 kWh × 0.711 kg/kWh = 213 kg CO₂ per FU
+
+Expected total CO₂: 214 kg per FU (from Table 4.3).

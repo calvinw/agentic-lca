@@ -1,0 +1,50 @@
+---
+name: "Warm Air Hand Dryer LCA — one hand drying event"
+goal: >
+  Calculate the total CO₂ emitted to dry one pair of hands using a
+  warm air electric hand dryer, tracing from electricity generation
+  through to the drying event.
+
+functional_unit:
+  description: Drying hands once for one person after washing
+  amount: 1
+  unit: event
+
+units:
+  event: Hand drying event
+  kWh:   Energy
+  kg:    Mass
+
+products:
+  - { name: Electricity, unit: kWh }
+  - { name: Hand drying, unit: event }
+
+elementary_flows:
+  emissions:
+    - { name: CO2, unit: kg }
+
+processes:
+  - name: "P1 — Generate electricity"
+    reference_output: { flow: Electricity, amount: 1.0 }
+    emissions:
+      - { flow: CO2, amount: 0.4 }
+
+  - name: "P2 — Dry hands"
+    reference_output: { flow: Hand drying, amount: 1.0 }
+    inputs:
+      - { flow: Electricity, amount: 0.015 }
+
+reference_process: "P2 — Dry hands"
+---
+
+## About this analysis
+
+Based on the hand dryer scenario from Jolliet et al. Chapter 3 (Table 3.6).
+
+Key parameters:
+- Power rating: 1800 W
+- Drying time: 30 seconds
+- Energy per use: 1800 W × 30 s = 15 Wh = 0.015 kWh
+- European grid average: 0.4 kg CO₂ per kWh
+
+Expected use-phase emissions: 0.015 × 0.4 = 0.006 kg CO₂ per event.
