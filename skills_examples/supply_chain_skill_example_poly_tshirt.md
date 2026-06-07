@@ -59,7 +59,7 @@ then T-shirt assembly.
 
 ---
 
-![Polyester T-shirt supply chain — structure](skills_references/polyester_tshirt/product_graph_structure.svg)
+![Polyester T-shirt supply chain — structure](../skills_references/polyester_tshirt/product_graph_structure.svg)
 
 ---
 

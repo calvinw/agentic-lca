@@ -161,11 +161,11 @@ Here are the two supply chain diagrams for this case study.
 
 **Structure diagram** — shows how the processes connect, no numbers:
 
-![Wool yarn supply chain — structure](skills_references/wool_yarn/product_graph_structure.svg)
+![Wool yarn supply chain — structure](../skills_references/wool_yarn/product_graph_structure.svg)
 
 **Scaled diagram** — shows the actual flow amounts and scaling factors:
 
-![Wool yarn supply chain — scaled](skills_references/wool_yarn/product_graph_scaled.svg)
+![Wool yarn supply chain — scaled](../skills_references/wool_yarn/product_graph_scaled.svg)
 
 Here is what might surprise you about this chain: the mill step uses a lot of
 hot water and energy, so it produces quite a bit of CO₂. You might expect that
