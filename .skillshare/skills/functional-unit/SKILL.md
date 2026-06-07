@@ -148,6 +148,102 @@ a fashion or retail professional would care about. Use the product context. Exam
 
 ---
 
+## Fashion and retail functional unit reference table
+
+Use this table when a student asks for more examples of functional units, or
+when you want to connect the concept to a broader range of retail contexts.
+Do not recite the whole table unprompted — pick two or three examples that are
+most relevant to the product or question at hand.
+
+| Functional unit | Typical use case | Why this unit? |
+|---|---|---|
+| 1 finished garment (e.g. 1 T-shirt, 1 pair of jeans) | Comparing two finished products of the same type | Matches what a customer buys; easy to put on a hangtag or report |
+| 1 kg of fibre or yarn | Comparing raw materials (wool vs cotton vs polyester) at supplier level | Neutral weight-based unit for material-level comparisons before cutting or sewing |
+| 1 kg of fabric (woven or knitted) | Comparing fabric options for a new product line | Relevant when the design team is choosing between fabrics, not finished styles |
+| 1 wear (1 garment worn once) | Comparing durability — fast fashion vs premium | Divides total footprint by number of uses; favours long-lasting garments |
+| 1 garment worn for 1 year | Academic studies comparing wardrobe strategies | Captures both production AND frequency of use in a single unit |
+| 1 season's wardrobe | Comparing a "buy less, buy better" strategy vs fast fashion | Shows total annual impact of different purchasing behaviours |
+| 1 m² of fabric | Home textiles — curtains, upholstery, bedding | Product is sold by area, not by piece; enables fair comparison |
+| 1 pair of shoes worn for 3 years | Footwear LCA studies | Long use phase matters more than for apparel; time period must be stated |
+| 1 kg of recycled fibre produced | Comparing recycling technologies or feedstocks | Useful when the study is about end-of-life processing, not the garment itself |
+| 1 order fulfilled (e-commerce) | Retail logistics and packaging studies | Captures the full delivery unit — packaging, transport, and returns |
+
+---
+
+## Wrong functional unit — examples of misleading comparisons
+
+Use these examples when a student asks how the wrong unit can distort a
+comparison, or when the what-if question in Step 4 needs a concrete illustration.
+Choose the example closest to the product being studied.
+
+---
+
+### Example 1 — Heavy vs light garment (per kg vs per item)
+
+A brand makes a heavyweight fleece jacket (800 g) and a competitor makes a
+lightweight version (400 g). Both have a similar production process.
+
+- Measured **per garment**: the heavyweight jacket has roughly twice the footprint.
+  It looks worse — and it is, if you need one jacket.
+- Measured **per kilogram of fabric**: both jackets look identical.
+  The heavyweight jacket has "hidden" its extra material behind a neutral unit.
+
+**The wrong unit here:** per kilogram, when customers buy one jacket, not one
+kilogram of jacket. The unit hides the fact that the product uses more material.
+
+---
+
+### Example 2 — Disposable vs reusable (ignoring use phase)
+
+A study compares a disposable paper shopping bag to a cotton tote bag, measured
+**per bag produced** (cradle to gate only).
+
+- The cotton tote has a footprint of roughly 7 kg CO₂ — much higher than the
+  paper bag at 0.04 kg CO₂ — because growing cotton and weaving the fabric is
+  energy-intensive.
+- But a cotton tote used 200 times has a per-use footprint of 0.035 kg CO₂ —
+  lower than a single paper bag.
+
+**The wrong unit here:** per bag produced, when the product is designed to be
+reused many times. A cradle-to-gate unit for a reusable product always makes it
+look worse than a disposable one.
+
+---
+
+### Example 3 — Fast fashion vs quality (ignoring lifetime)
+
+Brand A sells a £15 T-shirt with a footprint of 2 kg CO₂. It lasts 10 washes
+before it pills and gets thrown away — so the customer buys 5 in a year.
+Brand B sells a £60 T-shirt with a footprint of 4 kg CO₂. It lasts 200 washes
+over 3 years.
+
+- Measured **per garment**: Brand B looks twice as bad.
+- Measured **per wear**: Brand A = 2 ÷ 10 = 0.2 kg CO₂ per wear.
+  Brand B = 4 ÷ 200 = 0.02 kg CO₂ per wear. Brand B is 10× better.
+
+**The wrong unit here:** per garment, for a product where durability is the
+main environmental differentiator. Fast fashion exploits this — a low per-item
+number can look green while the annual footprint is very high.
+
+---
+
+### Example 4 — Different fabric weights (per kg vs per m²)
+
+A fabric supplier compares a lightweight chiffon (80 g/m²) to a heavyweight
+denim (400 g/m²) for a carbon intensity claim.
+
+- Measured **per kilogram**: denim and chiffon might look similar if they use
+  similar fibres.
+- Measured **per square metre**: chiffon has a much lower footprint — not because
+  it is a cleaner product, but because there is less material per metre.
+  A dress made from chiffon uses far more metres of fabric than a pair of jeans.
+
+**The wrong unit here:** per square metre, when the end product requires very
+different amounts of each fabric. Per kilogram is fairer for raw material
+comparisons; per garment is fairer for finished product comparisons.
+
+---
+
 ## Tone and pacing for all responses
 
 - Write as if talking to someone who is comfortable with Excel and email
