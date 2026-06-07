@@ -88,9 +88,11 @@ def run_dot_plain(recipe: dict) -> str:
         name = p['name']
         lines.append(f'  "{name}" [];')
 
-    # functional unit node
+    # functional unit node — height grows with wrapped description
     fu = recipe['functional_unit']
-    lines.append(f'  "Functional Unit" [width=1.8, height=0.75];')
+    desc_lines = len(wrap_text(fu['description']).split('\n'))
+    fu_height = round(0.75 + (desc_lines - 1) * 0.18, 2)
+    lines.append(f'  "Functional Unit" [width=1.8, height={fu_height}];')
 
     # technosphere edges (process → process)
     ref = recipe['reference_process']
@@ -268,6 +270,23 @@ def svg_defs():
 </defs>'''
 
 
+def wrap_text(text: str, max_chars: int = 26) -> str:
+    """Word-wrap text at max_chars per line, return lines joined by \\n."""
+    words = text.split()
+    lines, current, length = [], [], 0
+    for word in words:
+        cost = len(word) + (1 if current else 0)
+        if length + cost > max_chars and current:
+            lines.append(' '.join(current))
+            current, length = [word], len(word)
+        else:
+            current.append(word)
+            length += cost
+    if current:
+        lines.append(' '.join(current))
+    return '\n'.join(lines)
+
+
 def svg_text(tx, ty, text, anchor='middle', size=11, weight='normal',
              fill='#222', baseline='auto'):
     lines = text.split('\n')
@@ -409,10 +428,13 @@ def process_boxes(recipe: dict, nodes: dict, flip_y: float,
 
         if is_fu:
             fu = recipe['functional_unit']
-            els.append(svg_text(cx, cy - nh * 0.18, 'Functional Unit',
+            desc = wrap_text(fu['description'])
+            n_desc_lines = len(desc.split('\n'))
+            # push label up, description centred in remaining space
+            els.append(svg_text(cx, cy - nh * 0.28, 'Functional Unit',
                                 size=11, fill='white'))
-            els.append(svg_text(cx, cy + nh * 0.15,
-                                fu['description'], size=10, fill='white'))
+            els.append(svg_text(cx, cy + nh * (0.05 + 0.07 * (n_desc_lines - 1)),
+                                desc, size=10, fill='white'))
         else:
             idx = next((i+1 for i, p in enumerate(recipe['processes'])
                         if p['name'] == name), '?')
