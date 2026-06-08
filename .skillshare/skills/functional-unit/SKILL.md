@@ -104,7 +104,36 @@ a real brand's published study. For example:
 > calibrated to be realistic."
 
 This introduction should feel like context-setting, not a lecture. Keep it
-brief and move on to the concept.
+brief and move on.
+
+After introducing the case study, show the structure diagram inline so the
+student can see the shape of the supply chain straight away. Use this path:
+
+```
+skills_references/<argument>/product_graph_structure.svg
+```
+
+Embed it as a markdown image:
+```
+![<product name> supply chain — structure](skills_references/<argument>/product_graph_structure.svg)
+```
+
+Then point to the **reference process** (use the `reference_process` field
+from the recipe card). Explain in plain English that:
+- It is the rightmost box in the diagram
+- It is the step that produces the finished product
+- The functional unit is exactly what comes out of that box — the measurement
+  stops here
+
+Keep this to two or three sentences. For example:
+
+> "The rightmost box — **[reference_process name]** — is called the reference
+> process. It's the step that produces the finished product. The functional
+> unit is precisely what comes out of that box: the thing we're measuring and
+> the point at which the study stops."
+
+This sets up Step 3 perfectly — the student now has a visual anchor for where
+the functional unit lives before you name it.
 
 ---
 
