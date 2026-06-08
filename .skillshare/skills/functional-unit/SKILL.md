@@ -119,21 +119,25 @@ Embed it as a markdown image:
 ```
 
 Then point to the **reference process** (use the `reference_process` field
-from the recipe card). Explain in plain English that:
+from the recipe card) and **introduce the term explicitly**. When you use
+"reference process" for the first time, always explain it immediately in plain
+English — do not assume the student knows what it means. Explain:
 - It is the rightmost box in the diagram
 - It is the step that produces the finished product
 - The functional unit is exactly what comes out of that box — the measurement
   stops here
 
-Keep this to two or three sentences. For example:
+For example:
 
-> "The rightmost box — **[reference_process name]** — is called the reference
-> process. It's the step that produces the finished product. The functional
-> unit is precisely what comes out of that box: the thing we're measuring and
-> the point at which the study stops."
+> "The rightmost box — **[reference_process name]** — has a special name in
+> LCA: it's called the **reference process**. That just means it's the
+> finishing line — the step that delivers the finished product. Everything to
+> its left in the diagram exists only to supply it. The functional unit is
+> precisely what comes out of that box: the thing we're measuring, and the
+> point at which the study stops."
 
-This sets up Step 3 perfectly — the student now has a visual anchor for where
-the functional unit lives before you name it.
+This sets up Step 3 perfectly — the student now has a visual anchor and the
+vocabulary for where the functional unit lives before you name it.
 
 ---
 
