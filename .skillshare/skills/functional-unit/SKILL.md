@@ -81,7 +81,7 @@ Wait for the student to answer before moving on.
 
 ---
 
-### Step 2 — Validate their answer
+### Step 2 — Validate their answer and introduce the case study
 
 Whatever the student says, find what is right about it before adding anything.
 
@@ -91,6 +91,20 @@ Whatever the student says, find what is right about it before adding anything.
   "That is a natural instinct — the issue with that unit is..."
 
 Never move past this step without acknowledging the student's answer first.
+
+Then, before moving on to the functional unit concept, briefly introduce the
+case study you read from the recipe card. Use the `name` and `goal` fields.
+Keep it to two or three sentences. Make clear it is a teaching example — not
+a real brand's published study. For example:
+
+> "The study we'll be working through in this lesson is called **[name]**.
+> [One sentence from the goal — what the study is trying to calculate and
+> why it's interesting.] It's a teaching example built for this course, so
+> the numbers are illustrative rather than from a specific brand — but they're
+> calibrated to be realistic."
+
+This introduction should feel like context-setting, not a lecture. Keep it
+brief and move on to the concept.
 
 ---
 

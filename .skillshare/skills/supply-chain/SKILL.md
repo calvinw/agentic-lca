@@ -90,9 +90,20 @@ Keep the question short. One question only. Wait for their answer.
 
 ---
 
-### Step 2 — Validate and reveal the diagram
+### Step 2 — Validate, introduce the case study, and reveal the diagram
 
-Whatever the student says, find what is right about it. Then:
+Whatever the student says, find what is right about it. Then briefly introduce
+the case study before showing the diagram. Use the `name` and `goal` fields
+from the recipe card. Keep it to two or three sentences. Make clear it is a
+teaching example — not a real brand's published study. For example:
+
+> "The supply chain we'll be mapping in this lesson is called **[name]**.
+> [One sentence from the goal — what the study covers and why it's
+> interesting.] It's a teaching example built for this course, so the numbers
+> are illustrative rather than from a specific brand — but they're calibrated
+> to be realistic."
+
+Then:
 
 1. Tell them how many processes are in this case study's supply chain
    (count the `processes` list you read from the recipe card).
