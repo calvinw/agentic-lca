@@ -5,10 +5,10 @@
       "source": "github.com/anthropics/skills/skill-creator/agents/analyzer.md",
       "kind": "agent",
       "type": "github-subdir",
-      "installed_at": "2026-05-26T04:14:30.257872405Z",
+      "installed_at": "2026-06-09T05:40:53.30844311Z",
       "repo_url": "https://github.com/anthropics/skills.git",
       "subdir": "agents/analyzer.md",
-      "version": "690f15c",
+      "version": "c30d329",
       "file_hashes": {
         "analyzer.md": "sha256:bf68f4cac5a56c673a928c2e6d619586c5b93ea364026ab37547772cb45a663a"
       }
@@ -17,10 +17,10 @@
       "source": "github.com/anthropics/skills/skill-creator/agents/comparator.md",
       "kind": "agent",
       "type": "github-subdir",
-      "installed_at": "2026-05-26T04:14:30.273733283Z",
+      "installed_at": "2026-06-09T05:40:53.318037174Z",
       "repo_url": "https://github.com/anthropics/skills.git",
       "subdir": "agents/comparator.md",
-      "version": "690f15c",
+      "version": "c30d329",
       "file_hashes": {
         "comparator.md": "sha256:fe1fc9787c495d864c5d6eada47396478572325fde1b33a96d78bf4b849b7a3e"
       }
@@ -29,10 +29,10 @@
       "source": "github.com/anthropics/skills/skill-creator/agents/grader.md",
       "kind": "agent",
       "type": "github-subdir",
-      "installed_at": "2026-05-26T04:14:30.294118064Z",
+      "installed_at": "2026-06-09T05:40:53.329780711Z",
       "repo_url": "https://github.com/anthropics/skills.git",
       "subdir": "agents/grader.md",
-      "version": "690f15c",
+      "version": "c30d329",
       "file_hashes": {
         "grader.md": "sha256:57134da0c1a4eea33fbd74a1c9c44aa814f07d6bc64de303edb586f941e5d21a"
       }
