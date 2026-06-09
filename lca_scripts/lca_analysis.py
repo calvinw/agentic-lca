@@ -70,6 +70,17 @@ def load_spec(path: str) -> dict:
     _, fm, _ = text.split("---", 2)
     return yaml.safe_load(fm)
 
+# ── Unit lookup helper ────────────────────────────────────────────────────────
+
+def get_ef_unit(spec: dict, flow_name: str) -> str:
+    for ef in spec.get("elementary_flows", {}).get("emissions", []):
+        if ef["name"] == flow_name:
+            return ef["unit"]
+    for ef in spec.get("elementary_flows", {}).get("resources", []):
+        if ef["name"] == flow_name:
+            return ef["unit"]
+    return "?"
+
 # ── Build openLCA entities ────────────────────────────────────────────────────
 
 def build_model(client: RestClient, spec: dict) -> tuple[dict, o.Ref]:
@@ -96,6 +107,11 @@ def build_model(client: RestClient, spec: dict) -> tuple[dict, o.Ref]:
         client.put(flow)
         reg[ef["name"]] = flow
         print(f"    {ef['name']}  [{ef['unit']}]  → emission to nature")
+    for ef in spec.get("elementary_flows", {}).get("resources", []):
+        flow = o.new_elementary_flow(ef["name"], reg[ef["unit"]])
+        client.put(flow)
+        reg[ef["name"]] = flow
+        print(f"    {ef['name']}  [{ef['unit']}]  ← extraction from nature")
 
     step(6, "Unit Processes")
     for ps in spec["processes"]:
@@ -107,6 +123,8 @@ def build_model(client: RestClient, spec: dict) -> tuple[dict, o.Ref]:
             o.new_input(p, reg[inp["flow"]], inp["amount"])
         for em in ps.get("emissions", []):
             o.new_output(p, reg[em["flow"]], em["amount"])
+        for res in ps.get("resources", []):
+            o.new_input(p, reg[res["flow"]], res["amount"])
         client.put(p)
         reg[ps["name"]] = p
         print(f"    {ps['name']}")
@@ -115,6 +133,8 @@ def build_model(client: RestClient, spec: dict) -> tuple[dict, o.Ref]:
             print(f"      input:   {inp['amount']} {inp['flow']}")
         for em in ps.get("emissions", []):
             print(f"      emits:   {em['amount']} {em['flow']} → biosphere")
+        for res in ps.get("resources", []):
+            print(f"      uses:    {res['amount']} {res['flow']} ← from nature")
 
     step(7, "Product System  (auto-link by matching flows)")
     ref_proc   = reg[spec["reference_process"]]
@@ -132,17 +152,20 @@ def build_matrices(spec: dict):
     proc_names = [p["name"] for p in spec["processes"]]
     em_names   = [e["name"] for e in
                   spec.get("elementary_flows", {}).get("emissions", [])]
+    res_names  = [r["name"] for r in
+                  spec.get("elementary_flows", {}).get("resources", [])]
+    ef_names   = em_names + res_names  # emissions first, then resources
 
     prod_idx = {n: i for i, n in enumerate(prod_names)}
     proc_idx = {n: i for i, n in enumerate(proc_names)}
-    em_idx   = {n: i for i, n in enumerate(em_names)}
+    ef_idx   = {n: i for i, n in enumerate(ef_names)}
 
     n_prod = len(prod_names)
     n_proc = len(proc_names)
-    n_em   = len(em_names)
+    n_ef   = len(ef_names)
 
     A = np.zeros((n_prod, n_proc))
-    B = np.zeros((n_em,   n_proc))
+    B = np.zeros((n_ef,   n_proc))
 
     for ps in spec["processes"]:
         j = proc_idx[ps["name"]]
@@ -153,19 +176,25 @@ def build_matrices(spec: dict):
             if inp["flow"] in prod_idx:
                 A[prod_idx[inp["flow"]], j] = -inp["amount"]
         for em in ps.get("emissions", []):
-            if em["flow"] in em_idx:
-                B[em_idx[em["flow"]], j] = em["amount"]
+            if em["flow"] in ef_idx:
+                B[ef_idx[em["flow"]], j] = +em["amount"]  # positive: exits to environment
+        for res in ps.get("resources", []):
+            if res["flow"] in ef_idx:
+                B[ef_idx[res["flow"]], j] = -res["amount"]  # negative: enters from environment
 
-    return A, B, prod_names, proc_names, em_names
+    return A, B, prod_names, proc_names, em_names, res_names
 
 
 # ── Generate lca_results.md ───────────────────────────────────────────────────
 
-def write_results_md(spec, A, B, s, Bs, olca_outputs,
-                     proc_names, prod_names, em_names, system_id):
+def write_results_md(spec, A, B, s, Bs, olca_outputs, olca_inputs,
+                     proc_names, prod_names, em_names, res_names, system_id):
     fu   = spec["functional_unit"]
     name = spec["name"]
     now  = datetime.datetime.now().strftime("%Y-%m-%d %H:%M")
+
+    n_em  = len(em_names)
+    n_res = len(res_names)
 
     lines = []
     def ln(x=""):  lines.append(x)
@@ -223,6 +252,7 @@ def write_results_md(spec, A, B, s, Bs, olca_outputs,
     ln("## Step 4 — Intervention Matrix B")
     ln()
     ln("Columns = processes, rows = elementary flows (biosphere).")
+    ln("`+` = emission (exits to environment)  `−` = resource extraction (enters from environment).")
     ln()
     ln(header); ln(sep)
     for i, en in enumerate(em_names):
@@ -231,45 +261,133 @@ def write_results_md(spec, A, B, s, Bs, olca_outputs,
             v = B[i, j]
             row += f" {v:+.2f} |" if v != 0 else "  0   |"
         ln(row)
+    for i, rn in enumerate(res_names):
+        row = "| **" + rn + "** |"
+        for j in range(len(proc_names)):
+            v = B[n_em + i, j]
+            row += f" {v:+.2f} |" if v != 0 else "  0   |"
+        ln(row)
     ln()
 
     ln("## Step 5 — LCI Results  B · s")
     ln()
-    ln("| Flow | Numpy result | openLCA result | Unit | Match |")
-    ln("|---|---:|---:|---|:---:|")
-    for i, en in enumerate(em_names):
-        olca_val = olca_outputs.get(en)
-        np_val   = Bs[i]
-        unit     = spec["units"].get(
-            next(e["unit"] for e in spec["elementary_flows"]["emissions"]
-                 if e["name"] == en), "kg")
-        match    = "✓" if olca_val is not None and abs(olca_val - np_val) < 1e-4 else "✗"
-        olca_str = f"{olca_val:.4f}" if olca_val is not None else "—"
-        ln(f"| **{en}** | {np_val:.4f} | {olca_str} | {unit} | {match} |")
-    ln()
+    if n_em > 0:
+        ln("**Emissions to environment:**")
+        ln()
+        ln("| Flow | Numpy result | openLCA result | Unit | Match |")
+        ln("|---|---:|---:|---|:---:|")
+        for i, en in enumerate(em_names):
+            olca_val = olca_outputs.get(en)
+            np_val   = Bs[i]
+            unit     = get_ef_unit(spec, en)
+            match    = "✓" if olca_val is not None and abs(olca_val - np_val) < 1e-4 else "✗"
+            olca_str = f"{olca_val:.4f}" if olca_val is not None else "—"
+            ln(f"| **{en}** | {np_val:.4f} | {olca_str} | {unit} | {match} |")
+        ln()
+    if n_res > 0:
+        ln("**Resources from environment (amounts consumed):**")
+        ln()
+        ln("| Flow | Numpy result | openLCA result | Unit | Match |")
+        ln("|---|---:|---:|---|:---:|")
+        for i, rn in enumerate(res_names):
+            olca_val = olca_inputs.get(rn)
+            np_val   = abs(Bs[n_em + i])  # stored negative; report as positive
+            unit     = get_ef_unit(spec, rn)
+            match    = "✓" if olca_val is not None and abs(olca_val - np_val) < 1e-4 else "✗"
+            olca_str = f"{olca_val:.4f}" if olca_val is not None else "—"
+            ln(f"| **{rn}** | {np_val:.4f} | {olca_str} | {unit} | {match} |")
+        ln()
 
-    ln("## Step 6 — Contribution Analysis")
+    ln("## Step 6 — Scaled Emissions by Process  (B · diag(s))")
     ln()
-    ln("Which process is responsible for each emission?")
+    ln("Each cell = emission rate × scaling factor.  "
+       "Columns sum to the LCI totals in Step 5.")
     ln()
-    ln("| Process | Scale (s) | Direct emissions | % of total |")
-    ln("|---|---:|---:|---:|")
-    total = Bs[0] if len(Bs) > 0 else 1
-    for j, pn in enumerate(proc_names):
-        direct = sum(B[k, j] * s[j] for k in range(len(em_names)))
-        pct    = direct / total * 100 if total != 0 else 0
-        ln(f"| {pn} | {s[j]:.4f} | {direct:.4f} kg | {pct:.0f}% |")
-    ln()
+    if n_em > 0:
+        em_hdr = "| Process | s |" + "".join(f" {en} |" for en in em_names)
+        em_sep = "|---|---:|" + "".join("---:|" for _ in em_names)
+        ln(em_hdr); ln(em_sep)
+        for j, pn in enumerate(proc_names):
+            row = f"| {pn} | {s[j]:.4f} |"
+            for k in range(n_em):
+                v = B[k, j] * s[j]
+                row += f" {v:.4f} |" if v != 0 else " 0 |"
+            ln(row)
+        tot_row = "| **Total** | |" + "".join(f" **{Bs[k]:.4f}** |" for k in range(n_em))
+        ln(tot_row)
+        ln()
+
+    if n_res > 0:
+        ln("**Resource extractions by process:**")
+        ln()
+        res_hdr = "| Process | s |" + "".join(f" {rn} |" for rn in res_names)
+        res_sep = "|---|---:|" + "".join("---:|" for _ in res_names)
+        ln(res_hdr); ln(res_sep)
+        for j, pn in enumerate(proc_names):
+            row = f"| {pn} | {s[j]:.4f} |"
+            for k in range(n_res):
+                v = abs(B[n_em + k, j] * s[j])
+                row += f" {v:.4f} |" if v != 0 else " 0 |"
+            ln(row)
+        res_tot = "| **Total** | |" + "".join(
+            f" **{abs(Bs[n_em + k]):.4f}** |" for k in range(n_res))
+        ln(res_tot)
+        ln()
+
+    lcia = spec.get("lcia")
+    if lcia and lcia.get("impact_categories"):
+        all_ef_names = em_names + res_names
+        all_ef_idx   = {n: i for i, n in enumerate(all_ef_names)}
+        ln(f"## Step 7 — LCIA Characterization  ({lcia['method']})")
+        ln()
+        ln("Characterization factors (CFs) convert raw inventory flows into a "
+           "common impact score.  Each flow's LCI total is multiplied by its CF.")
+        ln()
+        for cat in lcia["impact_categories"]:
+            cat_name  = cat["name"]
+            indicator = cat.get("indicator", "")
+            cat_unit  = cat.get("unit", "")
+            cfs       = cat.get("characterization_factors", {})
+            ln(f"### {cat_name}  ({indicator})  [{cat_unit}]")
+            ln()
+            ln(f"| Flow | LCI total | CF | Impact ({cat_unit}) |")
+            ln("|---|---:|---:|---:|")
+            cat_total = 0.0
+            for en_name, cf in cfs.items():
+                if en_name in all_ef_idx:
+                    idx     = all_ef_idx[en_name]
+                    lci_val = abs(Bs[idx])  # abs handles both emissions (+) and resources (-)
+                    ef_unit = get_ef_unit(spec, en_name)
+                    impact  = lci_val * cf
+                    cat_total += impact
+                    ln(f"| {en_name} | {lci_val:.4f} {ef_unit} | {cf} | {impact:.4f} |")
+            ln(f"| **Total** | | | **{cat_total:.4f}** |")
+            ln()
 
     ln("## Summary")
     ln()
-    ln("$$")
-    ln(r"\text{Total emissions} = B \cdot A^{-1} \cdot f")
-    ln("$$")
-    ln()
-    for i, en in enumerate(em_names):
-        ln(f"> **{en}: {Bs[i]:.4f} kg** per {fu['amount']} {fu['unit']} "
-           f"of {fu['description']}")
+    if lcia and lcia.get("impact_categories"):
+        all_ef_names = em_names + res_names
+        all_ef_idx   = {n: i for i, n in enumerate(all_ef_names)}
+        ln(f"**Method:** {lcia['method']}")
+        ln()
+        for cat in lcia["impact_categories"]:
+            cfs       = cat.get("characterization_factors", {})
+            cat_total = sum(
+                abs(Bs[all_ef_idx[en]]) * cf
+                for en, cf in cfs.items() if en in all_ef_idx
+            )
+            ln(f"> **{cat['name']} ({cat.get('indicator','')}): "
+               f"{cat_total:.4f} {cat.get('unit','')}** "
+               f"per {fu['amount']} {fu['unit']} of {fu['description']}")
+    else:
+        ln("$$")
+        ln(r"\text{Total emissions} = B \cdot A^{-1} \cdot f")
+        ln("$$")
+        ln()
+        for i, en in enumerate(em_names):
+            ln(f"> **{en}: {Bs[i]:.4f} kg** per {fu['amount']} {fu['unit']} "
+               f"of {fu['description']}")
     ln()
     ln("## Product System Graphs")
     ln()
@@ -326,22 +444,30 @@ def main():
     step(2, "Product Graph")
     print(f"\n  Processes : {len(spec['processes'])}")
     print(f"  Products  : {len(spec['products'])}")
-    n_em = len(spec.get("elementary_flows", {}).get("emissions", []))
-    print(f"  Emissions : {n_em}")
+    n_em_preview  = len(spec.get("elementary_flows", {}).get("emissions", []))
+    n_res_preview = len(spec.get("elementary_flows", {}).get("resources", []))
+    print(f"  Emissions : {n_em_preview}")
+    if n_res_preview > 0:
+        print(f"  Resources : {n_res_preview}")
     print()
     for ps in spec["processes"]:
         ro  = ps["reference_output"]
         ins = ", ".join(f"{i['amount']} {i['flow']}" for i in ps.get("inputs", []))
         ems = ", ".join(f"{e['amount']} {e['flow']}" for e in ps.get("emissions", []))
+        res = ", ".join(f"{r['amount']} {r['flow']}" for r in ps.get("resources", []))
         print(f"  {ps['name']}")
         print(f"    → outputs {ro['amount']} {ro['flow']}")
         if ins:  print(f"    ← needs   {ins}")
         if ems:  print(f"    ↑ emits   {ems}")
+        if res:  print(f"    ↓ uses    {res} [from nature]")
 
     client = RestClient(SERVER_URL)
     reg, system_ref = build_model(client, spec)
 
-    A, B, prod_names, proc_names, em_names = build_matrices(spec)
+    A, B, prod_names, proc_names, em_names, res_names = build_matrices(spec)
+    n_em  = len(em_names)
+    n_res = len(res_names)
+    ef_names = em_names + res_names
 
     step(8, "Technology Matrix A")
     print()
@@ -361,9 +487,10 @@ def main():
 
     step(10, "Intervention Matrix B")
     print()
-    if len(em_names) > 0:
-        print_matrix(em_names, proc_names, B.tolist(),
-                     row_label="emissions", col_label="processes")
+    if len(ef_names) > 0:
+        print_matrix(ef_names, proc_names, B.tolist(),
+                     row_label="elementary flows (+ emission, − resource)",
+                     col_label="processes")
     else:
         print("  (no elementary flows defined)")
 
@@ -377,6 +504,8 @@ def main():
     flows = result.get_total_flows()
     olca_outputs = {f.envi_flow.flow.name: f.amount
                     for f in flows if not f.envi_flow.is_input}
+    olca_inputs  = {f.envi_flow.flow.name: f.amount
+                    for f in flows if f.envi_flow.is_input}
     result.dispose()
 
     step(12, "LCI Results  B · s")
@@ -386,29 +515,73 @@ def main():
     rule()
     for i, en in enumerate(em_names):
         olca_val = olca_outputs.get(en)
-        unit_sym = next((e["unit"] for e in spec["elementary_flows"]["emissions"]
-                         if e["name"] == en), "?")
+        unit_sym = get_ef_unit(spec, en)
         match    = "✓ MATCH" if olca_val is not None and abs(olca_val - Bs[i]) < 1e-4 else "✗ DIFF"
         olca_str = f"{olca_val:.4f}" if olca_val is not None else "—"
         print(f"  {en:<32} {Bs[i]:>10.4f}  {olca_str:>10}  {unit_sym}  {match}")
+    for i, rn in enumerate(res_names):
+        olca_val = olca_inputs.get(rn)
+        np_val   = abs(Bs[n_em + i])
+        unit_sym = get_ef_unit(spec, rn)
+        match    = "✓ MATCH" if olca_val is not None and abs(olca_val - np_val) < 1e-4 else "✗ DIFF"
+        olca_str = f"{olca_val:.4f}" if olca_val is not None else "—"
+        print(f"  {rn:<32} {np_val:>10.4f}  {olca_str:>10}  {unit_sym}  [from nature]  {match}")
     print()
-    print(f"  Core equation:  CO₂ = B · A⁻¹ · f = {Bs[0]:.4f} kg")
+    print(f"  LCI emissions: " + "  ".join(f"{en}={Bs[i]:.4f}" for i, en in enumerate(em_names)))
+    if res_names:
+        print(f"  LCI resources: " + "  ".join(
+            f"{rn}={abs(Bs[n_em+i]):.4f}" for i, rn in enumerate(res_names)))
 
-    step(13, "Contribution Analysis (Hotspot Identification)")
-    total = Bs[0] if len(Bs) > 0 else 1
+    step(13, "Scaled Emissions by Process  (B · diag(s))")
     print()
-    print(f"  {'Process':<30} {'Scale':>8}  {'Direct emiss.':>14}  % of total")
-    rule()
-    for j, pn in enumerate(proc_names):
-        direct = float(sum(B[k, j] * s[j] for k in range(len(em_names))))
-        pct    = direct / total * 100 if total != 0 else 0
-        bar    = "█" * int(pct / 5)
-        print(f"  {pn:<30} {s[j]:>8.4f}  {direct:>10.4f} kg  {pct:5.1f}%  {bar}")
+    col_w = 10
+    if em_names:
+        header_e = f"  {'Process':<30} {'s':>8}  " + "  ".join(
+            f"{en[:col_w]:>{col_w}}" for en in em_names)
+        print(header_e)
+        rule()
+        for j, pn in enumerate(proc_names):
+            cols = "  ".join(f"{B[k,j]*s[j]:>{col_w}.4f}" for k in range(n_em))
+            print(f"  {pn:<30} {s[j]:>8.4f}  {cols}")
+        totals = "  ".join(f"{Bs[k]:>{col_w}.4f}" for k in range(n_em))
+        print(f"  {'Total':<30} {'':>8}  {totals}")
 
-    write_results_md(spec, A, B, s, Bs, olca_outputs,
-                     proc_names, prod_names, em_names, system_ref.id)
+    if res_names:
+        print()
+        header_r = f"  {'Process':<30} {'s':>8}  " + "  ".join(
+            f"{rn[:col_w]:>{col_w}}" for rn in res_names)
+        print(header_r)
+        rule()
+        for j, pn in enumerate(proc_names):
+            cols_r = "  ".join(
+                f"{abs(B[n_em+k,j]*s[j]):>{col_w}.4f}" for k in range(n_res))
+            print(f"  {pn:<30} {s[j]:>8.4f}  {cols_r}")
+        totals_r = "  ".join(f"{abs(Bs[n_em+k]):>{col_w}.4f}" for k in range(n_res))
+        print(f"  {'Total':<30} {'':>8}  {totals_r}")
 
-    step(14, "Product Graphs")
+    lcia = spec.get("lcia")
+    if lcia and lcia.get("impact_categories"):
+        all_ef_idx = {n: i for i, n in enumerate(em_names + res_names)}
+        step(14, f"LCIA Characterization  ({lcia['method']})")
+        for cat in lcia["impact_categories"]:
+            cfs       = cat.get("characterization_factors", {})
+            cat_total = sum(
+                abs(Bs[all_ef_idx[en]]) * cf
+                for en, cf in cfs.items() if en in all_ef_idx
+            )
+            indicator = cat.get("indicator", cat["name"])
+            cat_unit  = cat.get("unit", "")
+            print(f"\n  {indicator}: {cat_total:.4f} {cat_unit}")
+            for en, cf in cfs.items():
+                if en in all_ef_idx:
+                    lci_val  = abs(Bs[all_ef_idx[en]])
+                    ef_unit  = get_ef_unit(spec, en)
+                    print(f"    {en:<28} {lci_val:.4f} {ef_unit} × {cf} = {lci_val*cf:.4f} {cat_unit}")
+
+    write_results_md(spec, A, B, s, Bs, olca_outputs, olca_inputs,
+                     proc_names, prod_names, em_names, res_names, system_ref.id)
+
+    step(15, "Product Graphs")
     graph_dir = str(pathlib.Path(ANALYSIS_FILE).parent)
     scaled_file    = f"{graph_dir}/product_graph_scaled.svg"
     structure_file = f"{graph_dir}/product_graph_structure.svg"

@@ -19,6 +19,7 @@ functional_unit:
 
 units:
   kg: Mass
+  L: Volume
 
 products:
   - { name: Raw wool,  unit: kg }
@@ -28,6 +29,8 @@ elementary_flows:
   emissions:
     - { name: CO2 to air, unit: kg }
     - { name: CH4 to air, unit: kg }
+  resources:
+    - { name: Water, unit: L }
 
 processes:
   - name: P1 — Sheep farming
@@ -42,6 +45,8 @@ processes:
       - { flow: Raw wool, amount: 1.1 }
     emissions:
       - { flow: CO2 to air, amount: 2.0 }
+    resources:
+      - { flow: Water, amount: 30 }
 
 reference_process: "P2 — Wool yarn production"
 
@@ -54,6 +59,11 @@ lcia:
       characterization_factors:
         CO2 to air: 1.0
         CH4 to air: 27.9
+    - name: Water consumption
+      indicator: H₂O consumed
+      unit: m³
+      characterization_factors:
+        Water: 0.001
 ---
 
 ## About this analysis

@@ -34,7 +34,7 @@ docker rm -f "$CONTAINER" 2>/dev/null || true
 echo "[olca] Starting gdt-server on port 8080..."
 docker run \
     --name "$CONTAINER" \
-    -p 8080:8080 \
+    --network host \
     -v "$DATA_DIR:/app/data" \
     -d \
     "$IMAGE" \

@@ -519,6 +519,127 @@ def _edge_amount(recipe: dict, src: str, dst: str, flow: str):
     return None
 
 
+# ── Unit-process card ─────────────────────────────────────────────────────────
+def generate_unit_process(recipe: dict, proc_name: str, out_path: str):
+    """Generate a standalone SVG card showing one unit process."""
+    proc = _ref_process(recipe, proc_name)
+
+    U_MARGIN  = 30
+    H_ARM     = 90     # horizontal arm for inputs / reference output
+    V_ARM     = 50     # vertical arm for resources / emissions
+    IN_SPACE  = 36     # vertical spacing between stacked inputs
+
+    inputs    = proc.get('inputs', [])
+    emissions = proc.get('emissions', [])
+    resources = proc.get('resources', [])
+    n_in  = len(inputs)
+    n_em  = len(emissions)
+    n_res = len(resources)
+
+    # ── Canvas width ──────────────────────────────────────────────────────────
+    LLABEL = 110 if n_in else 20   # space to the left of the input arm start
+    RLABEL = 20                     # breathing room to the right of output arm end
+    canvas_w = U_MARGIN + LLABEL + H_ARM + BOX_W + H_ARM + RLABEL + U_MARGIN
+
+    # ── Box centre x/y ────────────────────────────────────────────────────────
+    cx = U_MARGIN + LLABEL + H_ARM + BOX_W / 2
+
+    input_half = max(0.0, (n_in - 1) / 2 * IN_SPACE)
+    above = TITLE_HEIGHT + U_MARGIN
+    if n_res:
+        above += V_ARM + 28   # arrow shaft + "from Nature" label
+    above = max(above, TITLE_HEIGHT + U_MARGIN + input_half)
+    cy = above + BOX_H / 2
+
+    below = BOX_H / 2 + U_MARGIN
+    if n_em:
+        below = max(below, BOX_H / 2 + V_ARM + 22)   # arrow shaft + "to Air" label
+    below = max(below, BOX_H / 2 + input_half + U_MARGIN)
+
+    canvas_h = cy + below
+
+    parts = []
+
+    # ── Process box ───────────────────────────────────────────────────────────
+    bx, by = cx - BOX_W / 2, cy - BOX_H / 2
+    parts.append(svg_rect(bx, by, BOX_W, BOX_H, COL_PROCESS))
+    parts.append(svg_text(cx, cy, proc_name, fill='white', size=11))
+
+    # ── Reference output (right arrow) ───────────────────────────────────────
+    ro  = proc['reference_output']
+    x1r = cx + BOX_W / 2
+    x2r = x1r + H_ARM
+    parts.append(svg_line(x1r, cy, x2r, cy, COL_TECH_EDGE))
+    unit = _flow_unit(recipe, ro['flow'])
+    parts.append(svg_text((x1r + x2r) / 2, cy - 14,
+                          f"{ro['flow']}\n{ro['amount']} {unit}",
+                          anchor='middle', size=11, fill='#444', weight='bold'))
+
+    # ── Inputs (left arrows, stacked vertically) ──────────────────────────────
+    x2l = cx - BOX_W / 2
+    x1l = x2l - H_ARM
+    for i, inp in enumerate(inputs):
+        y_in = cy + (i - (n_in - 1) / 2) * IN_SPACE
+        parts.append(svg_line(x1l, y_in, x2l, y_in, COL_TECH_EDGE))
+        u = _flow_unit(recipe, inp['flow'])
+        parts.append(svg_text((x1l + x2l) / 2, y_in - 14,
+                              f"{inp['flow']}\n{inp['amount']} {u}",
+                              anchor='middle', size=11, fill='#444', weight='bold'))
+
+    # ── Resources (green, entering from above) ────────────────────────────────
+    box_top = cy - BOX_H / 2
+    for i, res in enumerate(resources):
+        off   = (i - (n_res - 1) / 2) * EMIT_OFFSET
+        rx    = cx + off
+        y_start = box_top - V_ARM
+        parts.append(svg_text(rx, y_start - 14, 'from Nature',
+                              anchor='middle', size=9, fill=COL_GREEN, weight='bold'))
+        parts.append(svg_line(rx, y_start, rx, box_top, COL_GREEN, marker='arr-green'))
+        shaft_mid = y_start + V_ARM * 0.45
+        u = _res_unit(recipe, res['flow'])
+        parts.append(svg_text(rx - 5, shaft_mid,
+                              res['flow'], anchor='end', size=11, fill=COL_GREEN, weight='bold'))
+        parts.append(svg_text(rx - 5, shaft_mid + 14,
+                              f"{res['amount']} {u}", anchor='end', size=11, fill=COL_GREEN, weight='bold'))
+
+    # ── Emissions (red, exiting below) ────────────────────────────────────────
+    box_bot = cy + BOX_H / 2
+    for i, em in enumerate(emissions):
+        off   = (i - (n_em - 1) / 2) * EMIT_OFFSET
+        ex    = cx + off
+        y_end = box_bot + V_ARM
+        parts.append(svg_line(ex, box_bot, ex, y_end, COL_RED, marker='arr-red'))
+        shaft_mid = box_bot + V_ARM * 0.38
+        u = _em_unit(recipe, em['flow'])
+        label = em['flow'].replace(' to air', '')
+        parts.append(svg_text(ex - 5, shaft_mid,
+                              label, anchor='end', size=11, fill=COL_RED, weight='bold'))
+        parts.append(svg_text(ex - 5, shaft_mid + 14,
+                              f"{em['amount']} {u}", anchor='end', size=11, fill=COL_RED, weight='bold'))
+        parts.append(svg_text(ex, y_end + 12, 'to Air',
+                              anchor='start', size=9, fill=COL_RED, weight='bold'))
+
+    # ── Title (two lines: process name + "Unit Process" subtitle) ────────────
+    title_name = svg_text(canvas_w / 2, 15, proc_name,
+                          size=13, fill='#222', weight='bold')
+    title_sub  = svg_text(canvas_w / 2, 30, 'Unit Process',
+                          size=12, fill='#666')
+
+    svg_out = '\n'.join([
+        f'<svg xmlns="http://www.w3.org/2000/svg" '
+        f'width="{canvas_w:.1f}" height="{canvas_h:.1f}" '
+        f'viewBox="0 0 {canvas_w:.1f} {canvas_h:.1f}">',
+        f'<rect x="0" y="0" width="{canvas_w:.1f}" height="{canvas_h:.1f}" fill="#f8f8f8"/>',
+        svg_defs(),
+        title_name,
+        title_sub,
+        *parts,
+        '</svg>',
+    ])
+    Path(out_path).write_text(svg_out)
+    print(f"Written: {out_path}  ({canvas_w:.0f}×{canvas_h:.0f}px)")
+
+
 def generate(recipe_path: str, out_path: str, show_quantities: bool = True):
     recipe = load_recipe(recipe_path)
 
@@ -619,7 +740,24 @@ if __name__ == '__main__':
                         help='Show structure only (no amounts or scaling factors)')
     parser.add_argument('--scaled', action='store_true',
                         help='Show amounts and scaling factors (default)')
+    parser.add_argument('--unit-process', metavar='NAME',
+                        help='Generate a standalone card for one unit process by name')
+    parser.add_argument('--all-unit-processes', action='store_true',
+                        help='Generate one unit-process card SVG per process in the recipe')
     args = parser.parse_args()
-    out_path = args.output or args.recipe.replace('.md', '.svg')
-    show_quantities = not args.structure  # default to quantities
-    generate(args.recipe, out_path, show_quantities=show_quantities)
+
+    if args.unit_process:
+        recipe = load_recipe(args.recipe)
+        slug = args.unit_process.split()[0]
+        out = args.output or str(Path(args.recipe).parent / f"unit_process_{slug}.svg")
+        generate_unit_process(recipe, args.unit_process, out)
+    elif args.all_unit_processes:
+        recipe = load_recipe(args.recipe)
+        base = Path(args.recipe).parent
+        for p in recipe['processes']:
+            slug = p['name'].split()[0]
+            generate_unit_process(recipe, p['name'], str(base / f"unit_process_{slug}.svg"))
+    else:
+        out_path = args.output or args.recipe.replace('.md', '.svg')
+        show_quantities = not args.structure
+        generate(args.recipe, out_path, show_quantities=show_quantities)

@@ -23,6 +23,7 @@ functional_unit:
 
 units:
   kg: Mass
+  L: Volume
 
 products:
   - { name: N-fertilizer,  unit: kg }
@@ -33,6 +34,8 @@ elementary_flows:
     - { name: CO2 to air, unit: kg }
     - { name: N2O to air, unit: kg }
     - { name: NH3 to air, unit: kg }
+  resources:
+    - { name: Water, unit: L }
 
 processes:
   - name: P1 — Fertilizer production
@@ -48,6 +51,8 @@ processes:
       - { flow: CO2 to air,  amount: 0.8  }
       - { flow: N2O to air,  amount: 0.015 }
       - { flow: NH3 to air,  amount: 0.010 }
+    resources:
+      - { flow: Water, amount: 8000 }
 
 reference_process: "P2 — Cotton farming"
 
@@ -66,6 +71,11 @@ lcia:
       characterization_factors:
         NH3 to air: 3.54
         N2O to air: 0.27
+    - name: Water consumption
+      indicator: H₂O consumed
+      unit: m³
+      characterization_factors:
+        Water: 0.001
 ---
 
 ## About this analysis
