@@ -298,22 +298,6 @@ If it replies with a version number, the server is running. If it gives an error
 
 ---
 
-## Example result — Cotton Shirt
-
-Running the cotton shirt analysis produces a report showing:
-
-```
-CO₂ emitted: 2.32 kg per shirt
-
-Breakdown:
-  Electricity generation (mills + factory)   1.41 kg   61%
-  Cotton farming                             0.91 kg   39%
-```
-
-The biggest finding: almost two-thirds of the shirt's carbon footprint comes from the electricity used in the mills and the factory — not the farm. Switching to renewable energy could cut the footprint nearly in half.
-
----
-
 ## Source
 
 Built on top of the [calvinw/ai-agentic-tools](https://github.com/calvinw/ai-agentic-tools) dev container, which provides the AI coding assistants and MCP server infrastructure.
