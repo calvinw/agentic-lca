@@ -179,6 +179,12 @@ The three case studies available for all lessons are:
 | `polyester_tshirt` | 1 polyester T-shirt — from oil well to finished garment |
 | `wool_yarn` | 1 kg of wool yarn — from sheep farm to finished yarn |
 
+![cotton fiber supply chain — structure](skills_references/cotton_fiber/product_graph_structure.svg)
+
+![polyester T-shirt supply chain — structure](skills_references/polyester_tshirt/product_graph_structure.svg)
+
+![wool yarn supply chain — structure](skills_references/wool_yarn/product_graph_structure.svg)
+
 ---
 
 ### `/functional-unit` — What exactly are we measuring?
@@ -189,21 +195,9 @@ The three case studies available for all lessons are:
 
 ```
 /functional-unit cotton_fiber
-```
-
-![cotton fiber supply chain — structure](skills_references/cotton_fiber/product_graph_structure.svg)
-
-```
 /functional-unit polyester_tshirt
-```
-
-![polyester T-shirt supply chain — structure](skills_references/polyester_tshirt/product_graph_structure.svg)
-
-```
 /functional-unit wool_yarn
 ```
-
-![wool yarn supply chain — structure](skills_references/wool_yarn/product_graph_structure.svg)
 
 The lesson opens with a question from everyday retail life — something like "if a brand wanted to put a carbon footprint label on their yarn, what would you measure it per?" — and builds from your answer. By the end you will understand why "per kilogram" and "per garment" can tell completely different stories, and what to look for when a supplier hands you a sustainability claim.
 
@@ -219,21 +213,9 @@ The lesson opens with a question from everyday retail life — something like "i
 
 ```
 /supply-chain cotton_fiber
-```
-
-![cotton fiber supply chain — structure](skills_references/cotton_fiber/product_graph_structure.svg)
-
-```
 /supply-chain polyester_tshirt
-```
-
-![polyester T-shirt supply chain — structure](skills_references/polyester_tshirt/product_graph_structure.svg)
-
-```
 /supply-chain wool_yarn
 ```
-
-![wool yarn supply chain — structure](skills_references/wool_yarn/product_graph_structure.svg)
 
 The lesson opens by asking you to think about the product's journey before showing you anything. It then walks you through the supply chain diagram step by step — each box (a production process), each arrow (a material flowing between steps), and the boundary around the whole system. It closes by connecting what you have seen to a real sourcing or sustainability decision.
 
@@ -249,21 +231,9 @@ The lesson opens by asking you to think about the product's journey before showi
 
 ```
 /scaling-vector cotton_fiber
-```
-
-![cotton fiber supply chain — structure](skills_references/cotton_fiber/product_graph_structure.svg)
-
-```
 /scaling-vector polyester_tshirt
-```
-
-![polyester T-shirt supply chain — structure](skills_references/polyester_tshirt/product_graph_structure.svg)
-
-```
 /scaling-vector wool_yarn
 ```
-
-![wool yarn supply chain — structure](skills_references/wool_yarn/product_graph_structure.svg)
 
 The lesson uses a cooking analogy to introduce the idea — if a bread recipe makes one loaf and you need three, you run it three times. It then walks you through the supply chain one step at a time, asking you to do each division yourself before confirming the answer. By the end you will understand why the cotton farm might only need to run 0.2 times to produce 1 kg of cotton fiber, and what that means for where the emissions actually come from.
 
