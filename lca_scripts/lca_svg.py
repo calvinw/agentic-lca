@@ -306,6 +306,42 @@ def svg_text(tx, ty, text, anchor='middle', size=11, weight='normal',
     return '\n'.join(parts)
 
 
+def chem_sub(text: str) -> str:
+    """Escape text for SVG and wrap letter+digit sequences as subscript tspans.
+    e.g. 'CO2 to air' → 'CO<tspan ...>2</tspan> to air'
+    """
+    import re
+    result = ''
+    last = 0
+    for m in re.finditer(r'([A-Za-z])(\d+)', text):
+        result += esc(text[last:m.start()])
+        result += esc(m.group(1))
+        result += f'<tspan baseline-shift="sub" font-size="0.75em">{esc(m.group(2))}</tspan>'
+        last = m.end()
+    result += esc(text[last:])
+    return result
+
+
+def svg_chem_text(tx, ty, text, anchor='middle', size=11, weight='normal',
+                  fill='#222', baseline='auto'):
+    """Like svg_text but renders chemical subscripts (CO2 → CO₂) via tspan."""
+    lines = text.split('\n')
+    if len(lines) == 1:
+        return (f'<text x="{x(tx)}" y="{x(ty)}" text-anchor="{anchor}" '
+                f'dominant-baseline="{baseline}" '
+                f'font-family="{FONT}" font-size="{size}" '
+                f'font-weight="{weight}" fill="{fill}">{chem_sub(text)}</text>')
+    dy = size * 1.3
+    start_y = ty - (len(lines) - 1) * dy / 2
+    parts = [f'<text text-anchor="{anchor}" font-family="{FONT}" '
+             f'font-size="{size}" font-weight="{weight}" fill="{fill}">']
+    for i, ln in enumerate(lines):
+        parts.append(f'<tspan x="{x(tx)}" y="{x(start_y + i*dy)}"'
+                     f' dominant-baseline="{baseline}">{chem_sub(ln)}</tspan>')
+    parts.append('</text>')
+    return '\n'.join(parts)
+
+
 def svg_line(x1, y1, x2, y2, color, marker='arr', width=1.6):
     return (f'<line x1="{x(x1)}" y1="{x(y1)}" x2="{x(x2)}" y2="{x(y2)}" '
             f'stroke="{color}" stroke-width="{width}" '
@@ -354,9 +390,9 @@ def elementary_flows(recipe: dict, nodes: dict, flip_y: float,
             els.append(svg_line(rx, start_y, rx, box_top,
                                 COL_GREEN, marker='arr-green'))
             shaft_mid = start_y + ELEM_ARM * 0.38
-            els.append(svg_text(rx - 5, shaft_mid,
-                                res['flow'], anchor='end', size=11, fill=COL_GREEN,
-                                weight='bold'))
+            els.append(svg_chem_text(rx - 5, shaft_mid,
+                                     res['flow'], anchor='end', size=11, fill=COL_GREEN,
+                                     weight='bold'))
             if show_quantities:
                 scaled_amount = res['amount'] * proc_scaling
                 els.append(svg_text(rx - 5, shaft_mid + 14,
@@ -377,9 +413,9 @@ def elementary_flows(recipe: dict, nodes: dict, flip_y: float,
                                 COL_RED, marker='arr-red'))
             mid_y = box_bot + ELEM_ARM * 0.38
             unit = _em_unit(recipe, em['flow'])
-            els.append(svg_text(ex - 5, mid_y,
-                                em['flow'].replace(' to air', ''), anchor='end', size=11, fill=COL_RED,
-                                weight='bold'))
+            els.append(svg_chem_text(ex - 5, mid_y,
+                                     em['flow'].replace(' to air', ''), anchor='end', size=11, fill=COL_RED,
+                                     weight='bold'))
             if show_quantities:
                 scaled_amount = em['amount'] * proc_scaling
                 els.append(svg_text(ex - 5, mid_y + 14,
@@ -597,8 +633,8 @@ def generate_unit_process(recipe: dict, proc_name: str, out_path: str):
         parts.append(svg_line(rx, y_start, rx, box_top, COL_GREEN, marker='arr-green'))
         shaft_mid = y_start + V_ARM * 0.45
         u = _res_unit(recipe, res['flow'])
-        parts.append(svg_text(rx - 5, shaft_mid,
-                              res['flow'], anchor='end', size=11, fill=COL_GREEN, weight='bold'))
+        parts.append(svg_chem_text(rx - 5, shaft_mid,
+                                   res['flow'], anchor='end', size=11, fill=COL_GREEN, weight='bold'))
         parts.append(svg_text(rx - 5, shaft_mid + 14,
                               f"{res['amount']} {u}", anchor='end', size=11, fill=COL_GREEN, weight='bold'))
 
@@ -612,8 +648,8 @@ def generate_unit_process(recipe: dict, proc_name: str, out_path: str):
         shaft_mid = box_bot + V_ARM * 0.38
         u = _em_unit(recipe, em['flow'])
         label = em['flow'].replace(' to air', '')
-        parts.append(svg_text(ex - 5, shaft_mid,
-                              label, anchor='end', size=11, fill=COL_RED, weight='bold'))
+        parts.append(svg_chem_text(ex - 5, shaft_mid,
+                                   label, anchor='end', size=11, fill=COL_RED, weight='bold'))
         parts.append(svg_text(ex - 5, shaft_mid + 14,
                               f"{em['amount']} {u}", anchor='end', size=11, fill=COL_RED, weight='bold'))
         parts.append(svg_text(ex, y_end + 12, 'to Air',
