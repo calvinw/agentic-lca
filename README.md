@@ -152,6 +152,106 @@ A few things to notice:
 
 ---
 
+## Educational skills — learning LCA step by step
+
+This project includes a set of **teaching skills** — guided, conversational lessons that walk you through the key ideas in Life Cycle Assessment using real case studies. You do not need any maths or science background. Each lesson works like a one-on-one tutorial: the AI asks you questions, you respond in plain English, and the concept builds up naturally through the conversation.
+
+The three case studies used across all lessons are:
+
+| Case study | What it covers |
+|---|---|
+| `wool_yarn` | 1 kg of wool yarn — from sheep farm to finished yarn |
+| `polyester_tshirt` | 1 polyester T-shirt — from oil well to finished garment |
+| `cotton_fiber` | 1 kg of cotton fiber — from fertilizer production to harvested cotton |
+
+---
+
+### `/supply-chain` — How to read a supply chain diagram
+
+**What you will learn:** What a supply chain map is, how to read the boxes and arrows, what "upstream" and "downstream" mean, and why the boundary of a study matters.
+
+**How to start:**
+```
+/supply-chain wool_yarn
+```
+or
+```
+/supply-chain polyester_tshirt
+```
+or
+```
+/supply-chain cotton_fiber
+```
+
+The lesson opens by asking you to think about the product's journey before showing you anything. It then walks you through the supply chain diagram step by step — each box (a production process), each arrow (a material flowing between steps), and the boundary around the whole system. It closes by connecting what you have seen to a real sourcing or sustainability decision.
+
+**How long:** About 10–15 minutes of conversation.
+
+---
+
+### `/functional-unit` — What exactly are we measuring?
+
+**What you will learn:** What a functional unit is, why the choice of unit matters, and how picking the wrong unit can make a misleading sustainability comparison.
+
+**How to start:**
+```
+/functional-unit wool_yarn
+```
+or
+```
+/functional-unit polyester_tshirt
+```
+or
+```
+/functional-unit cotton_fiber
+```
+
+The lesson opens with a question from everyday retail life — something like "if a brand wanted to put a carbon footprint label on their yarn, what would you measure it per?" — and builds from your answer. By the end you will understand why "per kilogram" and "per garment" can tell completely different stories, and what to look for when a supplier hands you a sustainability claim.
+
+**How long:** About 10–15 minutes of conversation.
+
+---
+
+### `/scaling-vector` — How much does each step need to run?
+
+**What you will learn:** The scaling vector — the set of numbers that answers the question "to produce exactly one unit of the finished product, how many times does each step in the supply chain have to run?"
+
+**How to start:**
+```
+/scaling-vector wool_yarn
+```
+or
+```
+/scaling-vector polyester_tshirt
+```
+or
+```
+/scaling-vector cotton_fiber
+```
+
+The lesson uses a cooking analogy to introduce the idea — if a bread recipe makes one loaf and you need three, you run it three times. It then walks you through the supply chain one step at a time, asking you to do each division yourself before confirming the answer. By the end you will understand why the cotton farm might only need to run 0.2 times to produce 1 kg of cotton fiber, and what that means for where the emissions actually come from.
+
+**How long:** About 15–20 minutes of conversation.
+
+---
+
+### `/product-graph-svg` — Draw a supply chain diagram from a recipe card
+
+**What you will learn / do:** Generate your own supply chain diagrams as SVG image files — no openLCA server needed. This skill is more hands-on than a lesson: you describe a supply chain in a recipe card and the tool draws it.
+
+**How to start:** Just ask the AI to generate a diagram, for example:
+```
+generate a supply chain diagram for the coffee recipe card
+```
+or
+```
+draw the supply chain for cotton_shirt
+```
+
+There are nine ready-made recipe cards to experiment with — including coffee, cotton shirt, paper cup, light bulb, and a fictional teaching example called "Blorp". You can also edit any recipe card to change amounts, add processes, or add emissions and regenerate the diagram to see how it changes. No calculation server is needed for this — it works entirely from the recipe card file.
+
+---
+
 ## Starting the openLCA server
 
 The openLCA server does **not** start automatically — you need to start it yourself before running any analysis. There are three scripts at the top level of the project for managing it:
