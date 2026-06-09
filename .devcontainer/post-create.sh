@@ -15,8 +15,8 @@ install-mcps.sh
 echo "=== 3/7: Installing Python packages ==="
 pip install numpy pandas matplotlib seaborn requests PyYAML olca-ipc olca-schema python-pptx openpyxl --break-system-packages
 
-echo "=== 4/7: Installing Pandoc + LaTeX (for converting reports to PDF) ==="
-apt-get update -qq && apt-get install -y -qq pandoc graphviz texlive-latex-base texlive-fonts-recommended texlive-latex-extra texlive-xetex fonts-dejavu && rm -rf /var/lib/apt/lists/*
+echo "=== 4/7: Installing graphviz (for supply chain diagrams) ==="
+apt-get update -qq && apt-get install -y -qq graphviz && rm -rf /var/lib/apt/lists/*
 
 echo "=== 5/7: Setting up skillshare CLI ==="
 setup-skills.sh
