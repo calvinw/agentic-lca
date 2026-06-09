@@ -17,6 +17,7 @@ For example: a cotton shirt doesn't just emit CO₂ when you buy it. It starts w
 The analyses in this project complete the **Life Cycle Inventory (LCI)** step of an LCA. Think of inventory as the data-collection phase — it tracks every flow crossing the boundary between the supply chain and the natural world:
 
 - **Emissions** — substances released *to* nature (CO₂ to air, wastewater to rivers, etc.)
+- **Extractions** — substances drawn *from* nature (crude oil, water, land, minerals, etc.)
 
 The next step — **Life Cycle Impact Assessment (LCIA)** — would convert those raw inventory numbers into scored impact categories like Global Warming Potential or Water Depletion. That step is not yet included in this project.
 
