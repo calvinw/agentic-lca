@@ -157,36 +157,13 @@ A few things to notice:
 
 This project includes a set of **teaching skills** — guided, conversational lessons that walk you through the key ideas in Life Cycle Assessment using real case studies. You do not need any maths or science background. Each lesson works like a one-on-one tutorial: the AI asks you questions, you respond in plain English, and the concept builds up naturally through the conversation.
 
-The three case studies used across all lessons are:
+The three case studies available for all lessons are:
 
 | Case study | What it covers |
 |---|---|
-| `wool_yarn` | 1 kg of wool yarn — from sheep farm to finished yarn |
-| `polyester_tshirt` | 1 polyester T-shirt — from oil well to finished garment |
 | `cotton_fiber` | 1 kg of cotton fiber — from fertilizer production to harvested cotton |
-
----
-
-### `/supply-chain` — How to read a supply chain diagram
-
-**What you will learn:** What a supply chain map is, how to read the boxes and arrows, what "upstream" and "downstream" mean, and why the boundary of a study matters.
-
-**How to start:**
-```
-/supply-chain wool_yarn
-```
-or
-```
-/supply-chain polyester_tshirt
-```
-or
-```
-/supply-chain cotton_fiber
-```
-
-The lesson opens by asking you to think about the product's journey before showing you anything. It then walks you through the supply chain diagram step by step — each box (a production process), each arrow (a material flowing between steps), and the boundary around the whole system. It closes by connecting what you have seen to a real sourcing or sustainability decision.
-
-**How long:** About 10–15 minutes of conversation.
+| `polyester_tshirt` | 1 polyester T-shirt — from oil well to finished garment |
+| `wool_yarn` | 1 kg of wool yarn — from sheep farm to finished yarn |
 
 ---
 
@@ -194,20 +171,57 @@ The lesson opens by asking you to think about the product's journey before showi
 
 **What you will learn:** What a functional unit is, why the choice of unit matters, and how picking the wrong unit can make a misleading sustainability comparison.
 
-**How to start:**
-```
-/functional-unit wool_yarn
-```
-or
-```
-/functional-unit polyester_tshirt
-```
-or
+**How to start** — pick one of the three case studies:
+
 ```
 /functional-unit cotton_fiber
 ```
 
+![cotton fiber supply chain — structure](skills_references/cotton_fiber/product_graph_structure.svg)
+
+```
+/functional-unit polyester_tshirt
+```
+
+![polyester T-shirt supply chain — structure](skills_references/polyester_tshirt/product_graph_structure.svg)
+
+```
+/functional-unit wool_yarn
+```
+
+![wool yarn supply chain — structure](skills_references/wool_yarn/product_graph_structure.svg)
+
 The lesson opens with a question from everyday retail life — something like "if a brand wanted to put a carbon footprint label on their yarn, what would you measure it per?" — and builds from your answer. By the end you will understand why "per kilogram" and "per garment" can tell completely different stories, and what to look for when a supplier hands you a sustainability claim.
+
+**How long:** About 10–15 minutes of conversation.
+
+---
+
+### `/supply-chain` — How to read a supply chain diagram
+
+**What you will learn:** What a supply chain map is, how to read the boxes and arrows, what "upstream" and "downstream" mean, and why the boundary of a study matters.
+
+**How to start** — pick one of the three case studies:
+
+```
+/supply-chain cotton_fiber
+```
+
+![cotton fiber supply chain — structure](skills_references/cotton_fiber/product_graph_structure.svg)
+
+```
+/supply-chain polyester_tshirt
+```
+
+![polyester T-shirt supply chain — structure](skills_references/polyester_tshirt/product_graph_structure.svg)
+
+```
+/supply-chain wool_yarn
+```
+
+![wool yarn supply chain — structure](skills_references/wool_yarn/product_graph_structure.svg)
+
+The lesson opens by asking you to think about the product's journey before showing you anything. It then walks you through the supply chain diagram step by step — each box (a production process), each arrow (a material flowing between steps), and the boundary around the whole system. It closes by connecting what you have seen to a real sourcing or sustainability decision.
 
 **How long:** About 10–15 minutes of conversation.
 
@@ -217,18 +231,25 @@ The lesson opens with a question from everyday retail life — something like "i
 
 **What you will learn:** The scaling vector — the set of numbers that answers the question "to produce exactly one unit of the finished product, how many times does each step in the supply chain have to run?"
 
-**How to start:**
-```
-/scaling-vector wool_yarn
-```
-or
-```
-/scaling-vector polyester_tshirt
-```
-or
+**How to start** — pick one of the three case studies:
+
 ```
 /scaling-vector cotton_fiber
 ```
+
+![cotton fiber supply chain — structure](skills_references/cotton_fiber/product_graph_structure.svg)
+
+```
+/scaling-vector polyester_tshirt
+```
+
+![polyester T-shirt supply chain — structure](skills_references/polyester_tshirt/product_graph_structure.svg)
+
+```
+/scaling-vector wool_yarn
+```
+
+![wool yarn supply chain — structure](skills_references/wool_yarn/product_graph_structure.svg)
 
 The lesson uses a cooking analogy to introduce the idea — if a bread recipe makes one loaf and you need three, you run it three times. It then walks you through the supply chain one step at a time, asking you to do each division yourself before confirming the answer. By the end you will understand why the cotton farm might only need to run 0.2 times to produce 1 kg of cotton fiber, and what that means for where the emissions actually come from.
 
