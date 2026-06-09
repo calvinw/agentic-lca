@@ -342,13 +342,11 @@ def elementary_flows(recipe: dict, nodes: dict, flip_y: float,
         # ── Resources / biosphere inputs (green arrows, from above into top of box) ──
         resources = p.get('resources', [])
         n_res = len(resources)
+        res_spacing = (nw * 0.75) / (n_res - 1) if n_res > 1 else EMIT_OFFSET
         for i, res in enumerate(resources):
-            offset = (i - (n_res - 1) / 2) * EMIT_OFFSET
-            rx = cx + offset + EMIT_OFFSET / 2
-            start_y = box_top - ELEM_ARM      # arrow starts above box
-            from_nature_y = start_y - 10      # "from Nature" label above arrow start
-
-            lx, anchor = rx - 5, 'end'
+            rx = cx + (i - (n_res - 1) / 2) * res_spacing
+            start_y = box_top - ELEM_ARM
+            from_nature_y = start_y - 10
 
             els.append(svg_text(rx, from_nature_y, 'from Nature',
                                 anchor='start', size=9, fill=COL_GREEN, baseline='auto',
@@ -356,38 +354,36 @@ def elementary_flows(recipe: dict, nodes: dict, flip_y: float,
             els.append(svg_line(rx, start_y, rx, box_top,
                                 COL_GREEN, marker='arr-green'))
             shaft_mid = start_y + ELEM_ARM * 0.38
-            els.append(svg_text(lx, shaft_mid,
-                                res['flow'], anchor=anchor, size=11, fill=COL_GREEN,
+            els.append(svg_text(rx - 5, shaft_mid,
+                                res['flow'], anchor='end', size=11, fill=COL_GREEN,
                                 weight='bold'))
             if show_quantities:
                 scaled_amount = res['amount'] * proc_scaling
-                els.append(svg_text(lx, shaft_mid + 14,
+                els.append(svg_text(rx - 5, shaft_mid + 14,
                                     f"{scaled_amount:.4g} {_res_unit(recipe, res['flow'])}",
-                                    anchor=anchor, size=11, fill=COL_GREEN,
+                                    anchor='end', size=11, fill=COL_GREEN,
                                     weight='bold'))
 
         # ── Emissions (red arrows, exit bottom downward) ──
         emissions = p.get('emissions', [])
         n_em = len(emissions)
+        em_spacing = (nw * 0.75) / (n_em - 1) if n_em > 1 else EMIT_OFFSET
         for i, em in enumerate(emissions):
-            offset = (i - (n_em - 1) / 2) * EMIT_OFFSET
-            ex = cx + offset - EMIT_OFFSET / 2
+            ex = cx + (i - (n_em - 1) / 2) * em_spacing
             end_y = box_bot + ELEM_ARM
             to_air_y = end_y + 12
-
-            lx, anchor = ex - 5, 'end'
 
             els.append(svg_line(ex, box_bot, ex, end_y,
                                 COL_RED, marker='arr-red'))
             mid_y = box_bot + ELEM_ARM * 0.38
             unit = _em_unit(recipe, em['flow'])
-            els.append(svg_text(lx, mid_y,
-                                em['flow'].replace(' to air', ''), anchor=anchor, size=11, fill=COL_RED,
+            els.append(svg_text(ex - 5, mid_y,
+                                em['flow'].replace(' to air', ''), anchor='end', size=11, fill=COL_RED,
                                 weight='bold'))
             if show_quantities:
                 scaled_amount = em['amount'] * proc_scaling
-                els.append(svg_text(lx, mid_y + 14,
-                                    f"{scaled_amount:.4g} {unit}", anchor=anchor, size=11, fill=COL_RED,
+                els.append(svg_text(ex - 5, mid_y + 14,
+                                    f"{scaled_amount:.4g} {unit}", anchor='end', size=11, fill=COL_RED,
                                     weight='bold'))
             els.append(svg_text(ex, to_air_y, 'to Air',
                                 anchor='start', size=9, fill=COL_RED, baseline='auto',
@@ -536,6 +532,10 @@ def generate_unit_process(recipe: dict, proc_name: str, out_path: str):
     n_em  = len(emissions)
     n_res = len(resources)
 
+    # Spread arrows across ~75% of box width; fall back to EMIT_OFFSET for single arrows
+    em_spacing  = (BOX_W * 0.75) / (n_em  - 1) if n_em  > 1 else EMIT_OFFSET
+    res_spacing = (BOX_W * 0.75) / (n_res - 1) if n_res > 1 else EMIT_OFFSET
+
     # ── Canvas width ──────────────────────────────────────────────────────────
     LLABEL = 110 if n_in else 20   # space to the left of the input arm start
     RLABEL = 20                     # breathing room to the right of output arm end
@@ -589,7 +589,7 @@ def generate_unit_process(recipe: dict, proc_name: str, out_path: str):
     # ── Resources (green, entering from above) ────────────────────────────────
     box_top = cy - BOX_H / 2
     for i, res in enumerate(resources):
-        off   = (i - (n_res - 1) / 2) * EMIT_OFFSET
+        off   = (i - (n_res - 1) / 2) * res_spacing
         rx    = cx + off
         y_start = box_top - V_ARM
         parts.append(svg_text(rx, y_start - 14, 'from Nature',
@@ -605,7 +605,7 @@ def generate_unit_process(recipe: dict, proc_name: str, out_path: str):
     # ── Emissions (red, exiting below) ────────────────────────────────────────
     box_bot = cy + BOX_H / 2
     for i, em in enumerate(emissions):
-        off   = (i - (n_em - 1) / 2) * EMIT_OFFSET
+        off   = (i - (n_em - 1) / 2) * em_spacing
         ex    = cx + off
         y_end = box_bot + V_ARM
         parts.append(svg_line(ex, box_bot, ex, y_end, COL_RED, marker='arr-red'))
