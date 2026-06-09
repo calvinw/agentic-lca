@@ -18,17 +18,17 @@ This project includes a set of **teaching skills** — guided, conversational le
 
 The three case studies available for all lessons are:
 
-| Case study | What it covers |
-|---|---|
-| `cotton_fiber` | 1 kg of cotton fiber — from fertilizer production to harvested cotton |
-| `polyester_tshirt` | 1 polyester T-shirt — from oil well to finished garment |
-| `wool_yarn` | 1 kg of wool yarn — from sheep farm to finished yarn |
+1. **`cotton_fiber`** — 1 kg of cotton fiber, from fertilizer production to harvested cotton
 
-![cotton fiber supply chain — structure](skills_references/cotton_fiber/product_graph_structure.svg)
+   ![cotton fiber supply chain — structure](skills_references/cotton_fiber/product_graph_structure.svg)
 
-![polyester T-shirt supply chain — structure](skills_references/polyester_tshirt/product_graph_structure.svg)
+2. **`polyester_tshirt`** — 1 polyester T-shirt, from oil well to finished garment
 
-![wool yarn supply chain — structure](skills_references/wool_yarn/product_graph_structure.svg)
+   ![polyester T-shirt supply chain — structure](skills_references/polyester_tshirt/product_graph_structure.svg)
+
+3. **`wool_yarn`** — 1 kg of wool yarn, from sheep farm to finished yarn
+
+   ![wool yarn supply chain — structure](skills_references/wool_yarn/product_graph_structure.svg)
 
 ---
 
