@@ -14,12 +14,26 @@ For example: a cotton shirt doesn't just emit CO₂ when you buy it. It starts w
 
 ## What this project currently calculates
 
-The analyses in this project complete the **Life Cycle Inventory (LCI)** step of an LCA. Think of inventory as the data-collection phase — it tracks every flow crossing the boundary between the supply chain and the natural world:
+When you run an analysis with `/run-lca`, the tool works through these steps:
+
+| Step | What happens |
+|---|---|
+| 1 | **Goal and scope** — sets the functional unit and the reference flow |
+| 2 | **Product graph** — maps out all processes, products, and emissions |
+| 3–7 | **Build the model** — creates all flows, processes, and the product system in openLCA |
+| 8 | **Technology matrix (A)** — the grid of what each process produces and consumes |
+| 9 | **Scaling vector (s)** — solves how many times each process must run to deliver one functional unit |
+| 10 | **Intervention matrix (B)** — the grid of what each process emits or extracts per run |
+| 11 | **Submit to openLCA** — sends the full model to the calculation engine and waits for the result |
+| 12 | **Verify** — checks that the numpy calculation and the openLCA result agree |
+| 13 | **Contribution analysis** — shows which process drives the impact |
+
+The inventory tracks two types of flow crossing the boundary between the supply chain and the natural world:
 
 - **Emissions** — substances released *to* nature (CO₂ to air, wastewater to rivers, etc.)
 - **Extractions** — substances drawn *from* nature (crude oil, water, land, minerals, etc.)
 
-The next step — **Life Cycle Impact Assessment (LCIA)** — would convert those raw inventory numbers into scored impact categories like Global Warming Potential or Water Depletion. That step is not yet included in this project.
+The **Life Cycle Impact Assessment (LCIA)** step converts those raw inventory numbers into scored impact categories like Global Warming Potential or Water Depletion.
 
 ---
 
