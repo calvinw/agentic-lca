@@ -92,7 +92,10 @@ or manufacturing analogy. For example:
 > times it runs is the scaling factor — it's just a ratio."
 
 Show the structure diagram so the student can see the overall shape of the
-chain before diving into individual processes:
+chain before diving into individual processes. Output this markdown image tag
+**verbatim** (substituting the argument for `<argument>`):
+
+![Cotton Fiber supply chain — structure](skills_references/cotton_fiber/product_graph_structure.svg)
 
 ```
 ![<product name> supply chain — structure](skills_references/<argument>/product_graph_structure.svg)
