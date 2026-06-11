@@ -4,7 +4,7 @@
     "skill-creator": {
       "source": "github.com/anthropics/skills/skill-creator",
       "type": "github-subdir",
-      "installed_at": "2026-06-09T05:40:53.248760847Z",
+      "installed_at": "2026-06-09T14:45:29.539344165Z",
       "repo_url": "https://github.com/anthropics/skills.git",
       "subdir": "skills/skill-creator",
       "version": "c30d329",
