@@ -1,0 +1,77 @@
+---
+name: Levi's 501 Jeans — best of everything (Custom Scenario C)
+goal: >
+  Model the theoretical minimum footprint for a pair of Levi's 501 jeans by
+  combining all available levers simultaneously: organic cotton farm, renewable
+  energy supply chain, and best-practice consumer washing (every 10 wears).
+  This is the absolute floor — what would the footprint be if every decision
+  in the entire lifecycle were made as sustainably as possible?
+
+functional_unit:
+  description: One pair of Levi's 501 jeans — full lifecycle, best-case scenario
+  amount: 1.0
+  unit: pair
+
+units:
+  pair: Pair of jeans
+  kg:   Mass in kilograms
+  kWh:  Electrical energy in kilowatt-hours
+
+products:
+  - { name: Raw cotton,                      unit: kg   }
+  - { name: Denim fabric,                    unit: kg   }
+  - { name: Finished jeans,                  unit: pair }
+  - { name: Levis 501 jeans full lifecycle,  unit: pair }
+  - { name: Electricity,                     unit: kWh  }
+
+elementary_flows:
+  emissions:
+    - { name: CO2 to air, unit: kg }
+
+processes:
+  - name: P1 — Grow and harvest cotton
+    reference_output: { flow: Raw cotton, amount: 1.0 }
+    emissions:
+      - { flow: CO2 to air, amount: 1.5 }
+
+  - name: P2 — Spin, dye, and weave denim fabric
+    reference_output: { flow: Denim fabric, amount: 1.0 }
+    inputs:
+      - { flow: Raw cotton,  amount: 1.25 }
+      - { flow: Electricity, amount: 22.5 }
+
+  - name: P3 — Cut, sew, and finish jeans
+    reference_output: { flow: Finished jeans, amount: 1.0 }
+    inputs:
+      - { flow: Denim fabric, amount: 0.8  }
+      - { flow: Electricity,  amount: 5.2  }
+
+  - name: P4 — Distribute, wash, dry, and dispose of jeans
+    reference_output: { flow: Levis 501 jeans full lifecycle, amount: 1.0 }
+    inputs:
+      - { flow: Finished jeans, amount: 1.0  }
+      - { flow: Electricity,    amount: 6.16 }
+    emissions:
+      - { flow: CO2 to air, amount: 6.4 }
+
+  - name: P5 — Generate electricity
+    reference_output: { flow: Electricity, amount: 1.0 }
+    emissions:
+      - { flow: CO2 to air, amount: 0.05 }
+
+reference_process: P4 — Distribute, wash, dry, and dispose of jeans
+---
+
+## About this scenario
+
+Custom Scenario C — best of everything combined.
+
+Changes from baseline:
+  - P1: farm CO₂ 2.9 → 1.5 kg/kg (organic cotton)
+  - P4: consumer care electricity 25.0 → 6.16 kWh (wash every 10 wears)
+  - P5: electricity emission factor 0.5 → 0.05 kg CO₂/kWh (renewable grid)
+
+Total electricity = (22.5 × 0.8) + 5.2 + 6.16 = 18 + 5.2 + 6.16 = 29.36 kWh
+CO₂ via electricity = 29.36 × 0.05 = 1.47 kg
+Direct CO₂ = P1 (1.5) + P4 direct (6.4) = 7.9 kg
+Expected total: 7.9 + 1.47 = ~9.4 kg CO₂.
