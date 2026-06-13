@@ -1,4 +1,5 @@
 ---
+version: 0.1
 name: supply-chain
 description: >
   Teaching skill for the LCA concept of supply chain and system boundary —

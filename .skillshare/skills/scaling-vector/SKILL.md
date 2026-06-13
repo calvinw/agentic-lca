@@ -1,4 +1,5 @@
 ---
+version: 0.1
 name: scaling-vector
 description: >
   Teaching skill for the LCA concept of the scaling vector — how much each

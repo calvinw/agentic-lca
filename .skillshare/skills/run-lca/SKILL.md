@@ -1,4 +1,5 @@
 ---
+version: 0.1
 name: run-lca
 description: >
   Use this skill whenever the user wants to perform a Life Cycle Assessment

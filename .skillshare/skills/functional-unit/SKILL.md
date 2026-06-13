@@ -1,4 +1,5 @@
 ---
+version: 0.1
 name: functional-unit
 description: >
   Teaching skill for the LCA concept of functional unit — the precise definition
