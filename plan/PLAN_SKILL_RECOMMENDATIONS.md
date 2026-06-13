@@ -10,18 +10,90 @@ Skills already built are marked ✅. Skills recommended but not yet built are ma
 | Order | Skill | Status | What it teaches |
 |---|---|---|---|
 | 1 | `what-is-lca` | ✅ Built | What LCA is, why fashion professionals need it, the four phases |
-| 2 |   al-and-scope` | ✅ Built | Why the study is being done, who it is for, what is included or excluded |
-| 3 | `functional-unit` | ✅ Built | The precise definition of what is being measured |
-| 4 | `supply-chain` | ✅ Built | How to read a product graph, what processes and flows are |
-| 5 | `characterization` | ⬜ Recommended | How raw emissions are converted into impact scores (e.g. why 1 kg CH4 = 27.9 kg CO2 eq) |
-| 6 | `impact-categories` | ⬜ Recommended | What impact categories are, why there are more than just CO2, why one emission can appear in multiple categories |
-| 7 | `scaling-vector` | ✅ Built | How much each process in the supply chain must run to deliver one functional unit |
-| 8 | `hotspot-analysis` | ⬜ Recommended | How to read a contribution breakdown, identify the biggest sources of impact, connect to business decisions |
-| 9 | `comparing-products` | ⬜ Recommended | How to set up a fair comparison between two products, when comparisons are misleading |
+| 2 | `system-boundary` | ⬜ Recommended | The simplest idea in LCA — every study has edges, what is inside gets counted, what is outside does not |
+| 3 | `life-cycle-stages` | ⬜ Recommended | The named boundary types — cradle to gate, cradle to grave, cradle to cradle, gate to grave — what each includes and when to use it |
+| 4 | `goal-and-scope` | ✅ Built | Why the study is being done, who it is for, what is included or excluded |
+| 5 | `functional-unit` | ✅ Built | The precise definition of what is being measured |
+| 6 | `supply-chain` | ✅ Built | How to read a product graph, what processes and flows are |
+| 7 | `technosphere-and-ecosphere` | ⬜ Recommended | The difference between human-made flows (products) and natural flows (emissions, resources) that cross into the natural world |
+| 8 | `characterization` | ⬜ Recommended | How raw emissions are converted into impact scores (e.g. why 1 kg CH4 = 27.9 kg CO2 eq) |
+| 9 | `impact-categories` | ⬜ Recommended | What impact categories are, why there are more than just CO2, why one emission can appear in multiple categories |
+| 10 | `scaling-vector` | ✅ Built | How much each process in the supply chain must run to deliver one functional unit |
+| 11 | `hotspot-analysis` | ⬜ Recommended | How to read a contribution breakdown, identify the biggest sources of impact, connect to business decisions |
+| 12 | `comparing-products` | ⬜ Recommended | How to set up a fair comparison between two products, when comparisons are misleading |
 
 ---
 
 ## Skills Not Yet Built — Detail
+
+### `system-boundary`
+The most basic idea in LCA, explained without any technical vocabulary. Every study
+has to decide what to include and what to leave out — and whatever is left out does
+not get counted, no matter how significant it might be. This skill would use a very
+simple everyday analogy (a shopping receipt that only covers certain items) to make
+the idea feel obvious, then show how the same principle applies to a supply chain
+diagram. Students would practise pointing to what is inside and outside the boundary
+using the product graph, before any discussion of why the boundary is drawn where it is.
+
+Short, visual, and conversational. No science required. Should take no more than
+four or five exchanges to complete.
+
+**Key insight for students:** A study can only tell you about what is inside its
+boundary. If something is left out, the number you get at the end is incomplete —
+and knowing what was left out is just as important as knowing what was included.
+
+---
+
+### `life-cycle-stages`
+Once students understand that a study has a boundary, the natural next question is:
+*where do researchers typically draw it?* This skill would introduce the four named
+boundary types used across the fashion and retail industry, using plain-English
+descriptions and concrete product examples for each:
+
+- **Cradle to gate** — from raw material in the ground to the factory exit. Stops
+  before the product is sold. Most supplier certifications use this scope because
+  they can only control what happens on their side of the gate.
+- **Cradle to grave** — the full life of the product, from raw material all the way
+  through to the customer disposing of it. Used when the use phase matters — for
+  example, comparing fast fashion (washed frequently, short life) to a premium
+  garment (washed less, lasts years).
+- **Cradle to cradle** — same as cradle to grave but the end-of-life loops back into
+  production as recycled material. Used for circular economy and recycled content
+  claims (e.g. recycled polyester from plastic bottles).
+- **Gate to grave** — starts at the warehouse or retail store and ends at disposal.
+  Used when production is already fixed and the question is purely about what happens
+  after purchase — for example, comparing delivery packaging options.
+
+The skill would use a single product (a T-shirt or a pair of jeans) and show how the
+same product gets a very different footprint number depending on which boundary is
+chosen — making it clear that the label alone is not enough; you need to know what
+it includes.
+
+**Key insight for students:** The same product can have four different carbon footprint
+numbers depending on where the boundary is drawn. When comparing two studies, always
+check that they use the same boundary type — otherwise the comparison is meaningless.
+
+---
+
+### `technosphere-and-ecosphere`
+The supply chain lives entirely in the human-made world (the technosphere — factories,
+farms, energy grids, products). The natural world (the ecosphere — air, water, soil,
+climate) sits outside it. LCA is really about what *crosses the boundary between the
+two*: emissions flow out of the technosphere into the ecosphere, and natural resources
+flow in. These crossing flows are called **elementary flows**, and they are the only
+things LCA counts as environmental impact. A product moving from one factory to another
+stays inside the technosphere and is never counted as an environmental impact.
+
+This skill would use the wool yarn or cotton fiber case study to show students which
+flows cross the boundary (CO₂ to air, CH4 to air, Water) and which do not (raw wool
+moving from farm to mill). It would replace the vague idea of "what goes in and out"
+with a clear, lasting mental model.
+
+**Key insight for students:** Not all flows in a supply chain cause environmental
+damage — only the ones that cross into the natural world. Understanding this boundary
+is what separates an impact from a transaction.
+
+---
 
 ### `characterization`
 The "magic conversion" step that trips most students up. Raw emissions like CO₂ and
