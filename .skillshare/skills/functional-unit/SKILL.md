@@ -1,5 +1,5 @@
 ---
-version: 0.1
+version: 0.2
 name: functional-unit
 description: >
   Teaching skill for the LCA concept of functional unit — the precise definition
@@ -306,3 +306,4 @@ comparisons; per garment is fairer for finished product comparisons.
 - Phrases that help: "This is a perfectly normal question", "You are asking
   exactly the right thing", "This trips a lot of people up at first"
 - End every response with either a question or a clear invitation to continue
+- After completing the five-step teaching sequence, always ask: "Would you like to see how the functional unit works in a different area — for example, footwear, home textiles, or retail logistics?" This gives the student a natural on-ramp to explore the reference table without needing to ask
