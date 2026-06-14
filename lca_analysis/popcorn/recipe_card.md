@@ -29,9 +29,9 @@ products:
 
 elementary_flows:
   emissions:
-    - { name: CO2 to air, unit: kg }
-    - { name: N2O to air, unit: kg }
-    - { name: NH3 to air, unit: kg }
+    - { name: Carbon dioxide, compartment: air, unit: kg }
+    - { name: Nitrous oxide,  compartment: air, unit: kg }
+    - { name: Ammonia,        compartment: air, unit: kg }
   resources:
     - { name: Water, unit: L }
 
@@ -39,7 +39,7 @@ processes:
   - name: P1 — Fertilizer supply
     reference_output: { flow: Fertilizer, amount: 1.0 }
     emissions:
-      - { flow: CO2 to air, amount: 2.5 }
+      - { flow: Carbon dioxide, amount: 2.5 }
 
   - name: P2 — Corn farming
     reference_output: { flow: Corn, amount: 1.0 }
@@ -48,25 +48,28 @@ processes:
     resources:
       - { flow: Water, amount: 0.5 }
     emissions:
-      - { flow: CO2 to air, amount: 0.2  }
-      - { flow: N2O to air, amount: 0.003 }
-      - { flow: NH3 to air, amount: 0.002 }
+      - { flow: Carbon dioxide, amount: 0.2  }
+      - { flow: Nitrous oxide, amount: 0.003 }
+      - { flow: Ammonia, amount: 0.002 }
 
   - name: P3 — Drying
     reference_output: { flow: Dried corn, amount: 1.0 }
     inputs:
       - { flow: Corn, amount: 1.0 }
     emissions:
-      - { flow: CO2 to air, amount: 0.25 }
+      - { flow: Carbon dioxide, amount: 0.25 }
 
   - name: P4 — Popping
     reference_output: { flow: Packing popcorn, amount: 1.0 }
     inputs:
       - { flow: Dried corn, amount: 1.0 }
     emissions:
-      - { flow: CO2 to air, amount: 0.15 }
+      - { flow: Carbon dioxide, amount: 0.15 }
 
 reference_process: "P4 — Popping"
+
+lcia:
+  method_name: "TRACI 2.2"
 ---
 
 ## About this analysis

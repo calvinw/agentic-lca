@@ -27,7 +27,7 @@ products:
 
 elementary_flows:
   emissions:
-    - { name: CO2, unit: kg }
+    - { name: Carbon dioxide, compartment: air, unit: kg }
   resources:
     - { name: Nonrenewable energy, unit: MJ }
 
@@ -37,14 +37,14 @@ processes:
     resources:
       - { flow: Nonrenewable energy, amount: 11.5 }
     emissions:
-      - { flow: CO2, amount: 0.63 }
+      - { flow: Carbon dioxide, amount: 0.63 }
 
   - name: "P2 — Copper production"
     reference_output: { flow: Copper, amount: 1.0 }
     resources:
       - { flow: Nonrenewable energy, amount: 31.2 }
     emissions:
-      - { flow: CO2, amount: 1.86 }
+      - { flow: Carbon dioxide, amount: 1.86 }
 
   - name: "P3 — Manufacture bulb"
     reference_output: { flow: Incandescent bulb, amount: 1.0 }
@@ -52,21 +52,21 @@ processes:
       - { flow: Glass,  amount: 0.02 }
       - { flow: Copper, amount: 0.015 }
     emissions:
-      - { flow: CO2, amount: 0.035 }
+      - { flow: Carbon dioxide, amount: 0.035 }
 
   - name: "P4 — Produce paper"
     reference_output: { flow: Paper, amount: 1.0 }
     resources:
       - { flow: Nonrenewable energy, amount: 24.3 }
     emissions:
-      - { flow: CO2, amount: 1.59 }
+      - { flow: Carbon dioxide, amount: 1.59 }
 
   - name: "P5 — Generate electricity"
     reference_output: { flow: Electricity, amount: 1.0 }
     resources:
       - { flow: Nonrenewable energy, amount: 12.1 }
     emissions:
-      - { flow: CO2, amount: 0.711 }
+      - { flow: Carbon dioxide, amount: 0.711 }
 
   - name: "P6 — Deliver lighting"
     reference_output: { flow: Lighting service, amount: 1.0 }
@@ -76,6 +76,9 @@ processes:
       - { flow: Electricity,      amount: 300  }
 
 reference_process: "P6 — Deliver lighting"
+
+lcia:
+  method_name: "TRACI 2.2"
 ---
 
 ## About this analysis

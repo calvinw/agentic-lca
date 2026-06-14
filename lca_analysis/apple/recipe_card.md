@@ -31,8 +31,8 @@ products:
 
 elementary_flows:
   emissions:
-    - { name: CO2 to air, unit: kg }
-    - { name: CH4 to air, unit: kg }
+    - { name: Carbon dioxide, compartment: air, unit: kg }
+    - { name: Methane,        compartment: air, unit: kg }
   resources:
     - { name: Water, unit: L }
 
@@ -41,12 +41,12 @@ processes:
   - name: P1 — Electricity supply
     reference_output: { flow: Electricity, amount: 1.0 }
     emissions:
-      - { flow: CO2 to air, amount: 0.4 }
+      - { flow: Carbon dioxide, amount: 0.4 }
 
   - name: P2 — Fertilizer supply
     reference_output: { flow: Fertilizer, amount: 1.0 }
     emissions:
-      - { flow: CO2 to air, amount: 2.5 }
+      - { flow: Carbon dioxide, amount: 2.5 }
 
   # ── Foreground processes ───────────────────────────────────────────────
   - name: P3 — Production
@@ -57,15 +57,15 @@ processes:
     resources:
       - { flow: Water, amount: 0.2 }
     emissions:
-      - { flow: CO2 to air, amount: 0.2   }
-      - { flow: CH4 to air, amount: 0.006 }
+      - { flow: Carbon dioxide, amount: 0.2   }
+      - { flow: Methane, amount: 0.006 }
 
   - name: P4 — Transport
     reference_output: { flow: Apple delivered, amount: 1.0 }
     inputs:
       - { flow: Apple, amount: 1.0 }
     emissions:
-      - { flow: CO2 to air, amount: 0.063 }
+      - { flow: Carbon dioxide, amount: 0.063 }
 
   - name: P5 — Use
     reference_output: { flow: Apple service, amount: 1.0 }
@@ -73,6 +73,9 @@ processes:
       - { flow: Apple delivered, amount: 0.19 }
 
 reference_process: P5 — Use
+
+lcia:
+  method_name: "TRACI 2.2"
 ---
 
 ## About this analysis

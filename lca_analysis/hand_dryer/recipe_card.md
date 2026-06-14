@@ -21,13 +21,13 @@ products:
 
 elementary_flows:
   emissions:
-    - { name: CO2, unit: kg }
+    - { name: Carbon dioxide, compartment: air, unit: kg }
 
 processes:
   - name: "P1 — Generate electricity"
     reference_output: { flow: Electricity, amount: 1.0 }
     emissions:
-      - { flow: CO2, amount: 0.4 }
+      - { flow: Carbon dioxide, amount: 0.4 }
 
   - name: "P2 — Dry hands"
     reference_output: { flow: Hand drying, amount: 1.0 }
@@ -35,6 +35,9 @@ processes:
       - { flow: Electricity, amount: 0.015 }
 
 reference_process: "P2 — Dry hands"
+
+lcia:
+  method_name: "TRACI 2.2"
 ---
 
 ## About this analysis

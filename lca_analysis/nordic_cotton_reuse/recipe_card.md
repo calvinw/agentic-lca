@@ -27,7 +27,7 @@ products:
 
 elementary_flows:
   emissions:
-    - { name: CO2 to air, unit: kg }
+    - { name: Carbon dioxide, compartment: air, unit: kg }
 
 # ─────────────────────────────────────────────────────────────────────────────
 # HOW THE REUSE CREDIT WORKS IN THIS MODEL
@@ -63,24 +63,27 @@ processes:
       - { flow: Nordic electricity credit,               amount: 0.576 }
       - { flow: Nordic heat credit,                      amount: 3.194 }
     emissions:
-      - { flow: CO2 to air, amount: 0.046 }
+      - { flow: Carbon dioxide, amount: 0.046 }
 
   - name: P2 — Avoided cotton garment production (farm to Nordic shop)
     reference_output: { flow: Avoided cotton garment production credit, amount: 1.0 }
     emissions:
-      - { flow: CO2 to air, amount: -13.14 }
+      - { flow: Carbon dioxide, amount: -13.14 }
 
   - name: P3 — Nordic marginal electricity displaced by end-of-life incineration
     reference_output: { flow: Nordic electricity credit, amount: 1.0 }
     emissions:
-      - { flow: CO2 to air, amount: -0.021 }
+      - { flow: Carbon dioxide, amount: -0.021 }
 
   - name: P4 — Nordic marginal heat displaced by end-of-life incineration
     reference_output: { flow: Nordic heat credit, amount: 1.0 }
     emissions:
-      - { flow: CO2 to air, amount: -0.071 }
+      - { flow: Carbon dioxide, amount: -0.071 }
 
 reference_process: P1 — Collect and reuse cotton garment in Nordic second-hand shop
+
+lcia:
+  method_name: "TRACI 2.2"
 ---
 
 ## About this scenario

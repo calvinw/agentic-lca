@@ -21,8 +21,8 @@ products:
 
 elementary_flows:
   emissions:
-    - { name: CO2, unit: kg }
-    - { name: SO2, unit: kg }
+    - { name: Carbon dioxide,  compartment: air, unit: kg }
+    - { name: Sulfur dioxide,  compartment: air, unit: kg }
   resources:
     - { name: Crude oil, unit: L }
 
@@ -32,18 +32,21 @@ processes:
     resources:
       - { flow: Crude oil, amount: 300 }
     emissions:
-      - { flow: CO2, amount: 60 }
-      - { flow: SO2, amount: 12 }
+      - { flow: Carbon dioxide, amount: 60 }
+      - { flow: Sulfur dioxide, amount: 12 }
 
   - name: P2 — Electricity Production
     reference_output: { flow: Electricity, amount: 100 }
     inputs:
       - { flow: Fuel, amount: 20 }
     emissions:
-      - { flow: CO2, amount: 20 }
-      - { flow: SO2, amount: 1 }
+      - { flow: Carbon dioxide, amount: 20 }
+      - { flow: Sulfur dioxide, amount: 1 }
 
 reference_process: "P2 — Electricity Production"
+
+lcia:
+  method_name: "TRACI 2.2"
 ---
 
 # LCA Example: Producing 200 kWh of Electricity

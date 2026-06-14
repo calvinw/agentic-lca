@@ -26,7 +26,7 @@ products:
 
 elementary_flows:
   emissions:
-    - { name: CO2 to air, unit: kg }
+    - { name: Carbon dioxide, compartment: air, unit: kg }
 
 # ─────────────────────────────────────────────────────────────────────────────
 # HOW AVOIDED BURDENS WORK IN THIS MODEL
@@ -56,19 +56,22 @@ processes:
       - { flow: Nordic electricity credit, amount: 0.576 }
       - { flow: Nordic heat credit,        amount: 3.194 }
     emissions:
-      - { flow: CO2 to air, amount: 0.046 }
+      - { flow: Carbon dioxide, amount: 0.046 }
 
   - name: P2 — Nordic marginal electricity displaced by energy recovery
     reference_output: { flow: Nordic electricity credit, amount: 1.0 }
     emissions:
-      - { flow: CO2 to air, amount: -0.021 }
+      - { flow: Carbon dioxide, amount: -0.021 }
 
   - name: P3 — Nordic marginal heat displaced by energy recovery
     reference_output: { flow: Nordic heat credit, amount: 1.0 }
     emissions:
-      - { flow: CO2 to air, amount: -0.071 }
+      - { flow: Carbon dioxide, amount: -0.071 }
 
 reference_process: P1 — Incinerate cotton in Nordic waste-to-energy plant
+
+lcia:
+  method_name: "TRACI 2.2"
 ---
 
 ## About this scenario

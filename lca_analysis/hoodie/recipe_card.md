@@ -36,9 +36,9 @@ products:
 
 elementary_flows:
   emissions:
-    - { name: CO2 to air, unit: kg }
-    - { name: N2O to air, unit: kg }
-    - { name: NH3 to air, unit: kg }
+    - { name: Carbon dioxide, compartment: air, unit: kg }
+    - { name: Nitrous oxide,  compartment: air, unit: kg }
+    - { name: Ammonia,        compartment: air, unit: kg }
   resources:
     - { name: Water, unit: L }
 
@@ -49,34 +49,34 @@ processes:
     resources:
       - { flow: Water, amount: 1500.0 }
     emissions:
-      - { flow: CO2 to air, amount: 2.3  }
-      - { flow: N2O to air, amount: 0.005 }
-      - { flow: NH3 to air, amount: 0.003 }
+      - { flow: Carbon dioxide, amount: 2.3  }
+      - { flow: Nitrous oxide, amount: 0.005 }
+      - { flow: Ammonia, amount: 0.003 }
 
   - name: P2 — Yarn production
     reference_output: { flow: Cotton yarn, amount: 1.0 }
     inputs:
       - { flow: Cotton fiber, amount: 1.053 }
     emissions:
-      - { flow: CO2 to air, amount: 4.3 }
+      - { flow: Carbon dioxide, amount: 4.3 }
 
   - name: P3 — Textile production
     reference_output: { flow: Knit fabric, amount: 1.0 }
     inputs:
       - { flow: Cotton yarn, amount: 1.025 }
     emissions:
-      - { flow: CO2 to air, amount: 5.0 }
+      - { flow: Carbon dioxide, amount: 5.0 }
 
   # ── Raw materials — zipper and resin (parallel inputs to manufacturing) ───
   - name: P4 — Zipper production
     reference_output: { flow: Brass zipper, amount: 1.0 }
     emissions:
-      - { flow: CO2 to air, amount: 4.0 }
+      - { flow: Carbon dioxide, amount: 4.0 }
 
   - name: P5 — Polyester resin production
     reference_output: { flow: Polyester resin, amount: 1.0 }
     emissions:
-      - { flow: CO2 to air, amount: 4.5 }
+      - { flow: Carbon dioxide, amount: 4.5 }
 
   # ── Foreground processes ──────────────────────────────────────────────────
   - name: P6 — Manufacturing
@@ -86,14 +86,14 @@ processes:
       - { flow: Brass zipper,   amount: 0.023 }
       - { flow: Polyester resin, amount: 0.021 }
     emissions:
-      - { flow: CO2 to air, amount: 3.0 }
+      - { flow: Carbon dioxide, amount: 3.0 }
 
   - name: P7 — Distribution
     reference_output: { flow: Sweatshirt in Berlin, amount: 1.0 }
     inputs:
       - { flow: Hooded sweatshirt, amount: 1.0 }
     emissions:
-      - { flow: CO2 to air, amount: 2.5 }
+      - { flow: Carbon dioxide, amount: 2.5 }
 
   - name: P8 — Use
     reference_output: { flow: Sweatshirt service, amount: 1.0 }
@@ -102,9 +102,12 @@ processes:
     resources:
       - { flow: Water, amount: 676.0 }
     emissions:
-      - { flow: CO2 to air, amount: 11.0 }
+      - { flow: Carbon dioxide, amount: 11.0 }
 
 reference_process: P8 — Use
+
+lcia:
+  method_name: "TRACI 2.2"
 ---
 
 ## About this analysis

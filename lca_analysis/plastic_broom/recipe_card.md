@@ -23,23 +23,23 @@ products:
 
 elementary_flows:
   emissions:
-    - { name: CO2, unit: kg }
+    - { name: Carbon dioxide, compartment: air, unit: kg }
 
 processes:
   - name: "P1 — Produce nylon 6"
     reference_output: { flow: Nylon 6, amount: 1.0 }
     emissions:
-      - { flow: CO2, amount: 9.07 }
+      - { flow: Carbon dioxide, amount: 9.07 }
 
   - name: "P2 — Produce PLA"
     reference_output: { flow: PLA, amount: 1.0 }
     emissions:
-      - { flow: CO2, amount: 2.68 }
+      - { flow: Carbon dioxide, amount: 2.68 }
 
   - name: "P3 — Transport by lorry"
     reference_output: { flow: Transport service, amount: 1.0 }
     emissions:
-      - { flow: CO2, amount: 0.15 }
+      - { flow: Carbon dioxide, amount: 0.15 }
 
   - name: "P4 — Assemble broom"
     reference_output: { flow: Plastic broom, amount: 1.0 }
@@ -49,6 +49,9 @@ processes:
       - { flow: Transport service, amount: 0.1055 }
 
 reference_process: "P4 — Assemble broom"
+
+lcia:
+  method_name: "TRACI 2.2"
 ---
 
 ## About this analysis

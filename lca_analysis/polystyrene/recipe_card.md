@@ -27,8 +27,8 @@ products:
 
 elementary_flows:
   emissions:
-    - { name: CO2 to air, unit: kg }
-    - { name: CH4 to air, unit: kg }
+    - { name: Carbon dioxide, compartment: air, unit: kg }
+    - { name: Methane,        compartment: air, unit: kg }
   resources:
     - { name: Crude oil in ground, unit: kg }
 
@@ -38,24 +38,27 @@ processes:
     resources:
       - { flow: Crude oil in ground, amount: 1.05 }
     emissions:
-      - { flow: CO2 to air, amount: 0.05 }
-      - { flow: CH4 to air, amount: 0.02 }
+      - { flow: Carbon dioxide, amount: 0.05 }
+      - { flow: Methane, amount: 0.02 }
 
   - name: P2 — PS manufacturing
     reference_output: { flow: Polystyrene, amount: 1.0 }
     inputs:
       - { flow: Crude oil, amount: 2.0 }
     emissions:
-      - { flow: CO2 to air, amount: 2.3 }
+      - { flow: Carbon dioxide, amount: 2.3 }
 
   - name: P3 — Peanut expansion
     reference_output: { flow: Packing peanuts, amount: 1.0 }
     inputs:
       - { flow: Polystyrene, amount: 1.0 }
     emissions:
-      - { flow: CO2 to air, amount: 0.1 }
+      - { flow: Carbon dioxide, amount: 0.1 }
 
 reference_process: "P3 — Peanut expansion"
+
+lcia:
+  method_name: "TRACI 2.2"
 ---
 
 ## About this analysis

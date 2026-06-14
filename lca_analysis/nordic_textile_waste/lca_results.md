@@ -1,6 +1,6 @@
 # LCA Results: Nordic Textile Waste — Scenario 2A — Cotton incineration with energy recovery
 
-Generated: 2026-06-12 08:13  |  openLCA system ID: `cbe0d83c-007a-4153-a418-c2d9ee48e6a3`
+Generated: 2026-06-14 02:19  |  openLCA system ID: `1bdf19ec-2d8d-447c-8010-336b4726a77a`
 
 ## Step 1 — Goal and Scope
 
@@ -43,7 +43,7 @@ Columns = processes, rows = elementary flows (biosphere).
 
 | | P1 — Incinerate cotton in Nordic waste-to-energy plant | P2 — Nordic marginal electricity displaced by energy recovery | P3 — Nordic marginal heat displaced by energy recovery |
 |---|---:|---:|---:|
-| **CO2 to air** | +0.05 | -0.02 | -0.07 |
+| **Carbon dioxide** | +0.05 | -0.02 | -0.07 |
 
 ## Step 5 — LCI Results  B · s
 
@@ -51,26 +51,46 @@ Columns = processes, rows = elementary flows (biosphere).
 
 | Flow | Numpy result | openLCA result | Unit | Match |
 |---|---:|---:|---|:---:|
-| **CO2 to air** | -0.1929 | -0.1929 | kg | ✓ |
+| **Carbon dioxide** | -0.1929 | -0.1929 | kg | ✓ |
 
 ## Step 6 — Scaled Emissions by Process  (B · diag(s))
 
 Each cell = emission rate × scaling factor.  Columns sum to the LCI totals in Step 5.
 
-| Process | s | CO2 to air |
+| Process | s | Carbon dioxide |
 |---|---:|---:|
 | P1 — Incinerate cotton in Nordic waste-to-energy plant | 1.0000 | 0.0460 |
 | P2 — Nordic marginal electricity displaced by energy recovery | 0.5760 | -0.0121 |
 | P3 — Nordic marginal heat displaced by energy recovery | 3.1940 | -0.2268 |
 | **Total** | | **-0.1929** |
 
+## Step 7 — LCIA Results  (TRACI 2.2)
+
+Characterization factors from the database. Each impact category score is the sum of all elementary flow contributions as computed by the openLCA engine.
+
+| Impact Category | Score | Unit |
+|---|---:|---|
+| Human health - cancer | **0.000000** | CTUcancer |
+| Acidification | **0.000000** | kg SO2 eq |
+| Eutrophication (Freshwater) | **0.000000** | kg P eq |
+| Human health - particulate matter | **0.000000** | PM 2.5 eq |
+| Smog formation | **0.000000** | kg O3 eq |
+| Human health - non-cancer | **0.000000** | CTUnoncancer |
+| Ozone depletion | **0.000000** | kg CFC-11 eq |
+| Global warming | **-0.192870** | kg CO2 eq |
+
 ## Summary
 
-$$
-\text{Total emissions} = B \cdot A^{-1} \cdot f
-$$
+**LCIA Method:** TRACI 2.2
 
-> **CO2 to air: -0.1929 kg** per 1.0 kg of Treatment of one kilogram of used 100% cotton textiles — collection to final grave
+> **Human health - cancer: 0.000000 CTUcancer** per 1.0 kg of Treatment of one kilogram of used 100% cotton textiles — collection to final grave
+> **Acidification: 0.000000 kg SO2 eq** per 1.0 kg of Treatment of one kilogram of used 100% cotton textiles — collection to final grave
+> **Eutrophication (Freshwater): 0.000000 kg P eq** per 1.0 kg of Treatment of one kilogram of used 100% cotton textiles — collection to final grave
+> **Human health - particulate matter: 0.000000 PM 2.5 eq** per 1.0 kg of Treatment of one kilogram of used 100% cotton textiles — collection to final grave
+> **Smog formation: 0.000000 kg O3 eq** per 1.0 kg of Treatment of one kilogram of used 100% cotton textiles — collection to final grave
+> **Human health - non-cancer: 0.000000 CTUnoncancer** per 1.0 kg of Treatment of one kilogram of used 100% cotton textiles — collection to final grave
+> **Ozone depletion: 0.000000 kg CFC-11 eq** per 1.0 kg of Treatment of one kilogram of used 100% cotton textiles — collection to final grave
+> **Global warming: -0.192870 kg CO2 eq** per 1.0 kg of Treatment of one kilogram of used 100% cotton textiles — collection to final grave
 
 ## Product System Graphs
 
