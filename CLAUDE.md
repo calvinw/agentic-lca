@@ -209,7 +209,59 @@ Explain the result as: "I just sent a quick 'are you there?' message to the open
 
 If it is not running, start it with `bash start_olca.sh` and explain: "The openLCA calculation engine wasn't running — I've just started it up. It's a bit like turning on the calculator before you can press any buttons. This only takes a few seconds."
 
-If it has never been set up before, use `bash setup_olca.sh` instead and explain: "This is the first-time setup — the computer needs to download and build the openLCA software before it can start. This takes a minute or two but only needs to happen once."
+If it has never been set up before, use `bash setup_olca.sh` instead and explain: "This is the first-time setup — the computer needs to download and build the openLCA software before it can start. It will also download the reference data it needs (about 340 MB in total). This takes a few minutes but only needs to happen once."
+
+`setup_olca.sh` now handles everything automatically in sequence: Python tools → data downloads → Docker build → server start → database import. Each step is skipped on subsequent runs if it has already been completed.
+
+---
+
+## FEDEFL flow names — the naming standard for emissions and resources
+
+All recipe cards use the **Federal Elementary Flow List (FEDEFL)** — the US EPA's standard names for elementary flows. When writing or editing recipe cards, always use these exact names in the `elementary_flows` and `emissions` sections. The most common ones are:
+
+| Substance | FEDEFL name (use this exactly) | Do NOT use |
+|---|---|---|
+| Carbon dioxide | `Carbon dioxide` | `CO2`, `CO2 to air`, `carbon dioxide` |
+| Methane | `Methane` | `CH4`, `CH4 to air` |
+| Nitrous oxide | `Nitrous oxide` | `N2O`, `N2O to air` |
+| Ammonia | `Ammonia` | `NH3`, `NH3 to air` |
+| Nitrogen oxides | `Nitrogen oxides` | `NOx`, `NOx to air` |
+| Sulfur dioxide | `Sulfur dioxide` | `SO2`, `SO2 to air` |
+| Water | `Water` | `H2O`, `water` |
+
+Getting these names wrong causes the LCIA step to score zero for that flow, with no error message — it will silently fail. Always double-check the spelling.
+
+The `compartment` field (e.g. `compartment: air`) is used in recipe cards for human readability but does not affect the database lookup — only the name matters for matching.
+
+---
+
+## LCIA method — TRACI 2.2
+
+All recipe cards include a `lcia:` section at the bottom:
+
+```yaml
+lcia:
+  method_name: "TRACI 2.2"
+```
+
+This tells `lca_analysis.py` which impact method to use when converting the inventory (raw kg of CO₂, SO₂, etc.) into scored impact categories. Always include this section. The only supported value is `"TRACI 2.2"`.
+
+**TRACI 2.2** (Tool for the Reduction and Assessment of Chemicals and other environmental Impacts) is the US EPA's standard life cycle impact assessment method. It produces eight impact scores:
+
+| Category | Unit | Plain-English meaning |
+|---|---|---|
+| Global warming | kg CO₂ eq | Contribution to climate change |
+| Acidification | kg SO₂ eq | Contribution to acid rain |
+| Smog formation | kg O₃ eq | Contribution to ground-level smog |
+| Human health — particulate matter | kg PM 2.5 eq | Fine particle health damage |
+| Eutrophication (freshwater) | kg N eq | Excess nutrients causing algal blooms |
+| Human health — cancer | CTUh | Cancer risk from toxic substances |
+| Human health — non-cancer | CTUh | Other toxic health impacts |
+| Ozone depletion | kg CFC-11 eq | Damage to the stratospheric ozone layer |
+
+TRACI 2.2 requires FEDEFL flow names (see section above). Flows with non-FEDEFL names will not match any characterisation factor and will contribute zero to all impact categories.
+
+**The blorp example** (`lca_analysis/blorp/`) is intentionally excluded from TRACI scoring — it uses made-up units (Blorps, Haze, Smog) as a pure maths teaching demo. Its recipe card does not include the `lcia:` section and should be left unchanged.
 
 ---
 

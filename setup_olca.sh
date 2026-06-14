@@ -11,12 +11,35 @@ set -e
 IMAGE="gdt-server:latest"
 CONTAINER="olca-server"
 DATA_DIR="$HOME/olca-data"
+RELEASE_BASE="https://github.com/calvinw/agentic-lca/releases/download/lca-data-v1"
+FEDEFL_ZIP="$DATA_DIR/Federal_LCA_Commons-elementary_flow_list.zip"
+TRACI_ZIP="$DATA_DIR/Federal_LCA_Commons-TRACI_2_2.zip"
+DB_DIR="$DATA_DIR/databases/lca_commons"
 
 mkdir -p "$DATA_DIR/databases"
 
 echo "[olca] Installing required Python packages..."
 pip install olca-ipc olca-schema pyyaml numpy matplotlib --break-system-packages -q
 echo "[olca] Python packages ready."
+
+# Download LCA reference data zips if not already present
+if [ ! -f "$FEDEFL_ZIP" ]; then
+    echo "[olca] Downloading FEDEFL elementary flow list (214 MB)..."
+    curl -L --progress-bar "$RELEASE_BASE/Federal_LCA_Commons-elementary_flow_list.zip" \
+        -o "$FEDEFL_ZIP"
+    echo "[olca] elementary_flow_list.zip saved."
+else
+    echo "[olca] FEDEFL zip already present — skipping download."
+fi
+
+if [ ! -f "$TRACI_ZIP" ]; then
+    echo "[olca] Downloading TRACI 2.2 impact method (126 MB)..."
+    curl -L --progress-bar "$RELEASE_BASE/Federal_LCA_Commons-TRACI_2_2.zip" \
+        -o "$TRACI_ZIP"
+    echo "[olca] TRACI_2_2.zip saved."
+else
+    echo "[olca] TRACI 2.2 zip already present — skipping download."
+fi
 
 # Build the image if it doesn't exist yet
 if ! docker image inspect "$IMAGE" > /dev/null 2>&1; then
@@ -51,6 +74,16 @@ for i in $(seq 1 30); do
         echo "[olca] Server ready at http://localhost:8080"
         curl -s http://localhost:8080/api/version
         echo ""
+
+        # Import LCA data if the database is empty or new
+        if [ ! -d "$DB_DIR" ] || [ -z "$(ls -A "$DB_DIR" 2>/dev/null)" ]; then
+            echo "[olca] Database is empty — importing FEDEFL flows and TRACI 2.2..."
+            python3 "$(dirname "$0")/import_lca_data.py"
+            echo "[olca] Import complete."
+        else
+            echo "[olca] Database already populated — skipping import."
+        fi
+
         exit 0
     fi
     sleep 2

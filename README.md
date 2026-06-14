@@ -32,6 +32,40 @@ The three case studies available for all lessons are:
 
 ---
 
+### `/what-is-lca` — What is a Life Cycle Assessment?
+
+**What you will learn:** What LCA is, why it matters for people working in fashion or retail, and how a study is structured — without any maths or science background required.
+
+**How to start:**
+
+```
+/what-is-lca
+```
+
+No case study argument needed — this is the very first skill, designed to be used before anything else. It opens with a question about something familiar from retail life (like why a cotton T-shirt might have a larger footprint than you'd expect) and builds from your answer. By the end you will be able to explain to a colleague why LCA is relevant to sourcing, product design, and sustainability claims.
+
+**How long:** About 10 minutes of conversation.
+
+---
+
+### `/goal-and-scope` — What are we studying and why?
+
+**What you will learn:** The two foundational decisions every LCA study must make before any numbers are calculated — the goal (why you are doing it and who it is for) and the scope (what is included and excluded). These decisions shape every result that follows.
+
+**How to start** — pick one of the three case studies:
+
+```
+/goal-and-scope cotton_fiber
+/goal-and-scope polyester_tshirt
+/goal-and-scope wool_yarn
+```
+
+The lesson opens by asking what question a retailer might want an LCA to answer, then walks you through how that question becomes a formal study design. By the end you will understand what "cradle to gate" and "cradle to grave" mean, why two LCA studies of the same product can reach different conclusions, and what to look for when a supplier hands you a sustainability report.
+
+**How long:** About 10–15 minutes of conversation.
+
+---
+
 ### `/functional-unit` — What exactly are we measuring?
 
 **What you will learn:** What a functional unit is, why the choice of unit matters, and how picking the wrong unit can make a misleading sustainability comparison.
@@ -90,26 +124,37 @@ The lesson uses a cooking analogy to introduce the idea — if a bread recipe ma
 
 ### What this project currently calculates
 
-When you run an analysis with `/run-lca`, the tool works through these steps:
+When you run an analysis with `/run-lca`, the tool works through these steps and saves the results to `lca_results.md`:
 
 | Step | What happens |
 |---|---|
 | 1 | **Goal and scope** — sets the functional unit and the reference flow |
-| 2 | **Product graph** — maps out all processes, products, and emissions |
-| 3–7 | **Build the model** — creates all flows, processes, and the product system in openLCA |
-| 8 | **Technology matrix (A)** — the grid of what each process produces and consumes |
-| 9 | **Scaling vector (s)** — solves how many times each process must run to deliver one functional unit |
-| 10 | **Intervention matrix (B)** — the grid of what each process emits or extracts per run |
-| 11 | **Submit to openLCA** — sends the full model to the calculation engine and waits for the result |
-| 12 | **Verify** — checks that the numpy calculation and the openLCA result agree |
-| 13 | **Contribution analysis** — shows which process drives the impact |
+| 2 | **Technology matrix (A)** — the grid of what each process produces and consumes |
+| 3 | **Scaling vector (s)** — solves how many times each process must run to deliver one functional unit |
+| 4 | **Intervention matrix (B)** — the grid of what each process emits or extracts per run |
+| 5 | **LCI results** — total inventory (B × s): all emissions and extractions for the whole supply chain |
+| 6 | **Contribution analysis** — breaks down which process is responsible for how much of each emission |
+| 7 | **LCIA results** — converts inventory flows into impact category scores using **TRACI 2.2** |
 
 The inventory tracks two types of flow crossing the boundary between the supply chain and the natural world:
 
 - **Emissions** — substances released *to* nature (CO₂ to air, wastewater to rivers, etc.)
 - **Extractions** — substances drawn *from* nature (crude oil, water, land, minerals, etc.)
 
-The **Life Cycle Impact Assessment (LCIA)** step converts those raw inventory numbers into scored impact categories like Global Warming Potential or Water Depletion.
+The **Life Cycle Impact Assessment (LCIA)** step converts those raw inventory numbers into scored impact categories. This project uses **TRACI 2.2** (Tool for the Reduction and Assessment of Chemicals and other environmental Impacts), the US EPA's standard impact method. It covers eight categories:
+
+| Impact category | What it measures | Unit |
+|---|---|---|
+| Global warming | Greenhouse gases contributing to climate change | kg CO₂ equivalent |
+| Acidification | Acid rain and ecosystem acidification | kg SO₂ equivalent |
+| Smog formation | Ground-level ozone (smog) | kg O₃ equivalent |
+| Human health — particulate matter | Fine particle pollution affecting lungs | kg PM 2.5 equivalent |
+| Eutrophication (freshwater) | Excess nutrients causing algal blooms | kg N equivalent |
+| Human health — cancer | Toxic substances linked to cancer | CTUh |
+| Human health — non-cancer | Other toxic health impacts | CTUh |
+| Ozone depletion | Damage to the stratospheric ozone layer | kg CFC-11 equivalent |
+
+TRACI 2.2 uses the **Federal Elementary Flow List (FEDEFL)** — the US EPA's standard naming system for substances like "Carbon dioxide" and "Methane". Recipe cards must use these exact FEDEFL names so the tool can match each emission to its correct impact factors.
 
 ---
 
@@ -127,9 +172,29 @@ Each product you study gets its own folder inside `lca_analysis/`. Every folder 
 Current analyses:
 ```
 lca_analysis/
-├── coffee/          — carbon footprint of one cup of coffee
-├── cotton_shirt/    — carbon footprint of one cotton shirt (cradle to gate)
-└── paper_cup/       — carbon footprint of one paper cup
+├── coffee/                    — carbon footprint of one cup of coffee
+├── cotton_shirt/              — carbon footprint of one cotton shirt (cradle to gate)
+├── paper_cup/                 — carbon footprint of one paper cup
+├── apple/                     — carbon footprint of one apple (farm to retail)
+├── electricity/               — emissions from producing 200 kWh of electricity
+├── hand_dryer/                — hand dryer vs paper towels energy comparison
+├── hoodie/                    — carbon footprint of one cotton hoodie
+├── light_bulb/                — LED vs incandescent bulb over lifetime
+├── nordic_cotton_reuse/       — Nordic textile reuse scenario
+├── nordic_textile_waste/      — Nordic textile waste scenario
+├── plastic_broom/             — carbon footprint of one plastic broom
+├── polystyrene/               — carbon footprint of 1 kg polystyrene packing
+├── popcorn/                   — popcorn vs polystyrene packing (per kg)
+└── levis/                     — Levi's 501 jeans: baseline + six what-if scenarios
+    ├── levi_jeans/            — baseline (standard manufacturing)
+    ├── levi_jeans_bestcase/   — all best-case assumptions combined
+    ├── levi_jeans_longlife/   — worn for 10 years instead of 3
+    ├── levi_jeans_organic/    — organic cotton substituted
+    ├── levi_jeans_renewable/  — renewable energy at all factories
+    ├── levi_jeans_wash1x/     — washed once a week
+    ├── levi_jeans_wash2x/     — washed twice a week
+    ├── levi_jeans_wash5x/     — washed five times a week
+    └── levi_jeans_wash10x/    — washed ten times a week
 ```
 
 You interact with this project by describing a product in a `recipe_card.md` file and then asking the AI assistant to run the analysis for you. The AI handles everything else.
@@ -199,7 +264,7 @@ products:
 
 elementary_flows:
   emissions:
-    - { name: CO2 to air, unit: kg }
+    - { name: Carbon dioxide, compartment: air, unit: kg }
   resources:
     # (none in this example — emissions only)
 
@@ -207,7 +272,7 @@ processes:
   - name: P1 — Grow cotton
     reference_output: { flow: Raw cotton, amount: 1.0 }
     emissions:
-      - { flow: CO2 to air, amount: 3.0 }
+      - { flow: Carbon dioxide, amount: 3.0 }
 
   - name: P2 — Spin yarn
     reference_output: { flow: Yarn, amount: 1.0 }
@@ -230,9 +295,12 @@ processes:
   - name: P5 — Generate electricity
     reference_output: { flow: Electricity, amount: 1.0 }
     emissions:
-      - { flow: CO2 to air, amount: 0.5 }
+      - { flow: Carbon dioxide, amount: 0.5 }
 
 reference_process: P4 — Cut and sew shirt
+
+lcia:
+  method_name: "TRACI 2.2"
 ```
 
 A few things to notice:
@@ -240,6 +308,23 @@ A few things to notice:
 - **P2, P3, P4** each consume intermediate products from earlier steps *and* draw electricity from the grid.
 - **P5 (Generate electricity)** is where the biosphere boundary appears: CO₂ is emitted *to* nature (0.5 kg per kWh) as a result of burning coal.
 - The `reference_process` is P4 — the final step that produces the finished shirt.
+- The `lcia:` section at the bottom tells the tool which impact method to use. Always set this to `"TRACI 2.2"`.
+
+#### FEDEFL flow names
+
+Flow names in the `elementary_flows` and `emissions` sections must use the exact names from the **Federal Elementary Flow List (FEDEFL)** — the US EPA's standard. The most common ones are:
+
+| What you are describing | FEDEFL name to use |
+|---|---|
+| Carbon dioxide (CO₂) | `Carbon dioxide` |
+| Methane (CH₄) | `Methane` |
+| Nitrous oxide (N₂O) | `Nitrous oxide` |
+| Ammonia (NH₃) | `Ammonia` |
+| Nitrogen oxides (NOx) | `Nitrogen oxides` |
+| Sulfur dioxide (SO₂) | `Sulfur dioxide` |
+| Water | `Water` |
+
+Do not use abbreviations like `CO2`, `CH4`, or `CO2 to air` — these will not match the TRACI 2.2 characterisation factors and the LCIA step will return zero for that flow.
 
 ---
 
@@ -253,7 +338,15 @@ The openLCA server does **not** start automatically — you need to start it you
 bash setup_olca.sh
 ```
 
-This builds the openLCA software (like downloading and installing an app — this can take a minute or two and only happens once), installs the required tools, and starts the server. Use this the very first time you use a new Codespace, or if you have deleted and rebuilt everything from scratch.
+This does everything needed to get the system ready from scratch — in order:
+
+1. Installs the required Python tools
+2. Downloads the FEDEFL elementary flow list (214 MB) and TRACI 2.2 impact method (126 MB) from the project's GitHub release — only if they are not already present
+3. Builds the openLCA calculation engine (only happens once per Codespace)
+4. Starts the server
+5. Imports all the flow and impact data into the database — only if the database is empty
+
+The whole process takes a few minutes the first time, but each step is skipped on subsequent runs if it has already been done.
 
 #### `start_olca.sh` — Start the server (use this every time after that)
 
