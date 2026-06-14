@@ -27,43 +27,31 @@ products:
 
 elementary_flows:
   emissions:
-    - { name: CO2 to air, unit: kg }
-    - { name: CH4 to air, unit: kg }
+    - { name: Carbon dioxide, compartment: air,   unit: kg }
+    - { name: Methane,        compartment: air,   unit: kg }
   resources:
-    - { name: Water, unit: L }
+    - { name: Water,          compartment: water, unit: L  }
 
 processes:
   - name: P1 — Sheep farming
     reference_output: { flow: Raw wool, amount: 1.0 }
     emissions:
-      - { flow: CO2 to air, amount: 0.5 }
-      - { flow: CH4 to air, amount: 0.4 }
+      - { flow: Carbon dioxide, amount: 0.5 }
+      - { flow: Methane,        amount: 0.4 }
 
   - name: P2 — Wool yarn production
     reference_output: { flow: Wool yarn, amount: 1.0 }
     inputs:
       - { flow: Raw wool, amount: 1.1 }
     emissions:
-      - { flow: CO2 to air, amount: 2.0 }
+      - { flow: Carbon dioxide, amount: 2.0 }
     resources:
       - { flow: Water, amount: 30 }
 
 reference_process: "P2 — Wool yarn production"
 
 lcia:
-  method: IPCC AR6
-  impact_categories:
-    - name: Climate change
-      indicator: GWP100
-      unit: kg CO2 eq
-      characterization_factors:
-        CO2 to air: 1.0
-        CH4 to air: 27.9
-    - name: Water consumption
-      indicator: H₂O consumed
-      unit: m³
-      characterization_factors:
-        Water: 0.001
+  method_name: "TRACI 2.2"
 ---
 
 ## About this analysis

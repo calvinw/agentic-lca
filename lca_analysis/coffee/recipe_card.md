@@ -28,9 +28,9 @@ products:
 
 elementary_flows:
   emissions:
-    - { name: CO2 to air, unit: kg }
+    - { name: Carbon dioxide, compartment: air,   unit: kg }
   resources:
-    - { name: Water, unit: L }
+    - { name: Water,          compartment: water, unit: L  }
 
 processes:
   - name: P1 — Make coffee
@@ -48,9 +48,12 @@ processes:
     resources:
       - { flow: Water, amount: 0.5 }
     emissions:
-      - { flow: CO2 to air,   amount: 1.0 }
+      - { flow: Carbon dioxide, amount: 1.0 }
 
 reference_process: P1 — Make coffee
+
+lcia:
+  method_name: "TRACI 2.2"
 ---
 
 ## About this analysis

@@ -29,41 +29,34 @@ products:
 
 elementary_flows:
   emissions:
-    - { name: CO2 to air, unit: kg }
-    - { name: CH4 to air, unit: kg }
+    - { name: Carbon dioxide, compartment: air, unit: kg }
+    - { name: Methane,        compartment: air, unit: kg }
 
 processes:
   - name: P1 — Oil extraction
     reference_output: { flow: Crude oil, amount: 1.0 }
     emissions:
-      - { flow: CO2 to air, amount: 0.20 }
-      - { flow: CH4 to air, amount: 0.05 }
+      - { flow: Carbon dioxide, amount: 0.20 }
+      - { flow: Methane,        amount: 0.05 }
 
   - name: P2 — Polyester fiber production
     reference_output: { flow: Polyester fiber, amount: 1.0 }
     inputs:
       - { flow: Crude oil, amount: 1.5 }
     emissions:
-      - { flow: CO2 to air, amount: 5.5 }
+      - { flow: Carbon dioxide, amount: 5.5 }
 
   - name: P3 — T-shirt assembly
     reference_output: { flow: T-shirt, amount: 1.0 }
     inputs:
       - { flow: Polyester fiber, amount: 0.2 }
     emissions:
-      - { flow: CO2 to air, amount: 1.0 }
+      - { flow: Carbon dioxide, amount: 1.0 }
 
 reference_process: "P3 — T-shirt assembly"
 
 lcia:
-  method: IPCC AR6
-  impact_categories:
-    - name: Climate change
-      indicator: GWP100
-      unit: kg CO2 eq
-      characterization_factors:
-        CO2 to air: 1.0
-        CH4 to air: 27.9
+  method_name: "TRACI 2.2"
 ---
 
 ## About this analysis

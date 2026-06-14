@@ -29,13 +29,15 @@ products:
 
 elementary_flows:
   emissions:
-    - { name: CO2 to air, unit: kg }
+    - { name: Carbon dioxide,  compartment: air, unit: kg }
+    - { name: Nitrogen oxides, compartment: air, unit: kg }
+    - { name: Sulfur dioxide,  compartment: air, unit: kg }
 
 processes:
   - name: P1 — Grow cotton
     reference_output: { flow: Raw cotton, amount: 1.0 }
     emissions:
-      - { flow: CO2 to air, amount: 3.0 }
+      - { flow: Carbon dioxide, amount: 3.0 }
 
   - name: P2 — Spin yarn
     reference_output: { flow: Yarn, amount: 1.0 }
@@ -58,9 +60,14 @@ processes:
   - name: P5 — Generate electricity
     reference_output: { flow: Electricity, amount: 1.0 }
     emissions:
-      - { flow: CO2 to air, amount: 0.5 }
+      - { flow: Carbon dioxide,  amount: 0.5    }
+      - { flow: Nitrogen oxides, amount: 0.0009 }
+      - { flow: Sulfur dioxide,  amount: 0.0006 }
 
 reference_process: P4 — Cut and sew shirt
+
+lcia:
+  method_name: "TRACI 2.2"
 ---
 
 ## About this analysis

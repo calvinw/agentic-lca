@@ -22,7 +22,7 @@ products:
 
 elementary_flows:
   emissions:
-    - { name: CO2 to air, unit: kg }
+    - { name: Carbon dioxide, compartment: air, unit: kg }
 
 processes:
   - name: P1 — Make paper cup
@@ -38,9 +38,12 @@ processes:
   - name: P3 — Generate electricity
     reference_output: { flow: Electricity, amount: 1.0  }
     emissions:
-      - { flow: CO2 to air,  amount: 1.0  }
+      - { flow: Carbon dioxide, amount: 1.0 }
 
 reference_process: P1 — Make paper cup
+
+lcia:
+  method_name: "TRACI 2.2"
 ---
 
 ## About this analysis

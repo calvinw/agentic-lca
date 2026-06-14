@@ -31,51 +31,33 @@ products:
 
 elementary_flows:
   emissions:
-    - { name: CO2 to air, unit: kg }
-    - { name: N2O to air, unit: kg }
-    - { name: NH3 to air, unit: kg }
+    - { name: Carbon dioxide, compartment: air, unit: kg }
+    - { name: Nitrous oxide,  compartment: air, unit: kg }
+    - { name: Ammonia,        compartment: air, unit: kg }
   resources:
-    - { name: Water, unit: L }
+    - { name: Water,          compartment: water, unit: L }
 
 processes:
   - name: P1 — Fertilizer production
     reference_output: { flow: N-fertilizer, amount: 1.0 }
     emissions:
-      - { flow: CO2 to air, amount: 3.5 }
+      - { flow: Carbon dioxide, amount: 3.5 }
 
   - name: P2 — Cotton farming
     reference_output: { flow: Cotton fiber, amount: 1.0 }
     inputs:
       - { flow: N-fertilizer, amount: 0.2 }
     emissions:
-      - { flow: CO2 to air,  amount: 0.8  }
-      - { flow: N2O to air,  amount: 0.015 }
-      - { flow: NH3 to air,  amount: 0.010 }
+      - { flow: Carbon dioxide, amount: 0.8   }
+      - { flow: Nitrous oxide,  amount: 0.015 }
+      - { flow: Ammonia,        amount: 0.010 }
     resources:
       - { flow: Water, amount: 8000 }
 
 reference_process: "P2 — Cotton farming"
 
 lcia:
-  method: EF 3.0
-  impact_categories:
-    - name: Climate change
-      indicator: GWP100
-      unit: kg CO2 eq
-      characterization_factors:
-        CO2 to air: 1.0
-        N2O to air: 273.0
-    - name: Terrestrial eutrophication
-      indicator: EP-terrestrial
-      unit: mol N eq
-      characterization_factors:
-        NH3 to air: 3.54
-        N2O to air: 0.27
-    - name: Water consumption
-      indicator: H₂O consumed
-      unit: m³
-      characterization_factors:
-        Water: 0.001
+  method_name: "TRACI 2.2"
 ---
 
 ## About this analysis

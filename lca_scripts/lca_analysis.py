@@ -83,6 +83,22 @@ def get_ef_unit(spec: dict, flow_name: str) -> str:
 
 # ── Build openLCA entities ────────────────────────────────────────────────────
 
+def resolve_flow(client: RestClient, name: str, flow_property) -> o.Flow:
+    """Look up flow by FEDEFL name in DB; create new only as fallback."""
+    try:
+        for d in client.get_descriptors(o.Flow):
+            if d.name and d.name.strip().lower() == name.strip().lower():
+                existing = client.get(o.Flow, d.id)
+                if existing is not None:
+                    print(f"      ✓ resolved '{name}' → DB flow ({d.id[:8]})")
+                    return existing
+    except Exception:
+        pass
+    flow = o.new_elementary_flow(name, flow_property)
+    client.put(flow)
+    print(f"      + created new flow '{name}'")
+    return flow
+
 def build_model(client: RestClient, spec: dict) -> tuple[dict, o.Ref]:
     reg = {}
 
@@ -103,13 +119,11 @@ def build_model(client: RestClient, spec: dict) -> tuple[dict, o.Ref]:
 
     step(5, "Elementary Flows  (biosphere — emissions / extractions)")
     for ef in spec.get("elementary_flows", {}).get("emissions", []):
-        flow = o.new_elementary_flow(ef["name"], reg[ef["unit"]])
-        client.put(flow)
+        flow = resolve_flow(client, ef["name"], reg[ef["unit"]])
         reg[ef["name"]] = flow
         print(f"    {ef['name']}  [{ef['unit']}]  → emission to nature")
     for ef in spec.get("elementary_flows", {}).get("resources", []):
-        flow = o.new_elementary_flow(ef["name"], reg[ef["unit"]])
-        client.put(flow)
+        flow = resolve_flow(client, ef["name"], reg[ef["unit"]])
         reg[ef["name"]] = flow
         print(f"    {ef['name']}  [{ef['unit']}]  ← extraction from nature")
 
@@ -144,6 +158,18 @@ def build_model(client: RestClient, spec: dict) -> tuple[dict, o.Ref]:
     print(f"    System: {system_ref.name}")
     print(f"    ID    : {system_ref.id}")
     return reg, system_ref
+
+def get_impact_method_ref(client: RestClient, method_name: str):
+    """Look up an impact method in the database by name. Returns Ref or None."""
+    try:
+        for d in client.get_descriptors(o.ImpactMethod):
+            if d.name and method_name.strip().lower() in d.name.strip().lower():
+                print(f"    ✓ found impact method in DB: {d.name}")
+                return d.to_ref()
+    except Exception:
+        pass
+    print(f"    ✗ method '{method_name}' not found in database — LCIA skipped")
+    return None
 
 # ── Derive matrices from spec ─────────────────────────────────────────────────
 
@@ -188,7 +214,8 @@ def build_matrices(spec: dict):
 # ── Generate lca_results.md ───────────────────────────────────────────────────
 
 def write_results_md(spec, A, B, s, Bs, olca_outputs, olca_inputs,
-                     proc_names, prod_names, em_names, res_names, system_id):
+                     proc_names, prod_names, em_names, res_names,
+                     system_id, olca_impacts=None, method_name=""):
     fu   = spec["functional_unit"]
     name = spec["name"]
     now  = datetime.datetime.now().strftime("%Y-%m-%d %H:%M")
@@ -335,7 +362,19 @@ def write_results_md(spec, A, B, s, Bs, olca_outputs, olca_inputs,
         ln()
 
     lcia = spec.get("lcia")
-    if lcia and lcia.get("impact_categories"):
+    if olca_impacts:
+        ln(f"## Step 7 — LCIA Results  ({method_name})")
+        ln()
+        ln("Characterization factors from the database. "
+           "Each impact category score is the sum of all "
+           "elementary flow contributions as computed by the openLCA engine.")
+        ln()
+        ln("| Impact Category | Score | Unit |")
+        ln("|---|---:|---|")
+        for cat_name, (val, unit) in olca_impacts.items():
+            ln(f"| {cat_name} | **{val:.6f}** | {unit} |")
+        ln()
+    elif lcia and lcia.get("impact_categories"):
         all_ef_names = em_names + res_names
         all_ef_idx   = {n: i for i, n in enumerate(all_ef_names)}
         ln(f"## Step 7 — LCIA Characterization  ({lcia['method']})")
@@ -366,7 +405,13 @@ def write_results_md(spec, A, B, s, Bs, olca_outputs, olca_inputs,
 
     ln("## Summary")
     ln()
-    if lcia and lcia.get("impact_categories"):
+    if olca_impacts:
+        ln(f"**LCIA Method:** {method_name}")
+        ln()
+        for cat_name, (val, unit) in olca_impacts.items():
+            ln(f"> **{cat_name}: {val:.6f} {unit}** "
+               f"per {fu['amount']} {fu['unit']} of {fu['description']}")
+    elif lcia and lcia.get("impact_categories"):
         all_ef_names = em_names + res_names
         all_ef_idx   = {n: i for i, n in enumerate(all_ef_names)}
         ln(f"**Method:** {lcia['method']}")
@@ -495,8 +540,19 @@ def main():
         print("  (no elementary flows defined)")
 
     step(11, "LCA Calculation via openLCA gdt-server")
+
+    lcia_spec   = spec.get("lcia", {})
+    method_name = lcia_spec.get("method_name", "")
+    method_ref  = None
+    if method_name:
+        method_ref = get_impact_method_ref(client, method_name)
+
     print(f"\n  Submitting product system {system_ref.id[:8]}…")
-    setup  = o.CalculationSetup(target=o.Ref(id=system_ref.id), amount=fu["amount"])
+    setup = o.CalculationSetup(
+        target=o.Ref(id=system_ref.id),
+        amount=fu["amount"],
+        impact_method=method_ref
+    )
     result = client.calculate(setup)
     result.wait_until_ready()
     print(f"  Calculation complete.")
@@ -506,6 +562,12 @@ def main():
                     for f in flows if not f.envi_flow.is_input}
     olca_inputs  = {f.envi_flow.flow.name: f.amount
                     for f in flows if f.envi_flow.is_input}
+
+    olca_impacts = {}
+    if method_ref:
+        for iv in result.get_total_impacts():
+            olca_impacts[iv.impact_category.name] = (iv.amount, iv.impact_category.ref_unit or "")
+
     result.dispose()
 
     step(12, "LCI Results  B · s")
@@ -559,11 +621,15 @@ def main():
         totals_r = "  ".join(f"{abs(Bs[n_em+k]):>{col_w}.4f}" for k in range(n_res))
         print(f"  {'Total':<30} {'':>8}  {totals_r}")
 
-    lcia = spec.get("lcia")
-    if lcia and lcia.get("impact_categories"):
+    if olca_impacts:
+        step(14, f"LCIA Results  ({method_name})")
+        print()
+        for cat_name, (val, unit) in olca_impacts.items():
+            print(f"  {cat_name:<45} {val:>12.6f}  {unit}")
+    elif lcia_spec.get("impact_categories"):
         all_ef_idx = {n: i for i, n in enumerate(em_names + res_names)}
-        step(14, f"LCIA Characterization  ({lcia['method']})")
-        for cat in lcia["impact_categories"]:
+        step(14, f"LCIA Characterization  ({lcia_spec['method']})")
+        for cat in lcia_spec["impact_categories"]:
             cfs       = cat.get("characterization_factors", {})
             cat_total = sum(
                 abs(Bs[all_ef_idx[en]]) * cf
@@ -579,7 +645,8 @@ def main():
                     print(f"    {en:<28} {lci_val:.4f} {ef_unit} × {cf} = {lci_val*cf:.4f} {cat_unit}")
 
     write_results_md(spec, A, B, s, Bs, olca_outputs, olca_inputs,
-                     proc_names, prod_names, em_names, res_names, system_ref.id)
+                     proc_names, prod_names, em_names, res_names,
+                     system_ref.id, olca_impacts=olca_impacts, method_name=method_name)
 
     step(15, "Product Graphs")
     graph_dir = str(pathlib.Path(ANALYSIS_FILE).parent)
