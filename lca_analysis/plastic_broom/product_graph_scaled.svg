@@ -16,15 +16,15 @@
 </defs>
 <text x="478.2" y="-11.4" text-anchor="middle" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="bold" fill="#222">Plastic Broom LCA — cradle to gate</text>
 <line x1="142.8" y1="54.8" x2="142.8" y2="84.8" stroke="#c0392b" stroke-width="1.6" marker-end="url(#arr-red)"/>
-<text x="137.8" y="66.2" text-anchor="end" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#c0392b">Carbon dioxide</text>
+<text x="137.8" y="66.2" text-anchor="end" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#c0392b">CO<tspan baseline-shift="sub" font-size="0.75em">2</tspan></text>
 <text x="137.8" y="80.2" text-anchor="end" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#c0392b">0.2721 kg</text>
 <text x="142.8" y="96.8" text-anchor="start" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="bold" fill="#c0392b">to Air</text>
 <line x1="142.8" y1="219.0" x2="142.8" y2="249.0" stroke="#c0392b" stroke-width="1.6" marker-end="url(#arr-red)"/>
-<text x="137.8" y="230.4" text-anchor="end" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#c0392b">Carbon dioxide</text>
+<text x="137.8" y="230.4" text-anchor="end" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#c0392b">CO<tspan baseline-shift="sub" font-size="0.75em">2</tspan></text>
 <text x="137.8" y="244.4" text-anchor="end" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#c0392b">1.394 kg</text>
 <text x="142.8" y="261.0" text-anchor="start" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="bold" fill="#c0392b">to Air</text>
 <line x1="142.8" y1="383.2" x2="142.8" y2="413.2" stroke="#c0392b" stroke-width="1.6" marker-end="url(#arr-red)"/>
-<text x="137.8" y="394.6" text-anchor="end" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#c0392b">Carbon dioxide</text>
+<text x="137.8" y="394.6" text-anchor="end" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#c0392b">CO<tspan baseline-shift="sub" font-size="0.75em">2</tspan></text>
 <text x="137.8" y="408.6" text-anchor="end" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#c0392b">0.01582 kg</text>
 <text x="142.8" y="425.2" text-anchor="start" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="bold" fill="#c0392b">to Air</text>
 <line x1="225.5" y1="27.4" x2="408.8" y2="191.6" stroke="#555555" stroke-width="1.6" marker-end="url(#arr)"/>

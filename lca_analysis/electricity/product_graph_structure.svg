@@ -19,16 +19,16 @@
 <line x1="142.8" y1="-23.0" x2="142.8" y2="7.0" stroke="#2d7a45" stroke-width="1.6" marker-end="url(#arr-green)"/>
 <text x="137.8" y="-11.6" text-anchor="end" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#2d7a45">Crude oil</text>
 <line x1="80.7" y1="61.7" x2="80.7" y2="91.7" stroke="#c0392b" stroke-width="1.6" marker-end="url(#arr-red)"/>
-<text x="75.7" y="73.1" text-anchor="end" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#c0392b">Carbon dioxide</text>
+<text x="75.7" y="73.1" text-anchor="end" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#c0392b">CO<tspan baseline-shift="sub" font-size="0.75em">2</tspan></text>
 <text x="80.7" y="103.7" text-anchor="start" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="bold" fill="#c0392b">to Air</text>
 <line x1="204.8" y1="61.7" x2="204.8" y2="91.7" stroke="#c0392b" stroke-width="1.6" marker-end="url(#arr-red)"/>
-<text x="199.8" y="73.1" text-anchor="end" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#c0392b">Sulfur dioxide</text>
+<text x="199.8" y="73.1" text-anchor="end" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#c0392b">SO<tspan baseline-shift="sub" font-size="0.75em">2</tspan></text>
 <text x="204.8" y="103.7" text-anchor="start" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="bold" fill="#c0392b">to Air</text>
 <line x1="334.0" y1="61.7" x2="334.0" y2="91.7" stroke="#c0392b" stroke-width="1.6" marker-end="url(#arr-red)"/>
-<text x="329.0" y="73.1" text-anchor="end" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#c0392b">Carbon dioxide</text>
+<text x="329.0" y="73.1" text-anchor="end" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#c0392b">CO<tspan baseline-shift="sub" font-size="0.75em">2</tspan></text>
 <text x="334.0" y="103.7" text-anchor="start" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="bold" fill="#c0392b">to Air</text>
 <line x1="458.2" y1="61.7" x2="458.2" y2="91.7" stroke="#c0392b" stroke-width="1.6" marker-end="url(#arr-red)"/>
-<text x="453.2" y="73.1" text-anchor="end" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#c0392b">Sulfur dioxide</text>
+<text x="453.2" y="73.1" text-anchor="end" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#c0392b">SO<tspan baseline-shift="sub" font-size="0.75em">2</tspan></text>
 <text x="458.2" y="103.7" text-anchor="start" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="bold" fill="#c0392b">to Air</text>
 <line x1="225.5" y1="34.4" x2="313.4" y2="34.4" stroke="#555555" stroke-width="1.6" marker-end="url(#arr)"/>
 <text x="269.4" y="29.4" text-anchor="middle" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#444">Fuel</text>

@@ -30,10 +30,10 @@
 </text>
 <text x="312.5" y="82.0" text-anchor="middle" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="bold" fill="#2d7a45">from Nature</text>
 <line x1="312.5" y1="96.0" x2="312.5" y2="146.0" stroke="#2d7a45" stroke-width="1.6" marker-end="url(#arr-green)"/>
-<text x="307.5" y="118.5" text-anchor="end" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#2d7a45">Water</text>
+<text x="307.5" y="118.5" text-anchor="end" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#2d7a45">H<tspan baseline-shift="sub" font-size="0.75em">2</tspan>O</text>
 <text x="307.5" y="132.5" text-anchor="end" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#2d7a45">30 L</text>
 <line x1="312.5" y1="200.0" x2="312.5" y2="250.0" stroke="#c0392b" stroke-width="1.6" marker-end="url(#arr-red)"/>
-<text x="307.5" y="219.0" text-anchor="end" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#c0392b">Carbon dioxide</text>
+<text x="307.5" y="219.0" text-anchor="end" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#c0392b">CO<tspan baseline-shift="sub" font-size="0.75em">2</tspan></text>
 <text x="307.5" y="233.0" text-anchor="end" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#c0392b">2.0 kg</text>
 <text x="312.5" y="262.0" text-anchor="start" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="bold" fill="#c0392b">to Air</text>
 </svg>

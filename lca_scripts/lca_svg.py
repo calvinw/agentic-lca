@@ -60,6 +60,23 @@ ELEM_ARM      = 30          # length of elementary flow arrows
 EMIT_OFFSET   = 45          # ±px horizontal offset for multiple emissions
 TITLE_HEIGHT  = 38          # px reserved for title above the graph
 
+# Map FEDEFL full names → short chemistry symbols for diagram labels.
+# chem_sub() will then render digits as proper SVG subscripts (CO2 → CO₂).
+FLOW_DISPLAY = {
+    "Carbon dioxide":  "CO2",
+    "Methane":         "CH4",
+    "Nitrous oxide":   "N2O",
+    "Ammonia":         "NH3",
+    "Nitrogen oxides": "NOx",
+    "Sulfur dioxide":  "SO2",
+    "Water":           "H2O",
+}
+
+
+def _display_name(flow_name: str) -> str:
+    """Return a short chemistry symbol for FEDEFL flows, or the name unchanged."""
+    return FLOW_DISPLAY.get(flow_name, flow_name)
+
 DPI           = 96          # graphviz uses 72 pt; we scale to 96px
 
 
@@ -391,7 +408,7 @@ def elementary_flows(recipe: dict, nodes: dict, flip_y: float,
                                 COL_GREEN, marker='arr-green'))
             shaft_mid = start_y + ELEM_ARM * 0.38
             els.append(svg_chem_text(rx - 5, shaft_mid,
-                                     res['flow'], anchor='end', size=11, fill=COL_GREEN,
+                                     _display_name(res['flow']), anchor='end', size=11, fill=COL_GREEN,
                                      weight='bold'))
             if show_quantities:
                 scaled_amount = res['amount'] * proc_scaling
@@ -414,7 +431,7 @@ def elementary_flows(recipe: dict, nodes: dict, flip_y: float,
             mid_y = box_bot + ELEM_ARM * 0.38
             unit = _em_unit(recipe, em['flow'])
             els.append(svg_chem_text(ex - 5, mid_y,
-                                     em['flow'].replace(' to air', ''), anchor='end', size=11, fill=COL_RED,
+                                     _display_name(em['flow']), anchor='end', size=11, fill=COL_RED,
                                      weight='bold'))
             if show_quantities:
                 scaled_amount = em['amount'] * proc_scaling
@@ -634,7 +651,7 @@ def generate_unit_process(recipe: dict, proc_name: str, out_path: str):
         shaft_mid = y_start + V_ARM * 0.45
         u = _res_unit(recipe, res['flow'])
         parts.append(svg_chem_text(rx - 5, shaft_mid,
-                                   res['flow'], anchor='end', size=11, fill=COL_GREEN, weight='bold'))
+                                   _display_name(res['flow']), anchor='end', size=11, fill=COL_GREEN, weight='bold'))
         parts.append(svg_text(rx - 5, shaft_mid + 14,
                               f"{res['amount']} {u}", anchor='end', size=11, fill=COL_GREEN, weight='bold'))
 
@@ -647,7 +664,7 @@ def generate_unit_process(recipe: dict, proc_name: str, out_path: str):
         parts.append(svg_line(ex, box_bot, ex, y_end, COL_RED, marker='arr-red'))
         shaft_mid = box_bot + V_ARM * 0.38
         u = _em_unit(recipe, em['flow'])
-        label = em['flow'].replace(' to air', '')
+        label = _display_name(em['flow'])
         parts.append(svg_chem_text(ex - 5, shaft_mid,
                                    label, anchor='end', size=11, fill=COL_RED, weight='bold'))
         parts.append(svg_text(ex - 5, shaft_mid + 14,
