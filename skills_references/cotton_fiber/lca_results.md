@@ -1,6 +1,6 @@
 # LCA Results: Cotton Fiber — 1 kg
 
-Generated: 2026-06-08 20:26  |  openLCA system ID: `638e705b-7bc6-49bb-866c-768e7d1fd6b8`
+Generated: 2026-06-14 02:22  |  openLCA system ID: `423a8bfd-cbdb-4eba-a570-e4bec20cbee2`
 
 ## Step 1 — Goal and Scope
 
@@ -40,9 +40,9 @@ Columns = processes, rows = elementary flows (biosphere).
 
 | | P1 — Fertilizer production | P2 — Cotton farming |
 |---|---:|---:|
-| **CO2 to air** | +3.50 | +0.80 |
-| **N2O to air** |  0   | +0.01 |
-| **NH3 to air** |  0   | +0.01 |
+| **Carbon dioxide** | +3.50 | +0.80 |
+| **Nitrous oxide** |  0   | +0.01 |
+| **Ammonia** |  0   | +0.01 |
 | **Water** |  0   | -8000.00 |
 
 ## Step 5 — LCI Results  B · s
@@ -51,9 +51,9 @@ Columns = processes, rows = elementary flows (biosphere).
 
 | Flow | Numpy result | openLCA result | Unit | Match |
 |---|---:|---:|---|:---:|
-| **CO2 to air** | 1.5000 | 1.5000 | kg | ✓ |
-| **N2O to air** | 0.0150 | 0.0150 | kg | ✓ |
-| **NH3 to air** | 0.0100 | 0.0100 | kg | ✓ |
+| **Carbon dioxide** | 1.5000 | 1.5000 | kg | ✓ |
+| **Nitrous oxide** | 0.0150 | 0.0150 | kg | ✓ |
+| **Ammonia** | 0.0100 | 0.0100 | kg | ✓ |
 
 **Resources from environment (amounts consumed):**
 
@@ -65,7 +65,7 @@ Columns = processes, rows = elementary flows (biosphere).
 
 Each cell = emission rate × scaling factor.  Columns sum to the LCI totals in Step 5.
 
-| Process | s | CO2 to air | N2O to air | NH3 to air |
+| Process | s | Carbon dioxide | Nitrous oxide | Ammonia |
 |---|---:|---:|---:|---:|
 | P1 — Fertilizer production | 0.2000 | 0.7000 | 0 | 0 |
 | P2 — Cotton farming | 1.0000 | 0.8000 | 0.0150 | 0.0100 |
@@ -79,40 +79,33 @@ Each cell = emission rate × scaling factor.  Columns sum to the LCI totals in S
 | P2 — Cotton farming | 1.0000 | 8000.0000 |
 | **Total** | | **8000.0000** |
 
-## Step 7 — LCIA Characterization  (EF 3.0)
+## Step 7 — LCIA Results  (TRACI 2.2)
 
-Characterization factors (CFs) convert raw inventory flows into a common impact score.  Each flow's LCI total is multiplied by its CF.
+Characterization factors from the database. Each impact category score is the sum of all elementary flow contributions as computed by the openLCA engine.
 
-### Climate change  (GWP100)  [kg CO2 eq]
-
-| Flow | LCI total | CF | Impact (kg CO2 eq) |
-|---|---:|---:|---:|
-| CO2 to air | 1.5000 kg | 1.0 | 1.5000 |
-| N2O to air | 0.0150 kg | 273.0 | 4.0950 |
-| **Total** | | | **5.5950** |
-
-### Terrestrial eutrophication  (EP-terrestrial)  [mol N eq]
-
-| Flow | LCI total | CF | Impact (mol N eq) |
-|---|---:|---:|---:|
-| NH3 to air | 0.0100 kg | 3.54 | 0.0354 |
-| N2O to air | 0.0150 kg | 0.27 | 0.0040 |
-| **Total** | | | **0.0394** |
-
-### Water consumption  (H₂O consumed)  [m³]
-
-| Flow | LCI total | CF | Impact (m³) |
-|---|---:|---:|---:|
-| Water | 8000.0000 L | 0.001 | 8.0000 |
-| **Total** | | | **8.0000** |
+| Impact Category | Score | Unit |
+|---|---:|---|
+| Human health - cancer | **0.000000** | CTUcancer |
+| Acidification | **0.018800** | kg SO2 eq |
+| Eutrophication (Freshwater) | **0.000000** | kg P eq |
+| Human health - particulate matter | **0.000667** | PM 2.5 eq |
+| Smog formation | **0.000000** | kg O3 eq |
+| Human health - non-cancer | **0.000000** | CTUnoncancer |
+| Ozone depletion | **0.000000** | kg CFC-11 eq |
+| Global warming | **5.970000** | kg CO2 eq |
 
 ## Summary
 
-**Method:** EF 3.0
+**LCIA Method:** TRACI 2.2
 
-> **Climate change (GWP100): 5.5950 kg CO2 eq** per 1.0 kg of 1 kg of ginned cotton fiber, ready for spinning
-> **Terrestrial eutrophication (EP-terrestrial): 0.0394 mol N eq** per 1.0 kg of 1 kg of ginned cotton fiber, ready for spinning
-> **Water consumption (H₂O consumed): 8.0000 m³** per 1.0 kg of 1 kg of ginned cotton fiber, ready for spinning
+> **Human health - cancer: 0.000000 CTUcancer** per 1.0 kg of 1 kg of ginned cotton fiber, ready for spinning
+> **Acidification: 0.018800 kg SO2 eq** per 1.0 kg of 1 kg of ginned cotton fiber, ready for spinning
+> **Eutrophication (Freshwater): 0.000000 kg P eq** per 1.0 kg of 1 kg of ginned cotton fiber, ready for spinning
+> **Human health - particulate matter: 0.000667 PM 2.5 eq** per 1.0 kg of 1 kg of ginned cotton fiber, ready for spinning
+> **Smog formation: 0.000000 kg O3 eq** per 1.0 kg of 1 kg of ginned cotton fiber, ready for spinning
+> **Human health - non-cancer: 0.000000 CTUnoncancer** per 1.0 kg of 1 kg of ginned cotton fiber, ready for spinning
+> **Ozone depletion: 0.000000 kg CFC-11 eq** per 1.0 kg of 1 kg of ginned cotton fiber, ready for spinning
+> **Global warming: 5.970000 kg CO2 eq** per 1.0 kg of 1 kg of ginned cotton fiber, ready for spinning
 
 ## Product System Graphs
 

@@ -1,6 +1,6 @@
 # LCA Results: Polyester T-shirt — 1 unit
 
-Generated: 2026-06-08 13:27  |  openLCA system ID: `95b9aee9-25fc-435a-b348-5852f11e21f8`
+Generated: 2026-06-14 02:22  |  openLCA system ID: `92b6c1aa-0d32-4f98-937b-814c03ed0241`
 
 ## Step 1 — Goal and Scope
 
@@ -39,47 +39,60 @@ How many times each process must run to deliver exactly f:
 ## Step 4 — Intervention Matrix B
 
 Columns = processes, rows = elementary flows (biosphere).
+`+` = emission (exits to environment)  `−` = resource extraction (enters from environment).
 
 | | P1 — Oil extraction | P2 — Polyester fiber production | P3 — T-shirt assembly |
 |---|---:|---:|---:|
-| **CO2 to air** | +0.20 | +5.50 | +1.00 |
-| **CH4 to air** | +0.05 |  0   |  0   |
+| **Carbon dioxide** | +0.20 | +5.50 | +1.00 |
+| **Methane** | +0.05 |  0   |  0   |
 
 ## Step 5 — LCI Results  B · s
 
+**Emissions to environment:**
+
 | Flow | Numpy result | openLCA result | Unit | Match |
 |---|---:|---:|---|:---:|
-| **CO2 to air** | 2.1600 | 2.1600 | Mass | ✓ |
-| **CH4 to air** | 0.0150 | 0.0150 | Mass | ✓ |
+| **Carbon dioxide** | 2.1600 | 2.1600 | kg | ✓ |
+| **Methane** | 0.0150 | 0.0150 | kg | ✓ |
 
 ## Step 6 — Scaled Emissions by Process  (B · diag(s))
 
 Each cell = emission rate × scaling factor.  Columns sum to the LCI totals in Step 5.
 
-| Process | s | CO2 to air | CH4 to air |
+| Process | s | Carbon dioxide | Methane |
 |---|---:|---:|---:|
 | P1 — Oil extraction | 0.3000 | 0.0600 | 0.0150 |
 | P2 — Polyester fiber production | 0.2000 | 1.1000 | 0 |
 | P3 — T-shirt assembly | 1.0000 | 1.0000 | 0 |
 | **Total** | | **2.1600** | **0.0150** |
 
-## Step 7 — LCIA Characterization  (IPCC AR6)
+## Step 7 — LCIA Results  (TRACI 2.2)
 
-Characterization factors (CFs) convert raw emission kg into a common impact score.  Each emission's LCI total is multiplied by its CF.
+Characterization factors from the database. Each impact category score is the sum of all elementary flow contributions as computed by the openLCA engine.
 
-### Climate change  (GWP100)  [kg CO2 eq]
-
-| Flow | LCI total (kg) | CF (kg CO2 eq/kg) | Impact (kg CO2 eq) |
-|---|---:|---:|---:|
-| CO2 to air | 2.1600 | 1.0 | 2.1600 |
-| CH4 to air | 0.0150 | 27.9 | 0.4185 |
-| **Total** | | | **2.5785** |
+| Impact Category | Score | Unit |
+|---|---:|---|
+| Human health - cancer | **0.000000** | CTUcancer |
+| Acidification | **0.000000** | kg SO2 eq |
+| Eutrophication (Freshwater) | **0.000000** | kg P eq |
+| Human health - particulate matter | **0.000000** | PM 2.5 eq |
+| Smog formation | **0.000216** | kg O3 eq |
+| Human health - non-cancer | **0.000000** | CTUnoncancer |
+| Ozone depletion | **0.000000** | kg CFC-11 eq |
+| Global warming | **2.535000** | kg CO2 eq |
 
 ## Summary
 
-**Method:** IPCC AR6
+**LCIA Method:** TRACI 2.2
 
-> **Climate change (GWP100): 2.5785 kg CO2 eq** per 1.0 unit of 1 polyester T-shirt, ready for sale (approximately 200 g of fabric)
+> **Human health - cancer: 0.000000 CTUcancer** per 1.0 unit of 1 polyester T-shirt, ready for sale (approximately 200 g of fabric)
+> **Acidification: 0.000000 kg SO2 eq** per 1.0 unit of 1 polyester T-shirt, ready for sale (approximately 200 g of fabric)
+> **Eutrophication (Freshwater): 0.000000 kg P eq** per 1.0 unit of 1 polyester T-shirt, ready for sale (approximately 200 g of fabric)
+> **Human health - particulate matter: 0.000000 PM 2.5 eq** per 1.0 unit of 1 polyester T-shirt, ready for sale (approximately 200 g of fabric)
+> **Smog formation: 0.000216 kg O3 eq** per 1.0 unit of 1 polyester T-shirt, ready for sale (approximately 200 g of fabric)
+> **Human health - non-cancer: 0.000000 CTUnoncancer** per 1.0 unit of 1 polyester T-shirt, ready for sale (approximately 200 g of fabric)
+> **Ozone depletion: 0.000000 kg CFC-11 eq** per 1.0 unit of 1 polyester T-shirt, ready for sale (approximately 200 g of fabric)
+> **Global warming: 2.535000 kg CO2 eq** per 1.0 unit of 1 polyester T-shirt, ready for sale (approximately 200 g of fabric)
 
 ## Product System Graphs
 

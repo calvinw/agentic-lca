@@ -1,6 +1,6 @@
 # LCA Results: Wool Yarn — 1 kg
 
-Generated: 2026-06-08 20:38  |  openLCA system ID: `a3b538ab-5d1a-4dbc-97cb-6af788893d10`
+Generated: 2026-06-14 02:22  |  openLCA system ID: `b9807050-4fa3-4ccc-baf8-b98c3c77470c`
 
 ## Step 1 — Goal and Scope
 
@@ -40,8 +40,8 @@ Columns = processes, rows = elementary flows (biosphere).
 
 | | P1 — Sheep farming | P2 — Wool yarn production |
 |---|---:|---:|
-| **CO2 to air** | +0.50 | +2.00 |
-| **CH4 to air** | +0.40 |  0   |
+| **Carbon dioxide** | +0.50 | +2.00 |
+| **Methane** | +0.40 |  0   |
 | **Water** |  0   | -30.00 |
 
 ## Step 5 — LCI Results  B · s
@@ -50,8 +50,8 @@ Columns = processes, rows = elementary flows (biosphere).
 
 | Flow | Numpy result | openLCA result | Unit | Match |
 |---|---:|---:|---|:---:|
-| **CO2 to air** | 2.5500 | 2.5500 | kg | ✓ |
-| **CH4 to air** | 0.4400 | 0.4400 | kg | ✓ |
+| **Carbon dioxide** | 2.5500 | 2.5500 | kg | ✓ |
+| **Methane** | 0.4400 | 0.4400 | kg | ✓ |
 
 **Resources from environment (amounts consumed):**
 
@@ -63,7 +63,7 @@ Columns = processes, rows = elementary flows (biosphere).
 
 Each cell = emission rate × scaling factor.  Columns sum to the LCI totals in Step 5.
 
-| Process | s | CO2 to air | CH4 to air |
+| Process | s | Carbon dioxide | Methane |
 |---|---:|---:|---:|
 | P1 — Sheep farming | 1.1000 | 0.5500 | 0.4400 |
 | P2 — Wool yarn production | 1.0000 | 2.0000 | 0 |
@@ -77,31 +77,33 @@ Each cell = emission rate × scaling factor.  Columns sum to the LCI totals in S
 | P2 — Wool yarn production | 1.0000 | 30.0000 |
 | **Total** | | **30.0000** |
 
-## Step 7 — LCIA Characterization  (IPCC AR6)
+## Step 7 — LCIA Results  (TRACI 2.2)
 
-Characterization factors (CFs) convert raw inventory flows into a common impact score.  Each flow's LCI total is multiplied by its CF.
+Characterization factors from the database. Each impact category score is the sum of all elementary flow contributions as computed by the openLCA engine.
 
-### Climate change  (GWP100)  [kg CO2 eq]
-
-| Flow | LCI total | CF | Impact (kg CO2 eq) |
-|---|---:|---:|---:|
-| CO2 to air | 2.5500 kg | 1.0 | 2.5500 |
-| CH4 to air | 0.4400 kg | 27.9 | 12.2760 |
-| **Total** | | | **14.8260** |
-
-### Water consumption  (H₂O consumed)  [m³]
-
-| Flow | LCI total | CF | Impact (m³) |
-|---|---:|---:|---:|
-| Water | 30.0000 L | 0.001 | 0.0300 |
-| **Total** | | | **0.0300** |
+| Impact Category | Score | Unit |
+|---|---:|---|
+| Human health - cancer | **0.000000** | CTUcancer |
+| Acidification | **0.000000** | kg SO2 eq |
+| Eutrophication (Freshwater) | **0.000000** | kg P eq |
+| Human health - particulate matter | **0.000000** | PM 2.5 eq |
+| Smog formation | **0.006327** | kg O3 eq |
+| Human health - non-cancer | **0.000000** | CTUnoncancer |
+| Ozone depletion | **0.000000** | kg CFC-11 eq |
+| Global warming | **13.550000** | kg CO2 eq |
 
 ## Summary
 
-**Method:** IPCC AR6
+**LCIA Method:** TRACI 2.2
 
-> **Climate change (GWP100): 14.8260 kg CO2 eq** per 1.0 kg of 1 kg of wool yarn, ready for knitting or weaving
-> **Water consumption (H₂O consumed): 0.0300 m³** per 1.0 kg of 1 kg of wool yarn, ready for knitting or weaving
+> **Human health - cancer: 0.000000 CTUcancer** per 1.0 kg of 1 kg of wool yarn, ready for knitting or weaving
+> **Acidification: 0.000000 kg SO2 eq** per 1.0 kg of 1 kg of wool yarn, ready for knitting or weaving
+> **Eutrophication (Freshwater): 0.000000 kg P eq** per 1.0 kg of 1 kg of wool yarn, ready for knitting or weaving
+> **Human health - particulate matter: 0.000000 PM 2.5 eq** per 1.0 kg of 1 kg of wool yarn, ready for knitting or weaving
+> **Smog formation: 0.006327 kg O3 eq** per 1.0 kg of 1 kg of wool yarn, ready for knitting or weaving
+> **Human health - non-cancer: 0.000000 CTUnoncancer** per 1.0 kg of 1 kg of wool yarn, ready for knitting or weaving
+> **Ozone depletion: 0.000000 kg CFC-11 eq** per 1.0 kg of 1 kg of wool yarn, ready for knitting or weaving
+> **Global warming: 13.550000 kg CO2 eq** per 1.0 kg of 1 kg of wool yarn, ready for knitting or weaving
 
 ## Product System Graphs
 
