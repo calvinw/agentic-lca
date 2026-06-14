@@ -1,6 +1,6 @@
 # LCA Results: Levi's 501 Jeans — renewable energy supply chain (Custom Scenario A)
 
-Generated: 2026-06-12 00:32  |  openLCA system ID: `286f4950-4cf7-4970-80ea-f02ccdeb11bb`
+Generated: 2026-06-14 02:12  |  openLCA system ID: `305c1f0c-7bf0-48c9-a06d-dc2d47e3d617`
 
 ## Step 1 — Goal and Scope
 
@@ -49,7 +49,9 @@ Columns = processes, rows = elementary flows (biosphere).
 
 | | P1 — Grow and harvest cotton | P2 — Spin, dye, and weave denim fabric | P3 — Cut, sew, and finish jeans | P4 — Distribute, wash, dry, and dispose of jeans | P5 — Generate electricity |
 |---|---:|---:|---:|---:|---:|
-| **CO2 to air** | +2.90 |  0   |  0   | +6.40 | +0.05 |
+| **Carbon dioxide** | +2.90 |  0   |  0   | +6.40 | +0.05 |
+| **Nitrogen oxides** |  0   |  0   |  0   |  0   | +0.00 |
+| **Sulfur dioxide** |  0   |  0   |  0   |  0   | +0.00 |
 
 ## Step 5 — LCI Results  B · s
 
@@ -57,28 +59,50 @@ Columns = processes, rows = elementary flows (biosphere).
 
 | Flow | Numpy result | openLCA result | Unit | Match |
 |---|---:|---:|---|:---:|
-| **CO2 to air** | 11.7100 | 11.7100 | kg | ✓ |
+| **Carbon dioxide** | 11.7100 | 11.7100 | kg | ✓ |
+| **Nitrogen oxides** | 0.0043 | 0.0043 | kg | ✓ |
+| **Sulfur dioxide** | 0.0029 | 0.0029 | kg | ✓ |
 
 ## Step 6 — Scaled Emissions by Process  (B · diag(s))
 
 Each cell = emission rate × scaling factor.  Columns sum to the LCI totals in Step 5.
 
-| Process | s | CO2 to air |
-|---|---:|---:|
-| P1 — Grow and harvest cotton | 1.0000 | 2.9000 |
-| P2 — Spin, dye, and weave denim fabric | 0.8000 | 0 |
-| P3 — Cut, sew, and finish jeans | 1.0000 | 0 |
-| P4 — Distribute, wash, dry, and dispose of jeans | 1.0000 | 6.4000 |
-| P5 — Generate electricity | 48.2000 | 2.4100 |
-| **Total** | | **11.7100** |
+| Process | s | Carbon dioxide | Nitrogen oxides | Sulfur dioxide |
+|---|---:|---:|---:|---:|
+| P1 — Grow and harvest cotton | 1.0000 | 2.9000 | 0 | 0 |
+| P2 — Spin, dye, and weave denim fabric | 0.8000 | 0 | 0 | 0 |
+| P3 — Cut, sew, and finish jeans | 1.0000 | 0 | 0 | 0 |
+| P4 — Distribute, wash, dry, and dispose of jeans | 1.0000 | 6.4000 | 0 | 0 |
+| P5 — Generate electricity | 48.2000 | 2.4100 | 0.0043 | 0.0029 |
+| **Total** | | **11.7100** | **0.0043** | **0.0029** |
+
+## Step 7 — LCIA Results  (TRACI 2.2)
+
+Characterization factors from the database. Each impact category score is the sum of all elementary flow contributions as computed by the openLCA engine.
+
+| Impact Category | Score | Unit |
+|---|---:|---|
+| Human health - cancer | **0.000000** | CTUcancer |
+| Acidification | **0.005929** | kg SO2 eq |
+| Eutrophication (Freshwater) | **0.000000** | kg P eq |
+| Human health - particulate matter | **0.000208** | PM 2.5 eq |
+| Smog formation | **0.107555** | kg O3 eq |
+| Human health - non-cancer | **0.000000** | CTUnoncancer |
+| Ozone depletion | **0.000000** | kg CFC-11 eq |
+| Global warming | **11.710000** | kg CO2 eq |
 
 ## Summary
 
-$$
-\text{Total emissions} = B \cdot A^{-1} \cdot f
-$$
+**LCIA Method:** TRACI 2.2
 
-> **CO2 to air: 11.7100 kg** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, renewable energy supply chain
+> **Human health - cancer: 0.000000 CTUcancer** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, renewable energy supply chain
+> **Acidification: 0.005929 kg SO2 eq** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, renewable energy supply chain
+> **Eutrophication (Freshwater): 0.000000 kg P eq** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, renewable energy supply chain
+> **Human health - particulate matter: 0.000208 PM 2.5 eq** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, renewable energy supply chain
+> **Smog formation: 0.107555 kg O3 eq** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, renewable energy supply chain
+> **Human health - non-cancer: 0.000000 CTUnoncancer** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, renewable energy supply chain
+> **Ozone depletion: 0.000000 kg CFC-11 eq** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, renewable energy supply chain
+> **Global warming: 11.710000 kg CO2 eq** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, renewable energy supply chain
 
 ## Product System Graphs
 

@@ -1,6 +1,6 @@
 # LCA Results: Levi's 501 Jeans — twice as durable (Custom Scenario D)
 
-Generated: 2026-06-12 00:32  |  openLCA system ID: `e8ccf3e3-f94f-43fa-bc8b-b1c5837b3c6a`
+Generated: 2026-06-14 02:12  |  openLCA system ID: `381b34e7-535f-4afd-bc6d-4d501b74cf6d`
 
 ## Step 1 — Goal and Scope
 
@@ -49,7 +49,9 @@ Columns = processes, rows = elementary flows (biosphere).
 
 | | P1 — Grow and harvest cotton | P2 — Spin, dye, and weave denim fabric | P3 — Cut, sew, and finish jeans | P4 — Distribute, wash, dry, and dispose of jeans | P5 — Generate electricity |
 |---|---:|---:|---:|---:|---:|
-| **CO2 to air** | +2.90 |  0   |  0   | +6.40 | +0.50 |
+| **Carbon dioxide** | +2.90 |  0   |  0   | +6.40 | +0.50 |
+| **Nitrogen oxides** |  0   |  0   |  0   |  0   | +0.00 |
+| **Sulfur dioxide** |  0   |  0   |  0   |  0   | +0.00 |
 
 ## Step 5 — LCI Results  B · s
 
@@ -57,28 +59,50 @@ Columns = processes, rows = elementary flows (biosphere).
 
 | Flow | Numpy result | openLCA result | Unit | Match |
 |---|---:|---:|---|:---:|
-| **CO2 to air** | 26.1500 | 26.1500 | kg | ✓ |
+| **Carbon dioxide** | 26.1500 | 26.1500 | kg | ✓ |
+| **Nitrogen oxides** | 0.0329 | 0.0329 | kg | ✓ |
+| **Sulfur dioxide** | 0.0220 | 0.0220 | kg | ✓ |
 
 ## Step 6 — Scaled Emissions by Process  (B · diag(s))
 
 Each cell = emission rate × scaling factor.  Columns sum to the LCI totals in Step 5.
 
-| Process | s | CO2 to air |
-|---|---:|---:|
-| P1 — Grow and harvest cotton | 0.5000 | 1.4500 |
-| P2 — Spin, dye, and weave denim fabric | 0.4000 | 0 |
-| P3 — Cut, sew, and finish jeans | 0.5000 | 0 |
-| P4 — Distribute, wash, dry, and dispose of jeans | 1.0000 | 6.4000 |
-| P5 — Generate electricity | 36.6000 | 18.3000 |
-| **Total** | | **26.1500** |
+| Process | s | Carbon dioxide | Nitrogen oxides | Sulfur dioxide |
+|---|---:|---:|---:|---:|
+| P1 — Grow and harvest cotton | 0.5000 | 1.4500 | 0 | 0 |
+| P2 — Spin, dye, and weave denim fabric | 0.4000 | 0 | 0 | 0 |
+| P3 — Cut, sew, and finish jeans | 0.5000 | 0 | 0 | 0 |
+| P4 — Distribute, wash, dry, and dispose of jeans | 1.0000 | 6.4000 | 0 | 0 |
+| P5 — Generate electricity | 36.6000 | 18.3000 | 0.0329 | 0.0220 |
+| **Total** | | **26.1500** | **0.0329** | **0.0220** |
+
+## Step 7 — LCIA Results  (TRACI 2.2)
+
+Characterization factors from the database. Each impact category score is the sum of all elementary flow contributions as computed by the openLCA engine.
+
+| Impact Category | Score | Unit |
+|---|---:|---|
+| Human health - cancer | **0.000000** | CTUcancer |
+| Acidification | **0.045018** | kg SO2 eq |
+| Eutrophication (Freshwater) | **0.000000** | kg P eq |
+| Human health - particulate matter | **0.001580** | PM 2.5 eq |
+| Smog formation | **0.816701** | kg O3 eq |
+| Human health - non-cancer | **0.000000** | CTUnoncancer |
+| Ozone depletion | **0.000000** | kg CFC-11 eq |
+| Global warming | **26.150000** | kg CO2 eq |
 
 ## Summary
 
-$$
-\text{Total emissions} = B \cdot A^{-1} \cdot f
-$$
+**LCIA Method:** TRACI 2.2
 
-> **CO2 to air: 26.1500 kg** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, twice standard durability
+> **Human health - cancer: 0.000000 CTUcancer** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, twice standard durability
+> **Acidification: 0.045018 kg SO2 eq** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, twice standard durability
+> **Eutrophication (Freshwater): 0.000000 kg P eq** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, twice standard durability
+> **Human health - particulate matter: 0.001580 PM 2.5 eq** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, twice standard durability
+> **Smog formation: 0.816701 kg O3 eq** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, twice standard durability
+> **Human health - non-cancer: 0.000000 CTUnoncancer** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, twice standard durability
+> **Ozone depletion: 0.000000 kg CFC-11 eq** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, twice standard durability
+> **Global warming: 26.150000 kg CO2 eq** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, twice standard durability
 
 ## Product System Graphs
 

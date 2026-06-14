@@ -1,6 +1,6 @@
 # LCA Results: Levi's 501 Jeans — wash every 5 wears (Group 1, Scenario C)
 
-Generated: 2026-06-12 00:23  |  openLCA system ID: `4b6f8455-ac0a-4c70-8ec8-da84980ffe54`
+Generated: 2026-06-14 02:12  |  openLCA system ID: `d21a2916-0a2e-4104-a795-c7e0925a8711`
 
 ## Step 1 — Goal and Scope
 
@@ -49,7 +49,9 @@ Columns = processes, rows = elementary flows (biosphere).
 
 | | P1 — Grow and harvest cotton | P2 — Spin, dye, and weave denim fabric | P3 — Cut, sew, and finish jeans | P4 — Distribute, wash, dry, and dispose of jeans | P5 — Generate electricity |
 |---|---:|---:|---:|---:|---:|
-| **CO2 to air** | +2.90 |  0   |  0   | +6.40 | +0.50 |
+| **Carbon dioxide** | +2.90 |  0   |  0   | +6.40 | +0.50 |
+| **Nitrogen oxides** |  0   |  0   |  0   |  0   | +0.00 |
+| **Sulfur dioxide** |  0   |  0   |  0   |  0   | +0.00 |
 
 ## Step 5 — LCI Results  B · s
 
@@ -57,28 +59,50 @@ Columns = processes, rows = elementary flows (biosphere).
 
 | Flow | Numpy result | openLCA result | Unit | Match |
 |---|---:|---:|---|:---:|
-| **CO2 to air** | 27.0500 | 27.0500 | kg | ✓ |
+| **Carbon dioxide** | 27.0500 | 27.0500 | kg | ✓ |
+| **Nitrogen oxides** | 0.0320 | 0.0319 | kg | ✓ |
+| **Sulfur dioxide** | 0.0213 | 0.0213 | kg | ✓ |
 
 ## Step 6 — Scaled Emissions by Process  (B · diag(s))
 
 Each cell = emission rate × scaling factor.  Columns sum to the LCI totals in Step 5.
 
-| Process | s | CO2 to air |
-|---|---:|---:|
-| P1 — Grow and harvest cotton | 1.0000 | 2.9000 |
-| P2 — Spin, dye, and weave denim fabric | 0.8000 | 0 |
-| P3 — Cut, sew, and finish jeans | 1.0000 | 0 |
-| P4 — Distribute, wash, dry, and dispose of jeans | 1.0000 | 6.4000 |
-| P5 — Generate electricity | 35.5000 | 17.7500 |
-| **Total** | | **27.0500** |
+| Process | s | Carbon dioxide | Nitrogen oxides | Sulfur dioxide |
+|---|---:|---:|---:|---:|
+| P1 — Grow and harvest cotton | 1.0000 | 2.9000 | 0 | 0 |
+| P2 — Spin, dye, and weave denim fabric | 0.8000 | 0 | 0 | 0 |
+| P3 — Cut, sew, and finish jeans | 1.0000 | 0 | 0 | 0 |
+| P4 — Distribute, wash, dry, and dispose of jeans | 1.0000 | 6.4000 | 0 | 0 |
+| P5 — Generate electricity | 35.5000 | 17.7500 | 0.0320 | 0.0213 |
+| **Total** | | **27.0500** | **0.0320** | **0.0213** |
+
+## Step 7 — LCIA Results  (TRACI 2.2)
+
+Characterization factors from the database. Each impact category score is the sum of all elementary flow contributions as computed by the openLCA engine.
+
+| Impact Category | Score | Unit |
+|---|---:|---|
+| Human health - cancer | **0.000000** | CTUcancer |
+| Acidification | **0.043665** | kg SO2 eq |
+| Eutrophication (Freshwater) | **0.000000** | kg P eq |
+| Human health - particulate matter | **0.001532** | PM 2.5 eq |
+| Smog formation | **0.792155** | kg O3 eq |
+| Human health - non-cancer | **0.000000** | CTUnoncancer |
+| Ozone depletion | **0.000000** | kg CFC-11 eq |
+| Global warming | **27.050000** | kg CO2 eq |
 
 ## Summary
 
-$$
-\text{Total emissions} = B \cdot A^{-1} \cdot f
-$$
+**LCIA Method:** TRACI 2.2
 
-> **CO2 to air: 27.0500 kg** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, wash every 5 wears
+> **Human health - cancer: 0.000000 CTUcancer** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, wash every 5 wears
+> **Acidification: 0.043665 kg SO2 eq** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, wash every 5 wears
+> **Eutrophication (Freshwater): 0.000000 kg P eq** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, wash every 5 wears
+> **Human health - particulate matter: 0.001532 PM 2.5 eq** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, wash every 5 wears
+> **Smog formation: 0.792155 kg O3 eq** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, wash every 5 wears
+> **Human health - non-cancer: 0.000000 CTUnoncancer** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, wash every 5 wears
+> **Ozone depletion: 0.000000 kg CFC-11 eq** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, wash every 5 wears
+> **Global warming: 27.050000 kg CO2 eq** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, wash every 5 wears
 
 ## Product System Graphs
 
