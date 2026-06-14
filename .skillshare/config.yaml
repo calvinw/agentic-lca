@@ -6,4 +6,6 @@ targets:
   - gemini
   - crush
   - codex
-# skills: (none configured)
+skills:
+  - name: skill-creator
+    source: github.com/anthropics/skills/skill-creator

@@ -1,6 +1,6 @@
 # LCA Results: Coffee LCA — one cup
 
-Generated: 2026-06-14 02:11  |  openLCA system ID: `5aec38e8-297e-4fb7-bd2f-a23ddec8123a`
+Generated: 2026-06-14 04:09  |  openLCA system ID: `cbaadc02-5650-40f0-a2ab-d11b731b5bca`
 
 ## Step 1 — Goal and Scope
 
@@ -80,33 +80,13 @@ Each cell = emission rate × scaling factor.  Columns sum to the LCI totals in S
 | P3 — Burn coal | 0.1000 | 0.0500 |
 | **Total** | | **0.0500** |
 
-## Step 7 — LCIA Results  (TRACI 2.2)
-
-Characterization factors from the database. Each impact category score is the sum of all elementary flow contributions as computed by the openLCA engine.
-
-| Impact Category | Score | Unit |
-|---|---:|---|
-| Human health - cancer | **0.000000** | CTUcancer |
-| Acidification | **0.000000** | kg SO2 eq |
-| Eutrophication (Freshwater) | **0.000000** | kg P eq |
-| Human health - particulate matter | **0.000000** | PM 2.5 eq |
-| Smog formation | **0.000000** | kg O3 eq |
-| Human health - non-cancer | **0.000000** | CTUnoncancer |
-| Ozone depletion | **0.000000** | kg CFC-11 eq |
-| Global warming | **0.100000** | kg CO2 eq |
-
 ## Summary
 
-**LCIA Method:** TRACI 2.2
+$$
+\text{Total emissions} = B \cdot A^{-1} \cdot f
+$$
 
-> **Human health - cancer: 0.000000 CTUcancer** per 1.0 cup of One cup of coffee
-> **Acidification: 0.000000 kg SO2 eq** per 1.0 cup of One cup of coffee
-> **Eutrophication (Freshwater): 0.000000 kg P eq** per 1.0 cup of One cup of coffee
-> **Human health - particulate matter: 0.000000 PM 2.5 eq** per 1.0 cup of One cup of coffee
-> **Smog formation: 0.000000 kg O3 eq** per 1.0 cup of One cup of coffee
-> **Human health - non-cancer: 0.000000 CTUnoncancer** per 1.0 cup of One cup of coffee
-> **Ozone depletion: 0.000000 kg CFC-11 eq** per 1.0 cup of One cup of coffee
-> **Global warming: 0.100000 kg CO2 eq** per 1.0 cup of One cup of coffee
+> **Carbon dioxide: 0.1000 kg** per 1.0 cup of One cup of coffee
 
 ## Product System Graphs
 
