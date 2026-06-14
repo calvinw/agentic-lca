@@ -21,7 +21,7 @@ Now let's look at a real example. This study is called the **Polyester T-shirt**
 
 Here is the supply chain diagram — each box is a step that this study decided to **include**:
 
-![Polyester T-shirt supply chain — structure](skills_references/polyester_tshirt/product_graph_structure.svg)
+![Polyester T-shirt supply chain — structure](../skills_references/polyester_tshirt/product_graph_structure.svg)
 
 The fence — the system boundary — runs around all three of those boxes together. Any step not shown in the diagram is outside the fence and was not counted.
 
