@@ -10,7 +10,7 @@ Skills already built are marked ✅. Skills recommended but not yet built are ma
 | Order | Skill | Status | What it teaches |
 |---|---|---|---|
 | 1 | `what-is-lca` | ✅ Built | What LCA is, why fashion professionals need it, the four phases |
-| 2 | `system-boundary` | ⬜ Recommended | The simplest idea in LCA — every study has edges, what is inside gets counted, what is outside does not |
+| 2 | `system-boundary` | ✅ Built | The simplest idea in LCA — every study has edges, what is inside gets counted, what is outside does not |
 | 3 | `life-cycle-stages` | ⬜ Recommended | The named boundary types — cradle to gate, cradle to grave, cradle to cradle, gate to grave — what each includes and when to use it |
 | 4 | `goal-and-scope` | ✅ Built | Why the study is being done, who it is for, what is included or excluded |
 | 5 | `functional-unit` | ✅ Built | The precise definition of what is being measured |
