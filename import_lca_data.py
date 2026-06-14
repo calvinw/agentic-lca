@@ -15,6 +15,7 @@ Place both files in ~/olca-data/ before running.
 """
 
 import json
+import logging
 import sys
 import zipfile
 from pathlib import Path
@@ -22,6 +23,9 @@ from pathlib import Path
 import requests
 from olca_ipc.rest import RestClient
 import olca_schema as o
+
+# Suppress the noisy "response status != 200" messages from olca_ipc
+logging.disable(logging.ERROR)
 
 SERVER = "http://localhost:8080/"
 FEDEFL = Path.home() / "olca-data/Federal_LCA_Commons-elementary_flow_list.zip"
@@ -96,10 +100,14 @@ def put_entity(client: RestClient, data: dict) -> bool:
     try:
         entity = cls.from_dict(data)
         ref = client.put(entity)
-        return ref is not None
+        if ref is None:
+            name = data.get("name", data.get("@id", "?"))
+            print(f"\n    ✗ Failed to import {t} '{name}' (server rejected — may be a known gdt-server limitation)")
+            return False
+        return True
     except Exception as e:
         name = data.get("name", data.get("@id", "?"))
-        print(f"    ✗ {t} '{name}': {e}")
+        print(f"\n    ✗ {t} '{name}': {e}")
         return False
 
 
@@ -147,6 +155,15 @@ def verify(client: RestClient):
         print("    ✗ No impact methods found — something went wrong.")
 
 
+def traci_already_loaded(client: RestClient) -> bool:
+    """Return True if TRACI 2.2 is already in the database."""
+    try:
+        methods = client.get_descriptors(o.ImpactMethod)
+        return any("TRACI" in (m.name or "") for m in methods)
+    except Exception:
+        return False
+
+
 def main():
     print("=" * 60)
     print("  LCA Data Import — FEDEFL + TRACI 2.2")
@@ -154,13 +171,19 @@ def main():
 
     check_server()
 
+    client = RestClient(SERVER)
+
+    if traci_already_loaded(client):
+        print("\n  TRACI 2.2 is already loaded in the database.")
+        verify(client)
+        print("=" * 60)
+        return
+
     for path, label in [(FEDEFL, "FEDEFL"), (TRACI, "TRACI 2.2")]:
         if not path.exists():
             print(f"\n  ERROR: {path} not found.")
-            print(f"  Download it from https://www.lcacommons.gov/lca-collaboration/")
+            print(f"  Run setup_olca.sh to download it automatically.")
             sys.exit(1)
-
-    client = RestClient(SERVER)
 
     print("\n[1/2] Federal Elementary Flow List (FEDEFL)")
     print("      Importing only the 7 flows used in our recipe cards.")
@@ -171,7 +194,13 @@ def main():
 
     verify(client)
 
-    print("\n  Done. You can now run:")
+    if not traci_already_loaded(client):
+        print("\n  ✗ ERROR: TRACI 2.2 was not found after import — something went wrong.")
+        print("    Check the errors above and try re-running setup_olca.sh.")
+        sys.exit(1)
+
+    print("\n  ✓ TRACI 2.2 is loaded and ready.")
+    print("\n  You can now run:")
     print("    python3 lca_scripts/lca_analysis.py "
           "lca_analysis/cotton_shirt/recipe_card.md")
     print("=" * 60)

@@ -75,13 +75,25 @@ for i in $(seq 1 30); do
         curl -s http://localhost:8080/api/version
         echo ""
 
-        # Import LCA data if the database is empty or new
-        if [ ! -d "$DB_DIR" ] || [ -z "$(ls -A "$DB_DIR" 2>/dev/null)" ]; then
-            echo "[olca] Database is empty — importing FEDEFL flows and TRACI 2.2..."
+        # Import LCA data if TRACI 2.2 is not yet in the database.
+        # We ask the server directly — folder contents are not a reliable
+        # indicator because analysis runs also write files to the DB folder.
+        TRACI_LOADED=$(curl -s http://localhost:8080/data/impact-methods 2>/dev/null | \
+            python3 -c "
+import sys, json
+try:
+    methods = json.load(sys.stdin)
+    print('yes' if any('TRACI' in str(m.get('name','')) for m in methods) else 'no')
+except Exception:
+    print('no')
+" 2>/dev/null || echo "no")
+
+        if [ "$TRACI_LOADED" = "yes" ]; then
+            echo "[olca] TRACI 2.2 already loaded — skipping import."
+        else
+            echo "[olca] TRACI 2.2 not found — importing FEDEFL flows and TRACI 2.2..."
             python3 "$(dirname "$0")/import_lca_data.py"
             echo "[olca] Import complete."
-        else
-            echo "[olca] Database already populated — skipping import."
         fi
 
         exit 0

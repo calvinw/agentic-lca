@@ -83,17 +83,57 @@ def get_ef_unit(spec: dict, flow_name: str) -> str:
 
 # ── Build openLCA entities ────────────────────────────────────────────────────
 
+def build_lcia_flow_map(client: RestClient) -> dict[str, str]:
+    """Return a name→id map of flows referenced by any loaded LCIA method.
+
+    When TRACI 2.2 is in the DB, this gives us the exact FEDEFL flow UUIDs
+    that TRACI's characterisation factors point to.  resolve_flow() prefers
+    these over any duplicate flows created by earlier analysis runs.
+    """
+    preferred: dict[str, str] = {}
+    try:
+        for m_desc in client.get_descriptors(o.ImpactMethod):
+            method = client.get(o.ImpactMethod, m_desc.id)
+            for cat_ref in (method.impact_categories or []):
+                cat = client.get(o.ImpactCategory, cat_ref.id)
+                for cf in (cat.impact_factors or []):
+                    fref = cf.flow
+                    if fref and fref.name:
+                        key = fref.name.strip().lower()
+                        if key not in preferred:
+                            preferred[key] = fref.id
+    except Exception:
+        pass
+    return preferred
+
+
+_LCIA_FLOW_MAP: dict[str, str] = {}
+
+
 def resolve_flow(client: RestClient, name: str, flow_property) -> o.Flow:
-    """Look up flow by FEDEFL name in DB; create new only as fallback."""
+    """Look up flow by FEDEFL name in DB; prefer flows referenced by TRACI."""
+    key = name.strip().lower()
+
+    # 1. If TRACI references a specific flow for this name, use it directly.
+    preferred_id = _LCIA_FLOW_MAP.get(key)
+    if preferred_id:
+        existing = client.get(o.Flow, preferred_id)
+        if existing is not None:
+            print(f"      ✓ resolved '{name}' → TRACI flow ({preferred_id[:8]})")
+            return existing
+
+    # 2. Fall back to first name-match in the DB.
     try:
         for d in client.get_descriptors(o.Flow):
-            if d.name and d.name.strip().lower() == name.strip().lower():
+            if d.name and d.name.strip().lower() == key:
                 existing = client.get(o.Flow, d.id)
                 if existing is not None:
                     print(f"      ✓ resolved '{name}' → DB flow ({d.id[:8]})")
                     return existing
     except Exception:
         pass
+
+    # 3. Create a new flow as a last resort.
     flow = o.new_elementary_flow(name, flow_property)
     client.put(flow)
     print(f"      + created new flow '{name}'")
@@ -507,6 +547,10 @@ def main():
         if res:  print(f"    ↓ uses    {res} [from nature]")
 
     client = RestClient(SERVER_URL)
+
+    global _LCIA_FLOW_MAP
+    _LCIA_FLOW_MAP = build_lcia_flow_map(client)
+
     reg, system_ref = build_model(client, spec)
 
     A, B, prod_names, proc_names, em_names, res_names = build_matrices(spec)
