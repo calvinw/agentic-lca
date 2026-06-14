@@ -43,7 +43,7 @@ docker run \
     -v "$DATA_DIR:/app/data" \
     -d \
     "$IMAGE" \
-    -db paper_cup_lca
+    -db lca_commons
 
 echo "[olca] Waiting for server to start..."
 for i in $(seq 1 30); do

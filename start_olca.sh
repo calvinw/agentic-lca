@@ -38,7 +38,7 @@ docker run \
     -v "$DATA_DIR:/app/data" \
     -d \
     "$IMAGE" \
-    -db paper_cup_lca
+    -db lca_commons
 
 for i in $(seq 1 15); do
     if curl -s http://localhost:8080/api/version > /dev/null 2>&1; then
