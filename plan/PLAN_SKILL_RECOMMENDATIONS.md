@@ -19,8 +19,9 @@ Skills already built are marked ✅. Skills recommended but not yet built are ma
 | 8 | `life-cycle-inventory` | ⬜ Recommended | What an inventory is, how emissions and resource use are collected and totalled across all processes |
 | 9 | `scaling-vector` | ✅ Built | How much each process in the supply chain must run to deliver one functional unit |
 | 10 | `what-is-impact-assessment` | ⬜ Recommended | How raw inventory emissions are converted into environmental scores — global warming, acidification, smog, and more |
-| 11 | `hotspot-analysis` | ⬜ Recommended | How to read a contribution breakdown, identify the biggest sources of impact, connect to business decisions |
-| 12 | `comparing-products` | ⬜ Recommended | How to set up a fair comparison between two products, when comparisons are misleading |
+| 11 | `impact-characterization` | ⬜ Recommended | How each emission is multiplied by a characterization factor to produce an impact score — the maths behind the conversion |
+| 12 | `hotspot-analysis` | ⬜ Recommended | How to read a contribution breakdown, identify the biggest sources of impact, connect to business decisions |
+| 13 | `comparing-products` | ⬜ Recommended | How to set up a fair comparison between two products, when comparisons are misleading |
 
 ---
 
@@ -198,6 +199,28 @@ means for a fashion brand.
 cannot be directly compared or interpreted on their own. Impact assessment translates
 that list into a small set of scores that each answer a specific environmental question,
 making the results usable by decision-makers who are not chemists.
+
+---
+
+### `impact-characterization` ⬜
+Once students understand that impact assessment converts raw emissions into environmental
+scores, the next question is: *how exactly does that conversion work?* This skill zooms
+in on the calculation itself — characterization. Students learn that every emission in
+the inventory (for example, 1 kg of methane) is multiplied by a number called a
+characterization factor, which expresses how damaging that substance is relative to a
+reference substance. For global warming, everything is compared to CO₂, so methane's
+factor is 28 — meaning 1 kg of methane counts as 28 kg of CO₂ equivalent in the final
+score.
+
+Students work through a small example by hand: take an emission from the inventory,
+look up its characterization factor from TRACI 2.2, multiply, and see how the raw kg
+figure becomes an impact score. The skill then shows how all the emissions across every
+impact category are summed to produce the full TRACI 2.2 results table.
+
+**Key insight for students:** Characterization factors are what make it possible to
+add up apples and oranges — CO₂ and methane and nitrous oxide — into a single number
+per impact category. Without them, a list of emissions is just a list. With them, it
+becomes a score a business can act on.
 
 ---
 
