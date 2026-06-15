@@ -20,8 +20,9 @@ Skills already built are marked ✅. Skills recommended but not yet built are ma
 | 9 | `scaling-vector` | ✅ Built | How much each process in the supply chain must run to deliver one functional unit |
 | 10 | `what-is-impact-assessment` | ⬜ Recommended | How raw inventory emissions are converted into environmental scores — global warming, acidification, smog, and more |
 | 11 | `impact-characterization` | ⬜ Recommended | How each emission is multiplied by a characterization factor to produce an impact score — the maths behind the conversion |
-| 12 | `hotspot-analysis` | ⬜ Recommended | How to read a contribution breakdown, identify the biggest sources of impact, connect to business decisions |
-| 13 | `comparing-products` | ⬜ Recommended | How to set up a fair comparison between two products, when comparisons are misleading |
+| 12 | `damage-characterization` | ⬜ Recommended | How midpoint impact scores are translated into damage to human health, ecosystems, and natural resources |
+| 13 | `hotspot-analysis` | ⬜ Recommended | How to read a contribution breakdown, identify the biggest sources of impact, connect to business decisions |
+| 14 | `comparing-products` | ⬜ Recommended | How to set up a fair comparison between two products, when comparisons are misleading |
 
 ---
 
@@ -221,6 +222,34 @@ impact category are summed to produce the full TRACI 2.2 results table.
 add up apples and oranges — CO₂ and methane and nitrous oxide — into a single number
 per impact category. Without them, a list of emissions is just a list. With them, it
 becomes a score a business can act on.
+
+---
+
+### `damage-characterization` ⬜
+Once students understand how emissions are converted into midpoint impact scores (global
+warming, acidification, smog), the next question is: *what do those scores actually do
+to the world?* Damage characterization is the step that answers this by going one level
+deeper — converting midpoint scores into damage to three areas of protection that people
+genuinely care about:
+
+- **Human health** — measured in disability-adjusted life years (DALYs): how many years
+  of healthy human life are lost due to disease, injury, or premature death caused by
+  the pollution.
+- **Ecosystem quality** — how many species in how large an area are harmed or lost.
+- **Resource availability** — how much harder it becomes to extract natural resources
+  in the future because of what was consumed today.
+
+Students learn that midpoint scores (like "28 kg CO₂ eq of global warming") are still
+one step removed from real-world harm — damage characterization is what closes that gap.
+Uses a case study to show how the TRACI 2.2 midpoint scores map to damage indicators,
+and asks students to explain in plain language which type of damage matters most for a
+fashion brand's stakeholders.
+
+**Key insight for students:** A global warming score in kg CO₂ eq tells you how much
+warming pressure a product creates — but a damage score tells you what that warming
+actually does to people and nature. For communicating with customers, investors, or
+regulators, damage scores are often more powerful because they are expressed in human
+terms, not chemistry terms.
 
 ---
 
