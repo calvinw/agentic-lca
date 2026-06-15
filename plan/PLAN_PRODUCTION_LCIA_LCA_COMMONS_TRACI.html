@@ -1,0 +1,1166 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>plan_production_lcia_lca_commons_traci – LCA Learning Hub</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-51ec0baac84c74459878fd0df95b10e6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar docked nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">LCA Learning Hub</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../skills_sessions/index.html"> 
+<span class="menu-text">Sessions</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../plan/index.html" aria-current="page"> 
+<span class="menu-text">Plans</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../plan/PLAN_PRODUCTION_LCIA_LCA_COMMONS_TRACI.html">Production LCIA LCA Commons TRACI</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../plan/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../plan/PLAN_BAFU_AND_METHODS_PACK.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">BAFU and Methods Pack</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../plan/PLAN_FOR_EDUCATIONAL_SKILLS.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">for Educational Skills</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../plan/PLAN_FOR_REFERENCE_EXAMPLES.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">for Reference Examples</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../plan/PLAN_FOR_SIMPLE_EXAMPLES.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">for Simple Examples</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../plan/PLAN_PRODUCTION_LCIA_LCA_COMMONS_TRACI.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Production LCIA LCA Commons TRACI</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../plan/PLAN_PRODUCTION_LCIA_RECIPE.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Production LCIA Recipe</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../plan/PLAN_REMIXABLE_LCAS.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Remixable LCAS</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../plan/PLAN_RUN_LCA_SKILL_LCIA_AND_DATABASES.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Run LCA Skill LCIA and Databases</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../plan/PLAN_SKILL_RECOMMENDATIONS.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Skill Recommendations</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../plan/PLAN_SWITCH_TO_QUARTO.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Switch to Quarto</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#plan-production-level-lcia-with-lca-commons-traci-2.2-ecoinvent-ready" id="toc-plan-production-level-lcia-with-lca-commons-traci-2.2-ecoinvent-ready" class="nav-link active" data-scroll-target="#plan-production-level-lcia-with-lca-commons-traci-2.2-ecoinvent-ready">Plan: Production-Level LCIA with LCA Commons + TRACI 2.2 (Ecoinvent-Ready)</a>
+  <ul class="collapse">
+  <li><a href="#background-what-the-system-does-today" id="toc-background-what-the-system-does-today" class="nav-link" data-scroll-target="#background-what-the-system-does-today">Background — What the System Does Today</a></li>
+  <li><a href="#goal" id="toc-goal" class="nav-link" data-scroll-target="#goal">Goal</a></li>
+  <li><a href="#why-lca-commons-traci-2.2" id="toc-why-lca-commons-traci-2.2" class="nav-link" data-scroll-target="#why-lca-commons-traci-2.2">Why LCA Commons + TRACI 2.2</a></li>
+  <li><a href="#step-0-one-time-database-setup-instructoradmin-not-students" id="toc-step-0-one-time-database-setup-instructoradmin-not-students" class="nav-link" data-scroll-target="#step-0-one-time-database-setup-instructoradmin-not-students">Step 0 — One-Time Database Setup (instructor/admin, not students)</a>
+  <ul class="collapse">
+  <li><a href="#a.-download-lca-commons-2025.1" id="toc-a.-download-lca-commons-2025.1" class="nav-link" data-scroll-target="#a.-download-lca-commons-2025.1">0a. Download LCA Commons 2025.1</a></li>
+  <li><a href="#b.-import-into-the-running-database" id="toc-b.-import-into-the-running-database" class="nav-link" data-scroll-target="#b.-import-into-the-running-database">0b. Import into the running database</a></li>
+  <li><a href="#c.-update-the-startup-scripts" id="toc-c.-update-the-startup-scripts" class="nav-link" data-scroll-target="#c.-update-the-startup-scripts">0c. Update the startup scripts</a></li>
+  <li><a href="#d.-future-ecoinvent-startup-script" id="toc-d.-future-ecoinvent-startup-script" class="nav-link" data-scroll-target="#d.-future-ecoinvent-startup-script">0d. (Future) Ecoinvent startup script</a></li>
+  </ul></li>
+  <li><a href="#step-1-update-recipe-cards-to-use-fedefl-flow-names" id="toc-step-1-update-recipe-cards-to-use-fedefl-flow-names" class="nav-link" data-scroll-target="#step-1-update-recipe-cards-to-use-fedefl-flow-names">Step 1 — Update Recipe Cards to Use FEDEFL Flow Names</a>
+  <ul class="collapse">
+  <li><a href="#fedefl-name-reference-for-textilefood-lca" id="toc-fedefl-name-reference-for-textilefood-lca" class="nav-link" data-scroll-target="#fedefl-name-reference-for-textilefood-lca">FEDEFL name reference for textile/food LCA</a></li>
+  <li><a href="#new-elementary-flow-format-in-recipe-cards" id="toc-new-elementary-flow-format-in-recipe-cards" class="nav-link" data-scroll-target="#new-elementary-flow-format-in-recipe-cards">New elementary flow format in recipe cards</a></li>
+  <li><a href="#new-lcia-block-in-recipe-cards-no-hand-typed-cfs" id="toc-new-lcia-block-in-recipe-cards-no-hand-typed-cfs" class="nav-link" data-scroll-target="#new-lcia-block-in-recipe-cards-no-hand-typed-cfs">New LCIA block in recipe cards (no hand-typed CFs)</a></li>
+  <li><a href="#recipe-cards-to-update" id="toc-recipe-cards-to-update" class="nav-link" data-scroll-target="#recipe-cards-to-update">Recipe cards to update</a></li>
+  </ul></li>
+  <li><a href="#step-2-code-changes-to-lca_scriptslca_analysis.py" id="toc-step-2-code-changes-to-lca_scriptslca_analysis.py" class="nav-link" data-scroll-target="#step-2-code-changes-to-lca_scriptslca_analysis.py">Step 2 — Code Changes to <code>lca_scripts/lca_analysis.py</code></a>
+  <ul class="collapse">
+  <li><a href="#a.-new-resolve_flow-helper" id="toc-a.-new-resolve_flow-helper" class="nav-link" data-scroll-target="#a.-new-resolve_flow-helper">2a. New <code>resolve_flow()</code> helper</a></li>
+  <li><a href="#b.-update-step-5-in-build_model" id="toc-b.-update-step-5-in-build_model" class="nav-link" data-scroll-target="#b.-update-step-5-in-build_model">2b. Update Step 5 in <code>build_model()</code></a></li>
+  <li><a href="#c.-new-get_impact_method_ref-helper" id="toc-c.-new-get_impact_method_ref-helper" class="nav-link" data-scroll-target="#c.-new-get_impact_method_ref-helper">2c. New <code>get_impact_method_ref()</code> helper</a></li>
+  <li><a href="#d.-update-calculationsetup-in-main" id="toc-d.-update-calculationsetup-in-main" class="nav-link" data-scroll-target="#d.-update-calculationsetup-in-main">2d. Update <code>CalculationSetup</code> in <code>main()</code></a></li>
+  <li><a href="#e.-update-step-14-in-main" id="toc-e.-update-step-14-in-main" class="nav-link" data-scroll-target="#e.-update-step-14-in-main">2e. Update Step 14 in <code>main()</code></a></li>
+  <li><a href="#f.-pass-olca_impacts-and-method_name-to-write_results_md" id="toc-f.-pass-olca_impacts-and-method_name-to-write_results_md" class="nav-link" data-scroll-target="#f.-pass-olca_impacts-and-method_name-to-write_results_md">2f. Pass <code>olca_impacts</code> and <code>method_name</code> to <code>write_results_md()</code></a></li>
+  </ul></li>
+  <li><a href="#step-3-new-setup_database.sh-script" id="toc-step-3-new-setup_database.sh-script" class="nav-link" data-scroll-target="#step-3-new-setup_database.sh-script">Step 3 — New <code>setup_database.sh</code> Script</a></li>
+  <li><a href="#step-4-new-start_olca_ecoinvent.sh-script" id="toc-step-4-new-start_olca_ecoinvent.sh-script" class="nav-link" data-scroll-target="#step-4-new-start_olca_ecoinvent.sh-script">Step 4 — New <code>start_olca_ecoinvent.sh</code> Script</a></li>
+  <li><a href="#files-to-create-modify" id="toc-files-to-create-modify" class="nav-link" data-scroll-target="#files-to-create-modify">Files to Create / Modify</a></li>
+  <li><a href="#verification-sequence" id="toc-verification-sequence" class="nav-link" data-scroll-target="#verification-sequence">Verification Sequence</a></li>
+  <li><a href="#pedagogical-notes-for-claude-code-in-the-codespace" id="toc-pedagogical-notes-for-claude-code-in-the-codespace" class="nav-link" data-scroll-target="#pedagogical-notes-for-claude-code-in-the-codespace">Pedagogical Notes for Claude Code in the Codespace</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+<section id="plan-production-level-lcia-with-lca-commons-traci-2.2-ecoinvent-ready" class="level1">
+<h1>Plan: Production-Level LCIA with LCA Commons + TRACI 2.2 (Ecoinvent-Ready)</h1>
+<section id="background-what-the-system-does-today" class="level2">
+<h2 class="anchored" data-anchor-id="background-what-the-system-does-today">Background — What the System Does Today</h2>
+<p><code>lca_analysis.py</code> builds a complete product system in openLCA from a recipe card, solves the technology matrix A, computes the scaling vector s = A⁻¹·f, and produces the LCI result B·s. It then does one of two things:</p>
+<ul>
+<li>If the recipe card has an <code>lcia:</code> block with hand-typed <code>characterization_factors</code>, it multiplies B·s by those CFs in Python and reports impact scores.</li>
+<li>If there is no <code>lcia:</code> block, it reports only raw CO₂.</li>
+</ul>
+<p>Neither path uses openLCA’s own LCIA engine. No real LCIA method is attached to <code>CalculationSetup</code>. The database (<code>paper_cup_lca</code>) is empty — every flow, process, and unit is created from scratch on each run with fresh UUIDs.</p>
+<p>This plan upgrades to a production-level system while keeping the matrix pedagogy fully intact.</p>
+<hr>
+</section>
+<section id="goal" class="level2">
+<h2 class="anchored" data-anchor-id="goal">Goal</h2>
+<ol type="1">
+<li>Replace the empty database with <strong>LCA Commons 2025.1</strong> (free US government data)</li>
+<li>Use <strong>TRACI 2.2</strong> from that database as the LCIA method (what Schiros uses)</li>
+<li>Update recipe cards to use <strong>FEDEFL flow names</strong> so TRACI can characterize them</li>
+<li>Wire <code>CalculationSetup</code> to pass the method and call <code>get_total_impacts()</code></li>
+<li>Structure everything so switching to <strong>ecoinvent</strong> later is a one-line change</li>
+</ol>
+<p>The matrix steps (A, B, s, B·s) stay exactly as they are — students still see every calculation. What changes is that Step 7 (LCIA) uses the real engine and real published characterization factors instead of hand-typed estimates.</p>
+<hr>
+</section>
+<section id="why-lca-commons-traci-2.2" class="level2">
+<h2 class="anchored" data-anchor-id="why-lca-commons-traci-2.2">Why LCA Commons + TRACI 2.2</h2>
+<p><strong>LCA Commons 2025.1</strong> (nexus.openlca.org, free): - Built and maintained by US government agencies (USDA, NREL, EPA) - Uses FEDEFL (Federal Elementary Flow List) — the same flow standard TRACI is built on - TRACI 2.2 is already embedded — no separate methods download needed - Includes USLCI background processes (US electricity, transport, materials)</p>
+<p><strong>TRACI 2.2</strong> covers: - Global Warming Potential (kg CO₂-eq) - Acidification (kg SO₂-eq) - Eutrophication, freshwater (kg N-eq) - Smog Formation (kg O₃-eq) - Human Health — Cancer (CTUh) - Human Health — Non-cancer (CTUh) - Ecotoxicity (CTUe) - Ozone Depletion (kg CFC-11-eq) - Fossil Fuel Depletion (MJ surplus)</p>
+<p><strong>Ecoinvent migration path:</strong> The EPA publishes an official FEDEFL↔︎ecoinvent flow mapping (https://github.com/USEPA/fedelemflowlist). When ecoinvent is loaded, change <code>-db lca_commons</code> to <code>-db ecoinvent</code> in the startup script. Recipe cards need no changes.</p>
+<hr>
+</section>
+<section id="step-0-one-time-database-setup-instructoradmin-not-students" class="level2">
+<h2 class="anchored" data-anchor-id="step-0-one-time-database-setup-instructoradmin-not-students">Step 0 — One-Time Database Setup (instructor/admin, not students)</h2>
+<section id="a.-download-lca-commons-2025.1" class="level3">
+<h3 class="anchored" data-anchor-id="a.-download-lca-commons-2025.1">0a. Download LCA Commons 2025.1</h3>
+<ol type="1">
+<li>Create a free account at https://nexus.openlca.org</li>
+<li>Search for “LCA Commons” and download the <code>.zolca</code> file (~200 MB)</li>
+<li>Place it in <code>$HOME/olca-data/</code> on the Codespace machine</li>
+</ol>
+</section>
+<section id="b.-import-into-the-running-database" class="level3">
+<h3 class="anchored" data-anchor-id="b.-import-into-the-running-database">0b. Import into the running database</h3>
+<p>First try via the gdt-server REST API (automated):</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-X</span> POST http://localhost:8080/api/import <span class="dt">\</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">-H</span> <span class="st">"Content-Type: application/octet-stream"</span> <span class="dt">\</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">--data-binary</span> @<span class="st">"</span><span class="va">$HOME</span><span class="st">/olca-data/lca_commons_2025.1.zolca"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>If that endpoint is not exposed, use the openLCA desktop app: - File → Import → Linked Data (JSON-LD) → select the .zolca file</p>
+</section>
+<section id="c.-update-the-startup-scripts" class="level3">
+<h3 class="anchored" data-anchor-id="c.-update-the-startup-scripts">0c. Update the startup scripts</h3>
+<p>In <code>start_olca.sh</code> and <code>setup_olca.sh</code>, change line 41:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Before:</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">-db</span> paper_cup_lca</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># After:</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="ex">-db</span> lca_commons</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="d.-future-ecoinvent-startup-script" class="level3">
+<h3 class="anchored" data-anchor-id="d.-future-ecoinvent-startup-script">0d. (Future) Ecoinvent startup script</h3>
+<p>Create <code>start_olca_ecoinvent.sh</code> as a copy of <code>start_olca.sh</code> with:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">-db</span> ecoinvent</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Students use <code>start_olca.sh</code> (LCA Commons, free). Researchers use <code>start_olca_ecoinvent.sh</code> (ecoinvent, licensed).</p>
+<hr>
+</section>
+</section>
+<section id="step-1-update-recipe-cards-to-use-fedefl-flow-names" class="level2">
+<h2 class="anchored" data-anchor-id="step-1-update-recipe-cards-to-use-fedefl-flow-names">Step 1 — Update Recipe Cards to Use FEDEFL Flow Names</h2>
+<p>FEDEFL names are the bridge between our foreground processes and TRACI 2.2. The FEDEFL name for CO₂ is simply <code>Carbon dioxide</code>; compartment is <code>air</code>.</p>
+<section id="fedefl-name-reference-for-textilefood-lca" class="level3">
+<h3 class="anchored" data-anchor-id="fedefl-name-reference-for-textilefood-lca">FEDEFL name reference for textile/food LCA</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Current name in recipe cards</th>
+<th>FEDEFL name</th>
+<th>Compartment</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>CO2 to air</td>
+<td>Carbon dioxide</td>
+<td>air</td>
+</tr>
+<tr class="even">
+<td>CH4 to air</td>
+<td>Methane</td>
+<td>air</td>
+</tr>
+<tr class="odd">
+<td>NOx to air</td>
+<td>Nitrogen oxides</td>
+<td>air</td>
+</tr>
+<tr class="even">
+<td>SOx to air / SO2 to air</td>
+<td>Sulfur dioxide</td>
+<td>air</td>
+</tr>
+<tr class="odd">
+<td>Water</td>
+<td>Water</td>
+<td>water</td>
+</tr>
+<tr class="even">
+<td>Phosphate</td>
+<td>Phosphorus</td>
+<td>water</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="new-elementary-flow-format-in-recipe-cards" class="level3">
+<h3 class="anchored" data-anchor-id="new-elementary-flow-format-in-recipe-cards">New elementary flow format in recipe cards</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">elementary_flows</span><span class="kw">:</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">emissions</span><span class="kw">:</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="kw">{</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Carbon dioxide</span><span class="kw">,</span><span class="at">  </span><span class="fu">compartment</span><span class="kw">:</span><span class="at"> air</span><span class="kw">,</span><span class="at">   </span><span class="fu">unit</span><span class="kw">:</span><span class="at"> kg </span><span class="kw">}</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="kw">{</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Nitrogen oxides</span><span class="kw">,</span><span class="at"> </span><span class="fu">compartment</span><span class="kw">:</span><span class="at"> air</span><span class="kw">,</span><span class="at">   </span><span class="fu">unit</span><span class="kw">:</span><span class="at"> kg </span><span class="kw">}</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="kw">{</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Sulfur dioxide</span><span class="kw">,</span><span class="at">  </span><span class="fu">compartment</span><span class="kw">:</span><span class="at"> air</span><span class="kw">,</span><span class="at">   </span><span class="fu">unit</span><span class="kw">:</span><span class="at"> kg </span><span class="kw">}</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="kw">{</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Methane</span><span class="kw">,</span><span class="at">         </span><span class="fu">compartment</span><span class="kw">:</span><span class="at"> air</span><span class="kw">,</span><span class="at">   </span><span class="fu">unit</span><span class="kw">:</span><span class="at"> kg </span><span class="kw">}</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">resources</span><span class="kw">:</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="kw">{</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Water</span><span class="kw">,</span><span class="at">           </span><span class="fu">compartment</span><span class="kw">:</span><span class="at"> water</span><span class="kw">,</span><span class="at"> </span><span class="fu">unit</span><span class="kw">:</span><span class="at"> L  </span><span class="kw">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="new-lcia-block-in-recipe-cards-no-hand-typed-cfs" class="level3">
+<h3 class="anchored" data-anchor-id="new-lcia-block-in-recipe-cards-no-hand-typed-cfs">New LCIA block in recipe cards (no hand-typed CFs)</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">lcia</span><span class="kw">:</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">method_name</span><span class="kw">:</span><span class="at"> </span><span class="st">"TRACI 2.2"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>That is all. No characterization factors to type. The engine provides them.</p>
+</section>
+<section id="recipe-cards-to-update" class="level3">
+<h3 class="anchored" data-anchor-id="recipe-cards-to-update">Recipe cards to update</h3>
+<ul>
+<li><code>lca_analysis/cotton_shirt/recipe_card.md</code>
+<ul>
+<li>Rename <code>CO2 to air</code> → <code>Carbon dioxide</code> (compartment: air)</li>
+<li>Add <code>Nitrogen oxides</code> and <code>Sulfur dioxide</code> to P5 (Generate electricity) with realistic coal-grid values: NOₓ ≈ 0.0009 kg/kWh, SOₓ ≈ 0.0006 kg/kWh</li>
+<li>Add <code>lcia: { method_name: "TRACI 2.2" }</code></li>
+</ul></li>
+<li><code>lca_analysis/levi_jeans/recipe_card.md</code> and all 7 variants
+<ul>
+<li>Same pattern as cotton shirt</li>
+</ul></li>
+<li><code>skills_references/wool_yarn/recipe_card.md</code>
+<ul>
+<li>Rename <code>CO2 to air</code> → <code>Carbon dioxide</code>, <code>CH4 to air</code> → <code>Methane</code></li>
+<li>Remove hand-typed <code>characterization_factors</code> dict</li>
+<li>Add <code>lcia: { method_name: "TRACI 2.2" }</code></li>
+</ul></li>
+<li><code>skills_references/cotton_fiber/recipe_card.md</code></li>
+<li><code>skills_references/polyester_tshirt/recipe_card.md</code></li>
+<li><code>lca_analysis/coffee/recipe_card.md</code></li>
+<li><code>lca_analysis/paper_cup/recipe_card.md</code></li>
+<li>All other cards with elementary flows</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="step-2-code-changes-to-lca_scriptslca_analysis.py" class="level2">
+<h2 class="anchored" data-anchor-id="step-2-code-changes-to-lca_scriptslca_analysis.py">Step 2 — Code Changes to <code>lca_scripts/lca_analysis.py</code></h2>
+<section id="a.-new-resolve_flow-helper" class="level3">
+<h3 class="anchored" data-anchor-id="a.-new-resolve_flow-helper">2a. New <code>resolve_flow()</code> helper</h3>
+<p>Add just before <code>build_model()</code>. Replaces <code>o.new_elementary_flow()</code> for biosphere flows. Looks up the flow in the loaded database by FEDEFL name first; creates new only as a fallback (for use before LCA Commons is loaded).</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> resolve_flow(client: RestClient, name: <span class="bu">str</span>, flow_property) <span class="op">-&gt;</span> o.Flow:</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Use existing DB flow if name matches; otherwise create new."""</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">try</span>:</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> d <span class="kw">in</span> client.get_descriptors(o.Flow):</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> d.name <span class="kw">and</span> d.name.strip().lower() <span class="op">==</span> name.strip().lower():</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>                existing <span class="op">=</span> client.get(o.Flow, d.<span class="bu">id</span>)</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>                <span class="cf">if</span> existing <span class="kw">is</span> <span class="kw">not</span> <span class="va">None</span>:</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>                    <span class="bu">print</span>(<span class="ss">f"      ✓ resolved '</span><span class="sc">{</span>name<span class="sc">}</span><span class="ss">' → DB flow (</span><span class="sc">{</span>d<span class="sc">.</span><span class="bu">id</span>[:<span class="dv">8</span>]<span class="sc">}</span><span class="ss">)"</span>)</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">return</span> existing</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">except</span> <span class="pp">Exception</span>:</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>        <span class="cf">pass</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>    flow <span class="op">=</span> o.new_elementary_flow(name, flow_property)</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>    client.put(flow)</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"      + created new flow '</span><span class="sc">{</span>name<span class="sc">}</span><span class="ss">'"</span>)</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> flow</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="b.-update-step-5-in-build_model" class="level3">
+<h3 class="anchored" data-anchor-id="b.-update-step-5-in-build_model">2b. Update Step 5 in <code>build_model()</code></h3>
+<p>Replace both <code>o.new_elementary_flow()</code> loops with <code>resolve_flow()</code> calls:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>step(<span class="dv">5</span>, <span class="st">"Elementary Flows  (biosphere — emissions / extractions)"</span>)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> ef <span class="kw">in</span> spec.get(<span class="st">"elementary_flows"</span>, {}).get(<span class="st">"emissions"</span>, []):</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    flow <span class="op">=</span> resolve_flow(client, ef[<span class="st">"name"</span>], reg[ef[<span class="st">"unit"</span>]])</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    reg[ef[<span class="st">"name"</span>]] <span class="op">=</span> flow</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"    </span><span class="sc">{</span>ef[<span class="st">'name'</span>]<span class="sc">}</span><span class="ss">  [</span><span class="sc">{</span>ef[<span class="st">'unit'</span>]<span class="sc">}</span><span class="ss">]  → emission to nature"</span>)</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> ef <span class="kw">in</span> spec.get(<span class="st">"elementary_flows"</span>, {}).get(<span class="st">"resources"</span>, []):</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    flow <span class="op">=</span> resolve_flow(client, ef[<span class="st">"name"</span>], reg[ef[<span class="st">"unit"</span>]])</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    reg[ef[<span class="st">"name"</span>]] <span class="op">=</span> flow</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"    </span><span class="sc">{</span>ef[<span class="st">'name'</span>]<span class="sc">}</span><span class="ss">  [</span><span class="sc">{</span>ef[<span class="st">'unit'</span>]<span class="sc">}</span><span class="ss">]  ← extraction from nature"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="c.-new-get_impact_method_ref-helper" class="level3">
+<h3 class="anchored" data-anchor-id="c.-new-get_impact_method_ref-helper">2c. New <code>get_impact_method_ref()</code> helper</h3>
+<p>Add after <code>build_model()</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> get_impact_method_ref(client: RestClient, method_name: <span class="bu">str</span>):</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Look up an impact method in the database by name. Returns Ref or None."""</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">try</span>:</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> d <span class="kw">in</span> client.get_descriptors(o.ImpactMethod):</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> d.name <span class="kw">and</span> method_name.strip().lower() <span class="kw">in</span> d.name.strip().lower():</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>                <span class="bu">print</span>(<span class="ss">f"    ✓ found impact method in DB: </span><span class="sc">{</span>d<span class="sc">.</span>name<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>                <span class="cf">return</span> d.to_ref()</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">except</span> <span class="pp">Exception</span>:</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">pass</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"    ✗ method '</span><span class="sc">{</span>method_name<span class="sc">}</span><span class="ss">' not found in database — LCIA skipped"</span>)</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="va">None</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="d.-update-calculationsetup-in-main" class="level3">
+<h3 class="anchored" data-anchor-id="d.-update-calculationsetup-in-main">2d. Update <code>CalculationSetup</code> in <code>main()</code></h3>
+<p>Replace the existing CalculationSetup block (lines ~497-509):</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>step(<span class="dv">11</span>, <span class="st">"LCA Calculation via openLCA gdt-server"</span>)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Look up LCIA method if recipe card requests one</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>method_ref  <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>lcia_spec   <span class="op">=</span> spec.get(<span class="st">"lcia"</span>, {})</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>method_name <span class="op">=</span> lcia_spec.get(<span class="st">"method_name"</span>, <span class="st">""</span>)</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> method_name:</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>    method_ref <span class="op">=</span> get_impact_method_ref(client, method_name)</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">  Submitting product system </span><span class="sc">{</span>system_ref<span class="sc">.</span><span class="bu">id</span>[:<span class="dv">8</span>]<span class="sc">}</span><span class="ss">…"</span>)</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>setup <span class="op">=</span> o.CalculationSetup(</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>    target<span class="op">=</span>o.Ref(<span class="bu">id</span><span class="op">=</span>system_ref.<span class="bu">id</span>),</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>    amount<span class="op">=</span>fu[<span class="st">"amount"</span>],</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>    impact_method<span class="op">=</span>method_ref          <span class="co"># None → inventory only (unchanged behaviour)</span></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> client.calculate(setup)</span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>result.wait_until_ready()</span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"  Calculation complete."</span>)</span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Collect flow totals (always)</span></span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>flows <span class="op">=</span> result.get_total_flows()</span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>olca_outputs <span class="op">=</span> {f.envi_flow.flow.name: f.amount</span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>                <span class="cf">for</span> f <span class="kw">in</span> flows <span class="cf">if</span> <span class="kw">not</span> f.envi_flow.is_input}</span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>olca_inputs  <span class="op">=</span> {f.envi_flow.flow.name: f.amount</span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a>                <span class="cf">for</span> f <span class="kw">in</span> flows <span class="cf">if</span> f.envi_flow.is_input}</span>
+<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Collect impact totals (only if a method was found)</span></span>
+<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a>olca_impacts <span class="op">=</span> {}   <span class="co"># { category_name: (amount, unit) }</span></span>
+<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> method_ref:</span>
+<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> iv <span class="kw">in</span> result.get_total_impacts():</span>
+<span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a>        olca_impacts[iv.impact_category.name] <span class="op">=</span> (iv.amount, iv.ref_unit <span class="kw">or</span> <span class="st">""</span>)</span>
+<span id="cb9-32"><a href="#cb9-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-33"><a href="#cb9-33" aria-hidden="true" tabindex="-1"></a>result.dispose()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="e.-update-step-14-in-main" class="level3">
+<h3 class="anchored" data-anchor-id="e.-update-step-14-in-main">2e. Update Step 14 in <code>main()</code></h3>
+<p>Replace the existing hand-multiplication block with:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> olca_impacts:</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    step(<span class="dv">14</span>, <span class="ss">f"LCIA Results  (</span><span class="sc">{</span>method_name<span class="sc">}</span><span class="ss">)"</span>)</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>()</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> cat_name, (val, unit) <span class="kw">in</span> olca_impacts.items():</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"  </span><span class="sc">{</span>cat_name<span class="sc">:&lt;45}</span><span class="ss"> </span><span class="sc">{</span>val<span class="sc">:&gt;12.6f}</span><span class="ss">  </span><span class="sc">{</span>unit<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> lcia_spec.get(<span class="st">"impact_categories"</span>):</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Legacy fallback: hand-typed CFs (existing code block — keep as-is)</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>    ...</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="f.-pass-olca_impacts-and-method_name-to-write_results_md" class="level3">
+<h3 class="anchored" data-anchor-id="f.-pass-olca_impacts-and-method_name-to-write_results_md">2f. Pass <code>olca_impacts</code> and <code>method_name</code> to <code>write_results_md()</code></h3>
+<p>Update function signature:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> write_results_md(spec, A, B, s, Bs, olca_outputs, olca_inputs,</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>                     proc_names, prod_names, em_names, res_names,</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>                     system_id, olca_impacts<span class="op">=</span><span class="va">None</span>, method_name<span class="op">=</span><span class="st">""</span>):</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>In the Step 7 section of <code>write_results_md()</code>, add engine-result path:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> olca_impacts:</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    ln(<span class="ss">f"## Step 7 — LCIA Results  (</span><span class="sc">{</span>method_name<span class="sc">}</span><span class="ss">)"</span>)</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    ln()</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>    ln(<span class="st">"Characterization factors from the database. "</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>       <span class="st">"Each impact category score is the sum of all "</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>       <span class="st">"elementary flow contributions as computed by the openLCA engine."</span>)</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>    ln()</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>    ln(<span class="st">"| Impact Category | Score | Unit |"</span>)</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>    ln(<span class="st">"|---|---:|---|"</span>)</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> cat_name, (val, unit) <span class="kw">in</span> olca_impacts.items():</span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>        ln(<span class="ss">f"| </span><span class="sc">{</span>cat_name<span class="sc">}</span><span class="ss"> | **</span><span class="sc">{</span>val<span class="sc">:.6f}</span><span class="ss">** | </span><span class="sc">{</span>unit<span class="sc">}</span><span class="ss"> |"</span>)</span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>    ln()</span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> lcia_spec.get(<span class="st">"impact_categories"</span>):</span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>    <span class="co"># existing hand-typed CF table (keep as-is for legacy cards)</span></span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>    ...</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>In the Summary section, replace the single CO₂ line with all TRACI categories:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> olca_impacts:</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    ln(<span class="ss">f"**LCIA Method:** </span><span class="sc">{</span>method_name<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    ln()</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> cat_name, (val, unit) <span class="kw">in</span> olca_impacts.items():</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>        ln(<span class="ss">f"&gt; **</span><span class="sc">{</span>cat_name<span class="sc">}</span><span class="ss">: </span><span class="sc">{</span>val<span class="sc">:.6f}</span><span class="ss"> </span><span class="sc">{</span>unit<span class="sc">}</span><span class="ss">** "</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>           <span class="ss">f"per </span><span class="sc">{</span>fu[<span class="st">'amount'</span>]<span class="sc">}</span><span class="ss"> </span><span class="sc">{</span>fu[<span class="st">'unit'</span>]<span class="sc">}</span><span class="ss"> of </span><span class="sc">{</span>fu[<span class="st">'description'</span>]<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+</section>
+<section id="step-3-new-setup_database.sh-script" class="level2">
+<h2 class="anchored" data-anchor-id="step-3-new-setup_database.sh-script">Step 3 — New <code>setup_database.sh</code> Script</h2>
+<p>Create <code>setup_database.sh</code> in the project root:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/usr/bin/env bash</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="co"># setup_database.sh</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="co"># One-time setup: imports LCA Commons 2025.1 into the openLCA database.</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Run once per Codespace after start_olca.sh has started the server.</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Before running:</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="co">#   1. Download LCA Commons 2025.1 .zolca from https://nexus.openlca.org</span></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="co">#   2. Place the file in $HOME/olca-data/</span></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a><span class="co">#   3. Update ZOLCA_FILE below with the exact filename</span></span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a><span class="va">ZOLCA_FILE</span><span class="op">=</span><span class="st">"</span><span class="va">$HOME</span><span class="st">/olca-data/lca_commons_2025.1.zolca"</span></span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="bu">[</span> <span class="ot">!</span> <span class="ot">-f</span> <span class="st">"</span><span class="va">$ZOLCA_FILE</span><span class="st">"</span> <span class="bu">]</span><span class="kw">;</span> <span class="cf">then</span></span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">"ERROR: </span><span class="va">$ZOLCA_FILE</span><span class="st"> not found."</span></span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">"Download LCA Commons 2025.1 from https://nexus.openlca.org (free account required)"</span></span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>    <span class="bu">exit</span> 1</span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a><span class="cf">fi</span></span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"[setup] Importing LCA Commons into openLCA database..."</span></span>
+<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a><span class="va">HTTP_STATUS</span><span class="op">=</span><span class="va">$(</span><span class="ex">curl</span> <span class="at">-s</span> <span class="at">-o</span> /tmp/import_response.json <span class="at">-w</span> <span class="st">"%{http_code}"</span> <span class="dt">\</span></span>
+<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">-X</span> POST http://localhost:8080/api/import <span class="dt">\</span></span>
+<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">-H</span> <span class="st">"Content-Type: application/octet-stream"</span> <span class="dt">\</span></span>
+<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a>    <span class="at">--data-binary</span> @<span class="st">"</span><span class="va">$ZOLCA_FILE</span><span class="st">"</span><span class="va">)</span></span>
+<span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-25"><a href="#cb14-25" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="bu">[</span> <span class="st">"</span><span class="va">$HTTP_STATUS</span><span class="st">"</span> <span class="ot">=</span> <span class="st">"200"</span> <span class="bu">]</span><span class="kw">;</span> <span class="cf">then</span></span>
+<span id="cb14-26"><a href="#cb14-26" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">"[setup] Import successful."</span></span>
+<span id="cb14-27"><a href="#cb14-27" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">"[setup] Update start_olca.sh line 41: change '-db paper_cup_lca' to '-db lca_commons'"</span></span>
+<span id="cb14-28"><a href="#cb14-28" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">"[setup] Then restart: bash stop_olca.sh &amp;&amp; bash start_olca.sh"</span></span>
+<span id="cb14-29"><a href="#cb14-29" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span></span>
+<span id="cb14-30"><a href="#cb14-30" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">"[setup] API import returned HTTP </span><span class="va">$HTTP_STATUS</span><span class="st">"</span></span>
+<span id="cb14-31"><a href="#cb14-31" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">"[setup] If /api/import is not available, import manually:"</span></span>
+<span id="cb14-32"><a href="#cb14-32" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">"        openLCA desktop → File → Import → Linked Data → </span><span class="va">$ZOLCA_FILE</span><span class="st">"</span></span>
+<span id="cb14-33"><a href="#cb14-33" aria-hidden="true" tabindex="-1"></a>    <span class="fu">cat</span> /tmp/import_response.json <span class="dv">2</span><span class="op">&gt;</span>/dev/null</span>
+<span id="cb14-34"><a href="#cb14-34" aria-hidden="true" tabindex="-1"></a><span class="cf">fi</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="step-4-new-start_olca_ecoinvent.sh-script" class="level2">
+<h2 class="anchored" data-anchor-id="step-4-new-start_olca_ecoinvent.sh-script">Step 4 — New <code>start_olca_ecoinvent.sh</code> Script</h2>
+<p>Create <code>start_olca_ecoinvent.sh</code> as a copy of <code>start_olca.sh</code> with one change:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Line 41 — only difference from start_olca.sh:</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="ex">-db</span> ecoinvent</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>When the ecoinvent license is ready: 1. Import ecoinvent 3.12 (cut-off) .zolca into <code>$HOME/olca-data/databases/</code> 2. Run <code>bash start_olca_ecoinvent.sh</code> instead of <code>bash start_olca.sh</code> 3. Recipe cards stay identical — <code>resolve_flow()</code> finds ecoinvent flows by FEDEFL name 4. <code>get_impact_method_ref()</code> finds EF 3.1 or TRACI in ecoinvent’s embedded methods</p>
+<hr>
+</section>
+<section id="files-to-create-modify" class="level2">
+<h2 class="anchored" data-anchor-id="files-to-create-modify">Files to Create / Modify</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>File</th>
+<th>Action</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>lca_scripts/lca_analysis.py</code></td>
+<td>Modify</td>
+<td>Add <code>resolve_flow()</code>, <code>get_impact_method_ref()</code>, update CalculationSetup, Step 14, write_results_md</td>
+</tr>
+<tr class="even">
+<td><code>start_olca.sh</code></td>
+<td>Modify</td>
+<td>Change <code>-db paper_cup_lca</code> → <code>-db lca_commons</code> (do after import)</td>
+</tr>
+<tr class="odd">
+<td><code>setup_olca.sh</code></td>
+<td>Modify</td>
+<td>Same db name change</td>
+</tr>
+<tr class="even">
+<td><code>setup_database.sh</code></td>
+<td>Create</td>
+<td>One-time LCA Commons import script</td>
+</tr>
+<tr class="odd">
+<td><code>start_olca_ecoinvent.sh</code></td>
+<td>Create</td>
+<td>Future ecoinvent startup script</td>
+</tr>
+<tr class="even">
+<td><code>lca_analysis/cotton_shirt/recipe_card.md</code></td>
+<td>Modify</td>
+<td>FEDEFL names + NOₓ/SOₓ + <code>method_name: "TRACI 2.2"</code></td>
+</tr>
+<tr class="odd">
+<td><code>lca_analysis/levi_jeans/recipe_card.md</code></td>
+<td>Modify</td>
+<td>Same pattern</td>
+</tr>
+<tr class="even">
+<td><code>lca_analysis/levi_jeans_*/recipe_card.md</code></td>
+<td>Modify</td>
+<td>Same pattern (7 variant cards)</td>
+</tr>
+<tr class="odd">
+<td><code>skills_references/wool_yarn/recipe_card.md</code></td>
+<td>Modify</td>
+<td>FEDEFL names, remove hand-typed CFs, add method_name</td>
+</tr>
+<tr class="even">
+<td><code>skills_references/cotton_fiber/recipe_card.md</code></td>
+<td>Modify</td>
+<td>Same pattern</td>
+</tr>
+<tr class="odd">
+<td><code>skills_references/polyester_tshirt/recipe_card.md</code></td>
+<td>Modify</td>
+<td>Same pattern</td>
+</tr>
+<tr class="even">
+<td><code>lca_analysis/coffee/recipe_card.md</code></td>
+<td>Modify</td>
+<td>FEDEFL names + method_name</td>
+</tr>
+<tr class="odd">
+<td><code>lca_analysis/paper_cup/recipe_card.md</code></td>
+<td>Modify</td>
+<td>Same pattern</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="verification-sequence" class="level2">
+<h2 class="anchored" data-anchor-id="verification-sequence">Verification Sequence</h2>
+<p>Run these in order after setup:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Check server is running with LCA Commons</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-s</span> http://localhost:8080/api/version</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Check TRACI 2.2 is present in the database</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-s</span> http://localhost:8080/api/descriptors/ImpactMethod <span class="kw">|</span> <span class="ex">python3</span> <span class="at">-m</span> json.tool <span class="kw">|</span> <span class="fu">grep</span> <span class="at">-i</span> traci</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Run cotton shirt — watch for resolve_flow and method lookup in console</span></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> lca_scripts/lca_analysis.py lca_analysis/cotton_shirt/recipe_card.md</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Expected console output:</span></span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a><span class="co">#   ✓ resolved 'Carbon dioxide' → DB flow (xxxxxxxx)</span></span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a><span class="co">#   ✓ resolved 'Nitrogen oxides' → DB flow (xxxxxxxx)</span></span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a><span class="co">#   ✓ found impact method in DB: TRACI 2.2</span></span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Expected in lca_results.md Step 7:</span></span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a><span class="co">#   | Global Warming Potential | 2.320000 | kg CO₂-eq |</span></span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a><span class="co">#   | Acidification            | 0.004100 | kg SO₂-eq |</span></span>
+<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a><span class="co">#   | Eutrophication           | ...      | kg N-eq   |</span></span>
+<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a><span class="co"># 4. Confirm GWP matches the old CO2 number (should be ~2.32 kg CO₂-eq)</span></span>
+<span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a><span class="co"># 5. Run levi_jeans base vs organic — confirm burden-shift visible across categories</span></span>
+<span id="cb16-22"><a href="#cb16-22" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> lca_scripts/lca_analysis.py lca_analysis/levi_jeans/recipe_card.md</span>
+<span id="cb16-23"><a href="#cb16-23" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> lca_scripts/lca_analysis.py lca_analysis/levi_jeans_organic/recipe_card.md</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="pedagogical-notes-for-claude-code-in-the-codespace" class="level2">
+<h2 class="anchored" data-anchor-id="pedagogical-notes-for-claude-code-in-the-codespace">Pedagogical Notes for Claude Code in the Codespace</h2>
+<p>When running this for students, explain:</p>
+<ul>
+<li><p><strong><code>resolve_flow()</code></strong> is like looking up a word in a dictionary. If “Carbon dioxide” is already in the database dictionary with an official ID number, we use that. If it is not there yet, we write a new entry. The whole point is that TRACI knows the official ID number, so it can find our flow and apply the right CF.</p></li>
+<li><p><strong>FEDEFL names</strong> are like ISBN numbers for elementary flows — every copy of “Carbon dioxide” in every database has the same identifier, so TRACI always knows what to multiply by, regardless of which database is loaded.</p></li>
+<li><p><strong>The matrix steps A, B, s, B·s are unchanged.</strong> LCIA is still Step 7, still shows a table. The difference is the table now comes from a published, peer-reviewed method rather than numbers typed by hand.</p></li>
+<li><p><strong>When ecoinvent is connected:</strong> tell students “we have switched to a more detailed dictionary — the recipe card is the same, but the background measurements are now from a professionally-measured industrial database.”</p></li>
+</ul>
+<hr>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<ul>
+<li>LCA Commons download: https://nexus.openlca.org/databases</li>
+<li>FEDEFL GitHub (flow list + ecoinvent mapping): https://github.com/USEPA/fedelemflowlist</li>
+<li>FEDEFL in openLCA (import guide): https://github.com/FLCAC-admin/fedelemflowlist/wiki/FEDEFL-in-openLCA</li>
+<li>TRACI 2.2 documentation PDF: https://nexus.openlca.org/ws/files/36003</li>
+<li>gdt-server REST API: https://greendelta.github.io/openLCA-ApiDoc/</li>
+<li>olca-ipc Python docs: https://greendelta.github.io/olca-ipc.py/olca/ipc.html</li>
+<li>Ecoinvent in openLCA: https://www.openlca.org/ecoinvent-3-12-available-for-openlca/</li>
+</ul>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/calvinw\.github\.io\/agentic-lca\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
