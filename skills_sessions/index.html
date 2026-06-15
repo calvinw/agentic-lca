@@ -39,7 +39,7 @@
     #resize-handle:hover, #resize-handle.dragging { background: #3b82f6; }
 
     #sidebar-header {
-      padding: 18px 16px 14px;
+      padding: 56px 16px 14px;
       border-bottom: 1px solid #e2e8f0;
     }
 
@@ -59,10 +59,12 @@
     .skill-group { margin-bottom: 8px; }
 
     .skill-group-header {
-      font-size: 12px;
+      font-size: 15px;
       font-weight: 700;
       color: #0f172a;
       padding: 14px 16px 4px 16px;
+      white-space: nowrap;
+      overflow: hidden;
     }
 
     .skill-group ul {
@@ -88,6 +90,11 @@
       text-underline-offset: 2px;
       padding: 0;
       line-height: 1.8;
+      white-space: nowrap;
+    }
+
+    .skill-group li {
+      overflow: hidden;
     }
 
     .session-link:hover { color: #3b82f6; }
@@ -129,22 +136,22 @@
     .session-header-card {
       background: white;
       border: 1px solid #e2e8f0;
-      border-radius: 10px;
-      padding: 20px 24px;
-      margin-bottom: 36px;
+      border-radius: 8px;
+      padding: 12px 16px;
+      margin-bottom: 24px;
     }
 
-    .session-header-card h2 {
-      font-size: 14px;
-      font-weight: 600;
+    .session-header-card .header-title {
+      font-size: 15px;
+      font-weight: 700;
       color: #0f172a;
-      margin-bottom: 4px;
+      font-family: 'SF Mono', 'Fira Code', 'Courier New', monospace;
+      margin-bottom: 3px;
     }
 
-    .session-header-card .case-study {
+    .session-header-card .header-meta {
       font-size: 12px;
       color: #64748b;
-      margin-bottom: 10px;
     }
 
     .tags { display: flex; gap: 8px; flex-wrap: wrap; }
@@ -166,8 +173,8 @@
     }
 
     .turn-ai {
-      background: #eff6ff;
-      border: 1px solid #bfdbfe;
+      background: white;
+      border: 1px solid #e2e8f0;
     }
 
     .turn-student {
@@ -176,7 +183,7 @@
     }
 
     .turn-label {
-      font-size: 10px;
+      font-size: 16px;
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.08em;
@@ -417,14 +424,12 @@
         const li = document.createElement('li');
         const btn = document.createElement('button');
         btn.className = 'session-link';
-        btn.textContent = s.command.replace(/^\//, '');
+        const stem = s.file.replace(/^.*\//, '').replace(/\.md$/, '');
+        const skillSlug = s.file.split('/')[0];
+        btn.textContent = stem.startsWith(skillSlug + '-') ? stem.slice(skillSlug.length + 1) : stem;
         btn.addEventListener('click', () => loadSession(s.index, btn));
         li.appendChild(btn);
 
-        const meta = document.createElement('span');
-        meta.className = 'session-meta';
-        meta.textContent = `${s.student} · v${s.version} · session ${s.n}`;
-        li.appendChild(meta);
         ul.appendChild(li);
       });
       group.appendChild(ul);
@@ -464,21 +469,11 @@
 
   // ── Render markdown into styled turn bubbles ──────────────────────────────
   function renderSession(session, raw) {
-    // Build header card
-    const caseStudyLine = session.caseStudy
-      ? `<div class="case-study">Case study: ${session.caseStudy}</div>`
-      : `<div class="case-study">No specific case study</div>`;
-
+    // Build two-line header
     const header = `
       <div class="session-header-card">
-        <h2>${session.skill}</h2>
-        ${caseStudyLine}
-        <div class="tags">
-          <span class="tag">v${session.version}</span>
-          <span class="tag">${session.student}</span>
-          <span class="tag">${session.model}</span>
-          <span class="tag">Session ${session.n}</span>
-        </div>
+        <div class="header-title">${session.command}</div>
+        <div class="header-meta">${session.student} · v${session.version} · ${session.model} · session ${session.n}</div>
       </div>`;
 
     // Split markdown into speaker turns
