@@ -16,11 +16,10 @@ Skills already built are marked ✅. Skills recommended but not yet built are ma
 | 5 | `functional-unit` | ✅ Built | The precise definition of what is being measured |
 | 6 | `supply-chain` | ✅ Built | How to read a product graph, what processes and flows are |
 | 7 | `technosphere-and-ecosphere` | ✅ Built | The difference between human-made flows (products) and natural flows (emissions, resources) that cross into the natural world |
-| 8 | `characterization` | ⬜ Recommended | How raw emissions are converted into impact scores (e.g. why 1 kg CH4 = 27.9 kg CO2 eq) |
-| 9 | `impact-categories` | ⬜ Recommended | What impact categories are, why there are more than just CO2, why one emission can appear in multiple categories |
-| 10 | `scaling-vector` | ✅ Built | How much each process in the supply chain must run to deliver one functional unit |
-| 11 | `hotspot-analysis` | ⬜ Recommended | How to read a contribution breakdown, identify the biggest sources of impact, connect to business decisions |
-| 12 | `comparing-products` | ⬜ Recommended | How to set up a fair comparison between two products, when comparisons are misleading |
+| 8 | `life-cycle-inventory` | ⬜ Recommended | What an inventory is, how emissions and resource use are collected and totalled across all processes |
+| 9 | `scaling-vector` | ✅ Built | How much each process in the supply chain must run to deliver one functional unit |
+| 10 | `hotspot-analysis` | ⬜ Recommended | How to read a contribution breakdown, identify the biggest sources of impact, connect to business decisions |
+| 11 | `comparing-products` | ⬜ Recommended | How to set up a fair comparison between two products, when comparisons are misleading |
 
 ---
 
@@ -152,6 +151,20 @@ is what separates an impact from a transaction.
 
 ---
 
+### `life-cycle-inventory` ⬜
+Once students understand what flows cross the boundary between the technosphere and the
+ecosphere, the next question is: *how do you actually count them?* This skill would
+introduce the life cycle inventory (LCI) — the process of collecting and totalling all
+the emissions and resource uses across every step in the supply chain. Students would
+see how the individual emissions from each process (farm, mill, factory) are added
+together, weighted by the scaling vector, to produce a single inventory table.
+
+**Key insight for students:** The inventory is the raw data behind every LCA result.
+Before any environmental score is calculated, someone has to add up every kilogram of
+CO₂, methane, and water used across the entire supply chain — that list is the inventory.
+
+---
+
 ### `scaling-vector` ✅
 How much each process in the supply chain must run to deliver exactly one functional
 unit. Students work through the calculation using plain division, not matrix algebra —
@@ -162,44 +175,6 @@ numbers.
 **Key insight for students:** A factory doesn't always run at full capacity to make
 one shirt. The scaling vector tells you the exact fraction of each step that is needed
 — and that fraction is what drives the final impact number.
-
----
-
-### `characterization` ⬜
-The "magic conversion" step that trips most students up. Raw emissions like CO₂ and
-methane are measured in kilograms, but they cause very different amounts of damage.
-Scientists have measured how potent each gas is relative to CO₂ and assigned each one
-a characterization factor. This skill would walk through that idea in plain English,
-using the wool yarn (CH4 × 27.9) and cotton fiber (N2O × 273) case studies as examples.
-
-**Key insight for students:** A small number of kilograms of a potent gas can dwarf
-a large number of kilograms of a less potent one — which is why the raw inventory
-numbers alone can be very misleading.
-
----
-
-### `impact-categories` ⬜
-The "magic conversion" step that trips most students up. Raw emissions like CO₂ and
-methane are measured in kilograms, but they cause very different amounts of damage.
-Scientists have measured how potent each gas is relative to CO₂ and assigned each one
-a characterization factor. This skill would walk through that idea in plain English,
-using the wool yarn (CH4 × 27.9) and cotton fiber (N2O × 273) case studies as examples.
-
-**Key insight for students:** A small number of kilograms of a potent gas can dwarf
-a large number of kilograms of a less potent one — which is why the raw inventory
-numbers alone can be very misleading.
-
----
-
-### `impact-categories`
-Students learn to calculate CO₂ — but not why there are other impact categories,
-or what they measure. This skill would introduce climate change, water consumption,
-and terrestrial eutrophication in plain English, using the cotton fiber case study
-(which covers all three). It would also explain why the same emission (N2O) can
-show up in multiple categories at once.
-
-**Key insight for students:** A product with a low carbon footprint can still have
-a serious water problem. One number is never the whole story.
 
 ---
 
