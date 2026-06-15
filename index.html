@@ -577,33 +577,35 @@
     if (!analyses.length) return;
     const list = document.getElementById('analysis-list');
 
-    // Group by top-level folder (e.g. levis vs everything else)
-    const groups = {};
-    analyses.forEach((a, i) => {
-      const parts = a.folder.split('/');  // lca_analysis / [group] / name
-      const group = parts.length > 2 ? parts[1] : '';
-      if (!groups[group]) groups[group] = [];
-      groups[group].push({ ...a, index: i });
-    });
+    let lastGroup = null;
 
-    Object.entries(groups).forEach(([group, items]) => {
-      if (group) {
+    analyses.forEach(a => {
+      // Group header (e.g. "Levis") when entering a new group
+      if (a.group && a.group !== lastGroup) {
         const hdr = document.createElement('div');
         hdr.className = 'skill-group-header';
-        hdr.textContent = group.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+        hdr.textContent = a.group.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
         list.appendChild(hdr);
+        lastGroup = a.group;
       }
+
+      // Analysis name as a sub-header
+      const nameHdr = document.createElement('div');
+      nameHdr.style.cssText = 'font-size:12px;font-weight:600;color:#334155;padding:8px 16px 2px;white-space:nowrap;overflow:hidden;';
+      nameHdr.textContent = a.name;
+      list.appendChild(nameHdr);
+
+      // One link per file
       const ul = document.createElement('ul');
-      ul.style.cssText = 'list-style:none;padding:0 0 0 16px;margin:0;';
-      items.forEach(a => {
+      ul.style.cssText = 'list-style:none;padding:0 0 4px 28px;margin:0;';
+      a.files.forEach(f => {
         const li = document.createElement('li');
         li.style.overflow = 'hidden';
         const btn = document.createElement('button');
         btn.className = 'session-link';
-        btn.style.whiteSpace = 'nowrap';
-        btn.style.fontFamily = 'inherit';
-        btn.textContent = a.name;
-        btn.addEventListener('click', () => loadAnalysis(a.index, btn));
+        btn.style.cssText = 'white-space:nowrap;font-family:inherit;font-weight:500;';
+        btn.textContent = f.label;
+        btn.addEventListener('click', () => loadFile(f.file, btn));
         li.appendChild(btn);
         ul.appendChild(li);
       });
@@ -611,34 +613,22 @@
     });
   }
 
-  // ── Load and render an analysis (recipe + results) ────────────────────────
-  async function loadAnalysis(index, btn) {
+  // ── Load and render any single markdown file ──────────────────────────────
+  async function loadFile(filePath, btn) {
     if (activeBtn) activeBtn.classList.remove('active');
     btn.classList.add('active');
     activeBtn = btn;
 
-    const a = allAnalyses[index];
     const content = document.getElementById('content');
     content.innerHTML = '<div id="content-inner"><p style="color:#94a3b8;padding:40px 0">Loading…</p></div>';
 
-    async function fetchMd(path) {
-      const res = await fetch(path);
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      return res.text();
-    }
-
     try {
-      let html = '';
-      const recipe = await fetchMd(a.recipe);
-      html += `<div class="plan-body">${marked.parse(recipe)}</div>`;
-      if (a.results) {
-        const results = await fetchMd(a.results);
-        html += `<hr style="border:none;border-top:1px solid #e2e8f0;margin:32px 0">`;
-        html += `<div class="plan-body">${marked.parse(results)}</div>`;
-      }
-      content.innerHTML = `<div id="content-inner">${html}</div>`;
+      const res = await fetch(filePath);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const text = await res.text();
+      content.innerHTML = `<div id="content-inner"><div class="plan-body">${marked.parse(text)}</div></div>`;
     } catch (e) {
-      content.innerHTML = `<div id="content-inner"><p style="color:#ef4444">Could not load ${a.name}: ${e.message}</p></div>`;
+      content.innerHTML = `<div id="content-inner"><p style="color:#ef4444">Could not load ${filePath}: ${e.message}</p></div>`;
     }
     content.scrollTop = 0;
   }
