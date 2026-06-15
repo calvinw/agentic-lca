@@ -81,7 +81,7 @@ for f in plan_files:
 lines += [
     "",
     "website:",
-    '  title: "Agentic LCA Hub"',
+    '  title: "Agentic LCA"',
     "  navbar:",
     "    left:",
     "      - text: Home",

@@ -31,7 +31,7 @@ project:
     - plan/PLAN_SWITCH_TO_QUARTO.md
 
 website:
-  title: "Agentic LCA Hub"
+  title: "Agentic LCA"
   navbar:
     left:
       - text: Home
