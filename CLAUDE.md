@@ -406,6 +406,14 @@ Wrap every image in a markdown link (so it is clickable) and show the file path 
 
 Save only the header and the verbatim conversation that took place while the skill was running — the back-and-forth between `**AI:**` and `**Student:**` turns, exactly as they happened. Nothing else. Do not add notes, summaries, completion status, meta-comments, or any text that was not part of the actual skill conversation. If the session ended early, just stop — do not add a line explaining that it was incomplete.
 
+**After saving a session file, always run:**
+
+```bash
+python3 skills_sessions/generate_sessions.py
+```
+
+This updates `skills_sessions/sessions.json`, which is the file that the session viewer (`skills_sessions/index.html`) uses to build its list of sessions. If you skip this step, the new session will not appear in the viewer.
+
 ---
 
 # AI Agentic Tools Dev Container Guide
