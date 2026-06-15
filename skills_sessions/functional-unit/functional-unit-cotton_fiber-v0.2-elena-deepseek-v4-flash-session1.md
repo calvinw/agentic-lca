@@ -14,8 +14,8 @@ What unit would you use to make that comparison fair? Per kilogram of fiber? Per
 
 Here is the study we'll be working through. It's called **Cotton Fiber — 1 kg**, and it traces the supply chain from synthetic fertiliser production through cotton farming to calculate the climate and eutrophication impact of producing cotton fiber. The numbers are teaching examples calibrated to be realistic rather than from a specific brand.
 
-[![Cotton Fiber supply chain — structure](../skills_references/cotton_fiber/product_graph_structure.svg)](../skills_references/cotton_fiber/product_graph_structure.svg)
-`../skills_references/cotton_fiber/product_graph_structure.svg`
+[![Cotton Fiber supply chain — structure](../../skills_references/cotton_fiber/product_graph_structure.svg)](../../skills_references/cotton_fiber/product_graph_structure.svg)
+`../../skills_references/cotton_fiber/product_graph_structure.svg`
 
 This diagram shows two boxes connected by an arrow. The box on the right — **P2 — Cotton farming** — has a special name in LCA: it's called the **reference process**. Think of it as the finishing line — it's the step that actually produces the cotton fiber. Everything to its left (P1 — Fertilizer production) exists only to supply the farm. The measurement stops at this box. The functional unit is precisely what comes out of it.
 

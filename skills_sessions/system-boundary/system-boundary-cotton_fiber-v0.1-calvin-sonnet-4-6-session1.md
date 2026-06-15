@@ -22,8 +22,8 @@ Let's look at a real example — a study of **Cotton Fiber**. The goal is to cal
 
 Here is the supply chain diagram:
 
-[![Cotton Fiber supply chain — structure](../skills_references/cotton_fiber/product_graph_structure.svg)](../skills_references/cotton_fiber/product_graph_structure.svg)
-`../skills_references/cotton_fiber/product_graph_structure.svg`
+[![Cotton Fiber supply chain — structure](../../skills_references/cotton_fiber/product_graph_structure.svg)](../../skills_references/cotton_fiber/product_graph_structure.svg)
+`../../skills_references/cotton_fiber/product_graph_structure.svg`
 
 Each box in this diagram is a step the study decided to **include**. The fence — the system boundary — runs around both of these boxes together. Any step that does not appear is outside the fence and was not counted.
 

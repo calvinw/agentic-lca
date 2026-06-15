@@ -18,8 +18,8 @@ Think of it like a receipt from nature. Instead of money, it lists kilograms of 
 
 Let's build the inventory for **Wool Yarn — 1 kg** together.
 
-[![Wool Yarn supply chain — structure](../skills_references/wool_yarn/product_graph_structure.svg)](../skills_references/wool_yarn/product_graph_structure.svg)
-`../skills_references/wool_yarn/product_graph_structure.svg`
+[![Wool Yarn supply chain — structure](../../skills_references/wool_yarn/product_graph_structure.svg)](../../skills_references/wool_yarn/product_graph_structure.svg)
+`../../skills_references/wool_yarn/product_graph_structure.svg`
 
 There are two steps in this supply chain. Before we can add up the emissions, we need to know how much each step runs to produce 1 kg of finished yarn:
 

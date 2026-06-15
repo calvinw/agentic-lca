@@ -18,8 +18,8 @@ The study we will work through is called **Cotton Fiber — 1 kg**. It calculate
 
 Here is the shape of the supply chain the study includes:
 
-[![Cotton Fiber supply chain — structure](../skills_references/cotton_fiber/product_graph_structure.svg)](../skills_references/cotton_fiber/product_graph_structure.svg)
-`../skills_references/cotton_fiber/product_graph_structure.svg`
+[![Cotton Fiber supply chain — structure](../../skills_references/cotton_fiber/product_graph_structure.svg)](../../skills_references/cotton_fiber/product_graph_structure.svg)
+`../../skills_references/cotton_fiber/product_graph_structure.svg`
 
 Two boxes, two steps. Each box represents a step the researchers decided to *include* in the study — and choosing which boxes belong inside the picture is exactly what **scope** means in LCA. The fertilizer factory is in there because you — and the researchers — agreed it should be.
 

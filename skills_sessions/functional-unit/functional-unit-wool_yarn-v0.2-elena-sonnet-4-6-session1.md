@@ -18,8 +18,8 @@ The study we will be working through is called **Wool Yarn — 1 kg**. It traces
 
 Here is what the supply chain looks like:
 
-[![Wool Yarn supply chain — structure](../skills_references/wool_yarn/product_graph_structure.svg)](../skills_references/wool_yarn/product_graph_structure.svg)
-`../skills_references/wool_yarn/product_graph_structure.svg`
+[![Wool Yarn supply chain — structure](../../skills_references/wool_yarn/product_graph_structure.svg)](../../skills_references/wool_yarn/product_graph_structure.svg)
+`../../skills_references/wool_yarn/product_graph_structure.svg`
 
 You can see two boxes connected by an arrow. The rightmost box — **P2 — Wool yarn production** — has a special name in LCA: it is called the **reference process**. That just means it is the finishing line — the step that delivers the finished product. Everything to its left exists only to supply it. The functional unit is precisely what comes out of that box: 1 kg of wool yarn, ready for knitting or weaving.
 

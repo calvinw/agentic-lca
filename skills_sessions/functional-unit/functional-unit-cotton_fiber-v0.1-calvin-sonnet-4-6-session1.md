@@ -20,8 +20,8 @@ The study we'll be working through is called **Cotton Fiber — 1 kg**. The goal
 
 Here's the shape of the supply chain:
 
-[![Cotton Fiber supply chain — structure](../skills_references/cotton_fiber/product_graph_structure.svg)](../skills_references/cotton_fiber/product_graph_structure.svg)
-`../skills_references/cotton_fiber/product_graph_structure.svg`
+[![Cotton Fiber supply chain — structure](../../skills_references/cotton_fiber/product_graph_structure.svg)](../../skills_references/cotton_fiber/product_graph_structure.svg)
+`../../skills_references/cotton_fiber/product_graph_structure.svg`
 
 You can see two boxes connected by an arrow. The rightmost box — **P2 — Cotton farming** — has a special name in LCA: it's called the **reference process**. That just means it's the finishing line — the step that delivers the finished product. Everything to its left exists only to supply it. The fertilizer factory (P1) is there for one reason only: to feed the cotton farm.
 

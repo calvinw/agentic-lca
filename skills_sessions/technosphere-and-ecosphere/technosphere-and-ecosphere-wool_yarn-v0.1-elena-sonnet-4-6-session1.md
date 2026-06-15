@@ -22,8 +22,8 @@ The most important idea in LCA is this: environmental harm only happens when som
 
 Now let's sort a real LCA study into these two worlds. This is the recipe card for **Wool Yarn — 1 kg**.
 
-[![Wool yarn supply chain — structure](../skills_references/wool_yarn/product_graph_structure.svg)](../skills_references/wool_yarn/product_graph_structure.svg)
-`../skills_references/wool_yarn/product_graph_structure.svg`
+[![Wool yarn supply chain — structure](../../skills_references/wool_yarn/product_graph_structure.svg)](../../skills_references/wool_yarn/product_graph_structure.svg)
+`../../skills_references/wool_yarn/product_graph_structure.svg`
 
 **Inside the wall — the technosphere:**
 The two boxes in this diagram are the **processes** — the human activities that make the yarn. In this study that means **Sheep farming** and **Wool yarn production**. Also inside the wall is the **intermediate product** flowing between those two boxes: **Raw wool** passing from the farm to the mill. That flow stays entirely inside the human-made world. It does not touch nature.

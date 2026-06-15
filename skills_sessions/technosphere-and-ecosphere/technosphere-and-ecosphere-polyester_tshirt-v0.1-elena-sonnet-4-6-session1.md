@@ -22,8 +22,8 @@ The key idea is this: environmental harm only happens when something **crosses t
 
 Now let's sort a real LCA study into these two worlds. This is the recipe card for **Polyester T-shirt — 1 unit**.
 
-[![Polyester T-shirt supply chain — structure](../skills_references/polyester_tshirt/product_graph_structure.svg)](../skills_references/polyester_tshirt/product_graph_structure.svg)
-`../skills_references/polyester_tshirt/product_graph_structure.svg`
+[![Polyester T-shirt supply chain — structure](../../skills_references/polyester_tshirt/product_graph_structure.svg)](../../skills_references/polyester_tshirt/product_graph_structure.svg)
+`../../skills_references/polyester_tshirt/product_graph_structure.svg`
 
 **Inside the wall — the technosphere:**
 The three boxes in this diagram are the **processes** — the human activities that make the T-shirt. In this study that means **Oil extraction**, **Polyester fiber production**, and **T-shirt assembly**. Also inside the wall are the **intermediate products** flowing between those boxes: crude oil moving from the well to the fiber plant, and polyester fiber moving from the fiber plant to the garment factory. Those flows stay entirely inside the human-made world — they never touch nature.

@@ -42,8 +42,8 @@ Now the other three boundary types, quickly:
 
 Here is the wool yarn supply chain diagram:
 
-[![Wool Yarn supply chain — structure](../skills_references/wool_yarn/product_graph_structure.svg)](../skills_references/wool_yarn/product_graph_structure.svg)
-`../skills_references/wool_yarn/product_graph_structure.svg`
+[![Wool Yarn supply chain — structure](../../skills_references/wool_yarn/product_graph_structure.svg)](../../skills_references/wool_yarn/product_graph_structure.svg)
+`../../skills_references/wool_yarn/product_graph_structure.svg`
 
 The two boxes shown — sheep farming and yarn production — are everything this study included. Based on the four boundary types we just covered, which one does this diagram represent?
 

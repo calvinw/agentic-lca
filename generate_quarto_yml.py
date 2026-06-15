@@ -65,6 +65,8 @@ lines = [
     "project:",
     "  type: website",
     "  output-dir: _site",
+    "  resources:",
+    "    - skills_references/",
     "  render:",
     "    - index.md",
     "    - skills_sessions/index.md",
