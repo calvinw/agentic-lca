@@ -34,5 +34,9 @@
   {
     "file": "PLAN_SKILL_RECOMMENDATIONS.md",
     "title": "Skill Recommendations \u2014 Elementary LCA Skills for Beginners"
+  },
+  {
+    "file": "PLAN_SWITCH_TO_QUARTO.md",
+    "title": "Plan: Switch Documentation Site from MkDocs to Quarto"
   }
 ]
