@@ -25,6 +25,13 @@ build/
 *.log
 .cache/
 
+# Large binary files
+*.pdf
+
+# Python cache
+__pycache__/
+*.pyc
+
 # Auto-generated skill manifests
 .*/skills/.skillshare-manifest.json
 .skillshare/skills/.metadata.json
