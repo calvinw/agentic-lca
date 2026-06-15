@@ -18,8 +18,9 @@ Skills already built are marked ✅. Skills recommended but not yet built are ma
 | 7 | `technosphere-and-ecosphere` | ✅ Built | The difference between human-made flows (products) and natural flows (emissions, resources) that cross into the natural world |
 | 8 | `life-cycle-inventory` | ⬜ Recommended | What an inventory is, how emissions and resource use are collected and totalled across all processes |
 | 9 | `scaling-vector` | ✅ Built | How much each process in the supply chain must run to deliver one functional unit |
-| 10 | `hotspot-analysis` | ⬜ Recommended | How to read a contribution breakdown, identify the biggest sources of impact, connect to business decisions |
-| 11 | `comparing-products` | ⬜ Recommended | How to set up a fair comparison between two products, when comparisons are misleading |
+| 10 | `what-is-impact-assessment` | ⬜ Recommended | How raw inventory emissions are converted into environmental scores — global warming, acidification, smog, and more |
+| 11 | `hotspot-analysis` | ⬜ Recommended | How to read a contribution breakdown, identify the biggest sources of impact, connect to business decisions |
+| 12 | `comparing-products` | ⬜ Recommended | How to set up a fair comparison between two products, when comparisons are misleading |
 
 ---
 
@@ -175,6 +176,28 @@ numbers.
 **Key insight for students:** A factory doesn't always run at full capacity to make
 one shirt. The scaling vector tells you the exact fraction of each step that is needed
 — and that fraction is what drives the final impact number.
+
+---
+
+### `what-is-impact-assessment` ⬜
+Once students understand the inventory — the raw list of kilograms of CO₂, methane,
+water, and other emissions — the next question is: *what does that list actually mean
+for the environment?* This skill introduces life cycle impact assessment (LCIA), the
+phase that converts the inventory into a set of environmental scores. Students learn
+that raw emissions are translated into categories like global warming, acidification,
+smog formation, and water use using a standardised method (in this course, TRACI 2.2).
+They also learn why different emissions get different weights — a kilogram of methane,
+for example, is counted as 28 times more damaging to the climate than a kilogram of
+CO₂.
+
+Uses a case study to show students the before (the inventory table) and the after (the
+TRACI 2.2 impact scores), and asks them to explain in plain language what each category
+means for a fashion brand.
+
+**Key insight for students:** Raw emissions data — kilograms of CO₂, grams of methane —
+cannot be directly compared or interpreted on their own. Impact assessment translates
+that list into a small set of scores that each answer a specific environmental question,
+making the results usable by decision-makers who are not chemists.
 
 ---
 
