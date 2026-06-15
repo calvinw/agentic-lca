@@ -1,6 +1,6 @@
 # /life-cycle-inventory wool_yarn
 **Skill version:** 0.1
-**Student:** junghyun
+**Student:** elena
 **Model:** sonnet-4-6
 **Date:** 2026-06-15
 
@@ -41,7 +41,23 @@ Here is the full inventory table. The P1 and P2 sections show what each step tak
 | | Extraction | Water | 30 | L | Resource from water | Scouring and washing |
 | **Compiled LCI** | | | | | | |
 | | Emission | Carbon dioxide | 2.55 | kg | Emission to air | P1: 1.1 × 0.5 = 0.55 + P2: 1.0 × 2.0 = 2.0 |
-| | Emission | Methane | ? | kg | Emission to air | P1 only — can you calculate this? |
+| | Emission | Methane | 0.44 | kg | Emission to air | P1 only: 1.1 × 0.4 = 0.44 |
 | | Extraction | Water | 30 | L | Resource from water | P2 only |
 
 The rule is always: **multiply first, then add.** The sheep farm runs 1.1 times and emits 0.4 kg of methane per run. The yarn mill emits no methane. Can you fill in the missing number?
+
+**Student:** fill in all the answers
+
+**AI:** The answer is 1.1 × 0.4 = **0.44 kg methane**. Here is the complete compiled LCI for 1 kg of wool yarn:
+
+| Elementary flow | Compartment | Amount | Unit |
+|---|---|---|---|
+| Carbon dioxide | Air | 2.55 | kg |
+| Methane | Air | 0.44 | kg |
+| Water | Water | 30 | L |
+
+This is the raw receipt from nature — everything that crossed into the natural world to produce 1 kg of wool yarn. Notice that the intermediate product (raw wool moving from the sheep farm to the mill) does not appear here at all, because it never left the human-made world.
+
+The next step in LCA would be to convert these raw numbers into environmental impact scores — for example, multiplying methane by its global warming factor to find out how much it contributes to climate change compared to CO₂. That is what the scaling vector and impact assessment skills cover.
+
+Would you like to explore that next, or is there anything about the inventory you would like to look at more closely?
