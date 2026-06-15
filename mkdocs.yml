@@ -2,11 +2,6 @@ site_name: LCA Learning Hub
 site_description: LCA skills sessions and project plans for FIT students
 docs_dir: docs
 
-nav:
-  - Home: index.md
-  - Sessions: sessions/
-  - Plans: plans/
-
 theme:
   name: material
   palette:
@@ -31,4 +26,12 @@ exclude_docs: |
   *.html
   *.sh
   *.xlsx
+  *.svg
   .DS_Store
+  BLEND_ALLOCATION_FRAMEWORK.md
+  BLEND_REFERENCES.md
+  lca_blorp_example.md
+  LCACoffeeExlainer.md
+  lca_electricity_example.md
+  LCA_Popcorn_vs_Polystyrene.md
+  exercises/**
