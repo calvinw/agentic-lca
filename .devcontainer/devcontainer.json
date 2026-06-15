@@ -12,7 +12,8 @@
       "extensions": [
         "GrapeCity.gc-excelviewer",
         "tomoki1207.vscode-pdf",
-        "astx-jp.vscode-pptx-viewer"
+        "astx-jp.vscode-pptx-viewer",
+        "ritwickdey.LiveServer"
       ]
     }
   }
