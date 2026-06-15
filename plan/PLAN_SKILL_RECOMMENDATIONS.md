@@ -23,6 +23,7 @@ Skills already built are marked ✅. Skills recommended but not yet built are ma
 | 12 | `damage-characterization` | ⬜ Recommended | How midpoint impact scores are translated into damage to human health, ecosystems, and natural resources |
 | 13 | `hotspot-analysis` | ⬜ Recommended | How to read a contribution breakdown, identify the biggest sources of impact, connect to business decisions |
 | 14 | `comparing-products` | ⬜ Recommended | How to set up a fair comparison between two products, when comparisons are misleading |
+| 15 | `interpretation` | ⬜ Recommended | The final LCA phase — checking whether results are trustworthy, identifying what drives them, and turning the numbers into a business recommendation |
 
 ---
 
@@ -276,6 +277,35 @@ unfairly.
 **Key insight for students:** Two products can only be fairly compared if they are
 measured per the same functional unit, over the same system boundary. Without that,
 any comparison can be gamed.
+
+---
+
+### `interpretation` ⬜
+The capstone of the entire LCA learning path. By this point students have set a goal
+and scope, built an inventory, run impact and damage characterization, identified
+hotspots, and compared products. Interpretation is the phase where they stop calculating
+and start deciding — asking three questions about the results in front of them:
+
+1. **Are these results trustworthy?** — Does the study cover everything it promised in
+   the goal and scope? Were any important emissions missing? Are the numbers consistent
+   with what we would expect? Students learn to read a result critically before acting
+   on it.
+
+2. **What is driving the result?** — Which single step, material, or emission is
+   responsible for the most damage? Students practise identifying the one lever that,
+   if changed, would have the biggest effect on the footprint.
+
+3. **What should we recommend?** — Given what the numbers show, what is the practical
+   advice for a brand, buyer, or supplier? Switch to renewable energy at the mill?
+   Source wool from a lower-methane farm? Redesign the product for a longer life?
+
+Uses a complete case study result — inventory, impact scores, damage scores, hotspot
+breakdown — and asks students to write a short interpretation paragraph as if briefing
+a sustainability manager.
+
+**Key insight for students:** Numbers on their own do not make decisions — people do.
+Interpretation is the skill that turns a table of CO₂ figures into a sentence a
+business can act on. It is the reason LCA exists.
 
 ---
 
