@@ -1,0 +1,32 @@
+name: Deploy MkDocs to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # full history needed for mkdocs git-revision-date plugin
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install mkdocs-material
+        run: pip install -r requirements-docs.txt
+
+      - name: Regenerate manifest files
+        run: |
+          python3 skills_sessions/generate_sessions.py
+          python3 plan/generate_plans.py
+          python3 lca_analysis/generate_analyses.py
+
+      - name: Deploy to GitHub Pages
+        run: mkdocs gh-deploy --force
