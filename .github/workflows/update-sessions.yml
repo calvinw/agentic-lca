@@ -5,6 +5,7 @@ on:
     paths:
       - 'skills_sessions/**/*.md'
       - 'plan/PLAN_*.md'
+      - 'lca_analysis/**/recipe_card.md'
 
 jobs:
   generate:
@@ -20,10 +21,13 @@ jobs:
       - name: Regenerate plans.json
         run: python3 plan/generate_plans.py
 
+      - name: Regenerate analyses.json
+        run: python3 lca_analysis/generate_analyses.py
+
       - name: Commit updated manifests
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add skills_sessions/sessions.json plan/plans.json
-          git diff --cached --quiet || git commit -m "chore: regenerate sessions.json and plans.json"
+          git add skills_sessions/sessions.json plan/plans.json lca_analysis/analyses.json
+          git diff --cached --quiet || git commit -m "chore: regenerate manifest json files"
           git push

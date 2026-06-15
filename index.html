@@ -39,8 +39,7 @@
     #resize-handle:hover, #resize-handle.dragging { background: #3b82f6; }
 
     #sidebar-header {
-      padding: 56px 16px 14px;
-      border-bottom: 1px solid #e2e8f0;
+      padding: 56px 16px 10px;
     }
 
     #sidebar-header h1 {
@@ -49,6 +48,32 @@
       color: #0f172a;
       letter-spacing: -0.01em;
     }
+
+    /* ── Tabs ── */
+    #tabs {
+      display: flex;
+      border-bottom: 1px solid #e2e8f0;
+      padding: 0 8px;
+    }
+
+    .tab-btn {
+      flex: 1;
+      padding: 8px 4px;
+      font-size: 12px;
+      font-weight: 600;
+      border: none;
+      border-bottom: 2px solid transparent;
+      background: none;
+      cursor: pointer;
+      color: #64748b;
+      transition: color 0.1s;
+    }
+
+    .tab-btn:hover { color: #0f172a; }
+    .tab-btn.active { color: #0f172a; border-bottom-color: #3b82f6; }
+
+    .tab-panel { display: none; overflow-y: auto; }
+    .tab-panel.active { display: block; }
 
     #sidebar-header p {
       font-size: 12px;
@@ -382,11 +407,16 @@
 
 <nav id="sidebar">
   <div id="sidebar-header">
-    <h1>LCA Skills Sessions</h1>
-    <p>Student conversation transcripts</p>
+    <h1>LCA Viewer</h1>
   </div>
-  <div id="session-list"></div>
-  <div id="plan-list"></div>
+  <div id="tabs">
+    <button class="tab-btn active" data-tab="sessions">Sessions</button>
+    <button class="tab-btn"        data-tab="plans">Plans</button>
+    <button class="tab-btn"        data-tab="analyses">Analyses</button>
+  </div>
+  <div id="session-list"  class="tab-panel active"></div>
+  <div id="plan-list"     class="tab-panel"></div>
+  <div id="analysis-list" class="tab-panel"></div>
 </nav>
 
 <div id="resize-handle"></div>
@@ -402,15 +432,24 @@
 <script>
   let allSessions = [];
   let allPlans    = [];
+  let allAnalyses = [];
 
-  // ── Load sessions + plans, then build sidebar ─────────────────────────────
+  // ── Tab switching ─────────────────────────────────────────────────────────
+  document.getElementById('tabs').addEventListener('click', e => {
+    const btn = e.target.closest('.tab-btn');
+    if (!btn) return;
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById(btn.dataset.tab + '-list').classList.add('active');
+  });
+
+  // ── Load all data, then build sidebar ─────────────────────────────────────
   async function init() {
     try {
       const res = await fetch('skills_sessions/sessions.json');
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      allSessions = await res.json();
-      // Prefix paths so fetch works from the root
-      allSessions = allSessions.map(s => ({ ...s, file: 'skills_sessions/' + s.file }));
+      allSessions = (await res.json()).map(s => ({ ...s, file: 'skills_sessions/' + s.file }));
     } catch (e) {
       document.getElementById('session-list').innerHTML =
         `<p style="color:#ef4444;padding:16px;font-size:13px">Could not load sessions.json: ${e.message}</p>`;
@@ -420,13 +459,22 @@
     try {
       const res = await fetch('plan/plans.json');
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      allPlans = await res.json();
-      allPlans = allPlans.map(p => ({ ...p, file: 'plan/' + p.file }));
+      allPlans = (await res.json()).map(p => ({ ...p, file: 'plan/' + p.file }));
     } catch (e) {
       document.getElementById('plan-list').innerHTML =
         `<p style="color:#ef4444;padding:16px;font-size:13px">Could not load plans.json: ${e.message}</p>`;
     }
     buildPlansSection(allPlans);
+
+    try {
+      const res = await fetch('lca_analysis/analyses.json');
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      allAnalyses = await res.json();
+    } catch (e) {
+      document.getElementById('analysis-list').innerHTML =
+        `<p style="color:#ef4444;padding:16px;font-size:13px">Could not load analyses.json: ${e.message}</p>`;
+    }
+    buildAnalysesSection(allAnalyses);
   }
 
   // ── Build sidebar ─────────────────────────────────────────────────────────
@@ -521,6 +569,77 @@
 
     const html = marked.parse(text);
     content.innerHTML = `<div id="content-inner"><div class="plan-body">${html}</div></div>`;
+    content.scrollTop = 0;
+  }
+
+  // ── Build analyses section ────────────────────────────────────────────────
+  function buildAnalysesSection(analyses) {
+    if (!analyses.length) return;
+    const list = document.getElementById('analysis-list');
+
+    // Group by top-level folder (e.g. levis vs everything else)
+    const groups = {};
+    analyses.forEach((a, i) => {
+      const parts = a.folder.split('/');  // lca_analysis / [group] / name
+      const group = parts.length > 2 ? parts[1] : '';
+      if (!groups[group]) groups[group] = [];
+      groups[group].push({ ...a, index: i });
+    });
+
+    Object.entries(groups).forEach(([group, items]) => {
+      if (group) {
+        const hdr = document.createElement('div');
+        hdr.className = 'skill-group-header';
+        hdr.textContent = group.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+        list.appendChild(hdr);
+      }
+      const ul = document.createElement('ul');
+      ul.style.cssText = 'list-style:none;padding:0 0 0 16px;margin:0;';
+      items.forEach(a => {
+        const li = document.createElement('li');
+        li.style.overflow = 'hidden';
+        const btn = document.createElement('button');
+        btn.className = 'session-link';
+        btn.style.whiteSpace = 'nowrap';
+        btn.style.fontFamily = 'inherit';
+        btn.textContent = a.name;
+        btn.addEventListener('click', () => loadAnalysis(a.index, btn));
+        li.appendChild(btn);
+        ul.appendChild(li);
+      });
+      list.appendChild(ul);
+    });
+  }
+
+  // ── Load and render an analysis (recipe + results) ────────────────────────
+  async function loadAnalysis(index, btn) {
+    if (activeBtn) activeBtn.classList.remove('active');
+    btn.classList.add('active');
+    activeBtn = btn;
+
+    const a = allAnalyses[index];
+    const content = document.getElementById('content');
+    content.innerHTML = '<div id="content-inner"><p style="color:#94a3b8;padding:40px 0">Loading…</p></div>';
+
+    async function fetchMd(path) {
+      const res = await fetch(path);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      return res.text();
+    }
+
+    try {
+      let html = '';
+      const recipe = await fetchMd(a.recipe);
+      html += `<div class="plan-body">${marked.parse(recipe)}</div>`;
+      if (a.results) {
+        const results = await fetchMd(a.results);
+        html += `<hr style="border:none;border-top:1px solid #e2e8f0;margin:32px 0">`;
+        html += `<div class="plan-body">${marked.parse(results)}</div>`;
+      }
+      content.innerHTML = `<div id="content-inner">${html}</div>`;
+    } catch (e) {
+      content.innerHTML = `<div id="content-inner"><p style="color:#ef4444">Could not load ${a.name}: ${e.message}</p></div>`;
+    }
     content.scrollTop = 0;
   }
 

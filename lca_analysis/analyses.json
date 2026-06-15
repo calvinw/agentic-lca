@@ -1,0 +1,146 @@
+[
+  {
+    "folder": "lca_analysis/apple",
+    "name": "Apple",
+    "recipe": "lca_analysis/apple/recipe_card.md",
+    "results": "lca_analysis/apple/lca_results.md"
+  },
+  {
+    "folder": "lca_analysis/blorp",
+    "name": "Blorp",
+    "recipe": "lca_analysis/blorp/recipe_card.md",
+    "results": null
+  },
+  {
+    "folder": "lca_analysis/coffee",
+    "name": "Coffee",
+    "recipe": "lca_analysis/coffee/recipe_card.md",
+    "results": "lca_analysis/coffee/lca_results.md"
+  },
+  {
+    "folder": "lca_analysis/cotton_shirt",
+    "name": "Cotton Shirt",
+    "recipe": "lca_analysis/cotton_shirt/recipe_card.md",
+    "results": "lca_analysis/cotton_shirt/lca_results.md"
+  },
+  {
+    "folder": "lca_analysis/electricity",
+    "name": "Electricity",
+    "recipe": "lca_analysis/electricity/recipe_card.md",
+    "results": "lca_analysis/electricity/lca_results.md"
+  },
+  {
+    "folder": "lca_analysis/hand_dryer",
+    "name": "Hand Dryer",
+    "recipe": "lca_analysis/hand_dryer/recipe_card.md",
+    "results": "lca_analysis/hand_dryer/lca_results.md"
+  },
+  {
+    "folder": "lca_analysis/hoodie",
+    "name": "Hoodie",
+    "recipe": "lca_analysis/hoodie/recipe_card.md",
+    "results": "lca_analysis/hoodie/lca_results.md"
+  },
+  {
+    "folder": "lca_analysis/levis/levi_jeans",
+    "name": "Levi Jeans",
+    "recipe": "lca_analysis/levis/levi_jeans/recipe_card.md",
+    "results": "lca_analysis/levis/levi_jeans/lca_results.md"
+  },
+  {
+    "folder": "lca_analysis/levis/levi_jeans_bestcase",
+    "name": "Levi Jeans Bestcase",
+    "recipe": "lca_analysis/levis/levi_jeans_bestcase/recipe_card.md",
+    "results": "lca_analysis/levis/levi_jeans_bestcase/lca_results.md"
+  },
+  {
+    "folder": "lca_analysis/levis/levi_jeans_longlife",
+    "name": "Levi Jeans Longlife",
+    "recipe": "lca_analysis/levis/levi_jeans_longlife/recipe_card.md",
+    "results": "lca_analysis/levis/levi_jeans_longlife/lca_results.md"
+  },
+  {
+    "folder": "lca_analysis/levis/levi_jeans_organic",
+    "name": "Levi Jeans Organic",
+    "recipe": "lca_analysis/levis/levi_jeans_organic/recipe_card.md",
+    "results": "lca_analysis/levis/levi_jeans_organic/lca_results.md"
+  },
+  {
+    "folder": "lca_analysis/levis/levi_jeans_renewable",
+    "name": "Levi Jeans Renewable",
+    "recipe": "lca_analysis/levis/levi_jeans_renewable/recipe_card.md",
+    "results": "lca_analysis/levis/levi_jeans_renewable/lca_results.md"
+  },
+  {
+    "folder": "lca_analysis/levis/levi_jeans_wash10x",
+    "name": "Levi Jeans Wash10X",
+    "recipe": "lca_analysis/levis/levi_jeans_wash10x/recipe_card.md",
+    "results": "lca_analysis/levis/levi_jeans_wash10x/lca_results.md"
+  },
+  {
+    "folder": "lca_analysis/levis/levi_jeans_wash1x",
+    "name": "Levi Jeans Wash1X",
+    "recipe": "lca_analysis/levis/levi_jeans_wash1x/recipe_card.md",
+    "results": "lca_analysis/levis/levi_jeans_wash1x/lca_results.md"
+  },
+  {
+    "folder": "lca_analysis/levis/levi_jeans_wash2x",
+    "name": "Levi Jeans Wash2X",
+    "recipe": "lca_analysis/levis/levi_jeans_wash2x/recipe_card.md",
+    "results": "lca_analysis/levis/levi_jeans_wash2x/lca_results.md"
+  },
+  {
+    "folder": "lca_analysis/levis/levi_jeans_wash5x",
+    "name": "Levi Jeans Wash5X",
+    "recipe": "lca_analysis/levis/levi_jeans_wash5x/recipe_card.md",
+    "results": "lca_analysis/levis/levi_jeans_wash5x/lca_results.md"
+  },
+  {
+    "folder": "lca_analysis/light_bulb",
+    "name": "Light Bulb",
+    "recipe": "lca_analysis/light_bulb/recipe_card.md",
+    "results": "lca_analysis/light_bulb/lca_results.md"
+  },
+  {
+    "folder": "lca_analysis/nordic_cotton_reuse",
+    "name": "Nordic Cotton Reuse",
+    "recipe": "lca_analysis/nordic_cotton_reuse/recipe_card.md",
+    "results": "lca_analysis/nordic_cotton_reuse/lca_results.md"
+  },
+  {
+    "folder": "lca_analysis/nordic_textile_waste",
+    "name": "Nordic Textile Waste",
+    "recipe": "lca_analysis/nordic_textile_waste/recipe_card.md",
+    "results": "lca_analysis/nordic_textile_waste/lca_results.md"
+  },
+  {
+    "folder": "lca_analysis/paper_cup",
+    "name": "Paper Cup",
+    "recipe": "lca_analysis/paper_cup/recipe_card.md",
+    "results": "lca_analysis/paper_cup/lca_results.md"
+  },
+  {
+    "folder": "lca_analysis/plastic_broom",
+    "name": "Plastic Broom",
+    "recipe": "lca_analysis/plastic_broom/recipe_card.md",
+    "results": "lca_analysis/plastic_broom/lca_results.md"
+  },
+  {
+    "folder": "lca_analysis/polystyrene",
+    "name": "Polystyrene",
+    "recipe": "lca_analysis/polystyrene/recipe_card.md",
+    "results": "lca_analysis/polystyrene/lca_results.md"
+  },
+  {
+    "folder": "lca_analysis/popcorn",
+    "name": "Popcorn",
+    "recipe": "lca_analysis/popcorn/recipe_card.md",
+    "results": "lca_analysis/popcorn/lca_results.md"
+  },
+  {
+    "folder": "lca_analysis/thredup",
+    "name": "Thredup",
+    "recipe": "lca_analysis/thredup/recipe_card.md",
+    "results": "lca_analysis/thredup/lca_results.md"
+  }
+]
