@@ -31,7 +31,7 @@ project:
     - plan/PLAN_SWITCH_TO_QUARTO.md
 
 website:
-  title: "LCA Learning Hub"
+  title: "Agentic LCA Hub"
   navbar:
     left:
       - text: Home
@@ -50,37 +50,37 @@ website:
           href: skills_sessions/index.md
         - section: "Functional Unit"
           contents:
-            - text: "cotton fiber v0.1 session1"
+            - text: "cotton_fiber v0.1 session1"
               href: skills_sessions/functional-unit/functional-unit-cotton_fiber-v0.1-calvin-sonnet-4-6-session1.md
-            - text: "cotton fiber v0.2 session1"
+            - text: "cotton_fiber v0.2 session1"
               href: skills_sessions/functional-unit/functional-unit-cotton_fiber-v0.2-elena-deepseek-v4-flash-session1.md
-            - text: "wool yarn v0.2 session1"
+            - text: "wool_yarn v0.2 session1"
               href: skills_sessions/functional-unit/functional-unit-wool_yarn-v0.2-elena-sonnet-4-6-session1.md
         - section: "Goal and Scope"
           contents:
-            - text: "cotton fiber v0.1 session1"
+            - text: "cotton_fiber v0.1 session1"
               href: skills_sessions/goal-and-scope/goal-and-scope-cotton_fiber-v0.1-elena-sonnet-4-6-session1.md
         - section: "Life Cycle Inventory"
           contents:
-            - text: "wool yarn v0.1 session1"
+            - text: "wool_yarn v0.1 session1"
               href: skills_sessions/life-cycle-inventory/life-cycle-inventory-wool_yarn-v0.1-elena-sonnet-4-6-session1.md
         - section: "Life Cycle Stages"
           contents:
-            - text: "wool yarn v0.1 session1"
+            - text: "wool_yarn v0.1 session1"
               href: skills_sessions/life-cycle-stages/life-cycle-stages-wool_yarn-v0.1-elena-sonnet-4-6-session1.md
         - section: "System Boundary"
           contents:
-            - text: "cotton fiber v0.1 session1"
+            - text: "cotton_fiber v0.1 session1"
               href: skills_sessions/system-boundary/system-boundary-cotton_fiber-v0.1-calvin-sonnet-4-6-session1.md
-            - text: "polyester tshirt v0.1 session1"
+            - text: "polyester_tshirt v0.1 session1"
               href: skills_sessions/system-boundary/system-boundary-polyester_tshirt-v0.1-calvin-sonnet-4-6-session1.md
-            - text: "wool yarn v0.1 session1"
+            - text: "wool_yarn v0.1 session1"
               href: skills_sessions/system-boundary/system-boundary-wool_yarn-v0.1-calvin-sonnet-4-6-session1.md
         - section: "Technosphere and Ecosphere"
           contents:
-            - text: "polyester tshirt v0.1 session1"
+            - text: "polyester_tshirt v0.1 session1"
               href: skills_sessions/technosphere-and-ecosphere/technosphere-and-ecosphere-polyester_tshirt-v0.1-elena-sonnet-4-6-session1.md
-            - text: "wool yarn v0.1 session1"
+            - text: "wool_yarn v0.1 session1"
               href: skills_sessions/technosphere-and-ecosphere/technosphere-and-ecosphere-wool_yarn-v0.1-elena-sonnet-4-6-session1.md
         - section: "What Is LCA"
           contents:
@@ -117,4 +117,5 @@ website:
 format:
   html:
     theme: cosmo
+    css: custom.css
     toc: true

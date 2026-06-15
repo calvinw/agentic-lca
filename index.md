@@ -1,4 +1,4 @@
-# LCA Learning Hub
+# Agentic LCA Hub
 
 Resources for Life Cycle Assessment at FIT.
 

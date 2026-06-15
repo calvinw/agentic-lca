@@ -24,12 +24,12 @@ def session_text(stem, skill_prefix):
     m = re.match(r'^(.+?)-(v[\d.]+)-.+-(session\d+)$', rest)
     if m:
         arg, version, session = m.group(1), m.group(2), m.group(3)
-        return f"{arg.replace('_', ' ')} {version} {session}"
+        return f"{arg} {version} {session}"
     # Without arg (what-is-lca style): vX.Y-student-model-sessionN
     m = re.match(r'^(v[\d.]+)-.+-(session\d+)$', rest)
     if m:
         return f"{m.group(1)} {m.group(2)}"
-    return rest.replace("_", " ")
+    return rest
 
 
 ACRONYMS = {"lca", "lci", "lcia", "bafu", "traci", "lcas", "lcis"}
@@ -81,7 +81,7 @@ for f in plan_files:
 lines += [
     "",
     "website:",
-    '  title: "LCA Learning Hub"',
+    '  title: "Agentic LCA Hub"',
     "  navbar:",
     "    left:",
     "      - text: Home",
@@ -125,6 +125,7 @@ lines += [
     "format:",
     "  html:",
     "    theme: cosmo",
+    "    css: custom.css",
     "    toc: true",
     "",
 ]
