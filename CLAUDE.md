@@ -350,22 +350,35 @@ If you skip this step, the assistants will keep running the old version of the s
 
 ## Skill session files — naming convention and format
 
-When a skill session is tested and the student (or tester) asks to save it, save the transcript to the `skills_sessions/` folder using this exact naming convention:
+When a skill session is tested and the student (or tester) asks to save it, save the transcript inside a subfolder named after the skill, inside `skills_sessions/`. Each skill has its own subfolder:
 
 ```
-{skill-name}-{arg}-v{version}-{student}-{model}-session{n}.md
+skills_sessions/
+  functional-unit/
+  goal-and-scope/
+  life-cycle-inventory/
+  life-cycle-stages/
+  system-boundary/
+  technosphere-and-ecosphere/
+  what-is-lca/
+```
+
+The file itself follows this naming convention:
+
+```
+skills_sessions/{skill-name}/{skill-name}-{arg}-v{version}-{student}-{model}-session{n}.md
 ```
 
 For skills with no case study argument (`what-is-lca`), omit the `{arg}` segment:
 
 ```
-{skill-name}-v{version}-{student}-{model}-session{n}.md
+skills_sessions/{skill-name}/{skill-name}-v{version}-{student}-{model}-session{n}.md
 ```
 
 **Examples:**
-- `what-is-lca-v0.1-diana-sonnet-4-6-session1.md`
-- `system-boundary-cotton_fiber-v0.1-elena-sonnet-4-6-session1.md`
-- `functional-unit-wool_yarn-v0.2-calvin-sonnet-4-6-session2.md`
+- `skills_sessions/what-is-lca/what-is-lca-v0.1-diana-sonnet-4-6-session1.md`
+- `skills_sessions/system-boundary/system-boundary-cotton_fiber-v0.1-elena-sonnet-4-6-session1.md`
+- `skills_sessions/functional-unit/functional-unit-wool_yarn-v0.2-calvin-sonnet-4-6-session2.md`
 
 **Rules:**
 - `{skill-name}` — the kebab-case skill name exactly as it appears in the slash command (e.g. `what-is-lca`, `system-boundary`, `functional-unit`)
@@ -398,9 +411,11 @@ Always use `**AI:**` for the AI's turns and `**Student:**` for the student's tur
 Wrap every image in a markdown link (so it is clickable) and show the file path as a code span on the next line, so the path is visible even if the image does not render:
 
 ```markdown
-[![Wool Yarn supply chain — structure](../skills_references/wool_yarn/product_graph_structure.svg)](../skills_references/wool_yarn/product_graph_structure.svg)
-`../skills_references/wool_yarn/product_graph_structure.svg`
+[![Wool Yarn supply chain — structure](../../skills_references/wool_yarn/product_graph_structure.svg)](../../skills_references/wool_yarn/product_graph_structure.svg)
+`../../skills_references/wool_yarn/product_graph_structure.svg`
 ```
+
+Note the two `../` levels — one to exit the skill subfolder (e.g. `system-boundary/`), one to exit `skills_sessions/`.
 
 **What to include in the file:**
 
