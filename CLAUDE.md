@@ -323,6 +323,31 @@ always pass the output path explicitly.
 
 ---
 
+## Syncing skills after edits
+
+`.skillshare/` is the master skill directory — it is the **only** place skills should ever be edited. Each skill has its own subfolder inside `.skillshare/skills/` containing a `SKILL.md` file. Never edit skills anywhere else; other locations are deployment copies that get overwritten on the next sync.
+
+**After editing any skill file, you must run:**
+
+```bash
+skillshare sync
+```
+
+Think of this like publishing a document. Editing the `SKILL.md` file is like editing a draft — the AI assistants do not see the change until you run `skillshare sync`, which pushes the updated skill out to Claude, OpenCode, Gemini, Copilot, and the other tools configured in `.skillshare/config.yaml`.
+
+If you skip this step, the assistants will keep running the old version of the skill even though the file on disk has changed.
+
+**When to sync:**
+- After editing a `SKILL.md` file
+- After creating a new skill folder
+- After changing the skill version number
+
+**When not to sync:**
+- After saving a session file to `skills_sessions/` — session files are transcripts, not skills
+- After editing `CLAUDE.md` or any other project file — those are read directly, not synced
+
+---
+
 ## Skill session files — naming convention and format
 
 When a skill session is tested and the student (or tester) asks to save it, save the transcript to the `skills_sessions/` folder using this exact naming convention:
