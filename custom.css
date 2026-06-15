@@ -1,0 +1,5 @@
+#quarto-sidebar .sidebar-item-text,
+#quarto-sidebar .sidebar-link,
+#quarto-sidebar .sidebar-section .sidebar-item {
+  font-size: 0.8rem;
+}
