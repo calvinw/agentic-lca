@@ -1,0 +1,38 @@
+[
+  {
+    "file": "PLAN_BAFU_AND_METHODS_PACK.md",
+    "title": "Plan: Adding the BAFU-2025-LCI Database and openLCA LCIA Methods Pack"
+  },
+  {
+    "file": "PLAN_FOR_EDUCATIONAL_SKILLS.md",
+    "title": "Plan for Educational LCA Teaching Skills"
+  },
+  {
+    "file": "PLAN_FOR_REFERENCE_EXAMPLES.md",
+    "title": "Plan for Reference LCA Teaching Examples"
+  },
+  {
+    "file": "PLAN_FOR_SIMPLE_EXAMPLES.md",
+    "title": "LCA Analysis Plan"
+  },
+  {
+    "file": "PLAN_PRODUCTION_LCIA_LCA_COMMONS_TRACI.md",
+    "title": "Plan: Production-Level LCIA with LCA Commons + TRACI 2.2 (Ecoinvent-Ready)"
+  },
+  {
+    "file": "PLAN_PRODUCTION_LCIA_RECIPE.md",
+    "title": "Plan: Production LCIA with ReCiPe 2016 as an Alternative to TRACI 2.2"
+  },
+  {
+    "file": "PLAN_REMIXABLE_LCAS.md",
+    "title": "Remixable LCA Studies \u2014 Textiles & Fibres"
+  },
+  {
+    "file": "PLAN_RUN_LCA_SKILL_LCIA_AND_DATABASES.md",
+    "title": "Plan: Adding LCIA Methods and Database Support to the run-lca Skill"
+  },
+  {
+    "file": "PLAN_SKILL_RECOMMENDATIONS.md",
+    "title": "Skill Recommendations \u2014 Elementary LCA Skills for Beginners"
+  }
+]

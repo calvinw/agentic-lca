@@ -1,9 +1,10 @@
-name: Update sessions.json
+name: Update sessions.json and plans.json
 
 on:
   push:
     paths:
-      - 'skills_sessions/*.md'
+      - 'skills_sessions/**/*.md'
+      - 'plan/PLAN_*.md'
 
 jobs:
   generate:
@@ -16,10 +17,13 @@ jobs:
       - name: Regenerate sessions.json
         run: python3 skills_sessions/generate_sessions.py
 
-      - name: Commit updated sessions.json
+      - name: Regenerate plans.json
+        run: python3 plan/generate_plans.py
+
+      - name: Commit updated manifests
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add skills_sessions/sessions.json
-          git diff --cached --quiet || git commit -m "chore: regenerate sessions.json"
+          git add skills_sessions/sessions.json plan/plans.json
+          git diff --cached --quiet || git commit -m "chore: regenerate sessions.json and plans.json"
           git push
