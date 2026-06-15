@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1165.3" height="198.7" viewBox="0 -85.0 1165.3 198.7">
+<rect x="0" y="-85.0" width="1165.3" height="198.7" fill="#f8f8f8"/>
+<defs>
+  <marker id="arr"       viewBox="0 0 10 10" refX="9" refY="5"
+          markerWidth="5" markerHeight="5" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#555555"/>
+  </marker>
+  <marker id="arr-green" viewBox="0 0 10 10" refX="9" refY="5"
+          markerWidth="5" markerHeight="5" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#2d7a45"/>
+  </marker>
+  <marker id="arr-red"   viewBox="0 0 10 10" refX="9" refY="5"
+          markerWidth="5" markerHeight="5" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/>
+  </marker>
+</defs>
+<text x="582.6" y="-58.4" text-anchor="middle" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="bold" fill="#222">Coffee LCA — one cup</text>
+<text x="142.8" y="-33.0" text-anchor="start" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="bold" fill="#2d7a45">from Nature</text>
+<line x1="142.8" y1="-23.0" x2="142.8" y2="7.0" stroke="#2d7a45" stroke-width="1.6" marker-end="url(#arr-green)"/>
+<text x="137.8" y="-11.6" text-anchor="end" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#2d7a45">H<tspan baseline-shift="sub" font-size="0.75em">2</tspan>O</text>
+<text x="137.8" y="2.4" text-anchor="end" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#2d7a45">0.05 L</text>
+<line x1="142.8" y1="61.7" x2="142.8" y2="91.7" stroke="#c0392b" stroke-width="1.6" marker-end="url(#arr-red)"/>
+<text x="137.8" y="73.1" text-anchor="end" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#c0392b">CO<tspan baseline-shift="sub" font-size="0.75em">2</tspan></text>
+<text x="137.8" y="87.1" text-anchor="end" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#c0392b">0.1 kg</text>
+<text x="142.8" y="103.7" text-anchor="start" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="bold" fill="#c0392b">to Air</text>
+<line x1="836.6" y1="34.4" x2="939.7" y2="34.4" stroke="#555555" stroke-width="1.6" marker-end="url(#arr)"/>
+<text text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#444">
+<tspan x="888.2" y="13.2" dominant-baseline="auto">Coffee</tspan>
+<tspan x="888.2" y="27.5" dominant-baseline="auto">1 cup</tspan>
+</text>
+<line x1="522.2" y1="34.4" x2="671.1" y2="34.4" stroke="#555555" stroke-width="1.6" marker-end="url(#arr)"/>
+<text text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#444">
+<tspan x="596.6" y="13.2" dominant-baseline="auto">Boiled water</tspan>
+<tspan x="596.6" y="27.5" dominant-baseline="auto">0.2 L</tspan>
+</text>
+<line x1="225.5" y1="34.4" x2="356.6" y2="34.4" stroke="#555555" stroke-width="1.6" marker-end="url(#arr)"/>
+<text text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#444">
+<tspan x="291.1" y="13.2" dominant-baseline="auto">Electricity</tspan>
+<tspan x="291.1" y="27.5" dominant-baseline="auto">0.1 kWh</tspan>
+</text>
+<rect x="671.1" y="7.0" width="165.51333333333335" height="54.74516666666667" rx="8" fill="#3a7ebf"/>
+<text x="753.9" y="26.4" text-anchor="middle" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="white">P1 — Make coffee</text>
+<text x="753.9" y="42.4" text-anchor="middle" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="white">s1 = 1</text>
+<rect x="356.6" y="7.0" width="165.51333333333335" height="54.74516666666667" rx="8" fill="#3a7ebf"/>
+<text x="439.4" y="26.4" text-anchor="middle" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="white">P2 — Boil water</text>
+<text x="439.4" y="42.4" text-anchor="middle" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="white">s2 = 0.2</text>
+<rect x="60.0" y="7.0" width="165.51333333333335" height="54.74516666666667" rx="8" fill="#3a7ebf"/>
+<text x="142.8" y="26.4" text-anchor="middle" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="white">P3 — Burn coal</text>
+<text x="142.8" y="42.4" text-anchor="middle" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="white">s3 = 0.1</text>
+<rect x="939.7" y="0.0" width="165.51333333333335" height="68.75" rx="8" fill="#7b4ea6"/>
+<text x="1022.5" y="15.1" text-anchor="middle" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="white">Functional Unit</text>
+<text x="1022.5" y="37.8" text-anchor="middle" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="white">One cup of coffee</text>
+</svg>

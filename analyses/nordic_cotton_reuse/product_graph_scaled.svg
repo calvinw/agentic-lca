@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1178.0" height="473.2" viewBox="0 -38.0 1178.0 473.2">
+<rect x="0" y="-38.0" width="1178.0" height="473.2" fill="#f8f8f8"/>
+<defs>
+  <marker id="arr"       viewBox="0 0 10 10" refX="9" refY="5"
+          markerWidth="5" markerHeight="5" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#555555"/>
+  </marker>
+  <marker id="arr-green" viewBox="0 0 10 10" refX="9" refY="5"
+          markerWidth="5" markerHeight="5" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#2d7a45"/>
+  </marker>
+  <marker id="arr-red"   viewBox="0 0 10 10" refX="9" refY="5"
+          markerWidth="5" markerHeight="5" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/>
+  </marker>
+</defs>
+<text x="589.0" y="-11.4" text-anchor="middle" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="bold" fill="#222">Nordic Textile Waste — Scenario 2B — Cotton reuse in Nordic countries</text>
+<line x1="663.5" y1="219.0" x2="663.5" y2="249.0" stroke="#c0392b" stroke-width="1.6" marker-end="url(#arr-red)"/>
+<text x="658.5" y="230.4" text-anchor="end" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#c0392b">CO<tspan baseline-shift="sub" font-size="0.75em">2</tspan></text>
+<text x="658.5" y="244.4" text-anchor="end" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#c0392b">0.046 kg</text>
+<text x="663.5" y="261.0" text-anchor="start" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="bold" fill="#c0392b">to Air</text>
+<line x1="142.8" y1="54.8" x2="142.8" y2="84.8" stroke="#c0392b" stroke-width="1.6" marker-end="url(#arr-red)"/>
+<text x="137.8" y="66.2" text-anchor="end" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#c0392b">CO<tspan baseline-shift="sub" font-size="0.75em">2</tspan></text>
+<text x="137.8" y="80.2" text-anchor="end" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#c0392b">-13.14 kg</text>
+<text x="142.8" y="96.8" text-anchor="start" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="bold" fill="#c0392b">to Air</text>
+<line x1="142.8" y1="219.0" x2="142.8" y2="249.0" stroke="#c0392b" stroke-width="1.6" marker-end="url(#arr-red)"/>
+<text x="137.8" y="230.4" text-anchor="end" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#c0392b">CO<tspan baseline-shift="sub" font-size="0.75em">2</tspan></text>
+<text x="137.8" y="244.4" text-anchor="end" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#c0392b">-0.0121 kg</text>
+<text x="142.8" y="261.0" text-anchor="start" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="bold" fill="#c0392b">to Air</text>
+<line x1="142.8" y1="383.2" x2="142.8" y2="413.2" stroke="#c0392b" stroke-width="1.6" marker-end="url(#arr-red)"/>
+<text x="137.8" y="394.6" text-anchor="end" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#c0392b">CO<tspan baseline-shift="sub" font-size="0.75em">2</tspan></text>
+<text x="137.8" y="408.6" text-anchor="end" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#c0392b">-0.2268 kg</text>
+<text x="142.8" y="425.2" text-anchor="start" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="bold" fill="#c0392b">to Air</text>
+<line x1="746.2" y1="191.6" x2="952.5" y2="191.6" stroke="#555555" stroke-width="1.6" marker-end="url(#arr)"/>
+<text text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#444">
+<tspan x="849.4" y="170.5" dominant-baseline="auto">Cotton reuse service</tspan>
+<tspan x="849.4" y="184.8" dominant-baseline="auto">1 kg</tspan>
+</text>
+<line x1="225.5" y1="27.4" x2="580.7" y2="191.6" stroke="#555555" stroke-width="1.6" marker-end="url(#arr)"/>
+<text text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#444">
+<tspan x="403.1" y="88.3" dominant-baseline="auto">Avoided cotton garment production credit</tspan>
+<tspan x="403.1" y="102.6" dominant-baseline="auto">1 kg</tspan>
+</text>
+<line x1="225.5" y1="191.6" x2="580.7" y2="191.6" stroke="#555555" stroke-width="1.6" marker-end="url(#arr)"/>
+<text text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#444">
+<tspan x="403.1" y="170.5" dominant-baseline="auto">Nordic electricity credit</tspan>
+<tspan x="403.1" y="184.8" dominant-baseline="auto">0.576 kWh</tspan>
+</text>
+<line x1="225.5" y1="355.8" x2="580.7" y2="191.6" stroke="#555555" stroke-width="1.6" marker-end="url(#arr)"/>
+<text text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#444">
+<tspan x="403.1" y="252.6" dominant-baseline="auto">Nordic heat credit</tspan>
+<tspan x="403.1" y="266.9" dominant-baseline="auto">3.194 kWh</tspan>
+</text>
+<rect x="580.7" y="164.2" width="165.51333333333335" height="54.74516666666667" rx="8" fill="#3a7ebf"/>
+<text x="663.5" y="183.6" text-anchor="middle" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="white">P1 — Collect and reuse cotton garment in Nordic second-hand shop</text>
+<text x="663.5" y="199.6" text-anchor="middle" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="white">s1 = 1</text>
+<rect x="60.0" y="0.0" width="165.51333333333335" height="54.74516666666667" rx="8" fill="#3a7ebf"/>
+<text x="142.8" y="19.4" text-anchor="middle" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="white">P2 — Avoided cotton garment production (farm to Nordic shop)</text>
+<text x="142.8" y="35.4" text-anchor="middle" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="white">s2 = 1</text>
+<rect x="60.0" y="164.2" width="165.51333333333335" height="54.74516666666667" rx="8" fill="#3a7ebf"/>
+<text x="142.8" y="183.6" text-anchor="middle" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="white">P3 — Nordic marginal electricity displaced by end-of-life incineration</text>
+<text x="142.8" y="199.6" text-anchor="middle" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="white">s3 = 0.576</text>
+<rect x="60.0" y="328.5" width="165.51333333333335" height="54.74516666666667" rx="8" fill="#3a7ebf"/>
+<text x="142.8" y="347.8" text-anchor="middle" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="white">P4 — Nordic marginal heat displaced by end-of-life incineration</text>
+<text x="142.8" y="363.8" text-anchor="middle" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="white">s4 = 3.194</text>
+<rect x="952.5" y="124.1" width="165.51333333333335" height="134.95166666666668" rx="8" fill="#7b4ea6"/>
+<text x="1035.2" y="153.8" text-anchor="middle" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="white">Functional Unit</text>
+<text text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="white">
+<tspan x="1035.2" y="210.1" dominant-baseline="auto">Treatment of one kilogram</tspan>
+<tspan x="1035.2" y="223.1" dominant-baseline="auto">of used 100% cotton</tspan>
+<tspan x="1035.2" y="236.1" dominant-baseline="auto">textiles via Nordic reuse</tspan>
+<tspan x="1035.2" y="249.1" dominant-baseline="auto">— collection to final</tspan>
+<tspan x="1035.2" y="262.1" dominant-baseline="auto">grave</tspan>
+</text>
+</svg>
