@@ -1,0 +1,118 @@
+project:
+  type: website
+  output-dir: _site
+  render:
+    - index.md
+    - skills_sessions/index.md
+    - skills_sessions/functional-unit/functional-unit-cotton_fiber-v0.1-calvin-sonnet-4-6-session1.md
+    - skills_sessions/functional-unit/functional-unit-cotton_fiber-v0.2-elena-deepseek-v4-flash-session1.md
+    - skills_sessions/functional-unit/functional-unit-wool_yarn-v0.2-elena-sonnet-4-6-session1.md
+    - skills_sessions/goal-and-scope/goal-and-scope-cotton_fiber-v0.1-elena-sonnet-4-6-session1.md
+    - skills_sessions/life-cycle-inventory/life-cycle-inventory-wool_yarn-v0.1-elena-sonnet-4-6-session1.md
+    - skills_sessions/life-cycle-stages/life-cycle-stages-wool_yarn-v0.1-elena-sonnet-4-6-session1.md
+    - skills_sessions/system-boundary/system-boundary-cotton_fiber-v0.1-calvin-sonnet-4-6-session1.md
+    - skills_sessions/system-boundary/system-boundary-polyester_tshirt-v0.1-calvin-sonnet-4-6-session1.md
+    - skills_sessions/system-boundary/system-boundary-wool_yarn-v0.1-calvin-sonnet-4-6-session1.md
+    - skills_sessions/technosphere-and-ecosphere/technosphere-and-ecosphere-polyester_tshirt-v0.1-elena-sonnet-4-6-session1.md
+    - skills_sessions/technosphere-and-ecosphere/technosphere-and-ecosphere-wool_yarn-v0.1-elena-sonnet-4-6-session1.md
+    - skills_sessions/what-is-lca/what-is-lca-v0.1-elena-sonnet-4-6-session1.md
+    - plan/index.md
+    - plan/PLAN_BAFU_AND_METHODS_PACK.md
+    - plan/PLAN_FOR_EDUCATIONAL_SKILLS.md
+    - plan/PLAN_FOR_REFERENCE_EXAMPLES.md
+    - plan/PLAN_FOR_SIMPLE_EXAMPLES.md
+    - plan/PLAN_PRODUCTION_LCIA_LCA_COMMONS_TRACI.md
+    - plan/PLAN_PRODUCTION_LCIA_RECIPE.md
+    - plan/PLAN_REMIXABLE_LCAS.md
+    - plan/PLAN_RUN_LCA_SKILL_LCIA_AND_DATABASES.md
+    - plan/PLAN_SKILL_RECOMMENDATIONS.md
+    - plan/PLAN_SWITCH_TO_QUARTO.md
+
+website:
+  title: "LCA Learning Hub"
+  navbar:
+    left:
+      - text: Home
+        href: index.md
+      - text: Sessions
+        href: skills_sessions/index.md
+      - text: Plans
+        href: plan/index.md
+
+  sidebar:
+    - id: sessions
+      title: "Sessions"
+      style: docked
+      contents:
+        - text: Overview
+          href: skills_sessions/index.md
+        - section: "Functional Unit"
+          contents:
+            - text: "cotton fiber v0.1 session1"
+              href: skills_sessions/functional-unit/functional-unit-cotton_fiber-v0.1-calvin-sonnet-4-6-session1.md
+            - text: "cotton fiber v0.2 session1"
+              href: skills_sessions/functional-unit/functional-unit-cotton_fiber-v0.2-elena-deepseek-v4-flash-session1.md
+            - text: "wool yarn v0.2 session1"
+              href: skills_sessions/functional-unit/functional-unit-wool_yarn-v0.2-elena-sonnet-4-6-session1.md
+        - section: "Goal and Scope"
+          contents:
+            - text: "cotton fiber v0.1 session1"
+              href: skills_sessions/goal-and-scope/goal-and-scope-cotton_fiber-v0.1-elena-sonnet-4-6-session1.md
+        - section: "Life Cycle Inventory"
+          contents:
+            - text: "wool yarn v0.1 session1"
+              href: skills_sessions/life-cycle-inventory/life-cycle-inventory-wool_yarn-v0.1-elena-sonnet-4-6-session1.md
+        - section: "Life Cycle Stages"
+          contents:
+            - text: "wool yarn v0.1 session1"
+              href: skills_sessions/life-cycle-stages/life-cycle-stages-wool_yarn-v0.1-elena-sonnet-4-6-session1.md
+        - section: "System Boundary"
+          contents:
+            - text: "cotton fiber v0.1 session1"
+              href: skills_sessions/system-boundary/system-boundary-cotton_fiber-v0.1-calvin-sonnet-4-6-session1.md
+            - text: "polyester tshirt v0.1 session1"
+              href: skills_sessions/system-boundary/system-boundary-polyester_tshirt-v0.1-calvin-sonnet-4-6-session1.md
+            - text: "wool yarn v0.1 session1"
+              href: skills_sessions/system-boundary/system-boundary-wool_yarn-v0.1-calvin-sonnet-4-6-session1.md
+        - section: "Technosphere and Ecosphere"
+          contents:
+            - text: "polyester tshirt v0.1 session1"
+              href: skills_sessions/technosphere-and-ecosphere/technosphere-and-ecosphere-polyester_tshirt-v0.1-elena-sonnet-4-6-session1.md
+            - text: "wool yarn v0.1 session1"
+              href: skills_sessions/technosphere-and-ecosphere/technosphere-and-ecosphere-wool_yarn-v0.1-elena-sonnet-4-6-session1.md
+        - section: "What Is LCA"
+          contents:
+            - text: "v0.1 session1"
+              href: skills_sessions/what-is-lca/what-is-lca-v0.1-elena-sonnet-4-6-session1.md
+
+    - id: plans
+      title: "Plans"
+      style: docked
+      contents:
+        - text: Overview
+          href: plan/index.md
+        - text: "BAFU and Methods Pack"
+          href: plan/PLAN_BAFU_AND_METHODS_PACK.md
+        - text: "for Educational Skills"
+          href: plan/PLAN_FOR_EDUCATIONAL_SKILLS.md
+        - text: "for Reference Examples"
+          href: plan/PLAN_FOR_REFERENCE_EXAMPLES.md
+        - text: "for Simple Examples"
+          href: plan/PLAN_FOR_SIMPLE_EXAMPLES.md
+        - text: "Production LCIA LCA Commons TRACI"
+          href: plan/PLAN_PRODUCTION_LCIA_LCA_COMMONS_TRACI.md
+        - text: "Production LCIA Recipe"
+          href: plan/PLAN_PRODUCTION_LCIA_RECIPE.md
+        - text: "Remixable LCAS"
+          href: plan/PLAN_REMIXABLE_LCAS.md
+        - text: "Run LCA Skill LCIA and Databases"
+          href: plan/PLAN_RUN_LCA_SKILL_LCIA_AND_DATABASES.md
+        - text: "Skill Recommendations"
+          href: plan/PLAN_SKILL_RECOMMENDATIONS.md
+        - text: "Switch to Quarto"
+          href: plan/PLAN_SWITCH_TO_QUARTO.md
+
+format:
+  html:
+    theme: cosmo
+    toc: true
