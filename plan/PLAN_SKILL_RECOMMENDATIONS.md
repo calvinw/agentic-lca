@@ -15,7 +15,7 @@ Skills already built are marked ✅. Skills recommended but not yet built are ma
 | 4 | `goal-and-scope` | ✅ Built | Why the study is being done, who it is for, what is included or excluded |
 | 5 | `functional-unit` | ✅ Built | The precise definition of what is being measured |
 | 6 | `supply-chain` | ✅ Built | How to read a product graph, what processes and flows are |
-| 7 | `technosphere-and-ecosphere` | ⬜ Recommended | The difference between human-made flows (products) and natural flows (emissions, resources) that cross into the natural world |
+| 7 | `technosphere-and-ecosphere` | ✅ Built | The difference between human-made flows (products) and natural flows (emissions, resources) that cross into the natural world |
 | 8 | `characterization` | ⬜ Recommended | How raw emissions are converted into impact scores (e.g. why 1 kg CH4 = 27.9 kg CO2 eq) |
 | 9 | `impact-categories` | ⬜ Recommended | What impact categories are, why there are more than just CO2, why one emission can appear in multiple categories |
 | 10 | `scaling-vector` | ✅ Built | How much each process in the supply chain must run to deliver one functional unit |
