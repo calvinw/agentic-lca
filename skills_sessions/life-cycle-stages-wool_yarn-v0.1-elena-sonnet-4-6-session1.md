@@ -1,11 +1,12 @@
-# Life Cycle Stages Skill Session
-**Skill version:** 0.1  
-**Case study:** wool_yarn  
-**Date:** 2026-06-14  
+# /life-cycle-stages wool_yarn
+**Skill version:** 0.1
+**Student:** elena
+**Model:** sonnet-4-6
+**Date:** 2026-06-14
 
 ---
 
-**Skill:** Here is a quick question before we look at any LCA numbers.
+**AI:** Here is a quick question before we look at any LCA numbers.
 
 Imagine two friends both track their spending for a month. One tracks everything — rent, food, transport, nights out, the lot. The other only tracks their grocery bills. At the end of the month, who spent less?
 
@@ -13,7 +14,7 @@ The one who only tracked groceries — obviously. But is that a fair comparison?
 
 **Student:** no it's not fair
 
-**Skill:** Exactly — they were measuring different things. One covered the full picture, the other covered only a slice of it. The grocery number is not wrong, but you cannot compare it to the full-spending number and draw any conclusion about who is better at managing money.
+**AI:** Exactly — they were measuring different things. One covered the full picture, the other covered only a slice of it. The grocery number is not wrong, but you cannot compare it to the full-spending number and draw any conclusion about who is better at managing money.
 
 In LCA, the same problem comes up constantly. Researchers have agreed on four standard ways to draw the fence — four named boundary types that describe where a study starts and where it stops. These are called **life cycle stages** (meaning: the named phases of a product's life that a study can choose to include or exclude).
 
@@ -27,7 +28,7 @@ Before I go on — why do you think most supplier sustainability reports use cra
 
 **Student:** because they can only control what happens on their side
 
-**Skill:** Exactly right — and that is a really important insight.
+**AI:** Exactly right — and that is a really important insight.
 
 A wool yarn supplier controls the sheep farm and the mill. They have no control over what a fashion brand does with the yarn after they buy it — whether they knit it into a jumper, how that jumper gets washed, or where it ends up at the end of its life. It would not be fair to hold them responsible for impacts they cannot influence.
 
@@ -41,19 +42,20 @@ Now the other three boundary types, quickly:
 
 Here is the wool yarn supply chain diagram:
 
-![Wool Yarn supply chain — structure](skills_references/wool_yarn/product_graph_structure.svg)
+[![Wool Yarn supply chain — structure](../skills_references/wool_yarn/product_graph_structure.svg)](../skills_references/wool_yarn/product_graph_structure.svg)
+`../skills_references/wool_yarn/product_graph_structure.svg`
 
 The two boxes shown — sheep farming and yarn production — are everything this study included. Based on the four boundary types we just covered, which one does this diagram represent?
 
 **Student:** cradle to gate
 
-**Skill:** Correct — and you can see exactly why just by looking at the diagram. The study starts at the sheep farm (the cradle) and ends when the finished yarn leaves the mill (the gate). Nothing after that point appears in the diagram, which means nothing after that point was counted.
+**AI:** Correct — and you can see exactly why just by looking at the diagram. The study starts at the sheep farm (the cradle) and ends when the finished yarn leaves the mill (the gate). Nothing after that point appears in the diagram, which means nothing after that point was counted.
 
 Here is the what-if question: if a garment brand bought this wool yarn and wanted to do a cradle-to-grave study of the finished jumper — including the customer wearing it, hand-washing it, and eventually donating it to a charity shop — what extra steps would they need to add inside the fence that are not shown in that diagram?
 
 **Student:** the garment factory, washing at home, and disposing of it
 
-**Skill:** Perfect — that is exactly the three things that would need to be added, and in the right order too.
+**AI:** Perfect — that is exactly the three things that would need to be added, and in the right order too.
 
 This is the key insight the whole skill has been building toward: the same wool yarn has a different footprint number depending on which boundary you use. The cradle-to-gate number only reflects the farm and the mill. The cradle-to-grave number adds the garment factory, decades of home washing, and end-of-life disposal — and for a wool jumper that gets washed regularly over many years, that additional impact is not small.
 

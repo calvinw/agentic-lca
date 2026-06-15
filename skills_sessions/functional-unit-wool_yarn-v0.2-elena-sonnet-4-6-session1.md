@@ -1,15 +1,16 @@
-# Functional Unit Skill Session — Wool Yarn
-**Skill version:** 0.2  
-**Date:** 2026-06-13  
-**Case study:** wool_yarn  
+# /functional-unit wool_yarn
+**Skill version:** 0.2
+**Student:** elena
+**Model:** sonnet-4-6
+**Date:** 2026-06-13
 
 ---
 
-**Skill:** Before we look at any numbers — imagine a wool supplier sends you a data sheet claiming their yarn has a "low carbon footprint." What unit would you want the number to be measured in — per kilogram of yarn, per sweater it could knit, or per year of wearing the sweater?
+**AI:** Before we look at any numbers — imagine a wool supplier sends you a data sheet claiming their yarn has a "low carbon footprint." What unit would you want the number to be measured in — per kilogram of yarn, per sweater it could knit, or per year of wearing the sweater?
 
 **Student:** per kilogram of yarn
 
-**Skill:** That is actually a really strong instinct — and as it turns out, it is exactly what the researchers chose for this study. Well done.
+**AI:** That is actually a really strong instinct — and as it turns out, it is exactly what the researchers chose for this study. Well done.
 
 Here's why it works so well: when you are comparing two *suppliers* of raw material (say, a New Zealand wool farm versus an Australian one), measuring per kilogram gives you a fair, apples-to-apples comparison. Neither supplier is penalised for the fact that one sweater design might use more or less yarn than another — you are just measuring the material itself, at the point it leaves the mill.
 
@@ -17,7 +18,8 @@ The study we will be working through is called **Wool Yarn — 1 kg**. It traces
 
 Here is what the supply chain looks like:
 
-![Wool Yarn supply chain — structure](../skills_references/wool_yarn/product_graph_structure.svg)
+[![Wool Yarn supply chain — structure](../skills_references/wool_yarn/product_graph_structure.svg)](../skills_references/wool_yarn/product_graph_structure.svg)
+`../skills_references/wool_yarn/product_graph_structure.svg`
 
 You can see two boxes connected by an arrow. The rightmost box — **P2 — Wool yarn production** — has a special name in LCA: it is called the **reference process**. That just means it is the finishing line — the step that delivers the finished product. Everything to its left exists only to supply it. The functional unit is precisely what comes out of that box: 1 kg of wool yarn, ready for knitting or weaving.
 
@@ -25,7 +27,7 @@ Ready to hear what that 1 kg of yarn actually costs the planet in CO₂?
 
 **Student:** yes
 
-**Skill:** In LCA, the precise definition of exactly what we are measuring is called the **functional unit** — it exists so that comparisons between products are fair and no one can fudge the numbers by measuring something slightly different.
+**AI:** In LCA, the precise definition of exactly what we are measuring is called the **functional unit** — it exists so that comparisons between products are fair and no one can fudge the numbers by measuring something slightly different.
 
 For this study, the functional unit is: **1 kg of wool yarn, ready for knitting or weaving.**
 
@@ -39,7 +41,7 @@ What if a competing wool supplier measured their footprint *per sweater produced
 
 **Student:** it could make their yarn look better
 
-**Skill:** Exactly right — and that is a really important insight.
+**AI:** Exactly right — and that is a really important insight.
 
 If a competitor's yarn is used mainly in lightweight, fine-knit designs that only need 200g per sweater, then measuring "per sweater" makes their footprint look tiny — even if the yarn itself is produced in exactly the same way as yours. Meanwhile, your yarn might go into heavy winter knitwear using 600g per sweater, so your "per sweater" number looks three times worse — through no fault of your production process at all.
 
@@ -53,7 +55,7 @@ That wraps up the five steps for wool yarn! Would you like to see how the functi
 
 **Student:** yes, show me footwear. Is this a new example?
 
-**Skill:** Great question — and good instinct to ask! No, it is not a full new case study like the wool yarn one we just worked through. Think of it more like a bonus example from a reference guide. The wool yarn lesson had its own dedicated file with real numbers to calculate; this is a shorter illustration designed to show how the *same concept* applies in a completely different corner of the fashion industry.
+**AI:** Great question — and good instinct to ask! No, it is not a full new case study like the wool yarn one we just worked through. Think of it more like a bonus example from a reference guide. The wool yarn lesson had its own dedicated file with real numbers to calculate; this is a shorter illustration designed to show how the *same concept* applies in a completely different corner of the fashion industry.
 
 When researchers do an LCA on a pair of shoes, a very common functional unit is:
 

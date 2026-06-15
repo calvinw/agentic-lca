@@ -323,6 +323,66 @@ always pass the output path explicitly.
 
 ---
 
+## Skill session files — naming convention and format
+
+When a skill session is tested and the student (or tester) asks to save it, save the transcript to the `skills_sessions/` folder using this exact naming convention:
+
+```
+{skill-name}-{arg}-v{version}-{student}-{model}-session{n}.md
+```
+
+For skills with no case study argument (`what-is-lca`), omit the `{arg}` segment:
+
+```
+{skill-name}-v{version}-{student}-{model}-session{n}.md
+```
+
+**Examples:**
+- `what-is-lca-v0.1-diana-sonnet-4-6-session1.md`
+- `system-boundary-cotton_fiber-v0.1-elena-sonnet-4-6-session1.md`
+- `functional-unit-wool_yarn-v0.2-calvin-sonnet-4-6-session2.md`
+
+**Rules:**
+- `{skill-name}` — the kebab-case skill name exactly as it appears in the slash command (e.g. `what-is-lca`, `system-boundary`, `functional-unit`)
+- `{arg}` — the case study argument passed to the skill (e.g. `wool_yarn`, `cotton_fiber`, `polyester_tshirt`); omit for `what-is-lca`
+- `{version}` — the skill version from the SKILL.md file, e.g. `0.1`, `0.2`
+- `{student}` — the first name of the person who ran the session (e.g. `calvin`, `elena`, `diana`)
+- `{model}` — the short model name of the AI running the skill (e.g. `sonnet-4-6`, `gpt-4o`, `gemini-2-5`)
+- `{n}` — a counter starting at 1; increment it when the same skill+arg+version+student+model combination has already been saved
+
+**File header format:**
+
+The first line of every session file must be the slash command that was used to invoke the skill, including any argument (the case study name):
+
+```markdown
+# /functional-unit wool_yarn
+**Skill version:** 0.2
+**Student:** calvin
+**Model:** sonnet-4-6
+**Date:** 2026-06-13
+```
+
+For skills with no case study argument (only `what-is-lca`), the first line is just `# /what-is-lca`.
+
+**Speaker labels:**
+
+Always use `**AI:**` for the AI's turns and `**Student:**` for the student's turns. Do not use `**Skill:**`, `**Claude:**`, or any other label.
+
+**Image links:**
+
+Wrap every image in a markdown link (so it is clickable) and show the file path as a code span on the next line, so the path is visible even if the image does not render:
+
+```markdown
+[![Wool Yarn supply chain — structure](../skills_references/wool_yarn/product_graph_structure.svg)](../skills_references/wool_yarn/product_graph_structure.svg)
+`../skills_references/wool_yarn/product_graph_structure.svg`
+```
+
+**What to include in the file:**
+
+Save only the header and the verbatim conversation that took place while the skill was running — the back-and-forth between `**AI:**` and `**Student:**` turns, exactly as they happened. Nothing else. Do not add notes, summaries, completion status, meta-comments, or any text that was not part of the actual skill conversation. If the session ended early, just stop — do not add a line explaining that it was incomplete.
+
+---
+
 # AI Agentic Tools Dev Container Guide
 
 This dev container is built from [calvinw/ai-agentic-tools](https://github.com/calvinw/ai-agentic-tools) and includes a comprehensive toolkit for AI-assisted development.

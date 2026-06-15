@@ -1,17 +1,18 @@
-# System Boundary Skill Session
-**Skill version:** 0.1  
-**Case study:** wool_yarn  
-**Date:** 2026-06-14  
+# /system-boundary wool_yarn
+**Skill version:** 0.1
+**Student:** calvin
+**Model:** sonnet-4-6
+**Date:** 2026-06-14
 
 ---
 
-**Skill:** Imagine you are reviewing a restaurant receipt at the end of a work dinner. The receipt only shows the food and drinks your table ordered — it does not include the taxi you took to get there, the parking fee your colleague paid, or the round of drinks someone bought at the bar next door.
+**AI:** Imagine you are reviewing a restaurant receipt at the end of a work dinner. The receipt only shows the food and drinks your table ordered — it does not include the taxi you took to get there, the parking fee your colleague paid, or the round of drinks someone bought at the bar next door.
 
 Here's the question: if someone added up only the restaurant receipt to figure out the total cost of the evening, would that number be accurate — and what would be missing from it?
 
 **Student:** taxi parking, it would not be accurate
 
-**Skill:** Exactly — the receipt only covers what happened inside that restaurant. Everything else, no matter how real and costly it was, simply does not appear on it.
+**AI:** Exactly — the receipt only covers what happened inside that restaurant. Everything else, no matter how real and costly it was, simply does not appear on it.
 
 In Life Cycle Assessment, every study has a "receipt" too — a defined set of steps it covers and a defined set it does not. That boundary is called the **system boundary**. Think of it as a fence drawn around part of the supply chain. Everything inside the fence is measured and counted. Everything outside the fence is ignored — even if it causes real environmental harm.
 
@@ -21,7 +22,8 @@ Let's look at a real example — a study of **Wool Yarn**. The goal is to calcul
 
 Here is the supply chain diagram for this study:
 
-![Wool Yarn supply chain — structure](../skills_references/wool_yarn/product_graph_structure.svg)
+[![Wool Yarn supply chain — structure](../skills_references/wool_yarn/product_graph_structure.svg)](../skills_references/wool_yarn/product_graph_structure.svg)
+`../skills_references/wool_yarn/product_graph_structure.svg`
 
 Each box in this diagram is a step the study decided to **include**. The fence — the system boundary — runs around both of these boxes. Any step that does not appear is outside the fence and was not counted.
 
@@ -29,7 +31,7 @@ Looking at the diagram, can you spot any steps you might expect to be there that
 
 **Student:** yes, it gets washed or used
 
-**Skill:** You are asking exactly the right thing — and yes, you've spotted something real.
+**AI:** You are asking exactly the right thing — and yes, you've spotted something real.
 
 After the yarn leaves the spinning mill, it gets transported to a garment factory, knitted or woven into a sweater or blanket, shipped to a store, bought by a customer, washed many times at home, and eventually thrown away or donated. Every single one of those steps uses energy and causes some environmental impact — but none of them appear in this diagram, because they are all **outside the fence**.
 
@@ -39,7 +41,7 @@ Here is the what-if question: what if the boundary had also included the energy 
 
 **Student:** it would go up clearly
 
-**Skill:** Exactly right — and that is the single most important thing to understand about system boundaries.
+**AI:** Exactly right — and that is the single most important thing to understand about system boundaries.
 
 Every time you widen the fence to include more steps, the number goes up — because you are counting more real activity that causes real emissions. A narrow boundary will always produce a smaller number than a wide one, even if they are studying the same product.
 
@@ -49,7 +51,7 @@ The system boundary is one decision inside a bigger set called **goal and scope*
 
 **Student:** So do people argue over the system boundary
 
-**Skill:** This is a perfectly normal question — and yes, absolutely they do!
+**AI:** This is a perfectly normal question — and yes, absolutely they do!
 
 System boundary disagreements are actually one of the most common arguments in sustainability reporting. A wool producer might publish a cradle-to-gate number that stops at the mill gate, while an environmental group might argue that the study should have gone all the way to end-of-life disposal. Both are using real data — but because the fences are drawn in different places, they get very different numbers, and each side can accuse the other of cherry-picking.
 

@@ -1,23 +1,25 @@
-# Goal and Scope Skill Session — Cotton Fiber
-**Skill version:** 0.1  
-**Date:** 2026-06-13  
-**Case study:** cotton_fiber  
+# /goal-and-scope cotton_fiber
+**Skill version:** 0.1
+**Student:** elena
+**Model:** sonnet-4-6
+**Date:** 2026-06-13
 
 ---
 
-**Skill:** A cotton supplier wants to share a sustainability report with their fashion brand buyers. They need to decide what to include in the carbon footprint study. Should the study start from the **fertilizer factory** that makes the chemicals used on the farm — or is it enough to start from the **cotton field itself**, and treat the fertilizer as something that just "arrives"?
+**AI:** A cotton supplier wants to share a sustainability report with their fashion brand buyers. They need to decide what to include in the carbon footprint study. Should the study start from the **fertilizer factory** that makes the chemicals used on the farm — or is it enough to start from the **cotton field itself**, and treat the fertilizer as something that just "arrives"?
 
 Where would you draw the line, and why?
 
 **Student:** from the fertilizer factory
 
-**Skill:** That is a really practical instinct — and it is exactly the choice this study makes. Here is why it matters: the fertilizer factory turns out to be responsible for a significant chunk of the carbon footprint, so leaving it out would give buyers a falsely clean picture of how cotton is actually produced. You picked the more honest starting point.
+**AI:** That is a really practical instinct — and it is exactly the choice this study makes. Here is why it matters: the fertilizer factory turns out to be responsible for a significant chunk of the carbon footprint, so leaving it out would give buyers a falsely clean picture of how cotton is actually produced. You picked the more honest starting point.
 
 The study we will work through is called **Cotton Fiber — 1 kg**. It calculates the environmental impact of producing 1 kg of ginned cotton fiber — that is, cotton that has had the seeds removed and is ready to be spun into yarn. It is a teaching example built for this course, with numbers calibrated to be realistic for irrigated cotton farming systems.
 
 Here is the shape of the supply chain the study includes:
 
-![Cotton Fiber supply chain — structure](../skills_references/cotton_fiber/product_graph_structure.svg)
+[![Cotton Fiber supply chain — structure](../skills_references/cotton_fiber/product_graph_structure.svg)](../skills_references/cotton_fiber/product_graph_structure.svg)
+`../skills_references/cotton_fiber/product_graph_structure.svg`
 
 Two boxes, two steps. Each box represents a step the researchers decided to *include* in the study — and choosing which boxes belong inside the picture is exactly what **scope** means in LCA. The fertilizer factory is in there because you — and the researchers — agreed it should be.
 
@@ -25,7 +27,7 @@ Ready to hear about the two big questions every LCA has to answer before a singl
 
 **Student:** yes
 
-**Skill:** Every LCA study has to answer two questions right at the start. Together they are called the **goal and scope** — and they are written down before any numbers are calculated, so that anyone reading the results later knows exactly what they are looking at.
+**AI:** Every LCA study has to answer two questions right at the start. Together they are called the **goal and scope** — and they are written down before any numbers are calculated, so that anyone reading the results later knows exactly what they are looking at.
 
 **The goal** is the "why" and the "who." In LCA, the goal is a short statement that says why the study is being done and who it is for — it matters because the same product can have a very different study design depending on whether the results are for an internal decision, a public label, or a legal certification. For this cotton study, the goal is: *to calculate the climate and eutrophication impact of producing 1 kg of cotton fiber, so that buyers can understand what the supply chain actually contributes to environmental damage.* The audience is a fashion brand sourcing team — people like you — comparing supplier claims.
 
@@ -35,7 +37,7 @@ Does that distinction between goal and scope make sense so far — or would it h
 
 **Student:** go ahead
 
-**Skill:** Here is something worth thinking about — a small change to the scope that would have a big effect on the result.
+**AI:** Here is something worth thinking about — a small change to the scope that would have a big effect on the result.
 
 This study leaves out **pesticides and herbicides** — the chemicals sprayed on cotton fields to kill insects and weeds. Producing those chemicals takes energy and releases CO₂, just like the fertilizer factory does. The researchers made a deliberate choice to exclude them in order to keep the study simple and focused on nitrogen chemistry.
 
@@ -45,7 +47,7 @@ Do you think that kind of gap — where two studies use the same scope label ("c
 
 **Student:** yes
 
-**Skill:** Exactly right — and this is one of the most important things to understand about sustainability data in fashion sourcing.
+**AI:** Exactly right — and this is one of the most important things to understand about sustainability data in fashion sourcing.
 
 Two suppliers can both hand you a "cradle to gate" LCA and show similar numbers, while one has quietly excluded pesticides, transport, or seed production, and the other has included them. The label sounds the same but the fence is drawn in a different place. Without checking what is actually inside the fence, you cannot compare the two numbers fairly at all.
 
@@ -59,7 +61,7 @@ That wraps up the five steps for cotton fiber! Would you like to see how goal an
 
 **Student:** can you give me some examples other than this one?
 
-**Skill:** Absolutely! Here are two examples from very different parts of the retail world.
+**AI:** Absolutely! Here are two examples from very different parts of the retail world.
 
 ---
 

@@ -1,15 +1,16 @@
-# Session: /functional-unit cotton_fiber
-**Skill version:** 0.1  
-**Date:** 2026-06-13  
-**Case study:** Cotton Fiber — 1 kg  
+# /functional-unit cotton_fiber
+**Skill version:** 0.1
+**Student:** calvin
+**Model:** sonnet-4-6
+**Date:** 2026-06-13
 
 ---
 
-**Claude:** Before we look at any numbers — imagine you're a sourcing manager at a fashion brand, and two cotton suppliers both send you a data sheet claiming their cotton has a lower carbon footprint. What is the very first question you would ask before you could even start comparing those two numbers?
+**AI:** Before we look at any numbers — imagine you're a sourcing manager at a fashion brand, and two cotton suppliers both send you a data sheet claiming their cotton has a lower carbon footprint. What is the very first question you would ask before you could even start comparing those two numbers?
 
 **Student:** what unit was used
 
-**Claude:** Exactly right — that is the single most important question, and experienced sustainability professionals ask it every time.
+**AI:** Exactly right — that is the single most important question, and experienced sustainability professionals ask it every time.
 
 If one supplier measured their footprint per kilogram of cotton and the other measured it per bale (a bale is roughly 220 kg), the numbers are completely incomparable — even if the underlying environmental impact is identical. You'd be looking at 5.6 vs 1,232 and thinking one is catastrophically worse, when really they're the same.
 
@@ -19,7 +20,8 @@ The study we'll be working through is called **Cotton Fiber — 1 kg**. The goal
 
 Here's the shape of the supply chain:
 
-![Cotton Fiber supply chain — structure](../skills_references/cotton_fiber/product_graph_structure.svg)
+[![Cotton Fiber supply chain — structure](../skills_references/cotton_fiber/product_graph_structure.svg)](../skills_references/cotton_fiber/product_graph_structure.svg)
+`../skills_references/cotton_fiber/product_graph_structure.svg`
 
 You can see two boxes connected by an arrow. The rightmost box — **P2 — Cotton farming** — has a special name in LCA: it's called the **reference process**. That just means it's the finishing line — the step that delivers the finished product. Everything to its left exists only to supply it. The fertilizer factory (P1) is there for one reason only: to feed the cotton farm.
 
@@ -29,7 +31,7 @@ What do you think comes out of P2? What is the cotton farm actually delivering?
 
 **Student:** the fiber
 
-**Claude:** Exactly — the fiber. That's the finished product this entire supply chain exists to produce.
+**AI:** Exactly — the fiber. That's the finished product this entire supply chain exists to produce.
 
 So here is the functional unit for this study, stated precisely:
 

@@ -1,16 +1,18 @@
-# What Is LCA Skill Session
-**Skill version:** 0.1  
-**Date:** 2026-06-13  
+# /what-is-lca
+**Skill version:** 0.1
+**Student:** elena
+**Model:** sonnet-4-6
+**Date:** 2026-06-13
 
 ---
 
-**Skill:** Here is a question fashion buyers face all the time:
+**AI:** Here is a question fashion buyers face all the time:
 
 A cotton T-shirt and a polyester T-shirt are sitting on a desk in front of you. A colleague says the cotton one is more sustainable because it is natural. Another colleague says the polyester one is more sustainable because it lasts longer. Who is right — and how would you actually find out?
 
 **Student:** it depends on how long you wear it
 
-**Skill:** Exactly — and that instinct to ask "depends on what?" is the beginning of the LCA mindset. You have just identified something that trips up a lot of sustainability marketing: a claim like "this fabric is eco-friendly" is meaningless unless you say *compared to what, measured how, and over how long*.
+**AI:** Exactly — and that instinct to ask "depends on what?" is the beginning of the LCA mindset. You have just identified something that trips up a lot of sustainability marketing: a claim like "this fabric is eco-friendly" is meaningless unless you say *compared to what, measured how, and over how long*.
 
 This is precisely the problem that **LCA — Life Cycle Assessment** was invented to solve. LCA is a method for adding up all the environmental impacts of making, using, and disposing of a product by tracing every step in its supply chain. Think of it like a receipt that shows every hidden cost of a product — not in money, but in CO₂ emissions, water use, and chemical pollution. It forces you to be specific about exactly what you are measuring and over what period of time, so that comparisons are actually fair.
 
@@ -20,7 +22,7 @@ Ready to see how a real LCA study is structured — what the four steps look lik
 
 **Student:** no i want some more examples
 
-**Skill:** Of course! Here are a few more situations where "it depends" is exactly the right answer — and where LCA is the tool that helps you find out what it depends *on*.
+**AI:** Of course! Here are a few more situations where "it depends" is exactly the right answer — and where LCA is the tool that helps you find out what it depends *on*.
 
 ---
 
