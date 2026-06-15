@@ -48,6 +48,42 @@ No case study argument needed — this is the very first skill, designed to be u
 
 ---
 
+### `/system-boundary` — What is inside and outside the study?
+
+**What you will learn:** Every LCA study has a boundary — a fence that decides what gets counted and what gets ignored. This lesson teaches you how to read that fence, why it matters, and why two studies of the same product can give completely different numbers if their boundaries are drawn differently.
+
+**How to start** — pick one of the three case studies:
+
+```
+/system-boundary cotton_fiber
+/system-boundary polyester_tshirt
+/system-boundary wool_yarn
+```
+
+The lesson opens with a simple everyday analogy (a restaurant receipt that only covers certain costs) and then applies the same idea to a real supply chain diagram. By the end you will understand why knowing what a study *left out* is just as important as knowing what it included.
+
+**How long:** About 10 minutes of conversation.
+
+---
+
+### `/life-cycle-stages` — Where does the study start and stop?
+
+**What you will learn:** The four named boundary types used across the fashion and retail industry — cradle to gate, cradle to grave, cradle to cradle, and gate to grave — what each one includes and when companies use it.
+
+**How to start** — pick one of the three case studies:
+
+```
+/life-cycle-stages cotton_fiber
+/life-cycle-stages polyester_tshirt
+/life-cycle-stages wool_yarn
+```
+
+The lesson shows how the same product can have four different carbon footprint numbers depending on where the boundary is drawn, and teaches you to spot when two studies are using different scopes and therefore cannot be fairly compared.
+
+**How long:** About 10–15 minutes of conversation.
+
+---
+
 ### `/goal-and-scope` — What are we studying and why?
 
 **What you will learn:** The two foundational decisions every LCA study must make before any numbers are calculated — the goal (why you are doing it and who it is for) and the scope (what is included and excluded). These decisions shape every result that follows.
@@ -97,6 +133,24 @@ The lesson opens with a question from everyday retail life — something like "i
 ```
 
 The lesson opens by asking you to think about the product's journey before showing you anything. It then walks you through the supply chain diagram step by step — each box (a production process), each arrow (a material flowing between steps), and the boundary around the whole system. It closes by connecting what you have seen to a real sourcing or sustainability decision.
+
+**How long:** About 10–15 minutes of conversation.
+
+---
+
+### `/technosphere-and-ecosphere` — What counts as environmental harm?
+
+**What you will learn:** The difference between the human-made world (the technosphere — factories, farms, mills, trucks) and the natural world (the ecosphere — air, water, soil, ecosystems). Environmental harm only happens when something *crosses the boundary* between the two — and understanding that crossing is what separates a real impact from a transaction inside the supply chain.
+
+**How to start** — pick one of the three case studies:
+
+```
+/technosphere-and-ecosphere cotton_fiber
+/technosphere-and-ecosphere polyester_tshirt
+/technosphere-and-ecosphere wool_yarn
+```
+
+The lesson opens with a town-wall analogy, then walks through a real supply chain and asks you to sort each flow into "stays inside the wall" or "crosses into nature". By the end you will know why CO₂ to air counts as an impact while raw wool moving from a farm to a mill does not.
 
 **How long:** About 10–15 minutes of conversation.
 
