@@ -1,6 +1,6 @@
 [
   {
-    "file": "functional-unit-cotton_fiber-v0.1-calvin-sonnet-4-6-session1.md",
+    "file": "functional-unit/functional-unit-cotton_fiber-v0.1-calvin-sonnet-4-6-session1.md",
     "command": "/functional-unit cotton_fiber",
     "skill": "Functional Unit",
     "caseStudy": "Cotton Fiber",
@@ -10,7 +10,7 @@
     "n": 1
   },
   {
-    "file": "functional-unit-cotton_fiber-v0.2-elena-deepseek-v4-flash-session1.md",
+    "file": "functional-unit/functional-unit-cotton_fiber-v0.2-elena-deepseek-v4-flash-session1.md",
     "command": "/functional-unit cotton_fiber",
     "skill": "Functional Unit",
     "caseStudy": "Cotton Fiber",
@@ -20,7 +20,7 @@
     "n": 1
   },
   {
-    "file": "functional-unit-wool_yarn-v0.2-elena-sonnet-4-6-session1.md",
+    "file": "functional-unit/functional-unit-wool_yarn-v0.2-elena-sonnet-4-6-session1.md",
     "command": "/functional-unit wool_yarn",
     "skill": "Functional Unit",
     "caseStudy": "Wool Yarn",
@@ -30,7 +30,7 @@
     "n": 1
   },
   {
-    "file": "goal-and-scope-cotton_fiber-v0.1-elena-sonnet-4-6-session1.md",
+    "file": "goal-and-scope/goal-and-scope-cotton_fiber-v0.1-elena-sonnet-4-6-session1.md",
     "command": "/goal-and-scope cotton_fiber",
     "skill": "Goal and Scope",
     "caseStudy": "Cotton Fiber",
@@ -40,7 +40,7 @@
     "n": 1
   },
   {
-    "file": "life-cycle-inventory-wool_yarn-v0.1-elena-sonnet-4-6-session1.md",
+    "file": "life-cycle-inventory/life-cycle-inventory-wool_yarn-v0.1-elena-sonnet-4-6-session1.md",
     "command": "/life-cycle-inventory wool_yarn",
     "skill": "Life Cycle Inventory",
     "caseStudy": "Wool Yarn",
@@ -50,7 +50,7 @@
     "n": 1
   },
   {
-    "file": "life-cycle-stages-wool_yarn-v0.1-elena-sonnet-4-6-session1.md",
+    "file": "life-cycle-stages/life-cycle-stages-wool_yarn-v0.1-elena-sonnet-4-6-session1.md",
     "command": "/life-cycle-stages wool_yarn",
     "skill": "Life Cycle Stages",
     "caseStudy": "Wool Yarn",
@@ -60,7 +60,7 @@
     "n": 1
   },
   {
-    "file": "system-boundary-cotton_fiber-v0.1-calvin-sonnet-4-6-session1.md",
+    "file": "system-boundary/system-boundary-cotton_fiber-v0.1-calvin-sonnet-4-6-session1.md",
     "command": "/system-boundary cotton_fiber",
     "skill": "System Boundary",
     "caseStudy": "Cotton Fiber",
@@ -70,7 +70,7 @@
     "n": 1
   },
   {
-    "file": "system-boundary-polyester_tshirt-v0.1-calvin-sonnet-4-6-session1.md",
+    "file": "system-boundary/system-boundary-polyester_tshirt-v0.1-calvin-sonnet-4-6-session1.md",
     "command": "/system-boundary polyester_tshirt",
     "skill": "System Boundary",
     "caseStudy": "Polyester Tshirt",
@@ -80,7 +80,7 @@
     "n": 1
   },
   {
-    "file": "system-boundary-wool_yarn-v0.1-calvin-sonnet-4-6-session1.md",
+    "file": "system-boundary/system-boundary-wool_yarn-v0.1-calvin-sonnet-4-6-session1.md",
     "command": "/system-boundary wool_yarn",
     "skill": "System Boundary",
     "caseStudy": "Wool Yarn",
@@ -90,7 +90,7 @@
     "n": 1
   },
   {
-    "file": "technosphere-and-ecosphere-polyester_tshirt-v0.1-elena-sonnet-4-6-session1.md",
+    "file": "technosphere-and-ecosphere/technosphere-and-ecosphere-polyester_tshirt-v0.1-elena-sonnet-4-6-session1.md",
     "command": "/technosphere-and-ecosphere polyester_tshirt",
     "skill": "Technosphere and Ecosphere",
     "caseStudy": "Polyester Tshirt",
@@ -100,7 +100,7 @@
     "n": 1
   },
   {
-    "file": "technosphere-and-ecosphere-wool_yarn-v0.1-elena-sonnet-4-6-session1.md",
+    "file": "technosphere-and-ecosphere/technosphere-and-ecosphere-wool_yarn-v0.1-elena-sonnet-4-6-session1.md",
     "command": "/technosphere-and-ecosphere wool_yarn",
     "skill": "Technosphere and Ecosphere",
     "caseStudy": "Wool Yarn",
@@ -110,7 +110,7 @@
     "n": 1
   },
   {
-    "file": "what-is-lca-v0.1-elena-sonnet-4-6-session1.md",
+    "file": "what-is-lca/what-is-lca-v0.1-elena-sonnet-4-6-session1.md",
     "command": "/what-is-lca",
     "skill": "What Is LCA",
     "caseStudy": null,

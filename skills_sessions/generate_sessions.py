@@ -59,7 +59,7 @@ def format_model(raw):
 
 sessions = []
 
-for md in sorted(here.glob('*.md')):
+for md in sorted(here.glob('**/*.md')):
     lines = md.read_text(encoding='utf-8').split('\n')
 
     # Line 1 must be the slash command: # /skill-name [case_study]
@@ -86,7 +86,7 @@ for md in sorted(here.glob('*.md')):
     command = f'/{skill_slug}' if not case_raw else f'/{skill_slug} {case_raw}'
 
     sessions.append({
-        'file':      md.name,
+        'file':      str(md.relative_to(here)),
         'command':   command,
         'skill':     format_skill(skill_slug),
         'caseStudy': format_case_study(case_raw),
