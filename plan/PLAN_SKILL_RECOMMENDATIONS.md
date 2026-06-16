@@ -45,26 +45,31 @@ Skills already built are marked ✅. Skills recommended but not yet built are ma
 
 | Order | Skill | Status | What it teaches |
 |---|---|---|---|
+| **Introduction** | | | |
 | 1 | `what-is-lca` | ✅ Built | What LCA is, why fashion professionals need it, the four phases |
-| 2 | `system-boundary` | ✅ Built | The simplest idea in LCA — every study has edges, what is inside gets counted, what is outside does not |
-| 3 | `life-cycle-stages` | ✅ Built | The named boundary types — cradle to gate, cradle to grave, cradle to cradle, gate to grave — what each includes and when to use it |
-| 4 | `goal-and-scope` | ✅ Built | Why the study is being done, who it is for, what is included or excluded |
+| **Phase 1 — Goal & Scope** | | | |
+| 2 | `goal-and-scope` | ✅ Built | Why the study is being done, who it is for, what is included or excluded |
+| 3 | `system-boundary` | ✅ Built | Every study has edges — what is inside gets counted, what is outside does not |
+| 4 | `life-cycle-stages` | ✅ Built | The named boundary types — cradle to gate, cradle to grave, cradle to cradle, gate to grave |
 | 5 | `functional-unit` | ✅ Built | The precise definition of what is being measured |
+| **Phase 2 — Life Cycle Inventory** | | | |
 | 6 | `supply-chain` | ✅ Built | How to read a product graph, what processes and flows are |
 | 7 | `technosphere-and-ecosphere` | ✅ Built | The difference between human-made flows (products) and natural flows (emissions, resources) that cross into the natural world |
-| 8 | `life-cycle-inventory` | ⬜ Recommended | What an inventory is, how emissions and resource use are collected and totalled across all processes |
-| 9 | `scaling-vector` | ✅ Built | How much each process in the supply chain must run to deliver one functional unit |
-| 10 | `what-is-impact-assessment` | ⬜ Recommended | How raw inventory emissions are converted into environmental scores — global warming, acidification, smog, and more |
-| 11 | `impact-characterization` | ⬜ Recommended | How each emission is multiplied by a characterization factor to produce an impact score — the maths behind the conversion |
-| 12 | `damage-characterization` | ⬜ Recommended | How midpoint impact scores are translated into damage to human health, ecosystems, and natural resources |
-| 13 | `hotspot-analysis` | ⬜ Recommended | How to read a contribution breakdown, identify the biggest sources of impact, connect to business decisions |
-| 14 | `comparing-products` | ⬜ Recommended | How to set up a fair comparison between two products, when comparisons are misleading |
-| 15 | `interpretation` | ⬜ Recommended | The final LCA phase — checking whether results are trustworthy, identifying what drives them, and turning the numbers into a business recommendation |
-| 16 | `sensitivity-analysis` | ⬜ Recommended | How to test whether results change when you swap an assumption — key for credibility and for understanding what really drives the score |
-| 17 | `uncertainty` | ⬜ Recommended | Why LCA numbers are ranges, not precise values; Monte Carlo basics in plain language |
-| 18 | `normalization-and-weighting` | ⬜ Recommended | How to convert impact scores to a common scale so you can add them up into a single score — and why that's controversial |
-| 19 | `elementary-flows` | ⬜ Recommended | What elementary flows are, how they are named and categorised, and why getting the name exactly right determines whether the impact gets scored at all |
-| 20 | `allocation` | ⬜ Recommended | What to do when a process produces more than one useful output — how to divide the environmental burden fairly between co-products |
+| 8 | `elementary-flows` | ⬜ Recommended | What elementary flows are, how they are named and categorised, and why getting the name exactly right determines whether the impact gets scored at all |
+| 9 | `life-cycle-inventory` | ⬜ Recommended | What an inventory is, how emissions and resource use are collected and totalled across all processes |
+| 10 | `allocation` | ⬜ Recommended | What to do when a process produces more than one useful output — how to divide the environmental burden fairly between co-products |
+| 11 | `scaling-vector` | ✅ Built | How much each process in the supply chain must run to deliver one functional unit |
+| **Phase 3 — Impact Assessment** | | | |
+| 12 | `what-is-impact-assessment` | ⬜ Recommended | How raw inventory emissions are converted into environmental scores — global warming, acidification, smog, and more |
+| 13 | `impact-characterization` | ⬜ Recommended | How each emission is multiplied by a characterization factor to produce an impact score — the maths behind the conversion |
+| 14 | `damage-characterization` | ⬜ Recommended | How midpoint impact scores are translated into damage to human health, ecosystems, and natural resources |
+| 15 | `normalization-and-weighting` | ⬜ Recommended | How to convert impact scores to a common scale so you can add them up into a single score — and why that's controversial |
+| **Phase 4 — Interpretation** | | | |
+| 16 | `hotspot-analysis` | ⬜ Recommended | How to read a contribution breakdown, identify the biggest sources of impact, connect to business decisions |
+| 17 | `sensitivity-analysis` | ⬜ Recommended | How to test whether results change when you swap an assumption — key for credibility and for understanding what really drives the score |
+| 18 | `uncertainty` | ⬜ Recommended | Why LCA numbers are ranges, not precise values; Monte Carlo basics in plain language |
+| 19 | `comparing-products` | ⬜ Recommended | How to set up a fair comparison between two products, when comparisons are misleading |
+| 20 | `interpretation` | ⬜ Recommended | The final LCA phase — checking whether results are trustworthy, identifying what drives them, and turning the numbers into a business recommendation |
 
 ---
 
@@ -82,6 +87,8 @@ These skills are built and working but are tools for running analyses, not teach
 
 ## All Skills — Detail
 
+### Introduction
+
 ### `what-is-lca` ✅
 The entry point for every student. Explains what Life Cycle Assessment is, why it
 matters to fashion and retail professionals, and previews the four phases (goal and
@@ -92,6 +99,21 @@ is introduced.
 **Key insight for students:** LCA is not a scientific exercise for engineers — it is
 a business decision tool. Knowing the carbon footprint of a product is only useful
 if it changes what you buy, make, or sell.
+
+---
+
+### Phase 1 — Goal & Scope
+
+### `goal-and-scope` ✅
+Covers the opening decisions in every LCA study: why it is being done, who it is for,
+and what is included or excluded. Students learn that these choices are not neutral —
+they shape every number that comes out at the end. Uses a case study to show how two
+studies of the same product can reach different conclusions if their goals and scopes
+differ.
+
+**Key insight for students:** The goal and scope section is the most important part of
+any LCA report — it tells you whether you can trust the numbers and whether they are
+relevant to your question.
 
 ---
 
@@ -140,19 +162,6 @@ check that they use the same boundary type — otherwise the comparison is meani
 
 ---
 
-### `goal-and-scope` ✅
-Covers the opening decisions in every LCA study: why it is being done, who it is for,
-and what is included or excluded. Students learn that these choices are not neutral —
-they shape every number that comes out at the end. Uses a case study to show how two
-studies of the same product can reach different conclusions if their goals and scopes
-differ.
-
-**Key insight for students:** The goal and scope section is the most important part of
-any LCA report — it tells you whether you can trust the numbers and whether they are
-relevant to your question.
-
----
-
 ### `functional-unit` ✅
 The precise definition of what is being measured. Students learn that a functional unit
 is not just "a shirt" but "one shirt worn 50 times before disposal" — and that changing
@@ -163,6 +172,8 @@ a functional unit and spotting when one has been defined poorly.
 numbers cannot be directly compared — even if they are studying the same product.
 
 ---
+
+### Phase 2 — Life Cycle Inventory
 
 ### `supply-chain` ✅
 How to read a product graph: what the boxes (processes) represent, what the arrows
@@ -196,6 +207,31 @@ is what separates an impact from a transaction.
 
 ---
 
+### `elementary-flows` ⬜
+Once students understand the distinction between the technosphere and the ecosphere,
+the natural next step is to get precise about the flows that cross the boundary.
+An elementary flow is any exchange with the natural world — an emission released into
+air, water, or soil, or a natural resource extracted from it (water, land, minerals,
+fossil fuels). These are the *only* things LCA counts as environmental impact.
+
+This skill focuses on a practical detail that trips up beginners and experts alike:
+**the name matters exactly.** Every LCIA method — TRACI 2.2, EF 3.0, IPCC AR6 —
+has a specific list of substance names it recognises. If an emission in the inventory
+is called "CO2 to air" but the method expects "Carbon dioxide", it will score as zero
+with no error or warning. Students learn what the Federal Elementary Flow List (FEDEFL)
+is, why naming standards exist, and how to check that their flows will actually be
+picked up by the characterization step.
+
+Uses a case study to show students the elementary flows in the inventory, trace each
+one to a characterization factor, and spot what happens when a name doesn't match.
+
+**Key insight for students:** A kilogram of CO₂ in your inventory that is named
+incorrectly contributes nothing to the climate score. The database does not guess —
+it only matches exact names. Getting the name wrong is one of the most common and
+invisible mistakes in LCA.
+
+---
+
 ### `life-cycle-inventory` ⬜
 Once students understand what flows cross the boundary between the technosphere and the
 ecosphere, the next question is: *how do you actually count them?* This skill would
@@ -207,6 +243,37 @@ together, weighted by the scaling vector, to produce a single inventory table.
 **Key insight for students:** The inventory is the raw data behind every LCA result.
 Before any environmental score is calculated, someone has to add up every kilogram of
 CO₂, methane, and water used across the entire supply chain — that list is the inventory.
+
+---
+
+### `allocation` ⬜
+Many industrial processes produce more than one useful output. A sheep farm produces
+both wool and meat. An oil refinery produces petrol, diesel, jet fuel, and plastics
+all at once. A cotton gin produces lint and cottonseed. When you are studying just
+one of those outputs — say, wool — you still have to decide how much of the farm's
+total environmental burden belongs to the wool and how much belongs to the meat.
+This is called **allocation**.
+
+There is no single correct answer, and ISO 14044 provides three approaches, each
+with different implications:
+
+- **Mass allocation** — divide the burden in proportion to the physical mass of each
+  co-product. Simple but often misleading when co-products have very different economic
+  value (a gram of saffron versus a tonne of straw).
+- **Economic allocation** — divide by the market value of each co-product. Reflects
+  economic reality but makes results sensitive to price fluctuations.
+- **System expansion** — instead of dividing, expand the system boundary to include
+  the alternative product the co-product replaces, and subtract its burden. Avoids
+  arbitrary splitting but makes the study more complex.
+
+Students work through a simple two-output example (wool + meat, or cotton lint +
+cottonseed) using all three methods and see how the allocated footprint for the
+primary product changes depending on which method is chosen.
+
+**Key insight for students:** The same farm, with the same real-world emissions, can
+appear to have a wool footprint of 3.2 kg CO₂ eq or 1.8 kg CO₂ eq depending purely
+on the allocation method chosen. This is one of the biggest sources of disagreement
+between competing LCA studies of the same product.
 
 ---
 
@@ -222,6 +289,8 @@ one shirt. The scaling vector tells you the exact fraction of each step that is 
 — and that fraction is what drives the final impact number.
 
 ---
+
+### Phase 3 — Impact Assessment
 
 ### `what-is-impact-assessment` ⬜
 Once students understand the inventory — the raw list of kilograms of CO₂, methane,
@@ -295,6 +364,37 @@ terms, not chemistry terms.
 
 ---
 
+### `normalization-and-weighting` ⬜
+Once students understand that TRACI 2.2 (or any LCIA method) produces multiple impact
+scores — global warming, acidification, smog, eutrophication, and others — a natural
+question arises: *can I add these up into a single number?* Normalization and weighting
+are the two steps that attempt to do this.
+
+**Normalization** converts each impact score to a fraction of a reference value —
+for example, dividing by the average European person's annual global warming impact.
+This puts all the different scores on a common, dimensionless scale so they can be
+compared.
+
+**Weighting** then multiplies each normalized score by a factor that reflects how
+important society considers that impact category to be. Is a 1-unit increase in
+eutrophication more or less serious than a 1-unit increase in carcinogen exposure?
+Weighting requires a value judgement.
+
+The skill teaches students to understand what normalization and weighting do, why
+they are sometimes used, and — critically — why they are controversial. The ISO LCA
+standards flag weighting as a step that involves subjective values, not science, and
+prohibit it in comparative assertions intended for public communication. A single
+aggregated score can hide important trade-offs.
+
+**Key insight for students:** A single environmental score for a product sounds
+simple and useful — but it requires someone to decide that climate change is, say,
+twice as important as water use. That is a political choice, not a scientific one.
+Always ask what was weighted and by whose values.
+
+---
+
+### Phase 4 — Interpretation
+
 ### `hotspot-analysis` ⬜
 Once students have results, the next natural question is: *which part of the supply
 chain is the problem?* This skill would teach how to read a contribution breakdown
@@ -304,105 +404,6 @@ farm, that is where improvement efforts should be focused.
 
 **Key insight for students:** LCA results are most useful when they tell you *where
 to act*, not just *how bad it is*.
-
----
-
-### `comparing-products` ⬜
-The capstone beginner skill. Once students understand functional unit, system
-boundary, and how to read results, they are ready to compare two products side by
-side. This skill would walk through a structured comparison (e.g. wool yarn vs
-polyester yarn), show how the functional unit and scope must match before any
-comparison is valid, and teach students to spot when a comparison is being set up
-unfairly.
-
-**Key insight for students:** Two products can only be fairly compared if they are
-measured per the same functional unit, over the same system boundary. Without that,
-any comparison can be gamed.
-
----
-
-### `interpretation` ⬜
-The capstone of the entire LCA learning path. By this point students have set a goal
-and scope, built an inventory, run impact and damage characterization, identified
-hotspots, and compared products. Interpretation is the phase where they stop calculating
-and start deciding — asking three questions about the results in front of them:
-
-1. **Are these results trustworthy?** — Does the study cover everything it promised in
-   the goal and scope? Were any important emissions missing? Are the numbers consistent
-   with what we would expect? Students learn to read a result critically before acting
-   on it.
-
-2. **What is driving the result?** — Which single step, material, or emission is
-   responsible for the most damage? Students practise identifying the one lever that,
-   if changed, would have the biggest effect on the footprint.
-
-3. **What should we recommend?** — Given what the numbers show, what is the practical
-   advice for a brand, buyer, or supplier? Switch to renewable energy at the mill?
-   Source wool from a lower-methane farm? Redesign the product for a longer life?
-
-Uses a complete case study result — inventory, impact scores, damage scores, hotspot
-breakdown — and asks students to write a short interpretation paragraph as if briefing
-a sustainability manager.
-
-**Key insight for students:** Numbers on their own do not make decisions — people do.
-Interpretation is the skill that turns a table of CO₂ figures into a sentence a
-business can act on. It is the reason LCA exists.
-
----
-
-### `elementary-flows` ⬜
-Once students understand the distinction between the technosphere and the ecosphere,
-the natural next step is to get precise about the flows that cross the boundary.
-An elementary flow is any exchange with the natural world — an emission released into
-air, water, or soil, or a natural resource extracted from it (water, land, minerals,
-fossil fuels). These are the *only* things LCA counts as environmental impact.
-
-This skill focuses on a practical detail that trips up beginners and experts alike:
-**the name matters exactly.** Every LCIA method — TRACI 2.2, EF 3.0, IPCC AR6 —
-has a specific list of substance names it recognises. If an emission in the inventory
-is called "CO2 to air" but the method expects "Carbon dioxide", it will score as zero
-with no error or warning. Students learn what the Federal Elementary Flow List (FEDEFL)
-is, why naming standards exist, and how to check that their flows will actually be
-picked up by the characterization step.
-
-Uses a case study to show students the elementary flows in the inventory, trace each
-one to a characterization factor, and spot what happens when a name doesn't match.
-
-**Key insight for students:** A kilogram of CO₂ in your inventory that is named
-incorrectly contributes nothing to the climate score. The database does not guess —
-it only matches exact names. Getting the name wrong is one of the most common and
-invisible mistakes in LCA.
-
----
-
-### `allocation` ⬜
-Many industrial processes produce more than one useful output. A sheep farm produces
-both wool and meat. An oil refinery produces petrol, diesel, jet fuel, and plastics
-all at once. A cotton gin produces lint and cottonseed. When you are studying just
-one of those outputs — say, wool — you still have to decide how much of the farm's
-total environmental burden belongs to the wool and how much belongs to the meat.
-This is called **allocation**.
-
-There is no single correct answer, and ISO 14044 provides three approaches, each
-with different implications:
-
-- **Mass allocation** — divide the burden in proportion to the physical mass of each
-  co-product. Simple but often misleading when co-products have very different economic
-  value (a gram of saffron versus a tonne of straw).
-- **Economic allocation** — divide by the market value of each co-product. Reflects
-  economic reality but makes results sensitive to price fluctuations.
-- **System expansion** — instead of dividing, expand the system boundary to include
-  the alternative product the co-product replaces, and subtract its burden. Avoids
-  arbitrary splitting but makes the study more complex.
-
-Students work through a simple two-output example (wool + meat, or cotton lint +
-cottonseed) using all three methods and see how the allocated footprint for the
-primary product changes depending on which method is chosen.
-
-**Key insight for students:** The same farm, with the same real-world emissions, can
-appear to have a wool footprint of 3.2 kg CO₂ eq or 1.8 kg CO₂ eq depending purely
-on the allocation method chosen. This is one of the biggest sources of disagreement
-between competing LCA studies of the same product.
 
 ---
 
@@ -447,32 +448,46 @@ is always a range, and a reputable study will tell you how wide that range is.
 
 ---
 
-### `normalization-and-weighting` ⬜
-Once students understand that TRACI 2.2 (or any LCIA method) produces multiple impact
-scores — global warming, acidification, smog, eutrophication, and others — a natural
-question arises: *can I add these up into a single number?* Normalization and weighting
-are the two steps that attempt to do this.
+### `comparing-products` ⬜
+The capstone beginner skill. Once students understand functional unit, system
+boundary, and how to read results, they are ready to compare two products side by
+side. This skill would walk through a structured comparison (e.g. wool yarn vs
+polyester yarn), show how the functional unit and scope must match before any
+comparison is valid, and teach students to spot when a comparison is being set up
+unfairly.
 
-**Normalization** converts each impact score to a fraction of a reference value —
-for example, dividing by the average European person's annual global warming impact.
-This puts all the different scores on a common, dimensionless scale so they can be
-compared.
+**Key insight for students:** Two products can only be fairly compared if they are
+measured per the same functional unit, over the same system boundary. Without that,
+any comparison can be gamed.
 
-**Weighting** then multiplies each normalized score by a factor that reflects how
-important society considers that impact category to be. Is a 1-unit increase in
-eutrophication more or less serious than a 1-unit increase in carcinogen exposure?
-Weighting requires a value judgement.
+---
 
-The skill teaches students to understand what normalization and weighting do, why
-they are sometimes used, and — critically — why they are controversial. The ISO LCA
-standards flag weighting as a step that involves subjective values, not science, and
-prohibit it in comparative assertions intended for public communication. A single
-aggregated score can hide important trade-offs.
+### `interpretation` ⬜
+The capstone of the entire LCA learning path. By this point students have set a goal
+and scope, built an inventory, run impact and damage characterization, identified
+hotspots, and compared products. Interpretation is the phase where they stop calculating
+and start deciding — asking three questions about the results in front of them:
 
-**Key insight for students:** A single environmental score for a product sounds
-simple and useful — but it requires someone to decide that climate change is, say,
-twice as important as water use. That is a political choice, not a scientific one.
-Always ask what was weighted and by whose values.
+1. **Are these results trustworthy?** — Does the study cover everything it promised in
+   the goal and scope? Were any important emissions missing? Are the numbers consistent
+   with what we would expect? Students learn to read a result critically before acting
+   on it.
+
+2. **What is driving the result?** — Which single step, material, or emission is
+   responsible for the most damage? Students practise identifying the one lever that,
+   if changed, would have the biggest effect on the footprint.
+
+3. **What should we recommend?** — Given what the numbers show, what is the practical
+   advice for a brand, buyer, or supplier? Switch to renewable energy at the mill?
+   Source wool from a lower-methane farm? Redesign the product for a longer life?
+
+Uses a complete case study result — inventory, impact scores, damage scores, hotspot
+breakdown — and asks students to write a short interpretation paragraph as if briefing
+a sustainability manager.
+
+**Key insight for students:** Numbers on their own do not make decisions — people do.
+Interpretation is the skill that turns a table of CO₂ figures into a sentence a
+business can act on. It is the reason LCA exists.
 
 ---
 
