@@ -58,6 +58,7 @@ lines = [
     "  output-dir: _site",
     "  resources:",
     "    - skills_references/",
+    "    - .skillshare/skills/",
     "  render:",
     "    - index.md",
     "    - skills_sessions/index.md",
@@ -127,8 +128,11 @@ lines += [
 ]
 for f in skill_files:
     label = skill_title(f.parent.name)
+    raw_url = f"https://raw.githubusercontent.com/calvinw/agentic-lca/main/{f.relative_to(ROOT)}"
     lines.append(f'        - text: "{label}"')
     lines.append(f"          href: {f.relative_to(ROOT)}")
+    lines.append(f'        - text: "(RAW)"')
+    lines.append(f"          href: {raw_url}")
 
 lines += [
     "",
