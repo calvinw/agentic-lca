@@ -1,7 +1,7 @@
 ---
 version: 0.1
 name: scaling-vector
-author: Junghyun Choi (elenachoi1)
+author: Calvin Williamson (calvinw)
 description: >
   Teaching skill for the LCA concept of the scaling vector — how much each
   process in the supply chain must run to deliver exactly one functional unit.
