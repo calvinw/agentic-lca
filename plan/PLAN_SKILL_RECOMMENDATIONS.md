@@ -60,6 +60,11 @@ Skills already built are marked ✅. Skills recommended but not yet built are ma
 | 13 | `hotspot-analysis` | ⬜ Recommended | How to read a contribution breakdown, identify the biggest sources of impact, connect to business decisions |
 | 14 | `comparing-products` | ⬜ Recommended | How to set up a fair comparison between two products, when comparisons are misleading |
 | 15 | `interpretation` | ⬜ Recommended | The final LCA phase — checking whether results are trustworthy, identifying what drives them, and turning the numbers into a business recommendation |
+| 16 | `sensitivity-analysis` | ⬜ Recommended | How to test whether results change when you swap an assumption — key for credibility and for understanding what really drives the score |
+| 17 | `uncertainty` | ⬜ Recommended | Why LCA numbers are ranges, not precise values; Monte Carlo basics in plain language |
+| 18 | `normalization-and-weighting` | ⬜ Recommended | How to convert impact scores to a common scale so you can add them up into a single score — and why that's controversial |
+| 19 | `elementary-flows` | ⬜ Recommended | What elementary flows are, how they are named and categorised, and why getting the name exactly right determines whether the impact gets scored at all |
+| 20 | `allocation` | ⬜ Recommended | What to do when a process produces more than one useful output — how to divide the environmental burden fairly between co-products |
 
 ---
 
@@ -342,6 +347,132 @@ a sustainability manager.
 **Key insight for students:** Numbers on their own do not make decisions — people do.
 Interpretation is the skill that turns a table of CO₂ figures into a sentence a
 business can act on. It is the reason LCA exists.
+
+---
+
+### `elementary-flows` ⬜
+Once students understand the distinction between the technosphere and the ecosphere,
+the natural next step is to get precise about the flows that cross the boundary.
+An elementary flow is any exchange with the natural world — an emission released into
+air, water, or soil, or a natural resource extracted from it (water, land, minerals,
+fossil fuels). These are the *only* things LCA counts as environmental impact.
+
+This skill focuses on a practical detail that trips up beginners and experts alike:
+**the name matters exactly.** Every LCIA method — TRACI 2.2, EF 3.0, IPCC AR6 —
+has a specific list of substance names it recognises. If an emission in the inventory
+is called "CO2 to air" but the method expects "Carbon dioxide", it will score as zero
+with no error or warning. Students learn what the Federal Elementary Flow List (FEDEFL)
+is, why naming standards exist, and how to check that their flows will actually be
+picked up by the characterization step.
+
+Uses a case study to show students the elementary flows in the inventory, trace each
+one to a characterization factor, and spot what happens when a name doesn't match.
+
+**Key insight for students:** A kilogram of CO₂ in your inventory that is named
+incorrectly contributes nothing to the climate score. The database does not guess —
+it only matches exact names. Getting the name wrong is one of the most common and
+invisible mistakes in LCA.
+
+---
+
+### `allocation` ⬜
+Many industrial processes produce more than one useful output. A sheep farm produces
+both wool and meat. An oil refinery produces petrol, diesel, jet fuel, and plastics
+all at once. A cotton gin produces lint and cottonseed. When you are studying just
+one of those outputs — say, wool — you still have to decide how much of the farm's
+total environmental burden belongs to the wool and how much belongs to the meat.
+This is called **allocation**.
+
+There is no single correct answer, and ISO 14044 provides three approaches, each
+with different implications:
+
+- **Mass allocation** — divide the burden in proportion to the physical mass of each
+  co-product. Simple but often misleading when co-products have very different economic
+  value (a gram of saffron versus a tonne of straw).
+- **Economic allocation** — divide by the market value of each co-product. Reflects
+  economic reality but makes results sensitive to price fluctuations.
+- **System expansion** — instead of dividing, expand the system boundary to include
+  the alternative product the co-product replaces, and subtract its burden. Avoids
+  arbitrary splitting but makes the study more complex.
+
+Students work through a simple two-output example (wool + meat, or cotton lint +
+cottonseed) using all three methods and see how the allocated footprint for the
+primary product changes depending on which method is chosen.
+
+**Key insight for students:** The same farm, with the same real-world emissions, can
+appear to have a wool footprint of 3.2 kg CO₂ eq or 1.8 kg CO₂ eq depending purely
+on the allocation method chosen. This is one of the biggest sources of disagreement
+between competing LCA studies of the same product.
+
+---
+
+### `sensitivity-analysis` ⬜
+After students have a complete set of LCA results, a natural question arises: *how
+much do I trust these numbers?* Every LCA study rests on dozens of assumptions —
+the amount of electricity used at a mill, the methane factor for a specific breed
+of sheep, whether transport is included or not. Sensitivity analysis is the systematic
+practice of changing one assumption at a time and checking whether the conclusion
+changes. If the result flips from "wool is better" to "polyester is better" when you
+change one number by 10%, the study is not credible. If the conclusion holds across a
+wide range of plausible values, it is robust.
+
+Students work through a simple example: take one key number from a case study
+(e.g. the methane emission factor for sheep), vary it within a plausible range,
+and watch what happens to the global warming score. The skill teaches students to
+identify which assumptions are load-bearing and which barely matter.
+
+**Key insight for students:** A result without a sensitivity check is an opinion,
+not an analysis. Knowing which assumptions drive the result is just as important
+as knowing the result itself.
+
+---
+
+### `uncertainty` ⬜
+Closely related to sensitivity analysis but broader: this skill addresses why LCA
+numbers should always be understood as ranges rather than precise point values.
+Every input to an LCA — an emission factor, a transport distance, a production
+yield — has uncertainty attached to it. When you multiply and combine many uncertain
+numbers, the uncertainty in the final result can be substantial.
+
+Monte Carlo simulation is the standard way to quantify this: the calculation is run
+thousands of times, each time drawing random values for every uncertain input from
+a probability distribution. The result is not a single number but a distribution —
+for example, "the global warming score is 2.1 kg CO₂ eq with a 95% confidence
+interval of 1.6 to 2.9." Students learn to read and interpret uncertainty ranges
+in plain language, without needing to understand the statistics in detail.
+
+**Key insight for students:** When a company says "our product has a carbon footprint
+of exactly 1.83 kg CO₂ eq", treat that precision with scepticism. The real answer
+is always a range, and a reputable study will tell you how wide that range is.
+
+---
+
+### `normalization-and-weighting` ⬜
+Once students understand that TRACI 2.2 (or any LCIA method) produces multiple impact
+scores — global warming, acidification, smog, eutrophication, and others — a natural
+question arises: *can I add these up into a single number?* Normalization and weighting
+are the two steps that attempt to do this.
+
+**Normalization** converts each impact score to a fraction of a reference value —
+for example, dividing by the average European person's annual global warming impact.
+This puts all the different scores on a common, dimensionless scale so they can be
+compared.
+
+**Weighting** then multiplies each normalized score by a factor that reflects how
+important society considers that impact category to be. Is a 1-unit increase in
+eutrophication more or less serious than a 1-unit increase in carcinogen exposure?
+Weighting requires a value judgement.
+
+The skill teaches students to understand what normalization and weighting do, why
+they are sometimes used, and — critically — why they are controversial. The ISO LCA
+standards flag weighting as a step that involves subjective values, not science, and
+prohibit it in comparative assertions intended for public communication. A single
+aggregated score can hide important trade-offs.
+
+**Key insight for students:** A single environmental score for a product sounds
+simple and useful — but it requires someone to decide that climate change is, say,
+twice as important as water use. That is a political choice, not a scientific one.
+Always ask what was weighted and by whose values.
 
 ---
 
