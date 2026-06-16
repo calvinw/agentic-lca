@@ -32,21 +32,8 @@ def session_text(stem, skill_prefix):
     return rest
 
 
-ACRONYMS = {"lca", "lci", "lcia", "bafu", "traci", "lcas", "lcis"}
-STOP = {"and", "or", "of", "the", "a", "to", "for"}
-
 def plan_text(stem):
-    rest = stem[5:] if stem.startswith("PLAN_") else stem
-    words = rest.replace("_", " ").lower().split()
-    out = []
-    for w in words:
-        if w in ACRONYMS:
-            out.append(w.upper())
-        elif w in STOP:
-            out.append(w)
-        else:
-            out.append(w.title())
-    return " ".join(out)
+    return stem[5:] if stem.startswith("PLAN_") else stem
 
 
 # Collect sessions grouped by skill folder
