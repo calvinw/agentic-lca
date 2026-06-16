@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="Teaching skill for the LCA concept of life cycle inventory — the step where all emissions and resource uses from every process in the supply chain are collected, scaled to reflect one functional unit, and totalled into a single complete table. Invoke as /life-cycle-inventory , for example /life-cycle-inventory wool_yarn or /life-cycle-inventory cotton_fiber. The skill reads the recipe card for that case study and teaches the concept by walking through the inventory table step by step, using everyday analogies and fashion or retail business context. Designed for FIT students with no science or coding background. Builds directly on the technosphere-and-ecosphere skill. Four to five exchanges to complete.">
+
+<title>skill – Agentic LCA</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-9e2e28d2b37064d6e675679c7da39b07.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../../custom.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">Agentic LCA</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../skills_sessions/index.html"> 
+<span class="menu-text">Sessions</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../plan/index.html"> 
+<span class="menu-text">Plans</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../../../skills/index.html" aria-current="page"> 
+<span class="menu-text">Skills</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../.skillshare/skills/life-cycle-inventory/SKILL.html">Life Cycle Inventory</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../skills/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../.skillshare/skills/functional-unit/SKILL.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Functional Unit</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../.skillshare/skills/goal-and-scope/SKILL.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Goal and Scope</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../.skillshare/skills/lca-from-url/SKILL.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">LCA From Url</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../.skillshare/skills/life-cycle-inventory/SKILL.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Life Cycle Inventory</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../.skillshare/skills/life-cycle-stages/SKILL.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Life Cycle Stages</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../.skillshare/skills/run-lca/SKILL.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Run LCA</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../.skillshare/skills/scaling-vector/SKILL.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Scaling Vector</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../.skillshare/skills/supply-chain/SKILL.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Supply Chain</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../.skillshare/skills/system-boundary/SKILL.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">System Boundary</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../.skillshare/skills/technosphere-and-ecosphere/SKILL.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Technosphere and Ecosphere</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../.skillshare/skills/what-is-lca/SKILL.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">What Is LCA</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#what-this-skill-does" id="toc-what-this-skill-does" class="nav-link active" data-scroll-target="#what-this-skill-does">What this skill does</a></li>
+  <li><a href="#before-you-begin" id="toc-before-you-begin" class="nav-link" data-scroll-target="#before-you-begin">Before you begin</a></li>
+  <li><a href="#teaching-sequence" id="toc-teaching-sequence" class="nav-link" data-scroll-target="#teaching-sequence">Teaching sequence</a>
+  <ul class="collapse">
+  <li><a href="#step-1-open-with-an-everyday-analogy-question" id="toc-step-1-open-with-an-everyday-analogy-question" class="nav-link" data-scroll-target="#step-1-open-with-an-everyday-analogy-question">Step 1 — Open with an everyday analogy question</a></li>
+  <li><a href="#step-2-validate-their-answer-and-introduce-the-inventory-concept" id="toc-step-2-validate-their-answer-and-introduce-the-inventory-concept" class="nav-link" data-scroll-target="#step-2-validate-their-answer-and-introduce-the-inventory-concept">Step 2 — Validate their answer and introduce the inventory concept</a></li>
+  <li><a href="#step-3-walk-through-the-inventory-for-the-case-study" id="toc-step-3-walk-through-the-inventory-for-the-case-study" class="nav-link" data-scroll-target="#step-3-walk-through-the-inventory-for-the-case-study">Step 3 — Walk through the inventory for the case study</a></li>
+  <li><a href="#step-4-reveal-the-complete-inventory-and-ask-a-what-if-question" id="toc-step-4-reveal-the-complete-inventory-and-ask-a-what-if-question" class="nav-link" data-scroll-target="#step-4-reveal-the-complete-inventory-and-ask-a-what-if-question">Step 4 — Reveal the complete inventory and ask a what-if question</a></li>
+  <li><a href="#step-5-connect-to-a-business-decision-and-close" id="toc-step-5-connect-to-a-business-decision-and-close" class="nav-link" data-scroll-target="#step-5-connect-to-a-business-decision-and-close">Step 5 — Connect to a business decision and close</a></li>
+  </ul></li>
+  <li><a href="#inventory-quick-reference" id="toc-inventory-quick-reference" class="nav-link" data-scroll-target="#inventory-quick-reference">Inventory quick reference</a></li>
+  <li><a href="#common-student-questions" id="toc-common-student-questions" class="nav-link" data-scroll-target="#common-student-questions">Common student questions</a></li>
+  <li><a href="#tone-and-pacing" id="toc-tone-and-pacing" class="nav-link" data-scroll-target="#tone-and-pacing">Tone and pacing</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+<section id="what-this-skill-does" class="level2">
+<h2 class="anchored" data-anchor-id="what-this-skill-does">What this skill does</h2>
+<p>This skill teaches the <strong>life cycle inventory (LCI)</strong> — the step in LCA where all elementary flows across every process in the supply chain are collected and added together into one complete table.</p>
+<p>Students who have already learned about the technosphere and ecosphere know that elementary flows are the things that cross from the human-made world into the natural world (or vice versa): CO₂ released to air, water drawn from a river, methane from a sheep farm. But knowing <em>what</em> those flows are is not the same as knowing <em>how much</em> of each one actually ends up in the atmosphere or the river when you make one shirt or one kilogram of yarn.</p>
+<p>The inventory answers that question. It compiles every elementary flow across every process, scaled to reflect how much each process runs to deliver exactly one functional unit of the finished product.</p>
+<p>A student who completes this skill will be able to: - Explain what an inventory is in plain English — the “grand total” of everything that crossed the boundary, expressed per unit of product - Understand why you cannot simply add the raw emission numbers from each process (because different processes run different amounts) - Read an inventory table and identify which process contributes most to each type of emission - Explain why the inventory is a necessary step before any impact score can be calculated</p>
+<p>This skill is for business and retail management students at FIT. It assumes no science or technical background. The tone should be warm, encouraging, and conversational. Build understanding one step at a time.</p>
+<hr>
+</section>
+<section id="before-you-begin" class="level2">
+<h2 class="anchored" data-anchor-id="before-you-begin">Before you begin</h2>
+<p>The argument passed to this skill is a case study name, for example <code>wool_yarn</code>.</p>
+<p>Use the Read tool to open:</p>
+<pre><code>skills_references/&lt;argument&gt;/recipe_card.md</code></pre>
+<p>From the YAML frontmatter and the analysis section, read: - <code>name</code> — the product name and functional unit - <code>processes</code> — each process, its reference output, emissions, and resource use - <code>elementary_flows</code> — the types of emissions and resources in this study - Scaling factors — found in the <code>### Scaling factors</code> table in the analysis section; these show how much each process runs per functional unit</p>
+<p>If no argument is given, or if the file does not exist, say: &gt; “I don’t have a case study set up for that product yet. The ones ready to &gt; explore are: <strong>wool_yarn</strong>, <strong>cotton_fiber</strong>, <strong>polyester_tshirt</strong>. &gt; Which would you like to start with?”</p>
+<hr>
+</section>
+<section id="teaching-sequence" class="level2">
+<h2 class="anchored" data-anchor-id="teaching-sequence">Teaching sequence</h2>
+<p>Work through these five steps in order. Do not explain a concept before asking a question about it first. The whole conversation should feel like four to five short exchanges — not a lecture.</p>
+<hr>
+<section id="step-1-open-with-an-everyday-analogy-question" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-open-with-an-everyday-analogy-question">Step 1 — Open with an everyday analogy question</h3>
+<p>Before introducing any LCA terminology, anchor the idea in something the student already understands from retail or business. Use this or something very close to it:</p>
+<blockquote class="blockquote">
+<p>“Imagine you manage a clothing label. Your sustainability team wants to report the total water used to make one of your T-shirts. To get that number, you would need to look at every step — the cotton farm, the spinning mill, the dyeing factory, the finishing plant.</p>
+<p>Each step has its own water usage figure. But here is the catch: the cotton farm might grow enough cotton for a million shirts in a year, while the dyeing factory handles only 800,000 shirts — because 20% of the fabric gets cut and wasted before it reaches that stage.</p>
+<p>So here is the question: if you wanted to know the total water used for just <em>one</em> shirt, could you simply add up each factory’s yearly water usage and divide by a million? Or would that give you the wrong answer — and if so, why?”</p>
+</blockquote>
+<p>Wait for the student to answer before moving on.</p>
+<hr>
+</section>
+<section id="step-2-validate-their-answer-and-introduce-the-inventory-concept" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-validate-their-answer-and-introduce-the-inventory-concept">Step 2 — Validate their answer and introduce the inventory concept</h3>
+<p>Whatever the student says, find what is right about it.</p>
+<ul>
+<li><p>If they said dividing equally would give the wrong answer: “Exactly — if the dyeing factory only handled 800,000 shirts, dividing its total by a million would undercount its contribution to each shirt. Each step needs to be scaled by how much it actually contributed to that one product. That careful scaled total is what LCA calls the <strong>life cycle inventory</strong>.”</p></li>
+<li><p>If they said dividing would work fine: “It would be close, but not quite right — the issue is that not every step processes the same number of shirts. If one factory handles 20% less fabric due to cutting waste, we would undercount its water use if we divide by the same total. In LCA, each step is scaled individually. That careful accounting is what is called the <strong>life cycle inventory</strong>.”</p></li>
+<li><p>If they were unsure: “The key issue is that different steps in the supply chain run at different amounts for every final product — some more, some less. To get an accurate total for one product, you have to account for exactly how much each step ran. That careful accounting is what LCA calls the <strong>life cycle inventory</strong>.”</p></li>
+</ul>
+<p>Then introduce the concept:</p>
+<blockquote class="blockquote">
+<p>“In Life Cycle Assessment, the <strong>life cycle inventory</strong> — usually called the LCI — is a table that shows every elementary flow (every emission released and every resource extracted) summed across the entire supply chain, adjusted to reflect how much each step runs to make exactly one unit of the finished product.</p>
+<p>Think of it like a receipt from nature. Instead of money, it lists kilograms of CO₂ and litres of water. And instead of showing what each factory spent separately, it shows the combined total — the sum of everything that crossed the boundary between the human-made world and the natural world, for this one product.</p>
+<p>The inventory is the raw data behind every LCA result. Before anyone can say ‘this shirt has a footprint of X kg CO₂’, someone has to add up every emission from every step. That list is the inventory.”</p>
+</blockquote>
+<hr>
+</section>
+<section id="step-3-walk-through-the-inventory-for-the-case-study" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-walk-through-the-inventory-for-the-case-study">Step 3 — Walk through the inventory for the case study</h3>
+<p>Introduce the product:</p>
+<blockquote class="blockquote">
+<p>“Let’s build the inventory for <strong>[name]</strong> together.”</p>
+</blockquote>
+<p>Show the supply chain diagram:</p>
+<pre><code>![&lt;product name&gt; supply chain — structure](skills_references/&lt;argument&gt;/product_graph_structure.svg)</code></pre>
+<p><strong>Introduce the idea of “how much each step runs”:</strong></p>
+<blockquote class="blockquote">
+<p>“Before we can add up the emissions, we need to know how much each step in this supply chain runs to produce one [product name].</p>
+<p>In this study: - [Process 1 name] runs [scaling factor 1] — [plain explanation, e.g. ‘it has to process 1.1 kg of raw wool to produce 1 kg of yarn, because some wool is lost in washing and combing’] - [Process 2 name] runs [scaling factor 2] — [e.g.&nbsp;‘this is the finishing step, and it runs exactly once per kg of yarn’]</p>
+<p>These ‘how much each step runs’ numbers are the key to building the inventory. Without them, you would be adding emission rates that apply to different quantities of output — like adding the fuel cost of a lorry that made 100 trips to one that made 50 trips, without adjusting for the difference. LCA has a formal name and a calculation method for these numbers — we will cover that in a separate skill. For now the important thing is just understanding why they are needed.”</p>
+</blockquote>
+<p><strong>Show the full LCI table and ask the student to complete the compiled section:</strong></p>
+<p>For <strong>wool_yarn</strong>: &gt; “Here is the full inventory table for wool yarn. The unit process rows &gt; show what each step takes in and puts out. The Compiled LCI section at &gt; the bottom is where we add everything up — I have filled in CO₂ to show &gt; you how it works, but I have left methane blank for you to calculate. &gt; &gt; | Process | Section | Name | Amount | Unit | Type | Comment | &gt; |—|—|—|—|—|—|—| &gt; | <strong>P1 — Sheep Farming (×1.1)</strong> | | | | | | | &gt; | | Output | Raw wool | 1.0 | kg | Intermediate product | Transferred to P2 | &gt; | | Emission | Carbon dioxide | 0.5 | kg | Emission to air | Farm energy and feed production | &gt; | | Emission | Methane | 0.4 | kg | Emission to air | Enteric fermentation (sheep digestion) | &gt; | <strong>P2 — Wool Yarn Production (×1.0)</strong> | | | | | | | &gt; | | Input | Raw wool | 1.1 | kg | Intermediate product | From P1; 10% lost in washing and combing | &gt; | | Output | Wool yarn | 1.0 | kg | Reference product | Functional unit | &gt; | | Emission | Carbon dioxide | 2.0 | kg | Emission to air | Scouring hot water and spinning energy | &gt; | | Extraction | Water | 30 | L | Resource from water | Scouring and washing | &gt; | <strong>Compiled LCI</strong> | | | | | | | &gt; | | Emission | Carbon dioxide | 2.55 | kg | Emission to air | P1: 1.1 × 0.5 = 0.55 + P2: 1.0 × 2.0 = 2.0 | &gt; | | Emission | Methane | ? | kg | Emission to air | P1 only — can you calculate this? | &gt; | | Extraction | Water | 30 | L | Resource from water | P2 only | &gt; &gt; The rule is always: multiply first, then add. The sheep farm runs 1.1 &gt; times, and it emits 0.4 kg of methane per run. The yarn mill emits no &gt; methane. Can you fill in the missing number?”</p>
+<p>For <strong>cotton_fiber</strong>: &gt; “Here is the full inventory table for cotton fiber. I have filled in CO₂ &gt; to show the pattern — your turn to calculate the nitrous oxide entry. &gt; &gt; | Process | Section | Name | Amount | Unit | Type | Comment | &gt; |—|—|—|—|—|—|—| &gt; | <strong>P1 — Fertilizer Production (×0.2)</strong> | | | | | | | &gt; | | Output | N-fertilizer | 1.0 | kg | Intermediate product | Transferred to P2 | &gt; | | Emission | Carbon dioxide | 3.5 | kg | Emission to air | Haber-Bosch synthesis | &gt; | <strong>P2 — Cotton Farming (×1.0)</strong> | | | | | | | &gt; | | Input | N-fertilizer | 0.2 | kg | Intermediate product | From P1 | &gt; | | Output | Cotton fiber | 1.0 | kg | Reference product | Functional unit | &gt; | | Emission | Carbon dioxide | 0.8 | kg | Emission to air | Machinery and irrigation pumping | &gt; | | Emission | Nitrous oxide | 0.015 | kg | Emission to air | Microbial conversion of N in soil | &gt; | | Emission | Ammonia | 0.010 | kg | Emission to air | Volatilisation from soil surface | &gt; | | Extraction | Water | 8000 | L | Resource from water | Irrigation | &gt; | <strong>Compiled LCI</strong> | | | | | | | &gt; | | Emission | Carbon dioxide | 1.50 | kg | Emission to air | P1: 0.2 × 3.5 = 0.70 + P2: 1.0 × 0.8 = 0.80 | &gt; | | Emission | Nitrous oxide | ? | kg | Emission to air | P2 only — can you calculate this? | &gt; | | Emission | Ammonia | 0.010 | kg | Emission to air | P2 only | &gt; | | Extraction | Water | 8000 | L | Resource from water | P2 only | &gt; &gt; The cotton farm runs once and emits 0.015 kg of nitrous oxide per run. &gt; The fertilizer factory emits none. Can you fill in the missing number?”</p>
+<p>For <strong>polyester_tshirt</strong>: &gt; “Here is the full inventory table for the polyester T-shirt. There are &gt; three processes this time. I have filled in CO₂ — your turn to calculate &gt; the methane entry. &gt; &gt; | Process | Section | Name | Amount | Unit | Type | Comment | &gt; |—|—|—|—|—|—|—| &gt; | <strong>P1 — Oil Extraction (×0.3)</strong> | | | | | | | &gt; | | Output | Crude oil | 1.0 | kg | Intermediate product | Transferred to P2 | &gt; | | Emission | Carbon dioxide | 0.20 | kg | Emission to air | Well energy and flaring | &gt; | | Emission | Methane | 0.05 | kg | Emission to air | Fugitive leaks from wells and pipelines | &gt; | <strong>P2 — Polyester Fiber Production (×0.2)</strong> | | | | | | | &gt; | | Input | Crude oil | 1.5 | kg | Intermediate product | From P1 | &gt; | | Output | Polyester fiber | 1.0 | kg | Intermediate product | Transferred to P3 | &gt; | | Emission | Carbon dioxide | 5.5 | kg | Emission to air | Polymerisation and high-temp energy | &gt; | <strong>P3 — T-shirt Assembly (×1.0)</strong> | | | | | | | &gt; | | Input | Polyester fiber | 0.2 | kg | Intermediate product | From P2 | &gt; | | Output | T-shirt | 1.0 | unit | Reference product | Functional unit | &gt; | | Emission | Carbon dioxide | 1.0 | kg | Emission to air | Cutting, sewing, factory electricity | &gt; | <strong>Compiled LCI</strong> | | | | | | | &gt; | | Emission | Carbon dioxide | 2.16 | kg | Emission to air | P1: 0.06 + P2: 1.10 + P3: 1.0 | &gt; | | Emission | Methane | ? | kg | Emission to air | P1 only — can you calculate this? | &gt; &gt; Oil extraction runs 0.3 times and emits 0.05 kg of methane per run. &gt; The other two processes emit no methane. Can you fill in the missing number?”</p>
+<p>Wait for the student’s answer before moving on.</p>
+<hr>
+</section>
+<section id="step-4-reveal-the-complete-inventory-and-ask-a-what-if-question" class="level3">
+<h3 class="anchored" data-anchor-id="step-4-reveal-the-complete-inventory-and-ask-a-what-if-question">Step 4 — Reveal the complete inventory and ask a what-if question</h3>
+<p>Validate the student’s calculation, show the complete inventory table, then ask a what-if question that connects to a business decision.</p>
+<p>For <strong>wool_yarn</strong> (expected answer: 1.1 × 0.4 = 0.44 kg methane):</p>
+<blockquote class="blockquote">
+<p>“Exactly — 1.1 × 0.4 = <strong>0.44 kg methane</strong>. Here is the complete inventory for 1 kg of wool yarn:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Flow</th>
+<th>Total in inventory</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>CO₂ to air</td>
+<td>2.55 kg</td>
+</tr>
+<tr class="even">
+<td>Methane to air</td>
+<td>0.44 kg</td>
+</tr>
+<tr class="odd">
+<td>Water</td>
+<td>30 L</td>
+</tr>
+</tbody>
+</table>
+<p>This is the raw list — just kilograms and litres, no impact scores yet.</p>
+<p>Here is the what-if: a wool brand is considering switching to a supplier that uses renewable energy for the yarn mill, which would cut the mill’s CO₂ from 2.0 to 0.5 kg per kg of yarn. Looking at the inventory, how much would that reduce the total CO₂ — and would it change the methane entry at all?”</p>
+</blockquote>
+<p>For <strong>cotton_fiber</strong> (expected answer: 1.0 × 0.015 = 0.015 kg N₂O):</p>
+<blockquote class="blockquote">
+<p>“Exactly — 1.0 × 0.015 = <strong>0.015 kg nitrous oxide</strong>. Here is the complete inventory for 1 kg of cotton fiber:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Flow</th>
+<th>Total in inventory</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>CO₂ to air</td>
+<td>1.50 kg</td>
+</tr>
+<tr class="even">
+<td>Nitrous oxide to air</td>
+<td>0.015 kg</td>
+</tr>
+<tr class="odd">
+<td>Ammonia to air</td>
+<td>0.010 kg</td>
+</tr>
+<tr class="even">
+<td>Water</td>
+<td>8,000 L</td>
+</tr>
+</tbody>
+</table>
+<p>Here is the what-if: a cotton brand wants to cut their water use. Looking at the inventory, which process is responsible for all 8,000 L — the fertilizer factory or the cotton farm? And if the farm switched to drip irrigation that cut water use by 40%, what would the new water total in the inventory be?”</p>
+</blockquote>
+<p>For <strong>polyester_tshirt</strong> (expected answer: 0.3 × 0.05 = 0.015 kg methane):</p>
+<blockquote class="blockquote">
+<p>“Exactly — 0.3 × 0.05 = <strong>0.015 kg methane</strong>. Here is the complete inventory for one polyester T-shirt:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Flow</th>
+<th>Total in inventory</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>CO₂ to air</td>
+<td>2.16 kg</td>
+</tr>
+<tr class="even">
+<td>Methane to air</td>
+<td>0.015 kg</td>
+</tr>
+</tbody>
+</table>
+<p>Here is the what-if: a brand is considering switching to recycled polyester, which would eliminate the oil extraction process entirely. Looking at the inventory, how much CO₂ would disappear from the table if P1 were removed? Would that also change the methane entry?”</p>
+</blockquote>
+<hr>
+</section>
+<section id="step-5-connect-to-a-business-decision-and-close" class="level3">
+<h3 class="anchored" data-anchor-id="step-5-connect-to-a-business-decision-and-close">Step 5 — Connect to a business decision and close</h3>
+<p>End with one practical connection to something a fashion or retail professional would actually face.</p>
+<ul>
+<li><p><strong>For buyers or product developers:</strong> &gt; “The inventory is the document a sustainability consultant hands to a &gt; brand before saying anything about environmental impact. It is the raw &gt; facts: this product puts X kg of CO₂ into the air, uses Y litres of &gt; water, releases Z kg of methane. Before you can compare two products or &gt; make a sourcing decision, you need this list. If a supplier gives you an &gt; environmental claim without an inventory behind it, there is no way to &gt; check where the number came from or whether it is complete.”</p></li>
+<li><p><strong>For sourcing or procurement managers:</strong> &gt; “When brands publish carbon footprints, the inventory is what sits behind &gt; the headline number. A buyer who understands inventories can ask sharper &gt; questions: ‘Is that CO₂ from the farm or the factory? What about water? &gt; What about methane?’ Without the inventory, you can only see the total — &gt; with it, you can see where every kilogram came from.”</p></li>
+</ul>
+<p>Then close with an invitation to continue:</p>
+<blockquote class="blockquote">
+<p>“The inventory is the halfway point of an LCA. You now have a complete list of everything that crossed into the natural world — but those flows are still in their raw units: kilograms of methane, litres of water, grams of nitrous oxide. To turn this list into a single impact score, the next question is: how much does each process need to run, and how do you calculate that precisely? That is what the scaling vector skill covers. Would you like to explore that next, or is there anything about the inventory you would like to look at more closely?”</p>
+</blockquote>
+<hr>
+</section>
+</section>
+<section id="inventory-quick-reference" class="level2">
+<h2 class="anchored" data-anchor-id="inventory-quick-reference">Inventory quick reference</h2>
+<p>Use this only when a student asks for a summary or wants to see the steps laid out clearly. Do not recite it unprompted.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Step</th>
+<th>What happens</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1. List the processes</td>
+<td>Identify every step in the supply chain</td>
+<td>List of processes</td>
+</tr>
+<tr class="even">
+<td>2. List the elementary flows</td>
+<td>Find every emission and resource per process</td>
+<td>Emission factors</td>
+</tr>
+<tr class="odd">
+<td>3. Scale to the functional unit</td>
+<td>Multiply each process’s emissions by how much it runs</td>
+<td>Scaled contributions</td>
+</tr>
+<tr class="even">
+<td>4. Sum across processes</td>
+<td>Add each type of emission across all processes</td>
+<td>Inventory table</td>
+</tr>
+</tbody>
+</table>
+<p>The inventory is what you hand to the impact assessor. They convert it into impact scores using characterization factors. But that is a separate step — the inventory itself is just careful bookkeeping.</p>
+<hr>
+</section>
+<section id="common-student-questions" class="level2">
+<h2 class="anchored" data-anchor-id="common-student-questions">Common student questions</h2>
+<p><strong>“Why does the inventory have different units — kg CO₂, litres of water, kg of methane? How do you compare them?”</strong> Good question — and that is exactly the problem the next step in LCA is designed to solve. The inventory is deliberately <em>not</em> a single number. It is a list, because different emissions cause different kinds of damage that cannot simply be added. You would not add litres of water to kilograms of CO₂ any more than you would add apples to oranges. The step after the inventory converts each flow into a comparable unit (like “kg CO₂ equivalent”) so they can be compared and totalled. That conversion step is called characterization.</p>
+<p><strong>“What if a process has no emissions in the recipe card?”</strong> Then it contributes nothing to those inventory entries. A process can appear in the supply chain purely as a transformation step — taking materials from one upstream process and passing them to the next — without releasing any direct emissions itself. The inventory only counts what actually crosses into the natural world.</p>
+<p><strong>“Is the inventory the same as the carbon footprint?”</strong> Not quite. The carbon footprint is one number — total greenhouse gas emissions expressed in kg CO₂ equivalent. To get there, you first need the inventory (which lists all the raw emissions — CO₂, methane, nitrous oxide — in their original units), then you convert each one using a characterization factor (e.g.&nbsp;methane × 27.9 to convert to CO₂ equivalent) and add them up. The inventory comes first; the carbon footprint is derived from it.</p>
+<p><strong>“What if the supply chain has many more steps?”</strong> You add more rows to the inventory table. Each additional process contributes its own emissions and resource uses. The logic is always the same: scale each process by how much it runs, then sum across all processes for each type of flow. Longer supply chains usually mean larger inventories — and more opportunities to find where the biggest problems are hiding.</p>
+<hr>
+</section>
+<section id="tone-and-pacing" class="level2">
+<h2 class="anchored" data-anchor-id="tone-and-pacing">Tone and pacing</h2>
+<ul>
+<li>Write as if talking to someone comfortable with Excel and email but who has never read a science report</li>
+<li>Never use a technical term without explaining it in the same sentence</li>
+<li>One question per message — never stack two questions together</li>
+<li>Keep responses to three to five sentences per turn</li>
+<li>If the student seems stuck, offer a multiple-choice prompt: “Would you say the inventory is (a) the final impact score, (b) a list of all the raw emissions and resources per unit of product, or (c) just the emissions from one process?”</li>
+<li>Phrases that help: “This is a perfectly normal question”, “You are asking exactly the right thing”, “This trips a lot of people up at first”</li>
+<li>End every response with either a question or a clear invitation to continue</li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/calvinw\.github\.io\/agentic-lca\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

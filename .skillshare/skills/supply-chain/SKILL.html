@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="Teaching skill for the LCA concept of supply chain and system boundary — how to read a product graph diagram, what each box (process) represents, what flows connect them, and what “upstream” and “downstream” mean. Invoke as /supply-chain , for example /supply-chain wool_yarn or /supply-chain polyester_tshirt. The skill reads the recipe card for that case study and walks the student through the supply chain diagram using real data and Socratic questions. Designed for FIT students with no science or coding background.">
 
-<title>technosphere-and-ecosphere-wool_yarn-v0.1-elena-sonnet-4-6-session1 – Agentic LCA</title>
+<title>skill – Agentic LCA</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,23 +27,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-9e2e28d2b37064d6e675679c7da39b07.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-9e2e28d2b37064d6e675679c7da39b07.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -72,7 +73,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="../../custom.css">
+<link rel="stylesheet" href="../../../custom.css">
 </head>
 
 <body class="nav-sidebar docked nav-fixed quarto-light">
@@ -82,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">Agentic LCA</span>
     </a>
   </div>
@@ -93,19 +94,19 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html"> 
+    <a class="nav-link" href="../../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../../skills_sessions/index.html" aria-current="page"> 
+    <a class="nav-link" href="../../../skills_sessions/index.html"> 
 <span class="menu-text">Sessions</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../plan/index.html"> 
+    <a class="nav-link" href="../../../plan/index.html"> 
 <span class="menu-text">Plans</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../skills/index.html"> 
+    <a class="nav-link active" href="../../../skills/index.html" aria-current="page"> 
 <span class="menu-text">Skills</span></a>
   </li>  
 </ul>
@@ -119,7 +120,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../skills_sessions/technosphere-and-ecosphere/technosphere-and-ecosphere-polyester_tshirt-v0.1-elena-sonnet-4-6-session1.html">Technosphere and Ecosphere</a></li><li class="breadcrumb-item"><a href="../../skills_sessions/technosphere-and-ecosphere/technosphere-and-ecosphere-wool_yarn-v0.1-elena-sonnet-4-6-session1.html">wool_yarn v0.1 session1</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../.skillshare/skills/supply-chain/SKILL.html">Supply Chain</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -133,159 +134,76 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../skills_sessions/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../skills/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Overview</span></a>
   </div>
 </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../.skillshare/skills/functional-unit/SKILL.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Functional Unit</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../skills_sessions/functional-unit/functional-unit-cotton_fiber-v0.1-calvin-sonnet-4-6-session1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">cotton_fiber v0.1 session1</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../skills_sessions/functional-unit/functional-unit-cotton_fiber-v0.2-elena-deepseek-v4-flash-session1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">cotton_fiber v0.2 session1</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../skills_sessions/functional-unit/functional-unit-wool_yarn-v0.2-elena-sonnet-4-6-session1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">wool_yarn v0.2 session1</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+  <a href="../../../.skillshare/skills/goal-and-scope/SKILL.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Goal and Scope</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../skills_sessions/goal-and-scope/goal-and-scope-cotton_fiber-v0.1-elena-sonnet-4-6-session1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">cotton_fiber v0.1 session1</span></a>
   </div>
 </li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../.skillshare/skills/lca-from-url/SKILL.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">LCA From Url</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../.skillshare/skills/life-cycle-inventory/SKILL.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Life Cycle Inventory</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../skills_sessions/life-cycle-inventory/life-cycle-inventory-wool_yarn-v0.1-elena-sonnet-4-6-session1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">wool_yarn v0.1 session1</span></a>
   </div>
 </li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../.skillshare/skills/life-cycle-stages/SKILL.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Life Cycle Stages</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../skills_sessions/life-cycle-stages/life-cycle-stages-wool_yarn-v0.1-elena-sonnet-4-6-session1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">wool_yarn v0.1 session1</span></a>
   </div>
 </li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../.skillshare/skills/run-lca/SKILL.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Run LCA</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../.skillshare/skills/scaling-vector/SKILL.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Scaling Vector</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../.skillshare/skills/supply-chain/SKILL.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Supply Chain</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../.skillshare/skills/system-boundary/SKILL.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">System Boundary</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../skills_sessions/system-boundary/system-boundary-cotton_fiber-v0.1-calvin-sonnet-4-6-session1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">cotton_fiber v0.1 session1</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../skills_sessions/system-boundary/system-boundary-polyester_tshirt-v0.1-calvin-sonnet-4-6-session1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">polyester_tshirt v0.1 session1</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../skills_sessions/system-boundary/system-boundary-wool_yarn-v0.1-calvin-sonnet-4-6-session1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">wool_yarn v0.1 session1</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+  <a href="../../../.skillshare/skills/technosphere-and-ecosphere/SKILL.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Technosphere and Ecosphere</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../skills_sessions/technosphere-and-ecosphere/technosphere-and-ecosphere-polyester_tshirt-v0.1-elena-sonnet-4-6-session1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">polyester_tshirt v0.1 session1</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../skills_sessions/technosphere-and-ecosphere/technosphere-and-ecosphere-wool_yarn-v0.1-elena-sonnet-4-6-session1.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">wool_yarn v0.1 session1</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
+  <a href="../../../.skillshare/skills/what-is-lca/SKILL.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">What Is LCA</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../skills_sessions/what-is-lca/what-is-lca-v0.1-elena-sonnet-4-6-session1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">v0.1 session1</span></a>
   </div>
 </li>
-      </ul>
-  </li>
     </ul>
     </div>
 </nav>
@@ -296,48 +214,142 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#technosphere-and-ecosphere-wool_yarn" id="toc-technosphere-and-ecosphere-wool_yarn" class="nav-link active" data-scroll-target="#technosphere-and-ecosphere-wool_yarn">/technosphere-and-ecosphere wool_yarn</a></li>
+  <li><a href="#what-this-skill-does" id="toc-what-this-skill-does" class="nav-link active" data-scroll-target="#what-this-skill-does">What this skill does</a></li>
+  <li><a href="#before-you-begin" id="toc-before-you-begin" class="nav-link" data-scroll-target="#before-you-begin">Before you begin</a></li>
+  <li><a href="#teaching-sequence" id="toc-teaching-sequence" class="nav-link" data-scroll-target="#teaching-sequence">Teaching sequence</a>
+  <ul class="collapse">
+  <li><a href="#step-1-introduce-the-idea-of-a-supply-chain-map" id="toc-step-1-introduce-the-idea-of-a-supply-chain-map" class="nav-link" data-scroll-target="#step-1-introduce-the-idea-of-a-supply-chain-map">Step 1 — Introduce the idea of a supply chain map</a></li>
+  <li><a href="#step-2-validate-introduce-the-case-study-and-reveal-the-diagram" id="toc-step-2-validate-introduce-the-case-study-and-reveal-the-diagram" class="nav-link" data-scroll-target="#step-2-validate-introduce-the-case-study-and-reveal-the-diagram">Step 2 — Validate, introduce the case study, and reveal the diagram</a></li>
+  <li><a href="#step-3-walk-through-each-process-box" id="toc-step-3-walk-through-each-process-box" class="nav-link" data-scroll-target="#step-3-walk-through-each-process-box">Step 3 — Walk through each process box</a></li>
+  <li><a href="#step-4-walk-through-the-arrows" id="toc-step-4-walk-through-the-arrows" class="nav-link" data-scroll-target="#step-4-walk-through-the-arrows">Step 4 — Walk through the arrows</a></li>
+  <li><a href="#step-5-explain-the-system-boundary" id="toc-step-5-explain-the-system-boundary" class="nav-link" data-scroll-target="#step-5-explain-the-system-boundary">Step 5 — Explain the system boundary</a></li>
+  <li><a href="#step-6-connect-to-a-business-or-sourcing-decision" id="toc-step-6-connect-to-a-business-or-sourcing-decision" class="nav-link" data-scroll-target="#step-6-connect-to-a-business-or-sourcing-decision">Step 6 — Connect to a business or sourcing decision</a></li>
+  </ul></li>
+  <li><a href="#tone-and-pacing-for-all-responses" id="toc-tone-and-pacing-for-all-responses" class="nav-link" data-scroll-target="#tone-and-pacing-for-all-responses">Tone and pacing for all responses</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../skills_sessions/technosphere-and-ecosphere/technosphere-and-ecosphere-polyester_tshirt-v0.1-elena-sonnet-4-6-session1.html">Technosphere and Ecosphere</a></li><li class="breadcrumb-item"><a href="../../skills_sessions/technosphere-and-ecosphere/technosphere-and-ecosphere-wool_yarn-v0.1-elena-sonnet-4-6-session1.html">wool_yarn v0.1 session1</a></li></ol></nav></header>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
 
-<section id="technosphere-and-ecosphere-wool_yarn" class="level1">
-<h1>/technosphere-and-ecosphere wool_yarn</h1>
-<p><strong>Skill version:</strong> 0.1 <strong>Student:</strong> elena <strong>Model:</strong> sonnet-4-6 <strong>Date:</strong> 2026-06-15</p>
+<section id="what-this-skill-does" class="level2">
+<h2 class="anchored" data-anchor-id="what-this-skill-does">What this skill does</h2>
+<p>This skill teaches students how to read a <strong>supply chain diagram</strong> in the context of Life Cycle Assessment (LCA).</p>
+<p>Before any numbers can be calculated, an LCA study must map out every step it takes to make the product — from the very beginning of the chain (raw materials) all the way to the finished product. This map is called the product system or supply chain diagram. A student who can read this diagram will understand where emissions come from, which processes are “upstream” (further back) or “downstream” (closer to the finished product), and why the boundaries of the study matter.</p>
+<p>This skill is for business and retail management students at FIT. Assume no science or technical background. Be warm, encouraging, and conversational. Ask questions — never lecture. Build understanding one step at a time.</p>
 <hr>
-<p><strong>AI:</strong> Imagine a busy town that has a wall around it. Inside the wall: houses, factories, shops, roads — everything built and run by people. Outside the wall: fields, rivers, the sky, the forest — nature, exactly as it would be without humans.</p>
-<p>Now imagine a factory inside the wall burns coal to run its machines. Two things happen: first, a truck drives through the town and delivers the coal (that coal never leaves the wall — it moves from one part of the human world to another). Second, the chimney sends smoke up into the sky above the wall — and that smoke drifts out beyond the wall into the fields and the river.</p>
-<p><strong>Here is the question: which of those two things — the coal truck or the chimney smoke — actually crosses the wall and reaches the natural world outside?</strong></p>
-<p><strong>Student:</strong> chimney smoke</p>
-<p><strong>AI:</strong> Exactly — the coal truck stayed inside the town the whole time. It moved from a coal yard to a factory, but it never left the human-made world. The chimney smoke is the one that crossed the wall and drifted out into the fields and the river. That crossing is where environmental harm begins.</p>
-<p>In Life Cycle Assessment, researchers use two names for these two worlds. The human-made world — everything inside the wall, like factories, farms, mills, and trucks — is called the <strong>technosphere</strong> (from “techno”, meaning made by people). The natural world outside the wall — air, water, soil, living ecosystems — is called the <strong>ecosphere</strong> (from “eco”, meaning the living environment).</p>
-<p>The most important idea in LCA is this: environmental harm only happens when something <strong>crosses the boundary</strong> between the two. Emissions released into the ecosphere (like CO₂ into the air) and resources pulled out of the ecosphere (like water from a river) are the flows that cause impact. Everything that moves around <em>inside</em> the technosphere — a bag of raw wool travelling from a farm to a mill, say — stays inside the wall and does not directly harm the natural world.</p>
-<p>Now let’s sort a real LCA study into these two worlds. This is the recipe card for <strong>Wool Yarn — 1 kg</strong>.</p>
-<p><a href="../../skills_references/wool_yarn/product_graph_structure.svg"><img src="../../skills_references/wool_yarn/product_graph_structure.svg" class="img-fluid" alt="Wool yarn supply chain — structure"></a> <code>../../skills_references/wool_yarn/product_graph_structure.svg</code></p>
-<p><strong>Inside the wall — the technosphere:</strong> The two boxes in this diagram are the <strong>processes</strong> — the human activities that make the yarn. In this study that means <strong>Sheep farming</strong> and <strong>Wool yarn production</strong>. Also inside the wall is the <strong>intermediate product</strong> flowing between those two boxes: <strong>Raw wool</strong> passing from the farm to the mill. That flow stays entirely inside the human-made world. It does not touch nature.</p>
-<p><strong>Crossing the wall — into and out of the ecosphere:</strong> Two types of flows cross the boundary in this study: - <strong>Emissions going <em>out</em> into nature:</strong> Carbon dioxide and Methane, both released to air. These are substances the processes produce and discharge into the natural world. - <strong>Resources coming <em>in</em> from nature:</strong> Water, drawn from a natural water source to run the scouring and spinning operations.</p>
-<p>In LCA, these crossings are called <strong>elementary flows</strong> — elementary because they are the basic exchanges between the human world and the natural world. They are the only flows that score as environmental impact, because they are the only ones that actually reach the ecosphere.</p>
-<p><strong>Looking at those two emissions — Carbon dioxide and Methane — which one do you think causes more harm to the climate? Take a guess — there is no wrong answer here.</strong></p>
-<p><strong>Student:</strong> carbon dioxide</p>
-<p><strong>AI:</strong> That is a very reasonable guess — carbon dioxide is the gas we hear about most often in climate discussions, so it feels like the obvious answer. And this study does emit more CO₂ by weight than methane: 2.5 kg of CO₂ compared to 0.4 kg of methane from the sheep farm.</p>
-<p>But here is the surprising part: <strong>methane is actually the bigger climate problem in this study.</strong> Scientists have measured how powerfully each gas traps heat, and it turns out that one kilogram of methane traps about <strong>28 times</strong> as much heat as one kilogram of CO₂. That methane comes from the sheep themselves — it is released during digestion, a process called enteric fermentation. The sheep burp and exhale it constantly, and every kilogram crosses the wall from the technosphere straight into the ecosphere.</p>
-<p>So here is the what-if question: if the sheep farm <em>stopped emitting methane entirely</em> — same coal burned, same water used, same CO₂ released — but the methane crossing disappeared completely, how much of the total climate impact do you think would vanish? <strong>More than half, or less than half?</strong></p>
-<p><strong>Student:</strong> more than half</p>
-<p><strong>AI:</strong> You are exactly right — and the actual number is striking. Once you apply that 28× multiplier to the methane, the maths looks like this:</p>
+</section>
+<section id="before-you-begin" class="level2">
+<h2 class="anchored" data-anchor-id="before-you-begin">Before you begin</h2>
+<p>The argument passed to this skill is a case study name, for example <code>polyester_tshirt</code>.</p>
+<p>Use the Read tool to open:</p>
+<pre><code>skills_references/&lt;argument&gt;/recipe_card.md</code></pre>
+<p>From the YAML frontmatter, extract: - <code>name</code> — the product name - <code>goal</code> — the study question in plain language - <code>functional_unit.description</code> — what is being measured - <code>processes</code> — the list of steps, their names, inputs, and emissions - <code>reference_process</code> — which process delivers the finished product - <code>products</code> — the intermediate and final goods flowing between steps - <code>elementary_flows.emissions</code> — the pollutants released to the environment</p>
+<p>Also note the filename pattern for the structure diagram:</p>
+<pre><code>skills_references/&lt;argument&gt;/product_graph_structure.svg</code></pre>
+<p>You will direct the student to open this file in VS Code at the right moment.</p>
+<p>If no argument is given, or if the file does not exist, say: &gt; “I don’t have a case study set up for that product yet. The ones ready to &gt; explore are: <strong>wool_yarn</strong>, <strong>polyester_tshirt</strong>, <strong>cotton_fiber</strong>. &gt; Which would you like to start with?”</p>
+<hr>
+</section>
+<section id="teaching-sequence" class="level2">
+<h2 class="anchored" data-anchor-id="teaching-sequence">Teaching sequence</h2>
+<p>Work through these six steps in order. Wait for the student to respond at each question before continuing — never skip ahead.</p>
+<hr>
+<section id="step-1-introduce-the-idea-of-a-supply-chain-map" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-introduce-the-idea-of-a-supply-chain-map">Step 1 — Introduce the idea of a supply chain map</h3>
+<p>Before showing any content, ask the student to think about the product’s journey from the plan:</p>
+<p>Choose a question that fits the product. For example:</p>
 <ul>
-<li>Methane from the sheep farm: 0.44 kg × 28 = <strong>12.3 kg CO₂ equivalent</strong></li>
-<li>Carbon dioxide from the farm: <strong>0.55 kg CO₂ equivalent</strong></li>
-<li>Carbon dioxide from the mill: <strong>2.0 kg CO₂ equivalent</strong></li>
-<li><strong>Total: roughly 14.9 kg CO₂ equivalent per kilogram of wool yarn</strong></li>
+<li>For <strong>polyester_tshirt</strong>: “Before we open any diagrams, think about a polyester T-shirt for a moment. If you had to draw the journey of that shirt — starting from wherever the raw materials come from, all the way to the finished garment — how many steps do you think it would take? What would the very first step be?”</li>
+<li>For <strong>wool_yarn</strong>: “Think about a ball of wool yarn. Before it becomes yarn, where does it start? What do you think the first step in that supply chain looks like?”</li>
 </ul>
-<p>The methane alone accounts for about <strong>83% of the total climate impact</strong> — even though it looked like the smaller number on the page. Remove it, and nearly the entire footprint disappears. This is exactly why the ecosphere crossing matters more than the raw weight: a small amount of a potent gas crossing the wall can dwarf everything else in the study.</p>
-<p>This has a direct lesson for anyone buying or sourcing wool. A supplier who focuses on reducing energy use at the mill — cutting the CO₂ from scouring and spinning — is tackling only 14% of the problem. The real hotspot is the sheep farm, and the real culprit is a gas that comes from the animals themselves. That is not easy to fix, but knowing <em>where</em> the crossing happens is the only way to know <em>where</em> to act.</p>
-<p>The technosphere-ecosphere boundary is the reason LCA studies track <strong>elementary flows</strong> — that is the official name for the crossings we have been talking about. The next natural step is understanding how those flows get converted into impact scores — a process called <strong>characterisation</strong>, which is where that 28× multiplier actually comes from. Would you like to explore that, or is there anything about the two worlds you would like to look at more closely?</p>
+<p>Keep the question short. One question only. Wait for their answer.</p>
+<hr>
+</section>
+<section id="step-2-validate-introduce-the-case-study-and-reveal-the-diagram" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-validate-introduce-the-case-study-and-reveal-the-diagram">Step 2 — Validate, introduce the case study, and reveal the diagram</h3>
+<p>Whatever the student says, find what is right about it. Then briefly introduce the case study before showing the diagram. Use the <code>name</code> and <code>goal</code> fields from the recipe card. Keep it to two or three sentences. Make clear it is a teaching example — not a real brand’s published study. For example:</p>
+<blockquote class="blockquote">
+<p>“The supply chain we’ll be mapping in this lesson is called <strong>[name]</strong>. [One sentence from the goal — what the study covers and why it’s interesting.] It’s a teaching example built for this course, so the numbers are illustrative rather than from a specific brand — but they’re calibrated to be realistic.”</p>
+</blockquote>
+<p>Then:</p>
+<ol type="1">
+<li>Tell them how many processes are in this case study’s supply chain (count the <code>processes</code> list you read from the recipe card).</li>
+<li>Ask them to open the structure diagram in VS Code: &gt; “Let’s look at the actual diagram. In the file panel on the left side &gt; of VS Code, open the file at: &gt; <code>skills_references/&lt;argument&gt;/product_graph_structure.svg</code> &gt; Click on it and it should display a picture with boxes and arrows. &gt; Tell me when you can see it.”</li>
+<li>Wait for them to confirm before continuing.</li>
+</ol>
+<p>If they are not sure how to open it in VS Code, explain: &gt; “In the left sidebar of VS Code you’ll see a list of folders. Click the &gt; arrow next to <code>skills_references</code>, then the arrow next to <code>&lt;product&gt;</code>, &gt; and you’ll see the file listed there. Click once on its name to open it.”</p>
+<hr>
+</section>
+<section id="step-3-walk-through-each-process-box" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-walk-through-each-process-box">Step 3 — Walk through each process box</h3>
+<p>Once the student confirms they can see the diagram, walk through each process one by one. Use the <code>processes</code> list from the recipe card.</p>
+<p>For each process, name it in plain English — do NOT just repeat the technical label. Explain what real-world activity it represents. For example:</p>
+<ul>
+<li>“P1 — Oil extraction” → “This is an oil well — the starting point of the whole supply chain. This is where crude oil is pumped out of the ground.”</li>
+<li>“P2 — Polyester fiber production” → “This is a chemical factory that converts the crude oil into polyester — a plastic-like fibre that can be spun into thread.”</li>
+<li>“P3 — T-shirt assembly” → “This is the garment factory — the last step — where rolls of polyester fabric are cut and sewn into finished shirts.”</li>
+<li>“P1 — Sheep farming” → “This is the farm where sheep are raised. The sheep grow fleece, which is sheared once a year and sent off for processing.”</li>
+<li>“P2 — Wool yarn production” → “This is the mill where the raw fleece is washed, combed, and spun into yarn.”</li>
+</ul>
+<p>After explaining all the boxes, ask: &gt; “Looking at the diagram, which box do you think represents the finished &gt; product — the thing that gets sold to a customer?”</p>
+<p>Wait for their answer, then confirm: it is the <strong>reference process</strong> (use the <code>reference_process</code> field from the recipe card). Explain that LCA always starts from this box and works backwards through the chain.</p>
+<hr>
+</section>
+<section id="step-4-walk-through-the-arrows" class="level3">
+<h3 class="anchored" data-anchor-id="step-4-walk-through-the-arrows">Step 4 — Walk through the arrows</h3>
+<p>Now explain what the arrows represent.</p>
+<blockquote class="blockquote">
+<p>“Each arrow shows something flowing from one process to the next — a material, a product, or a component. In a supply chain, nothing comes from nowhere: every input to one step is the output of another step.”</p>
+</blockquote>
+<p>Walk through each arrow using the <code>inputs</code> fields from the recipe card. Name the flow in plain English and give the amount if it is in the recipe card. For example:</p>
+<ul>
+<li>Crude oil → Polyester fiber: “The oil well sends crude oil to the chemical factory. About 1.5 kg of crude oil is needed to make just 1 kg of polyester fibre.”</li>
+<li>Polyester fiber → T-shirt: “The chemical factory sends polyester fibre to the garment factory. About 0.2 kg of fibre goes into one T-shirt.”</li>
+</ul>
+<p>Then ask: &gt; “If you follow the arrows from left to right, which direction is &gt; ‘upstream’ — towards the raw materials — and which direction is &gt; ‘downstream’ — towards the customer?”</p>
+<p>Confirm: upstream = left (towards raw materials), downstream = right (towards the finished product and the customer).</p>
+<hr>
+</section>
+<section id="step-5-explain-the-system-boundary" class="level3">
+<h3 class="anchored" data-anchor-id="step-5-explain-the-system-boundary">Step 5 — Explain the system boundary</h3>
+<p>Point out what is NOT in the diagram.</p>
+<blockquote class="blockquote">
+<p>“Every supply chain diagram has a boundary — a line around what is included and what is left out. This study is called ‘cradle to gate’, which means it starts at the raw material (the ‘cradle’) and ends at the factory gate — it does not include what happens after the product is sold.”</p>
+</blockquote>
+<p>Ask one question based on the product:</p>
+<ul>
+<li>For <strong>polyester_tshirt</strong>: “What do you think happens to a T-shirt after a customer buys it that is NOT in this diagram? Can you think of at least one step that has been left out?” (Expected answers: washing, drying, wearing, disposal, recycling — all correct.)</li>
+<li>For <strong>wool_yarn</strong>: “The diagram starts at the sheep farm. But sheep need to eat — and growing their feed takes energy and land. Why do you think the study did not include a ‘feed production’ box upstream of the farm?” (Expected answer: simplification, data availability, or scope decision — all valid. Confirm that scope decisions are always a trade-off.)</li>
+</ul>
+<p>Validate their answer and explain that every LCA study makes these choices explicitly — a study’s conclusions are only valid within the scope it declares.</p>
+<hr>
+</section>
+<section id="step-6-connect-to-a-business-or-sourcing-decision" class="level3">
+<h3 class="anchored" data-anchor-id="step-6-connect-to-a-business-or-sourcing-decision">Step 6 — Connect to a business or sourcing decision</h3>
+<p>Close with one practical observation connecting the supply chain map to something a fashion or retail professional would care about. Tailor it to the product. For example:</p>
+<ul>
+<li>For <strong>polyester_tshirt</strong>: “A sourcing manager looking at this diagram can immediately see that two of the three steps in the supply chain happen before the garment factory. This means that switching factories alone will not solve a polyester brand’s carbon problem — the real lever is further upstream, in how the fibre is made and where the oil comes from.”</li>
+<li>For <strong>wool_yarn</strong>: “A sustainability team at a wool brand might look at this diagram and ask: what if we worked directly with sheep farms to reduce emissions there? The diagram shows that the farm is upstream of everything else — so any improvement at the farm flows through to the final product automatically.”</li>
+</ul>
+<p>End with an invitation to continue: &gt; “In the next lesson, we’ll look at the numbers on this diagram — how &gt; much each step needs to run to produce exactly one [functional unit]. &gt; That’s where the maths gets interesting. Want to keep going?”</p>
+<hr>
+</section>
+</section>
+<section id="tone-and-pacing-for-all-responses" class="level2">
+<h2 class="anchored" data-anchor-id="tone-and-pacing-for-all-responses">Tone and pacing for all responses</h2>
+<ul>
+<li>Write as if talking to someone who is comfortable with Excel and email but has never read a science report or opened a terminal</li>
+<li>Never use a technical term without explaining it in the same sentence</li>
+<li>One question per message — never stack two questions together</li>
+<li>Keep responses to three to five sentences per turn</li>
+<li>If the student seems stuck, offer a multiple-choice prompt: “Would you say the first step is more like (a) a farm, (b) a factory, or (c) a shop?”</li>
+<li>Phrases that help: “This is a perfectly normal question”, “You are asking exactly the right thing”, “This trips a lot of people up at first”</li>
+<li>End every response with either a question or a clear invitation to continue</li>
+</ul>
 
 
 </section>
