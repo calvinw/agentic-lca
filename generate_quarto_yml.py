@@ -138,7 +138,7 @@ for src, copy in zip(skill_files, skill_copies):
     raw_url = f"https://raw.githubusercontent.com/calvinw/agentic-lca/main/{src.relative_to(ROOT)}"
     lines.append(f'        - text: "{label}"')
     lines.append(f"          href: {copy.relative_to(ROOT)}")
-    lines.append(f'        - text: "(.md)"')
+    lines.append(f'        - text: "(.md version)"')
     lines.append(f"          href: {raw_url}")
 
 lines += [
@@ -148,6 +148,7 @@ lines += [
     "    theme: cosmo",
     "    css: custom.css",
     "    toc: true",
+    "    include-after-body: sidebar-tweaks.html",
     "    grid:",
     "      body-width: 2000px",
     "",
