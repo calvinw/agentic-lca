@@ -18,7 +18,7 @@ Skills already built are marked ✅. Skills recommended but not yet built are ma
 | 7 | `technosphere-and-ecosphere` | ✅ Built | The difference between human-made flows (products) and natural flows (emissions, resources) that cross into the natural world |
 | 8 | `life-cycle-inventory` | ✅ Built | What an inventory is, how emissions and resource use are collected and totalled across all processes |
 | 9 | `scaling-vector` | ✅ Built | How much each process in the supply chain must run to deliver one functional unit |
-| 10 | `what-is-impact-assessment` | ⬜ Recommended | How raw inventory emissions are converted into environmental scores — global warming, acidification, smog, and more |
+| 10 | `what-is-impact-assessment` | ✅ Built | How raw inventory emissions are converted into environmental scores — global warming, acidification, smog, and more |
 | 11 | `impact-characterization` | ⬜ Recommended | How each emission is multiplied by a characterization factor to produce an impact score — the maths behind the conversion |
 | 12 | `damage-characterization` | ⬜ Recommended | How midpoint impact scores are translated into damage to human health, ecosystems, and natural resources |
 | 13 | `hotspot-analysis` | ⬜ Recommended | How to read a contribution breakdown, identify the biggest sources of impact, connect to business decisions |
@@ -182,7 +182,7 @@ one shirt. The scaling vector tells you the exact fraction of each step that is 
 
 ---
 
-### `what-is-impact-assessment` ⬜
+### `what-is-impact-assessment` ✅
 Once students understand the inventory — the raw list of kilograms of CO₂, methane,
 water, and other emissions — the next question is: *what does that list actually mean
 for the environment?* This skill introduces life cycle impact assessment (LCIA), the

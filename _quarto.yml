@@ -10,7 +10,6 @@ project:
     - skills_sessions/functional-unit/functional-unit-cotton_fiber-v0.2-elena-deepseek-v4-flash-session1.md
     - skills_sessions/functional-unit/functional-unit-wool_yarn-v0.2-elena-sonnet-4-6-session1.md
     - skills_sessions/goal-and-scope/goal-and-scope-cotton_fiber-v0.1-elena-sonnet-4-6-session1.md
-    - skills_sessions/impact-assessment/impact-assessment-wool_yarn-v0.1-elena-sonnet-4-6-session1.md
     - skills_sessions/life-cycle-inventory/life-cycle-inventory-wool_yarn-v0.1-elena-sonnet-4-6-session1.md
     - skills_sessions/life-cycle-stages/life-cycle-stages-wool_yarn-v0.1-elena-sonnet-4-6-session1.md
     - skills_sessions/system-boundary/system-boundary-cotton_fiber-v0.1-calvin-sonnet-4-6-session1.md
@@ -18,6 +17,8 @@ project:
     - skills_sessions/system-boundary/system-boundary-wool_yarn-v0.1-calvin-sonnet-4-6-session1.md
     - skills_sessions/technosphere-and-ecosphere/technosphere-and-ecosphere-polyester_tshirt-v0.1-elena-sonnet-4-6-session1.md
     - skills_sessions/technosphere-and-ecosphere/technosphere-and-ecosphere-wool_yarn-v0.1-elena-sonnet-4-6-session1.md
+    - skills_sessions/what-is-impact-assessment/what-is-impact-assessment-cotton_fiber-v0.1-elena-sonnet-4-6-session1.md
+    - skills_sessions/what-is-impact-assessment/what-is-impact-assessment-wool_yarn-v0.1-elena-sonnet-4-6-session1.md
     - skills_sessions/what-is-lca/what-is-lca-v0.1-elena-sonnet-4-6-session1.md
     - plan/index.md
     - plan/PLAN_BAFU_AND_METHODS_PACK.md
@@ -37,7 +38,7 @@ project:
     - skills/technosphere-and-ecosphere.md
     - skills/life-cycle-inventory.md
     - skills/scaling-vector.md
-    - skills/impact-assessment.md
+    - skills/what-is-impact-assessment.md
     - skills/run-lca.md
     - skills/lca-from-url.md
     - skills/skill-creator.md
@@ -74,10 +75,6 @@ website:
           contents:
             - text: "cotton_fiber v0.1 session1"
               href: skills_sessions/goal-and-scope/goal-and-scope-cotton_fiber-v0.1-elena-sonnet-4-6-session1.md
-        - section: "Impact Assessment"
-          contents:
-            - text: "wool_yarn v0.1 session1"
-              href: skills_sessions/impact-assessment/impact-assessment-wool_yarn-v0.1-elena-sonnet-4-6-session1.md
         - section: "Life Cycle Inventory"
           contents:
             - text: "wool_yarn v0.1 session1"
@@ -100,6 +97,12 @@ website:
               href: skills_sessions/technosphere-and-ecosphere/technosphere-and-ecosphere-polyester_tshirt-v0.1-elena-sonnet-4-6-session1.md
             - text: "wool_yarn v0.1 session1"
               href: skills_sessions/technosphere-and-ecosphere/technosphere-and-ecosphere-wool_yarn-v0.1-elena-sonnet-4-6-session1.md
+        - section: "What Is Impact Assessment"
+          contents:
+            - text: "cotton_fiber v0.1 session1"
+              href: skills_sessions/what-is-impact-assessment/what-is-impact-assessment-cotton_fiber-v0.1-elena-sonnet-4-6-session1.md
+            - text: "wool_yarn v0.1 session1"
+              href: skills_sessions/what-is-impact-assessment/what-is-impact-assessment-wool_yarn-v0.1-elena-sonnet-4-6-session1.md
         - section: "What Is LCA"
           contents:
             - text: "v0.1 session1"
@@ -168,10 +171,10 @@ website:
           href: skills/scaling-vector.md
         - text: "(.md version)"
           href: https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/scaling-vector/SKILL.md
-        - text: "Impact Assessment"
-          href: skills/impact-assessment.md
+        - text: "What Is Impact Assessment"
+          href: skills/what-is-impact-assessment.md
         - text: "(.md version)"
-          href: https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/impact-assessment/SKILL.md
+          href: https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/what-is-impact-assessment/SKILL.md
         - text: "Run LCA"
           href: skills/run-lca.md
         - text: "(.md version)"

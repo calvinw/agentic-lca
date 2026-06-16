@@ -1,4 +1,4 @@
-# /impact-assessment wool_yarn
+# /what-is-impact-assessment wool_yarn
 **Skill version:** 0.1
 **Student:** elena
 **Model:** sonnet-4-6

@@ -64,7 +64,7 @@ SKILL_ORDER = [
     "technosphere-and-ecosphere",
     "life-cycle-inventory",
     "scaling-vector",
-    "impact-assessment",
+    "what-is-impact-assessment",
     "run-lca",
     "lca-from-url",
     "skill-creator",
