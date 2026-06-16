@@ -20,8 +20,8 @@ The step that solves this is called **life cycle impact assessment**, or **LCIA*
 
 Let's convert the inventory for **Cotton Fiber** into impact scores together.
 
-[![Cotton Fiber supply chain — structure](skills_references/cotton_fiber/product_graph_structure.svg)](skills_references/cotton_fiber/product_graph_structure.svg)
-`skills_references/cotton_fiber/product_graph_structure.svg`
+[![Cotton Fiber supply chain — structure](../../skills_references/cotton_fiber/product_graph_structure.svg)](../../skills_references/cotton_fiber/product_graph_structure.svg)
+`../../skills_references/cotton_fiber/product_graph_structure.svg`
 
 Here is the compiled inventory you already built in the last skill:
 
