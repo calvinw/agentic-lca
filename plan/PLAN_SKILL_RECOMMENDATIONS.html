@@ -202,10 +202,10 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#functional-unit" id="toc-functional-unit" class="nav-link" data-scroll-target="#functional-unit"><code>functional-unit</code> ✅</a></li>
   <li><a href="#phase-2-life-cycle-inventory" id="toc-phase-2-life-cycle-inventory" class="nav-link" data-scroll-target="#phase-2-life-cycle-inventory">Phase 2 — Life Cycle Inventory</a></li>
   <li><a href="#supply-chain" id="toc-supply-chain" class="nav-link" data-scroll-target="#supply-chain"><code>supply-chain</code> ✅</a></li>
+  <li><a href="#scaling-vector" id="toc-scaling-vector" class="nav-link" data-scroll-target="#scaling-vector"><code>scaling-vector</code> ✅</a></li>
   <li><a href="#technosphere-and-ecosphere" id="toc-technosphere-and-ecosphere" class="nav-link" data-scroll-target="#technosphere-and-ecosphere"><code>technosphere-and-ecosphere</code> ✅</a></li>
   <li><a href="#life-cycle-inventory" id="toc-life-cycle-inventory" class="nav-link" data-scroll-target="#life-cycle-inventory"><code>life-cycle-inventory</code> ✅</a></li>
   <li><a href="#allocation" id="toc-allocation" class="nav-link" data-scroll-target="#allocation"><code>allocation</code> ⬜</a></li>
-  <li><a href="#scaling-vector" id="toc-scaling-vector" class="nav-link" data-scroll-target="#scaling-vector"><code>scaling-vector</code> ✅</a></li>
   <li><a href="#phase-3-impact-assessment" id="toc-phase-3-impact-assessment" class="nav-link" data-scroll-target="#phase-3-impact-assessment">Phase 3 — Impact Assessment</a></li>
   <li><a href="#what-is-impact-assessment" id="toc-what-is-impact-assessment" class="nav-link" data-scroll-target="#what-is-impact-assessment"><code>what-is-impact-assessment</code> ⬜</a></li>
   <li><a href="#impact-characterization" id="toc-impact-characterization" class="nav-link" data-scroll-target="#impact-characterization"><code>impact-characterization</code> ⬜</a></li>
@@ -327,27 +327,27 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td>7</td>
+<td><code>scaling-vector</code></td>
+<td>✅ Built</td>
+<td>How much each process in the supply chain must run to deliver one functional unit</td>
+</tr>
+<tr class="odd">
+<td>8</td>
 <td><code>technosphere-and-ecosphere</code></td>
 <td>✅ Built</td>
 <td>The difference between human-made flows (products) and natural flows (emissions, resources) that cross into the natural world</td>
 </tr>
-<tr class="odd">
-<td>8</td>
+<tr class="even">
+<td>9</td>
 <td><code>life-cycle-inventory</code></td>
 <td>✅ Built</td>
 <td>What an inventory is, how emissions and resource use are collected and totalled across all processes</td>
 </tr>
-<tr class="even">
-<td>9</td>
+<tr class="odd">
+<td>10</td>
 <td><code>allocation</code></td>
 <td>⬜ Recommended</td>
 <td>What to do when a process produces more than one useful output — how to divide the environmental burden fairly between co-products</td>
-</tr>
-<tr class="odd">
-<td>10</td>
-<td><code>scaling-vector</code></td>
-<td>✅ Built</td>
-<td>How much each process in the supply chain must run to deliver one functional unit</td>
 </tr>
 <tr class="even">
 <td><strong>Phase 3 — Impact Assessment</strong></td>
@@ -505,6 +505,12 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Key insight for students:</strong> Every product has a supply chain. LCA makes that supply chain visible — and that visibility is what makes it possible to find where the biggest environmental problems are hiding.</p>
 <hr>
 </section>
+<section id="scaling-vector" class="level3">
+<h3 class="anchored" data-anchor-id="scaling-vector"><code>scaling-vector</code> ✅</h3>
+<p>How much each process in the supply chain must run to deliver exactly one functional unit. Students work through the calculation using plain division, not matrix algebra — starting from the finished product and working backwards through the supply chain to find how much of each upstream process is needed. Uses a real case study with actual numbers.</p>
+<p><strong>Key insight for students:</strong> A factory doesn’t always run at full capacity to make one shirt. The scaling vector tells you the exact fraction of each step that is needed — and that fraction is what drives the final impact number.</p>
+<hr>
+</section>
 <section id="technosphere-and-ecosphere" class="level3">
 <h3 class="anchored" data-anchor-id="technosphere-and-ecosphere"><code>technosphere-and-ecosphere</code> ✅</h3>
 <p>The supply chain lives entirely in the human-made world (the technosphere — factories, farms, energy grids, products). The natural world (the ecosphere — air, water, soil, climate) sits outside it. LCA is really about what <em>crosses the boundary between the two</em>: emissions flow out of the technosphere into the ecosphere, and natural resources flow in. These crossing flows are called <strong>elementary flows</strong>, and they are the only things LCA counts as environmental impact. A product moving from one factory to another stays inside the technosphere and is never counted as an environmental impact.</p>
@@ -529,12 +535,6 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p>Students work through a simple two-output example (wool + meat, or cotton lint + cottonseed) using all three methods and see how the allocated footprint for the primary product changes depending on which method is chosen.</p>
 <p><strong>Key insight for students:</strong> The same farm, with the same real-world emissions, can appear to have a wool footprint of 3.2 kg CO₂ eq or 1.8 kg CO₂ eq depending purely on the allocation method chosen. This is one of the biggest sources of disagreement between competing LCA studies of the same product.</p>
-<hr>
-</section>
-<section id="scaling-vector" class="level3">
-<h3 class="anchored" data-anchor-id="scaling-vector"><code>scaling-vector</code> ✅</h3>
-<p>How much each process in the supply chain must run to deliver exactly one functional unit. Students work through the calculation using plain division, not matrix algebra — starting from the finished product and working backwards through the supply chain to find how much of each upstream process is needed. Uses a real case study with actual numbers.</p>
-<p><strong>Key insight for students:</strong> A factory doesn’t always run at full capacity to make one shirt. The scaling vector tells you the exact fraction of each step that is needed — and that fraction is what drives the final impact number.</p>
 <hr>
 </section>
 <section id="phase-3-impact-assessment" class="level3">
