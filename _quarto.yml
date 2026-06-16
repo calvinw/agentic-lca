@@ -90,19 +90,19 @@ website:
       contents:
         - text: Overview
           href: plan/index.md
-        - text: "BAFU and Methods Pack"
+        - text: "BAFU_AND_METHODS_PACK"
           href: plan/PLAN_BAFU_AND_METHODS_PACK.md
-        - text: "Production LCIA LCA Commons TRACI"
+        - text: "PRODUCTION_LCIA_LCA_COMMONS_TRACI"
           href: plan/PLAN_PRODUCTION_LCIA_LCA_COMMONS_TRACI.md
-        - text: "Production LCIA Recipe"
+        - text: "PRODUCTION_LCIA_RECIPE"
           href: plan/PLAN_PRODUCTION_LCIA_RECIPE.md
-        - text: "Reference Examples"
+        - text: "REFERENCE_EXAMPLES"
           href: plan/PLAN_REFERENCE_EXAMPLES.md
-        - text: "Remixable LCAS"
+        - text: "REMIXABLE_LCAS"
           href: plan/PLAN_REMIXABLE_LCAS.md
-        - text: "Run LCA Skill LCIA and Databases"
+        - text: "RUN_LCA_SKILL_LCIA_AND_DATABASES"
           href: plan/PLAN_RUN_LCA_SKILL_LCIA_AND_DATABASES.md
-        - text: "Skill Recommendations"
+        - text: "SKILL_RECOMMENDATIONS"
           href: plan/PLAN_SKILL_RECOMMENDATIONS.md
 
 format:
