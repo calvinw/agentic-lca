@@ -145,7 +145,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../skills/what-is-lca.html" class="sidebar-item-text sidebar-link">
+  <a href="../#" class="sidebar-item-text sidebar-link">
  <span class="menu-text">(.md)</span></a>
   </div>
 </li>
@@ -157,7 +157,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../skills/system-boundary.html" class="sidebar-item-text sidebar-link">
+  <a href="../#" class="sidebar-item-text sidebar-link">
  <span class="menu-text">(.md)</span></a>
   </div>
 </li>
@@ -169,7 +169,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../skills/life-cycle-stages.html" class="sidebar-item-text sidebar-link">
+  <a href="../#" class="sidebar-item-text sidebar-link">
  <span class="menu-text">(.md)</span></a>
   </div>
 </li>
@@ -181,7 +181,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../skills/goal-and-scope.html" class="sidebar-item-text sidebar-link">
+  <a href="../#" class="sidebar-item-text sidebar-link">
  <span class="menu-text">(.md)</span></a>
   </div>
 </li>
@@ -193,7 +193,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../skills/functional-unit.html" class="sidebar-item-text sidebar-link">
+  <a href="../#" class="sidebar-item-text sidebar-link">
  <span class="menu-text">(.md)</span></a>
   </div>
 </li>
@@ -205,7 +205,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../skills/supply-chain.html" class="sidebar-item-text sidebar-link">
+  <a href="../#" class="sidebar-item-text sidebar-link">
  <span class="menu-text">(.md)</span></a>
   </div>
 </li>
@@ -217,7 +217,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../skills/technosphere-and-ecosphere.html" class="sidebar-item-text sidebar-link">
+  <a href="../#" class="sidebar-item-text sidebar-link">
  <span class="menu-text">(.md)</span></a>
   </div>
 </li>
@@ -229,7 +229,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../skills/life-cycle-inventory.html" class="sidebar-item-text sidebar-link">
+  <a href="../#" class="sidebar-item-text sidebar-link">
  <span class="menu-text">(.md)</span></a>
   </div>
 </li>
@@ -241,7 +241,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../skills/scaling-vector.html" class="sidebar-item-text sidebar-link">
+  <a href="../#" class="sidebar-item-text sidebar-link">
  <span class="menu-text">(.md)</span></a>
   </div>
 </li>
@@ -253,7 +253,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../skills/what-is-impact-assessment.html" class="sidebar-item-text sidebar-link">
+  <a href="../#" class="sidebar-item-text sidebar-link">
  <span class="menu-text">(.md)</span></a>
   </div>
 </li>
@@ -265,7 +265,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../skills/impact-characterization.html" class="sidebar-item-text sidebar-link">
+  <a href="../#" class="sidebar-item-text sidebar-link">
  <span class="menu-text">(.md)</span></a>
   </div>
 </li>
@@ -277,7 +277,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../skills/damage-characterization.html" class="sidebar-item-text sidebar-link">
+  <a href="../#" class="sidebar-item-text sidebar-link">
  <span class="menu-text">(.md)</span></a>
   </div>
 </li>
@@ -289,7 +289,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../skills/run-lca.html" class="sidebar-item-text sidebar-link">
+  <a href="../#" class="sidebar-item-text sidebar-link">
  <span class="menu-text">(.md)</span></a>
   </div>
 </li>
@@ -301,7 +301,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../skills/lca-from-url.html" class="sidebar-item-text sidebar-link">
+  <a href="../#" class="sidebar-item-text sidebar-link">
  <span class="menu-text">(.md)</span></a>
   </div>
 </li>
@@ -344,14 +344,19 @@ document.addEventListener('DOMContentLoaded', function () {
     if (!link || link.textContent.trim() !== '(.md)') return;
     const prevItem = items[i - 1];
     if (!prevItem) return;
+    const prevLink = prevItem.querySelector('a.sidebar-item-text');
+    if (!prevLink) return;
+    const prevHref = prevLink.getAttribute('href');
+    const match = prevHref.match(/skills\/(.+)\.html/);
+    if (!match) return;
+    const skillName = match[1];
+    if (isGitHubPages) {
+      link.href = 'https://github.com/calvinw/agentic-lca/blob/main/.skillshare/skills/' + skillName + '/SKILL.md';
+    } else {
+      link.href = prevHref.replace('.html', '.md');
+    }
     const prevContainer = prevItem.querySelector('.sidebar-item-container');
     if (!prevContainer) return;
-    if (isGitHubPages) {
-      const match = link.getAttribute('href').match(/skills\/(.+)\.md$/);
-      if (match) {
-        link.href = 'https://github.com/calvinw/agentic-lca/blob/main/.skillshare/skills/' + match[1] + '/SKILL.md';
-      }
-    }
     prevContainer.style.display = 'block';
     link.style.display = 'inline';
     link.style.marginLeft = '4px';

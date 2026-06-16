@@ -422,14 +422,19 @@ document.addEventListener('DOMContentLoaded', function () {
     if (!link || link.textContent.trim() !== '(.md)') return;
     const prevItem = items[i - 1];
     if (!prevItem) return;
+    const prevLink = prevItem.querySelector('a.sidebar-item-text');
+    if (!prevLink) return;
+    const prevHref = prevLink.getAttribute('href');
+    const match = prevHref.match(/skills\/(.+)\.html/);
+    if (!match) return;
+    const skillName = match[1];
+    if (isGitHubPages) {
+      link.href = 'https://github.com/calvinw/agentic-lca/blob/main/.skillshare/skills/' + skillName + '/SKILL.md';
+    } else {
+      link.href = prevHref.replace('.html', '.md');
+    }
     const prevContainer = prevItem.querySelector('.sidebar-item-container');
     if (!prevContainer) return;
-    if (isGitHubPages) {
-      const match = link.getAttribute('href').match(/skills\/(.+)\.md$/);
-      if (match) {
-        link.href = 'https://github.com/calvinw/agentic-lca/blob/main/.skillshare/skills/' + match[1] + '/SKILL.md';
-      }
-    }
     prevContainer.style.display = 'block';
     link.style.display = 'inline';
     link.style.marginLeft = '4px';
