@@ -53,7 +53,28 @@ plan_files = sorted(PLANS_DIR.glob("PLAN_*.md"))
 # Collect skill files and copy them into skills/ for rendering
 SKILLS_OUT = ROOT / "skills"
 SKILLS_OUT.mkdir(exist_ok=True)
-skill_files = sorted(SKILLS_DIR.glob("*/SKILL.md"))
+
+SKILL_ORDER = [
+    "what-is-lca",
+    "system-boundary",
+    "life-cycle-stages",
+    "goal-and-scope",
+    "functional-unit",
+    "supply-chain",
+    "technosphere-and-ecosphere",
+    "life-cycle-inventory",
+    "scaling-vector",
+    "impact-assessment",
+    "run-lca",
+    "lca-from-url",
+    "skill-creator",
+]
+
+all_skill_files = {f.parent.name: f for f in SKILLS_DIR.glob("*/SKILL.md")}
+ordered_names = [n for n in SKILL_ORDER if n in all_skill_files]
+remaining = sorted(n for n in all_skill_files if n not in SKILL_ORDER)
+skill_files = [all_skill_files[n] for n in ordered_names + remaining]
+
 skill_copies = []
 for f in skill_files:
     dest = SKILLS_OUT / f"{f.parent.name}.md"
