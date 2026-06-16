@@ -1,0 +1,1598 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>plan_setup_quarto_docs – Agentic LCA</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-9e2e28d2b37064d6e675679c7da39b07.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../custom.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Agentic LCA</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../skills_sessions/index.html"> 
+<span class="menu-text">Sessions</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../plan/index.html" aria-current="page"> 
+<span class="menu-text">Plans</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../skills/index.html"> 
+<span class="menu-text">Skills</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../plan/PLAN_SETUP_QUARTO_DOCS.html">SETUP_QUARTO_DOCS</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../plan/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../plan/PLAN_BAFU_AND_METHODS_PACK.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">BAFU_AND_METHODS_PACK</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../plan/PLAN_PRODUCTION_LCIA_LCA_COMMONS_TRACI.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PRODUCTION_LCIA_LCA_COMMONS_TRACI</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../plan/PLAN_PRODUCTION_LCIA_RECIPE.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PRODUCTION_LCIA_RECIPE</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../plan/PLAN_REFERENCE_EXAMPLES.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">REFERENCE_EXAMPLES</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../plan/PLAN_REMIXABLE_LCAS.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">REMIXABLE_LCAS</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../plan/PLAN_RUN_LCA_SKILL_LCIA_AND_DATABASES.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">RUN_LCA_SKILL_LCIA_AND_DATABASES</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../plan/PLAN_SETUP_QUARTO_DOCS.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">SETUP_QUARTO_DOCS</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../plan/PLAN_SKILL_RECOMMENDATIONS.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SKILL_RECOMMENDATIONS</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#plan-set-up-quarto_docs-for-a-new-repository" id="toc-plan-set-up-quarto_docs-for-a-new-repository" class="nav-link active" data-scroll-target="#plan-set-up-quarto_docs-for-a-new-repository">PLAN: Set Up <code>quarto_docs/</code> for a New Repository</a>
+  <ul class="collapse">
+  <li><a href="#source-folders-required-in-the-repo" id="toc-source-folders-required-in-the-repo" class="nav-link" data-scroll-target="#source-folders-required-in-the-repo">1. Source Folders Required in the Repo</a>
+  <ul class="collapse">
+  <li><a href="#session-file-naming-convention" id="toc-session-file-naming-convention" class="nav-link" data-scroll-target="#session-file-naming-convention">Session file naming convention</a></li>
+  </ul></li>
+  <li><a href="#files-to-create-in-quarto_docs" id="toc-files-to-create-in-quarto_docs" class="nav-link" data-scroll-target="#files-to-create-in-quarto_docs">2. Files to Create in <code>quarto_docs/</code></a>
+  <ul class="collapse">
+  <li><a href="#a.-static-files-create-once-edit-only-to-change-contentstyle" id="toc-a.-static-files-create-once-edit-only-to-change-contentstyle" class="nav-link" data-scroll-target="#a.-static-files-create-once-edit-only-to-change-contentstyle">2a. Static files (create once, edit only to change content/style)</a></li>
+  <li><a href="#b.-generator-scripts-create-once-run-on-every-data-change" id="toc-b.-generator-scripts-create-once-run-on-every-data-change" class="nav-link" data-scroll-target="#b.-generator-scripts-create-once-run-on-every-data-change">2b. Generator scripts (create once, run on every data change)</a></li>
+  <li><a href="#c.-generated-files-created-by-scripts-do-not-edit-manually" id="toc-c.-generated-files-created-by-scripts-do-not-edit-manually" class="nav-link" data-scroll-target="#c.-generated-files-created-by-scripts-do-not-edit-manually">2c. Generated files (created by scripts, do not edit manually)</a></li>
+  </ul></li>
+  <li><a href="#step-by-step-setup-instructions" id="toc-step-by-step-setup-instructions" class="nav-link" data-scroll-target="#step-by-step-setup-instructions">3. Step-by-Step Setup Instructions</a>
+  <ul class="collapse">
+  <li><a href="#step-1-create-quarto_docs-directory-and-static-files" id="toc-step-1-create-quarto_docs-directory-and-static-files" class="nav-link" data-scroll-target="#step-1-create-quarto_docs-directory-and-static-files">Step 1: Create <code>quarto_docs/</code> directory and static files</a></li>
+  <li><a href="#step-2-create-makefile" id="toc-step-2-create-makefile" class="nav-link" data-scroll-target="#step-2-create-makefile">Step 2: Create <code>Makefile</code></a></li>
+  <li><a href="#step-3-create-sidebar-tweaks.html" id="toc-step-3-create-sidebar-tweaks.html" class="nav-link" data-scroll-target="#step-3-create-sidebar-tweaks.html">Step 3: Create <code>sidebar-tweaks.html</code></a></li>
+  <li><a href="#step-4-create-generator-scripts" id="toc-step-4-create-generator-scripts" class="nav-link" data-scroll-target="#step-4-create-generator-scripts">Step 4: Create generator scripts</a></li>
+  <li><a href="#step-5-maintain-the-skill_order-list-consistently" id="toc-step-5-maintain-the-skill_order-list-consistently" class="nav-link" data-scroll-target="#step-5-maintain-the-skill_order-list-consistently">Step 5: Maintain the <code>SKILL_ORDER</code> list consistently</a></li>
+  <li><a href="#step-6-verify-skills_references-relative-paths-in-session-files" id="toc-step-6-verify-skills_references-relative-paths-in-session-files" class="nav-link" data-scroll-target="#step-6-verify-skills_references-relative-paths-in-session-files">Step 6: Verify <code>skills_references/</code> relative paths in session files</a></li>
+  <li><a href="#step-7-create-github-actions-workflow" id="toc-step-7-create-github-actions-workflow" class="nav-link" data-scroll-target="#step-7-create-github-actions-workflow">Step 7: Create GitHub Actions workflow</a></li>
+  <li><a href="#step-8-enable-github-pages" id="toc-step-8-enable-github-pages" class="nav-link" data-scroll-target="#step-8-enable-github-pages">Step 8: Enable GitHub Pages</a></li>
+  <li><a href="#step-9-run-the-generators-and-test-locally" id="toc-step-9-run-the-generators-and-test-locally" class="nav-link" data-scroll-target="#step-9-run-the-generators-and-test-locally">Step 9: Run the generators and test locally</a></li>
+  </ul></li>
+  <li><a href="#appendix-a-full-script-contents" id="toc-appendix-a-full-script-contents" class="nav-link" data-scroll-target="#appendix-a-full-script-contents">4. Appendix A: Full Script Contents</a>
+  <ul class="collapse">
+  <li><a href="#quarto_docsgenerate_quarto_yml.py" id="toc-quarto_docsgenerate_quarto_yml.py" class="nav-link" data-scroll-target="#quarto_docsgenerate_quarto_yml.py"><code>quarto_docs/generate_quarto_yml.py</code></a></li>
+  <li><a href="#skills_sessionsgenerate_sessions.py" id="toc-skills_sessionsgenerate_sessions.py" class="nav-link" data-scroll-target="#skills_sessionsgenerate_sessions.py"><code>skills_sessions/generate_sessions.py</code></a></li>
+  <li><a href="#plangenerate_plans.py" id="toc-plangenerate_plans.py" class="nav-link" data-scroll-target="#plangenerate_plans.py"><code>plan/generate_plans.py</code></a></li>
+  <li><a href="#lca_analysisgenerate_analyses.py" id="toc-lca_analysisgenerate_analyses.py" class="nav-link" data-scroll-target="#lca_analysisgenerate_analyses.py"><code>lca_analysis/generate_analyses.py</code></a></li>
+  </ul></li>
+  <li><a href="#summary-what-to-customise-per-repository" id="toc-summary-what-to-customise-per-repository" class="nav-link" data-scroll-target="#summary-what-to-customise-per-repository">5. Summary: What to Customise Per Repository</a></li>
+  <li><a href="#key-gotchas" id="toc-key-gotchas" class="nav-link" data-scroll-target="#key-gotchas">6. Key Gotchas</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+<section id="plan-set-up-quarto_docs-for-a-new-repository" class="level1">
+<h1>PLAN: Set Up <code>quarto_docs/</code> for a New Repository</h1>
+<p>This plan tells another LLM (or a human) how to recreate the <code>quarto_docs/</code> website infrastructure in a new repository. The goal is a Quarto website that:</p>
+<ul>
+<li>Has <strong>Sessions</strong>, <strong>Plans</strong>, and <strong>Skills</strong> tabs in the navbar</li>
+<li>Has a <strong>Sessions</strong> sidebar grouped by skill name, with individual session transcripts</li>
+<li>Has a <strong>Plans</strong> sidebar listing planning documents</li>
+<li>Has a <strong>Skills</strong> sidebar listing AI skill definitions, each with a <code>(.md)</code> link pointing to the original <code>SKILL.md</code> on GitHub</li>
+<li>Includes <code>skills_references/</code> (LCA case-study data with diagrams) as a resource</li>
+<li>Deploys automatically via GitHub Actions to GitHub Pages</li>
+</ul>
+<hr>
+<section id="source-folders-required-in-the-repo" class="level2">
+<h2 class="anchored" data-anchor-id="source-folders-required-in-the-repo">1. Source Folders Required in the Repo</h2>
+<p>These must exist <strong>before</strong> the generator scripts run. They are the canonical data sources:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Folder</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>.skillshare/skills/&lt;name&gt;/SKILL.md</code></td>
+<td>AI teaching skill definitions (source of truth)</td>
+</tr>
+<tr class="even">
+<td><code>skills_sessions/&lt;skill&gt;/&lt;session&gt;.md</code></td>
+<td>Session transcripts grouped by skill</td>
+</tr>
+<tr class="odd">
+<td><code>skills_sessions/index.md</code></td>
+<td>Sessions landing page</td>
+</tr>
+<tr class="even">
+<td><code>plan/PLAN_*.md</code></td>
+<td>Planning documents</td>
+</tr>
+<tr class="odd">
+<td><code>plan/index.md</code></td>
+<td>Plans landing page</td>
+</tr>
+<tr class="even">
+<td><code>skills_references/&lt;product&gt;/</code></td>
+<td>LCA case-study data (recipe cards, diagrams, results)</td>
+</tr>
+<tr class="odd">
+<td><code>lca_analysis/&lt;product&gt;/</code></td>
+<td>LCA analysis folders with <code>recipe_card.md</code></td>
+</tr>
+</tbody>
+</table>
+<p>If any folder or file does not exist, the generator scripts skip it gracefully.</p>
+<section id="session-file-naming-convention" class="level3">
+<h3 class="anchored" data-anchor-id="session-file-naming-convention">Session file naming convention</h3>
+<p>Session files follow this pattern (see plan <code>PLAN_REFERENCE_EXAMPLES.md</code> for details):</p>
+<pre><code>skills_sessions/&lt;skill-name&gt;/&lt;skill-name&gt;-&lt;case_study&gt;-v&lt;version&gt;-&lt;student&gt;-&lt;model&gt;-session&lt;n&gt;.md</code></pre>
+<p>Each session file <strong>must</strong> have the slash command as its first line:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># /&lt;skill-name&gt; [case_study]</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>And a header block with metadata:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>**Skill version:** <span class="dt">&lt;</span><span class="kw">version</span><span class="dt">&gt;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>**Student:** <span class="dt">&lt;</span><span class="kw">name</span><span class="dt">&gt;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>**Model:** <span class="dt">&lt;</span><span class="kw">model-name</span><span class="dt">&gt;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>**Date:** <span class="dt">&lt;</span><span class="kw">date</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Images in session files reference <code>skills_references/</code> with this relative path (works from within <code>quarto_docs/skills_sessions/&lt;skill&gt;/</code>):</p>
+<pre><code>../../skills_references/&lt;product&gt;/&lt;file&gt;.svg</code></pre>
+<hr>
+</section>
+</section>
+<section id="files-to-create-in-quarto_docs" class="level2">
+<h2 class="anchored" data-anchor-id="files-to-create-in-quarto_docs">2. Files to Create in <code>quarto_docs/</code></h2>
+<section id="a.-static-files-create-once-edit-only-to-change-contentstyle" class="level3">
+<h3 class="anchored" data-anchor-id="a.-static-files-create-once-edit-only-to-change-contentstyle">2a. Static files (create once, edit only to change content/style)</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>File</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>quarto_docs/index.md</code></td>
+<td>Home page content</td>
+</tr>
+<tr class="even">
+<td><code>quarto_docs/custom.css</code></td>
+<td>Sidebar font-size tweaks</td>
+</tr>
+<tr class="odd">
+<td><code>quarto_docs/sidebar-tweaks.html</code></td>
+<td>Rewrites <code>(.md)</code> links to GitHub blob URLs or local <code>.md</code> paths</td>
+</tr>
+<tr class="even">
+<td><code>quarto_docs/Makefile</code></td>
+<td><code>regenerate</code>, <code>render</code>, <code>serve</code>, <code>clean</code> targets</td>
+</tr>
+<tr class="odd">
+<td><code>quarto_docs/.gitignore</code></td>
+<td>Ignores generated output</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="b.-generator-scripts-create-once-run-on-every-data-change" class="level3">
+<h3 class="anchored" data-anchor-id="b.-generator-scripts-create-once-run-on-every-data-change">2b. Generator scripts (create once, run on every data change)</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>File</th>
+<th>Source location (in original repo)</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>quarto_docs/generate_quarto_yml.py</code></td>
+<td><code>quarto_docs/generate_quarto_yml.py</code></td>
+<td>Copies source files into <code>quarto_docs/</code>, writes <code>_quarto.yml</code></td>
+</tr>
+<tr class="even">
+<td><code>skills_sessions/generate_sessions.py</code></td>
+<td><code>skills_sessions/generate_sessions.py</code></td>
+<td>Scans sessions, writes <code>quarto_docs/sessions.json</code></td>
+</tr>
+<tr class="odd">
+<td><code>plan/generate_plans.py</code></td>
+<td><code>plan/generate_plans.py</code></td>
+<td>Scans plans, writes <code>quarto_docs/plans.json</code></td>
+</tr>
+<tr class="even">
+<td><code>lca_analysis/generate_analyses.py</code></td>
+<td><code>lca_analysis/generate_analyses.py</code></td>
+<td>Scans analyses, writes <code>quarto_docs/analyses.json</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="c.-generated-files-created-by-scripts-do-not-edit-manually" class="level3">
+<h3 class="anchored" data-anchor-id="c.-generated-files-created-by-scripts-do-not-edit-manually">2c. Generated files (created by scripts, do not edit manually)</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>File</th>
+<th>Created by</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>quarto_docs/_quarto.yml</code></td>
+<td><code>generate_quarto_yml.py</code></td>
+</tr>
+<tr class="even">
+<td><code>quarto_docs/skills/*.md</code></td>
+<td><code>generate_quarto_yml.py</code> (copied from <code>.skillshare/skills/</code>)</td>
+</tr>
+<tr class="odd">
+<td><code>quarto_docs/skills/index.md</code></td>
+<td><code>generate_quarto_yml.py</code> (written inline)</td>
+</tr>
+<tr class="even">
+<td><code>quarto_docs/skills_sessions/*/*.md</code></td>
+<td><code>generate_quarto_yml.py</code> (copied from <code>skills_sessions/</code>)</td>
+</tr>
+<tr class="odd">
+<td><code>quarto_docs/skills_sessions/index.md</code></td>
+<td><code>generate_quarto_yml.py</code> (copied from <code>skills_sessions/index.md</code>)</td>
+</tr>
+<tr class="even">
+<td><code>quarto_docs/plan/*.md</code></td>
+<td><code>generate_quarto_yml.py</code> (copied from <code>plan/</code>)</td>
+</tr>
+<tr class="odd">
+<td><code>quarto_docs/plan/index.md</code></td>
+<td><code>generate_quarto_yml.py</code> (copied from <code>plan/index.md</code>)</td>
+</tr>
+<tr class="even">
+<td><code>quarto_docs/skills_references/</code></td>
+<td><code>generate_quarto_yml.py</code> (copied from <code>skills_references/</code>)</td>
+</tr>
+<tr class="odd">
+<td><code>quarto_docs/sessions.json</code></td>
+<td><code>skills_sessions/generate_sessions.py</code></td>
+</tr>
+<tr class="even">
+<td><code>quarto_docs/plans.json</code></td>
+<td><code>plan/generate_plans.py</code></td>
+</tr>
+<tr class="odd">
+<td><code>quarto_docs/analyses.json</code></td>
+<td><code>lca_analysis/generate_analyses.py</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+</section>
+<section id="step-by-step-setup-instructions" class="level2">
+<h2 class="anchored" data-anchor-id="step-by-step-setup-instructions">3. Step-by-Step Setup Instructions</h2>
+<section id="step-1-create-quarto_docs-directory-and-static-files" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-create-quarto_docs-directory-and-static-files">Step 1: Create <code>quarto_docs/</code> directory and static files</h3>
+<p>Create the folder:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> quarto_docs</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Create <code>quarto_docs/index.md</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Agentic LCA</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>Resources for Life Cycle Assessment at FIT.</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Sessions</span><span class="co">](skills_sessions/index.md)</span> — AI-guided teaching conversations, organised by LCA skill</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Plans</span><span class="co">](plan/index.md)</span> — Project and research planning documents</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Skills</span><span class="co">](skills/index.md)</span> — AI teaching skill definitions</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="fu">## Contributors</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Calvin Williamson (<span class="co">[</span><span class="ot">calvinw</span><span class="co">](https://github.com/calvinw)</span>)</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Junghyun Choi (<span class="co">[</span><span class="ot">elenachoi1</span><span class="co">](https://github.com/elenachoi1)</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><em>(Update the title and contributors for the new repo.)</em></p>
+<p>Create <code>quarto_docs/custom.css</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#quarto-sidebar</span> <span class="fu">.sidebar-item-text</span><span class="op">,</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="pp">#quarto-sidebar</span> <span class="fu">.sidebar-link</span><span class="op">,</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="pp">#quarto-sidebar</span> <span class="fu">.sidebar-section</span> <span class="fu">.sidebar-item</span> {</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">font-size</span><span class="ch">:</span> <span class="dv">0.8</span><span class="dt">rem</span><span class="op">;</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Create <code>quarto_docs/.gitignore</code>:</p>
+<pre><code>/.quarto/
+**/*.quarto_ipynb
+site_libs/
+skills/*.html
+plan/*.html
+skills_sessions/**/*.html</code></pre>
+</section>
+<section id="step-2-create-makefile" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-create-makefile">Step 2: Create <code>Makefile</code></h3>
+<p><code>quarto_docs/Makefile</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode makefile code-with-copy"><code class="sourceCode makefile"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ot">.PHONY:</span><span class="dt"> all regenerate render serve preview clean</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="dv">all:</span><span class="dt"> regenerate render</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="dv">regenerate:</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="er">    </span>python3 generate_quarto_yml.py</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>    python3 ../skills_sessions/generate_sessions.py</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>    python3 ../plan/generate_plans.py</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>    python3 ../lca_analysis/generate_analyses.py</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="dv">render:</span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="er">    </span>quarto render</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a><span class="dv">serve:</span><span class="dt"> render</span></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a><span class="er">    </span>cp skills/*.md _site/skills/</span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>    python3 -m http.server 8080 --directory _site</span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>    rm -f _site/skills/*.md</span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a><span class="dv">preview:</span><span class="dt"> serve</span></span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a><span class="dv">clean:</span></span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a><span class="er">    </span>rm -rf _site</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="step-3-create-sidebar-tweaks.html" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-create-sidebar-tweaks.html">Step 3: Create <code>sidebar-tweaks.html</code></h3>
+<p><strong>This file requires customisation.</strong> Create <code>quarto_docs/sidebar-tweaks.html</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">script</span><span class="dt">&gt;</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="bu">document</span><span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">'DOMContentLoaded'</span><span class="op">,</span> <span class="kw">function</span> () {</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">var</span> sidebar <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">'quarto-sidebar'</span>)<span class="op">;</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="op">!</span>sidebar) <span class="cf">return</span><span class="op">;</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">var</span> isGitHubPages <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="at">location</span><span class="op">.</span><span class="at">hostname</span><span class="op">.</span><span class="fu">includes</span>(<span class="st">'github.io'</span>)<span class="op">;</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> items <span class="op">=</span> <span class="bu">Array</span><span class="op">.</span><span class="fu">from</span>(sidebar<span class="op">.</span><span class="fu">querySelectorAll</span>(<span class="st">'li.sidebar-item'</span>))<span class="op">;</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>  items<span class="op">.</span><span class="fu">forEach</span>(<span class="kw">function</span> (item<span class="op">,</span> i) {</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> link <span class="op">=</span> item<span class="op">.</span><span class="fu">querySelector</span>(<span class="st">'a.sidebar-item-text'</span>)<span class="op">;</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (<span class="op">!</span>link <span class="op">||</span> link<span class="op">.</span><span class="at">textContent</span><span class="op">.</span><span class="fu">trim</span>() <span class="op">!==</span> <span class="st">'(.md)'</span>) <span class="cf">return</span><span class="op">;</span></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> prevItem <span class="op">=</span> items[i <span class="op">-</span> <span class="dv">1</span>]<span class="op">;</span></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (<span class="op">!</span>prevItem) <span class="cf">return</span><span class="op">;</span></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> prevLink <span class="op">=</span> prevItem<span class="op">.</span><span class="fu">querySelector</span>(<span class="st">'a.sidebar-item-text'</span>)<span class="op">;</span></span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (<span class="op">!</span>prevLink) <span class="cf">return</span><span class="op">;</span></span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> prevHref <span class="op">=</span> prevLink<span class="op">.</span><span class="fu">getAttribute</span>(<span class="st">'href'</span>)<span class="op">;</span></span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> match <span class="op">=</span> prevHref<span class="op">.</span><span class="fu">match</span>(<span class="ss">/skills</span><span class="sc">\/(</span><span class="ss">.</span><span class="sc">+)\.</span><span class="ss">html/</span>)<span class="op">;</span></span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (<span class="op">!</span>match) <span class="cf">return</span><span class="op">;</span></span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> skillName <span class="op">=</span> match[<span class="dv">1</span>]<span class="op">;</span></span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (isGitHubPages) {</span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>      link<span class="op">.</span><span class="at">href</span> <span class="op">=</span> <span class="st">'https://github.com/YOUR_ORG/YOUR_REPO/blob/main/.skillshare/skills/'</span> <span class="op">+</span> skillName <span class="op">+</span> <span class="st">'/SKILL.md'</span><span class="op">;</span></span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> {</span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>      link<span class="op">.</span><span class="at">href</span> <span class="op">=</span> prevHref<span class="op">.</span><span class="fu">replace</span>(<span class="st">'.html'</span><span class="op">,</span> <span class="st">'.md'</span>)<span class="op">;</span></span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> prevContainer <span class="op">=</span> prevItem<span class="op">.</span><span class="fu">querySelector</span>(<span class="st">'.sidebar-item-container'</span>)<span class="op">;</span></span>
+<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (<span class="op">!</span>prevContainer) <span class="cf">return</span><span class="op">;</span></span>
+<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a>    prevContainer<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">display</span> <span class="op">=</span> <span class="st">'block'</span><span class="op">;</span></span>
+<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a>    link<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">display</span> <span class="op">=</span> <span class="st">'inline'</span><span class="op">;</span></span>
+<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a>    link<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">marginLeft</span> <span class="op">=</span> <span class="st">'4px'</span><span class="op">;</span></span>
+<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a>    link<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">fontSize</span> <span class="op">=</span> <span class="st">'0.72em'</span><span class="op">;</span></span>
+<span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a>    link<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">opacity</span> <span class="op">=</span> <span class="st">'0.55'</span><span class="op">;</span></span>
+<span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a>    link<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">fontWeight</span> <span class="op">=</span> <span class="st">'normal'</span><span class="op">;</span></span>
+<span id="cb10-31"><a href="#cb10-31" aria-hidden="true" tabindex="-1"></a>    prevContainer<span class="op">.</span><span class="fu">appendChild</span>(link)<span class="op">;</span></span>
+<span id="cb10-32"><a href="#cb10-32" aria-hidden="true" tabindex="-1"></a>    item<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">display</span> <span class="op">=</span> <span class="st">'none'</span><span class="op">;</span></span>
+<span id="cb10-33"><a href="#cb10-33" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span>
+<span id="cb10-34"><a href="#cb10-34" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span>
+<span id="cb10-35"><a href="#cb10-35" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Crucial:</strong> Replace <code>YOUR_ORG/YOUR_REPO</code> on the GitHub URL line with the actual GitHub organisation and repository name.</p>
+</section>
+<section id="step-4-create-generator-scripts" class="level3">
+<h3 class="anchored" data-anchor-id="step-4-create-generator-scripts">Step 4: Create generator scripts</h3>
+<p>Create these four generator scripts. Copy them from their original locations:</p>
+<ol type="1">
+<li><p><strong><code>quarto_docs/generate_quarto_yml.py</code></strong> — the main generator. It scans <code>.skillshare/skills/</code>, <code>skills_sessions/</code>, <code>plan/</code>, and <code>skills_references/</code>, copies files into <code>quarto_docs/</code>, and writes <code>_quarto.yml</code>.</p></li>
+<li><p><strong><code>skills_sessions/generate_sessions.py</code></strong> — scans <code>skills_sessions/</code> for session transcripts and writes <code>quarto_docs/sessions.json</code>.</p></li>
+<li><p><strong><code>plan/generate_plans.py</code></strong> — scans <code>plan/</code> for <code>PLAN_*.md</code> files and writes <code>quarto_docs/plans.json</code>.</p></li>
+<li><p><strong><code>lca_analysis/generate_analyses.py</code></strong> — scans <code>lca_analysis/</code> for <code>recipe_card.md</code> files and writes <code>quarto_docs/analyses.json</code>.</p></li>
+</ol>
+<p>The full contents of these scripts are in Appendix A below.</p>
+</section>
+<section id="step-5-maintain-the-skill_order-list-consistently" class="level3">
+<h3 class="anchored" data-anchor-id="step-5-maintain-the-skill_order-list-consistently">Step 5: Maintain the <code>SKILL_ORDER</code> list consistently</h3>
+<p>Both <code>generate_quarto_yml.py</code> and <code>generate_sessions.py</code> contain an identical <code>SKILL_ORDER</code> list:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>SKILL_ORDER <span class="op">=</span> [</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"what-is-lca"</span>, <span class="st">"system-boundary"</span>, <span class="st">"life-cycle-stages"</span>, <span class="st">"goal-and-scope"</span>,</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"functional-unit"</span>, <span class="st">"supply-chain"</span>, <span class="st">"technosphere-and-ecosphere"</span>,</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"life-cycle-inventory"</span>, <span class="st">"scaling-vector"</span>, <span class="st">"what-is-impact-assessment"</span>,</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"impact-characterization"</span>, <span class="st">"damage-characterization"</span>, <span class="st">"run-lca"</span>,</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"lca-from-url"</span>, <span class="st">"skill-creator"</span>,</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>These two lists <strong>must be kept identical</strong> to ensure the sessions sidebar and the skills sidebar follow the same order. Update both files when adding or removing a skill.</p>
+</section>
+<section id="step-6-verify-skills_references-relative-paths-in-session-files" class="level3">
+<h3 class="anchored" data-anchor-id="step-6-verify-skills_references-relative-paths-in-session-files">Step 6: Verify <code>skills_references/</code> relative paths in session files</h3>
+<p>Every session file that embeds a supply chain diagram uses this relative path (from within <code>quarto_docs/skills_sessions/&lt;skill&gt;/&lt;session&gt;.md</code>):</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>../../skills_references/<span class="dt">&lt;</span><span class="kw">product</span><span class="dt">&gt;</span>/<span class="dt">&lt;</span><span class="kw">file</span><span class="dt">&gt;</span>.svg</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>When <code>generate_quarto_yml.py</code> copies session files into <code>quarto_docs/skills_sessions/&lt;skill&gt;/</code>, the <code>skills_references/</code> directory sits at <code>quarto_docs/skills_references/</code> — exactly two <code>../</code> levels up. So the path <code>../../skills_references/...</code> resolves correctly from any session file at depth 3 (<code>quarto_docs/skills_sessions/&lt;skill&gt;/&lt;file&gt;.md</code>).</p>
+<p>Session files in the source <code>skills_sessions/</code> folder use the same <code>../../</code> prefix. This works because <code>skills_sessions/</code> is at the repo root, and <code>skills_references/</code> is also at the repo root — again exactly two <code>../</code> levels up from <code>skills_sessions/&lt;skill&gt;/&lt;file&gt;.md</code>.</p>
+</section>
+<section id="step-7-create-github-actions-workflow" class="level3">
+<h3 class="anchored" data-anchor-id="step-7-create-github-actions-workflow">Step 7: Create GitHub Actions workflow</h3>
+<p>Create <code>.github/workflows/deploy-quarto.yml</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">name</span><span class="kw">:</span><span class="at"> Deploy Quarto Site to GitHub Pages</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="fu">on</span><span class="kw">:</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">push</span><span class="kw">:</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">branches</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">main</span><span class="kw">]</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="fu">jobs</span><span class="kw">:</span></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">deploy</span><span class="kw">:</span></span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">runs-on</span><span class="kw">:</span><span class="at"> ubuntu-latest</span></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">permissions</span><span class="kw">:</span></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">contents</span><span class="kw">:</span><span class="at"> write</span></span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">steps</span><span class="kw">:</span></span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> actions/checkout@v4</span></span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">with</span><span class="kw">:</span></span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">fetch-depth</span><span class="kw">:</span><span class="at"> </span><span class="dv">0</span></span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Set up Python</span></span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> actions/setup-python@v5</span></span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">with</span><span class="kw">:</span></span>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">python-version</span><span class="kw">:</span><span class="at"> </span><span class="st">'3.x'</span></span>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Regenerate manifest and nav files</span></span>
+<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a><span class="fu">        run</span><span class="kw">: </span><span class="ch">|</span></span>
+<span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a>          python3 skills_sessions/generate_sessions.py</span>
+<span id="cb13-25"><a href="#cb13-25" aria-hidden="true" tabindex="-1"></a>          python3 plan/generate_plans.py</span>
+<span id="cb13-26"><a href="#cb13-26" aria-hidden="true" tabindex="-1"></a>          python3 quarto_docs/generate_quarto_yml.py</span>
+<span id="cb13-27"><a href="#cb13-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-28"><a href="#cb13-28" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Set up Quarto</span></span>
+<span id="cb13-29"><a href="#cb13-29" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> quarto-dev/quarto-actions/setup@v2</span></span>
+<span id="cb13-30"><a href="#cb13-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-31"><a href="#cb13-31" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Publish to GitHub Pages</span></span>
+<span id="cb13-32"><a href="#cb13-32" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> quarto-dev/quarto-actions/publish@v2</span></span>
+<span id="cb13-33"><a href="#cb13-33" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">with</span><span class="kw">:</span></span>
+<span id="cb13-34"><a href="#cb13-34" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">target</span><span class="kw">:</span><span class="at"> gh-pages</span></span>
+<span id="cb13-35"><a href="#cb13-35" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">path</span><span class="kw">:</span><span class="at"> quarto_docs</span></span>
+<span id="cb13-36"><a href="#cb13-36" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">env</span><span class="kw">:</span></span>
+<span id="cb13-37"><a href="#cb13-37" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">GITHUB_TOKEN</span><span class="kw">:</span><span class="at"> ${{ secrets.GITHUB_TOKEN }}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="step-8-enable-github-pages" class="level3">
+<h3 class="anchored" data-anchor-id="step-8-enable-github-pages">Step 8: Enable GitHub Pages</h3>
+<ol type="1">
+<li>Go to the repository <strong>Settings → Pages</strong></li>
+<li>Under <strong>Source</strong>, select <strong>Deploy from a branch</strong></li>
+<li>Set <strong>Branch</strong> to <code>gh-pages</code> and folder to <code>/ (root)</code></li>
+<li>The first deployment from the GitHub Action will create the <code>gh-pages</code> branch automatically</li>
+</ol>
+</section>
+<section id="step-9-run-the-generators-and-test-locally" class="level3">
+<h3 class="anchored" data-anchor-id="step-9-run-the-generators-and-test-locally">Step 9: Run the generators and test locally</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Regenerate all files</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> quarto_docs</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> generate_quarto_yml.py</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> ../skills_sessions/generate_sessions.py</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> ../plan/generate_plans.py</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> ../lca_analysis/generate_analyses.py</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Render and preview</span></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> serve</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Open <code>http://localhost:8080</code> in a browser.</p>
+<hr>
+</section>
+</section>
+<section id="appendix-a-full-script-contents" class="level2">
+<h2 class="anchored" data-anchor-id="appendix-a-full-script-contents">4. Appendix A: Full Script Contents</h2>
+<section id="quarto_docsgenerate_quarto_yml.py" class="level3">
+<h3 class="anchored" data-anchor-id="quarto_docsgenerate_quarto_yml.py"><code>quarto_docs/generate_quarto_yml.py</code></h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/usr/bin/env python3</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="co">"""Generate quarto_docs/ content and _quarto.yml from current project files."""</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> re</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> shutil</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>ROOT <span class="op">=</span> Path(<span class="va">__file__</span>).parent.parent</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>QUARTO_DIR <span class="op">=</span> Path(<span class="va">__file__</span>).parent</span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>SESSIONS_DIR <span class="op">=</span> ROOT <span class="op">/</span> <span class="st">"skills_sessions"</span></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>PLANS_DIR <span class="op">=</span> ROOT <span class="op">/</span> <span class="st">"plan"</span></span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>SKILLS_DIR <span class="op">=</span> ROOT <span class="op">/</span> <span class="st">".skillshare"</span> <span class="op">/</span> <span class="st">"skills"</span></span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>REFS_DIR <span class="op">=</span> ROOT <span class="op">/</span> <span class="st">"skills_references"</span></span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> skill_title(folder_name):</span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a>    words <span class="op">=</span> folder_name.replace(<span class="st">"-"</span>, <span class="st">" "</span>).split()</span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a>    stop <span class="op">=</span> {<span class="st">"and"</span>, <span class="st">"or"</span>, <span class="st">"of"</span>, <span class="st">"the"</span>, <span class="st">"a"</span>}</span>
+<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">" "</span>.join(</span>
+<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a>        w <span class="cf">if</span> w <span class="kw">in</span> stop <span class="cf">else</span> (w.upper() <span class="cf">if</span> w <span class="op">==</span> <span class="st">"lca"</span> <span class="cf">else</span> w.title())</span>
+<span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> w <span class="kw">in</span> words</span>
+<span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-24"><a href="#cb15-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-25"><a href="#cb15-25" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> session_text(stem, skill_prefix):</span>
+<span id="cb15-26"><a href="#cb15-26" aria-hidden="true" tabindex="-1"></a>    rest <span class="op">=</span> stem[<span class="bu">len</span>(skill_prefix):].lstrip(<span class="st">"-"</span>)</span>
+<span id="cb15-27"><a href="#cb15-27" aria-hidden="true" tabindex="-1"></a>    m <span class="op">=</span> re.match(<span class="vs">r'</span><span class="dv">^</span><span class="kw">(</span><span class="dv">.</span><span class="op">+?</span><span class="kw">)</span><span class="vs">-</span><span class="kw">(</span><span class="vs">v</span><span class="pp">[</span><span class="dv">\d</span><span class="pp">.]</span><span class="op">+</span><span class="kw">)</span><span class="vs">-</span><span class="dv">.</span><span class="op">+</span><span class="vs">-</span><span class="kw">(</span><span class="vs">session</span><span class="dv">\d</span><span class="op">+</span><span class="kw">)</span><span class="dv">$</span><span class="vs">'</span>, rest)</span>
+<span id="cb15-28"><a href="#cb15-28" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> m:</span>
+<span id="cb15-29"><a href="#cb15-29" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="ss">f"</span><span class="sc">{</span>m<span class="sc">.</span>group(<span class="dv">1</span>)<span class="sc">}</span><span class="ss"> </span><span class="sc">{</span>m<span class="sc">.</span>group(<span class="dv">2</span>)<span class="sc">}</span><span class="ss"> </span><span class="sc">{</span>m<span class="sc">.</span>group(<span class="dv">3</span>)<span class="sc">}</span><span class="ss">"</span></span>
+<span id="cb15-30"><a href="#cb15-30" aria-hidden="true" tabindex="-1"></a>    m <span class="op">=</span> re.match(<span class="vs">r'</span><span class="dv">^</span><span class="kw">(</span><span class="vs">v</span><span class="pp">[</span><span class="dv">\d</span><span class="pp">.]</span><span class="op">+</span><span class="kw">)</span><span class="vs">-</span><span class="dv">.</span><span class="op">+</span><span class="vs">-</span><span class="kw">(</span><span class="vs">session</span><span class="dv">\d</span><span class="op">+</span><span class="kw">)</span><span class="dv">$</span><span class="vs">'</span>, rest)</span>
+<span id="cb15-31"><a href="#cb15-31" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> m:</span>
+<span id="cb15-32"><a href="#cb15-32" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="ss">f"</span><span class="sc">{</span>m<span class="sc">.</span>group(<span class="dv">1</span>)<span class="sc">}</span><span class="ss"> </span><span class="sc">{</span>m<span class="sc">.</span>group(<span class="dv">2</span>)<span class="sc">}</span><span class="ss">"</span></span>
+<span id="cb15-33"><a href="#cb15-33" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> rest</span>
+<span id="cb15-34"><a href="#cb15-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-35"><a href="#cb15-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-36"><a href="#cb15-36" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> plan_text(stem):</span>
+<span id="cb15-37"><a href="#cb15-37" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> stem[<span class="dv">5</span>:] <span class="cf">if</span> stem.startswith(<span class="st">"PLAN_"</span>) <span class="cf">else</span> stem</span>
+<span id="cb15-38"><a href="#cb15-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-39"><a href="#cb15-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-40"><a href="#cb15-40" aria-hidden="true" tabindex="-1"></a>SKILL_ORDER <span class="op">=</span> [</span>
+<span id="cb15-41"><a href="#cb15-41" aria-hidden="true" tabindex="-1"></a>    <span class="st">"what-is-lca"</span>, <span class="st">"system-boundary"</span>, <span class="st">"life-cycle-stages"</span>, <span class="st">"goal-and-scope"</span>,</span>
+<span id="cb15-42"><a href="#cb15-42" aria-hidden="true" tabindex="-1"></a>    <span class="st">"functional-unit"</span>, <span class="st">"supply-chain"</span>, <span class="st">"technosphere-and-ecosphere"</span>,</span>
+<span id="cb15-43"><a href="#cb15-43" aria-hidden="true" tabindex="-1"></a>    <span class="st">"life-cycle-inventory"</span>, <span class="st">"scaling-vector"</span>, <span class="st">"what-is-impact-assessment"</span>,</span>
+<span id="cb15-44"><a href="#cb15-44" aria-hidden="true" tabindex="-1"></a>    <span class="st">"impact-characterization"</span>, <span class="st">"damage-characterization"</span>, <span class="st">"run-lca"</span>,</span>
+<span id="cb15-45"><a href="#cb15-45" aria-hidden="true" tabindex="-1"></a>    <span class="st">"lca-from-url"</span>, <span class="st">"skill-creator"</span>,</span>
+<span id="cb15-46"><a href="#cb15-46" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb15-47"><a href="#cb15-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-48"><a href="#cb15-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-49"><a href="#cb15-49" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> q(path):</span>
+<span id="cb15-50"><a href="#cb15-50" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="bu">str</span>(path.relative_to(QUARTO_DIR))</span>
+<span id="cb15-51"><a href="#cb15-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-52"><a href="#cb15-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-53"><a href="#cb15-53" aria-hidden="true" tabindex="-1"></a><span class="co"># --- Clean and recreate output dirs ---</span></span>
+<span id="cb15-54"><a href="#cb15-54" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> d <span class="kw">in</span> [QUARTO_DIR <span class="op">/</span> <span class="st">"skills"</span>, QUARTO_DIR <span class="op">/</span> <span class="st">"skills_sessions"</span>, QUARTO_DIR <span class="op">/</span> <span class="st">"plan"</span>]:</span>
+<span id="cb15-55"><a href="#cb15-55" aria-hidden="true" tabindex="-1"></a>    shutil.rmtree(d, ignore_errors<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb15-56"><a href="#cb15-56" aria-hidden="true" tabindex="-1"></a>    d.mkdir(parents<span class="op">=</span><span class="va">True</span>, exist_ok<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb15-57"><a href="#cb15-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-58"><a href="#cb15-58" aria-hidden="true" tabindex="-1"></a><span class="co"># --- Copy skills_references/ ---</span></span>
+<span id="cb15-59"><a href="#cb15-59" aria-hidden="true" tabindex="-1"></a>QUARTO_REFS <span class="op">=</span> QUARTO_DIR <span class="op">/</span> <span class="st">"skills_references"</span></span>
+<span id="cb15-60"><a href="#cb15-60" aria-hidden="true" tabindex="-1"></a>shutil.rmtree(QUARTO_REFS, ignore_errors<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb15-61"><a href="#cb15-61" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> REFS_DIR.exists():</span>
+<span id="cb15-62"><a href="#cb15-62" aria-hidden="true" tabindex="-1"></a>    shutil.copytree(REFS_DIR, QUARTO_REFS)</span>
+<span id="cb15-63"><a href="#cb15-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-64"><a href="#cb15-64" aria-hidden="true" tabindex="-1"></a><span class="co"># --- Copy session files ---</span></span>
+<span id="cb15-65"><a href="#cb15-65" aria-hidden="true" tabindex="-1"></a>session_groups <span class="op">=</span> {}</span>
+<span id="cb15-66"><a href="#cb15-66" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> folder <span class="kw">in</span> <span class="bu">sorted</span>(SESSIONS_DIR.iterdir()):</span>
+<span id="cb15-67"><a href="#cb15-67" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="kw">not</span> folder.is_dir() <span class="kw">or</span> folder.name.startswith(<span class="st">"."</span>):</span>
+<span id="cb15-68"><a href="#cb15-68" aria-hidden="true" tabindex="-1"></a>        <span class="cf">continue</span></span>
+<span id="cb15-69"><a href="#cb15-69" aria-hidden="true" tabindex="-1"></a>    md_files <span class="op">=</span> <span class="bu">sorted</span>(folder.glob(<span class="st">"*.md"</span>))</span>
+<span id="cb15-70"><a href="#cb15-70" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="kw">not</span> md_files:</span>
+<span id="cb15-71"><a href="#cb15-71" aria-hidden="true" tabindex="-1"></a>        <span class="cf">continue</span></span>
+<span id="cb15-72"><a href="#cb15-72" aria-hidden="true" tabindex="-1"></a>    dest_folder <span class="op">=</span> QUARTO_DIR <span class="op">/</span> <span class="st">"skills_sessions"</span> <span class="op">/</span> folder.name</span>
+<span id="cb15-73"><a href="#cb15-73" aria-hidden="true" tabindex="-1"></a>    dest_folder.mkdir(parents<span class="op">=</span><span class="va">True</span>, exist_ok<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb15-74"><a href="#cb15-74" aria-hidden="true" tabindex="-1"></a>    copies <span class="op">=</span> []</span>
+<span id="cb15-75"><a href="#cb15-75" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> f <span class="kw">in</span> md_files:</span>
+<span id="cb15-76"><a href="#cb15-76" aria-hidden="true" tabindex="-1"></a>        dest <span class="op">=</span> dest_folder <span class="op">/</span> f.name</span>
+<span id="cb15-77"><a href="#cb15-77" aria-hidden="true" tabindex="-1"></a>        shutil.copy2(f, dest)</span>
+<span id="cb15-78"><a href="#cb15-78" aria-hidden="true" tabindex="-1"></a>        copies.append(dest)</span>
+<span id="cb15-79"><a href="#cb15-79" aria-hidden="true" tabindex="-1"></a>    session_groups[folder.name] <span class="op">=</span> copies</span>
+<span id="cb15-80"><a href="#cb15-80" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-81"><a href="#cb15-81" aria-hidden="true" tabindex="-1"></a><span class="co"># Copy sessions index</span></span>
+<span id="cb15-82"><a href="#cb15-82" aria-hidden="true" tabindex="-1"></a>sessions_index <span class="op">=</span> SESSIONS_DIR <span class="op">/</span> <span class="st">"index.md"</span></span>
+<span id="cb15-83"><a href="#cb15-83" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> sessions_index.exists():</span>
+<span id="cb15-84"><a href="#cb15-84" aria-hidden="true" tabindex="-1"></a>    shutil.copy2(sessions_index, QUARTO_DIR <span class="op">/</span> <span class="st">"skills_sessions"</span> <span class="op">/</span> <span class="st">"index.md"</span>)</span>
+<span id="cb15-85"><a href="#cb15-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-86"><a href="#cb15-86" aria-hidden="true" tabindex="-1"></a><span class="co"># --- Copy plan files ---</span></span>
+<span id="cb15-87"><a href="#cb15-87" aria-hidden="true" tabindex="-1"></a>plan_copies <span class="op">=</span> []</span>
+<span id="cb15-88"><a href="#cb15-88" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> f <span class="kw">in</span> <span class="bu">sorted</span>(PLANS_DIR.glob(<span class="st">"PLAN_*.md"</span>)):</span>
+<span id="cb15-89"><a href="#cb15-89" aria-hidden="true" tabindex="-1"></a>    dest <span class="op">=</span> QUARTO_DIR <span class="op">/</span> <span class="st">"plan"</span> <span class="op">/</span> f.name</span>
+<span id="cb15-90"><a href="#cb15-90" aria-hidden="true" tabindex="-1"></a>    shutil.copy2(f, dest)</span>
+<span id="cb15-91"><a href="#cb15-91" aria-hidden="true" tabindex="-1"></a>    plan_copies.append(dest)</span>
+<span id="cb15-92"><a href="#cb15-92" aria-hidden="true" tabindex="-1"></a>plan_index <span class="op">=</span> PLANS_DIR <span class="op">/</span> <span class="st">"index.md"</span></span>
+<span id="cb15-93"><a href="#cb15-93" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> plan_index.exists():</span>
+<span id="cb15-94"><a href="#cb15-94" aria-hidden="true" tabindex="-1"></a>    shutil.copy2(plan_index, QUARTO_DIR <span class="op">/</span> <span class="st">"plan"</span> <span class="op">/</span> <span class="st">"index.md"</span>)</span>
+<span id="cb15-95"><a href="#cb15-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-96"><a href="#cb15-96" aria-hidden="true" tabindex="-1"></a><span class="co"># --- Copy skill files ---</span></span>
+<span id="cb15-97"><a href="#cb15-97" aria-hidden="true" tabindex="-1"></a>all_skill_files <span class="op">=</span> {f.parent.name: f <span class="cf">for</span> f <span class="kw">in</span> SKILLS_DIR.glob(<span class="st">"*/SKILL.md"</span>)}</span>
+<span id="cb15-98"><a href="#cb15-98" aria-hidden="true" tabindex="-1"></a>ordered_names <span class="op">=</span> [n <span class="cf">for</span> n <span class="kw">in</span> SKILL_ORDER <span class="cf">if</span> n <span class="kw">in</span> all_skill_files]</span>
+<span id="cb15-99"><a href="#cb15-99" aria-hidden="true" tabindex="-1"></a>remaining <span class="op">=</span> <span class="bu">sorted</span>(n <span class="cf">for</span> n <span class="kw">in</span> all_skill_files <span class="cf">if</span> n <span class="kw">not</span> <span class="kw">in</span> SKILL_ORDER)</span>
+<span id="cb15-100"><a href="#cb15-100" aria-hidden="true" tabindex="-1"></a>skill_files <span class="op">=</span> [all_skill_files[n] <span class="cf">for</span> n <span class="kw">in</span> ordered_names <span class="op">+</span> remaining]</span>
+<span id="cb15-101"><a href="#cb15-101" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-102"><a href="#cb15-102" aria-hidden="true" tabindex="-1"></a>skill_copies <span class="op">=</span> []</span>
+<span id="cb15-103"><a href="#cb15-103" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> f <span class="kw">in</span> skill_files:</span>
+<span id="cb15-104"><a href="#cb15-104" aria-hidden="true" tabindex="-1"></a>    dest <span class="op">=</span> QUARTO_DIR <span class="op">/</span> <span class="st">"skills"</span> <span class="op">/</span> <span class="ss">f"</span><span class="sc">{</span>f<span class="sc">.</span>parent<span class="sc">.</span>name<span class="sc">}</span><span class="ss">.md"</span></span>
+<span id="cb15-105"><a href="#cb15-105" aria-hidden="true" tabindex="-1"></a>    shutil.copy2(f, dest)</span>
+<span id="cb15-106"><a href="#cb15-106" aria-hidden="true" tabindex="-1"></a>    skill_copies.append(dest)</span>
+<span id="cb15-107"><a href="#cb15-107" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-108"><a href="#cb15-108" aria-hidden="true" tabindex="-1"></a>(QUARTO_DIR <span class="op">/</span> <span class="st">"skills"</span> <span class="op">/</span> <span class="st">"index.md"</span>).write_text(</span>
+<span id="cb15-109"><a href="#cb15-109" aria-hidden="true" tabindex="-1"></a>    <span class="st">"# Skills</span><span class="ch">\n\n</span><span class="st">AI teaching skills for the LCA course.</span><span class="ch">\n</span><span class="st">Browse by skill in the sidebar on the left.</span><span class="ch">\n</span><span class="st">"</span></span>
+<span id="cb15-110"><a href="#cb15-110" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb15-111"><a href="#cb15-111" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-112"><a href="#cb15-112" aria-hidden="true" tabindex="-1"></a><span class="co"># --- Write _quarto.yml ---</span></span>
+<span id="cb15-113"><a href="#cb15-113" aria-hidden="true" tabindex="-1"></a>lines <span class="op">=</span> [</span>
+<span id="cb15-114"><a href="#cb15-114" aria-hidden="true" tabindex="-1"></a>    <span class="st">"project:"</span>,</span>
+<span id="cb15-115"><a href="#cb15-115" aria-hidden="true" tabindex="-1"></a>    <span class="st">"  type: website"</span>,</span>
+<span id="cb15-116"><a href="#cb15-116" aria-hidden="true" tabindex="-1"></a>    <span class="st">"  output-dir: _site"</span>,</span>
+<span id="cb15-117"><a href="#cb15-117" aria-hidden="true" tabindex="-1"></a>    <span class="st">"  resources:"</span>,</span>
+<span id="cb15-118"><a href="#cb15-118" aria-hidden="true" tabindex="-1"></a>    <span class="st">"    - skills_references/"</span>,</span>
+<span id="cb15-119"><a href="#cb15-119" aria-hidden="true" tabindex="-1"></a>    <span class="st">"  render:"</span>,</span>
+<span id="cb15-120"><a href="#cb15-120" aria-hidden="true" tabindex="-1"></a>    <span class="st">"    - index.md"</span>,</span>
+<span id="cb15-121"><a href="#cb15-121" aria-hidden="true" tabindex="-1"></a>    <span class="st">"    - skills_sessions/index.md"</span>,</span>
+<span id="cb15-122"><a href="#cb15-122" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb15-123"><a href="#cb15-123" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> files <span class="kw">in</span> session_groups.values():</span>
+<span id="cb15-124"><a href="#cb15-124" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> f <span class="kw">in</span> files:</span>
+<span id="cb15-125"><a href="#cb15-125" aria-hidden="true" tabindex="-1"></a>        lines.append(<span class="ss">f"    - </span><span class="sc">{</span>q(f)<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb15-126"><a href="#cb15-126" aria-hidden="true" tabindex="-1"></a>lines.append(<span class="st">"    - plan/index.md"</span>)</span>
+<span id="cb15-127"><a href="#cb15-127" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> f <span class="kw">in</span> plan_copies:</span>
+<span id="cb15-128"><a href="#cb15-128" aria-hidden="true" tabindex="-1"></a>    lines.append(<span class="ss">f"    - </span><span class="sc">{</span>q(f)<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb15-129"><a href="#cb15-129" aria-hidden="true" tabindex="-1"></a>lines.append(<span class="st">"    - skills/index.md"</span>)</span>
+<span id="cb15-130"><a href="#cb15-130" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> f <span class="kw">in</span> skill_copies:</span>
+<span id="cb15-131"><a href="#cb15-131" aria-hidden="true" tabindex="-1"></a>    lines.append(<span class="ss">f"    - </span><span class="sc">{</span>q(f)<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb15-132"><a href="#cb15-132" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-133"><a href="#cb15-133" aria-hidden="true" tabindex="-1"></a>lines <span class="op">+=</span> [</span>
+<span id="cb15-134"><a href="#cb15-134" aria-hidden="true" tabindex="-1"></a>    <span class="st">""</span>,</span>
+<span id="cb15-135"><a href="#cb15-135" aria-hidden="true" tabindex="-1"></a>    <span class="st">"website:"</span>,</span>
+<span id="cb15-136"><a href="#cb15-136" aria-hidden="true" tabindex="-1"></a>    <span class="st">'  title: "Agentic LCA"'</span>,</span>
+<span id="cb15-137"><a href="#cb15-137" aria-hidden="true" tabindex="-1"></a>    <span class="st">"  navbar:"</span>,</span>
+<span id="cb15-138"><a href="#cb15-138" aria-hidden="true" tabindex="-1"></a>    <span class="st">"    left:"</span>,</span>
+<span id="cb15-139"><a href="#cb15-139" aria-hidden="true" tabindex="-1"></a>    <span class="st">"      - text: Home"</span>,</span>
+<span id="cb15-140"><a href="#cb15-140" aria-hidden="true" tabindex="-1"></a>    <span class="st">"        href: index.md"</span>,</span>
+<span id="cb15-141"><a href="#cb15-141" aria-hidden="true" tabindex="-1"></a>    <span class="st">"      - text: Sessions"</span>,</span>
+<span id="cb15-142"><a href="#cb15-142" aria-hidden="true" tabindex="-1"></a>    <span class="st">"        href: skills_sessions/index.md"</span>,</span>
+<span id="cb15-143"><a href="#cb15-143" aria-hidden="true" tabindex="-1"></a>    <span class="st">"      - text: Plans"</span>,</span>
+<span id="cb15-144"><a href="#cb15-144" aria-hidden="true" tabindex="-1"></a>    <span class="st">"        href: plan/index.md"</span>,</span>
+<span id="cb15-145"><a href="#cb15-145" aria-hidden="true" tabindex="-1"></a>    <span class="st">"      - text: Skills"</span>,</span>
+<span id="cb15-146"><a href="#cb15-146" aria-hidden="true" tabindex="-1"></a>    <span class="st">"        href: skills/index.md"</span>,</span>
+<span id="cb15-147"><a href="#cb15-147" aria-hidden="true" tabindex="-1"></a>    <span class="st">""</span>,</span>
+<span id="cb15-148"><a href="#cb15-148" aria-hidden="true" tabindex="-1"></a>    <span class="st">"  sidebar:"</span>,</span>
+<span id="cb15-149"><a href="#cb15-149" aria-hidden="true" tabindex="-1"></a>    <span class="st">"    - id: sessions"</span>,</span>
+<span id="cb15-150"><a href="#cb15-150" aria-hidden="true" tabindex="-1"></a>    <span class="st">'      title: "Sessions"'</span>,</span>
+<span id="cb15-151"><a href="#cb15-151" aria-hidden="true" tabindex="-1"></a>    <span class="st">"      style: docked"</span>,</span>
+<span id="cb15-152"><a href="#cb15-152" aria-hidden="true" tabindex="-1"></a>    <span class="st">"      contents:"</span>,</span>
+<span id="cb15-153"><a href="#cb15-153" aria-hidden="true" tabindex="-1"></a>    <span class="st">"        - text: Overview"</span>,</span>
+<span id="cb15-154"><a href="#cb15-154" aria-hidden="true" tabindex="-1"></a>    <span class="st">"          href: skills_sessions/index.md"</span>,</span>
+<span id="cb15-155"><a href="#cb15-155" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb15-156"><a href="#cb15-156" aria-hidden="true" tabindex="-1"></a>ordered_folders <span class="op">=</span> [n <span class="cf">for</span> n <span class="kw">in</span> SKILL_ORDER <span class="cf">if</span> n <span class="kw">in</span> session_groups] <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb15-157"><a href="#cb15-157" aria-hidden="true" tabindex="-1"></a>                  <span class="bu">sorted</span>(n <span class="cf">for</span> n <span class="kw">in</span> session_groups <span class="cf">if</span> n <span class="kw">not</span> <span class="kw">in</span> SKILL_ORDER)</span>
+<span id="cb15-158"><a href="#cb15-158" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> folder_name <span class="kw">in</span> ordered_folders:</span>
+<span id="cb15-159"><a href="#cb15-159" aria-hidden="true" tabindex="-1"></a>    files <span class="op">=</span> session_groups[folder_name]</span>
+<span id="cb15-160"><a href="#cb15-160" aria-hidden="true" tabindex="-1"></a>    lines.append(<span class="ss">f'        - section: "</span><span class="sc">{</span>skill_title(folder_name)<span class="sc">}</span><span class="ss">"'</span>)</span>
+<span id="cb15-161"><a href="#cb15-161" aria-hidden="true" tabindex="-1"></a>    lines.append(<span class="ss">f"          contents:"</span>)</span>
+<span id="cb15-162"><a href="#cb15-162" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> f <span class="kw">in</span> files:</span>
+<span id="cb15-163"><a href="#cb15-163" aria-hidden="true" tabindex="-1"></a>        text <span class="op">=</span> session_text(f.stem, folder_name)</span>
+<span id="cb15-164"><a href="#cb15-164" aria-hidden="true" tabindex="-1"></a>        lines.append(<span class="ss">f'            - text: "</span><span class="sc">{</span>text<span class="sc">}</span><span class="ss">"'</span>)</span>
+<span id="cb15-165"><a href="#cb15-165" aria-hidden="true" tabindex="-1"></a>        lines.append(<span class="ss">f"              href: </span><span class="sc">{</span>q(f)<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb15-166"><a href="#cb15-166" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-167"><a href="#cb15-167" aria-hidden="true" tabindex="-1"></a>lines <span class="op">+=</span> [</span>
+<span id="cb15-168"><a href="#cb15-168" aria-hidden="true" tabindex="-1"></a>    <span class="st">""</span>,</span>
+<span id="cb15-169"><a href="#cb15-169" aria-hidden="true" tabindex="-1"></a>    <span class="st">"    - id: plans"</span>,</span>
+<span id="cb15-170"><a href="#cb15-170" aria-hidden="true" tabindex="-1"></a>    <span class="st">'      title: "Plans"'</span>,</span>
+<span id="cb15-171"><a href="#cb15-171" aria-hidden="true" tabindex="-1"></a>    <span class="st">"      style: docked"</span>,</span>
+<span id="cb15-172"><a href="#cb15-172" aria-hidden="true" tabindex="-1"></a>    <span class="st">"      contents:"</span>,</span>
+<span id="cb15-173"><a href="#cb15-173" aria-hidden="true" tabindex="-1"></a>    <span class="st">"        - text: Overview"</span>,</span>
+<span id="cb15-174"><a href="#cb15-174" aria-hidden="true" tabindex="-1"></a>    <span class="st">"          href: plan/index.md"</span>,</span>
+<span id="cb15-175"><a href="#cb15-175" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb15-176"><a href="#cb15-176" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> f <span class="kw">in</span> plan_copies:</span>
+<span id="cb15-177"><a href="#cb15-177" aria-hidden="true" tabindex="-1"></a>    lines.append(<span class="ss">f'        - text: "</span><span class="sc">{</span>plan_text(f.stem)<span class="sc">}</span><span class="ss">"'</span>)</span>
+<span id="cb15-178"><a href="#cb15-178" aria-hidden="true" tabindex="-1"></a>    lines.append(<span class="ss">f"          href: </span><span class="sc">{</span>q(f)<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb15-179"><a href="#cb15-179" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-180"><a href="#cb15-180" aria-hidden="true" tabindex="-1"></a>lines <span class="op">+=</span> [</span>
+<span id="cb15-181"><a href="#cb15-181" aria-hidden="true" tabindex="-1"></a>    <span class="st">""</span>,</span>
+<span id="cb15-182"><a href="#cb15-182" aria-hidden="true" tabindex="-1"></a>    <span class="st">"    - id: skills"</span>,</span>
+<span id="cb15-183"><a href="#cb15-183" aria-hidden="true" tabindex="-1"></a>    <span class="st">'      title: "Skills"'</span>,</span>
+<span id="cb15-184"><a href="#cb15-184" aria-hidden="true" tabindex="-1"></a>    <span class="st">"      style: docked"</span>,</span>
+<span id="cb15-185"><a href="#cb15-185" aria-hidden="true" tabindex="-1"></a>    <span class="st">"      contents:"</span>,</span>
+<span id="cb15-186"><a href="#cb15-186" aria-hidden="true" tabindex="-1"></a>    <span class="st">"        - text: Overview"</span>,</span>
+<span id="cb15-187"><a href="#cb15-187" aria-hidden="true" tabindex="-1"></a>    <span class="st">"          href: skills/index.md"</span>,</span>
+<span id="cb15-188"><a href="#cb15-188" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb15-189"><a href="#cb15-189" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> src, copy <span class="kw">in</span> <span class="bu">zip</span>(skill_files, skill_copies):</span>
+<span id="cb15-190"><a href="#cb15-190" aria-hidden="true" tabindex="-1"></a>    label <span class="op">=</span> skill_title(src.parent.name)</span>
+<span id="cb15-191"><a href="#cb15-191" aria-hidden="true" tabindex="-1"></a>    lines.append(<span class="ss">f'        - text: "</span><span class="sc">{</span>label<span class="sc">}</span><span class="ss">"'</span>)</span>
+<span id="cb15-192"><a href="#cb15-192" aria-hidden="true" tabindex="-1"></a>    lines.append(<span class="ss">f"          href: </span><span class="sc">{</span>q(copy)<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb15-193"><a href="#cb15-193" aria-hidden="true" tabindex="-1"></a>    lines.append(<span class="ss">f'        - text: "(.md)"'</span>)</span>
+<span id="cb15-194"><a href="#cb15-194" aria-hidden="true" tabindex="-1"></a>    lines.append(<span class="ss">f"          href: '#'"</span>)</span>
+<span id="cb15-195"><a href="#cb15-195" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-196"><a href="#cb15-196" aria-hidden="true" tabindex="-1"></a>lines <span class="op">+=</span> [</span>
+<span id="cb15-197"><a href="#cb15-197" aria-hidden="true" tabindex="-1"></a>    <span class="st">""</span>,</span>
+<span id="cb15-198"><a href="#cb15-198" aria-hidden="true" tabindex="-1"></a>    <span class="st">"format:"</span>,</span>
+<span id="cb15-199"><a href="#cb15-199" aria-hidden="true" tabindex="-1"></a>    <span class="st">"  html:"</span>,</span>
+<span id="cb15-200"><a href="#cb15-200" aria-hidden="true" tabindex="-1"></a>    <span class="st">"    theme: cosmo"</span>,</span>
+<span id="cb15-201"><a href="#cb15-201" aria-hidden="true" tabindex="-1"></a>    <span class="st">"    css: custom.css"</span>,</span>
+<span id="cb15-202"><a href="#cb15-202" aria-hidden="true" tabindex="-1"></a>    <span class="st">"    toc: true"</span>,</span>
+<span id="cb15-203"><a href="#cb15-203" aria-hidden="true" tabindex="-1"></a>    <span class="st">"    include-after-body: sidebar-tweaks.html"</span>,</span>
+<span id="cb15-204"><a href="#cb15-204" aria-hidden="true" tabindex="-1"></a>    <span class="st">"    grid:"</span>,</span>
+<span id="cb15-205"><a href="#cb15-205" aria-hidden="true" tabindex="-1"></a>    <span class="st">"      body-width: 2000px"</span>,</span>
+<span id="cb15-206"><a href="#cb15-206" aria-hidden="true" tabindex="-1"></a>    <span class="st">""</span>,</span>
+<span id="cb15-207"><a href="#cb15-207" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb15-208"><a href="#cb15-208" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-209"><a href="#cb15-209" aria-hidden="true" tabindex="-1"></a>(QUARTO_DIR <span class="op">/</span> <span class="st">"_quarto.yml"</span>).write_text(<span class="st">"</span><span class="ch">\n</span><span class="st">"</span>.join(lines))</span>
+<span id="cb15-210"><a href="#cb15-210" aria-hidden="true" tabindex="-1"></a>n_sessions <span class="op">=</span> <span class="bu">sum</span>(<span class="bu">len</span>(v) <span class="cf">for</span> v <span class="kw">in</span> session_groups.values())</span>
+<span id="cb15-211"><a href="#cb15-211" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"quarto_docs/ generated — </span><span class="sc">{</span>n_sessions<span class="sc">}</span><span class="ss"> sessions, </span><span class="sc">{</span><span class="bu">len</span>(plan_copies)<span class="sc">}</span><span class="ss"> plans."</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="skills_sessionsgenerate_sessions.py" class="level3">
+<h3 class="anchored" data-anchor-id="skills_sessionsgenerate_sessions.py"><code>skills_sessions/generate_sessions.py</code></h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="co">Scans skills_sessions/ for *.md files and writes sessions.json.</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="co">Run from the repo root:  python3 skills_sessions/generate_sessions.py</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="co">"""</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> json, re, sys</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>here <span class="op">=</span> Path(<span class="va">__file__</span>).parent</span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>ROOT <span class="op">=</span> here.parent</span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>_ACRONYMS    <span class="op">=</span> {<span class="st">'lca'</span>, <span class="st">'svp'</span>}</span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>_CONJUNCTIONS <span class="op">=</span> {<span class="st">'and'</span>, <span class="st">'or'</span>, <span class="st">'of'</span>, <span class="st">'the'</span>, <span class="st">'a'</span>, <span class="st">'an'</span>, <span class="st">'in'</span>, <span class="st">'on'</span>, <span class="st">'at'</span>, <span class="st">'to'</span>}</span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a>SKILL_ORDER <span class="op">=</span> [</span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a>    <span class="st">"what-is-lca"</span>, <span class="st">"system-boundary"</span>, <span class="st">"life-cycle-stages"</span>, <span class="st">"goal-and-scope"</span>,</span>
+<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a>    <span class="st">"functional-unit"</span>, <span class="st">"supply-chain"</span>, <span class="st">"technosphere-and-ecosphere"</span>,</span>
+<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a>    <span class="st">"life-cycle-inventory"</span>, <span class="st">"scaling-vector"</span>, <span class="st">"what-is-impact-assessment"</span>,</span>
+<span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a>    <span class="st">"impact-characterization"</span>, <span class="st">"damage-characterization"</span>, <span class="st">"run-lca"</span>,</span>
+<span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a>    <span class="st">"lca-from-url"</span>, <span class="st">"skill-creator"</span>,</span>
+<span id="cb16-22"><a href="#cb16-22" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb16-23"><a href="#cb16-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-24"><a href="#cb16-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-25"><a href="#cb16-25" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> format_skill(slug):</span>
+<span id="cb16-26"><a href="#cb16-26" aria-hidden="true" tabindex="-1"></a>    words <span class="op">=</span> slug.lstrip(<span class="st">'/'</span>).split(<span class="st">'-'</span>)</span>
+<span id="cb16-27"><a href="#cb16-27" aria-hidden="true" tabindex="-1"></a>    result <span class="op">=</span> []</span>
+<span id="cb16-28"><a href="#cb16-28" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i, w <span class="kw">in</span> <span class="bu">enumerate</span>(words):</span>
+<span id="cb16-29"><a href="#cb16-29" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> w <span class="kw">in</span> _ACRONYMS:</span>
+<span id="cb16-30"><a href="#cb16-30" aria-hidden="true" tabindex="-1"></a>            result.append(w.upper())</span>
+<span id="cb16-31"><a href="#cb16-31" aria-hidden="true" tabindex="-1"></a>        <span class="cf">elif</span> i <span class="op">&gt;</span> <span class="dv">0</span> <span class="kw">and</span> w <span class="kw">in</span> _CONJUNCTIONS:</span>
+<span id="cb16-32"><a href="#cb16-32" aria-hidden="true" tabindex="-1"></a>            result.append(w)</span>
+<span id="cb16-33"><a href="#cb16-33" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb16-34"><a href="#cb16-34" aria-hidden="true" tabindex="-1"></a>            result.append(w.capitalize())</span>
+<span id="cb16-35"><a href="#cb16-35" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">' '</span>.join(result)</span>
+<span id="cb16-36"><a href="#cb16-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-37"><a href="#cb16-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-38"><a href="#cb16-38" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> format_case_study(raw):</span>
+<span id="cb16-39"><a href="#cb16-39" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="kw">not</span> raw:</span>
+<span id="cb16-40"><a href="#cb16-40" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">None</span></span>
+<span id="cb16-41"><a href="#cb16-41" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">' '</span>.join(w.capitalize() <span class="cf">for</span> w <span class="kw">in</span> raw.replace(<span class="st">'_'</span>, <span class="st">' '</span>).split())</span>
+<span id="cb16-42"><a href="#cb16-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-43"><a href="#cb16-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-44"><a href="#cb16-44" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> format_model(raw):</span>
+<span id="cb16-45"><a href="#cb16-45" aria-hidden="true" tabindex="-1"></a>    parts <span class="op">=</span> raw.split(<span class="st">'-'</span>)</span>
+<span id="cb16-46"><a href="#cb16-46" aria-hidden="true" tabindex="-1"></a>    result <span class="op">=</span> []</span>
+<span id="cb16-47"><a href="#cb16-47" aria-hidden="true" tabindex="-1"></a>    i <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb16-48"><a href="#cb16-48" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> i <span class="op">&lt;</span> <span class="bu">len</span>(parts):</span>
+<span id="cb16-49"><a href="#cb16-49" aria-hidden="true" tabindex="-1"></a>        p <span class="op">=</span> parts[i]</span>
+<span id="cb16-50"><a href="#cb16-50" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> re.match(<span class="vs">r'</span><span class="dv">^\d</span><span class="op">+</span><span class="dv">$</span><span class="vs">'</span>, p):</span>
+<span id="cb16-51"><a href="#cb16-51" aria-hidden="true" tabindex="-1"></a>            ver <span class="op">=</span> [p]</span>
+<span id="cb16-52"><a href="#cb16-52" aria-hidden="true" tabindex="-1"></a>            <span class="cf">while</span> i <span class="op">+</span> <span class="dv">1</span> <span class="op">&lt;</span> <span class="bu">len</span>(parts) <span class="kw">and</span> re.match(<span class="vs">r'</span><span class="dv">^\d</span><span class="op">+</span><span class="dv">$</span><span class="vs">'</span>, parts[i <span class="op">+</span> <span class="dv">1</span>]):</span>
+<span id="cb16-53"><a href="#cb16-53" aria-hidden="true" tabindex="-1"></a>                i <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb16-54"><a href="#cb16-54" aria-hidden="true" tabindex="-1"></a>                ver.append(parts[i])</span>
+<span id="cb16-55"><a href="#cb16-55" aria-hidden="true" tabindex="-1"></a>            result.append(<span class="st">'.'</span>.join(ver))</span>
+<span id="cb16-56"><a href="#cb16-56" aria-hidden="true" tabindex="-1"></a>        <span class="cf">elif</span> re.match(<span class="vs">r'</span><span class="dv">^</span><span class="vs">v</span><span class="dv">\d</span><span class="vs">'</span>, p):</span>
+<span id="cb16-57"><a href="#cb16-57" aria-hidden="true" tabindex="-1"></a>            result.append(p.upper())</span>
+<span id="cb16-58"><a href="#cb16-58" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb16-59"><a href="#cb16-59" aria-hidden="true" tabindex="-1"></a>            result.append(p.capitalize())</span>
+<span id="cb16-60"><a href="#cb16-60" aria-hidden="true" tabindex="-1"></a>        i <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb16-61"><a href="#cb16-61" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">' '</span>.join(result)</span>
+<span id="cb16-62"><a href="#cb16-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-63"><a href="#cb16-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-64"><a href="#cb16-64" aria-hidden="true" tabindex="-1"></a>sessions <span class="op">=</span> []</span>
+<span id="cb16-65"><a href="#cb16-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-66"><a href="#cb16-66" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> md <span class="kw">in</span> <span class="bu">sorted</span>(here.glob(<span class="st">'**/*.md'</span>)):</span>
+<span id="cb16-67"><a href="#cb16-67" aria-hidden="true" tabindex="-1"></a>    lines <span class="op">=</span> md.read_text(encoding<span class="op">=</span><span class="st">'utf-8'</span>).split(<span class="st">'</span><span class="ch">\n</span><span class="st">'</span>)</span>
+<span id="cb16-68"><a href="#cb16-68" aria-hidden="true" tabindex="-1"></a>    m <span class="op">=</span> re.match(<span class="vs">r'</span><span class="dv">^</span><span class="vs">#</span><span class="dv">\s</span><span class="op">+</span><span class="vs">/</span><span class="kw">(</span><span class="dv">\S</span><span class="op">+</span><span class="kw">)</span>(?:<span class="dv">\s</span><span class="op">+</span><span class="kw">(</span><span class="dv">\S</span><span class="op">+</span><span class="kw">)</span>)<span class="op">?</span><span class="vs">'</span>, lines[<span class="dv">0</span>])</span>
+<span id="cb16-69"><a href="#cb16-69" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="kw">not</span> m:</span>
+<span id="cb16-70"><a href="#cb16-70" aria-hidden="true" tabindex="-1"></a>        <span class="cf">continue</span></span>
+<span id="cb16-71"><a href="#cb16-71" aria-hidden="true" tabindex="-1"></a>    skill_slug <span class="op">=</span> m.group(<span class="dv">1</span>)</span>
+<span id="cb16-72"><a href="#cb16-72" aria-hidden="true" tabindex="-1"></a>    case_raw   <span class="op">=</span> m.group(<span class="dv">2</span>)</span>
+<span id="cb16-73"><a href="#cb16-73" aria-hidden="true" tabindex="-1"></a>    meta <span class="op">=</span> {}</span>
+<span id="cb16-74"><a href="#cb16-74" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> line <span class="kw">in</span> lines[<span class="dv">1</span>:<span class="dv">10</span>]:</span>
+<span id="cb16-75"><a href="#cb16-75" aria-hidden="true" tabindex="-1"></a>        mm <span class="op">=</span> re.match(<span class="vs">r'</span><span class="dv">^</span><span class="ch">\*\*</span><span class="kw">(</span><span class="pp">[^*]</span><span class="op">+</span><span class="kw">)</span><span class="vs">:</span><span class="ch">\*\*</span><span class="dv">\s</span><span class="op">*</span><span class="kw">(</span><span class="dv">.</span><span class="op">+</span><span class="kw">)</span><span class="vs">'</span>, line)</span>
+<span id="cb16-76"><a href="#cb16-76" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> mm:</span>
+<span id="cb16-77"><a href="#cb16-77" aria-hidden="true" tabindex="-1"></a>            key <span class="op">=</span> mm.group(<span class="dv">1</span>).strip().lower().replace(<span class="st">' '</span>, <span class="st">'_'</span>)</span>
+<span id="cb16-78"><a href="#cb16-78" aria-hidden="true" tabindex="-1"></a>            meta[key] <span class="op">=</span> mm.group(<span class="dv">2</span>).strip()</span>
+<span id="cb16-79"><a href="#cb16-79" aria-hidden="true" tabindex="-1"></a>    n_match <span class="op">=</span> re.search(<span class="vs">r'session</span><span class="kw">(</span><span class="dv">\d</span><span class="op">+</span><span class="kw">)</span><span class="vs">'</span>, md.stem)</span>
+<span id="cb16-80"><a href="#cb16-80" aria-hidden="true" tabindex="-1"></a>    n <span class="op">=</span> <span class="bu">int</span>(n_match.group(<span class="dv">1</span>)) <span class="cf">if</span> n_match <span class="cf">else</span> <span class="dv">1</span></span>
+<span id="cb16-81"><a href="#cb16-81" aria-hidden="true" tabindex="-1"></a>    command <span class="op">=</span> <span class="ss">f'/</span><span class="sc">{</span>skill_slug<span class="sc">}</span><span class="ss">'</span> <span class="cf">if</span> <span class="kw">not</span> case_raw <span class="cf">else</span> <span class="ss">f'/</span><span class="sc">{</span>skill_slug<span class="sc">}</span><span class="ss"> </span><span class="sc">{</span>case_raw<span class="sc">}</span><span class="ss">'</span></span>
+<span id="cb16-82"><a href="#cb16-82" aria-hidden="true" tabindex="-1"></a>    sessions.append({</span>
+<span id="cb16-83"><a href="#cb16-83" aria-hidden="true" tabindex="-1"></a>        <span class="st">'file'</span>:      <span class="bu">str</span>(md.relative_to(here)),</span>
+<span id="cb16-84"><a href="#cb16-84" aria-hidden="true" tabindex="-1"></a>        <span class="st">'command'</span>:   command,</span>
+<span id="cb16-85"><a href="#cb16-85" aria-hidden="true" tabindex="-1"></a>        <span class="st">'skill'</span>:     format_skill(skill_slug),</span>
+<span id="cb16-86"><a href="#cb16-86" aria-hidden="true" tabindex="-1"></a>        <span class="st">'caseStudy'</span>: format_case_study(case_raw),</span>
+<span id="cb16-87"><a href="#cb16-87" aria-hidden="true" tabindex="-1"></a>        <span class="st">'student'</span>:   meta.get(<span class="st">'student'</span>, <span class="st">''</span>).capitalize(),</span>
+<span id="cb16-88"><a href="#cb16-88" aria-hidden="true" tabindex="-1"></a>        <span class="st">'model'</span>:     format_model(meta.get(<span class="st">'model'</span>, <span class="st">''</span>)),</span>
+<span id="cb16-89"><a href="#cb16-89" aria-hidden="true" tabindex="-1"></a>        <span class="st">'version'</span>:   meta.get(<span class="st">'skill_version'</span>, <span class="st">''</span>),</span>
+<span id="cb16-90"><a href="#cb16-90" aria-hidden="true" tabindex="-1"></a>        <span class="st">'n'</span>:         n,</span>
+<span id="cb16-91"><a href="#cb16-91" aria-hidden="true" tabindex="-1"></a>        <span class="st">'_slug'</span>:     skill_slug,</span>
+<span id="cb16-92"><a href="#cb16-92" aria-hidden="true" tabindex="-1"></a>    })</span>
+<span id="cb16-93"><a href="#cb16-93" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-94"><a href="#cb16-94" aria-hidden="true" tabindex="-1"></a>slug_order <span class="op">=</span> {s: i <span class="cf">for</span> i, s <span class="kw">in</span> <span class="bu">enumerate</span>(SKILL_ORDER)}</span>
+<span id="cb16-95"><a href="#cb16-95" aria-hidden="true" tabindex="-1"></a>sessions.sort(key<span class="op">=</span><span class="kw">lambda</span> s: (slug_order.get(s[<span class="st">'_slug'</span>], <span class="dv">999</span>), s[<span class="st">'file'</span>]))</span>
+<span id="cb16-96"><a href="#cb16-96" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> session <span class="kw">in</span> sessions:</span>
+<span id="cb16-97"><a href="#cb16-97" aria-hidden="true" tabindex="-1"></a>    <span class="kw">del</span> session[<span class="st">'_slug'</span>]</span>
+<span id="cb16-98"><a href="#cb16-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-99"><a href="#cb16-99" aria-hidden="true" tabindex="-1"></a>out <span class="op">=</span> ROOT <span class="op">/</span> <span class="st">'quarto_docs'</span> <span class="op">/</span> <span class="st">'sessions.json'</span></span>
+<span id="cb16-100"><a href="#cb16-100" aria-hidden="true" tabindex="-1"></a>out.write_text(json.dumps(sessions, indent<span class="op">=</span><span class="dv">2</span>), encoding<span class="op">=</span><span class="st">'utf-8'</span>)</span>
+<span id="cb16-101"><a href="#cb16-101" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'sessions.json: wrote </span><span class="sc">{</span><span class="bu">len</span>(sessions)<span class="sc">}</span><span class="ss"> sessions'</span>, <span class="bu">file</span><span class="op">=</span>sys.stderr)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="plangenerate_plans.py" class="level3">
+<h3 class="anchored" data-anchor-id="plangenerate_plans.py"><code>plan/generate_plans.py</code></h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="co">Scans plan/ for PLAN_*.md files and writes plan/plans.json.</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="co">Run from the repo root:  python3 plan/generate_plans.py</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="co">"""</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> json, re, sys</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>here <span class="op">=</span> Path(<span class="va">__file__</span>).parent</span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>ROOT <span class="op">=</span> here.parent</span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> format_title(stem):</span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a>    name <span class="op">=</span> re.sub(<span class="vs">r'</span><span class="dv">^</span><span class="vs">PLAN_'</span>, <span class="st">''</span>, stem)</span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">' '</span>.join(w.capitalize() <span class="cf">for</span> w <span class="kw">in</span> name.replace(<span class="st">'_'</span>, <span class="st">' '</span>).split())</span>
+<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-18"><a href="#cb17-18" aria-hidden="true" tabindex="-1"></a>plans <span class="op">=</span> []</span>
+<span id="cb17-19"><a href="#cb17-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-20"><a href="#cb17-20" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> md <span class="kw">in</span> <span class="bu">sorted</span>(here.glob(<span class="st">'PLAN_*.md'</span>)):</span>
+<span id="cb17-21"><a href="#cb17-21" aria-hidden="true" tabindex="-1"></a>    lines <span class="op">=</span> md.read_text(encoding<span class="op">=</span><span class="st">'utf-8'</span>).split(<span class="st">'</span><span class="ch">\n</span><span class="st">'</span>)</span>
+<span id="cb17-22"><a href="#cb17-22" aria-hidden="true" tabindex="-1"></a>    title <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb17-23"><a href="#cb17-23" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> line <span class="kw">in</span> lines[:<span class="dv">5</span>]:</span>
+<span id="cb17-24"><a href="#cb17-24" aria-hidden="true" tabindex="-1"></a>        m <span class="op">=</span> re.match(<span class="vs">r'</span><span class="dv">^</span><span class="vs">#</span><span class="dv">\s</span><span class="op">+</span><span class="kw">(</span><span class="dv">.</span><span class="op">+</span><span class="kw">)</span><span class="vs">'</span>, line)</span>
+<span id="cb17-25"><a href="#cb17-25" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> m:</span>
+<span id="cb17-26"><a href="#cb17-26" aria-hidden="true" tabindex="-1"></a>            title <span class="op">=</span> m.group(<span class="dv">1</span>).strip()</span>
+<span id="cb17-27"><a href="#cb17-27" aria-hidden="true" tabindex="-1"></a>            <span class="cf">break</span></span>
+<span id="cb17-28"><a href="#cb17-28" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="kw">not</span> title:</span>
+<span id="cb17-29"><a href="#cb17-29" aria-hidden="true" tabindex="-1"></a>        title <span class="op">=</span> format_title(md.stem)</span>
+<span id="cb17-30"><a href="#cb17-30" aria-hidden="true" tabindex="-1"></a>    plans.append({</span>
+<span id="cb17-31"><a href="#cb17-31" aria-hidden="true" tabindex="-1"></a>        <span class="st">'file'</span>: md.name,</span>
+<span id="cb17-32"><a href="#cb17-32" aria-hidden="true" tabindex="-1"></a>        <span class="st">'title'</span>: title,</span>
+<span id="cb17-33"><a href="#cb17-33" aria-hidden="true" tabindex="-1"></a>    })</span>
+<span id="cb17-34"><a href="#cb17-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-35"><a href="#cb17-35" aria-hidden="true" tabindex="-1"></a>out <span class="op">=</span> ROOT <span class="op">/</span> <span class="st">'quarto_docs'</span> <span class="op">/</span> <span class="st">'plans.json'</span></span>
+<span id="cb17-36"><a href="#cb17-36" aria-hidden="true" tabindex="-1"></a>out.write_text(json.dumps(plans, indent<span class="op">=</span><span class="dv">2</span>), encoding<span class="op">=</span><span class="st">'utf-8'</span>)</span>
+<span id="cb17-37"><a href="#cb17-37" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'plans.json: wrote </span><span class="sc">{</span><span class="bu">len</span>(plans)<span class="sc">}</span><span class="ss"> plans'</span>, <span class="bu">file</span><span class="op">=</span>sys.stderr)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="lca_analysisgenerate_analyses.py" class="level3">
+<h3 class="anchored" data-anchor-id="lca_analysisgenerate_analyses.py"><code>lca_analysis/generate_analyses.py</code></h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="co">Scans lca_analysis/ for folders containing recipe_card.md and writes analyses.json.</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="co">Run from the repo root: python3 lca_analysis/generate_analyses.py</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="co">"""</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> json, re, sys</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>here <span class="op">=</span> Path(<span class="va">__file__</span>).parent</span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>root <span class="op">=</span> here.parent</span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> format_name(folder_name):</span>
+<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> folder_name.replace(<span class="st">'_'</span>, <span class="st">' '</span>).title()</span>
+<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-17"><a href="#cb18-17" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> file_label(md_path, folder_name):</span>
+<span id="cb18-18"><a href="#cb18-18" aria-hidden="true" tabindex="-1"></a>    stem <span class="op">=</span> md_path.stem</span>
+<span id="cb18-19"><a href="#cb18-19" aria-hidden="true" tabindex="-1"></a>    prefix <span class="op">=</span> folder_name <span class="op">+</span> <span class="st">'_'</span></span>
+<span id="cb18-20"><a href="#cb18-20" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> stem.startswith(prefix):</span>
+<span id="cb18-21"><a href="#cb18-21" aria-hidden="true" tabindex="-1"></a>        stem <span class="op">=</span> stem[<span class="bu">len</span>(prefix):]</span>
+<span id="cb18-22"><a href="#cb18-22" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> stem.replace(<span class="st">'_'</span>, <span class="st">' '</span>)</span>
+<span id="cb18-23"><a href="#cb18-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-24"><a href="#cb18-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-25"><a href="#cb18-25" aria-hidden="true" tabindex="-1"></a>analyses <span class="op">=</span> []</span>
+<span id="cb18-26"><a href="#cb18-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-27"><a href="#cb18-27" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> recipe <span class="kw">in</span> <span class="bu">sorted</span>(root.rglob(<span class="st">'recipe_card.md'</span>)):</span>
+<span id="cb18-28"><a href="#cb18-28" aria-hidden="true" tabindex="-1"></a>    folder <span class="op">=</span> recipe.parent</span>
+<span id="cb18-29"><a href="#cb18-29" aria-hidden="true" tabindex="-1"></a>    rel    <span class="op">=</span> folder.relative_to(root)</span>
+<span id="cb18-30"><a href="#cb18-30" aria-hidden="true" tabindex="-1"></a>    name   <span class="op">=</span> format_name(folder.name)</span>
+<span id="cb18-31"><a href="#cb18-31" aria-hidden="true" tabindex="-1"></a>    group  <span class="op">=</span> folder.parent.name <span class="cf">if</span> folder.parent <span class="op">!=</span> root <span class="cf">else</span> <span class="st">''</span></span>
+<span id="cb18-32"><a href="#cb18-32" aria-hidden="true" tabindex="-1"></a>    mds <span class="op">=</span> <span class="bu">sorted</span>(folder.glob(<span class="st">'*.md'</span>), key<span class="op">=</span><span class="kw">lambda</span> p: (p.name <span class="op">!=</span> <span class="st">'recipe_card.md'</span>, p.name))</span>
+<span id="cb18-33"><a href="#cb18-33" aria-hidden="true" tabindex="-1"></a>    files <span class="op">=</span> [</span>
+<span id="cb18-34"><a href="#cb18-34" aria-hidden="true" tabindex="-1"></a>        {</span>
+<span id="cb18-35"><a href="#cb18-35" aria-hidden="true" tabindex="-1"></a>            <span class="st">'file'</span>:  <span class="bu">str</span>(rel <span class="op">/</span> md.name),</span>
+<span id="cb18-36"><a href="#cb18-36" aria-hidden="true" tabindex="-1"></a>            <span class="st">'label'</span>: file_label(md, folder.name),</span>
+<span id="cb18-37"><a href="#cb18-37" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb18-38"><a href="#cb18-38" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> md <span class="kw">in</span> mds</span>
+<span id="cb18-39"><a href="#cb18-39" aria-hidden="true" tabindex="-1"></a>    ]</span>
+<span id="cb18-40"><a href="#cb18-40" aria-hidden="true" tabindex="-1"></a>    analyses.append({</span>
+<span id="cb18-41"><a href="#cb18-41" aria-hidden="true" tabindex="-1"></a>        <span class="st">'folder'</span>: <span class="bu">str</span>(rel),</span>
+<span id="cb18-42"><a href="#cb18-42" aria-hidden="true" tabindex="-1"></a>        <span class="st">'name'</span>:   name,</span>
+<span id="cb18-43"><a href="#cb18-43" aria-hidden="true" tabindex="-1"></a>        <span class="st">'group'</span>:  group <span class="cf">if</span> group <span class="op">!=</span> <span class="st">'lca_analysis'</span> <span class="cf">else</span> <span class="st">''</span>,</span>
+<span id="cb18-44"><a href="#cb18-44" aria-hidden="true" tabindex="-1"></a>        <span class="st">'files'</span>:  files,</span>
+<span id="cb18-45"><a href="#cb18-45" aria-hidden="true" tabindex="-1"></a>    })</span>
+<span id="cb18-46"><a href="#cb18-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-47"><a href="#cb18-47" aria-hidden="true" tabindex="-1"></a>out <span class="op">=</span> root <span class="op">/</span> <span class="st">'quarto_docs'</span> <span class="op">/</span> <span class="st">'analyses.json'</span></span>
+<span id="cb18-48"><a href="#cb18-48" aria-hidden="true" tabindex="-1"></a>out.write_text(json.dumps(analyses, indent<span class="op">=</span><span class="dv">2</span>), encoding<span class="op">=</span><span class="st">'utf-8'</span>)</span>
+<span id="cb18-49"><a href="#cb18-49" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'analyses.json: wrote </span><span class="sc">{</span><span class="bu">len</span>(analyses)<span class="sc">}</span><span class="ss"> analyses'</span>, <span class="bu">file</span><span class="op">=</span>sys.stderr)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+</section>
+<section id="summary-what-to-customise-per-repository" class="level2">
+<h2 class="anchored" data-anchor-id="summary-what-to-customise-per-repository">5. Summary: What to Customise Per Repository</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Item</th>
+<th>Where to change</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Website title</td>
+<td><code>_quarto.yml</code> <code>title:</code> (set by <code>generate_quarto_yml.py</code> — edit the string there)</td>
+</tr>
+<tr class="even">
+<td>GitHub repo URL</td>
+<td><code>sidebar-tweaks.html</code> — the line with <code>https://github.com/...</code></td>
+</tr>
+<tr class="odd">
+<td><code>SKILL_ORDER</code></td>
+<td>Both <code>generate_quarto_yml.py</code> and <code>generate_sessions.py</code> (must match)</td>
+</tr>
+<tr class="even">
+<td>Home page content</td>
+<td><code>quarto_docs/index.md</code></td>
+</tr>
+<tr class="odd">
+<td>Theme</td>
+<td><code>theme:</code> in <code>_quarto.yml</code> (set by <code>generate_quarto_yml.py</code>)</td>
+</tr>
+<tr class="even">
+<td>GitHub Actions branch</td>
+<td><code>.github/workflows/deploy-quarto.yml</code> <code>branches:</code> list</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="key-gotchas" class="level2">
+<h2 class="anchored" data-anchor-id="key-gotchas">6. Key Gotchas</h2>
+<ul>
+<li>The <code>SKILL_ORDER</code> list in <code>generate_quarto_yml.py</code> and <code>generate_sessions.py</code> <strong>must be identical</strong>. If they diverge, the sidebar ordering will be inconsistent.</li>
+<li>Session files <strong>must</strong> start with <code># /&lt;skill-name&gt;</code> on line 1. Files without this header are silently skipped by <code>generate_sessions.py</code>.</li>
+<li><code>skills_sessions/</code> subfolder names must match the skill slugs used in <code>SKILL_ORDER</code> for proper grouping.</li>
+<li>The <code>sidebar-tweaks.html</code> GitHub URL is hardcoded to the original repo. When setting up a new repo, this URL <strong>must</strong> be changed to the new repository.</li>
+<li>The <code>Makefile</code> <code>serve</code> target copies <code>.md</code> files into <code>_site/skills/</code> so that <code>(.md)</code> sidebar links work in local preview. This only works for local development — on GitHub Pages, the JS uses the GitHub blob URL.</li>
+<li>Generated files (<code>_quarto.yml</code>, files in <code>quarto_docs/skills/</code>, <code>quarto_docs/plan/</code>, <code>quarto_docs/skills_sessions/</code>, <code>quarto_docs/skills_references/</code>, <code>*.json</code>) should <strong>not</strong> be edited by hand. They are overwritten every time the generator runs.</li>
+</ul>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var sidebar = document.getElementById('quarto-sidebar');
+  if (!sidebar) return;
+  var isGitHubPages = window.location.hostname.includes('github.io');
+  const items = Array.from(sidebar.querySelectorAll('li.sidebar-item'));
+  items.forEach(function (item, i) {
+    const link = item.querySelector('a.sidebar-item-text');
+    if (!link || link.textContent.trim() !== '(.md)') return;
+    const prevItem = items[i - 1];
+    if (!prevItem) return;
+    const prevLink = prevItem.querySelector('a.sidebar-item-text');
+    if (!prevLink) return;
+    const prevHref = prevLink.getAttribute('href');
+    const match = prevHref.match(/skills\/(.+)\.html/);
+    if (!match) return;
+    const skillName = match[1];
+    if (isGitHubPages) {
+      link.href = 'https://github.com/calvinw/agentic-lca/blob/main/.skillshare/skills/' + skillName + '/SKILL.md';
+    } else {
+      link.href = prevHref.replace('.html', '.md');
+    }
+    const prevContainer = prevItem.querySelector('.sidebar-item-container');
+    if (!prevContainer) return;
+    prevContainer.style.display = 'block';
+    link.style.display = 'inline';
+    link.style.marginLeft = '4px';
+    link.style.fontSize = '0.72em';
+    link.style.opacity = '0.55';
+    link.style.fontWeight = 'normal';
+    prevContainer.appendChild(link);
+    item.style.display = 'none';
+  });
+});
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/calvinw\.github\.io\/agentic-lca\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
