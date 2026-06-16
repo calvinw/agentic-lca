@@ -2,138 +2,146 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://calvinw.github.io/agentic-lca/skills/what-is-lca.html</loc>
-    <lastmod>2026-06-16T02:03:50.593Z</lastmod>
+    <lastmod>2026-06-16T02:07:31.310Z</lastmod>
   </url>
   <url>
     <loc>https://calvinw.github.io/agentic-lca/skills/system-boundary.html</loc>
-    <lastmod>2026-06-16T02:03:50.593Z</lastmod>
+    <lastmod>2026-06-16T02:07:31.309Z</lastmod>
   </url>
   <url>
     <loc>https://calvinw.github.io/agentic-lca/skills/scaling-vector.html</loc>
-    <lastmod>2026-06-16T02:03:50.593Z</lastmod>
+    <lastmod>2026-06-16T02:07:31.309Z</lastmod>
   </url>
   <url>
     <loc>https://calvinw.github.io/agentic-lca/skills/life-cycle-stages.html</loc>
-    <lastmod>2026-06-16T02:03:50.593Z</lastmod>
+    <lastmod>2026-06-16T02:07:31.309Z</lastmod>
   </url>
   <url>
     <loc>https://calvinw.github.io/agentic-lca/skills/lca-from-url.html</loc>
-    <lastmod>2026-06-16T02:03:50.593Z</lastmod>
-  </url>
-  <url>
-    <loc>https://calvinw.github.io/agentic-lca/skills/functional-unit.html</loc>
-    <lastmod>2026-06-16T02:03:50.593Z</lastmod>
-  </url>
-  <url>
-    <loc>https://calvinw.github.io/agentic-lca/plan/PLAN_SKILL_RECOMMENDATIONS.html</loc>
-    <lastmod>2026-06-16T02:03:50.625Z</lastmod>
-  </url>
-  <url>
-    <loc>https://calvinw.github.io/agentic-lca/plan/PLAN_REMIXABLE_LCAS.html</loc>
-    <lastmod>2026-06-16T02:03:50.625Z</lastmod>
-  </url>
-  <url>
-    <loc>https://calvinw.github.io/agentic-lca/plan/PLAN_PRODUCTION_LCIA_RECIPE.html</loc>
-    <lastmod>2026-06-16T02:03:50.625Z</lastmod>
-  </url>
-  <url>
-    <loc>https://calvinw.github.io/agentic-lca/plan/PLAN_BAFU_AND_METHODS_PACK.html</loc>
-    <lastmod>2026-06-16T02:03:50.624Z</lastmod>
-  </url>
-  <url>
-    <loc>https://calvinw.github.io/agentic-lca/skills_sessions/what-is-lca/what-is-lca-v0.1-elena-sonnet-4-6-session1.html</loc>
-    <lastmod>2026-06-16T02:03:53.175Z</lastmod>
-  </url>
-  <url>
-    <loc>https://calvinw.github.io/agentic-lca/skills_sessions/technosphere-and-ecosphere/technosphere-and-ecosphere-polyester_tshirt-v0.1-elena-sonnet-4-6-session1.html</loc>
-    <lastmod>2026-06-16T02:03:53.175Z</lastmod>
-  </url>
-  <url>
-    <loc>https://calvinw.github.io/agentic-lca/skills_sessions/system-boundary/system-boundary-polyester_tshirt-v0.1-calvin-sonnet-4-6-session1.html</loc>
-    <lastmod>2026-06-16T02:03:53.175Z</lastmod>
-  </url>
-  <url>
-    <loc>https://calvinw.github.io/agentic-lca/skills_sessions/life-cycle-stages/life-cycle-stages-wool_yarn-v0.1-elena-sonnet-4-6-session1.html</loc>
-    <lastmod>2026-06-16T02:03:53.174Z</lastmod>
-  </url>
-  <url>
-    <loc>https://calvinw.github.io/agentic-lca/skills_sessions/goal-and-scope/goal-and-scope-cotton_fiber-v0.1-elena-sonnet-4-6-session1.html</loc>
-    <lastmod>2026-06-16T02:03:53.174Z</lastmod>
-  </url>
-  <url>
-    <loc>https://calvinw.github.io/agentic-lca/skills_sessions/functional-unit/functional-unit-cotton_fiber-v0.2-elena-deepseek-v4-flash-session1.html</loc>
-    <lastmod>2026-06-16T02:03:53.174Z</lastmod>
-  </url>
-  <url>
-    <loc>https://calvinw.github.io/agentic-lca/skills_sessions/index.html</loc>
-    <lastmod>2026-06-16T02:03:53.174Z</lastmod>
-  </url>
-  <url>
-    <loc>https://calvinw.github.io/agentic-lca/index.html</loc>
-    <lastmod>2026-06-16T02:03:50.596Z</lastmod>
-  </url>
-  <url>
-    <loc>https://calvinw.github.io/agentic-lca/skills_sessions/functional-unit/functional-unit-cotton_fiber-v0.1-calvin-sonnet-4-6-session1.html</loc>
-    <lastmod>2026-06-16T02:03:53.174Z</lastmod>
-  </url>
-  <url>
-    <loc>https://calvinw.github.io/agentic-lca/skills_sessions/functional-unit/functional-unit-wool_yarn-v0.2-elena-sonnet-4-6-session1.html</loc>
-    <lastmod>2026-06-16T02:03:53.174Z</lastmod>
-  </url>
-  <url>
-    <loc>https://calvinw.github.io/agentic-lca/skills_sessions/life-cycle-inventory/life-cycle-inventory-wool_yarn-v0.1-elena-sonnet-4-6-session1.html</loc>
-    <lastmod>2026-06-16T02:03:53.174Z</lastmod>
-  </url>
-  <url>
-    <loc>https://calvinw.github.io/agentic-lca/skills_sessions/system-boundary/system-boundary-cotton_fiber-v0.1-calvin-sonnet-4-6-session1.html</loc>
-    <lastmod>2026-06-16T02:03:53.174Z</lastmod>
-  </url>
-  <url>
-    <loc>https://calvinw.github.io/agentic-lca/skills_sessions/system-boundary/system-boundary-wool_yarn-v0.1-calvin-sonnet-4-6-session1.html</loc>
-    <lastmod>2026-06-16T02:03:53.175Z</lastmod>
-  </url>
-  <url>
-    <loc>https://calvinw.github.io/agentic-lca/skills_sessions/technosphere-and-ecosphere/technosphere-and-ecosphere-wool_yarn-v0.1-elena-sonnet-4-6-session1.html</loc>
-    <lastmod>2026-06-16T02:03:53.175Z</lastmod>
-  </url>
-  <url>
-    <loc>https://calvinw.github.io/agentic-lca/plan/index.html</loc>
-    <lastmod>2026-06-16T02:03:50.625Z</lastmod>
-  </url>
-  <url>
-    <loc>https://calvinw.github.io/agentic-lca/plan/PLAN_PRODUCTION_LCIA_LCA_COMMONS_TRACI.html</loc>
-    <lastmod>2026-06-16T02:03:50.625Z</lastmod>
-  </url>
-  <url>
-    <loc>https://calvinw.github.io/agentic-lca/plan/PLAN_REFERENCE_EXAMPLES.html</loc>
-    <lastmod>2026-06-16T02:03:50.625Z</lastmod>
-  </url>
-  <url>
-    <loc>https://calvinw.github.io/agentic-lca/plan/PLAN_RUN_LCA_SKILL_LCIA_AND_DATABASES.html</loc>
-    <lastmod>2026-06-16T02:03:50.625Z</lastmod>
-  </url>
-  <url>
-    <loc>https://calvinw.github.io/agentic-lca/skills/index.html</loc>
-    <lastmod>2026-06-16T02:03:53.171Z</lastmod>
+    <lastmod>2026-06-16T02:07:31.309Z</lastmod>
   </url>
   <url>
     <loc>https://calvinw.github.io/agentic-lca/skills/goal-and-scope.html</loc>
-    <lastmod>2026-06-16T02:03:50.593Z</lastmod>
+    <lastmod>2026-06-16T02:07:31.309Z</lastmod>
+  </url>
+  <url>
+    <loc>https://calvinw.github.io/agentic-lca/skills/index.html</loc>
+    <lastmod>2026-06-16T02:07:33.665Z</lastmod>
+  </url>
+  <url>
+    <loc>https://calvinw.github.io/agentic-lca/plan/PLAN_RUN_LCA_SKILL_LCIA_AND_DATABASES.html</loc>
+    <lastmod>2026-06-16T02:07:31.339Z</lastmod>
+  </url>
+  <url>
+    <loc>https://calvinw.github.io/agentic-lca/plan/PLAN_REFERENCE_EXAMPLES.html</loc>
+    <lastmod>2026-06-16T02:07:31.339Z</lastmod>
+  </url>
+  <url>
+    <loc>https://calvinw.github.io/agentic-lca/plan/PLAN_PRODUCTION_LCIA_LCA_COMMONS_TRACI.html</loc>
+    <lastmod>2026-06-16T02:07:31.339Z</lastmod>
+  </url>
+  <url>
+    <loc>https://calvinw.github.io/agentic-lca/plan/index.html</loc>
+    <lastmod>2026-06-16T02:07:31.339Z</lastmod>
+  </url>
+  <url>
+    <loc>https://calvinw.github.io/agentic-lca/skills_sessions/technosphere-and-ecosphere/technosphere-and-ecosphere-wool_yarn-v0.1-elena-sonnet-4-6-session1.html</loc>
+    <lastmod>2026-06-16T02:07:33.669Z</lastmod>
+  </url>
+  <url>
+    <loc>https://calvinw.github.io/agentic-lca/skills_sessions/system-boundary/system-boundary-wool_yarn-v0.1-calvin-sonnet-4-6-session1.html</loc>
+    <lastmod>2026-06-16T02:07:33.668Z</lastmod>
+  </url>
+  <url>
+    <loc>https://calvinw.github.io/agentic-lca/skills_sessions/system-boundary/system-boundary-cotton_fiber-v0.1-calvin-sonnet-4-6-session1.html</loc>
+    <lastmod>2026-06-16T02:07:33.668Z</lastmod>
+  </url>
+  <url>
+    <loc>https://calvinw.github.io/agentic-lca/skills_sessions/life-cycle-inventory/life-cycle-inventory-wool_yarn-v0.1-elena-sonnet-4-6-session1.html</loc>
+    <lastmod>2026-06-16T02:07:33.668Z</lastmod>
+  </url>
+  <url>
+    <loc>https://calvinw.github.io/agentic-lca/skills_sessions/goal-and-scope/goal-and-scope-cotton_fiber-v0.1-elena-sonnet-4-6-session1.html</loc>
+    <lastmod>2026-06-16T02:07:33.668Z</lastmod>
+  </url>
+  <url>
+    <loc>https://calvinw.github.io/agentic-lca/skills_sessions/functional-unit/functional-unit-cotton_fiber-v0.2-elena-deepseek-v4-flash-session1.html</loc>
+    <lastmod>2026-06-16T02:07:33.668Z</lastmod>
+  </url>
+  <url>
+    <loc>https://calvinw.github.io/agentic-lca/skills_sessions/index.html</loc>
+    <lastmod>2026-06-16T02:07:33.668Z</lastmod>
+  </url>
+  <url>
+    <loc>https://calvinw.github.io/agentic-lca/index.html</loc>
+    <lastmod>2026-06-16T02:07:31.313Z</lastmod>
+  </url>
+  <url>
+    <loc>https://calvinw.github.io/agentic-lca/skills_sessions/functional-unit/functional-unit-cotton_fiber-v0.1-calvin-sonnet-4-6-session1.html</loc>
+    <lastmod>2026-06-16T02:07:33.668Z</lastmod>
+  </url>
+  <url>
+    <loc>https://calvinw.github.io/agentic-lca/skills_sessions/functional-unit/functional-unit-wool_yarn-v0.2-elena-sonnet-4-6-session1.html</loc>
+    <lastmod>2026-06-16T02:07:33.668Z</lastmod>
+  </url>
+  <url>
+    <loc>https://calvinw.github.io/agentic-lca/skills_sessions/impact-assessment/impact-assessment-wool_yarn-v0.1-elena-sonnet-4-6-session1.html</loc>
+    <lastmod>2026-06-16T02:07:33.668Z</lastmod>
+  </url>
+  <url>
+    <loc>https://calvinw.github.io/agentic-lca/skills_sessions/life-cycle-stages/life-cycle-stages-wool_yarn-v0.1-elena-sonnet-4-6-session1.html</loc>
+    <lastmod>2026-06-16T02:07:33.668Z</lastmod>
+  </url>
+  <url>
+    <loc>https://calvinw.github.io/agentic-lca/skills_sessions/system-boundary/system-boundary-polyester_tshirt-v0.1-calvin-sonnet-4-6-session1.html</loc>
+    <lastmod>2026-06-16T02:07:33.668Z</lastmod>
+  </url>
+  <url>
+    <loc>https://calvinw.github.io/agentic-lca/skills_sessions/technosphere-and-ecosphere/technosphere-and-ecosphere-polyester_tshirt-v0.1-elena-sonnet-4-6-session1.html</loc>
+    <lastmod>2026-06-16T02:07:33.668Z</lastmod>
+  </url>
+  <url>
+    <loc>https://calvinw.github.io/agentic-lca/skills_sessions/what-is-lca/what-is-lca-v0.1-elena-sonnet-4-6-session1.html</loc>
+    <lastmod>2026-06-16T02:07:33.669Z</lastmod>
+  </url>
+  <url>
+    <loc>https://calvinw.github.io/agentic-lca/plan/PLAN_BAFU_AND_METHODS_PACK.html</loc>
+    <lastmod>2026-06-16T02:07:31.338Z</lastmod>
+  </url>
+  <url>
+    <loc>https://calvinw.github.io/agentic-lca/plan/PLAN_PRODUCTION_LCIA_RECIPE.html</loc>
+    <lastmod>2026-06-16T02:07:31.339Z</lastmod>
+  </url>
+  <url>
+    <loc>https://calvinw.github.io/agentic-lca/plan/PLAN_REMIXABLE_LCAS.html</loc>
+    <lastmod>2026-06-16T02:07:31.339Z</lastmod>
+  </url>
+  <url>
+    <loc>https://calvinw.github.io/agentic-lca/plan/PLAN_SKILL_RECOMMENDATIONS.html</loc>
+    <lastmod>2026-06-16T02:07:31.339Z</lastmod>
+  </url>
+  <url>
+    <loc>https://calvinw.github.io/agentic-lca/skills/functional-unit.html</loc>
+    <lastmod>2026-06-16T02:07:31.309Z</lastmod>
+  </url>
+  <url>
+    <loc>https://calvinw.github.io/agentic-lca/skills/impact-assessment.html</loc>
+    <lastmod>2026-06-16T02:07:31.309Z</lastmod>
   </url>
   <url>
     <loc>https://calvinw.github.io/agentic-lca/skills/life-cycle-inventory.html</loc>
-    <lastmod>2026-06-16T02:03:50.593Z</lastmod>
+    <lastmod>2026-06-16T02:07:31.309Z</lastmod>
   </url>
   <url>
     <loc>https://calvinw.github.io/agentic-lca/skills/run-lca.html</loc>
-    <lastmod>2026-06-16T02:03:50.593Z</lastmod>
+    <lastmod>2026-06-16T02:07:31.309Z</lastmod>
   </url>
   <url>
     <loc>https://calvinw.github.io/agentic-lca/skills/supply-chain.html</loc>
-    <lastmod>2026-06-16T02:03:50.593Z</lastmod>
+    <lastmod>2026-06-16T02:07:31.309Z</lastmod>
   </url>
   <url>
     <loc>https://calvinw.github.io/agentic-lca/skills/technosphere-and-ecosphere.html</loc>
-    <lastmod>2026-06-16T02:03:50.593Z</lastmod>
+    <lastmod>2026-06-16T02:07:31.309Z</lastmod>
   </url>
 </urlset>

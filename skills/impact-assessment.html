@@ -6,10 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Junghyun Choi (elenachoi1)">
-<meta name="description" content="Teaching skill for the LCA concept of the scaling vector — how much each process in the supply chain must run to deliver exactly one functional unit. Invoke as /scaling-vector , for example /scaling-vector wool_yarn or /scaling-vector polyester_tshirt. The skill reads the recipe card and lca_results.md for that case study and walks the student through the calculation using plain division, not matrix algebra. Designed for FIT students with no science or coding background.">
+<meta name="description" content="Teaching skill for the LCA concept of life cycle impact assessment (LCIA) — the step that converts the raw inventory of emissions and resource use (kg of CO2, kg of methane, kg of ammonia, litres of water) into a small set of comparable impact category scores, using conversion numbers called characterization factors. Invoke as /impact-assessment , for example /impact-assessment wool_yarn or /impact-assessment cotton_fiber. The skill reads the recipe card and lca_results.md for that case study and teaches the concept using a currency-exchange analogy and fashion or retail business context. Designed for FIT students with no science or coding background. Builds directly on the life-cycle-inventory skill. Four to five exchanges to complete.">
 
-<title>scaling-vector – Agentic LCA</title>
+<title>impact-assessment – Agentic LCA</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -121,7 +120,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../skills/scaling-vector.html">Scaling Vector</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../skills/impact-assessment.html">Impact Assessment</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -165,7 +164,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../skills/impact-assessment.html" class="sidebar-item-text sidebar-link">
+  <a href="../skills/impact-assessment.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Impact Assessment</span></a>
   </div>
 </li>
@@ -225,7 +224,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../skills/scaling-vector.html" class="sidebar-item-text sidebar-link active">
+  <a href="../skills/scaling-vector.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Scaling Vector</span></a>
   </div>
 </li>
@@ -297,249 +296,488 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#before-you-begin" id="toc-before-you-begin" class="nav-link" data-scroll-target="#before-you-begin">Before you begin</a></li>
   <li><a href="#teaching-sequence" id="toc-teaching-sequence" class="nav-link" data-scroll-target="#teaching-sequence">Teaching sequence</a>
   <ul class="collapse">
-  <li><a href="#step-1-introduce-the-question-with-a-real-world-analogy" id="toc-step-1-introduce-the-question-with-a-real-world-analogy" class="nav-link" data-scroll-target="#step-1-introduce-the-question-with-a-real-world-analogy">Step 1 — Introduce the question with a real-world analogy</a></li>
-  <li><a href="#step-2-confirm-the-reference-process-scaling-factor" id="toc-step-2-confirm-the-reference-process-scaling-factor" class="nav-link" data-scroll-target="#step-2-confirm-the-reference-process-scaling-factor">Step 2 — Confirm the reference process scaling factor</a></li>
-  <li><a href="#step-3-work-backwards-one-step-at-a-time" id="toc-step-3-work-backwards-one-step-at-a-time" class="nav-link" data-scroll-target="#step-3-work-backwards-one-step-at-a-time">Step 3 — Work backwards one step at a time</a></li>
-  <li><a href="#step-4-verify-the-scaling-vector-and-show-the-scaled-supply-chain-diagram" id="toc-step-4-verify-the-scaling-vector-and-show-the-scaled-supply-chain-diagram" class="nav-link" data-scroll-target="#step-4-verify-the-scaling-vector-and-show-the-scaled-supply-chain-diagram">Step 4 — Verify the scaling vector and show the scaled supply chain diagram</a></li>
+  <li><a href="#step-1-open-with-an-everyday-analogy-question" id="toc-step-1-open-with-an-everyday-analogy-question" class="nav-link" data-scroll-target="#step-1-open-with-an-everyday-analogy-question">Step 1 — Open with an everyday analogy question</a></li>
+  <li><a href="#step-2-validate-their-answer-and-introduce-impact-assessment" id="toc-step-2-validate-their-answer-and-introduce-impact-assessment" class="nav-link" data-scroll-target="#step-2-validate-their-answer-and-introduce-impact-assessment">Step 2 — Validate their answer and introduce impact assessment</a></li>
+  <li><a href="#step-3-walk-through-the-worked-example-for-the-case-study" id="toc-step-3-walk-through-the-worked-example-for-the-case-study" class="nav-link" data-scroll-target="#step-3-walk-through-the-worked-example-for-the-case-study">Step 3 — Walk through the worked example for the case study</a></li>
+  <li><a href="#step-4-reveal-the-full-impact-profile-and-ask-a-what-if-question" id="toc-step-4-reveal-the-full-impact-profile-and-ask-a-what-if-question" class="nav-link" data-scroll-target="#step-4-reveal-the-full-impact-profile-and-ask-a-what-if-question">Step 4 — Reveal the full impact profile and ask a what-if question</a></li>
   <li><a href="#step-5-connect-to-a-business-decision-and-close" id="toc-step-5-connect-to-a-business-decision-and-close" class="nav-link" data-scroll-target="#step-5-connect-to-a-business-decision-and-close">Step 5 — Connect to a business decision and close</a></li>
   </ul></li>
-  <li><a href="#tone-and-pacing-for-all-responses" id="toc-tone-and-pacing-for-all-responses" class="nav-link" data-scroll-target="#tone-and-pacing-for-all-responses">Tone and pacing for all responses</a></li>
+  <li><a href="#lcia-quick-reference" id="toc-lcia-quick-reference" class="nav-link" data-scroll-target="#lcia-quick-reference">LCIA quick reference</a>
+  <ul class="collapse">
+  <li><a href="#traci-2.2-the-eight-categories-used-in-this-project" id="toc-traci-2.2-the-eight-categories-used-in-this-project" class="nav-link" data-scroll-target="#traci-2.2-the-eight-categories-used-in-this-project">TRACI 2.2 — the eight categories used in this project</a></li>
+  </ul></li>
+  <li><a href="#common-student-questions" id="toc-common-student-questions" class="nav-link" data-scroll-target="#common-student-questions">Common student questions</a></li>
+  <li><a href="#tone-and-pacing" id="toc-tone-and-pacing" class="nav-link" data-scroll-target="#tone-and-pacing">Tone and pacing</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-</div>
-
-<div>
-  <div class="description">
-    <p>Teaching skill for the LCA concept of the scaling vector — how much each process in the supply chain must run to deliver exactly one functional unit. Invoke as /scaling-vector <case-study>, for example /scaling-vector wool_yarn or /scaling-vector polyester_tshirt. The skill reads the recipe card and lca_results.md for that case study and walks the student through the calculation using plain division, not matrix algebra. Designed for FIT students with no science or coding background.</case-study></p>
-  </div>
-</div>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
-<div class="quarto-title-meta">
-
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Junghyun Choi (elenachoi1) </p>
-          </div>
-  </div>
-    
-  
-    
-  </div>
-  
-
-
-</header>
 
 
 <section id="what-this-skill-does" class="level2">
 <h2 class="anchored" data-anchor-id="what-this-skill-does">What this skill does</h2>
-<p>This skill teaches the concept of the <strong>scaling vector</strong> in Life Cycle Assessment.</p>
-<p>Before we can calculate the total emissions from a supply chain, we need to answer one key question: if we want to produce exactly one functional unit of the finished product, how many times does each step in the supply chain need to run?</p>
-<p>The answer to that question is the scaling vector — one number per process, called a scaling factor. The reference process (the one that delivers the finished product) always runs exactly once. Every upstream process runs at a fraction (or sometimes more than once, if there is waste) of that.</p>
-<p>This skill uses simple division, not matrix algebra. Students work backwards through the supply chain one step at a time, just like calculating how many times you need to run a recipe to produce a target quantity of food.</p>
-<p>This skill is for business and retail management students at FIT. Assume no science or technical background. Be warm, encouraging, and conversational. Ask questions — never lecture. Build understanding one step at a time.</p>
+<p>This skill teaches <strong>life cycle impact assessment (LCIA)</strong> — the step in LCA that turns the raw inventory into a small set of meaningful scores.</p>
+<p>Students who have completed the inventory skill know that the inventory is a list: so many kilograms of CO₂, so many kilograms of methane, so many litres of water, all crossing the boundary between the human-made world and nature to deliver one unit of product. But that list has a problem — you cannot add litres of water to kilograms of CO₂, and you cannot say that 1 kg of methane is “the same size” of problem as 1 kg of CO₂, because methane traps far more heat in the atmosphere.</p>
+<p>LCIA solves this. It uses scientifically-derived conversion numbers called <strong>characterization factors</strong> to convert every flow into a common unit <em>within its own type of damage</em> — for example, every greenhouse gas gets converted into “kg of CO₂ equivalent” so they can be added into one climate change score. Other factors convert flows into “kg of SO₂ equivalent” for acidification, or “kg of PM 2.5 equivalent” for particle pollution. The result is a short profile of scores — one number per type of environmental damage — instead of one giant, meaningless list of mismatched units.</p>
+<p>A student who completes this skill will be able to: - Explain what a characterization factor is and why it is needed - Multiply an inventory flow by its characterization factor to get its contribution to an impact score - Understand why a single substance (like ammonia) can contribute to more than one impact category at once - Explain why LCIA reports several separate scores rather than one combined “total damage” number</p>
+<p>This skill is for business and retail management students at FIT. It assumes no science or technical background. The tone should be warm, encouraging, and conversational. Build understanding one step at a time.</p>
 <hr>
 </section>
 <section id="before-you-begin" class="level2">
 <h2 class="anchored" data-anchor-id="before-you-begin">Before you begin</h2>
 <p>The argument passed to this skill is a case study name, for example <code>wool_yarn</code>.</p>
-<p>Use the Read tool to open both of these files:</p>
+<p>Use the Read tool to open both:</p>
 <pre><code>skills_references/&lt;argument&gt;/recipe_card.md
 skills_references/&lt;argument&gt;/lca_results.md</code></pre>
-<p>From the <strong>recipe card</strong> frontmatter, extract: - <code>name</code> — the product name - <code>functional_unit.description</code> and <code>functional_unit.amount</code> and <code>functional_unit.unit</code> - <code>processes</code> — names, <code>reference_output</code> (flow name + amount), and <code>inputs</code> (flow name + amount) - <code>elementary_flows.emissions</code> — the gas names and units - <code>reference_process</code> — which process is the finishing line</p>
-<p>From <strong>lca_results.md</strong>, extract: - Step 3 — Scaling Vector table (the verified s values, one per process) - Step 6 — Scaled Emissions by Process table (s × emission rate for each process and gas) - Step 7 — LCIA Characterization table if present (the final impact scores) - The Summary section (the headline impact numbers)</p>
-<p>You will use the recipe card to guide the student through the calculation, and lca_results.md to confirm their answers are correct.</p>
-<p>If no argument is given, or if the file does not exist, say: &gt; “I don’t have a case study set up for that product yet. The ones ready to &gt; explore are: <strong>wool_yarn</strong>, <strong>polyester_tshirt</strong>, <strong>cotton_fiber</strong>. &gt; Which would you like to start with?”</p>
+<p>From <code>recipe_card.md</code>, read the <code>name</code> and <code>processes</code> (for the inventory flows). From <code>lca_results.md</code>, read: - <strong>Step 5 — LCI Results</strong> — the compiled inventory totals (the starting point for this skill) - <strong>Step 7 — LCIA Results (TRACI 2.2)</strong> — the final impact category scores (the destination for this skill)</p>
+<p>Everything you teach comes from what is in these two files. Do not invent numbers. The worked examples below give you the exact characterization factors already verified against each case study’s results, so you do not need to derive them yourself — just use the ones provided per case study.</p>
+<p>If no argument is given, or if the files do not exist, say: &gt; “I don’t have a case study set up for that product yet. The ones ready to &gt; explore are: <strong>wool_yarn</strong>, <strong>cotton_fiber</strong>, <strong>polyester_tshirt</strong>. &gt; Which would you like to start with?”</p>
 <hr>
 </section>
 <section id="teaching-sequence" class="level2">
 <h2 class="anchored" data-anchor-id="teaching-sequence">Teaching sequence</h2>
-<p>Work through these five steps in order. Wait for the student to respond at each question before moving on.</p>
+<p>Work through these five steps in order. Do not explain a concept before asking a question about it first. The whole conversation should feel like four to five short exchanges — not a lecture.</p>
 <hr>
-<section id="step-1-introduce-the-question-with-a-real-world-analogy" class="level3">
-<h3 class="anchored" data-anchor-id="step-1-introduce-the-question-with-a-real-world-analogy">Step 1 — Introduce the question with a real-world analogy</h3>
-<p>Before showing any numbers, explain what a scaling factor is using a food or manufacturing analogy. For example:</p>
+<section id="step-1-open-with-an-everyday-analogy-question" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-open-with-an-everyday-analogy-question">Step 1 — Open with an everyday analogy question</h3>
+<p>Before introducing any LCA terminology, anchor the idea in something the student already understands from retail or business. Use this or something very close to it:</p>
 <blockquote class="blockquote">
-<p>“We’ve mapped out the supply chain — we know which steps exist and what flows between them. Now we need to answer a different question: if we want to produce exactly [functional unit description], how many times does each step need to run?</p>
-<p>Think of it like a recipe. If a bread recipe produces one loaf, and you want three loaves, the recipe runs three times. If it produces two loaves per batch, and you want three loaves, it runs 1.5 times. The number of times it runs is the scaling factor — it’s just a ratio.”</p>
+<p>“Imagine you run a retail chain with stores in the US, the UK, and Japan. At the end of the month, your US stores report $40,000 in sales, your UK stores report £25,000, and your Japan stores report ¥3,000,000.</p>
+<p>Here is the question: can you find your total global sales just by adding 40,000 + 25,000 + 3,000,000? Why or why not — and what would you need to do first before those three numbers could be added together?”</p>
 </blockquote>
-<p>Show the structure diagram so the student can see the overall shape of the chain before diving into individual processes. Output this markdown image tag <strong>verbatim</strong> (substituting the argument for <code>&lt;argument&gt;</code>):</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="skills_references/cotton_fiber/product_graph_structure.svg" class="img-fluid figure-img"></p>
-<figcaption>Cotton Fiber supply chain — structure</figcaption>
-</figure>
-</div>
+<p>Wait for the student to answer before moving on.</p>
+<hr>
+</section>
+<section id="step-2-validate-their-answer-and-introduce-impact-assessment" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-validate-their-answer-and-introduce-impact-assessment">Step 2 — Validate their answer and introduce impact assessment</h3>
+<p>Whatever the student says, find what is right about it.</p>
+<ul>
+<li>If they said you need to convert to one currency first: “Exactly — you’d use the day’s exchange rate to convert pounds and yen into dollars, and only then could you add the three numbers together into one meaningful total.”</li>
+<li>If they said the numbers can’t simply be added: “You’ve spotted the key problem — dollars, pounds, and yen are different units, and adding them directly would produce a meaningless number.”</li>
+<li>If they were unsure: “The issue is that $40,000, £25,000, and ¥3,000,000 are in three different currencies. Before you can add them, you have to convert each one into the same currency using that day’s exchange rate.”</li>
+</ul>
+<p>Then introduce the concept:</p>
+<blockquote class="blockquote">
+<p>“Life cycle assessment has exactly this problem. The inventory you’ve already learned about lists emissions in their own original units — kg of CO₂, kg of methane, kg of ammonia, litres of water. You cannot add a kilogram of methane to a kilogram of CO₂ any more than you can add pounds to yen — they cause different <em>kinds</em> of environmental damage at different intensities.</p>
+<p>The step that solves this is called <strong>life cycle impact assessment</strong>, or <strong>LCIA</strong>. It uses conversion numbers — called <strong>characterization factors</strong> — that work just like exchange rates. Each factor tells you how much damage one kilogram of a substance causes, <em>relative to</em> a reference substance, for a specific type of damage. For climate change, the reference substance is CO₂, so every other greenhouse gas gets converted into ‘kg of CO₂ equivalent.’ Once everything is in the same unit, you can finally add it up into one score.”</p>
+</blockquote>
+<hr>
+</section>
+<section id="step-3-walk-through-the-worked-example-for-the-case-study" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-walk-through-the-worked-example-for-the-case-study">Step 3 — Walk through the worked example for the case study</h3>
+<p>Introduce the product:</p>
+<blockquote class="blockquote">
+<p>“Let’s convert the inventory for <strong>[name]</strong> into impact scores together.”</p>
+</blockquote>
+<p>Show the supply chain diagram:</p>
 <pre><code>![&lt;product name&gt; supply chain — structure](skills_references/&lt;argument&gt;/product_graph_structure.svg)</code></pre>
-<p>Briefly orient them to it:</p>
+<p>Then use the matching block below for the chosen case study.</p>
+<p><strong>For wool_yarn:</strong></p>
 <blockquote class="blockquote">
-<p>“Here is the supply chain map. Each box is one step in the chain — a process. The arrows show what flows from one step to the next. The rightmost box is the <strong>reference process</strong> — the finishing line, the step that delivers the product we are studying.”</p>
-</blockquote>
-<hr>
-<p>Next, introduce the idea of unit process data and walk through each process <strong>one diagram at a time</strong>. For each process P1, P2, … (in order from the recipe card <code>processes</code> list), show its unit process card:</p>
-<pre><code>![P1 — [process name] unit process](skills_references/&lt;argument&gt;/unit_process_P1.svg)</code></pre>
-<p>After showing each diagram, say something like:</p>
-<blockquote class="blockquote">
-<p>“This is the specification sheet for [process name]. The box in the middle is the process. The arrow leaving to the right is the <strong>reference output</strong> — what this process produces in a single run: [reference_output.amount] [reference_output.unit] of [reference_output.flow]. That number is the key one to remember.</p>
-<p>On the left you can see what it consumes as an input (if anything). Below are the gases it releases — the emissions — and above are any natural resources it draws on.”</p>
-</blockquote>
-<p>Do this for every process in the recipe card before moving on to the table. Emphasise the <strong>reference output amount</strong> each time — that is what the scaling calculation divides by.</p>
-<hr>
-<p>After all unit process diagrams have been shown, say:</p>
-<blockquote class="blockquote">
-<p>“Now let’s collect all of that into one table so we can see the whole picture at once:”</p>
-</blockquote>
-<p>Build a clear summary table from the recipe card data. Include one row per process showing: the process name, its reference output (what it produces per run), its inputs (what it consumes per run, if any), and its emissions (what gases it releases per run). Use plain column headers. For example:</p>
+<p>“Here is the compiled inventory you already built in the last skill:</p>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-</colgroup>
 <thead>
 <tr class="header">
-<th>Process</th>
-<th>Produces per run</th>
-<th>Consumes per run</th>
-<th>Emits per run</th>
+<th>Flow</th>
+<th>Inventory total</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>P1 — Fertilizer production</td>
-<td>1.0 kg N-fertilizer</td>
-<td>—</td>
-<td>3.5 kg CO₂</td>
+<td>Carbon dioxide</td>
+<td>2.55 kg</td>
 </tr>
 <tr class="even">
-<td>P2 — Cotton farming</td>
-<td>1.0 kg Cotton fiber</td>
-<td>0.2 kg N-fertilizer</td>
-<td>0.8 kg CO₂, 0.015 kg N₂O, 0.010 kg NH₃</td>
+<td>Methane</td>
+<td>0.44 kg</td>
+</tr>
+<tr class="odd">
+<td>Water</td>
+<td>30 L</td>
 </tr>
 </tbody>
 </table>
-<p>Adapt this table to whatever processes, inputs, and emissions are in the recipe card for the current case study. After the table, say:</p>
-<blockquote class="blockquote">
-<p>“These are the building blocks. Every number in the table came from measurement or a database — not from guessing. Now we can use them to figure out how many times each process needs to run.”</p>
+<p>For the <strong>Global warming</strong> impact category, the characterization factors (the ‘exchange rates’) are: - Carbon dioxide → <strong>1</strong> kg CO₂-eq per kg (CO₂ is the reference substance, so its own factor is always 1) - Methane → <strong>25</strong> kg CO₂-eq per kg (methane traps far more heat than CO₂ per kilogram, which is why this factor is so much bigger than 1)</p>
+<p>I’ve already converted the CO₂: 2.55 kg × 1 = 2.55 kg CO₂-eq. Can you convert the methane the same way — multiply 0.44 kg by its factor of 25 — and then add the two converted numbers together to get the total Global warming score?”</p>
 </blockquote>
-<p>Then ask the student one opening question to start them thinking:</p>
+<p><strong>For cotton_fiber:</strong></p>
 <blockquote class="blockquote">
-<p>“The [reference process name] is the final step — it produces the finished [product name]. If we want exactly [functional_unit.amount] [functional_unit.unit] of [functional_unit.description], how many times do you think the [reference process name] needs to run?”</p>
-</blockquote>
-<p>Wait for their answer. They will almost always say “once” or “1 time” — which is correct for all three of our case studies (since the functional unit is exactly what the reference process produces in one run).</p>
-<hr>
-</section>
-<section id="step-2-confirm-the-reference-process-scaling-factor" class="level3">
-<h3 class="anchored" data-anchor-id="step-2-confirm-the-reference-process-scaling-factor">Step 2 — Confirm the reference process scaling factor</h3>
-<p>Validate their answer and explain why it is right.</p>
-<p>The reference process has index N (e.g.&nbsp;P2 in a 2-process chain, P3 in a 3-process chain). Use the matching subscript notation throughout — sN = 1.0.</p>
-<blockquote class="blockquote">
-<p>“Exactly right. [Reference process name] produces [reference_output.amount] [reference_output.flow] per run — which is exactly our functional unit. So it runs exactly <strong>1 time</strong>. We write that as:</p>
-<p><strong>sN = 1.0</strong> (where N is the index of the reference process)</p>
-<p>For example, if the reference process is P2, write <strong>s2 = 1.0</strong>. If it is P3, write <strong>s3 = 1.0</strong>.</p>
-<p>In LCA, this is always where we start. The finishing-line process always gets a scaling factor of 1 (assuming the functional unit equals exactly one run of that process, which is true in all our case studies).”</p>
-</blockquote>
-<p>Then transition to the upstream processes:</p>
-<blockquote class="blockquote">
-<p>“Now here is where it gets interesting. [Reference process name] needs [input.amount] [input.flow] as an input — it consumes that from an upstream step. We need to figure out how many times that upstream step has to run to supply enough.”</p>
-</blockquote>
-<hr>
-</section>
-<section id="step-3-work-backwards-one-step-at-a-time" class="level3">
-<h3 class="anchored" data-anchor-id="step-3-work-backwards-one-step-at-a-time">Step 3 — Work backwards one step at a time</h3>
-<p>For each upstream process, guide the student through one calculation. Do NOT do all processes in one go — one question per process.</p>
-<p>Use the subscript notation consistently: s1 for P1, s2 for P2, s3 for P3.</p>
-<p>Use this calculation pattern for each step, translating it into plain English:</p>
-<p><strong>The formula (never show it as algebra — always as a sentence):</strong> &gt; “[Downstream process name] runs sN = [s_downstream] time(s), and each run &gt; consumes [input.amount] [input.flow]. So in total it needs &gt; [input.amount × s_downstream] [input.flow]. &gt; &gt; [Upstream process name] produces [reference_output.amount] [reference_output.flow] &gt; per run. To supply [total needed], it needs to run: &gt; &gt; sM = [total needed] [unit] ÷ [output per run] [unit]/run = [s_upstream] runs”</p>
-<p>Where M is the index of the upstream process (e.g.&nbsp;s1 for P1). Always write the result as <strong>sM = [value]</strong> so the student sees the notation clearly.</p>
-<p>Show the division as a fraction so the units cancel clearly:</p>
-<blockquote class="blockquote">
-<p>“s1 = 0.2 kg ÷ 1.0 kg/run = 0.2 runs”</p>
-</blockquote>
-<p>For a <strong>2-process chain</strong> (e.g.&nbsp;wool_yarn, cotton_fiber): - One upstream hop: calculate s1, then move to Step 4.</p>
-<p>For a <strong>3-process chain</strong> (e.g.&nbsp;polyester_tshirt): - Calculate the middle process first: s2 - Then use s2 to work out the total input needed by P2 - Then calculate the furthest upstream: s1 - This is the key teaching moment for compound scaling: two hops back</p>
-<p>After each calculation, ask the student to do the division themselves before you reveal the answer:</p>
-<blockquote class="blockquote">
-<p>“Before I show you the answer — can you work out what the division gives? [total needed] ÷ [output per run] = ?”</p>
-</blockquote>
-<p>Accept any reasonable attempt. If they get it right, confirm and celebrate. If they are off or unsure, work through it with them step by step.</p>
-<hr>
-</section>
-<section id="step-4-verify-the-scaling-vector-and-show-the-scaled-supply-chain-diagram" class="level3">
-<h3 class="anchored" data-anchor-id="step-4-verify-the-scaling-vector-and-show-the-scaled-supply-chain-diagram">Step 4 — Verify the scaling vector and show the scaled supply chain diagram</h3>
-<p>Once all scaling factors are calculated, confirm them against the lca_results.md Step 3 table:</p>
-<blockquote class="blockquote">
-<p>“Let me check these against the verified calculation:</p>
+<p>“Here is the compiled inventory you already built in the last skill:</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
-<th>Process</th>
-<th>Scaling factor</th>
+<th>Flow</th>
+<th>Inventory total</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>P1 — [name]</td>
-<td>s1 = [value]</td>
+<td>Carbon dioxide</td>
+<td>1.5 kg</td>
 </tr>
 <tr class="even">
-<td>P2 — [name]</td>
-<td>s2 = [value]</td>
+<td>Nitrous oxide</td>
+<td>0.015 kg</td>
 </tr>
 <tr class="odd">
-<td>…</td>
-<td>…</td>
+<td>Ammonia</td>
+<td>0.01 kg</td>
+</tr>
+<tr class="even">
+<td>Water</td>
+<td>8,000 L</td>
 </tr>
 </tbody>
 </table>
-<p>Our numbers match exactly.”</p>
+<p>For the <strong>Global warming</strong> impact category, the characterization factors are: - Carbon dioxide → <strong>1</strong> kg CO₂-eq per kg - Nitrous oxide → <strong>298</strong> kg CO₂-eq per kg (nitrous oxide is an extremely potent greenhouse gas — almost 300 times more powerful than CO₂, kilogram for kilogram)</p>
+<p>I’ve already converted the CO₂: 1.5 kg × 1 = 1.5 kg CO₂-eq. Can you convert the nitrous oxide — multiply 0.015 kg by its factor of 298 — and then add the two together to get the total Global warming score?”</p>
 </blockquote>
-<p>Then show what the scaling factors mean in practice — the supply chain diagram with all amounts scaled to the functional unit. Show the scaled graph:</p>
-<pre><code>![&lt;product name&gt; supply chain — scaled](skills_references/&lt;argument&gt;/product_graph_scaled.svg)</code></pre>
-<p>Point out what has changed compared to the structure diagram the student saw at the start:</p>
+<p><strong>For polyester_tshirt:</strong></p>
 <blockquote class="blockquote">
-<p>“This is the same supply chain map we looked at earlier — but now every arrow has a real number on it, scaled to our functional unit. The amounts on each arrow are no longer ‘per run’ — they are the actual quantities flowing through the whole chain to produce exactly [functional unit description].</p>
-<p>The scaling factors we just calculated are what made this possible. Each process’s flows have been multiplied by its s value, so everything is now expressed in terms of the one thing we care about: [functional unit].”</p>
+<p>“Here is the compiled inventory you already built in the last skill:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Flow</th>
+<th>Inventory total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Carbon dioxide</td>
+<td>2.16 kg</td>
+</tr>
+<tr class="even">
+<td>Methane</td>
+<td>0.015 kg</td>
+</tr>
+</tbody>
+</table>
+<p>For the <strong>Global warming</strong> impact category, the characterization factors are: - Carbon dioxide → <strong>1</strong> kg CO₂-eq per kg - Methane → <strong>25</strong> kg CO₂-eq per kg</p>
+<p>I’ve already converted the CO₂: 2.16 kg × 1 = 2.16 kg CO₂-eq. Can you convert the methane — multiply 0.015 kg by its factor of 25 — and then add the two together to get the total Global warming score?”</p>
 </blockquote>
-<p>Walk through one or two specific arrows to make it concrete. For example for cotton_fiber:</p>
+<p>Wait for the student’s answer before moving on.</p>
+<hr>
+</section>
+<section id="step-4-reveal-the-full-impact-profile-and-ask-a-what-if-question" class="level3">
+<h3 class="anchored" data-anchor-id="step-4-reveal-the-full-impact-profile-and-ask-a-what-if-question">Step 4 — Reveal the full impact profile and ask a what-if question</h3>
+<p>Validate the student’s calculation, then show the full TRACI 2.2 profile for the case study — including the categories that scored zero — and ask a what-if question connecting to a business decision.</p>
+<p><strong>For wool_yarn</strong> (expected answer: 0.44 × 25 = 11.0, plus 2.55 = <strong>13.55 kg CO₂-eq</strong>):</p>
 <blockquote class="blockquote">
-<p>“The arrow from P1 to P2 now shows 0.2 kg of N-fertilizer — that is the 1.0 kg P1 produces per run, multiplied by s1 = 0.2. And the emissions leaving P2 show the actual gases released per kg of cotton fiber: 0.8 kg CO₂, 0.015 kg N₂O, and 0.010 kg NH₃.”</p>
+<p>“Exactly — 0.44 × 25 = 11.0, plus the 2.55 from CO₂ = <strong>13.55 kg CO₂-eq</strong>. That matches the real openLCA result. Here is the full impact profile — all eight TRACI 2.2 categories for one kg of wool yarn:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Impact category</th>
+<th style="text-align: right;">Score</th>
+<th>Unit</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Global warming</td>
+<td style="text-align: right;"><strong>13.55</strong></td>
+<td>kg CO₂-eq</td>
+</tr>
+<tr class="even">
+<td>Smog formation</td>
+<td style="text-align: right;">0.0063</td>
+<td>kg O₃-eq</td>
+</tr>
+<tr class="odd">
+<td>Acidification</td>
+<td style="text-align: right;">0</td>
+<td>kg SO₂-eq</td>
+</tr>
+<tr class="even">
+<td>Human health — particulate matter</td>
+<td style="text-align: right;">0</td>
+<td>PM 2.5-eq</td>
+</tr>
+<tr class="odd">
+<td>Eutrophication (freshwater)</td>
+<td style="text-align: right;">0</td>
+<td>kg P-eq</td>
+</tr>
+<tr class="even">
+<td>Human health — cancer</td>
+<td style="text-align: right;">0</td>
+<td>CTUcancer</td>
+</tr>
+<tr class="odd">
+<td>Human health — non-cancer</td>
+<td style="text-align: right;">0</td>
+<td>CTUnoncancer</td>
+</tr>
+<tr class="even">
+<td>Ozone depletion</td>
+<td style="text-align: right;">0</td>
+<td>kg CFC-11-eq</td>
+</tr>
+</tbody>
+</table>
+<p>Notice that six categories are exactly zero. That’s not a mistake — it means none of the flows in this particular supply chain (just CO₂, methane, and water) happen to match the substances that drive those other kinds of damage. A zero score never means ‘no data’ — it means ‘nothing here causes this type of harm.’</p>
+<p>Here’s the what-if: methane makes up only 0.44 kg out of the 2.99 kg of raw emissions (CO₂ + methane combined) — about 15% of the <em>raw</em> weight. But after characterization, it makes up 11.0 out of 13.55 kg CO₂-eq — about 81% of the <em>climate</em> score. Why does methane’s share grow so much once you apply the characterization factor?”</p>
 </blockquote>
+<p><strong>For cotton_fiber</strong> (expected answer: 0.015 × 298 = 4.47, plus 1.5 = <strong>5.97 kg CO₂-eq</strong>):</p>
+<blockquote class="blockquote">
+<p>“Exactly — 0.015 × 298 = 4.47, plus the 1.5 from CO₂ = <strong>5.97 kg CO₂-eq</strong>. That matches the real openLCA result. Here is the full impact profile — all eight TRACI 2.2 categories for one kg of cotton fiber:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Impact category</th>
+<th style="text-align: right;">Score</th>
+<th>Unit</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Global warming</td>
+<td style="text-align: right;"><strong>5.97</strong></td>
+<td>kg CO₂-eq</td>
+</tr>
+<tr class="even">
+<td>Acidification</td>
+<td style="text-align: right;"><strong>0.0188</strong></td>
+<td>kg SO₂-eq</td>
+</tr>
+<tr class="odd">
+<td>Human health — particulate matter</td>
+<td style="text-align: right;"><strong>0.000667</strong></td>
+<td>PM 2.5-eq</td>
+</tr>
+<tr class="even">
+<td>Smog formation</td>
+<td style="text-align: right;">0</td>
+<td>kg O₃-eq</td>
+</tr>
+<tr class="odd">
+<td>Eutrophication (freshwater)</td>
+<td style="text-align: right;">0</td>
+<td>kg P-eq</td>
+</tr>
+<tr class="even">
+<td>Human health — cancer</td>
+<td style="text-align: right;">0</td>
+<td>CTUcancer</td>
+</tr>
+<tr class="odd">
+<td>Human health — non-cancer</td>
+<td style="text-align: right;">0</td>
+<td>CTUnoncancer</td>
+</tr>
+<tr class="even">
+<td>Ozone depletion</td>
+<td style="text-align: right;">0</td>
+<td>kg CFC-11-eq</td>
+</tr>
+</tbody>
+</table>
+<p>Notice something interesting: the 0.01 kg of ammonia from the cotton farm shows up in <em>two</em> categories at once — Acidification (0.01 × 1.88 = 0.0188 kg SO₂-eq) and particulate matter (0.01 × 0.0667 = 0.000667 PM 2.5-eq). One substance, two completely different kinds of damage, two separate scores.</p>
+<p>Here’s the what-if: a cotton brand is told their fertilizer use is the source of nearly all the acidification and particulate matter scores — not the climate score, which is dominated by CO₂ and N₂O instead. If a sustainability manager only tracked Global warming, would they have any idea their farms were contributing to acid rain and air-quality damage?”</p>
+</blockquote>
+<p><strong>For polyester_tshirt</strong> (expected answer: 0.015 × 25 = 0.375, plus 2.16 = <strong>2.535 kg CO₂-eq</strong>):</p>
+<blockquote class="blockquote">
+<p>“Exactly — 0.015 × 25 = 0.375, plus the 2.16 from CO₂ = <strong>2.535 kg CO₂-eq</strong>. That matches the real openLCA result. Here is the full impact profile — all eight TRACI 2.2 categories for one polyester T-shirt:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Impact category</th>
+<th style="text-align: right;">Score</th>
+<th>Unit</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Global warming</td>
+<td style="text-align: right;"><strong>2.535</strong></td>
+<td>kg CO₂-eq</td>
+</tr>
+<tr class="even">
+<td>Smog formation</td>
+<td style="text-align: right;">0.000216</td>
+<td>kg O₃-eq</td>
+</tr>
+<tr class="odd">
+<td>Acidification</td>
+<td style="text-align: right;">0</td>
+<td>kg SO₂-eq</td>
+</tr>
+<tr class="even">
+<td>Human health — particulate matter</td>
+<td style="text-align: right;">0</td>
+<td>PM 2.5-eq</td>
+</tr>
+<tr class="odd">
+<td>Eutrophication (freshwater)</td>
+<td style="text-align: right;">0</td>
+<td>kg P-eq</td>
+</tr>
+<tr class="even">
+<td>Human health — cancer</td>
+<td style="text-align: right;">0</td>
+<td>CTUcancer</td>
+</tr>
+<tr class="odd">
+<td>Human health — non-cancer</td>
+<td style="text-align: right;">0</td>
+<td>CTUnoncancer</td>
+</tr>
+<tr class="even">
+<td>Ozone depletion</td>
+<td style="text-align: right;">0</td>
+<td>kg CFC-11-eq</td>
+</tr>
+</tbody>
+</table>
+<p>Here’s the what-if: almost all of this shirt’s Global warming score comes from the polyester fiber and assembly steps, not the methane leaking from the oil well two steps upstream. If a brand switched to recycled polyester and eliminated the oil extraction step entirely, would the Global warming score drop a lot, a little, or barely at all? (Hint: look back at how much of the 2.535 kg CO₂-eq came from oil extraction’s methane versus the other two steps.)”</p>
+</blockquote>
+<p>Wait for the student’s answer before moving on.</p>
 <hr>
 </section>
 <section id="step-5-connect-to-a-business-decision-and-close" class="level3">
 <h3 class="anchored" data-anchor-id="step-5-connect-to-a-business-decision-and-close">Step 5 — Connect to a business decision and close</h3>
-<p>Close with one concrete observation linking the scaling factors to something a sourcing or sustainability professional would care about. Tailor it to the product. For example:</p>
+<p>End with one practical connection to something a fashion or retail professional would actually face.</p>
 <ul>
-<li><p><strong>wool_yarn</strong>: “The sheep farm runs 1.1 times for every 1 kg of yarn — not exactly once, because the mill needs 10% extra raw wool to account for what is lost in scouring and spinning. That 10% waste factor is baked into the supply chain, and it means any improvement at the farm gets amplified: if the farm’s emissions drop by 10%, the whole chain’s farm contribution drops by 10%.”</p></li>
-<li><p><strong>polyester_tshirt</strong>: “The oil well only runs 0.3 times to produce one shirt — a third of a full cycle. But even at 0.3 scale, the oil well contributes meaningfully because it is two hops back. A sourcing team that only looks at the garment factory (s3 = 1.0) is ignoring the two steps upstream that together add more to the footprint than the factory itself.”</p></li>
-<li><p><strong>cotton_fiber</strong>: “The fertilizer factory runs just s1 = 0.2 times per kg of cotton — a fifth of a full cycle. Its direct CO₂ contribution is modest. But every run of the fertilizer factory triggers the cotton farm to apply that fertilizer, and it is the soil chemistry at the farm — not the factory — that generates the N₂O. The small scaling factor makes the fertilizer factory look minor; but without it, the cotton cannot grow.”</p></li>
+<li><p><strong>For sustainability reporting teams:</strong> &gt; “When a brand publishes ‘our product has a carbon footprint of X kg &gt; CO₂-eq,’ that number is the output of exactly this process — every raw &gt; emission converted with a characterization factor and added up. If you &gt; ever see a footprint reported in ‘kg of emissions’ without saying &gt; CO₂-equivalent, ask what they actually measured — raw kilograms of mixed &gt; gases is not a real number.”</p></li>
+<li><p><strong>For category managers comparing suppliers:</strong> &gt; “Two suppliers might report the same Global warming score but very &gt; different Acidification or particulate matter scores, because those &gt; scores come from different substances entirely. A buyer who only checks &gt; one impact category can miss real differences in environmental harm &gt; between two seemingly similar products.”</p></li>
+<li><p><strong>For product developers:</strong> &gt; “Characterization factors are why ‘natural’ materials don’t automatically &gt; mean ‘low impact.’ Cotton’s water and nitrogen-based emissions score high &gt; on acidification and particulate matter even though no fossil fuel is &gt; burned — while a synthetic fiber might score worse on climate but better &gt; elsewhere. The impact profile, not a single number, tells the real &gt; story.”</p></li>
 </ul>
-<p>End with an invitation to continue, pointing forward to the LCIA lesson:</p>
+<p>Then close with an invitation to continue:</p>
 <blockquote class="blockquote">
-<p>“We now know exactly how much of each gas is released to produce [functional unit] — that list of raw gas quantities is called the <strong>inventory</strong>. In the next lesson we will look at what those numbers actually mean for the environment: how 0.015 kg of N₂O can turn out to matter far more than 1.5 kg of CO₂, once we apply the right characterization factors. Want to keep going?”</p>
+<p>“Impact assessment is the last step that turns raw inventory data into the scores you see in a finished LCA report. From here, the natural next question is: across this whole supply chain, which single process is responsible for most of the damage — and that is exactly what a hotspot analysis answers. Would you like to explore that, or is there anything about characterization factors or impact categories you’d like to look at more closely first?”</p>
 </blockquote>
 <hr>
 </section>
 </section>
-<section id="tone-and-pacing-for-all-responses" class="level2">
-<h2 class="anchored" data-anchor-id="tone-and-pacing-for-all-responses">Tone and pacing for all responses</h2>
+<section id="lcia-quick-reference" class="level2">
+<h2 class="anchored" data-anchor-id="lcia-quick-reference">LCIA quick reference</h2>
+<p>Use this only when a student asks for a summary or wants to see the steps laid out clearly. Do not recite it unprompted.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Step</th>
+<th>What happens</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1. Start with the inventory</td>
+<td>Take the compiled list of raw flows per functional unit</td>
+<td>Inventory table</td>
+</tr>
+<tr class="even">
+<td>2. Pick an impact category</td>
+<td>Choose a type of damage to measure, e.g.&nbsp;climate change</td>
+<td>Category name</td>
+</tr>
+<tr class="odd">
+<td>3. Apply characterization factors</td>
+<td>Multiply each relevant flow by its factor for that category</td>
+<td>Converted contributions</td>
+</tr>
+<tr class="even">
+<td>4. Sum within the category</td>
+<td>Add the converted contributions together</td>
+<td>One impact score</td>
+</tr>
+<tr class="odd">
+<td>5. Repeat for each category</td>
+<td>Different flows matter for different categories</td>
+<td>Full impact profile</td>
+</tr>
+</tbody>
+</table>
+<section id="traci-2.2-the-eight-categories-used-in-this-project" class="level3">
+<h3 class="anchored" data-anchor-id="traci-2.2-the-eight-categories-used-in-this-project">TRACI 2.2 — the eight categories used in this project</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Category</th>
+<th>Unit</th>
+<th>Plain-English meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Global warming</td>
+<td>kg CO₂-eq</td>
+<td>Contribution to climate change</td>
+</tr>
+<tr class="even">
+<td>Acidification</td>
+<td>kg SO₂-eq</td>
+<td>Contribution to acid rain</td>
+</tr>
+<tr class="odd">
+<td>Smog formation</td>
+<td>kg O₃-eq</td>
+<td>Contribution to ground-level smog</td>
+</tr>
+<tr class="even">
+<td>Human health — particulate matter</td>
+<td>PM 2.5-eq</td>
+<td>Fine particle health damage</td>
+</tr>
+<tr class="odd">
+<td>Eutrophication (freshwater)</td>
+<td>kg P-eq</td>
+<td>Excess nutrients causing algal blooms</td>
+</tr>
+<tr class="even">
+<td>Human health — cancer</td>
+<td>CTUcancer</td>
+<td>Cancer risk from toxic substances</td>
+</tr>
+<tr class="odd">
+<td>Human health — non-cancer</td>
+<td>CTUnoncancer</td>
+<td>Other toxic health impacts</td>
+</tr>
+<tr class="even">
+<td>Ozone depletion</td>
+<td>kg CFC-11-eq</td>
+<td>Damage to the stratospheric ozone layer</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+</section>
+<section id="common-student-questions" class="level2">
+<h2 class="anchored" data-anchor-id="common-student-questions">Common student questions</h2>
+<p><strong>“Why does Global warming for wool yarn add up to 13.55 when the raw emissions only weigh 2.99 kg?”</strong> Because characterization factors can be much bigger than 1. Methane’s factor of 25 means each kilogram of methane counts as if it were 25 kilograms of CO₂ for climate purposes. The “equivalent” weight goes up even though the actual physical weight of gas released did not change — what changed is how much climate damage that weight causes.</p>
+<p><strong>“Why is acidification 0 for wool yarn but not for cotton fiber?”</strong> Because acidification in TRACI 2.2 is driven by substances like ammonia and sulfur dioxide. Wool yarn’s inventory only contains CO₂, methane, and water — none of which has an acidification factor — so the category scores exactly zero. Cotton fiber’s inventory contains ammonia, which does have an acidification factor, so it scores above zero. The zero is a real result, not a missing one.</p>
+<p><strong>“Where do characterization factors actually come from?”</strong> From scientific research, not from this project. They are calculated by environmental scientists using climate models, atmospheric chemistry models, and toxicology studies, then published as part of a standardized method — in this project, that method is called TRACI 2.2, built by the US Environmental Protection Agency. The numbers update over time as science improves, which is why you’ll sometimes see slightly different factors (for example, methane’s GWP factor) reported in different years or methods.</p>
+<p><strong>“Why not just add all eight scores into one giant number?”</strong> Because they measure fundamentally different kinds of harm — climate change, acid rain, cancer risk, ozone depletion — that cannot be meaningfully combined any more than you could add “number of store complaints” to “number of late deliveries” and call it one customer-service score. Keeping them separate lets a business see exactly where its biggest problems are, rather than hiding them inside one number.</p>
+<p><strong>“Is this the final step of an LCA?”</strong> For getting a number, yes — this is what produces the scores reported in a finished LCA. There is an optional further step called normalization and weighting, which converts the eight scores into one combined index by deciding how much each category “matters” relative to the others — but that requires value judgments about which kinds of damage are worse, so TRACI 2.2 deliberately stops short of doing it for you.</p>
+<hr>
+</section>
+<section id="tone-and-pacing" class="level2">
+<h2 class="anchored" data-anchor-id="tone-and-pacing">Tone and pacing</h2>
 <ul>
-<li>Write as if talking to someone who is comfortable with Excel and email but has never studied chemistry or engineering</li>
+<li>Write as if talking to someone comfortable with Excel and email but who has never read a science report</li>
 <li>Never use a technical term without explaining it in the same sentence</li>
 <li>One question per message — never stack two questions together</li>
-<li>Show division as “quantity ÷ rate = number of runs” with units written out so they cancel naturally, just like dimensional analysis in the coffee exercise</li>
-<li>If the student seems stuck, offer a multiple-choice prompt: “Would you say the answer is closer to (a) 0.3 runs, (b) 1.0 run, or (c) 3.0 runs — and why?”</li>
+<li>Keep responses to three to five sentences per turn</li>
+<li>If the student seems stuck, offer a multiple-choice prompt: “Would you say a characterization factor is (a) the raw amount of a substance released,
+<ol start="2" type="a">
+<li>a conversion number showing how much damage one kilogram of a substance causes relative to a reference substance, or (c) the name of a chemical?”</li>
+</ol></li>
 <li>Phrases that help: “This is a perfectly normal question”, “You are asking exactly the right thing”, “This trips a lot of people up at first”</li>
 <li>End every response with either a question or a clear invitation to continue</li>
 </ul>
