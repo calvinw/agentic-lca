@@ -26,6 +26,19 @@ project:
     - plan/PLAN_REMIXABLE_LCAS.md
     - plan/PLAN_RUN_LCA_SKILL_LCIA_AND_DATABASES.md
     - plan/PLAN_SKILL_RECOMMENDATIONS.md
+    - skills/index.md
+    - .skillshare/skills/functional-unit/SKILL.md
+    - .skillshare/skills/goal-and-scope/SKILL.md
+    - .skillshare/skills/lca-from-url/SKILL.md
+    - .skillshare/skills/life-cycle-inventory/SKILL.md
+    - .skillshare/skills/life-cycle-stages/SKILL.md
+    - .skillshare/skills/run-lca/SKILL.md
+    - .skillshare/skills/scaling-vector/SKILL.md
+    - .skillshare/skills/skill-creator/SKILL.md
+    - .skillshare/skills/supply-chain/SKILL.md
+    - .skillshare/skills/system-boundary/SKILL.md
+    - .skillshare/skills/technosphere-and-ecosphere/SKILL.md
+    - .skillshare/skills/what-is-lca/SKILL.md
 
 website:
   title: "Agentic LCA"
@@ -37,6 +50,8 @@ website:
         href: skills_sessions/index.md
       - text: Plans
         href: plan/index.md
+      - text: Skills
+        href: skills/index.md
 
   sidebar:
     - id: sessions
@@ -104,6 +119,37 @@ website:
           href: plan/PLAN_RUN_LCA_SKILL_LCIA_AND_DATABASES.md
         - text: "SKILL_RECOMMENDATIONS"
           href: plan/PLAN_SKILL_RECOMMENDATIONS.md
+
+    - id: skills
+      title: "Skills"
+      style: docked
+      contents:
+        - text: Overview
+          href: skills/index.md
+        - text: "Functional Unit"
+          href: .skillshare/skills/functional-unit/SKILL.md
+        - text: "Goal and Scope"
+          href: .skillshare/skills/goal-and-scope/SKILL.md
+        - text: "LCA From Url"
+          href: .skillshare/skills/lca-from-url/SKILL.md
+        - text: "Life Cycle Inventory"
+          href: .skillshare/skills/life-cycle-inventory/SKILL.md
+        - text: "Life Cycle Stages"
+          href: .skillshare/skills/life-cycle-stages/SKILL.md
+        - text: "Run LCA"
+          href: .skillshare/skills/run-lca/SKILL.md
+        - text: "Scaling Vector"
+          href: .skillshare/skills/scaling-vector/SKILL.md
+        - text: "Skill Creator"
+          href: .skillshare/skills/skill-creator/SKILL.md
+        - text: "Supply Chain"
+          href: .skillshare/skills/supply-chain/SKILL.md
+        - text: "System Boundary"
+          href: .skillshare/skills/system-boundary/SKILL.md
+        - text: "Technosphere and Ecosphere"
+          href: .skillshare/skills/technosphere-and-ecosphere/SKILL.md
+        - text: "What Is LCA"
+          href: .skillshare/skills/what-is-lca/SKILL.md
 
 format:
   html:

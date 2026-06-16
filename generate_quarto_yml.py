@@ -7,6 +7,7 @@ from pathlib import Path
 ROOT = Path(__file__).parent
 SESSIONS_DIR = ROOT / "skills_sessions"
 PLANS_DIR = ROOT / "plan"
+SKILLS_DIR = ROOT / ".skillshare" / "skills"
 
 
 def skill_title(folder_name):
@@ -48,6 +49,9 @@ for folder in sorted(SESSIONS_DIR.iterdir()):
 # Collect plan files
 plan_files = sorted(PLANS_DIR.glob("PLAN_*.md"))
 
+# Collect skill files
+skill_files = sorted(SKILLS_DIR.glob("*/SKILL.md"))
+
 lines = [
     "project:",
     "  type: website",
@@ -64,6 +68,9 @@ for files in session_groups.values():
 lines.append("    - plan/index.md")
 for f in plan_files:
     lines.append(f"    - {f.relative_to(ROOT)}")
+lines.append("    - skills/index.md")
+for f in skill_files:
+    lines.append(f"    - {f.relative_to(ROOT)}")
 
 lines += [
     "",
@@ -77,6 +84,8 @@ lines += [
     "        href: skills_sessions/index.md",
     "      - text: Plans",
     "        href: plan/index.md",
+    "      - text: Skills",
+    "        href: skills/index.md",
     "",
     "  sidebar:",
     "    - id: sessions",
@@ -105,6 +114,20 @@ lines += [
 ]
 for f in plan_files:
     lines.append(f'        - text: "{plan_text(f.stem)}"')
+    lines.append(f"          href: {f.relative_to(ROOT)}")
+
+lines += [
+    "",
+    "    - id: skills",
+    '      title: "Skills"',
+    "      style: docked",
+    "      contents:",
+    "        - text: Overview",
+    "          href: skills/index.md",
+]
+for f in skill_files:
+    label = skill_title(f.parent.name)
+    lines.append(f'        - text: "{label}"')
     lines.append(f"          href: {f.relative_to(ROOT)}")
 
 lines += [
