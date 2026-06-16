@@ -10,6 +10,7 @@ project:
     - skills_sessions/functional-unit/functional-unit-cotton_fiber-v0.2-elena-deepseek-v4-flash-session1.md
     - skills_sessions/functional-unit/functional-unit-wool_yarn-v0.2-elena-sonnet-4-6-session1.md
     - skills_sessions/goal-and-scope/goal-and-scope-cotton_fiber-v0.1-elena-sonnet-4-6-session1.md
+    - skills_sessions/impact-assessment/impact-assessment-wool_yarn-v0.1-elena-sonnet-4-6-session1.md
     - skills_sessions/life-cycle-inventory/life-cycle-inventory-wool_yarn-v0.1-elena-sonnet-4-6-session1.md
     - skills_sessions/life-cycle-stages/life-cycle-stages-wool_yarn-v0.1-elena-sonnet-4-6-session1.md
     - skills_sessions/system-boundary/system-boundary-cotton_fiber-v0.1-calvin-sonnet-4-6-session1.md
@@ -29,6 +30,7 @@ project:
     - skills/index.md
     - skills/functional-unit.md
     - skills/goal-and-scope.md
+    - skills/impact-assessment.md
     - skills/lca-from-url.md
     - skills/life-cycle-inventory.md
     - skills/life-cycle-stages.md
@@ -72,6 +74,10 @@ website:
           contents:
             - text: "cotton_fiber v0.1 session1"
               href: skills_sessions/goal-and-scope/goal-and-scope-cotton_fiber-v0.1-elena-sonnet-4-6-session1.md
+        - section: "Impact Assessment"
+          contents:
+            - text: "wool_yarn v0.1 session1"
+              href: skills_sessions/impact-assessment/impact-assessment-wool_yarn-v0.1-elena-sonnet-4-6-session1.md
         - section: "Life Cycle Inventory"
           contents:
             - text: "wool_yarn v0.1 session1"
@@ -134,6 +140,10 @@ website:
           href: skills/goal-and-scope.md
         - text: "(.md version)"
           href: https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/goal-and-scope/SKILL.md
+        - text: "Impact Assessment"
+          href: skills/impact-assessment.md
+        - text: "(.md version)"
+          href: https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/impact-assessment/SKILL.md
         - text: "LCA From Url"
           href: skills/lca-from-url.md
         - text: "(.md version)"
