@@ -54,10 +54,10 @@ Skills already built are marked ✅. Skills recommended but not yet built are ma
 | 5 | `functional-unit` | ✅ Built | The precise definition of what is being measured |
 | **Phase 2 — Life Cycle Inventory** | | | |
 | 6 | `supply-chain` | ✅ Built | How to read a product graph, what processes and flows are |
-| 7 | `technosphere-and-ecosphere` | ✅ Built | The difference between human-made flows (products) and natural flows (emissions, resources) that cross into the natural world |
-| 8 | `life-cycle-inventory` | ✅ Built | What an inventory is, how emissions and resource use are collected and totalled across all processes |
-| 9 | `allocation` | ⬜ Recommended | What to do when a process produces more than one useful output — how to divide the environmental burden fairly between co-products |
-| 10 | `scaling-vector` | ✅ Built | How much each process in the supply chain must run to deliver one functional unit |
+| 7 | `scaling-vector` | ✅ Built | How much each process in the supply chain must run to deliver one functional unit |
+| 8 | `technosphere-and-ecosphere` | ✅ Built | The difference between human-made flows (products) and natural flows (emissions, resources) that cross into the natural world |
+| 9 | `life-cycle-inventory` | ✅ Built | What an inventory is, how emissions and resource use are collected and totalled across all processes |
+| 10 | `allocation` | ⬜ Recommended | What to do when a process produces more than one useful output — how to divide the environmental burden fairly between co-products |
 | **Phase 3 — Impact Assessment** | | | |
 | 11 | `what-is-impact-assessment` | ⬜ Recommended | How raw inventory emissions are converted into environmental scores — global warming, acidification, smog, and more |
 | 12 | `impact-characterization` | ⬜ Recommended | How each emission is multiplied by a characterization factor to produce an impact score — the maths behind the conversion |
@@ -187,6 +187,19 @@ biggest environmental problems are hiding.
 
 ---
 
+### `scaling-vector` ✅
+How much each process in the supply chain must run to deliver exactly one functional
+unit. Students work through the calculation using plain division, not matrix algebra —
+starting from the finished product and working backwards through the supply chain to
+find how much of each upstream process is needed. Uses a real case study with actual
+numbers.
+
+**Key insight for students:** A factory doesn't always run at full capacity to make
+one shirt. The scaling vector tells you the exact fraction of each step that is needed
+— and that fraction is what drives the final impact number.
+
+---
+
 ### `technosphere-and-ecosphere` ✅
 The supply chain lives entirely in the human-made world (the technosphere — factories,
 farms, energy grids, products). The natural world (the ecosphere — air, water, soil,
@@ -248,19 +261,6 @@ primary product changes depending on which method is chosen.
 appear to have a wool footprint of 3.2 kg CO₂ eq or 1.8 kg CO₂ eq depending purely
 on the allocation method chosen. This is one of the biggest sources of disagreement
 between competing LCA studies of the same product.
-
----
-
-### `scaling-vector` ✅
-How much each process in the supply chain must run to deliver exactly one functional
-unit. Students work through the calculation using plain division, not matrix algebra —
-starting from the finished product and working backwards through the supply chain to
-find how much of each upstream process is needed. Uses a real case study with actual
-numbers.
-
-**Key insight for students:** A factory doesn't always run at full capacity to make
-one shirt. The scaling vector tells you the exact fraction of each step that is needed
-— and that fraction is what drives the final impact number.
 
 ---
 
