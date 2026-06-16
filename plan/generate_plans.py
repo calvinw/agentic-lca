@@ -7,6 +7,7 @@ import json, re, sys
 from pathlib import Path
 
 here = Path(__file__).parent
+ROOT = here.parent
 
 
 def format_title(stem):
@@ -34,6 +35,6 @@ for md in sorted(here.glob('PLAN_*.md')):
         'title': title,
     })
 
-out = here / 'plans.json'
+out = ROOT / 'quarto_docs' / 'plans.json'
 out.write_text(json.dumps(plans, indent=2), encoding='utf-8')
 print(f'plans.json: wrote {len(plans)} plans', file=sys.stderr)

@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1169.0" height="168.3" viewBox="0 -38.0 1169.0 168.3">
+<rect x="0" y="-38.0" width="1169.0" height="168.3" fill="#f8f8f8"/>
+<defs>
+  <marker id="arr"       viewBox="0 0 10 10" refX="9" refY="5"
+          markerWidth="5" markerHeight="5" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#555555"/>
+  </marker>
+  <marker id="arr-green" viewBox="0 0 10 10" refX="9" refY="5"
+          markerWidth="5" markerHeight="5" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#2d7a45"/>
+  </marker>
+  <marker id="arr-red"   viewBox="0 0 10 10" refX="9" refY="5"
+          markerWidth="5" markerHeight="5" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/>
+  </marker>
+</defs>
+<text x="584.5" y="-11.4" text-anchor="middle" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="bold" fill="#222">Polyester T-shirt — 1 unit</text>
+<line x1="80.7" y1="78.3" x2="80.7" y2="108.3" stroke="#c0392b" stroke-width="1.6" marker-end="url(#arr-red)"/>
+<text x="75.7" y="89.7" text-anchor="end" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#c0392b">CO<tspan baseline-shift="sub" font-size="0.75em">2</tspan></text>
+<text x="80.7" y="120.3" text-anchor="start" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="bold" fill="#c0392b">to Air</text>
+<line x1="204.8" y1="78.3" x2="204.8" y2="108.3" stroke="#c0392b" stroke-width="1.6" marker-end="url(#arr-red)"/>
+<text x="199.8" y="89.7" text-anchor="end" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#c0392b">CH<tspan baseline-shift="sub" font-size="0.75em">4</tspan></text>
+<text x="204.8" y="120.3" text-anchor="start" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="bold" fill="#c0392b">to Air</text>
+<line x1="430.5" y1="78.3" x2="430.5" y2="108.3" stroke="#c0392b" stroke-width="1.6" marker-end="url(#arr-red)"/>
+<text x="425.5" y="89.7" text-anchor="end" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#c0392b">CO<tspan baseline-shift="sub" font-size="0.75em">2</tspan></text>
+<text x="430.5" y="120.3" text-anchor="start" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="bold" fill="#c0392b">to Air</text>
+<line x1="757.7" y1="78.3" x2="757.7" y2="108.3" stroke="#c0392b" stroke-width="1.6" marker-end="url(#arr-red)"/>
+<text x="752.7" y="89.7" text-anchor="end" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#c0392b">CO<tspan baseline-shift="sub" font-size="0.75em">2</tspan></text>
+<text x="757.7" y="120.3" text-anchor="start" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="bold" fill="#c0392b">to Air</text>
+<line x1="225.5" y1="50.9" x2="347.7" y2="50.9" stroke="#555555" stroke-width="1.6" marker-end="url(#arr)"/>
+<text x="286.6" y="45.9" text-anchor="middle" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#444">Crude oil</text>
+<line x1="513.2" y1="50.9" x2="674.9" y2="50.9" stroke="#555555" stroke-width="1.6" marker-end="url(#arr)"/>
+<text x="594.1" y="45.9" text-anchor="middle" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#444">Polyester fiber</text>
+<line x1="840.4" y1="50.9" x2="943.6" y2="50.9" stroke="#555555" stroke-width="1.6" marker-end="url(#arr)"/>
+<text x="892.0" y="45.9" text-anchor="middle" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#444">T-shirt</text>
+<rect x="60.0" y="23.6" width="165.51333333333335" height="54.74516666666667" rx="8" fill="#3a7ebf"/>
+<text x="142.8" y="42.9" text-anchor="middle" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="white">P1 — Oil extraction</text>
+<rect x="347.7" y="23.6" width="165.51333333333335" height="54.74516666666667" rx="8" fill="#3a7ebf"/>
+<text x="430.5" y="42.9" text-anchor="middle" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="white">P2 — Polyester fiber production</text>
+<rect x="674.9" y="23.6" width="165.51333333333335" height="54.74516666666667" rx="8" fill="#3a7ebf"/>
+<text x="757.7" y="42.9" text-anchor="middle" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="white">P3 — T-shirt assembly</text>
+<rect x="943.6" y="-0.0" width="165.51333333333335" height="101.85083333333334" rx="8" fill="#7b4ea6"/>
+<text x="1026.3" y="22.4" text-anchor="middle" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="white">Functional Unit</text>
+<text text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="white">
+<tspan x="1026.3" y="57.3" dominant-baseline="auto">1 polyester T-shirt, ready</tspan>
+<tspan x="1026.3" y="70.3" dominant-baseline="auto">for sale (approximately</tspan>
+<tspan x="1026.3" y="83.3" dominant-baseline="auto">200 g of fabric)</tspan>
+</text>
+</svg>

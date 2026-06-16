@@ -49,6 +49,6 @@ for recipe in sorted(here.rglob('recipe_card.md')):
         'files':  files,
     })
 
-out = here / 'analyses.json'
+out = root / 'quarto_docs' / 'analyses.json'
 out.write_text(json.dumps(analyses, indent=2), encoding='utf-8')
 print(f'analyses.json: wrote {len(analyses)} analyses', file=sys.stderr)

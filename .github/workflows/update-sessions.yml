@@ -24,10 +24,13 @@ jobs:
       - name: Regenerate analyses.json
         run: python3 lca_analysis/generate_analyses.py
 
+      - name: Regenerate _quarto.yml and skills/ copies
+        run: python3 generate_quarto_yml.py
+
       - name: Commit updated manifests
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add skills_sessions/sessions.json plan/plans.json lca_analysis/analyses.json
-          git diff --cached --quiet || git commit -m "chore: regenerate manifest json files"
+          git add quarto_docs/
+          git diff --cached --quiet || git commit -m "chore: regenerate manifests and _quarto.yml"
           git push

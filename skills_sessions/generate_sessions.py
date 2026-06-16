@@ -8,10 +8,31 @@ import json, re, sys
 from pathlib import Path
 
 here = Path(__file__).parent
+ROOT = here.parent
 
 
 _ACRONYMS    = {'lca', 'svp'}
 _CONJUNCTIONS = {'and', 'or', 'of', 'the', 'a', 'an', 'in', 'on', 'at', 'to'}
+
+# Order must match generate_quarto_yml.py SKILL_ORDER so sessions.json
+# follows the same sequence as the Skills tab sidebar.
+SKILL_ORDER = [
+    "what-is-lca",
+    "system-boundary",
+    "life-cycle-stages",
+    "goal-and-scope",
+    "functional-unit",
+    "supply-chain",
+    "technosphere-and-ecosphere",
+    "life-cycle-inventory",
+    "scaling-vector",
+    "what-is-impact-assessment",
+    "impact-characterization",
+    "damage-characterization",
+    "run-lca",
+    "lca-from-url",
+    "skill-creator",
+]
 
 
 def format_skill(slug):
@@ -94,8 +115,15 @@ for md in sorted(here.glob('**/*.md')):
         'model':     format_model(meta.get('model', '')),
         'version':   meta.get('skill_version', ''),
         'n':         n,
+        '_slug':     skill_slug,
     })
 
-out = here / 'sessions.json'
+# Sort by SKILL_ORDER to match the Skills tab sidebar; unknown slugs go last
+slug_order = {s: i for i, s in enumerate(SKILL_ORDER)}
+sessions.sort(key=lambda s: (slug_order.get(s['_slug'], 999), s['file']))
+for session in sessions:
+    del session['_slug']
+
+out = ROOT / 'quarto_docs' / 'sessions.json'
 out.write_text(json.dumps(sessions, indent=2), encoding='utf-8')
 print(f'sessions.json: wrote {len(sessions)} sessions', file=sys.stderr)

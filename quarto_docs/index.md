@@ -1,0 +1,12 @@
+# Agentic LCA
+
+Resources for Life Cycle Assessment at FIT.
+
+- [Sessions](skills_sessions/index.md) — AI-guided teaching conversations, organised by LCA skill
+- [Plans](plan/index.md) — Project and research planning documents
+- [Skills](skills/index.md) — AI teaching skill definitions
+
+## Contributors
+
+- Calvin Williamson ([calvinw](https://github.com/calvinw))
+- Junghyun Choi ([elenachoi1](https://github.com/elenachoi1))

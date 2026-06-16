@@ -67,34 +67,10 @@ website:
       contents:
         - text: Overview
           href: skills_sessions/index.md
-        - section: "Damage Characterization"
+        - section: "What Is LCA"
           contents:
-            - text: "polyester_tshirt v0.1 session1"
-              href: skills_sessions/damage-characterization/damage-characterization-polyester_tshirt-v0.1-elena-sonnet-4-6-session1.md
-        - section: "Functional Unit"
-          contents:
-            - text: "cotton_fiber v0.1 session1"
-              href: skills_sessions/functional-unit/functional-unit-cotton_fiber-v0.1-calvin-sonnet-4-6-session1.md
-            - text: "cotton_fiber v0.2 session1"
-              href: skills_sessions/functional-unit/functional-unit-cotton_fiber-v0.2-elena-deepseek-v4-flash-session1.md
-            - text: "wool_yarn v0.2 session1"
-              href: skills_sessions/functional-unit/functional-unit-wool_yarn-v0.2-elena-sonnet-4-6-session1.md
-        - section: "Goal and Scope"
-          contents:
-            - text: "cotton_fiber v0.1 session1"
-              href: skills_sessions/goal-and-scope/goal-and-scope-cotton_fiber-v0.1-elena-sonnet-4-6-session1.md
-        - section: "Impact Characterization"
-          contents:
-            - text: "polyester_tshirt v0.1 session1"
-              href: skills_sessions/impact-characterization/impact-characterization-polyester_tshirt-v0.1-elena-sonnet-4-6-session1.md
-        - section: "Life Cycle Inventory"
-          contents:
-            - text: "wool_yarn v0.1 session1"
-              href: skills_sessions/life-cycle-inventory/life-cycle-inventory-wool_yarn-v0.1-elena-sonnet-4-6-session1.md
-        - section: "Life Cycle Stages"
-          contents:
-            - text: "wool_yarn v0.1 session1"
-              href: skills_sessions/life-cycle-stages/life-cycle-stages-wool_yarn-v0.1-elena-sonnet-4-6-session1.md
+            - text: "v0.1 session1"
+              href: skills_sessions/what-is-lca/what-is-lca-v0.1-elena-sonnet-4-6-session1.md
         - section: "System Boundary"
           contents:
             - text: "cotton_fiber v0.1 session1"
@@ -103,22 +79,46 @@ website:
               href: skills_sessions/system-boundary/system-boundary-polyester_tshirt-v0.1-calvin-sonnet-4-6-session1.md
             - text: "wool_yarn v0.1 session1"
               href: skills_sessions/system-boundary/system-boundary-wool_yarn-v0.1-calvin-sonnet-4-6-session1.md
+        - section: "Life Cycle Stages"
+          contents:
+            - text: "wool_yarn v0.1 session1"
+              href: skills_sessions/life-cycle-stages/life-cycle-stages-wool_yarn-v0.1-elena-sonnet-4-6-session1.md
+        - section: "Goal and Scope"
+          contents:
+            - text: "cotton_fiber v0.1 session1"
+              href: skills_sessions/goal-and-scope/goal-and-scope-cotton_fiber-v0.1-elena-sonnet-4-6-session1.md
+        - section: "Functional Unit"
+          contents:
+            - text: "cotton_fiber v0.1 session1"
+              href: skills_sessions/functional-unit/functional-unit-cotton_fiber-v0.1-calvin-sonnet-4-6-session1.md
+            - text: "cotton_fiber v0.2 session1"
+              href: skills_sessions/functional-unit/functional-unit-cotton_fiber-v0.2-elena-deepseek-v4-flash-session1.md
+            - text: "wool_yarn v0.2 session1"
+              href: skills_sessions/functional-unit/functional-unit-wool_yarn-v0.2-elena-sonnet-4-6-session1.md
         - section: "Technosphere and Ecosphere"
           contents:
             - text: "polyester_tshirt v0.1 session1"
               href: skills_sessions/technosphere-and-ecosphere/technosphere-and-ecosphere-polyester_tshirt-v0.1-elena-sonnet-4-6-session1.md
             - text: "wool_yarn v0.1 session1"
               href: skills_sessions/technosphere-and-ecosphere/technosphere-and-ecosphere-wool_yarn-v0.1-elena-sonnet-4-6-session1.md
+        - section: "Life Cycle Inventory"
+          contents:
+            - text: "wool_yarn v0.1 session1"
+              href: skills_sessions/life-cycle-inventory/life-cycle-inventory-wool_yarn-v0.1-elena-sonnet-4-6-session1.md
         - section: "What Is Impact Assessment"
           contents:
             - text: "cotton_fiber v0.1 session1"
               href: skills_sessions/what-is-impact-assessment/what-is-impact-assessment-cotton_fiber-v0.1-elena-sonnet-4-6-session1.md
             - text: "wool_yarn v0.1 session1"
               href: skills_sessions/what-is-impact-assessment/what-is-impact-assessment-wool_yarn-v0.1-elena-sonnet-4-6-session1.md
-        - section: "What Is LCA"
+        - section: "Impact Characterization"
           contents:
-            - text: "v0.1 session1"
-              href: skills_sessions/what-is-lca/what-is-lca-v0.1-elena-sonnet-4-6-session1.md
+            - text: "polyester_tshirt v0.1 session1"
+              href: skills_sessions/impact-characterization/impact-characterization-polyester_tshirt-v0.1-elena-sonnet-4-6-session1.md
+        - section: "Damage Characterization"
+          contents:
+            - text: "polyester_tshirt v0.1 session1"
+              href: skills_sessions/damage-characterization/damage-characterization-polyester_tshirt-v0.1-elena-sonnet-4-6-session1.md
 
     - id: plans
       title: "Plans"
