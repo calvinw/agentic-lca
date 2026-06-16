@@ -1,2 +1,6 @@
 /.quarto/
 **/*.quarto_ipynb
+site_libs/
+skills/*.html
+plan/*.html
+skills_sessions/**/*.html
