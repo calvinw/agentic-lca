@@ -40,6 +40,16 @@
     "n": 1
   },
   {
+    "file": "impact-assessment/impact-assessment-wool_yarn-v0.1-elena-sonnet-4-6-session1.md",
+    "command": "/impact-assessment wool_yarn",
+    "skill": "Impact Assessment",
+    "caseStudy": "Wool Yarn",
+    "student": "Elena",
+    "model": "Sonnet 4.6",
+    "version": "0.1",
+    "n": 1
+  },
+  {
     "file": "life-cycle-inventory/life-cycle-inventory-wool_yarn-v0.1-elena-sonnet-4-6-session1.md",
     "command": "/life-cycle-inventory wool_yarn",
     "skill": "Life Cycle Inventory",
