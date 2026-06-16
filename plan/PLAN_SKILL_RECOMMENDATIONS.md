@@ -57,7 +57,7 @@ Skills already built are marked ✅. Skills recommended but not yet built are ma
 | 7 | `supply-chain` | ✅ Built | How to read a product graph, what processes and flows are |
 | 8 | `scaling-vector` | ✅ Built | How much each process in the supply chain must run to deliver one functional unit |
 | 9 | `life-cycle-inventory` | ✅ Built | What an inventory is, how emissions and resource use are collected and totalled across all processes |
-| 10 | `allocation` | ⬜ Recommended | What to do when a process produces more than one useful output — how to divide the environmental burden fairly between co-products |
+| 10 | `allocation` | ⬜ Postpone | What to do when a process produces more than one useful output — how to divide the environmental burden fairly between co-products |
 | **Phase 3 — Impact Assessment** | | | |
 | 11 | `what-is-impact-assessment` | ⬜ Recommended | How raw inventory emissions are converted into environmental scores — global warming, acidification, smog, and more |
 | 12 | `impact-characterization-and-midpoints` | ⬜ Recommended | How each emission is multiplied by a characterization factor to produce an impact score — the maths behind the conversion |
