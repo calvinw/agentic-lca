@@ -45,7 +45,6 @@ project:
     - skills/damage-characterization.md
     - skills/run-lca.md
     - skills/lca-from-url.md
-    - skills/skill-creator.md
 
 website:
   title: "Agentic LCA"
@@ -203,10 +202,6 @@ website:
           href: skills/lca-from-url.md
         - text: "(.md version)"
           href: https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/lca-from-url/SKILL.md
-        - text: "Skill Creator"
-          href: skills/skill-creator.md
-        - text: "(.md version)"
-          href: https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/skill-creator/SKILL.md
 
 format:
   html:
