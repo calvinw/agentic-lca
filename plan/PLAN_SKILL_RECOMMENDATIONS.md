@@ -19,8 +19,8 @@ Skills already built are marked ✅. Skills recommended but not yet built are ma
 | 8 | `life-cycle-inventory` | ✅ Built | What an inventory is, how emissions and resource use are collected and totalled across all processes |
 | 9 | `scaling-vector` | ✅ Built | How much each process in the supply chain must run to deliver one functional unit |
 | 10 | `what-is-impact-assessment` | ✅ Built | How raw inventory emissions are converted into environmental scores — global warming, acidification, smog, and more |
-| 11 | `impact-characterization` | ⬜ Recommended | How each emission is multiplied by a characterization factor to produce an impact score — the maths behind the conversion |
-| 12 | `damage-characterization` | ⬜ Recommended | How midpoint impact scores are translated into damage to human health, ecosystems, and natural resources |
+| 11 | `impact-characterization` | ✅ Built | How each emission is multiplied by a characterization factor to produce an impact score — the maths behind the conversion |
+| 12 | `damage-characterization` | ✅ Built | How midpoint impact scores are translated into damage to human health, ecosystems, and natural resources |
 | 13 | `hotspot-analysis` | ⬜ Recommended | How to read a contribution breakdown, identify the biggest sources of impact, connect to business decisions |
 | 14 | `comparing-products` | ⬜ Recommended | How to set up a fair comparison between two products, when comparisons are misleading |
 | 15 | `interpretation` | ⬜ Recommended | The final LCA phase — checking whether results are trustworthy, identifying what drives them, and turning the numbers into a business recommendation |
@@ -204,7 +204,7 @@ making the results usable by decision-makers who are not chemists.
 
 ---
 
-### `impact-characterization` ⬜
+### `impact-characterization` ✅
 Once students understand that impact assessment converts raw emissions into environmental
 scores, the next question is: *how exactly does that conversion work?* This skill zooms
 in on the calculation itself — characterization. Students learn that every emission in
@@ -226,7 +226,7 @@ becomes a score a business can act on.
 
 ---
 
-### `damage-characterization` ⬜
+### `damage-characterization` ✅
 Once students understand how emissions are converted into midpoint impact scores (global
 warming, acidification, smog), the next question is: *what do those scores actually do
 to the world?* Damage characterization is the step that answers this by going one level

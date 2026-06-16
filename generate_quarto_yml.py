@@ -65,6 +65,8 @@ SKILL_ORDER = [
     "life-cycle-inventory",
     "scaling-vector",
     "what-is-impact-assessment",
+    "impact-characterization",
+    "damage-characterization",
     "run-lca",
     "lca-from-url",
     "skill-creator",
