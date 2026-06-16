@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Junghyun Choi (elenachoi1)">
-<meta name="description" content="Teaching skill for the LCA concepts of technosphere and ecosphere — the two worlds that every LCA study maps: the human-made world of factories, farms, and supply chains (technosphere) and the natural world of air, water, and soil (ecosphere). Invoke as /technosphere-and-ecosphere , for example /technosphere-and-ecosphere wool_yarn or /technosphere-and-ecosphere polyester_tshirt. The skill reads the recipe card for that case study and teaches the concept by sorting its parts into the two worlds, using everyday analogies and fashion or retail business context. Designed for FIT students with no science or coding background. Short and visual — four to five exchanges to complete.">
+<meta name="description" content="Teaching skill for the LCA concept of damage characterization — the step that goes beyond midpoint impact scores (kg CO2-eq, kg SO2-eq, PM 2.5-eq) to ask what those scores actually do to the world, in terms of three areas of protection: human health, ecosystem quality, and resource availability. Invoke as /damage-characterization , for example /damage-characterization wool_yarn or /damage-characterization cotton_fiber. The skill reads the recipe card and lca_results.md for that case study and reasons qualitatively about which midpoint scores feed into which damage area, using a leading-indicator-vs-revenue retail analogy. Designed for FIT students with no science or coding background. Builds directly on the impact-characterization skill. Four to five exchanges to complete.">
 
-<title>technosphere-and-ecosphere – Agentic LCA</title>
+<title>damage-characterization – Agentic LCA</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -121,7 +121,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../skills/technosphere-and-ecosphere.html">Technosphere and Ecosphere</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../skills/damage-characterization.html">Damage Characterization</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -213,7 +213,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../skills/technosphere-and-ecosphere.html" class="sidebar-item-text sidebar-link active">
+  <a href="../skills/technosphere-and-ecosphere.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Technosphere and Ecosphere</span></a>
   </div>
 </li>
@@ -273,7 +273,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../skills/damage-characterization.html" class="sidebar-item-text sidebar-link">
+  <a href="../skills/damage-characterization.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Damage Characterization</span></a>
   </div>
 </li>
@@ -322,14 +322,14 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#teaching-sequence" id="toc-teaching-sequence" class="nav-link" data-scroll-target="#teaching-sequence">Teaching sequence</a>
   <ul class="collapse">
   <li><a href="#step-1-open-with-an-everyday-analogy-question" id="toc-step-1-open-with-an-everyday-analogy-question" class="nav-link" data-scroll-target="#step-1-open-with-an-everyday-analogy-question">Step 1 — Open with an everyday analogy question</a></li>
-  <li><a href="#step-2-validate-their-answer-and-introduce-the-two-spheres" id="toc-step-2-validate-their-answer-and-introduce-the-two-spheres" class="nav-link" data-scroll-target="#step-2-validate-their-answer-and-introduce-the-two-spheres">Step 2 — Validate their answer and introduce the two spheres</a></li>
-  <li><a href="#step-3-sort-the-recipe-card-into-the-two-worlds" id="toc-step-3-sort-the-recipe-card-into-the-two-worlds" class="nav-link" data-scroll-target="#step-3-sort-the-recipe-card-into-the-two-worlds">Step 3 — Sort the recipe card into the two worlds</a></li>
-  <li><a href="#step-4-ask-a-what-if-question" id="toc-step-4-ask-a-what-if-question" class="nav-link" data-scroll-target="#step-4-ask-a-what-if-question">Step 4 — Ask a what-if question</a></li>
+  <li><a href="#step-2-validate-their-answer-and-introduce-damage-characterization" id="toc-step-2-validate-their-answer-and-introduce-damage-characterization" class="nav-link" data-scroll-target="#step-2-validate-their-answer-and-introduce-damage-characterization">Step 2 — Validate their answer and introduce damage characterization</a></li>
+  <li><a href="#step-3-sort-the-case-studys-midpoint-scores-into-damage-areas" id="toc-step-3-sort-the-case-studys-midpoint-scores-into-damage-areas" class="nav-link" data-scroll-target="#step-3-sort-the-case-studys-midpoint-scores-into-damage-areas">Step 3 — Sort the case study’s midpoint scores into damage areas</a></li>
+  <li><a href="#step-4-confirm-the-mapping-and-ask-a-what-if-question" id="toc-step-4-confirm-the-mapping-and-ask-a-what-if-question" class="nav-link" data-scroll-target="#step-4-confirm-the-mapping-and-ask-a-what-if-question">Step 4 — Confirm the mapping and ask a what-if question</a></li>
   <li><a href="#step-5-connect-to-a-business-decision-and-close" id="toc-step-5-connect-to-a-business-decision-and-close" class="nav-link" data-scroll-target="#step-5-connect-to-a-business-decision-and-close">Step 5 — Connect to a business decision and close</a></li>
   </ul></li>
-  <li><a href="#technosphere-vs.-ecosphere-quick-reference" id="toc-technosphere-vs.-ecosphere-quick-reference" class="nav-link" data-scroll-target="#technosphere-vs.-ecosphere-quick-reference">Technosphere vs.&nbsp;ecosphere quick reference</a></li>
-  <li><a href="#common-student-questions-and-how-to-answer-them" id="toc-common-student-questions-and-how-to-answer-them" class="nav-link" data-scroll-target="#common-student-questions-and-how-to-answer-them">Common student questions and how to answer them</a></li>
-  <li><a href="#tone-and-pacing-for-all-responses" id="toc-tone-and-pacing-for-all-responses" class="nav-link" data-scroll-target="#tone-and-pacing-for-all-responses">Tone and pacing for all responses</a></li>
+  <li><a href="#damage-characterization-quick-reference" id="toc-damage-characterization-quick-reference" class="nav-link" data-scroll-target="#damage-characterization-quick-reference">Damage characterization quick reference</a></li>
+  <li><a href="#common-student-questions" id="toc-common-student-questions" class="nav-link" data-scroll-target="#common-student-questions">Common student questions</a></li>
+  <li><a href="#tone-and-pacing" id="toc-tone-and-pacing" class="nav-link" data-scroll-target="#tone-and-pacing">Tone and pacing</a></li>
   </ul>
 </nav>
     </div>
@@ -342,7 +342,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    <p>Teaching skill for the LCA concepts of technosphere and ecosphere — the two worlds that every LCA study maps: the human-made world of factories, farms, and supply chains (technosphere) and the natural world of air, water, and soil (ecosphere). Invoke as /technosphere-and-ecosphere <case-study>, for example /technosphere-and-ecosphere wool_yarn or /technosphere-and-ecosphere polyester_tshirt. The skill reads the recipe card for that case study and teaches the concept by sorting its parts into the two worlds, using everyday analogies and fashion or retail business context. Designed for FIT students with no science or coding background. Short and visual — four to five exchanges to complete.</case-study></p>
+    <p>Teaching skill for the LCA concept of damage characterization — the step that goes beyond midpoint impact scores (kg CO2-eq, kg SO2-eq, PM 2.5-eq) to ask what those scores actually do to the world, in terms of three areas of protection: human health, ecosystem quality, and resource availability. Invoke as /damage-characterization <case-study>, for example /damage-characterization wool_yarn or /damage-characterization cotton_fiber. The skill reads the recipe card and lca_results.md for that case study and reasons qualitatively about which midpoint scores feed into which damage area, using a leading-indicator-vs-revenue retail analogy. Designed for FIT students with no science or coding background. Builds directly on the impact-characterization skill. Four to five exchanges to complete.</case-study></p>
   </div>
 </div>
 
@@ -367,21 +367,21 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="what-this-skill-does" class="level2">
 <h2 class="anchored" data-anchor-id="what-this-skill-does">What this skill does</h2>
-<p>This skill teaches the distinction between the <strong>technosphere</strong> and the <strong>ecosphere</strong> in Life Cycle Assessment (LCA).</p>
-<p>Every LCA study maps the same basic story: human activities (factories, farms, mills, power plants) take things from nature and release things back into it. The human-made world of those activities is called the <strong>technosphere</strong>. The natural world they draw from and discharge into is called the <strong>ecosphere</strong>.</p>
-<p>Understanding the boundary between these two worlds is the key to understanding <em>why</em> LCA measures what it measures. Only flows that cross that boundary — resources pulled out of nature and emissions released into it — cause environmental impact. Everything that stays inside the human-made world (a bag of raw wool moving from a farm to a mill, for example) does not directly harm the environment. It is the crossings that count.</p>
-<p>A student who completes this skill will be able to: - Explain in plain language what the technosphere and ecosphere mean - Sort the parts of any recipe card into the two worlds - Explain why only elementary flows (emissions and resource extractions) cause environmental impact, while intermediate flows between processes do not - Spot the moment of harm: when something crosses from the technosphere into the ecosphere</p>
-<p>This skill is for business and retail management students at FIT. It assumes no science or technical background. The tone should be warm, encouraging, and conversational. Ask questions — never lecture. Build understanding one step at a time.</p>
+<p>This skill teaches <strong>damage characterization</strong> — the step in LCA that goes one level beyond the midpoint impact scores (kg CO₂-eq, kg SO₂-eq, PM 2.5-eq) that students have already learned to calculate, and asks: <em>what do these scores actually do to the world?</em></p>
+<p><strong>Important data note for whoever is running this skill:</strong> this project’s openLCA pipeline computes TRACI 2.2 <strong>midpoint</strong> scores only. There are no real, computed damage numbers (DALYs, species lost, resource scarcity index) for any case study in <code>lca_results.md</code> — TRACI 2.2 as configured in this project does not produce them. Going from midpoint to damage (sometimes called “endpoint”) requires an extended method that has not been run here.</p>
+<p>Because of this, <strong>do not invent precise damage numbers</strong> for any case study. This skill teaches the concept qualitatively: which real midpoint score(s) feed into which damage area, and why, using reasoning rather than fabricated arithmetic. The only numbers used in this skill are the real TRACI 2.2 midpoint scores already in <code>lca_results.md</code>, which students have already calculated by hand in the impact-characterization skill.</p>
+<p>Damage characterization sorts environmental harm into three <strong>areas of protection</strong> — the things people actually care about, as opposed to the chemistry that causes them: - <strong>Human health</strong> — measured (in real LCA practice) in DALYs, or disability-adjusted life years: how many years of healthy human life are lost to disease, injury, or premature death caused by the pollution - <strong>Ecosystem quality</strong> — how many species, across how much area and time, are harmed or lost - <strong>Resource availability</strong> — how much harder or more expensive it becomes to extract natural resources in the future because of what was consumed today</p>
+<p>A student who completes this skill will be able to: - Explain that midpoint scores (kg CO₂-eq, kg SO₂-eq) are not the final story — they are inputs to a further translation into real-world damage - Sort a set of midpoint impact categories into the area(s) of protection they primarily affect, and explain why - Explain why damage characterization carries more uncertainty than midpoint scoring, and why that tradeoff is sometimes still worth making - Decide which area of protection matters most for a given business stakeholder (a customer, an investor, a regulator)</p>
+<p>This skill is for business and retail management students at FIT. It assumes no science or technical background. The tone should be warm, encouraging, and conversational. Build understanding one step at a time.</p>
 <hr>
 </section>
 <section id="before-you-begin" class="level2">
 <h2 class="anchored" data-anchor-id="before-you-begin">Before you begin</h2>
 <p>The argument passed to this skill is a case study name, for example <code>wool_yarn</code>.</p>
 <p>Use the Read tool to open:</p>
-<pre><code>skills_references/&lt;argument&gt;/recipe_card.md</code></pre>
-<p>From the YAML frontmatter at the top of that file, read: - <code>name</code> — the product name - <code>processes</code> — the list of production steps (these are all technosphere activities) - <code>products</code> — the intermediate goods flowing between steps (also technosphere) - <code>elementary_flows.emissions</code> — substances released into the natural world (cross from technosphere to ecosphere) - <code>elementary_flows.resources</code> — substances extracted from the natural world (cross from ecosphere to technosphere)</p>
-<p>Everything you teach comes from what you find in that file. Do not invent numbers or facts about the product.</p>
-<p>If no argument is given, or if the file does not exist, say: &gt; “I don’t have a case study set up for that product yet. The ones ready to &gt; explore are: <strong>wool_yarn</strong>, <strong>polyester_tshirt</strong>, <strong>cotton_fiber</strong>. &gt; Which would you like to start with?”</p>
+<pre><code>skills_references/&lt;argument&gt;/lca_results.md</code></pre>
+<p>From <strong>Step 7 — LCIA Results (TRACI 2.2)</strong>, read the midpoint impact category scores that are non-zero for this case study. These are the only numbers used in this skill — do not introduce any other figures.</p>
+<p>If no argument is given, or if the file does not exist, say: &gt; “I don’t have a case study set up for that product yet. The ones ready to &gt; explore are: <strong>wool_yarn</strong>, <strong>cotton_fiber</strong>, <strong>polyester_tshirt</strong>. &gt; Which would you like to start with?”</p>
 <hr>
 </section>
 <section id="teaching-sequence" class="level2">
@@ -390,164 +390,188 @@ ul.task-list li input[type="checkbox"] {
 <hr>
 <section id="step-1-open-with-an-everyday-analogy-question" class="level3">
 <h3 class="anchored" data-anchor-id="step-1-open-with-an-everyday-analogy-question">Step 1 — Open with an everyday analogy question</h3>
-<p>Before introducing any LCA terminology, start with a question rooted in everyday life that makes the idea of “two separate worlds” feel immediately obvious. Use this or something very close to it:</p>
+<p>Before introducing any LCA terminology, anchor the idea in something the student already understands from retail. Use this or something very close to it:</p>
 <blockquote class="blockquote">
-<p>“Imagine a busy town that has a wall around it. Inside the wall: houses, factories, shops, roads — everything built and run by people. Outside the wall: fields, rivers, the sky, the forest — nature, exactly as it would be without humans.</p>
-<p>Now imagine a factory inside the wall burns coal to run its machines. Two things happen: first, a truck drives through the town and delivers the coal (that coal never leaves the wall — it moves from one part of the human world to another). Second, the chimney sends smoke up into the sky above the wall — and that smoke drifts out beyond the wall into the fields and the river.</p>
-<p>Here is the question: which of those two things — the coal truck or the chimney smoke — actually crosses the wall and reaches the natural world outside?”</p>
+<p>“Imagine you run an online store and you’re watching two numbers this week: website visits, and actual revenue. Visits went up 20%. Does that tell you, by itself, how much more money you made?</p>
+<p>What else would you need to know — about your conversion rate, your average order value, maybe even what day of the week it is — before ‘visits’ actually translates into ‘dollars’?”</p>
 </blockquote>
-<p>Wait for the student to answer before moving on. Keep the opening to this one question only.</p>
+<p>Wait for the student to answer before moving on.</p>
 <hr>
 </section>
-<section id="step-2-validate-their-answer-and-introduce-the-two-spheres" class="level3">
-<h3 class="anchored" data-anchor-id="step-2-validate-their-answer-and-introduce-the-two-spheres">Step 2 — Validate their answer and introduce the two spheres</h3>
+<section id="step-2-validate-their-answer-and-introduce-damage-characterization" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-validate-their-answer-and-introduce-damage-characterization">Step 2 — Validate their answer and introduce damage characterization</h3>
 <p>Whatever the student says, find what is right about it.</p>
 <ul>
-<li>If they said the chimney smoke: “Exactly — the coal truck stayed inside the town. It moved from a coal yard to a factory, but it never left the human-made world. The smoke is the one that crossed the wall and entered the natural world. That crossing is where environmental harm begins.”</li>
-<li>If they said both cross the wall: “Almost — the smoke definitely does. But the coal truck stayed inside the town the whole time. It moved material from one human-made place to another, so it never touched the natural world outside the wall.”</li>
-<li>If they were unsure: “The answer is the chimney smoke. The coal truck stayed inside the town walls — it never left the human-made world. The smoke, on the other hand, drifted outside the wall into the fields and the river. That is where the impact actually happens.”</li>
+<li>If they listed extra factors needed (conversion rate, average order value): “Exactly — visits are a useful early signal, but turning that signal into an actual dollar figure takes more assumptions, and each one adds a bit of uncertainty.”</li>
+<li>If they said visits alone aren’t enough: “Right — visits are what’s called a <em>leading indicator</em>. They correlate with revenue, but they are not revenue itself.”</li>
+<li>If they were unsure: “Think of it this way: visits are easy to count and available immediately, but revenue is what your business actually lives or dies by. Getting from one to the other takes extra steps and extra assumptions.”</li>
 </ul>
-<p>Then introduce the two concepts in plain English:</p>
+<p>Then introduce the concept:</p>
 <blockquote class="blockquote">
-<p>“In Life Cycle Assessment, researchers use two names for these two worlds. The human-made world — everything inside the wall, like factories, farms, mills, and trucks — is called the <strong>technosphere</strong> (from ‘techno’, meaning made by people). The natural world outside the wall — air, water, soil, living ecosystems — is called the <strong>ecosphere</strong> (from ‘eco’, meaning the living environment).</p>
-<p>The most important idea in LCA is this: environmental harm only happens when something crosses the boundary between the two. Resources pulled out of the ecosphere (like water from a river, or oil from the ground) and emissions released into the ecosphere (like CO₂ into the air, or chemicals into a stream) are the flows that cause impact. Everything that moves around <em>inside</em> the technosphere — a bag of cotton from a farm to a mill, say — stays inside the wall and does not directly harm the natural world.”</p>
+<p>“The midpoint impact scores you’ve already calculated — kg CO₂-eq, kg SO₂-eq, PM 2.5-eq — are a bit like ‘website visits.’ They are useful, standardized, and based on solid chemistry. But they are not yet the actual real-world outcome anyone ultimately cares about: how many people got sick, how much of an ecosystem was damaged, how much harder it will be to get raw materials in the future.</p>
+<p><strong>Damage characterization</strong> is the step that takes midpoint scores the rest of the way — translating ‘kg CO₂-eq’ into estimated harm across three <strong>areas of protection</strong>: human health, ecosystem quality, and resource availability. It requires more assumptions than the midpoint step, the same way ‘visits to dollars’ requires more assumptions than just counting visits — so damage scores carry more uncertainty than midpoint scores. But for some audiences, that tradeoff is worth it, because ‘X years of healthy life lost’ communicates real stakes in a way ‘X kg of CO₂-eq’ does not.”</p>
 </blockquote>
-<p>Keep it to two or three sentences after the validation. One clear idea only.</p>
 <hr>
 </section>
-<section id="step-3-sort-the-recipe-card-into-the-two-worlds" class="level3">
-<h3 class="anchored" data-anchor-id="step-3-sort-the-recipe-card-into-the-two-worlds">Step 3 — Sort the recipe card into the two worlds</h3>
-<p>Now bring in the case study. Briefly introduce the product using the <code>name</code> field from the recipe card. Keep it to one sentence:</p>
+<section id="step-3-sort-the-case-studys-midpoint-scores-into-damage-areas" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-sort-the-case-studys-midpoint-scores-into-damage-areas">Step 3 — Sort the case study’s midpoint scores into damage areas</h3>
+<p>Introduce the product and show its real midpoint results:</p>
 <blockquote class="blockquote">
-<p>“Let’s sort a real LCA study into these two worlds. This is the recipe card for <strong>[name]</strong>.”</p>
+<p>“Let’s look at the midpoint scores you already calculated for <strong>[name]</strong>, and reason about where each one’s damage actually lands.”</p>
 </blockquote>
-<p>Then show the supply chain diagram:</p>
-<pre><code>![&lt;product name&gt; supply chain — structure](skills_references/&lt;argument&gt;/product_graph_structure.svg)</code></pre>
-<p>Walk the student through the two categories, drawing directly from the recipe card:</p>
-<p><strong>Technosphere — everything inside the wall:</strong></p>
+<p>Then use the matching block below for the chosen case study.</p>
+<p><strong>For wool_yarn</strong> (non-zero midpoints: Global warming 13.55 kg CO₂-eq, Smog formation 0.0063 kg O₃-eq):</p>
 <blockquote class="blockquote">
-<p>“The boxes in this diagram are the <strong>processes</strong> — the human activities that make [product name]. In this study that means: [list the process names from the recipe card, e.g.&nbsp;‘Sheep farming’ and ‘Wool yarn production’]. Also inside the wall are the <strong>intermediate products</strong> that flow between those boxes — things like [list the products, e.g.&nbsp;‘raw wool passing from the farm to the mill’]. These flows stay entirely inside the human-made world. They do not touch nature.”</p>
+<p>“Wool yarn scored on two midpoint categories: Global warming and Smog formation. Of the three damage areas — human health, ecosystem quality, resource availability — which one(s) do you think Global warming flows into? And what about Smog formation — which one does ground-level ozone typically harm first, given that people breathe it?”</p>
 </blockquote>
-<p><strong>Ecosphere crossings — what crosses the wall:</strong></p>
+<p><strong>For cotton_fiber</strong> (non-zero midpoints: Global warming 5.97 kg CO₂-eq, Acidification 0.0188 kg SO₂-eq, Particulate matter 0.000667 PM 2.5-eq):</p>
 <blockquote class="blockquote">
-<p>“Now look at what crosses the wall. From the processes in this study, two types of flows reach the ecosphere:</p>
-<ul>
-<li><p><strong>Emissions</strong> going <em>out</em> into nature: [list the emissions from the recipe card, e.g.&nbsp;‘Carbon dioxide and Methane released to air’]. These are substances the processes produce and discharge into the natural world.</p></li>
-<li><p><strong>Resources</strong> coming <em>in</em> from nature: [list the resources, e.g.&nbsp;‘Water drawn from a natural water source’]. These are things extracted from the ecosphere to run the technosphere.</p></li>
-</ul>
-<p>In LCA, these crossings are called <strong>elementary flows</strong> — elementary because they are the basic exchanges between the human world and the natural world. They are the only flows that score environmental impact, because they are the only ones that actually affect the ecosphere.”</p>
+<p>“Cotton fiber scored on three midpoint categories: Global warming, Acidification, and Particulate matter. Particulate matter is well known for causing respiratory problems — which damage area does that point to? Acidification damages forests, soils, and freshwater lakes — which damage area does that point to? And Global warming — does it only affect one area, or could it touch more than one?”</p>
 </blockquote>
-<p>Then ask:</p>
+<p><strong>For polyester_tshirt</strong> (non-zero midpoints: Global warming 2.535 kg CO₂-eq, Smog formation 0.000216 kg O₃-eq):</p>
 <blockquote class="blockquote">
-<p>“Looking at the emissions in this study — which one do you think causes more harm to the climate: [first emission, e.g.&nbsp;Carbon dioxide] or [second emission, e.g.&nbsp;Methane]? Take a guess — there is no wrong answer here.”</p>
+<p>“The polyester T-shirt scored on two midpoint categories: Global warming and Smog formation. Which damage area does ground-level smog primarily harm, given that it’s mostly known as an air-quality problem people breathe in? And does Global warming stop at human health, or does it also reach ecosystems?”</p>
 </blockquote>
 <p>Wait for the student’s answer before moving on.</p>
 <hr>
 </section>
-<section id="step-4-ask-a-what-if-question" class="level3">
-<h3 class="anchored" data-anchor-id="step-4-ask-a-what-if-question">Step 4 — Ask a what-if question</h3>
-<p>Use the student’s answer from Step 3 to pivot into a deeper question about <em>why</em> crossings matter more than size. Validate their guess and then ask:</p>
-<ul>
-<li><p>For <strong>wool_yarn</strong>: &gt; “Here is something surprising. Methane is actually far more powerful as a &gt; greenhouse gas than carbon dioxide — even though the sheep farm in this &gt; study emits less of it by weight. In fact, one kilogram of methane traps &gt; about 28 times as much heat as one kilogram of CO₂. &gt; &gt; So here is the what-if: if the sheep farm <em>stopped emitting methane</em> but &gt; kept everything else the same — same coal, same water, same CO₂ — how much &gt; of the total climate impact do you think would disappear? More than half, &gt; or less than half?”</p></li>
-<li><p>For <strong>polyester_tshirt</strong>: &gt; “The emissions in this study all go to air — carbon dioxide from burning &gt; fossil fuels to run the machines. The technosphere flows (pellets, fabric, &gt; the T-shirt itself) stay inside the wall. &gt; &gt; Here is the what-if: imagine a factory that used solar panels instead of &gt; coal-fired electricity. Which part of the LCA would change — the &gt; technosphere processes, the ecosphere crossings, or both?”</p></li>
-<li><p>For <strong>cotton_fiber</strong>: &gt; “This study includes water extraction — a resource flowing <em>from</em> the &gt; ecosphere <em>into</em> the technosphere. In water-scarce regions, that crossing &gt; is considered a serious environmental harm, even though no pollution is &gt; being released. &gt; &gt; Here is the what-if: if a cotton farm switched to rainwater harvesting &gt; instead of drawing from a river, the same volume of water would still be &gt; used — but it would come from rain falling on the field rather than from &gt; a river. Would this change the ecosphere crossing? Why or why not?”</p></li>
-</ul>
-<p>The goal is for the student to feel that the two-worlds framework is not just a naming exercise — it explains <em>where</em> harm happens and <em>what</em> would have to change to reduce it.</p>
-<hr>
-</section>
-<section id="step-5-connect-to-a-business-decision-and-close" class="level3">
-<h3 class="anchored" data-anchor-id="step-5-connect-to-a-business-decision-and-close">Step 5 — Connect to a business decision and close</h3>
-<p>End with one or two practical sentences connecting the technosphere-ecosphere boundary to something a fashion or retail professional would face. Choose the most relevant:</p>
-<ul>
-<li><p><strong>For buyers evaluating sustainability claims:</strong> &gt; “When a supplier says their process is ‘clean’, one useful question to ask &gt; is: ‘Which crossings are we measuring?’ A process can rearrange materials &gt; inside the technosphere endlessly — switching suppliers, changing packaging, &gt; reordering steps — without ever reducing its ecosphere crossings. &gt; The only changes that genuinely reduce environmental impact are the ones &gt; that reduce what crosses the wall: less CO₂ to air, less water from rivers, &gt; fewer toxic substances into soil.”</p></li>
-<li><p><strong>For brand managers evaluating sourcing decisions:</strong> &gt; “When a brand switches from conventional cotton to organic cotton, the &gt; technosphere changes — different farming practices, different inputs. But &gt; the question LCA asks is: does that change <em>reduce the ecosphere crossings</em>? &gt; Fewer pesticides discharged to water? Less nitrous oxide to air? Less water &gt; extracted from rivers? If the answer is yes, the switch genuinely helps. &gt; If the crossings stay the same, the change is cosmetic.”</p></li>
-<li><p><strong>For anyone reading a sustainability report:</strong> &gt; “The next time you read a sustainability claim — ‘our product has a lower &gt; carbon footprint’ — you now have a sharper question to ask: ‘Lower crossings &gt; into the ecosphere, or just a shorter technosphere supply chain?’ A brand &gt; that cuts steps from farm to factory might reduce their costs, but not &gt; necessarily their emissions. Only ecosphere crossings create impact.”</p></li>
-</ul>
-<p>Then close with an invitation to continue:</p>
-<blockquote class="blockquote">
-<p>“The technosphere-ecosphere boundary is the reason LCA studies track <strong>elementary flows</strong> — those are the official name for the crossings we’ve been talking about. The next step is understanding how those flows get converted into impact scores — a step called <strong>life cycle impact assessment</strong>. Would you like to explore that, or is there anything about the two worlds you’d like to look at more closely?”</p>
-</blockquote>
-<hr>
-</section>
-</section>
-<section id="technosphere-vs.-ecosphere-quick-reference" class="level2">
-<h2 class="anchored" data-anchor-id="technosphere-vs.-ecosphere-quick-reference">Technosphere vs.&nbsp;ecosphere quick reference</h2>
-<p>Use this when a student asks for a summary or comparison. Do not recite the whole table unprompted — use it to answer a specific question.</p>
+<section id="step-4-confirm-the-mapping-and-ask-a-what-if-question" class="level3">
+<h3 class="anchored" data-anchor-id="step-4-confirm-the-mapping-and-ask-a-what-if-question">Step 4 — Confirm the mapping and ask a what-if question</h3>
+<p>Validate the student’s reasoning using the mapping below, then ask a business-flavored what-if question.</p>
+<p><strong>General mapping to confirm against (use only the categories present in the chosen case study):</strong></p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
 </colgroup>
 <thead>
 <tr class="header">
-<th>Category</th>
-<th>World</th>
-<th>Examples in a fashion LCA</th>
-<th>LCA term</th>
+<th>Midpoint category</th>
+<th>Primarily flows into</th>
+<th>Why</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Production steps</td>
-<td>Technosphere</td>
-<td>Sheep farm, spinning mill, weaving factory</td>
-<td>Process</td>
+<td>Global warming</td>
+<td>Human health <strong>and</strong> Ecosystem quality</td>
+<td>A warmer climate increases heat-related illness and disease spread (health), while also shifting habitats and stressing species (ecosystems) — it is one of the few midpoints that feeds more than one damage area</td>
 </tr>
 <tr class="even">
-<td>Intermediate products</td>
-<td>Technosphere</td>
-<td>Raw wool, yarn, woven fabric</td>
-<td>Intermediate flow</td>
+<td>Smog formation</td>
+<td>Human health</td>
+<td>Ground-level ozone is a respiratory irritant — it is breathed in directly</td>
 </tr>
 <tr class="odd">
-<td>CO₂ emitted to air</td>
-<td>Crosses to ecosphere</td>
-<td>Combustion at the mill, fermentation on the farm</td>
-<td>Elementary flow (emission)</td>
+<td>Acidification</td>
+<td>Ecosystem quality</td>
+<td>Acid rain damages forest soils, lake chemistry, and aquatic life — it rarely reaches people as directly as it reaches ecosystems</td>
 </tr>
 <tr class="even">
-<td>Methane emitted to air</td>
-<td>Crosses to ecosphere</td>
-<td>Enteric fermentation (sheep digestion)</td>
-<td>Elementary flow (emission)</td>
+<td>Human health — particulate matter</td>
+<td>Human health</td>
+<td>The category name says it directly — fine particles are inhaled and damage lungs and hearts</td>
 </tr>
 <tr class="odd">
-<td>Water drawn from a river</td>
-<td>Crosses from ecosphere</td>
-<td>Scouring and dyeing water use</td>
-<td>Elementary flow (resource)</td>
+<td>Eutrophication</td>
+<td>Ecosystem quality</td>
+<td>Excess nutrients cause algal blooms that starve waterways of oxygen, killing aquatic species</td>
 </tr>
 <tr class="even">
-<td>Fossil fuels extracted</td>
-<td>Crosses from ecosphere</td>
-<td>Coal or gas burned for energy</td>
-<td>Elementary flow (resource)</td>
+<td>Ozone depletion</td>
+<td>Human health</td>
+<td>Less stratospheric ozone means more UV radiation reaching the ground, raising skin cancer and cataract rates</td>
+</tr>
+<tr class="odd">
+<td>Human health — cancer / non-cancer</td>
+<td>Human health</td>
+<td>Already named for the damage area they feed</td>
 </tr>
 </tbody>
 </table>
+<p><strong>For wool_yarn:</strong> &gt; “Exactly — Global warming reaches both human health and ecosystem quality &gt; at once, while Smog formation lands almost entirely on human health &gt; through air quality. Here’s the what-if: if a wool brand’s sustainability &gt; report only published the Global warming midpoint score, would an investor &gt; reading it know anything about the smog-related, human-health side of the &gt; footprint?”</p>
+<p><strong>For cotton_fiber:</strong> &gt; “Exactly — Particulate matter and Acidification both ultimately point &gt; toward ecosystem and respiratory harm, while Global warming reaches both &gt; areas. Here’s the what-if: if a cotton brand wanted to reassure a &gt; downstream community living near the farm — concerned about their health, &gt; not abstract climate numbers — which midpoint category would be most &gt; relevant to highlight, and why?”</p>
+<p><strong>For polyester_tshirt:</strong> &gt; “Exactly — Smog formation is almost entirely a human-health story, while &gt; Global warming reaches further into ecosystems too. Here’s the what-if: a &gt; brand wants to tell investors their product ‘protects biodiversity.’ Which &gt; of this product’s two midpoint scores is actually relevant to that claim, &gt; and which one is not?”</p>
+<p>Wait for the student’s answer before moving on.</p>
 <hr>
 </section>
-<section id="common-student-questions-and-how-to-answer-them" class="level2">
-<h2 class="anchored" data-anchor-id="common-student-questions-and-how-to-answer-them">Common student questions and how to answer them</h2>
-<p><strong>“Why is a farm considered ‘human-made’ if it uses natural land and sunlight?”</strong> Good question — a sheep farm uses natural elements, but the activity itself (choosing what to grow, managing the animals, applying inputs like fertiliser) is a human-controlled process. The farm is inside the technosphere because humans are running it. The natural elements it draws on — the soil it depletes, the water it takes from a river, the methane it releases into the air — are the ecosphere crossings that LCA tries to measure.</p>
-<p><strong>“What about the land the factory sits on — is that ecosphere?”</strong> Land use is a complex area of LCA. In basic studies, the land the factory occupies is not treated as an ecosphere crossing (because the building sits on it for decades and accounting for it per-product is tricky). In more advanced studies, land transformation — clearing forest for farmland, for example — is included as an ecosphere interaction. Most beginner studies simplify and leave this out.</p>
-<p><strong>“Can something be both technosphere and ecosphere at the same time?”</strong> No — the two categories are defined by where something is and where it is going. A substance inside the human system (like fuel in a tanker) is technosphere. Once it burns and CO₂ is released into the atmosphere, that CO₂ has crossed into the ecosphere. The crossing is the moment it changes category.</p>
-<p><strong>“Is plastic waste in the ocean technosphere or ecosphere?”</strong> When plastic leaves a factory, it is technosphere. When it escapes into a river or ocean, it has crossed into the ecosphere — that crossing is an elementary flow (emission to water or soil). LCA studies that include plastic leakage model this as an emission to the ecosphere. In most basic fashion LCA studies, this is simplified away or listed as out of scope.</p>
-<p><strong>“If a company recycles materials, do those stay in the technosphere?”</strong> Yes — recycled materials move within the technosphere. A recycled polyester fibre goes from a used bottle to a mill to a new garment, staying entirely inside the human-made world. What LCA asks is: how many ecosphere crossings happen <em>along that recycled route</em>? Less energy burned = fewer CO₂ emissions = fewer crossings = lower impact. The recycling itself does not eliminate crossings, but it can reduce them significantly.</p>
-<hr>
-</section>
-<section id="tone-and-pacing-for-all-responses" class="level2">
-<h2 class="anchored" data-anchor-id="tone-and-pacing-for-all-responses">Tone and pacing for all responses</h2>
+<section id="step-5-connect-to-a-business-decision-and-close" class="level3">
+<h3 class="anchored" data-anchor-id="step-5-connect-to-a-business-decision-and-close">Step 5 — Connect to a business decision and close</h3>
+<p>End with one practical connection to something a fashion or retail professional would actually face.</p>
 <ul>
-<li>Write as if talking to someone who is comfortable with Excel and email but has never read a science report</li>
+<li><p><strong>For sustainability communications teams:</strong> &gt; “Midpoint scores are what get computed and verified — they are the &gt; ‘visits’ of LCA. Damage scores are what actually move people, because &gt; ‘X years of healthy life lost’ or ‘this many fewer fish in the river’ &gt; means something to a non-technical reader in a way that ‘kg of SO₂-eq’ &gt; never will. The tradeoff is that damage scores carry real assumptions — &gt; about geography, population density, exposure time — that midpoint &gt; scores don’t need.”</p></li>
+<li><p><strong>For investor relations or ESG reporting:</strong> &gt; “When an ESG report leads with a single combined ‘environmental score,’ &gt; that number was very likely built using damage characterization plus one &gt; more step — weighting the three damage areas against each other using a &gt; value judgment about which kind of harm matters most. That weighting &gt; step is a choice, not a fact, and two reports can disagree on it without &gt; either one being wrong.”</p></li>
+<li><p><strong>For product developers:</strong> &gt; “Knowing which damage area a midpoint score feeds into helps you target &gt; improvements to what your specific audience cares about. A community &gt; worried about local air quality cares about particulate matter and &gt; smog — human health categories. An investor focused on biodiversity &gt; pledges cares about acidification and eutrophication — ecosystem &gt; categories. The same supply chain change can matter enormously to one &gt; audience and barely register with another.”</p></li>
+</ul>
+<p>Then close with an invitation to continue:</p>
+<blockquote class="blockquote">
+<p>“You’ve now followed an emission all the way from a raw inventory number, through a midpoint impact score, to the real-world damage area it lands in. The next natural question for a business is: out of this whole supply chain, <em>which single process</em> is actually responsible for the lion’s share of any of these scores? That is what hotspot analysis answers — and it’s the skill that turns all of this maths into a one-sentence recommendation a business can act on. Would you like to explore that next, or is there anything about damage areas you’d like to dig into further first?”</p>
+</blockquote>
+<hr>
+</section>
+</section>
+<section id="damage-characterization-quick-reference" class="level2">
+<h2 class="anchored" data-anchor-id="damage-characterization-quick-reference">Damage characterization quick reference</h2>
+<p>Use this only when a student asks for a summary or wants to see the steps laid out clearly. Do not recite it unprompted.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Step</th>
+<th>What happens</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1. Start with midpoint scores</td>
+<td>The category scores already calculated (kg CO₂-eq, kg SO₂-eq, etc.)</td>
+<td>Midpoint table</td>
+</tr>
+<tr class="even">
+<td>2. Identify the area of protection</td>
+<td>Decide which of the three damage areas each midpoint feeds</td>
+<td>Mapping</td>
+</tr>
+<tr class="odd">
+<td>3. Apply a damage factor</td>
+<td>(Real LCA practice) multiply by a published factor specific to that pathway</td>
+<td>Damage score</td>
+</tr>
+<tr class="even">
+<td>4. Express in human terms</td>
+<td>DALYs for health, species·yr for ecosystems, a scarcity index for resources</td>
+<td>Final damage figures</td>
+</tr>
+</tbody>
+</table>
+<p>This project stops at Step 2 (the mapping) because no damage factors have been run through openLCA for these case studies. Real-world LCA software (including openLCA, when configured with an endpoint method like ReCiPe 2016 Endpoint) can complete steps 3 and 4 automatically — the same way TRACI 2.2 automated the multiply-and-sum work in the characterization skill.</p>
+<hr>
+</section>
+<section id="common-student-questions" class="level2">
+<h2 class="anchored" data-anchor-id="common-student-questions">Common student questions</h2>
+<p><strong>“Why doesn’t this project just calculate the real DALY numbers for us?”</strong> Because the LCIA method configured in this project, TRACI 2.2, is a midpoint-only method — by design, it stops at kg CO₂-eq, kg SO₂-eq, and similar units. Going further to DALYs or species lost requires switching to a different, “endpoint” method (such as ReCiPe 2016 Endpoint), which has not been set up here. The reasoning in this skill is real and useful, but the precise damage numbers are intentionally left out rather than invented.</p>
+<p><strong>“Is a damage score more ‘correct’ than a midpoint score?”</strong> Not more correct — just further along a chain of assumptions. Midpoint scores rest on well-established atmospheric and chemical science. Damage scores add further assumptions about exposure, geography, and population, which makes them more relatable to a general audience but also more uncertain. Neither one is wrong; they answer different questions.</p>
+<p><strong>“Can one midpoint score feed into more than one damage area?”</strong> Yes — Global warming is the clearest example. A warmer climate affects both human health (heatwaves, disease spread) and ecosystem quality (habitat shift, species stress) at the same time. Most other midpoint categories in this project’s case studies point toward just one area, but that is not a universal rule.</p>
+<p><strong>“Why do reports sometimes combine all three damage areas into one single score?”</strong> That is an optional further step called weighting — deciding, by value judgment, how much a year of human health lost should “count” compared to a species lost or a depleted resource. It is useful for headlines but it hides the breakdown, which is exactly why this skill teaches you to look at the three areas separately first.</p>
+<hr>
+</section>
+<section id="tone-and-pacing" class="level2">
+<h2 class="anchored" data-anchor-id="tone-and-pacing">Tone and pacing</h2>
+<ul>
+<li>Write as if talking to someone comfortable with Excel and email but who has never read a science report</li>
 <li>Never use a technical term without explaining it in the same sentence</li>
 <li>One question per message — never stack two questions together</li>
 <li>Keep responses to three to five sentences per turn</li>
-<li>If the student seems stuck, offer a multiple-choice prompt rather than repeating the explanation: “Would you say the ecosphere is (a) the human-made supply chain, (b) the natural world outside the supply chain, or (c) the boundary between them?”</li>
+<li>If the student seems stuck, offer a multiple-choice prompt: “Would you say particulate matter mainly damages (a) human health through the lungs, (b) ecosystems through soil chemistry, or (c) future resource availability?”</li>
 <li>Phrases that help: “This is a perfectly normal question”, “You are asking exactly the right thing”, “This trips a lot of people up at first”</li>
 <li>End every response with either a question or a clear invitation to continue</li>
+<li>Never state a specific DALY, species-loss, or resource-scarcity number for any case study — those numbers do not exist in this project’s data and must not be invented</li>
 </ul>
 
 

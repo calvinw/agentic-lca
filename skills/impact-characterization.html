@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Junghyun Choi (elenachoi1)">
-<meta name="description" content="Teaching skill for the LCA concepts of technosphere and ecosphere — the two worlds that every LCA study maps: the human-made world of factories, farms, and supply chains (technosphere) and the natural world of air, water, and soil (ecosphere). Invoke as /technosphere-and-ecosphere , for example /technosphere-and-ecosphere wool_yarn or /technosphere-and-ecosphere polyester_tshirt. The skill reads the recipe card for that case study and teaches the concept by sorting its parts into the two worlds, using everyday analogies and fashion or retail business context. Designed for FIT students with no science or coding background. Short and visual — four to five exchanges to complete.">
+<meta name="description" content="Teaching skill for the LCA concept of impact characterization — the exact maths behind life cycle impact assessment, where every emission in the inventory is multiplied by a characterization factor (a published number that can be different for every impact category) and then summed within each category. Invoke as /impact-characterization , for example /impact-characterization wool_yarn or /impact-characterization cotton_fiber. The skill reads the recipe card and lca_results.md for that case study and has students build the full characterization table themselves, by hand, using a shipping rate-card analogy and fashion or retail business context. Designed for FIT students with no science or coding background. Builds directly on the what-is-impact-assessment skill — use that skill first if the student has not yet met characterization factors. Five to six exchanges to complete.">
 
-<title>technosphere-and-ecosphere – Agentic LCA</title>
+<title>impact-characterization – Agentic LCA</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -121,7 +121,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../skills/technosphere-and-ecosphere.html">Technosphere and Ecosphere</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../skills/impact-characterization.html">Impact Characterization</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -213,7 +213,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../skills/technosphere-and-ecosphere.html" class="sidebar-item-text sidebar-link active">
+  <a href="../skills/technosphere-and-ecosphere.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Technosphere and Ecosphere</span></a>
   </div>
 </li>
@@ -261,7 +261,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../skills/impact-characterization.html" class="sidebar-item-text sidebar-link">
+  <a href="../skills/impact-characterization.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Impact Characterization</span></a>
   </div>
 </li>
@@ -322,14 +322,17 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#teaching-sequence" id="toc-teaching-sequence" class="nav-link" data-scroll-target="#teaching-sequence">Teaching sequence</a>
   <ul class="collapse">
   <li><a href="#step-1-open-with-an-everyday-analogy-question" id="toc-step-1-open-with-an-everyday-analogy-question" class="nav-link" data-scroll-target="#step-1-open-with-an-everyday-analogy-question">Step 1 — Open with an everyday analogy question</a></li>
-  <li><a href="#step-2-validate-their-answer-and-introduce-the-two-spheres" id="toc-step-2-validate-their-answer-and-introduce-the-two-spheres" class="nav-link" data-scroll-target="#step-2-validate-their-answer-and-introduce-the-two-spheres">Step 2 — Validate their answer and introduce the two spheres</a></li>
-  <li><a href="#step-3-sort-the-recipe-card-into-the-two-worlds" id="toc-step-3-sort-the-recipe-card-into-the-two-worlds" class="nav-link" data-scroll-target="#step-3-sort-the-recipe-card-into-the-two-worlds">Step 3 — Sort the recipe card into the two worlds</a></li>
-  <li><a href="#step-4-ask-a-what-if-question" id="toc-step-4-ask-a-what-if-question" class="nav-link" data-scroll-target="#step-4-ask-a-what-if-question">Step 4 — Ask a what-if question</a></li>
+  <li><a href="#step-2-validate-their-answer-and-introduce-the-characterization-table" id="toc-step-2-validate-their-answer-and-introduce-the-characterization-table" class="nav-link" data-scroll-target="#step-2-validate-their-answer-and-introduce-the-characterization-table">Step 2 — Validate their answer and introduce the characterization table</a></li>
+  <li><a href="#step-3-build-the-characterization-table-together" id="toc-step-3-build-the-characterization-table-together" class="nav-link" data-scroll-target="#step-3-build-the-characterization-table-together">Step 3 — Build the characterization table together</a></li>
+  <li><a href="#step-4-reveal-the-completed-table-and-ask-a-what-if-question" id="toc-step-4-reveal-the-completed-table-and-ask-a-what-if-question" class="nav-link" data-scroll-target="#step-4-reveal-the-completed-table-and-ask-a-what-if-question">Step 4 — Reveal the completed table and ask a what-if question</a></li>
   <li><a href="#step-5-connect-to-a-business-decision-and-close" id="toc-step-5-connect-to-a-business-decision-and-close" class="nav-link" data-scroll-target="#step-5-connect-to-a-business-decision-and-close">Step 5 — Connect to a business decision and close</a></li>
   </ul></li>
-  <li><a href="#technosphere-vs.-ecosphere-quick-reference" id="toc-technosphere-vs.-ecosphere-quick-reference" class="nav-link" data-scroll-target="#technosphere-vs.-ecosphere-quick-reference">Technosphere vs.&nbsp;ecosphere quick reference</a></li>
-  <li><a href="#common-student-questions-and-how-to-answer-them" id="toc-common-student-questions-and-how-to-answer-them" class="nav-link" data-scroll-target="#common-student-questions-and-how-to-answer-them">Common student questions and how to answer them</a></li>
-  <li><a href="#tone-and-pacing-for-all-responses" id="toc-tone-and-pacing-for-all-responses" class="nav-link" data-scroll-target="#tone-and-pacing-for-all-responses">Tone and pacing for all responses</a></li>
+  <li><a href="#characterization-quick-reference" id="toc-characterization-quick-reference" class="nav-link" data-scroll-target="#characterization-quick-reference">Characterization quick reference</a>
+  <ul class="collapse">
+  <li><a href="#why-factors-differ-across-categories-quick-reasoning" id="toc-why-factors-differ-across-categories-quick-reasoning" class="nav-link" data-scroll-target="#why-factors-differ-across-categories-quick-reasoning">Why factors differ across categories — quick reasoning</a></li>
+  </ul></li>
+  <li><a href="#common-student-questions" id="toc-common-student-questions" class="nav-link" data-scroll-target="#common-student-questions">Common student questions</a></li>
+  <li><a href="#tone-and-pacing" id="toc-tone-and-pacing" class="nav-link" data-scroll-target="#tone-and-pacing">Tone and pacing</a></li>
   </ul>
 </nav>
     </div>
@@ -342,7 +345,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    <p>Teaching skill for the LCA concepts of technosphere and ecosphere — the two worlds that every LCA study maps: the human-made world of factories, farms, and supply chains (technosphere) and the natural world of air, water, and soil (ecosphere). Invoke as /technosphere-and-ecosphere <case-study>, for example /technosphere-and-ecosphere wool_yarn or /technosphere-and-ecosphere polyester_tshirt. The skill reads the recipe card for that case study and teaches the concept by sorting its parts into the two worlds, using everyday analogies and fashion or retail business context. Designed for FIT students with no science or coding background. Short and visual — four to five exchanges to complete.</case-study></p>
+    <p>Teaching skill for the LCA concept of impact characterization — the exact maths behind life cycle impact assessment, where every emission in the inventory is multiplied by a characterization factor (a published number that can be different for every impact category) and then summed within each category. Invoke as /impact-characterization <case-study>, for example /impact-characterization wool_yarn or /impact-characterization cotton_fiber. The skill reads the recipe card and lca_results.md for that case study and has students build the full characterization table themselves, by hand, using a shipping rate-card analogy and fashion or retail business context. Designed for FIT students with no science or coding background. Builds directly on the what-is-impact-assessment skill — use that skill first if the student has not yet met characterization factors. Five to six exchanges to complete.</case-study></p>
   </div>
 </div>
 
@@ -367,185 +370,442 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="what-this-skill-does" class="level2">
 <h2 class="anchored" data-anchor-id="what-this-skill-does">What this skill does</h2>
-<p>This skill teaches the distinction between the <strong>technosphere</strong> and the <strong>ecosphere</strong> in Life Cycle Assessment (LCA).</p>
-<p>Every LCA study maps the same basic story: human activities (factories, farms, mills, power plants) take things from nature and release things back into it. The human-made world of those activities is called the <strong>technosphere</strong>. The natural world they draw from and discharge into is called the <strong>ecosphere</strong>.</p>
-<p>Understanding the boundary between these two worlds is the key to understanding <em>why</em> LCA measures what it measures. Only flows that cross that boundary — resources pulled out of nature and emissions released into it — cause environmental impact. Everything that stays inside the human-made world (a bag of raw wool moving from a farm to a mill, for example) does not directly harm the environment. It is the crossings that count.</p>
-<p>A student who completes this skill will be able to: - Explain in plain language what the technosphere and ecosphere mean - Sort the parts of any recipe card into the two worlds - Explain why only elementary flows (emissions and resource extractions) cause environmental impact, while intermediate flows between processes do not - Spot the moment of harm: when something crosses from the technosphere into the ecosphere</p>
-<p>This skill is for business and retail management students at FIT. It assumes no science or technical background. The tone should be warm, encouraging, and conversational. Ask questions — never lecture. Build understanding one step at a time.</p>
+<p>This skill teaches <strong>impact characterization</strong> — the actual calculation mechanics behind life cycle impact assessment (LCIA).</p>
+<p>Students who have completed the impact assessment skill already know <em>why</em> raw emissions need to be converted before they can be added up, and they have seen <em>one</em> worked example (usually the Global warming category). This skill goes one level deeper: it has students build the <strong>entire</strong> characterization table themselves, for every flow and every impact category at once — not just climate change.</p>
+<p>The key idea students need to walk away with is that a characterization factor is not a single number attached to a substance. It is a <strong>table</strong>: one substance can have a different factor for every impact category, including a factor of exactly zero for categories it does not affect at all. Ammonia, for example, has a real factor for acidification, a different real factor for particulate matter, and a factor of zero for climate change — three different numbers for one substance.</p>
+<p>A student who completes this skill will be able to: - Explain that characterization factors form a table (substance × impact category), not a single number per substance - Multiply an inventory amount by the correct factor for a specific category and get the right contribution - Sum contributions down a column to get a category’s total impact score - Predict, in plain language, what would happen to one impact category if a single substance’s emission rate changed — without affecting the others</p>
+<p>This skill is for business and retail management students at FIT. It assumes no science or technical background. The tone should be warm, encouraging, and conversational. Build understanding one step at a time.</p>
 <hr>
 </section>
 <section id="before-you-begin" class="level2">
 <h2 class="anchored" data-anchor-id="before-you-begin">Before you begin</h2>
 <p>The argument passed to this skill is a case study name, for example <code>wool_yarn</code>.</p>
-<p>Use the Read tool to open:</p>
-<pre><code>skills_references/&lt;argument&gt;/recipe_card.md</code></pre>
-<p>From the YAML frontmatter at the top of that file, read: - <code>name</code> — the product name - <code>processes</code> — the list of production steps (these are all technosphere activities) - <code>products</code> — the intermediate goods flowing between steps (also technosphere) - <code>elementary_flows.emissions</code> — substances released into the natural world (cross from technosphere to ecosphere) - <code>elementary_flows.resources</code> — substances extracted from the natural world (cross from ecosphere to technosphere)</p>
-<p>Everything you teach comes from what you find in that file. Do not invent numbers or facts about the product.</p>
-<p>If no argument is given, or if the file does not exist, say: &gt; “I don’t have a case study set up for that product yet. The ones ready to &gt; explore are: <strong>wool_yarn</strong>, <strong>polyester_tshirt</strong>, <strong>cotton_fiber</strong>. &gt; Which would you like to start with?”</p>
+<p>Use the Read tool to open both:</p>
+<pre><code>skills_references/&lt;argument&gt;/recipe_card.md
+skills_references/&lt;argument&gt;/lca_results.md</code></pre>
+<p>From <code>recipe_card.md</code>, read the <code>name</code> and <code>processes</code> (for the inventory flows). From <code>lca_results.md</code>, read: - <strong>Step 5 — LCI Results</strong> — the compiled inventory totals (the starting point for this skill) - <strong>Step 7 — LCIA Results (TRACI 2.2)</strong> — the final impact category scores (what the student’s table should add up to)</p>
+<p>Everything you teach comes from what is in these two files. Do not invent numbers. The worked examples below give you the exact characterization factors already verified against each case study’s real results, so you do not need to derive them yourself — just use the ones provided per case study.</p>
+<p>If no argument is given, or if the files do not exist, say: &gt; “I don’t have a case study set up for that product yet. The ones ready to &gt; explore are: <strong>wool_yarn</strong>, <strong>cotton_fiber</strong>, <strong>polyester_tshirt</strong>. &gt; Which would you like to start with?”</p>
 <hr>
 </section>
 <section id="teaching-sequence" class="level2">
 <h2 class="anchored" data-anchor-id="teaching-sequence">Teaching sequence</h2>
-<p>Work through these five steps in order. Do not explain a concept before asking a question about it first. The whole conversation should feel like four to five short exchanges — not a lecture.</p>
+<p>Work through these five steps in order. Do not explain a concept before asking a question about it first. The whole conversation should feel like five to six short exchanges — slightly longer than other skills because the student is building a table, not just answering one question.</p>
 <hr>
 <section id="step-1-open-with-an-everyday-analogy-question" class="level3">
 <h3 class="anchored" data-anchor-id="step-1-open-with-an-everyday-analogy-question">Step 1 — Open with an everyday analogy question</h3>
-<p>Before introducing any LCA terminology, start with a question rooted in everyday life that makes the idea of “two separate worlds” feel immediately obvious. Use this or something very close to it:</p>
+<p>Before introducing any LCA terminology, anchor the idea in something the student already understands from retail or logistics. Use this or something very close to it:</p>
 <blockquote class="blockquote">
-<p>“Imagine a busy town that has a wall around it. Inside the wall: houses, factories, shops, roads — everything built and run by people. Outside the wall: fields, rivers, the sky, the forest — nature, exactly as it would be without humans.</p>
-<p>Now imagine a factory inside the wall burns coal to run its machines. Two things happen: first, a truck drives through the town and delivers the coal (that coal never leaves the wall — it moves from one part of the human world to another). Second, the chimney sends smoke up into the sky above the wall — and that smoke drifts out beyond the wall into the fields and the river.</p>
-<p>Here is the question: which of those two things — the coal truck or the chimney smoke — actually crosses the wall and reaches the natural world outside?”</p>
+<p>“Imagine a moving company’s rate card. Moving a piano across town costs 3 times the base rate, because it’s heavy and awkward. Moving the same piano overseas costs 10 times the base rate, because of customs and crating. Moving a couch across town costs 1 times the base rate. Moving that same couch overseas costs 4 times the base rate.</p>
+<p>Here’s the question: does the piano have one single ‘multiplier,’ or does it have a different multiplier depending on which kind of move you’re asking about? And what would you guess the couch’s multiplier is for something the company doesn’t even offer, like moving by submarine?”</p>
 </blockquote>
-<p>Wait for the student to answer before moving on. Keep the opening to this one question only.</p>
+<p>Wait for the student to answer before moving on.</p>
 <hr>
 </section>
-<section id="step-2-validate-their-answer-and-introduce-the-two-spheres" class="level3">
-<h3 class="anchored" data-anchor-id="step-2-validate-their-answer-and-introduce-the-two-spheres">Step 2 — Validate their answer and introduce the two spheres</h3>
+<section id="step-2-validate-their-answer-and-introduce-the-characterization-table" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-validate-their-answer-and-introduce-the-characterization-table">Step 2 — Validate their answer and introduce the characterization table</h3>
 <p>Whatever the student says, find what is right about it.</p>
 <ul>
-<li>If they said the chimney smoke: “Exactly — the coal truck stayed inside the town. It moved from a coal yard to a factory, but it never left the human-made world. The smoke is the one that crossed the wall and entered the natural world. That crossing is where environmental harm begins.”</li>
-<li>If they said both cross the wall: “Almost — the smoke definitely does. But the coal truck stayed inside the town the whole time. It moved material from one human-made place to another, so it never touched the natural world outside the wall.”</li>
-<li>If they were unsure: “The answer is the chimney smoke. The coal truck stayed inside the town walls — it never left the human-made world. The smoke, on the other hand, drifted outside the wall into the fields and the river. That is where the impact actually happens.”</li>
+<li>If they said the piano has a different multiplier for each type of move: “Exactly — the piano isn’t ‘worth 3’ or ‘worth 10,’ it’s worth different amounts depending on which kind of cost you’re calculating.”</li>
+<li>If they spotted that an unavailable move would be priced at zero or not exist: “Right — if the company doesn’t ship by submarine, the sensible number for that combination is zero, not a guess.”</li>
+<li>If they were unsure: “Think of it like a price list with rows for items and columns for destinations — the number in each cell depends on <em>both</em> which item and which destination you pick.”</li>
 </ul>
-<p>Then introduce the two concepts in plain English:</p>
+<p>Then introduce the concept:</p>
 <blockquote class="blockquote">
-<p>“In Life Cycle Assessment, researchers use two names for these two worlds. The human-made world — everything inside the wall, like factories, farms, mills, and trucks — is called the <strong>technosphere</strong> (from ‘techno’, meaning made by people). The natural world outside the wall — air, water, soil, living ecosystems — is called the <strong>ecosphere</strong> (from ‘eco’, meaning the living environment).</p>
-<p>The most important idea in LCA is this: environmental harm only happens when something crosses the boundary between the two. Resources pulled out of the ecosphere (like water from a river, or oil from the ground) and emissions released into the ecosphere (like CO₂ into the air, or chemicals into a stream) are the flows that cause impact. Everything that moves around <em>inside</em> the technosphere — a bag of cotton from a farm to a mill, say — stays inside the wall and does not directly harm the natural world.”</p>
+<p>“Characterization factors in LCA work exactly like that rate card. They are not one number attached to a substance — they form a whole <strong>table</strong>. The rows are substances (CO₂, methane, ammonia…). The columns are impact categories (climate change, acidification, smog formation…). The number in each cell tells you how much one kilogram of that substance contributes to that specific kind of environmental damage.</p>
+<p>Ammonia, for example, has a real number in the acidification column, a different real number in the particulate matter column, and a flat <strong>zero</strong> in the climate change column — because ammonia does not trap heat the way CO₂ does. Zero is a real, deliberate answer in this table, not a missing one.”</p>
 </blockquote>
-<p>Keep it to two or three sentences after the validation. One clear idea only.</p>
 <hr>
 </section>
-<section id="step-3-sort-the-recipe-card-into-the-two-worlds" class="level3">
-<h3 class="anchored" data-anchor-id="step-3-sort-the-recipe-card-into-the-two-worlds">Step 3 — Sort the recipe card into the two worlds</h3>
-<p>Now bring in the case study. Briefly introduce the product using the <code>name</code> field from the recipe card. Keep it to one sentence:</p>
+<section id="step-3-build-the-characterization-table-together" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-build-the-characterization-table-together">Step 3 — Build the characterization table together</h3>
+<p>Introduce the product:</p>
 <blockquote class="blockquote">
-<p>“Let’s sort a real LCA study into these two worlds. This is the recipe card for <strong>[name]</strong>.”</p>
+<p>“Let’s build the full characterization table for <strong>[name]</strong> — every flow, every impact category that matters here.”</p>
 </blockquote>
-<p>Then show the supply chain diagram:</p>
+<p>Show the supply chain diagram:</p>
 <pre><code>![&lt;product name&gt; supply chain — structure](skills_references/&lt;argument&gt;/product_graph_structure.svg)</code></pre>
-<p>Walk the student through the two categories, drawing directly from the recipe card:</p>
-<p><strong>Technosphere — everything inside the wall:</strong></p>
+<p>Then use the matching block below for the chosen case study. Present the table with some cells already filled in and one or two left as blanks (marked <code>?</code>) for the student to calculate.</p>
+<p><strong>For wool_yarn</strong> (categories: Global warming, Smog formation):</p>
 <blockquote class="blockquote">
-<p>“The boxes in this diagram are the <strong>processes</strong> — the human activities that make [product name]. In this study that means: [list the process names from the recipe card, e.g.&nbsp;‘Sheep farming’ and ‘Wool yarn production’]. Also inside the wall are the <strong>intermediate products</strong> that flow between those boxes — things like [list the products, e.g.&nbsp;‘raw wool passing from the farm to the mill’]. These flows stay entirely inside the human-made world. They do not touch nature.”</p>
-</blockquote>
-<p><strong>Ecosphere crossings — what crosses the wall:</strong></p>
-<blockquote class="blockquote">
-<p>“Now look at what crosses the wall. From the processes in this study, two types of flows reach the ecosphere:</p>
-<ul>
-<li><p><strong>Emissions</strong> going <em>out</em> into nature: [list the emissions from the recipe card, e.g.&nbsp;‘Carbon dioxide and Methane released to air’]. These are substances the processes produce and discharge into the natural world.</p></li>
-<li><p><strong>Resources</strong> coming <em>in</em> from nature: [list the resources, e.g.&nbsp;‘Water drawn from a natural water source’]. These are things extracted from the ecosphere to run the technosphere.</p></li>
-</ul>
-<p>In LCA, these crossings are called <strong>elementary flows</strong> — elementary because they are the basic exchanges between the human world and the natural world. They are the only flows that score environmental impact, because they are the only ones that actually affect the ecosphere.”</p>
-</blockquote>
-<p>Then ask:</p>
-<blockquote class="blockquote">
-<p>“Looking at the emissions in this study — which one do you think causes more harm to the climate: [first emission, e.g.&nbsp;Carbon dioxide] or [second emission, e.g.&nbsp;Methane]? Take a guess — there is no wrong answer here.”</p>
-</blockquote>
-<p>Wait for the student’s answer before moving on.</p>
-<hr>
-</section>
-<section id="step-4-ask-a-what-if-question" class="level3">
-<h3 class="anchored" data-anchor-id="step-4-ask-a-what-if-question">Step 4 — Ask a what-if question</h3>
-<p>Use the student’s answer from Step 3 to pivot into a deeper question about <em>why</em> crossings matter more than size. Validate their guess and then ask:</p>
-<ul>
-<li><p>For <strong>wool_yarn</strong>: &gt; “Here is something surprising. Methane is actually far more powerful as a &gt; greenhouse gas than carbon dioxide — even though the sheep farm in this &gt; study emits less of it by weight. In fact, one kilogram of methane traps &gt; about 28 times as much heat as one kilogram of CO₂. &gt; &gt; So here is the what-if: if the sheep farm <em>stopped emitting methane</em> but &gt; kept everything else the same — same coal, same water, same CO₂ — how much &gt; of the total climate impact do you think would disappear? More than half, &gt; or less than half?”</p></li>
-<li><p>For <strong>polyester_tshirt</strong>: &gt; “The emissions in this study all go to air — carbon dioxide from burning &gt; fossil fuels to run the machines. The technosphere flows (pellets, fabric, &gt; the T-shirt itself) stay inside the wall. &gt; &gt; Here is the what-if: imagine a factory that used solar panels instead of &gt; coal-fired electricity. Which part of the LCA would change — the &gt; technosphere processes, the ecosphere crossings, or both?”</p></li>
-<li><p>For <strong>cotton_fiber</strong>: &gt; “This study includes water extraction — a resource flowing <em>from</em> the &gt; ecosphere <em>into</em> the technosphere. In water-scarce regions, that crossing &gt; is considered a serious environmental harm, even though no pollution is &gt; being released. &gt; &gt; Here is the what-if: if a cotton farm switched to rainwater harvesting &gt; instead of drawing from a river, the same volume of water would still be &gt; used — but it would come from rain falling on the field rather than from &gt; a river. Would this change the ecosphere crossing? Why or why not?”</p></li>
-</ul>
-<p>The goal is for the student to feel that the two-worlds framework is not just a naming exercise — it explains <em>where</em> harm happens and <em>what</em> would have to change to reduce it.</p>
-<hr>
-</section>
-<section id="step-5-connect-to-a-business-decision-and-close" class="level3">
-<h3 class="anchored" data-anchor-id="step-5-connect-to-a-business-decision-and-close">Step 5 — Connect to a business decision and close</h3>
-<p>End with one or two practical sentences connecting the technosphere-ecosphere boundary to something a fashion or retail professional would face. Choose the most relevant:</p>
-<ul>
-<li><p><strong>For buyers evaluating sustainability claims:</strong> &gt; “When a supplier says their process is ‘clean’, one useful question to ask &gt; is: ‘Which crossings are we measuring?’ A process can rearrange materials &gt; inside the technosphere endlessly — switching suppliers, changing packaging, &gt; reordering steps — without ever reducing its ecosphere crossings. &gt; The only changes that genuinely reduce environmental impact are the ones &gt; that reduce what crosses the wall: less CO₂ to air, less water from rivers, &gt; fewer toxic substances into soil.”</p></li>
-<li><p><strong>For brand managers evaluating sourcing decisions:</strong> &gt; “When a brand switches from conventional cotton to organic cotton, the &gt; technosphere changes — different farming practices, different inputs. But &gt; the question LCA asks is: does that change <em>reduce the ecosphere crossings</em>? &gt; Fewer pesticides discharged to water? Less nitrous oxide to air? Less water &gt; extracted from rivers? If the answer is yes, the switch genuinely helps. &gt; If the crossings stay the same, the change is cosmetic.”</p></li>
-<li><p><strong>For anyone reading a sustainability report:</strong> &gt; “The next time you read a sustainability claim — ‘our product has a lower &gt; carbon footprint’ — you now have a sharper question to ask: ‘Lower crossings &gt; into the ecosphere, or just a shorter technosphere supply chain?’ A brand &gt; that cuts steps from farm to factory might reduce their costs, but not &gt; necessarily their emissions. Only ecosphere crossings create impact.”</p></li>
-</ul>
-<p>Then close with an invitation to continue:</p>
-<blockquote class="blockquote">
-<p>“The technosphere-ecosphere boundary is the reason LCA studies track <strong>elementary flows</strong> — those are the official name for the crossings we’ve been talking about. The next step is understanding how those flows get converted into impact scores — a step called <strong>life cycle impact assessment</strong>. Would you like to explore that, or is there anything about the two worlds you’d like to look at more closely?”</p>
-</blockquote>
-<hr>
-</section>
-</section>
-<section id="technosphere-vs.-ecosphere-quick-reference" class="level2">
-<h2 class="anchored" data-anchor-id="technosphere-vs.-ecosphere-quick-reference">Technosphere vs.&nbsp;ecosphere quick reference</h2>
-<p>Use this when a student asks for a summary or comparison. Do not recite the whole table unprompted — use it to answer a specific question.</p>
+<p>“Here is the inventory, and the two impact categories that actually score above zero for wool yarn:</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 18%">
+<col style="width: 18%">
+<col style="width: 18%">
+<col style="width: 18%">
 </colgroup>
 <thead>
 <tr class="header">
-<th>Category</th>
-<th>World</th>
-<th>Examples in a fashion LCA</th>
-<th>LCA term</th>
+<th>Flow</th>
+<th>Inventory</th>
+<th style="text-align: right;">GWP factor (kg CO₂-eq/kg)</th>
+<th style="text-align: right;">GWP contribution</th>
+<th style="text-align: right;">Smog factor (kg O₃-eq/kg)</th>
+<th style="text-align: right;">Smog contribution</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Production steps</td>
-<td>Technosphere</td>
-<td>Sheep farm, spinning mill, weaving factory</td>
-<td>Process</td>
+<td>Carbon dioxide</td>
+<td>2.55 kg</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2.55</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
 </tr>
 <tr class="even">
-<td>Intermediate products</td>
-<td>Technosphere</td>
-<td>Raw wool, yarn, woven fabric</td>
-<td>Intermediate flow</td>
-</tr>
-<tr class="odd">
-<td>CO₂ emitted to air</td>
-<td>Crosses to ecosphere</td>
-<td>Combustion at the mill, fermentation on the farm</td>
-<td>Elementary flow (emission)</td>
-</tr>
-<tr class="even">
-<td>Methane emitted to air</td>
-<td>Crosses to ecosphere</td>
-<td>Enteric fermentation (sheep digestion)</td>
-<td>Elementary flow (emission)</td>
-</tr>
-<tr class="odd">
-<td>Water drawn from a river</td>
-<td>Crosses from ecosphere</td>
-<td>Scouring and dyeing water use</td>
-<td>Elementary flow (resource)</td>
-</tr>
-<tr class="even">
-<td>Fossil fuels extracted</td>
-<td>Crosses from ecosphere</td>
-<td>Coal or gas burned for energy</td>
-<td>Elementary flow (resource)</td>
+<td>Methane</td>
+<td>0.44 kg</td>
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">11.0</td>
+<td style="text-align: right;">0.0144</td>
+<td style="text-align: right;"><strong>?</strong></td>
 </tr>
 </tbody>
 </table>
+<p>I’ve filled in every cell except one. Methane’s smog factor is 0.0144 kg O₃-eq per kg — much smaller than its climate factor, because methane is a powerful greenhouse gas but only a mild contributor to smog. Can you calculate methane’s smog contribution — multiply 0.44 kg by 0.0144?”</p>
+</blockquote>
+<p><strong>For cotton_fiber</strong> (categories: Global warming, Acidification, Particulate matter):</p>
+<blockquote class="blockquote">
+<p>“Here is the inventory, and the three impact categories that actually score above zero for cotton fiber:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 13%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Flow</th>
+<th>Inventory</th>
+<th style="text-align: right;">GWP factor (kg CO₂-eq/kg)</th>
+<th style="text-align: right;">GWP contribution</th>
+<th style="text-align: right;">Acidification factor (kg SO₂-eq/kg)</th>
+<th style="text-align: right;">Acid. contribution</th>
+<th style="text-align: right;">PM factor (PM 2.5-eq/kg)</th>
+<th style="text-align: right;">PM contribution</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Carbon dioxide</td>
+<td>1.5 kg</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1.5</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td>Nitrous oxide</td>
+<td>0.015 kg</td>
+<td style="text-align: right;">298</td>
+<td style="text-align: right;">4.47</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td>Ammonia</td>
+<td>0.01 kg</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1.88</td>
+<td style="text-align: right;"><strong>?</strong></td>
+<td style="text-align: right;">0.0667</td>
+<td style="text-align: right;"><strong>?</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Notice ammonia’s row: zero for climate, but two real numbers for acidification and particulate matter. Can you calculate both of ammonia’s contributions — multiply 0.01 kg by 1.88, and separately multiply 0.01 kg by 0.0667?”</p>
+</blockquote>
+<p><strong>For polyester_tshirt</strong> (categories: Global warming, Smog formation):</p>
+<blockquote class="blockquote">
+<p>“Here is the inventory, and the two impact categories that actually score above zero for the polyester T-shirt:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 18%">
+<col style="width: 18%">
+<col style="width: 18%">
+<col style="width: 18%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Flow</th>
+<th>Inventory</th>
+<th style="text-align: right;">GWP factor (kg CO₂-eq/kg)</th>
+<th style="text-align: right;">GWP contribution</th>
+<th style="text-align: right;">Smog factor (kg O₃-eq/kg)</th>
+<th style="text-align: right;">Smog contribution</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Carbon dioxide</td>
+<td>2.16 kg</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2.16</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td>Methane</td>
+<td>0.015 kg</td>
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">0.375</td>
+<td style="text-align: right;">0.0144</td>
+<td style="text-align: right;"><strong>?</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Can you calculate methane’s smog contribution — multiply 0.015 kg by 0.0144?”</p>
+</blockquote>
+<p>Wait for the student’s answer before moving on.</p>
 <hr>
 </section>
-<section id="common-student-questions-and-how-to-answer-them" class="level2">
-<h2 class="anchored" data-anchor-id="common-student-questions-and-how-to-answer-them">Common student questions and how to answer them</h2>
-<p><strong>“Why is a farm considered ‘human-made’ if it uses natural land and sunlight?”</strong> Good question — a sheep farm uses natural elements, but the activity itself (choosing what to grow, managing the animals, applying inputs like fertiliser) is a human-controlled process. The farm is inside the technosphere because humans are running it. The natural elements it draws on — the soil it depletes, the water it takes from a river, the methane it releases into the air — are the ecosphere crossings that LCA tries to measure.</p>
-<p><strong>“What about the land the factory sits on — is that ecosphere?”</strong> Land use is a complex area of LCA. In basic studies, the land the factory occupies is not treated as an ecosphere crossing (because the building sits on it for decades and accounting for it per-product is tricky). In more advanced studies, land transformation — clearing forest for farmland, for example — is included as an ecosphere interaction. Most beginner studies simplify and leave this out.</p>
-<p><strong>“Can something be both technosphere and ecosphere at the same time?”</strong> No — the two categories are defined by where something is and where it is going. A substance inside the human system (like fuel in a tanker) is technosphere. Once it burns and CO₂ is released into the atmosphere, that CO₂ has crossed into the ecosphere. The crossing is the moment it changes category.</p>
-<p><strong>“Is plastic waste in the ocean technosphere or ecosphere?”</strong> When plastic leaves a factory, it is technosphere. When it escapes into a river or ocean, it has crossed into the ecosphere — that crossing is an elementary flow (emission to water or soil). LCA studies that include plastic leakage model this as an emission to the ecosphere. In most basic fashion LCA studies, this is simplified away or listed as out of scope.</p>
-<p><strong>“If a company recycles materials, do those stay in the technosphere?”</strong> Yes — recycled materials move within the technosphere. A recycled polyester fibre goes from a used bottle to a mill to a new garment, staying entirely inside the human-made world. What LCA asks is: how many ecosphere crossings happen <em>along that recycled route</em>? Less energy burned = fewer CO₂ emissions = fewer crossings = lower impact. The recycling itself does not eliminate crossings, but it can reduce them significantly.</p>
+<section id="step-4-reveal-the-completed-table-and-ask-a-what-if-question" class="level3">
+<h3 class="anchored" data-anchor-id="step-4-reveal-the-completed-table-and-ask-a-what-if-question">Step 4 — Reveal the completed table and ask a what-if question</h3>
+<p>Validate the student’s calculation, show the completed table with the column totals summed, then ask a what-if question that isolates one category.</p>
+<p><strong>For wool_yarn</strong> (expected answer: 0.44 × 0.0144 = <strong>0.0063 kg O₃-eq</strong>):</p>
+<blockquote class="blockquote">
+<p>“Exactly — 0.44 × 0.0144 = <strong>0.0063 kg O₃-eq</strong>. Here is the completed table with both columns summed:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Flow</th>
+<th style="text-align: right;">GWP contribution</th>
+<th style="text-align: right;">Smog contribution</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Carbon dioxide</td>
+<td style="text-align: right;">2.55</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td>Methane</td>
+<td style="text-align: right;">11.0</td>
+<td style="text-align: right;">0.0063</td>
+</tr>
+<tr class="odd">
+<td><strong>Column total</strong></td>
+<td style="text-align: right;"><strong>13.55 kg CO₂-eq</strong></td>
+<td style="text-align: right;"><strong>0.0063 kg O₃-eq</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Both totals match the real openLCA results exactly. Notice that methane dominates the climate column but barely registers in the smog column. Here is the what-if: if a sheep farm switched feed additives and cut methane emissions by half, which column total would shrink a lot, and which would barely move?”</p>
+</blockquote>
+<p><strong>For cotton_fiber</strong> (expected answers: 0.01 × 1.88 = <strong>0.0188 kg SO₂-eq</strong>, 0.01 × 0.0667 = <strong>0.000667 PM 2.5-eq</strong>):</p>
+<blockquote class="blockquote">
+<p>“Exactly — 0.01 × 1.88 = <strong>0.0188 kg SO₂-eq</strong>, and 0.01 × 0.0667 = <strong>0.000667 PM 2.5-eq</strong>. Here is the completed table with every column summed:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 26%">
+<col style="width: 26%">
+<col style="width: 26%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Flow</th>
+<th style="text-align: right;">GWP contribution</th>
+<th style="text-align: right;">Acid. contribution</th>
+<th style="text-align: right;">PM contribution</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Carbon dioxide</td>
+<td style="text-align: right;">1.5</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td>Nitrous oxide</td>
+<td style="text-align: right;">4.47</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td>Ammonia</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.0188</td>
+<td style="text-align: right;">0.000667</td>
+</tr>
+<tr class="even">
+<td><strong>Column total</strong></td>
+<td style="text-align: right;"><strong>5.97 kg CO₂-eq</strong></td>
+<td style="text-align: right;"><strong>0.0188 kg SO₂-eq</strong></td>
+<td style="text-align: right;"><strong>0.000667 PM 2.5-eq</strong></td>
+</tr>
+</tbody>
+</table>
+<p>All three totals match the real openLCA results exactly. Notice that nitrous oxide and ammonia never even appear in each other’s columns. Here is the what-if: if the cotton farm switched to a fertilizer that releases less ammonia but the same amount of nitrous oxide, which column totals would change, and which would stay exactly the same?”</p>
+</blockquote>
+<p><strong>For polyester_tshirt</strong> (expected answer: 0.015 × 0.0144 = <strong>0.000216 kg O₃-eq</strong>):</p>
+<blockquote class="blockquote">
+<p>“Exactly — 0.015 × 0.0144 = <strong>0.000216 kg O₃-eq</strong>. Here is the completed table with both columns summed:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Flow</th>
+<th style="text-align: right;">GWP contribution</th>
+<th style="text-align: right;">Smog contribution</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Carbon dioxide</td>
+<td style="text-align: right;">2.16</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td>Methane</td>
+<td style="text-align: right;">0.375</td>
+<td style="text-align: right;">0.000216</td>
+</tr>
+<tr class="odd">
+<td><strong>Column total</strong></td>
+<td style="text-align: right;"><strong>2.535 kg CO₂-eq</strong></td>
+<td style="text-align: right;"><strong>0.000216 kg O₃-eq</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Both totals match the real openLCA results exactly. Here is the what-if: the oil extraction step is the only source of methane in this supply chain. If a brand eliminated oil extraction entirely by switching to recycled polyester, would the smog column drop to exactly zero, or would some smog impact remain from the other two processes?”</p>
+</blockquote>
+<p>Wait for the student’s answer before moving on.</p>
 <hr>
 </section>
-<section id="tone-and-pacing-for-all-responses" class="level2">
-<h2 class="anchored" data-anchor-id="tone-and-pacing-for-all-responses">Tone and pacing for all responses</h2>
+<section id="step-5-connect-to-a-business-decision-and-close" class="level3">
+<h3 class="anchored" data-anchor-id="step-5-connect-to-a-business-decision-and-close">Step 5 — Connect to a business decision and close</h3>
+<p>End with one practical connection to something a fashion or retail professional would actually face.</p>
 <ul>
-<li>Write as if talking to someone who is comfortable with Excel and email but has never read a science report</li>
+<li><p><strong>For sustainability analysts:</strong> &gt; “Once you understand that characterization factors are a published, &gt; public table, you don’t need to wait for a full LCA re-run every time &gt; you want a rough estimate. If you know how much of a substance a process &gt; change would add or remove, you can multiply it by the published factor &gt; yourself and get a quick, defensible estimate of the effect on a &gt; specific impact category.”</p></li>
+<li><p><strong>For buyers questioning a supplier’s claim:</strong> &gt; “If a supplier says a new fertilizer cuts their ‘environmental impact’ &gt; by 20%, the right follow-up question is: which impact category, and &gt; which substance changed? Because of how this table works, a fertilizer &gt; swap that helps acidification might do nothing at all for climate &gt; change — the two columns are calculated independently.”</p></li>
+<li><p><strong>For product developers:</strong> &gt; “Knowing that factors can be zero is just as useful as knowing they can &gt; be large. If a material’s biggest emission has a zero factor for the &gt; impact category your brand publicly reports, your sustainability &gt; marketing might be technically true and still misleading about other &gt; harms that table would reveal.”</p></li>
+</ul>
+<p>Then close with an invitation to continue:</p>
+<blockquote class="blockquote">
+<p>“You’ve now built impact scores from raw emissions twice — once by seeing the conversion (impact assessment), and once by doing the multiplication and summing yourself for every category at once (characterization). The scores you’ve calculated here — kg CO₂-eq, kg SO₂-eq, PM 2.5-eq — are called <strong>midpoint</strong> scores, because they sit partway between the raw emission and the real-world damage it causes. The next natural question is: what does ‘13.55 kg CO₂-eq’ actually <em>do</em> to people, ecosystems, or resources? That is what damage characterization covers. Would you like to explore that next, or is there anything about this table you’d like to dig into further first?”</p>
+</blockquote>
+<hr>
+</section>
+</section>
+<section id="characterization-quick-reference" class="level2">
+<h2 class="anchored" data-anchor-id="characterization-quick-reference">Characterization quick reference</h2>
+<p>Use this only when a student asks for a summary or wants to see the steps laid out clearly. Do not recite it unprompted.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Step</th>
+<th>What happens</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1. Start with the inventory</td>
+<td>One row per flow, already compiled per functional unit</td>
+<td>Inventory table</td>
+</tr>
+<tr class="even">
+<td>2. List the relevant impact categories</td>
+<td>One column per type of damage being studied</td>
+<td>Category list</td>
+</tr>
+<tr class="odd">
+<td>3. Look up each factor</td>
+<td>Find the published number for each flow × category pair (often zero)</td>
+<td>Characterization factor table</td>
+</tr>
+<tr class="even">
+<td>4. Multiply</td>
+<td>Inventory amount × factor for that cell</td>
+<td>Contribution per cell</td>
+</tr>
+<tr class="odd">
+<td>5. Sum down each column</td>
+<td>Add every flow’s contribution within one category</td>
+<td>Impact category score</td>
+</tr>
+</tbody>
+</table>
+<section id="why-factors-differ-across-categories-quick-reasoning" class="level3">
+<h3 class="anchored" data-anchor-id="why-factors-differ-across-categories-quick-reasoning">Why factors differ across categories — quick reasoning</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>If a substance…</th>
+<th>It tends to have a factor for…</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Traps heat in the atmosphere (CO₂, methane, N₂O)</td>
+<td>Global warming</td>
+</tr>
+<tr class="even">
+<td>Reacts in the atmosphere to form acid rain (NH₃, SO₂, NOₓ)</td>
+<td>Acidification</td>
+</tr>
+<tr class="odd">
+<td>Forms fine airborne particles (NH₃, SO₂, NOₓ)</td>
+<td>Particulate matter</td>
+</tr>
+<tr class="even">
+<td>Reacts with sunlight to form ground-level ozone (methane, NOₓ, VOCs)</td>
+<td>Smog formation</td>
+</tr>
+<tr class="odd">
+<td>Adds excess nutrients to water (N, P compounds)</td>
+<td>Eutrophication</td>
+</tr>
+</tbody>
+</table>
+<p>A single substance can appear in several rows of this table at once — that is exactly why ammonia has two non-zero factors above.</p>
+<hr>
+</section>
+</section>
+<section id="common-student-questions" class="level2">
+<h2 class="anchored" data-anchor-id="common-student-questions">Common student questions</h2>
+<p><strong>“Why does methane get a big factor for climate but a tiny one for smog?”</strong> Because the two numbers measure completely different mechanisms. The climate factor measures how much extra heat methane traps in the atmosphere compared to CO₂ over 100 years — and methane is very good at trapping heat. The smog factor measures how much methane reacts with sunlight and other pollutants to form ground-level ozone — and methane is only a minor contributor to that particular chemical reaction. Same substance, two unrelated properties, two very different numbers.</p>
+<p><strong>“How do I know which categories a substance belongs in without being a chemist?”</strong> You don’t need to derive these yourself — that is exactly what the TRACI 2.2 method (and methods like it) hands you. Your job as a business decision-maker is to read the table, not build it from scratch. The quick reasoning table above gives you a rough intuition, but the real numbers always come from the published method.</p>
+<p><strong>“If I multiply every flow by every factor, will every cell have a number?”</strong> No — most cells in a full characterization table are zero. A supply chain with five flows and eight impact categories has 40 possible cells, but typically only a handful are non-zero. That sparsity is normal and expected; it simply means most substances only cause one or two specific kinds of damage, not all of them.</p>
+<p><strong>“Is this the same as the inventory or the impact assessment skill I already did?”</strong> It builds on both, but does something neither of those did: it has you calculate every cell of the table yourself, for every category at once, and shows you that the categories are calculated completely independently of one another. The impact assessment skill showed you that conversion happens and worked through one category. This skill is the hands-on practice across the whole table.</p>
+<hr>
+</section>
+<section id="tone-and-pacing" class="level2">
+<h2 class="anchored" data-anchor-id="tone-and-pacing">Tone and pacing</h2>
+<ul>
+<li>Write as if talking to someone comfortable with Excel and email but who has never read a science report</li>
 <li>Never use a technical term without explaining it in the same sentence</li>
-<li>One question per message — never stack two questions together</li>
-<li>Keep responses to three to five sentences per turn</li>
-<li>If the student seems stuck, offer a multiple-choice prompt rather than repeating the explanation: “Would you say the ecosphere is (a) the human-made supply chain, (b) the natural world outside the supply chain, or (c) the boundary between them?”</li>
+<li>One question per message — never stack more than two short calculations together in a single question</li>
+<li>Keep responses to three to six sentences per turn (tables count as part of the response, not extra sentences)</li>
+<li>If the student seems stuck, offer a multiple-choice prompt: “Would you say a characterization factor table has (a) one number per substance, (b) one number per substance and per impact category, with many cells equal to zero, or (c) one number per impact category only?”</li>
 <li>Phrases that help: “This is a perfectly normal question”, “You are asking exactly the right thing”, “This trips a lot of people up at first”</li>
 <li>End every response with either a question or a clear invitation to continue</li>
 </ul>
