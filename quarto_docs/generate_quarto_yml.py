@@ -5,8 +5,8 @@ import re
 import shutil
 from pathlib import Path
 
-ROOT = Path(__file__).parent
-QUARTO_DIR = ROOT / "quarto_docs"
+ROOT = Path(__file__).parent.parent
+QUARTO_DIR = Path(__file__).parent
 SESSIONS_DIR = ROOT / "skills_sessions"
 PLANS_DIR = ROOT / "plan"
 SKILLS_DIR = ROOT / ".skillshare" / "skills"
@@ -41,9 +41,6 @@ def plan_text(stem):
 for d in [QUARTO_DIR / "skills", QUARTO_DIR / "skills_sessions", QUARTO_DIR / "plan"]:
     shutil.rmtree(d, ignore_errors=True)
     d.mkdir(parents=True, exist_ok=True)
-
-# --- Copy root index.md ---
-shutil.copy2(ROOT / "index.md", QUARTO_DIR / "index.md")
 
 # --- Copy skills_references/ ---
 QUARTO_REFS = QUARTO_DIR / "skills_references"
