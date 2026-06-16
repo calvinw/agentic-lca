@@ -1,5 +1,15 @@
 [
   {
+    "file": "damage-characterization/damage-characterization-polyester_tshirt-v0.1-elena-sonnet-4-6-session1.md",
+    "command": "/damage-characterization polyester_tshirt",
+    "skill": "Damage Characterization",
+    "caseStudy": "Polyester Tshirt",
+    "student": "Elena",
+    "model": "Sonnet 4.6",
+    "version": "0.1",
+    "n": 1
+  },
+  {
     "file": "functional-unit/functional-unit-cotton_fiber-v0.1-calvin-sonnet-4-6-session1.md",
     "command": "/functional-unit cotton_fiber",
     "skill": "Functional Unit",
@@ -34,6 +44,16 @@
     "command": "/goal-and-scope cotton_fiber",
     "skill": "Goal and Scope",
     "caseStudy": "Cotton Fiber",
+    "student": "Elena",
+    "model": "Sonnet 4.6",
+    "version": "0.1",
+    "n": 1
+  },
+  {
+    "file": "impact-characterization/impact-characterization-polyester_tshirt-v0.1-elena-sonnet-4-6-session1.md",
+    "command": "/impact-characterization polyester_tshirt",
+    "skill": "Impact Characterization",
+    "caseStudy": "Polyester Tshirt",
     "student": "Elena",
     "model": "Sonnet 4.6",
     "version": "0.1",

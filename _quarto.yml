@@ -6,10 +6,12 @@ project:
   render:
     - index.md
     - skills_sessions/index.md
+    - skills_sessions/damage-characterization/damage-characterization-polyester_tshirt-v0.1-elena-sonnet-4-6-session1.md
     - skills_sessions/functional-unit/functional-unit-cotton_fiber-v0.1-calvin-sonnet-4-6-session1.md
     - skills_sessions/functional-unit/functional-unit-cotton_fiber-v0.2-elena-deepseek-v4-flash-session1.md
     - skills_sessions/functional-unit/functional-unit-wool_yarn-v0.2-elena-sonnet-4-6-session1.md
     - skills_sessions/goal-and-scope/goal-and-scope-cotton_fiber-v0.1-elena-sonnet-4-6-session1.md
+    - skills_sessions/impact-characterization/impact-characterization-polyester_tshirt-v0.1-elena-sonnet-4-6-session1.md
     - skills_sessions/life-cycle-inventory/life-cycle-inventory-wool_yarn-v0.1-elena-sonnet-4-6-session1.md
     - skills_sessions/life-cycle-stages/life-cycle-stages-wool_yarn-v0.1-elena-sonnet-4-6-session1.md
     - skills_sessions/system-boundary/system-boundary-cotton_fiber-v0.1-calvin-sonnet-4-6-session1.md
@@ -65,6 +67,10 @@ website:
       contents:
         - text: Overview
           href: skills_sessions/index.md
+        - section: "Damage Characterization"
+          contents:
+            - text: "polyester_tshirt v0.1 session1"
+              href: skills_sessions/damage-characterization/damage-characterization-polyester_tshirt-v0.1-elena-sonnet-4-6-session1.md
         - section: "Functional Unit"
           contents:
             - text: "cotton_fiber v0.1 session1"
@@ -77,6 +83,10 @@ website:
           contents:
             - text: "cotton_fiber v0.1 session1"
               href: skills_sessions/goal-and-scope/goal-and-scope-cotton_fiber-v0.1-elena-sonnet-4-6-session1.md
+        - section: "Impact Characterization"
+          contents:
+            - text: "polyester_tshirt v0.1 session1"
+              href: skills_sessions/impact-characterization/impact-characterization-polyester_tshirt-v0.1-elena-sonnet-4-6-session1.md
         - section: "Life Cycle Inventory"
           contents:
             - text: "wool_yarn v0.1 session1"
