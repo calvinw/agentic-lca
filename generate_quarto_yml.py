@@ -148,6 +148,7 @@ lines += [
     "    theme: cosmo",
     "    css: custom.css",
     "    toc: true",
+    "    include-after-body: sidebar-tweaks.html",
     "    grid:",
     "      body-width: 2000px",
     "",
