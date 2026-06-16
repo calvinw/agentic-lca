@@ -348,6 +348,29 @@ ul.task-list li input[type="checkbox"] {
 </section>
 
 </main> <!-- /main -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const sidebar = document.getElementById('quarto-sidebar');
+  if (!sidebar) return;
+  const items = Array.from(sidebar.querySelectorAll('li.sidebar-item'));
+  items.forEach(function (item, i) {
+    const rawLink = item.querySelector('a[href*="raw.githubusercontent.com"]');
+    if (!rawLink) return;
+    const prevItem = items[i - 1];
+    if (!prevItem) return;
+    const prevContainer = prevItem.querySelector('.sidebar-item-container');
+    if (!prevContainer) return;
+    prevContainer.style.display = 'block';
+    rawLink.style.display = 'inline';
+    rawLink.style.marginLeft = '4px';
+    rawLink.style.fontSize = '0.72em';
+    rawLink.style.opacity = '0.55';
+    rawLink.style.fontWeight = 'normal';
+    prevContainer.appendChild(rawLink);
+    item.style.display = 'none';
+  });
+});
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
