@@ -150,63 +150,63 @@ website:
         - text: "What Is LCA"
           href: skills/what-is-lca.md
         - text: "(.md)"
-          href: skills/what-is-lca.md
+          href: '#'
         - text: "System Boundary"
           href: skills/system-boundary.md
         - text: "(.md)"
-          href: skills/system-boundary.md
+          href: '#'
         - text: "Life Cycle Stages"
           href: skills/life-cycle-stages.md
         - text: "(.md)"
-          href: skills/life-cycle-stages.md
+          href: '#'
         - text: "Goal and Scope"
           href: skills/goal-and-scope.md
         - text: "(.md)"
-          href: skills/goal-and-scope.md
+          href: '#'
         - text: "Functional Unit"
           href: skills/functional-unit.md
         - text: "(.md)"
-          href: skills/functional-unit.md
+          href: '#'
         - text: "Supply Chain"
           href: skills/supply-chain.md
         - text: "(.md)"
-          href: skills/supply-chain.md
+          href: '#'
         - text: "Technosphere and Ecosphere"
           href: skills/technosphere-and-ecosphere.md
         - text: "(.md)"
-          href: skills/technosphere-and-ecosphere.md
+          href: '#'
         - text: "Life Cycle Inventory"
           href: skills/life-cycle-inventory.md
         - text: "(.md)"
-          href: skills/life-cycle-inventory.md
+          href: '#'
         - text: "Scaling Vector"
           href: skills/scaling-vector.md
         - text: "(.md)"
-          href: skills/scaling-vector.md
+          href: '#'
         - text: "What Is Impact Assessment"
           href: skills/what-is-impact-assessment.md
         - text: "(.md)"
-          href: skills/what-is-impact-assessment.md
+          href: '#'
         - text: "Impact Characterization"
           href: skills/impact-characterization.md
         - text: "(.md)"
-          href: skills/impact-characterization.md
+          href: '#'
         - text: "Damage Characterization"
           href: skills/damage-characterization.md
         - text: "(.md)"
-          href: skills/damage-characterization.md
+          href: '#'
         - text: "Run LCA"
           href: skills/run-lca.md
         - text: "(.md)"
-          href: skills/run-lca.md
+          href: '#'
         - text: "LCA From Url"
           href: skills/lca-from-url.md
         - text: "(.md)"
-          href: skills/lca-from-url.md
+          href: '#'
         - text: "Skill Creator"
           href: skills/skill-creator.md
         - text: "(.md)"
-          href: skills/skill-creator.md
+          href: '#'
 
 format:
   html:

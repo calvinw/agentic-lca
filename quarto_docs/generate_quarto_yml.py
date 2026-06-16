@@ -189,7 +189,7 @@ for src, copy in zip(skill_files, skill_copies):
     lines.append(f'        - text: "{label}"')
     lines.append(f"          href: {q(copy)}")
     lines.append(f'        - text: "(.md)"')
-    lines.append(f"          href: {q(copy)}")
+    lines.append(f"          href: '#'")
 
 lines += [
     "",
