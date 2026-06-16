@@ -49,13 +49,13 @@ Skills already built are marked ✅. Skills recommended but not yet built are ma
 | 1 | `what-is-lca` | ✅ Built | What LCA is, why fashion professionals need it, the four phases |
 | **Phase 1 — Goal & Scope** | | | |
 | 2 | `goal-and-scope` | ✅ Built | Why the study is being done, who it is for, what is included or excluded |
-| 3 | `system-boundary` | ✅ Built | Every study has edges — what is inside gets counted, what is outside does not |
-| 4 | `life-cycle-stages` | ✅ Built | The named boundary types — cradle to gate, cradle to grave, cradle to cradle, gate to grave |
-| 5 | `functional-unit` | ✅ Built | The precise definition of what is being measured |
+| 3 | `functional-unit` | ✅ Built | The precise definition of what is being measured |
+| 4 | `system-boundary` | ✅ Built | Every study has edges — what is inside gets counted, what is outside does not |
+| 5 | `life-cycle-stages` | ✅ Built | The named boundary types — cradle to gate, cradle to grave, cradle to cradle, gate to grave |
+| 6 | `technosphere-and-ecosphere` | ✅ Built | The difference between human-made flows (products) and natural flows (emissions, resources) that cross into the natural world |
 | **Phase 2 — Life Cycle Inventory** | | | |
-| 6 | `supply-chain` | ✅ Built | How to read a product graph, what processes and flows are |
-| 7 | `scaling-vector` | ✅ Built | How much each process in the supply chain must run to deliver one functional unit |
-| 8 | `technosphere-and-ecosphere` | ✅ Built | The difference between human-made flows (products) and natural flows (emissions, resources) that cross into the natural world |
+| 7 | `supply-chain` | ✅ Built | How to read a product graph, what processes and flows are |
+| 8 | `scaling-vector` | ✅ Built | How much each process in the supply chain must run to deliver one functional unit |
 | 9 | `life-cycle-inventory` | ✅ Built | What an inventory is, how emissions and resource use are collected and totalled across all processes |
 | 10 | `allocation` | ⬜ Recommended | What to do when a process produces more than one useful output — how to divide the environmental burden fairly between co-products |
 | **Phase 3 — Impact Assessment** | | | |
@@ -116,6 +116,17 @@ relevant to your question.
 
 ---
 
+### `functional-unit` ✅
+The precise definition of what is being measured. Students learn that a functional unit
+is not just "a shirt" but "one shirt worn 50 times before disposal" — and that changing
+the functional unit changes the entire comparison. Uses a case study to practise writing
+a functional unit and spotting when one has been defined poorly.
+
+**Key insight for students:** If two studies use different functional units, their
+numbers cannot be directly compared — even if they are studying the same product.
+
+---
+
 ### `system-boundary` ✅
 The most basic idea in LCA, explained without any technical vocabulary. Every study
 has to decide what to include and what to leave out — and whatever is left out does
@@ -161,14 +172,22 @@ check that they use the same boundary type — otherwise the comparison is meani
 
 ---
 
-### `functional-unit` ✅
-The precise definition of what is being measured. Students learn that a functional unit
-is not just "a shirt" but "one shirt worn 50 times before disposal" — and that changing
-the functional unit changes the entire comparison. Uses a case study to practise writing
-a functional unit and spotting when one has been defined poorly.
+### `technosphere-and-ecosphere` ✅
+The supply chain lives entirely in the human-made world (the technosphere — factories,
+farms, energy grids, products). The natural world (the ecosphere — air, water, soil,
+climate) sits outside it. LCA is really about what *crosses the boundary between the
+two*: emissions flow out of the technosphere into the ecosphere, and natural resources
+flow in. These crossing flows are called **elementary flows**, and they are the only
+things LCA counts as environmental impact. A product moving from one factory to another
+stays inside the technosphere and is never counted as an environmental impact.
 
-**Key insight for students:** If two studies use different functional units, their
-numbers cannot be directly compared — even if they are studying the same product.
+Uses the wool yarn or cotton fiber case study to show students which flows cross the
+boundary (CO₂ to air, CH4 to air, Water) and which do not (raw wool moving from farm
+to mill).
+
+**Key insight for students:** Not all flows in a supply chain cause environmental
+damage — only the ones that cross into the natural world. Understanding this boundary
+is what separates an impact from a transaction.
 
 ---
 
@@ -197,25 +216,6 @@ numbers.
 **Key insight for students:** A factory doesn't always run at full capacity to make
 one shirt. The scaling vector tells you the exact fraction of each step that is needed
 — and that fraction is what drives the final impact number.
-
----
-
-### `technosphere-and-ecosphere` ✅
-The supply chain lives entirely in the human-made world (the technosphere — factories,
-farms, energy grids, products). The natural world (the ecosphere — air, water, soil,
-climate) sits outside it. LCA is really about what *crosses the boundary between the
-two*: emissions flow out of the technosphere into the ecosphere, and natural resources
-flow in. These crossing flows are called **elementary flows**, and they are the only
-things LCA counts as environmental impact. A product moving from one factory to another
-stays inside the technosphere and is never counted as an environmental impact.
-
-Uses the wool yarn or cotton fiber case study to show students which flows cross the
-boundary (CO₂ to air, CH4 to air, Water) and which do not (raw wool moving from farm
-to mill).
-
-**Key insight for students:** Not all flows in a supply chain cause environmental
-damage — only the ones that cross into the natural world. Understanding this boundary
-is what separates an impact from a transaction.
 
 ---
 
