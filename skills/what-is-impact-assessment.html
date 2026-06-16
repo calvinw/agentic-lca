@@ -843,7 +843,7 @@ document.addEventListener('DOMContentLoaded', function () {
   if (!sidebar) return;
   const items = Array.from(sidebar.querySelectorAll('li.sidebar-item'));
   items.forEach(function (item, i) {
-    const rawLink = item.querySelector('a[href*="raw.githubusercontent.com"]');
+    const rawLink = item.querySelector('a[href*="github.com/calvinw/agentic-lca/blob/main/"]');
     if (!rawLink) return;
     const prevItem = items[i - 1];
     if (!prevItem) return;
