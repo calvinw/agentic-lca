@@ -148,7 +148,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/functional-unit/SKILL.md" class="sidebar-item-text sidebar-link">
- <span class="menu-text">(.md)</span></a>
+ <span class="menu-text">(.md version)</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -160,7 +160,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/goal-and-scope/SKILL.md" class="sidebar-item-text sidebar-link">
- <span class="menu-text">(.md)</span></a>
+ <span class="menu-text">(.md version)</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -172,7 +172,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/lca-from-url/SKILL.md" class="sidebar-item-text sidebar-link">
- <span class="menu-text">(.md)</span></a>
+ <span class="menu-text">(.md version)</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -184,7 +184,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/life-cycle-inventory/SKILL.md" class="sidebar-item-text sidebar-link">
- <span class="menu-text">(.md)</span></a>
+ <span class="menu-text">(.md version)</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -196,7 +196,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/life-cycle-stages/SKILL.md" class="sidebar-item-text sidebar-link">
- <span class="menu-text">(.md)</span></a>
+ <span class="menu-text">(.md version)</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -208,7 +208,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/run-lca/SKILL.md" class="sidebar-item-text sidebar-link">
- <span class="menu-text">(.md)</span></a>
+ <span class="menu-text">(.md version)</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -220,7 +220,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/scaling-vector/SKILL.md" class="sidebar-item-text sidebar-link">
- <span class="menu-text">(.md)</span></a>
+ <span class="menu-text">(.md version)</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -232,7 +232,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/supply-chain/SKILL.md" class="sidebar-item-text sidebar-link">
- <span class="menu-text">(.md)</span></a>
+ <span class="menu-text">(.md version)</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -244,7 +244,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/system-boundary/SKILL.md" class="sidebar-item-text sidebar-link">
- <span class="menu-text">(.md)</span></a>
+ <span class="menu-text">(.md version)</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -256,7 +256,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/technosphere-and-ecosphere/SKILL.md" class="sidebar-item-text sidebar-link">
- <span class="menu-text">(.md)</span></a>
+ <span class="menu-text">(.md version)</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -268,7 +268,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/what-is-lca/SKILL.md" class="sidebar-item-text sidebar-link">
- <span class="menu-text">(.md)</span></a>
+ <span class="menu-text">(.md version)</span></a>
   </div>
 </li>
     </ul>
@@ -503,6 +503,28 @@ ul.task-list li input[type="checkbox"] {
 </section>
 
 </main> <!-- /main -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const sidebar = document.getElementById('quarto-sidebar');
+  if (!sidebar) return;
+  const items = Array.from(sidebar.querySelectorAll('li.sidebar-item'));
+  items.forEach(function (item, i) {
+    const rawLink = item.querySelector('a[href*="raw.githubusercontent.com"]');
+    if (!rawLink) return;
+    const prevItem = items[i - 1];
+    if (!prevItem) return;
+    const prevContainer = prevItem.querySelector('.sidebar-item-container');
+    if (!prevContainer) return;
+    rawLink.style.marginLeft = '6px';
+    rawLink.style.fontSize = '0.72em';
+    rawLink.style.opacity = '0.55';
+    rawLink.style.fontWeight = 'normal';
+    rawLink.style.whiteSpace = 'nowrap';
+    prevContainer.appendChild(rawLink);
+    item.style.display = 'none';
+  });
+});
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
