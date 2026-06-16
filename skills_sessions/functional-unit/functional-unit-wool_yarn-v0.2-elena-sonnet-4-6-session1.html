@@ -407,9 +407,16 @@ ul.task-list li input[type="checkbox"] {
 </main> <!-- /main -->
 <script>
 document.addEventListener('DOMContentLoaded', function () {
-  const sidebar = document.getElementById('quarto-sidebar');
+  var sidebar = document.getElementById('quarto-sidebar');
   if (!sidebar) return;
-  const isGitHubPages = window.location.hostname.includes('github.io');
+  /* Collapse all sidebar sections by default */
+  sidebar.querySelectorAll('.sidebar-section.show').forEach(function(el) {
+    el.classList.remove('show');
+  });
+  sidebar.querySelectorAll('[data-bs-toggle="collapse"][aria-expanded="true"]').forEach(function(el) {
+    el.setAttribute('aria-expanded', 'false');
+  });
+  var isGitHubPages = window.location.hostname.includes('github.io');
   const items = Array.from(sidebar.querySelectorAll('li.sidebar-item'));
   items.forEach(function (item, i) {
     const link = item.querySelector('a.sidebar-item-text');
