@@ -12,7 +12,9 @@ render:
 	quarto render
 
 serve: render
+	ln -sf ../skills/*.md _site/skills/ 2>/dev/null; true
 	python3 -m http.server 8080 --directory _site
+	rm -f _site/skills/*.md 2>/dev/null; true
 
 preview: serve
 
