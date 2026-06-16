@@ -156,6 +156,7 @@ ordered_folders = [n for n in SKILL_ORDER if n in session_groups] + \
 for folder_name in ordered_folders:
     files = session_groups[folder_name]
     lines.append(f'        - section: "{skill_title(folder_name)}"')
+    lines.append(f"          collapsed: true")
     lines.append(f"          contents:")
     for f in files:
         text = session_text(f.stem, folder_name)
