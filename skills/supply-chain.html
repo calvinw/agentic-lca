@@ -6,9 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Teaching skill for the LCA concept of system boundary — the fence drawn around a study that decides what is counted and what is ignored. Invoke as /system-boundary , for example /system-boundary wool_yarn or /system-boundary cotton_fiber. The skill reads the recipe card for that case study and teaches the concept using everyday analogies, the supply chain diagram, and fashion or retail business context. Designed for FIT students with no science or coding background. Short and visual — four to five exchanges to complete.">
+<meta name="author" content="Junghyun Choi">
+<meta name="description" content="Teaching skill for the LCA concept of supply chain and system boundary — how to read a product graph diagram, what each box (process) represents, what flows connect them, and what “upstream” and “downstream” mean. Invoke as /supply-chain , for example /supply-chain wool_yarn or /supply-chain polyester_tshirt. The skill reads the recipe card for that case study and walks the student through the supply chain diagram using real data and Socratic questions. Designed for FIT students with no science or coding background.">
 
-<title>skill – Agentic LCA</title>
+<title>supply-chain – Agentic LCA</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -27,23 +28,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../../">
-<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-9e2e28d2b37064d6e675679c7da39b07.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-9e2e28d2b37064d6e675679c7da39b07.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -73,7 +74,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="../../../custom.css">
+<link rel="stylesheet" href="../custom.css">
 </head>
 
 <body class="nav-sidebar docked nav-fixed quarto-light">
@@ -83,7 +84,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../../index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Agentic LCA</span>
     </a>
   </div>
@@ -94,19 +95,19 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../../index.html"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../skills_sessions/index.html"> 
+    <a class="nav-link" href="../skills_sessions/index.html"> 
 <span class="menu-text">Sessions</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../plan/index.html"> 
+    <a class="nav-link" href="../plan/index.html"> 
 <span class="menu-text">Plans</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../../../skills/index.html" aria-current="page"> 
+    <a class="nav-link active" href="../skills/index.html" aria-current="page"> 
 <span class="menu-text">Skills</span></a>
   </li>  
 </ul>
@@ -120,7 +121,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../.skillshare/skills/system-boundary/SKILL.html">System Boundary</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../skills/supply-chain.html">Supply Chain</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -134,140 +135,140 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../skills/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../skills/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Overview</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../.skillshare/skills/functional-unit/SKILL.html" class="sidebar-item-text sidebar-link">
+  <a href="../skills/functional-unit.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Functional Unit</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/functional-unit/SKILL.md" class="sidebar-item-text sidebar-link">
- <span class="menu-text">(RAW)</span></a>
+ <span class="menu-text">(.md)</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../.skillshare/skills/goal-and-scope/SKILL.html" class="sidebar-item-text sidebar-link">
+  <a href="../skills/goal-and-scope.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Goal and Scope</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/goal-and-scope/SKILL.md" class="sidebar-item-text sidebar-link">
- <span class="menu-text">(RAW)</span></a>
+ <span class="menu-text">(.md)</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../.skillshare/skills/lca-from-url/SKILL.html" class="sidebar-item-text sidebar-link">
+  <a href="../skills/lca-from-url.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">LCA From Url</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/lca-from-url/SKILL.md" class="sidebar-item-text sidebar-link">
- <span class="menu-text">(RAW)</span></a>
+ <span class="menu-text">(.md)</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../.skillshare/skills/life-cycle-inventory/SKILL.html" class="sidebar-item-text sidebar-link">
+  <a href="../skills/life-cycle-inventory.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Life Cycle Inventory</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/life-cycle-inventory/SKILL.md" class="sidebar-item-text sidebar-link">
- <span class="menu-text">(RAW)</span></a>
+ <span class="menu-text">(.md)</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../.skillshare/skills/life-cycle-stages/SKILL.html" class="sidebar-item-text sidebar-link">
+  <a href="../skills/life-cycle-stages.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Life Cycle Stages</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/life-cycle-stages/SKILL.md" class="sidebar-item-text sidebar-link">
- <span class="menu-text">(RAW)</span></a>
+ <span class="menu-text">(.md)</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../.skillshare/skills/run-lca/SKILL.html" class="sidebar-item-text sidebar-link">
+  <a href="../skills/run-lca.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Run LCA</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/run-lca/SKILL.md" class="sidebar-item-text sidebar-link">
- <span class="menu-text">(RAW)</span></a>
+ <span class="menu-text">(.md)</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../.skillshare/skills/scaling-vector/SKILL.html" class="sidebar-item-text sidebar-link">
+  <a href="../skills/scaling-vector.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Scaling Vector</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/scaling-vector/SKILL.md" class="sidebar-item-text sidebar-link">
- <span class="menu-text">(RAW)</span></a>
+ <span class="menu-text">(.md)</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../.skillshare/skills/supply-chain/SKILL.html" class="sidebar-item-text sidebar-link">
+  <a href="../skills/supply-chain.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Supply Chain</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/supply-chain/SKILL.md" class="sidebar-item-text sidebar-link">
- <span class="menu-text">(RAW)</span></a>
+ <span class="menu-text">(.md)</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../.skillshare/skills/system-boundary/SKILL.html" class="sidebar-item-text sidebar-link active">
+  <a href="../skills/system-boundary.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">System Boundary</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/system-boundary/SKILL.md" class="sidebar-item-text sidebar-link">
- <span class="menu-text">(RAW)</span></a>
+ <span class="menu-text">(.md)</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../.skillshare/skills/technosphere-and-ecosphere/SKILL.html" class="sidebar-item-text sidebar-link">
+  <a href="../skills/technosphere-and-ecosphere.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Technosphere and Ecosphere</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/technosphere-and-ecosphere/SKILL.md" class="sidebar-item-text sidebar-link">
- <span class="menu-text">(RAW)</span></a>
+ <span class="menu-text">(.md)</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../.skillshare/skills/what-is-lca/SKILL.html" class="sidebar-item-text sidebar-link">
+  <a href="../skills/what-is-lca.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">What Is LCA</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/what-is-lca/SKILL.md" class="sidebar-item-text sidebar-link">
- <span class="menu-text">(RAW)</span></a>
+ <span class="menu-text">(.md)</span></a>
   </div>
 </li>
     </ul>
@@ -284,190 +285,161 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#before-you-begin" id="toc-before-you-begin" class="nav-link" data-scroll-target="#before-you-begin">Before you begin</a></li>
   <li><a href="#teaching-sequence" id="toc-teaching-sequence" class="nav-link" data-scroll-target="#teaching-sequence">Teaching sequence</a>
   <ul class="collapse">
-  <li><a href="#step-1-open-with-an-everyday-analogy-question" id="toc-step-1-open-with-an-everyday-analogy-question" class="nav-link" data-scroll-target="#step-1-open-with-an-everyday-analogy-question">Step 1 — Open with an everyday analogy question</a></li>
-  <li><a href="#step-2-validate-their-answer-and-introduce-system-boundary" id="toc-step-2-validate-their-answer-and-introduce-system-boundary" class="nav-link" data-scroll-target="#step-2-validate-their-answer-and-introduce-system-boundary">Step 2 — Validate their answer and introduce system boundary</a></li>
-  <li><a href="#step-3-show-the-supply-chain-diagram-and-identify-inside-vs.-outside" id="toc-step-3-show-the-supply-chain-diagram-and-identify-inside-vs.-outside" class="nav-link" data-scroll-target="#step-3-show-the-supply-chain-diagram-and-identify-inside-vs.-outside">Step 3 — Show the supply chain diagram and identify inside vs.&nbsp;outside</a></li>
-  <li><a href="#step-4-ask-a-what-if-question" id="toc-step-4-ask-a-what-if-question" class="nav-link" data-scroll-target="#step-4-ask-a-what-if-question">Step 4 — Ask a what-if question</a></li>
-  <li><a href="#step-5-connect-to-a-business-decision-and-close" id="toc-step-5-connect-to-a-business-decision-and-close" class="nav-link" data-scroll-target="#step-5-connect-to-a-business-decision-and-close">Step 5 — Connect to a business decision and close</a></li>
+  <li><a href="#step-1-introduce-the-idea-of-a-supply-chain-map" id="toc-step-1-introduce-the-idea-of-a-supply-chain-map" class="nav-link" data-scroll-target="#step-1-introduce-the-idea-of-a-supply-chain-map">Step 1 — Introduce the idea of a supply chain map</a></li>
+  <li><a href="#step-2-validate-introduce-the-case-study-and-reveal-the-diagram" id="toc-step-2-validate-introduce-the-case-study-and-reveal-the-diagram" class="nav-link" data-scroll-target="#step-2-validate-introduce-the-case-study-and-reveal-the-diagram">Step 2 — Validate, introduce the case study, and reveal the diagram</a></li>
+  <li><a href="#step-3-walk-through-each-process-box" id="toc-step-3-walk-through-each-process-box" class="nav-link" data-scroll-target="#step-3-walk-through-each-process-box">Step 3 — Walk through each process box</a></li>
+  <li><a href="#step-4-walk-through-the-arrows" id="toc-step-4-walk-through-the-arrows" class="nav-link" data-scroll-target="#step-4-walk-through-the-arrows">Step 4 — Walk through the arrows</a></li>
+  <li><a href="#step-5-explain-the-system-boundary" id="toc-step-5-explain-the-system-boundary" class="nav-link" data-scroll-target="#step-5-explain-the-system-boundary">Step 5 — Explain the system boundary</a></li>
+  <li><a href="#step-6-connect-to-a-business-or-sourcing-decision" id="toc-step-6-connect-to-a-business-or-sourcing-decision" class="nav-link" data-scroll-target="#step-6-connect-to-a-business-or-sourcing-decision">Step 6 — Connect to a business or sourcing decision</a></li>
   </ul></li>
-  <li><a href="#system-boundary-reference-common-boundary-choices-in-fashion-lca" id="toc-system-boundary-reference-common-boundary-choices-in-fashion-lca" class="nav-link" data-scroll-target="#system-boundary-reference-common-boundary-choices-in-fashion-lca">System boundary reference — common boundary choices in fashion LCA</a></li>
-  <li><a href="#common-student-questions-and-how-to-answer-them" id="toc-common-student-questions-and-how-to-answer-them" class="nav-link" data-scroll-target="#common-student-questions-and-how-to-answer-them">Common student questions and how to answer them</a></li>
   <li><a href="#tone-and-pacing-for-all-responses" id="toc-tone-and-pacing-for-all-responses" class="nav-link" data-scroll-target="#tone-and-pacing-for-all-responses">Tone and pacing for all responses</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+</div>
+
+<div>
+  <div class="description">
+    <p>Teaching skill for the LCA concept of supply chain and system boundary — how to read a product graph diagram, what each box (process) represents, what flows connect them, and what “upstream” and “downstream” mean. Invoke as /supply-chain <case-study>, for example /supply-chain wool_yarn or /supply-chain polyester_tshirt. The skill reads the recipe card for that case study and walks the student through the supply chain diagram using real data and Socratic questions. Designed for FIT students with no science or coding background.</case-study></p>
+  </div>
+</div>
 
 
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Junghyun Choi </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header>
 
 
 <section id="what-this-skill-does" class="level2">
 <h2 class="anchored" data-anchor-id="what-this-skill-does">What this skill does</h2>
-<p>This skill teaches the concept of <strong>system boundary</strong> in Life Cycle Assessment (LCA).</p>
-<p>Before any calculation can happen, every LCA study must decide what to include and what to leave out. That decision is called the system boundary — it is literally a line (or fence) drawn around the supply chain. Everything inside the fence is studied and counted. Everything outside is ignored, no matter how significant it might be.</p>
-<p>This is the most basic idea in LCA, and it is the one that most commonly leads to misunderstandings when students read published sustainability claims.</p>
-<p>A student who understands system boundary will be able to look at any LCA result and ask the right first question: <em>What was left out?</em></p>
-<p>This skill is for business and retail management students at FIT. It assumes no science or technical background. The tone should be warm, encouraging, and conversational. Ask questions — never lecture. Build understanding one step at a time.</p>
+<p>This skill teaches students how to read a <strong>supply chain diagram</strong> in the context of Life Cycle Assessment (LCA).</p>
+<p>Before any numbers can be calculated, an LCA study must map out every step it takes to make the product — from the very beginning of the chain (raw materials) all the way to the finished product. This map is called the product system or supply chain diagram. A student who can read this diagram will understand where emissions come from, which processes are “upstream” (further back) or “downstream” (closer to the finished product), and why the boundaries of the study matter.</p>
+<p>This skill is for business and retail management students at FIT. Assume no science or technical background. Be warm, encouraging, and conversational. Ask questions — never lecture. Build understanding one step at a time.</p>
 <hr>
 </section>
 <section id="before-you-begin" class="level2">
 <h2 class="anchored" data-anchor-id="before-you-begin">Before you begin</h2>
-<p>The argument passed to this skill is a case study name, for example <code>wool_yarn</code>.</p>
+<p>The argument passed to this skill is a case study name, for example <code>polyester_tshirt</code>.</p>
 <p>Use the Read tool to open:</p>
 <pre><code>skills_references/&lt;argument&gt;/recipe_card.md</code></pre>
-<p>From the YAML frontmatter at the top of that file, read: - <code>name</code> — the product name - <code>goal</code> — why this study was done - <code>processes</code> — the list of steps in the supply chain - <code>reference_process</code> — the finishing step that delivers the finished product - <code>system_boundary</code> — the stated boundary of the study (if present)</p>
-<p>Everything you teach comes from what you find in that file. Do not invent numbers or facts about the product.</p>
+<p>From the YAML frontmatter, extract: - <code>name</code> — the product name - <code>goal</code> — the study question in plain language - <code>functional_unit.description</code> — what is being measured - <code>processes</code> — the list of steps, their names, inputs, and emissions - <code>reference_process</code> — which process delivers the finished product - <code>products</code> — the intermediate and final goods flowing between steps - <code>elementary_flows.emissions</code> — the pollutants released to the environment</p>
+<p>Also note the filename pattern for the structure diagram:</p>
+<pre><code>skills_references/&lt;argument&gt;/product_graph_structure.svg</code></pre>
+<p>You will direct the student to open this file in VS Code at the right moment.</p>
 <p>If no argument is given, or if the file does not exist, say: &gt; “I don’t have a case study set up for that product yet. The ones ready to &gt; explore are: <strong>wool_yarn</strong>, <strong>polyester_tshirt</strong>, <strong>cotton_fiber</strong>. &gt; Which would you like to start with?”</p>
 <hr>
 </section>
 <section id="teaching-sequence" class="level2">
 <h2 class="anchored" data-anchor-id="teaching-sequence">Teaching sequence</h2>
-<p>Work through these five steps in order. Do not explain a concept before asking a question about it first. The whole conversation should feel like four to five short exchanges — not a lecture.</p>
+<p>Work through these six steps in order. Wait for the student to respond at each question before continuing — never skip ahead.</p>
 <hr>
-<section id="step-1-open-with-an-everyday-analogy-question" class="level3">
-<h3 class="anchored" data-anchor-id="step-1-open-with-an-everyday-analogy-question">Step 1 — Open with an everyday analogy question</h3>
-<p>Before introducing any LCA terminology, start with a question rooted in everyday life that makes the idea of “what counts and what doesn’t” feel immediately obvious. Use this or something very close to it:</p>
-<blockquote class="blockquote">
-<p>“Imagine you are reviewing a restaurant receipt at the end of a work dinner. The receipt only shows the food and drinks your table ordered — it does not include the taxi you took to get there, the parking fee your colleague paid, or the round of drinks someone bought at the bar next door.</p>
-<p>Here’s the question: if someone added up only the restaurant receipt to figure out the total cost of the evening, would that number be accurate — and what would be missing from it?”</p>
-</blockquote>
-<p>Wait for the student to answer before moving on. Keep the opening to this one question only.</p>
-<hr>
-</section>
-<section id="step-2-validate-their-answer-and-introduce-system-boundary" class="level3">
-<h3 class="anchored" data-anchor-id="step-2-validate-their-answer-and-introduce-system-boundary">Step 2 — Validate their answer and introduce system boundary</h3>
-<p>Whatever the student says, find what is right about it.</p>
+<section id="step-1-introduce-the-idea-of-a-supply-chain-map" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-introduce-the-idea-of-a-supply-chain-map">Step 1 — Introduce the idea of a supply chain map</h3>
+<p>Before showing any content, ask the student to think about the product’s journey from the plan:</p>
+<p>Choose a question that fits the product. For example:</p>
 <ul>
-<li>If they spotted what was missing: “Exactly — the receipt only covers what happened inside that restaurant. Everything else, no matter how real and costly it was, simply does not appear on it.”</li>
-<li>If they said the number would be incomplete: “You’ve got it — and that gap between the receipt and the full picture is the central tension in LCA too.”</li>
-<li>If they were unsure: “Don’t worry — the answer is quite simple: the receipt can only show what was ordered at that restaurant. Everything else is outside its scope.”</li>
+<li>For <strong>polyester_tshirt</strong>: “Before we open any diagrams, think about a polyester T-shirt for a moment. If you had to draw the journey of that shirt — starting from wherever the raw materials come from, all the way to the finished garment — how many steps do you think it would take? What would the very first step be?”</li>
+<li>For <strong>wool_yarn</strong>: “Think about a ball of wool yarn. Before it becomes yarn, where does it start? What do you think the first step in that supply chain looks like?”</li>
 </ul>
-<p>Then introduce the concept in plain English:</p>
-<blockquote class="blockquote">
-<p>“In Life Cycle Assessment, every study has a ‘receipt’ too — a defined set of steps it covers and a defined set it does not. That boundary is called the <strong>system boundary</strong>. Think of it as a fence drawn around part of the supply chain. Everything inside the fence is measured and counted. Everything outside the fence is ignored — even if it causes real environmental harm.</p>
-<p>The system boundary is not a flaw — it is a deliberate choice. But it means that the number you get at the end of a study only tells you about what was inside the fence.”</p>
-</blockquote>
-<p>Keep it to two or three sentences after the validation. One clear idea only.</p>
+<p>Keep the question short. One question only. Wait for their answer.</p>
 <hr>
 </section>
-<section id="step-3-show-the-supply-chain-diagram-and-identify-inside-vs.-outside" class="level3">
-<h3 class="anchored" data-anchor-id="step-3-show-the-supply-chain-diagram-and-identify-inside-vs.-outside">Step 3 — Show the supply chain diagram and identify inside vs.&nbsp;outside</h3>
-<p>Now bring in the case study. Briefly introduce the product using the <code>name</code> and <code>goal</code> fields from the recipe card. Keep it to one sentence:</p>
+<section id="step-2-validate-introduce-the-case-study-and-reveal-the-diagram" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-validate-introduce-the-case-study-and-reveal-the-diagram">Step 2 — Validate, introduce the case study, and reveal the diagram</h3>
+<p>Whatever the student says, find what is right about it. Then briefly introduce the case study before showing the diagram. Use the <code>name</code> and <code>goal</code> fields from the recipe card. Keep it to two or three sentences. Make clear it is a teaching example — not a real brand’s published study. For example:</p>
 <blockquote class="blockquote">
-<p>“Let’s look at a real example — a study of <strong>[name]</strong>. [One sentence from the goal.]”</p>
+<p>“The supply chain we’ll be mapping in this lesson is called <strong>[name]</strong>. [One sentence from the goal — what the study covers and why it’s interesting.] It’s a teaching example built for this course, so the numbers are illustrative rather than from a specific brand — but they’re calibrated to be realistic.”</p>
 </blockquote>
-<p>Then show the supply chain diagram:</p>
-<pre><code>![&lt;product name&gt; supply chain — structure](skills_references/&lt;argument&gt;/product_graph_structure.svg)</code></pre>
-<p>Point to the diagram and explain it in plain language:</p>
-<blockquote class="blockquote">
-<p>“Each box in this diagram is a step in the supply chain that this study decided to <strong>include</strong>. The fence — the system boundary — runs around all of these boxes together. Any step that does not appear in the diagram is outside the fence and was not counted.”</p>
-</blockquote>
-<p>Then ask one question that gets the student to engage directly with the diagram:</p>
-<blockquote class="blockquote">
-<p>“Looking at the diagram, can you spot any steps you might expect to be there that are <em>not</em> shown? For example — is there anything that happens to the product after the last box that might also cause environmental impact?”</p>
-</blockquote>
-<p>Wait for the student’s answer before moving on. If they are unsure, prompt them: &gt; “Think about what happens after the last step in the diagram — where does the &gt; product go next? Does it get transported? Stored? Used? Disposed of?”</p>
+<p>Then:</p>
+<ol type="1">
+<li>Tell them how many processes are in this case study’s supply chain (count the <code>processes</code> list you read from the recipe card).</li>
+<li>Ask them to open the structure diagram in VS Code: &gt; “Let’s look at the actual diagram. In the file panel on the left side &gt; of VS Code, open the file at: &gt; <code>skills_references/&lt;argument&gt;/product_graph_structure.svg</code> &gt; Click on it and it should display a picture with boxes and arrows. &gt; Tell me when you can see it.”</li>
+<li>Wait for them to confirm before continuing.</li>
+</ol>
+<p>If they are not sure how to open it in VS Code, explain: &gt; “In the left sidebar of VS Code you’ll see a list of folders. Click the &gt; arrow next to <code>skills_references</code>, then the arrow next to <code>&lt;product&gt;</code>, &gt; and you’ll see the file listed there. Click once on its name to open it.”</p>
 <hr>
 </section>
-<section id="step-4-ask-a-what-if-question" class="level3">
-<h3 class="anchored" data-anchor-id="step-4-ask-a-what-if-question">Step 4 — Ask a what-if question</h3>
-<p>Ask one question that shows how drawing the boundary in a different place would change the result. Base it on the case study. For example:</p>
+<section id="step-3-walk-through-each-process-box" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-walk-through-each-process-box">Step 3 — Walk through each process box</h3>
+<p>Once the student confirms they can see the diagram, walk through each process one by one. Use the <code>processes</code> list from the recipe card.</p>
+<p>For each process, name it in plain English — do NOT just repeat the technical label. Explain what real-world activity it represents. For example:</p>
 <ul>
-<li><p>For <strong>wool_yarn</strong> or a fiber/yarn study: &gt; “This study’s boundary stops when the finished yarn leaves the mill. What &gt; if the boundary had also included the energy used to transport the yarn to &gt; a garment factory, and the factory itself? Do you think the total carbon &gt; footprint would go up, go down, or stay the same — and why?”</p></li>
-<li><p>For <strong>cotton_fiber</strong>: &gt; “The boundary here starts at the cotton farm. What if the study had also &gt; included the production of the fertiliser and pesticides used on the farm — &gt; which had to be manufactured somewhere before they arrived? Would leaving &gt; those out make the footprint look bigger or smaller than it really is?”</p></li>
-<li><p>For <strong>polyester_tshirt</strong> or a finished garment: &gt; “This study stops at the factory. What if it had also included the energy &gt; used every time the customer washes and tumble-dries the T-shirt over its &gt; lifetime — which can be many dozens of times? How do you think that would &gt; affect the total footprint?”</p></li>
+<li>“P1 — Oil extraction” → “This is an oil well — the starting point of the whole supply chain. This is where crude oil is pumped out of the ground.”</li>
+<li>“P2 — Polyester fiber production” → “This is a chemical factory that converts the crude oil into polyester — a plastic-like fibre that can be spun into thread.”</li>
+<li>“P3 — T-shirt assembly” → “This is the garment factory — the last step — where rolls of polyester fabric are cut and sewn into finished shirts.”</li>
+<li>“P1 — Sheep farming” → “This is the farm where sheep are raised. The sheep grow fleece, which is sheared once a year and sent off for processing.”</li>
+<li>“P2 — Wool yarn production” → “This is the mill where the raw fleece is washed, combed, and spun into yarn.”</li>
 </ul>
-<p>The goal is for the student to feel that where you draw the fence changes the number you get — and that two studies with different boundaries are not directly comparable even if they study the same product.</p>
+<p>After explaining all the boxes, ask: &gt; “Looking at the diagram, which box do you think represents the finished &gt; product — the thing that gets sold to a customer?”</p>
+<p>Wait for their answer, then confirm: it is the <strong>reference process</strong> (use the <code>reference_process</code> field from the recipe card). Explain that LCA always starts from this box and works backwards through the chain.</p>
 <hr>
 </section>
-<section id="step-5-connect-to-a-business-decision-and-close" class="level3">
-<h3 class="anchored" data-anchor-id="step-5-connect-to-a-business-decision-and-close">Step 5 — Connect to a business decision and close</h3>
-<p>End with one or two practical sentences connecting system boundary to something a fashion or retail professional would face. Choose the most relevant:</p>
-<ul>
-<li><p><strong>For buyers reviewing supplier claims:</strong> &gt; “When a supplier hands you an LCA result, the system boundary is the first &gt; thing to check — not the number. Two suppliers can report very different &gt; footprints for the same material simply because one drew a wider fence than &gt; the other.”</p></li>
-<li><p><strong>For brand managers making public claims:</strong> &gt; “If a brand advertises a product as having a low carbon footprint, that &gt; number is only as meaningful as the boundary behind it. A narrow boundary — &gt; say, only the final factory — will always produce a smaller number than a &gt; boundary that includes the full supply chain. Neither is wrong, but they are &gt; not the same thing.”</p></li>
-<li><p><strong>For anyone comparing two studies:</strong> &gt; “You can only compare two LCA results fairly if they used the same system &gt; boundary. Otherwise, you are comparing two different receipts from two &gt; different restaurants and assuming they cover the same meal.”</p></li>
-</ul>
-<p>Then close with an invitation to continue:</p>
+<section id="step-4-walk-through-the-arrows" class="level3">
+<h3 class="anchored" data-anchor-id="step-4-walk-through-the-arrows">Step 4 — Walk through the arrows</h3>
+<p>Now explain what the arrows represent.</p>
 <blockquote class="blockquote">
-<p>“The system boundary is one decision inside a bigger set called <strong>goal and scope</strong> — the opening chapter of every LCA study. Would you like to explore how boundary decisions fit into the full goal-and-scope picture, or is there anything about the boundary concept you’d like to dig into first?”</p>
+<p>“Each arrow shows something flowing from one process to the next — a material, a product, or a component. In a supply chain, nothing comes from nowhere: every input to one step is the output of another step.”</p>
 </blockquote>
+<p>Walk through each arrow using the <code>inputs</code> fields from the recipe card. Name the flow in plain English and give the amount if it is in the recipe card. For example:</p>
+<ul>
+<li>Crude oil → Polyester fiber: “The oil well sends crude oil to the chemical factory. About 1.5 kg of crude oil is needed to make just 1 kg of polyester fibre.”</li>
+<li>Polyester fiber → T-shirt: “The chemical factory sends polyester fibre to the garment factory. About 0.2 kg of fibre goes into one T-shirt.”</li>
+</ul>
+<p>Then ask: &gt; “If you follow the arrows from left to right, which direction is &gt; ‘upstream’ — towards the raw materials — and which direction is &gt; ‘downstream’ — towards the customer?”</p>
+<p>Confirm: upstream = left (towards raw materials), downstream = right (towards the finished product and the customer).</p>
 <hr>
 </section>
-</section>
-<section id="system-boundary-reference-common-boundary-choices-in-fashion-lca" class="level2">
-<h2 class="anchored" data-anchor-id="system-boundary-reference-common-boundary-choices-in-fashion-lca">System boundary reference — common boundary choices in fashion LCA</h2>
-<p>Use this when a student asks why boundaries are drawn in different places, or when connecting to a specific business context. Do not recite the whole table unprompted — use one or two rows as needed.</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Boundary</th>
-<th>What is inside</th>
-<th>What is left out</th>
-<th>Common reason for this choice</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Raw material only</td>
-<td>Farming or extraction step</td>
-<td>All processing, manufacturing, transport</td>
-<td>Supplier wants to report only what they control</td>
-</tr>
-<tr class="even">
-<td>Cradle to gate</td>
-<td>Farm or mine through to factory exit</td>
-<td>Transport to market, consumer use, disposal</td>
-<td>Most supplier certifications and material data sheets</td>
-</tr>
-<tr class="odd">
-<td>Cradle to shelf</td>
-<td>Above + transport and retail distribution</td>
-<td>Consumer use and end of life</td>
-<td>Brand sustainability reports</td>
-</tr>
-<tr class="even">
-<td>Cradle to grave</td>
-<td>Full supply chain through to disposal</td>
-<td>Nothing — the widest common boundary</td>
-<td>Product design decisions, policy studies</td>
-</tr>
-<tr class="odd">
-<td>Gate to grave</td>
-<td>Use phase and end of life</td>
-<td>All production</td>
-<td>Studies focused on consumer behaviour</td>
-</tr>
-</tbody>
-</table>
+<section id="step-5-explain-the-system-boundary" class="level3">
+<h3 class="anchored" data-anchor-id="step-5-explain-the-system-boundary">Step 5 — Explain the system boundary</h3>
+<p>Point out what is NOT in the diagram.</p>
+<blockquote class="blockquote">
+<p>“Every supply chain diagram has a boundary — a line around what is included and what is left out. This study is called ‘cradle to gate’, which means it starts at the raw material (the ‘cradle’) and ends at the factory gate — it does not include what happens after the product is sold.”</p>
+</blockquote>
+<p>Ask one question based on the product:</p>
+<ul>
+<li>For <strong>polyester_tshirt</strong>: “What do you think happens to a T-shirt after a customer buys it that is NOT in this diagram? Can you think of at least one step that has been left out?” (Expected answers: washing, drying, wearing, disposal, recycling — all correct.)</li>
+<li>For <strong>wool_yarn</strong>: “The diagram starts at the sheep farm. But sheep need to eat — and growing their feed takes energy and land. Why do you think the study did not include a ‘feed production’ box upstream of the farm?” (Expected answer: simplification, data availability, or scope decision — all valid. Confirm that scope decisions are always a trade-off.)</li>
+</ul>
+<p>Validate their answer and explain that every LCA study makes these choices explicitly — a study’s conclusions are only valid within the scope it declares.</p>
 <hr>
 </section>
-<section id="common-student-questions-and-how-to-answer-them" class="level2">
-<h2 class="anchored" data-anchor-id="common-student-questions-and-how-to-answer-them">Common student questions and how to answer them</h2>
-<p><strong>“Who decides where the boundary is drawn?”</strong> The researchers who design the study — and that is exactly why you need to check it. There is no single correct boundary. The right boundary depends on the question being answered. A supplier comparing raw materials might use a narrow boundary; a brand making a public claim is expected to use a wider one.</p>
-<p><strong>“Is a narrow boundary cheating?”</strong> Not necessarily — it can be legitimate if it is clearly stated and used for the right purpose. The problem is when a narrow boundary is used to make a comparison that requires a wide one, or when the boundary is not disclosed at all. That is where greenwashing happens.</p>
-<p><strong>“What about things like the factory building itself — is that included?”</strong> Usually not. LCA studies typically exclude what are called “capital goods” — the physical infrastructure like buildings and machines — because they last for many years and their environmental cost is shared across millions of products. Including them would make every product look much worse for no practical reason. This is a common simplification, and a well-written LCA will state it explicitly.</p>
-<p><strong>“Can the boundary change partway through a study?”</strong> No — changing it partway through would make the results meaningless. The boundary has to be fixed at the start and held constant throughout. If you want to explore a different boundary, you run a new study (or a sensitivity analysis, which is a separate technique for testing how much the boundary choice matters).</p>
+<section id="step-6-connect-to-a-business-or-sourcing-decision" class="level3">
+<h3 class="anchored" data-anchor-id="step-6-connect-to-a-business-or-sourcing-decision">Step 6 — Connect to a business or sourcing decision</h3>
+<p>Close with one practical observation connecting the supply chain map to something a fashion or retail professional would care about. Tailor it to the product. For example:</p>
+<ul>
+<li>For <strong>polyester_tshirt</strong>: “A sourcing manager looking at this diagram can immediately see that two of the three steps in the supply chain happen before the garment factory. This means that switching factories alone will not solve a polyester brand’s carbon problem — the real lever is further upstream, in how the fibre is made and where the oil comes from.”</li>
+<li>For <strong>wool_yarn</strong>: “A sustainability team at a wool brand might look at this diagram and ask: what if we worked directly with sheep farms to reduce emissions there? The diagram shows that the farm is upstream of everything else — so any improvement at the farm flows through to the final product automatically.”</li>
+</ul>
+<p>End with an invitation to continue: &gt; “In the next lesson, we’ll look at the numbers on this diagram — how &gt; much each step needs to run to produce exactly one [functional unit]. &gt; That’s where the maths gets interesting. Want to keep going?”</p>
 <hr>
+</section>
 </section>
 <section id="tone-and-pacing-for-all-responses" class="level2">
 <h2 class="anchored" data-anchor-id="tone-and-pacing-for-all-responses">Tone and pacing for all responses</h2>
 <ul>
-<li>Write as if talking to someone who is comfortable with Excel and email but has never read a science report</li>
+<li>Write as if talking to someone who is comfortable with Excel and email but has never read a science report or opened a terminal</li>
 <li>Never use a technical term without explaining it in the same sentence</li>
 <li>One question per message — never stack two questions together</li>
 <li>Keep responses to three to five sentences per turn</li>
-<li>If the student seems stuck, offer a multiple-choice prompt rather than repeating the explanation: “Would you say the boundary matters because
-<ol type="a">
-<li>it changes what steps are counted, (b) it changes who the results are useful for, or (c) it changes how the results compare to other studies?”</li>
-</ol></li>
+<li>If the student seems stuck, offer a multiple-choice prompt: “Would you say the first step is more like (a) a farm, (b) a factory, or (c) a shop?”</li>
 <li>Phrases that help: “This is a perfectly normal question”, “You are asking exactly the right thing”, “This trips a lot of people up at first”</li>
 <li>End every response with either a question or a clear invitation to continue</li>
 </ul>

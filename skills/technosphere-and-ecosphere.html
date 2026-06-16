@@ -6,9 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Teaching skill for the LCA concept of life cycle stages — the four named boundary types used in fashion and retail LCA studies: cradle to gate, cradle to grave, cradle to cradle, and gate to grave. Invoke as /life-cycle-stages , for example /life-cycle-stages wool_yarn or /life-cycle-stages polyester_tshirt. The skill reads the recipe card for that case study and teaches the concept using real data, everyday analogies, and fashion or retail business context. Designed for FIT students with no science or coding background. Builds directly on the system-boundary skill.">
+<meta name="author" content="Junghyun Choi">
+<meta name="description" content="Teaching skill for the LCA concepts of technosphere and ecosphere — the two worlds that every LCA study maps: the human-made world of factories, farms, and supply chains (technosphere) and the natural world of air, water, and soil (ecosphere). Invoke as /technosphere-and-ecosphere , for example /technosphere-and-ecosphere wool_yarn or /technosphere-and-ecosphere polyester_tshirt. The skill reads the recipe card for that case study and teaches the concept by sorting its parts into the two worlds, using everyday analogies and fashion or retail business context. Designed for FIT students with no science or coding background. Short and visual — four to five exchanges to complete.">
 
-<title>skill – Agentic LCA</title>
+<title>technosphere-and-ecosphere – Agentic LCA</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -27,23 +28,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../../">
-<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-9e2e28d2b37064d6e675679c7da39b07.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-9e2e28d2b37064d6e675679c7da39b07.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -73,7 +74,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="../../../custom.css">
+<link rel="stylesheet" href="../custom.css">
 </head>
 
 <body class="nav-sidebar docked nav-fixed quarto-light">
@@ -83,7 +84,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../../index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Agentic LCA</span>
     </a>
   </div>
@@ -94,19 +95,19 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../../index.html"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../skills_sessions/index.html"> 
+    <a class="nav-link" href="../skills_sessions/index.html"> 
 <span class="menu-text">Sessions</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../plan/index.html"> 
+    <a class="nav-link" href="../plan/index.html"> 
 <span class="menu-text">Plans</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../../../skills/index.html" aria-current="page"> 
+    <a class="nav-link active" href="../skills/index.html" aria-current="page"> 
 <span class="menu-text">Skills</span></a>
   </li>  
 </ul>
@@ -120,7 +121,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../.skillshare/skills/life-cycle-stages/SKILL.html">Life Cycle Stages</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../skills/technosphere-and-ecosphere.html">Technosphere and Ecosphere</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -134,140 +135,140 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../skills/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../skills/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Overview</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../.skillshare/skills/functional-unit/SKILL.html" class="sidebar-item-text sidebar-link">
+  <a href="../skills/functional-unit.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Functional Unit</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/functional-unit/SKILL.md" class="sidebar-item-text sidebar-link">
- <span class="menu-text">(RAW)</span></a>
+ <span class="menu-text">(.md)</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../.skillshare/skills/goal-and-scope/SKILL.html" class="sidebar-item-text sidebar-link">
+  <a href="../skills/goal-and-scope.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Goal and Scope</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/goal-and-scope/SKILL.md" class="sidebar-item-text sidebar-link">
- <span class="menu-text">(RAW)</span></a>
+ <span class="menu-text">(.md)</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../.skillshare/skills/lca-from-url/SKILL.html" class="sidebar-item-text sidebar-link">
+  <a href="../skills/lca-from-url.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">LCA From Url</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/lca-from-url/SKILL.md" class="sidebar-item-text sidebar-link">
- <span class="menu-text">(RAW)</span></a>
+ <span class="menu-text">(.md)</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../.skillshare/skills/life-cycle-inventory/SKILL.html" class="sidebar-item-text sidebar-link">
+  <a href="../skills/life-cycle-inventory.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Life Cycle Inventory</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/life-cycle-inventory/SKILL.md" class="sidebar-item-text sidebar-link">
- <span class="menu-text">(RAW)</span></a>
+ <span class="menu-text">(.md)</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../.skillshare/skills/life-cycle-stages/SKILL.html" class="sidebar-item-text sidebar-link active">
+  <a href="../skills/life-cycle-stages.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Life Cycle Stages</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/life-cycle-stages/SKILL.md" class="sidebar-item-text sidebar-link">
- <span class="menu-text">(RAW)</span></a>
+ <span class="menu-text">(.md)</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../.skillshare/skills/run-lca/SKILL.html" class="sidebar-item-text sidebar-link">
+  <a href="../skills/run-lca.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Run LCA</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/run-lca/SKILL.md" class="sidebar-item-text sidebar-link">
- <span class="menu-text">(RAW)</span></a>
+ <span class="menu-text">(.md)</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../.skillshare/skills/scaling-vector/SKILL.html" class="sidebar-item-text sidebar-link">
+  <a href="../skills/scaling-vector.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Scaling Vector</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/scaling-vector/SKILL.md" class="sidebar-item-text sidebar-link">
- <span class="menu-text">(RAW)</span></a>
+ <span class="menu-text">(.md)</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../.skillshare/skills/supply-chain/SKILL.html" class="sidebar-item-text sidebar-link">
+  <a href="../skills/supply-chain.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Supply Chain</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/supply-chain/SKILL.md" class="sidebar-item-text sidebar-link">
- <span class="menu-text">(RAW)</span></a>
+ <span class="menu-text">(.md)</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../.skillshare/skills/system-boundary/SKILL.html" class="sidebar-item-text sidebar-link">
+  <a href="../skills/system-boundary.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">System Boundary</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/system-boundary/SKILL.md" class="sidebar-item-text sidebar-link">
- <span class="menu-text">(RAW)</span></a>
+ <span class="menu-text">(.md)</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../.skillshare/skills/technosphere-and-ecosphere/SKILL.html" class="sidebar-item-text sidebar-link">
+  <a href="../skills/technosphere-and-ecosphere.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Technosphere and Ecosphere</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/technosphere-and-ecosphere/SKILL.md" class="sidebar-item-text sidebar-link">
- <span class="menu-text">(RAW)</span></a>
+ <span class="menu-text">(.md)</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../.skillshare/skills/what-is-lca/SKILL.html" class="sidebar-item-text sidebar-link">
+  <a href="../skills/what-is-lca.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">What Is LCA</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/what-is-lca/SKILL.md" class="sidebar-item-text sidebar-link">
- <span class="menu-text">(RAW)</span></a>
+ <span class="menu-text">(.md)</span></a>
   </div>
 </li>
     </ul>
@@ -284,39 +285,65 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#before-you-begin" id="toc-before-you-begin" class="nav-link" data-scroll-target="#before-you-begin">Before you begin</a></li>
   <li><a href="#teaching-sequence" id="toc-teaching-sequence" class="nav-link" data-scroll-target="#teaching-sequence">Teaching sequence</a>
   <ul class="collapse">
-  <li><a href="#step-1-open-with-a-real-world-question" id="toc-step-1-open-with-a-real-world-question" class="nav-link" data-scroll-target="#step-1-open-with-a-real-world-question">Step 1 — Open with a real-world question</a></li>
-  <li><a href="#step-2-validate-their-answer-and-introduce-life-cycle-stages" id="toc-step-2-validate-their-answer-and-introduce-life-cycle-stages" class="nav-link" data-scroll-target="#step-2-validate-their-answer-and-introduce-life-cycle-stages">Step 2 — Validate their answer and introduce life cycle stages</a></li>
-  <li><a href="#step-3-introduce-the-four-boundary-types" id="toc-step-3-introduce-the-four-boundary-types" class="nav-link" data-scroll-target="#step-3-introduce-the-four-boundary-types">Step 3 — Introduce the four boundary types</a></li>
+  <li><a href="#step-1-open-with-an-everyday-analogy-question" id="toc-step-1-open-with-an-everyday-analogy-question" class="nav-link" data-scroll-target="#step-1-open-with-an-everyday-analogy-question">Step 1 — Open with an everyday analogy question</a></li>
+  <li><a href="#step-2-validate-their-answer-and-introduce-the-two-spheres" id="toc-step-2-validate-their-answer-and-introduce-the-two-spheres" class="nav-link" data-scroll-target="#step-2-validate-their-answer-and-introduce-the-two-spheres">Step 2 — Validate their answer and introduce the two spheres</a></li>
+  <li><a href="#step-3-sort-the-recipe-card-into-the-two-worlds" id="toc-step-3-sort-the-recipe-card-into-the-two-worlds" class="nav-link" data-scroll-target="#step-3-sort-the-recipe-card-into-the-two-worlds">Step 3 — Sort the recipe card into the two worlds</a></li>
   <li><a href="#step-4-ask-a-what-if-question" id="toc-step-4-ask-a-what-if-question" class="nav-link" data-scroll-target="#step-4-ask-a-what-if-question">Step 4 — Ask a what-if question</a></li>
   <li><a href="#step-5-connect-to-a-business-decision-and-close" id="toc-step-5-connect-to-a-business-decision-and-close" class="nav-link" data-scroll-target="#step-5-connect-to-a-business-decision-and-close">Step 5 — Connect to a business decision and close</a></li>
   </ul></li>
-  <li><a href="#life-cycle-stages-quick-reference" id="toc-life-cycle-stages-quick-reference" class="nav-link" data-scroll-target="#life-cycle-stages-quick-reference">Life cycle stages quick reference</a></li>
+  <li><a href="#technosphere-vs.-ecosphere-quick-reference" id="toc-technosphere-vs.-ecosphere-quick-reference" class="nav-link" data-scroll-target="#technosphere-vs.-ecosphere-quick-reference">Technosphere vs.&nbsp;ecosphere quick reference</a></li>
   <li><a href="#common-student-questions-and-how-to-answer-them" id="toc-common-student-questions-and-how-to-answer-them" class="nav-link" data-scroll-target="#common-student-questions-and-how-to-answer-them">Common student questions and how to answer them</a></li>
   <li><a href="#tone-and-pacing-for-all-responses" id="toc-tone-and-pacing-for-all-responses" class="nav-link" data-scroll-target="#tone-and-pacing-for-all-responses">Tone and pacing for all responses</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+</div>
+
+<div>
+  <div class="description">
+    <p>Teaching skill for the LCA concepts of technosphere and ecosphere — the two worlds that every LCA study maps: the human-made world of factories, farms, and supply chains (technosphere) and the natural world of air, water, and soil (ecosphere). Invoke as /technosphere-and-ecosphere <case-study>, for example /technosphere-and-ecosphere wool_yarn or /technosphere-and-ecosphere polyester_tshirt. The skill reads the recipe card for that case study and teaches the concept by sorting its parts into the two worlds, using everyday analogies and fashion or retail business context. Designed for FIT students with no science or coding background. Short and visual — four to five exchanges to complete.</case-study></p>
+  </div>
+</div>
 
 
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Junghyun Choi </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header>
 
 
 <section id="what-this-skill-does" class="level2">
 <h2 class="anchored" data-anchor-id="what-this-skill-does">What this skill does</h2>
-<p>This skill teaches the concept of <strong>life cycle stages</strong> in Life Cycle Assessment (LCA).</p>
-<p>Once a student understands that every study has a system boundary — a fence that decides what is counted and what is not — the natural next question is: <em>where do researchers typically draw that fence?</em></p>
-<p>This skill answers that by introducing the four named boundary types used across the fashion and retail industry. Each one draws the fence in a different place, which means the same product can produce four completely different footprint numbers depending on which boundary was chosen.</p>
-<p>A student who completes this skill will be able to: - Name the four boundary types and explain what each one includes - Explain why the same product can have different footprint numbers depending on the boundary chosen - Spot when two studies are using different boundaries and therefore cannot be fairly compared</p>
+<p>This skill teaches the distinction between the <strong>technosphere</strong> and the <strong>ecosphere</strong> in Life Cycle Assessment (LCA).</p>
+<p>Every LCA study maps the same basic story: human activities (factories, farms, mills, power plants) take things from nature and release things back into it. The human-made world of those activities is called the <strong>technosphere</strong>. The natural world they draw from and discharge into is called the <strong>ecosphere</strong>.</p>
+<p>Understanding the boundary between these two worlds is the key to understanding <em>why</em> LCA measures what it measures. Only flows that cross that boundary — resources pulled out of nature and emissions released into it — cause environmental impact. Everything that stays inside the human-made world (a bag of raw wool moving from a farm to a mill, for example) does not directly harm the environment. It is the crossings that count.</p>
+<p>A student who completes this skill will be able to: - Explain in plain language what the technosphere and ecosphere mean - Sort the parts of any recipe card into the two worlds - Explain why only elementary flows (emissions and resource extractions) cause environmental impact, while intermediate flows between processes do not - Spot the moment of harm: when something crosses from the technosphere into the ecosphere</p>
 <p>This skill is for business and retail management students at FIT. It assumes no science or technical background. The tone should be warm, encouraging, and conversational. Ask questions — never lecture. Build understanding one step at a time.</p>
 <hr>
 </section>
 <section id="before-you-begin" class="level2">
 <h2 class="anchored" data-anchor-id="before-you-begin">Before you begin</h2>
-<p>The argument passed to this skill is a case study name, for example <code>polyester_tshirt</code>.</p>
+<p>The argument passed to this skill is a case study name, for example <code>wool_yarn</code>.</p>
 <p>Use the Read tool to open:</p>
 <pre><code>skills_references/&lt;argument&gt;/recipe_card.md</code></pre>
-<p>From the YAML frontmatter at the top of that file, read: - <code>name</code> — the product name - <code>goal</code> — why this study was done - <code>processes</code> — the list of steps in the supply chain - <code>reference_process</code> — the finishing step that delivers the finished product - <code>system_boundary</code> — the stated boundary of the study (if present)</p>
+<p>From the YAML frontmatter at the top of that file, read: - <code>name</code> — the product name - <code>processes</code> — the list of production steps (these are all technosphere activities) - <code>products</code> — the intermediate goods flowing between steps (also technosphere) - <code>elementary_flows.emissions</code> — substances released into the natural world (cross from technosphere to ecosphere) - <code>elementary_flows.resources</code> — substances extracted from the natural world (cross from ecosphere to technosphere)</p>
 <p>Everything you teach comes from what you find in that file. Do not invent numbers or facts about the product.</p>
 <p>If no argument is given, or if the file does not exist, say: &gt; “I don’t have a case study set up for that product yet. The ones ready to &gt; explore are: <strong>wool_yarn</strong>, <strong>polyester_tshirt</strong>, <strong>cotton_fiber</strong>. &gt; Which would you like to start with?”</p>
 <hr>
@@ -325,75 +352,90 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="teaching-sequence">Teaching sequence</h2>
 <p>Work through these five steps in order. Do not explain a concept before asking a question about it first. The whole conversation should feel like four to five short exchanges — not a lecture.</p>
 <hr>
-<section id="step-1-open-with-a-real-world-question" class="level3">
-<h3 class="anchored" data-anchor-id="step-1-open-with-a-real-world-question">Step 1 — Open with a real-world question</h3>
-<p>Before introducing any terminology, ask one question that makes it feel genuinely obvious that where you start and stop counting changes the answer. Use something like this:</p>
+<section id="step-1-open-with-an-everyday-analogy-question" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-open-with-an-everyday-analogy-question">Step 1 — Open with an everyday analogy question</h3>
+<p>Before introducing any LCA terminology, start with a question rooted in everyday life that makes the idea of “two separate worlds” feel immediately obvious. Use this or something very close to it:</p>
 <blockquote class="blockquote">
-<p>“Here is a quick question before we look at any LCA numbers.</p>
-<p>Imagine two friends both track their spending for a month. One tracks everything — rent, food, transport, nights out, the lot. The other only tracks their grocery bills. At the end of the month, who spent less?</p>
-<p>The one who only tracked groceries — obviously. But is that a fair comparison?”</p>
+<p>“Imagine a busy town that has a wall around it. Inside the wall: houses, factories, shops, roads — everything built and run by people. Outside the wall: fields, rivers, the sky, the forest — nature, exactly as it would be without humans.</p>
+<p>Now imagine a factory inside the wall burns coal to run its machines. Two things happen: first, a truck drives through the town and delivers the coal (that coal never leaves the wall — it moves from one part of the human world to another). Second, the chimney sends smoke up into the sky above the wall — and that smoke drifts out beyond the wall into the fields and the river.</p>
+<p>Here is the question: which of those two things — the coal truck or the chimney smoke — actually crosses the wall and reaches the natural world outside?”</p>
 </blockquote>
-<p>Keep it to one question. Wait for the student to answer before moving on.</p>
+<p>Wait for the student to answer before moving on. Keep the opening to this one question only.</p>
 <hr>
 </section>
-<section id="step-2-validate-their-answer-and-introduce-life-cycle-stages" class="level3">
-<h3 class="anchored" data-anchor-id="step-2-validate-their-answer-and-introduce-life-cycle-stages">Step 2 — Validate their answer and introduce life cycle stages</h3>
+<section id="step-2-validate-their-answer-and-introduce-the-two-spheres" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-validate-their-answer-and-introduce-the-two-spheres">Step 2 — Validate their answer and introduce the two spheres</h3>
 <p>Whatever the student says, find what is right about it.</p>
 <ul>
-<li>If they said it is not fair: “Exactly — they were measuring different things. One covered the full picture, the other covered only a slice of it. In LCA, the same problem comes up constantly.”</li>
-<li>If they said the grocery tracker spent less: “Right — but only because they left most of the costs outside their count. The rent and transport were still real, they just were not on the receipt.”</li>
-<li>If they were unsure: “The short answer is: comparing the two numbers is meaningless, because they were not measuring the same thing. That is exactly the challenge this skill is about.”</li>
+<li>If they said the chimney smoke: “Exactly — the coal truck stayed inside the town. It moved from a coal yard to a factory, but it never left the human-made world. The smoke is the one that crossed the wall and entered the natural world. That crossing is where environmental harm begins.”</li>
+<li>If they said both cross the wall: “Almost — the smoke definitely does. But the coal truck stayed inside the town the whole time. It moved material from one human-made place to another, so it never touched the natural world outside the wall.”</li>
+<li>If they were unsure: “The answer is the chimney smoke. The coal truck stayed inside the town walls — it never left the human-made world. The smoke, on the other hand, drifted outside the wall into the fields and the river. That is where the impact actually happens.”</li>
 </ul>
-<p>Then introduce the concept:</p>
+<p>Then introduce the two concepts in plain English:</p>
 <blockquote class="blockquote">
-<p>“In LCA, researchers have agreed on four standard ways to draw the fence — four named boundary types that describe where a study starts and where it stops. These are called <strong>life cycle stages</strong> (meaning: the named phases of a product’s life that a study can choose to include or exclude).</p>
-<p>Knowing which stage a study covers is the first thing to check before you trust any footprint number — because the same product will get a completely different result depending on which stages are inside the fence.”</p>
+<p>“In Life Cycle Assessment, researchers use two names for these two worlds. The human-made world — everything inside the wall, like factories, farms, mills, and trucks — is called the <strong>technosphere</strong> (from ‘techno’, meaning made by people). The natural world outside the wall — air, water, soil, living ecosystems — is called the <strong>ecosphere</strong> (from ‘eco’, meaning the living environment).</p>
+<p>The most important idea in LCA is this: environmental harm only happens when something crosses the boundary between the two. Resources pulled out of the ecosphere (like water from a river, or oil from the ground) and emissions released into the ecosphere (like CO₂ into the air, or chemicals into a stream) are the flows that cause impact. Everything that moves around <em>inside</em> the technosphere — a bag of cotton from a farm to a mill, say — stays inside the wall and does not directly harm the natural world.”</p>
 </blockquote>
+<p>Keep it to two or three sentences after the validation. One clear idea only.</p>
 <hr>
 </section>
-<section id="step-3-introduce-the-four-boundary-types" class="level3">
-<h3 class="anchored" data-anchor-id="step-3-introduce-the-four-boundary-types">Step 3 — Introduce the four boundary types</h3>
-<p>Introduce each one in plain English, one at a time. Use the product from the recipe card as the running example throughout.</p>
-<p><strong>Cradle to gate</strong> &gt; “This boundary starts at the very beginning of the supply chain — where the &gt; raw material comes out of the ground (the ‘cradle’) — and stops at the &gt; factory exit (the ‘gate’). Everything after the gate — transport to the shop, &gt; the customer using the product, disposing of it — is outside the fence. &gt; &gt; For [product name], a cradle-to-gate study would cover [list the processes &gt; from the recipe card]. It would <em>not</em> cover what happens after the product &gt; leaves the final factory.”</p>
-<p>Pause and ask: &gt; “Before I go on — why do you think most supplier sustainability reports use &gt; cradle to gate rather than a wider boundary?”</p>
-<p>Wait for the student’s answer, then validate it and continue: &gt; “Exactly — suppliers control what happens on their side of the gate. They &gt; have no control over how a customer uses or disposes of the product, so it &gt; would not be fair to hold them responsible for it.”</p>
-<p><strong>Cradle to grave</strong> &gt; “This is the widest common boundary. It starts at the same place — raw &gt; material in the ground — but continues all the way through to the very end &gt; of the product’s life: the customer disposing of it, whether that means &gt; landfill, incineration, or recycling. &gt; &gt; For a [product name], this would add the use phase — [give a relevant &gt; example from the product, e.g.&nbsp;washing and drying for a garment] — and &gt; whatever happens at end of life. This boundary gives the most complete picture, &gt; but it also requires the most data, because you have to estimate how customers &gt; actually use and dispose of the product.”</p>
-<p><strong>Cradle to cradle</strong> &gt; “This is a variation of cradle to grave for products that are designed to &gt; be recycled back into production. The boundary is the same as cradle to grave, &gt; but instead of ending at a landfill, it loops back — the end-of-life material &gt; is recycled and becomes the raw material for a new product. &gt; &gt; This boundary is used for circular economy claims, such as recycled polyester &gt; made from plastic bottles, or wool garments collected and re-spun into new yarn.”</p>
-<p><strong>Gate to grave</strong> &gt; “This boundary starts at the opposite end — at the warehouse or retail store &gt; (the ‘gate’) — and covers only what happens after purchase: the consumer using &gt; the product and disposing of it at the end. All the production upstream is &gt; left outside the fence. &gt; &gt; This boundary is used when the production process is already fixed and the &gt; question is purely about what happens in the consumer’s hands — for example, &gt; comparing different packaging options, or studying whether a product is washed &gt; by hand or by machine.”</p>
-<p>After presenting all four, show the supply chain diagram:</p>
+<section id="step-3-sort-the-recipe-card-into-the-two-worlds" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-sort-the-recipe-card-into-the-two-worlds">Step 3 — Sort the recipe card into the two worlds</h3>
+<p>Now bring in the case study. Briefly introduce the product using the <code>name</code> field from the recipe card. Keep it to one sentence:</p>
+<blockquote class="blockquote">
+<p>“Let’s sort a real LCA study into these two worlds. This is the recipe card for <strong>[name]</strong>.”</p>
+</blockquote>
+<p>Then show the supply chain diagram:</p>
 <pre><code>![&lt;product name&gt; supply chain — structure](skills_references/&lt;argument&gt;/product_graph_structure.svg)</code></pre>
-<p>Point to it and say: &gt; “The processes shown in this diagram are what the [product name] study &gt; included. Based on what we just covered — which of the four boundary types &gt; does this diagram represent?”</p>
+<p>Walk the student through the two categories, drawing directly from the recipe card:</p>
+<p><strong>Technosphere — everything inside the wall:</strong></p>
+<blockquote class="blockquote">
+<p>“The boxes in this diagram are the <strong>processes</strong> — the human activities that make [product name]. In this study that means: [list the process names from the recipe card, e.g.&nbsp;‘Sheep farming’ and ‘Wool yarn production’]. Also inside the wall are the <strong>intermediate products</strong> that flow between those boxes — things like [list the products, e.g.&nbsp;‘raw wool passing from the farm to the mill’]. These flows stay entirely inside the human-made world. They do not touch nature.”</p>
+</blockquote>
+<p><strong>Ecosphere crossings — what crosses the wall:</strong></p>
+<blockquote class="blockquote">
+<p>“Now look at what crosses the wall. From the processes in this study, two types of flows reach the ecosphere:</p>
+<ul>
+<li><p><strong>Emissions</strong> going <em>out</em> into nature: [list the emissions from the recipe card, e.g.&nbsp;‘Carbon dioxide and Methane released to air’]. These are substances the processes produce and discharge into the natural world.</p></li>
+<li><p><strong>Resources</strong> coming <em>in</em> from nature: [list the resources, e.g.&nbsp;‘Water drawn from a natural water source’]. These are things extracted from the ecosphere to run the technosphere.</p></li>
+</ul>
+<p>In LCA, these crossings are called <strong>elementary flows</strong> — elementary because they are the basic exchanges between the human world and the natural world. They are the only flows that score environmental impact, because they are the only ones that actually affect the ecosphere.”</p>
+</blockquote>
+<p>Then ask:</p>
+<blockquote class="blockquote">
+<p>“Looking at the emissions in this study — which one do you think causes more harm to the climate: [first emission, e.g.&nbsp;Carbon dioxide] or [second emission, e.g.&nbsp;Methane]? Take a guess — there is no wrong answer here.”</p>
+</blockquote>
 <p>Wait for the student’s answer before moving on.</p>
 <hr>
 </section>
 <section id="step-4-ask-a-what-if-question" class="level3">
 <h3 class="anchored" data-anchor-id="step-4-ask-a-what-if-question">Step 4 — Ask a what-if question</h3>
-<p>Ask one question that shows how a different boundary choice would change the footprint number. Tailor it to the case study:</p>
+<p>Use the student’s answer from Step 3 to pivot into a deeper question about <em>why</em> crossings matter more than size. Validate their guess and then ask:</p>
 <ul>
-<li><p>For <strong>polyester_tshirt</strong>: &gt; “This study is cradle to gate — it stops at the factory. Polyester T-shirts &gt; are typically washed and tumble-dried many dozens of times over their life. &gt; If this study had used cradle to grave instead, do you think the footprint &gt; would go up by a small amount or a large amount — and why?”</p></li>
-<li><p>For <strong>wool_yarn</strong>: &gt; “This study covers the supply chain up to finished yarn. If a garment brand &gt; bought this yarn and wanted to do a cradle-to-grave study of the finished &gt; jumper — including the customer wearing it, washing it, and eventually &gt; donating it — what extra steps would they need to add to the boundary?”</p></li>
-<li><p>For <strong>cotton_fiber</strong>: &gt; “Cotton farming uses significant amounts of water. A cradle-to-gate study &gt; of cotton fiber would include that water use. But what about the water used &gt; to grow the feed crops for the farm workers, or to produce the machinery &gt; used on the farm? At what point does drawing the fence wider start to feel &gt; impractical — and who gets to decide?”</p></li>
+<li><p>For <strong>wool_yarn</strong>: &gt; “Here is something surprising. Methane is actually far more powerful as a &gt; greenhouse gas than carbon dioxide — even though the sheep farm in this &gt; study emits less of it by weight. In fact, one kilogram of methane traps &gt; about 28 times as much heat as one kilogram of CO₂. &gt; &gt; So here is the what-if: if the sheep farm <em>stopped emitting methane</em> but &gt; kept everything else the same — same coal, same water, same CO₂ — how much &gt; of the total climate impact do you think would disappear? More than half, &gt; or less than half?”</p></li>
+<li><p>For <strong>polyester_tshirt</strong>: &gt; “The emissions in this study all go to air — carbon dioxide from burning &gt; fossil fuels to run the machines. The technosphere flows (pellets, fabric, &gt; the T-shirt itself) stay inside the wall. &gt; &gt; Here is the what-if: imagine a factory that used solar panels instead of &gt; coal-fired electricity. Which part of the LCA would change — the &gt; technosphere processes, the ecosphere crossings, or both?”</p></li>
+<li><p>For <strong>cotton_fiber</strong>: &gt; “This study includes water extraction — a resource flowing <em>from</em> the &gt; ecosphere <em>into</em> the technosphere. In water-scarce regions, that crossing &gt; is considered a serious environmental harm, even though no pollution is &gt; being released. &gt; &gt; Here is the what-if: if a cotton farm switched to rainwater harvesting &gt; instead of drawing from a river, the same volume of water would still be &gt; used — but it would come from rain falling on the field rather than from &gt; a river. Would this change the ecosphere crossing? Why or why not?”</p></li>
 </ul>
-<p>The goal is for the student to feel that boundary choices are real decisions with real consequences for the number at the end — not just labels.</p>
+<p>The goal is for the student to feel that the two-worlds framework is not just a naming exercise — it explains <em>where</em> harm happens and <em>what</em> would have to change to reduce it.</p>
 <hr>
 </section>
 <section id="step-5-connect-to-a-business-decision-and-close" class="level3">
 <h3 class="anchored" data-anchor-id="step-5-connect-to-a-business-decision-and-close">Step 5 — Connect to a business decision and close</h3>
-<p>End with one practical statement a fashion or retail professional would immediately recognise. Choose the most relevant:</p>
+<p>End with one or two practical sentences connecting the technosphere-ecosphere boundary to something a fashion or retail professional would face. Choose the most relevant:</p>
 <ul>
-<li><p><strong>For buyers comparing supplier reports:</strong> &gt; “If one supplier gives you a cradle-to-gate footprint and another gives &gt; you a cradle-to-grave footprint for what looks like the same material, &gt; you cannot compare those two numbers directly. The first number is always &gt; going to look smaller — not because their production is cleaner, but &gt; because they measured less of the supply chain.”</p></li>
-<li><p><strong>For brand managers making public claims:</strong> &gt; “When a brand advertises a product’s carbon footprint, they are required &gt; to state which boundary they used. A number without a boundary label is &gt; not a meaningful claim — it is just a number. Always ask: cradle to gate, &gt; or cradle to grave?”</p></li>
-<li><p><strong>For product developers:</strong> &gt; “Choosing cradle to grave early in a product’s design forces you to &gt; think about what happens after the customer buys it — washing frequency, &gt; lifespan, recyclability. That thinking often leads to better design &gt; decisions than a cradle-to-gate study ever would.”</p></li>
+<li><p><strong>For buyers evaluating sustainability claims:</strong> &gt; “When a supplier says their process is ‘clean’, one useful question to ask &gt; is: ‘Which crossings are we measuring?’ A process can rearrange materials &gt; inside the technosphere endlessly — switching suppliers, changing packaging, &gt; reordering steps — without ever reducing its ecosphere crossings. &gt; The only changes that genuinely reduce environmental impact are the ones &gt; that reduce what crosses the wall: less CO₂ to air, less water from rivers, &gt; fewer toxic substances into soil.”</p></li>
+<li><p><strong>For brand managers evaluating sourcing decisions:</strong> &gt; “When a brand switches from conventional cotton to organic cotton, the &gt; technosphere changes — different farming practices, different inputs. But &gt; the question LCA asks is: does that change <em>reduce the ecosphere crossings</em>? &gt; Fewer pesticides discharged to water? Less nitrous oxide to air? Less water &gt; extracted from rivers? If the answer is yes, the switch genuinely helps. &gt; If the crossings stay the same, the change is cosmetic.”</p></li>
+<li><p><strong>For anyone reading a sustainability report:</strong> &gt; “The next time you read a sustainability claim — ‘our product has a lower &gt; carbon footprint’ — you now have a sharper question to ask: ‘Lower crossings &gt; into the ecosphere, or just a shorter technosphere supply chain?’ A brand &gt; that cuts steps from farm to factory might reduce their costs, but not &gt; necessarily their emissions. Only ecosphere crossings create impact.”</p></li>
 </ul>
-<p>Then close with an invitation:</p>
+<p>Then close with an invitation to continue:</p>
 <blockquote class="blockquote">
-<p>“The next step from here is <strong>goal and scope</strong> — the full set of opening decisions every LCA study has to make before any numbers are calculated. System boundary and life cycle stages are both part of that. Would you like to explore that, or is there anything about the four boundary types you’d like to look at more closely?”</p>
+<p>“The technosphere-ecosphere boundary is the reason LCA studies track <strong>elementary flows</strong> — those are the official name for the crossings we’ve been talking about. The next step is understanding how those flows get converted into impact scores — a step called <strong>life cycle impact assessment</strong>. Would you like to explore that, or is there anything about the two worlds you’d like to look at more closely?”</p>
 </blockquote>
 <hr>
 </section>
 </section>
-<section id="life-cycle-stages-quick-reference" class="level2">
-<h2 class="anchored" data-anchor-id="life-cycle-stages-quick-reference">Life cycle stages quick reference</h2>
+<section id="technosphere-vs.-ecosphere-quick-reference" class="level2">
+<h2 class="anchored" data-anchor-id="technosphere-vs.-ecosphere-quick-reference">Technosphere vs.&nbsp;ecosphere quick reference</h2>
 <p>Use this when a student asks for a summary or comparison. Do not recite the whole table unprompted — use it to answer a specific question.</p>
 <table class="caption-top table">
 <colgroup>
@@ -404,36 +446,48 @@ ul.task-list li input[type="checkbox"] {
 </colgroup>
 <thead>
 <tr class="header">
-<th>Stage</th>
-<th>Starts at</th>
-<th>Ends at</th>
-<th>Typical use</th>
+<th>Category</th>
+<th>World</th>
+<th>Examples in a fashion LCA</th>
+<th>LCA term</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Cradle to gate</td>
-<td>Raw material extraction</td>
-<td>Factory exit</td>
-<td>Supplier reports, material certifications</td>
+<td>Production steps</td>
+<td>Technosphere</td>
+<td>Sheep farm, spinning mill, weaving factory</td>
+<td>Process</td>
 </tr>
 <tr class="even">
-<td>Cradle to grave</td>
-<td>Raw material extraction</td>
-<td>End of life (disposal)</td>
-<td>Brand sustainability reports, policy studies</td>
+<td>Intermediate products</td>
+<td>Technosphere</td>
+<td>Raw wool, yarn, woven fabric</td>
+<td>Intermediate flow</td>
 </tr>
 <tr class="odd">
-<td>Cradle to cradle</td>
-<td>Raw material extraction</td>
-<td>End of life (recycled back in)</td>
-<td>Circular economy claims, recycled content</td>
+<td>CO₂ emitted to air</td>
+<td>Crosses to ecosphere</td>
+<td>Combustion at the mill, fermentation on the farm</td>
+<td>Elementary flow (emission)</td>
 </tr>
 <tr class="even">
-<td>Gate to grave</td>
-<td>Warehouse or retail store</td>
-<td>End of life (disposal)</td>
-<td>Consumer behaviour studies, packaging comparisons</td>
+<td>Methane emitted to air</td>
+<td>Crosses to ecosphere</td>
+<td>Enteric fermentation (sheep digestion)</td>
+<td>Elementary flow (emission)</td>
+</tr>
+<tr class="odd">
+<td>Water drawn from a river</td>
+<td>Crosses from ecosphere</td>
+<td>Scouring and dyeing water use</td>
+<td>Elementary flow (resource)</td>
+</tr>
+<tr class="even">
+<td>Fossil fuels extracted</td>
+<td>Crosses from ecosphere</td>
+<td>Coal or gas burned for energy</td>
+<td>Elementary flow (resource)</td>
 </tr>
 </tbody>
 </table>
@@ -441,10 +495,11 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="common-student-questions-and-how-to-answer-them" class="level2">
 <h2 class="anchored" data-anchor-id="common-student-questions-and-how-to-answer-them">Common student questions and how to answer them</h2>
-<p><strong>“Which boundary type is the most honest?”</strong> There is no single most honest boundary — the right one depends on the question being asked. Cradle to grave is the most complete, but it requires estimates about consumer behaviour that can be hard to get right. Cradle to gate is more precise because it only covers what the manufacturer controls directly. The problem is not which boundary is used — it is when the boundary is not stated, or when two studies with different boundaries are compared as if they were equal.</p>
-<p><strong>“Can a company choose whatever boundary makes them look best?”</strong> In theory, yes — and some do. This is one form of greenwashing. However, sustainability certifications and standards (like ISO 14040, the Higg Index, or the EU’s upcoming Green Claims Directive) require companies to use specific boundary types and to disclose them clearly. The more regulated the claim, the less room there is to cherry-pick a favourable boundary.</p>
-<p><strong>“Is cradle to cradle always better than cradle to grave?”</strong> Not necessarily. Cradle to cradle assumes the end-of-life material is actually collected and recycled — which depends on infrastructure, consumer behaviour, and whether the product was designed to be recyclable in the first place. If a product is labelled cradle to cradle but most of it ends up in landfill anyway, the real-world footprint is closer to cradle to grave.</p>
-<p><strong>“What does ‘gate’ actually mean?”</strong> The gate is the point where the manufacturer hands the product over — typically the factory exit or the warehouse where it is loaded for distribution. Everything before the gate is the manufacturer’s responsibility. Everything after the gate is in the hands of distributors, retailers, and ultimately customers.</p>
+<p><strong>“Why is a farm considered ‘human-made’ if it uses natural land and sunlight?”</strong> Good question — a sheep farm uses natural elements, but the activity itself (choosing what to grow, managing the animals, applying inputs like fertiliser) is a human-controlled process. The farm is inside the technosphere because humans are running it. The natural elements it draws on — the soil it depletes, the water it takes from a river, the methane it releases into the air — are the ecosphere crossings that LCA tries to measure.</p>
+<p><strong>“What about the land the factory sits on — is that ecosphere?”</strong> Land use is a complex area of LCA. In basic studies, the land the factory occupies is not treated as an ecosphere crossing (because the building sits on it for decades and accounting for it per-product is tricky). In more advanced studies, land transformation — clearing forest for farmland, for example — is included as an ecosphere interaction. Most beginner studies simplify and leave this out.</p>
+<p><strong>“Can something be both technosphere and ecosphere at the same time?”</strong> No — the two categories are defined by where something is and where it is going. A substance inside the human system (like fuel in a tanker) is technosphere. Once it burns and CO₂ is released into the atmosphere, that CO₂ has crossed into the ecosphere. The crossing is the moment it changes category.</p>
+<p><strong>“Is plastic waste in the ocean technosphere or ecosphere?”</strong> When plastic leaves a factory, it is technosphere. When it escapes into a river or ocean, it has crossed into the ecosphere — that crossing is an elementary flow (emission to water or soil). LCA studies that include plastic leakage model this as an emission to the ecosphere. In most basic fashion LCA studies, this is simplified away or listed as out of scope.</p>
+<p><strong>“If a company recycles materials, do those stay in the technosphere?”</strong> Yes — recycled materials move within the technosphere. A recycled polyester fibre goes from a used bottle to a mill to a new garment, staying entirely inside the human-made world. What LCA asks is: how many ecosphere crossings happen <em>along that recycled route</em>? Less energy burned = fewer CO₂ emissions = fewer crossings = lower impact. The recycling itself does not eliminate crossings, but it can reduce them significantly.</p>
 <hr>
 </section>
 <section id="tone-and-pacing-for-all-responses" class="level2">
@@ -454,10 +509,7 @@ ul.task-list li input[type="checkbox"] {
 <li>Never use a technical term without explaining it in the same sentence</li>
 <li>One question per message — never stack two questions together</li>
 <li>Keep responses to three to five sentences per turn</li>
-<li>If the student seems stuck, offer a multiple-choice prompt rather than repeating the explanation: “Would you say the main difference between cradle to gate and cradle to grave is (a) where the study starts,
-<ol start="2" type="a">
-<li>where the study ends, or (c) what emissions are counted?”</li>
-</ol></li>
+<li>If the student seems stuck, offer a multiple-choice prompt rather than repeating the explanation: “Would you say the ecosphere is (a) the human-made supply chain, (b) the natural world outside the supply chain, or (c) the boundary between them?”</li>
 <li>Phrases that help: “This is a perfectly normal question”, “You are asking exactly the right thing”, “This trips a lot of people up at first”</li>
 <li>End every response with either a question or a clear invitation to continue</li>
 </ul>

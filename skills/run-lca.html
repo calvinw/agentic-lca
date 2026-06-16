@@ -6,9 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Junghyun Choi">
 <meta name="description" content="Use this skill whenever the user wants to perform a Life Cycle Assessment (LCA) using openLCA. Triggers include: “carbon footprint of”, “compare environmental impact”, “LCA for”, “which material has lower impact”, “run an LCA”, “ecoinvent dataset for”, “GWP of”, “calculate impact”, “environmental footprint”, “lifecycle analysis”, “hotspot analysis”, “sensitivity analysis”, “scenario analysis”, “cradle to gate”. Also triggers when the user asks to make a spreadsheet, slides, or report FROM an LCA result.">
 
-<title>skill – Agentic LCA</title>
+<title>run-lca – Agentic LCA</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -62,23 +63,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../../">
-<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-9e2e28d2b37064d6e675679c7da39b07.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-9e2e28d2b37064d6e675679c7da39b07.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -108,7 +109,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 
 
-<link rel="stylesheet" href="../../../custom.css">
+<link rel="stylesheet" href="../custom.css">
 </head>
 
 <body class="nav-sidebar docked nav-fixed quarto-light">
@@ -118,7 +119,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../../index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Agentic LCA</span>
     </a>
   </div>
@@ -129,19 +130,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../../index.html"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../skills_sessions/index.html"> 
+    <a class="nav-link" href="../skills_sessions/index.html"> 
 <span class="menu-text">Sessions</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../plan/index.html"> 
+    <a class="nav-link" href="../plan/index.html"> 
 <span class="menu-text">Plans</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../../../skills/index.html" aria-current="page"> 
+    <a class="nav-link active" href="../skills/index.html" aria-current="page"> 
 <span class="menu-text">Skills</span></a>
   </li>  
 </ul>
@@ -155,7 +156,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../.skillshare/skills/run-lca/SKILL.html">Run LCA</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../skills/run-lca.html">Run LCA</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -169,140 +170,140 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../skills/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../skills/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Overview</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../.skillshare/skills/functional-unit/SKILL.html" class="sidebar-item-text sidebar-link">
+  <a href="../skills/functional-unit.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Functional Unit</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/functional-unit/SKILL.md" class="sidebar-item-text sidebar-link">
- <span class="menu-text">(RAW)</span></a>
+ <span class="menu-text">(.md)</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../.skillshare/skills/goal-and-scope/SKILL.html" class="sidebar-item-text sidebar-link">
+  <a href="../skills/goal-and-scope.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Goal and Scope</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/goal-and-scope/SKILL.md" class="sidebar-item-text sidebar-link">
- <span class="menu-text">(RAW)</span></a>
+ <span class="menu-text">(.md)</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../.skillshare/skills/lca-from-url/SKILL.html" class="sidebar-item-text sidebar-link">
+  <a href="../skills/lca-from-url.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">LCA From Url</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/lca-from-url/SKILL.md" class="sidebar-item-text sidebar-link">
- <span class="menu-text">(RAW)</span></a>
+ <span class="menu-text">(.md)</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../.skillshare/skills/life-cycle-inventory/SKILL.html" class="sidebar-item-text sidebar-link">
+  <a href="../skills/life-cycle-inventory.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Life Cycle Inventory</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/life-cycle-inventory/SKILL.md" class="sidebar-item-text sidebar-link">
- <span class="menu-text">(RAW)</span></a>
+ <span class="menu-text">(.md)</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../.skillshare/skills/life-cycle-stages/SKILL.html" class="sidebar-item-text sidebar-link">
+  <a href="../skills/life-cycle-stages.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Life Cycle Stages</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/life-cycle-stages/SKILL.md" class="sidebar-item-text sidebar-link">
- <span class="menu-text">(RAW)</span></a>
+ <span class="menu-text">(.md)</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../.skillshare/skills/run-lca/SKILL.html" class="sidebar-item-text sidebar-link active">
+  <a href="../skills/run-lca.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Run LCA</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/run-lca/SKILL.md" class="sidebar-item-text sidebar-link">
- <span class="menu-text">(RAW)</span></a>
+ <span class="menu-text">(.md)</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../.skillshare/skills/scaling-vector/SKILL.html" class="sidebar-item-text sidebar-link">
+  <a href="../skills/scaling-vector.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Scaling Vector</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/scaling-vector/SKILL.md" class="sidebar-item-text sidebar-link">
- <span class="menu-text">(RAW)</span></a>
+ <span class="menu-text">(.md)</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../.skillshare/skills/supply-chain/SKILL.html" class="sidebar-item-text sidebar-link">
+  <a href="../skills/supply-chain.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Supply Chain</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/supply-chain/SKILL.md" class="sidebar-item-text sidebar-link">
- <span class="menu-text">(RAW)</span></a>
+ <span class="menu-text">(.md)</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../.skillshare/skills/system-boundary/SKILL.html" class="sidebar-item-text sidebar-link">
+  <a href="../skills/system-boundary.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">System Boundary</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/system-boundary/SKILL.md" class="sidebar-item-text sidebar-link">
- <span class="menu-text">(RAW)</span></a>
+ <span class="menu-text">(.md)</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../.skillshare/skills/technosphere-and-ecosphere/SKILL.html" class="sidebar-item-text sidebar-link">
+  <a href="../skills/technosphere-and-ecosphere.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Technosphere and Ecosphere</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/technosphere-and-ecosphere/SKILL.md" class="sidebar-item-text sidebar-link">
- <span class="menu-text">(RAW)</span></a>
+ <span class="menu-text">(.md)</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../.skillshare/skills/what-is-lca/SKILL.html" class="sidebar-item-text sidebar-link">
+  <a href="../skills/what-is-lca.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">What Is LCA</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/what-is-lca/SKILL.md" class="sidebar-item-text sidebar-link">
- <span class="menu-text">(RAW)</span></a>
+ <span class="menu-text">(.md)</span></a>
   </div>
 </li>
     </ul>
@@ -329,9 +330,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+</div>
+
+<div>
+  <div class="description">
+    <p>Use this skill whenever the user wants to perform a Life Cycle Assessment (LCA) using openLCA. Triggers include: “carbon footprint of”, “compare environmental impact”, “LCA for”, “which material has lower impact”, “run an LCA”, “ecoinvent dataset for”, “GWP of”, “calculate impact”, “environmental footprint”, “lifecycle analysis”, “hotspot analysis”, “sensitivity analysis”, “scenario analysis”, “cradle to gate”. Also triggers when the user asks to make a spreadsheet, slides, or report FROM an LCA result.</p>
+  </div>
+</div>
 
 
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Junghyun Choi </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header>
 
 
 <section id="how-this-skill-works" class="level2">
@@ -391,98 +418,100 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><code>recipe_card.md</code> is a markdown file whose YAML frontmatter fully specifies the LCA model. The markdown body is free text (ignored by the runner).</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">name</span><span class="kw">:</span><span class="at"> &lt;human name for this analysis&gt;</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">goal</span><span class="kw">:</span><span class="at"> &lt;one sentence describing the purpose&gt;</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="fu">functional_unit</span><span class="kw">:</span></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">description</span><span class="kw">:</span><span class="at"> &lt;what is being analysed, in plain English&gt;</span></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">amount</span><span class="kw">:</span><span class="at"> </span><span class="fl">1.0</span></span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">unit</span><span class="kw">:</span><span class="at"> &lt;unit symbol, must appear in 'units' below&gt;</span></span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Unit symbols used anywhere in this file.</span></span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Each entry creates a UnitGroup + FlowProperty in openLCA.</span></span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="co"># key   = symbol referenced in flows and processes</span></span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="co"># value = human-readable description</span></span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a><span class="fu">units</span><span class="kw">:</span></span>
-<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">cup</span><span class="kw">:</span><span class="at"> Cup count</span></span>
-<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">L</span><span class="kw">:</span><span class="at">   Volume</span></span>
-<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">kWh</span><span class="kw">:</span><span class="at"> Energy</span></span>
-<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">kg</span><span class="kw">:</span><span class="at">  Mass</span></span>
-<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Intermediate product flows (technosphere).</span></span>
-<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a><span class="co"># These move between processes inside the system.</span></span>
-<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a><span class="fu">products</span><span class="kw">:</span></span>
-<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="kw">{</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> &lt;flow name&gt;</span><span class="kw">,</span><span class="at"> </span><span class="fu">unit</span><span class="kw">:</span><span class="at"> &lt;symbol&gt; </span><span class="kw">}</span></span>
-<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Elementary flows crossing the biosphere boundary.</span></span>
-<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a><span class="co">#   emissions  → substances released to nature (e.g. CO₂ to air)</span></span>
-<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a><span class="co">#   resources  → substances extracted from nature (e.g. water, crude oil)</span></span>
-<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a><span class="fu">elementary_flows</span><span class="kw">:</span></span>
-<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">emissions</span><span class="kw">:</span></span>
-<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="kw">{</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> &lt;flow name&gt;</span><span class="kw">,</span><span class="at"> </span><span class="fu">unit</span><span class="kw">:</span><span class="at"> &lt;symbol&gt; </span><span class="kw">}</span></span>
-<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">resources</span><span class="kw">:</span></span>
-<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="kw">{</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> &lt;flow name&gt;</span><span class="kw">,</span><span class="at"> </span><span class="fu">unit</span><span class="kw">:</span><span class="at"> &lt;symbol&gt; </span><span class="kw">}</span></span>
-<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a><span class="co"># Unit processes.</span></span>
-<span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a><span class="co"># reference_output  → the product this process "sells" (diagonal of A)</span></span>
-<span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a><span class="co"># inputs            → product flows consumed (negative off-diagonal of A)</span></span>
-<span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a><span class="co"># emissions         → biosphere outputs (entries of B)</span></span>
-<span id="cb6-38"><a href="#cb6-38" aria-hidden="true" tabindex="-1"></a><span class="co"># resources         → biosphere inputs (extracted from nature)</span></span>
-<span id="cb6-39"><a href="#cb6-39" aria-hidden="true" tabindex="-1"></a><span class="fu">processes</span><span class="kw">:</span></span>
-<span id="cb6-40"><a href="#cb6-40" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> &lt;process name&gt;</span></span>
-<span id="cb6-41"><a href="#cb6-41" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">reference_output</span><span class="kw">:</span><span class="at"> </span><span class="kw">{</span><span class="at"> </span><span class="fu">flow</span><span class="kw">:</span><span class="at"> &lt;product name&gt;</span><span class="kw">,</span><span class="at"> </span><span class="fu">amount</span><span class="kw">:</span><span class="at"> &lt;number&gt; </span><span class="kw">}</span></span>
-<span id="cb6-42"><a href="#cb6-42" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">inputs</span><span class="kw">:</span></span>
-<span id="cb6-43"><a href="#cb6-43" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="kw">{</span><span class="at"> </span><span class="fu">flow</span><span class="kw">:</span><span class="at"> &lt;product name&gt;</span><span class="kw">,</span><span class="at"> </span><span class="fu">amount</span><span class="kw">:</span><span class="at"> &lt;number&gt; </span><span class="kw">}</span></span>
-<span id="cb6-44"><a href="#cb6-44" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">emissions</span><span class="kw">:</span></span>
-<span id="cb6-45"><a href="#cb6-45" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="kw">{</span><span class="at"> </span><span class="fu">flow</span><span class="kw">:</span><span class="at"> &lt;emission name&gt;</span><span class="kw">,</span><span class="at"> </span><span class="fu">amount</span><span class="kw">:</span><span class="at"> &lt;number&gt; </span><span class="kw">}</span></span>
-<span id="cb6-46"><a href="#cb6-46" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">resources</span><span class="kw">:</span></span>
-<span id="cb6-47"><a href="#cb6-47" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="kw">{</span><span class="at"> </span><span class="fu">flow</span><span class="kw">:</span><span class="at"> &lt;resource name&gt;</span><span class="kw">,</span><span class="at"> </span><span class="fu">amount</span><span class="kw">:</span><span class="at"> &lt;number&gt; </span><span class="kw">}</span></span>
-<span id="cb6-48"><a href="#cb6-48" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-49"><a href="#cb6-49" aria-hidden="true" tabindex="-1"></a><span class="co"># Must match one of the process names above.</span></span>
-<span id="cb6-50"><a href="#cb6-50" aria-hidden="true" tabindex="-1"></a><span class="fu">reference_process</span><span class="kw">:</span><span class="at"> &lt;process name that delivers the functional unit&gt;</span></span>
-<span id="cb6-51"><a href="#cb6-51" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> Junghyun Choi</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="fu">goal</span><span class="kw">:</span><span class="at"> &lt;one sentence describing the purpose&gt;</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="fu">functional_unit</span><span class="kw">:</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">description</span><span class="kw">:</span><span class="at"> &lt;what is being analysed, in plain English&gt;</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">amount</span><span class="kw">:</span><span class="at"> </span><span class="fl">1.0</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">unit</span><span class="kw">:</span><span class="at"> &lt;unit symbol, must appear in 'units' below&gt;</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Unit symbols used anywhere in this file.</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Each entry creates a UnitGroup + FlowProperty in openLCA.</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="co"># key   = symbol referenced in flows and processes</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a><span class="co"># value = human-readable description</span></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a><span class="fu">units</span><span class="kw">:</span></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">cup</span><span class="kw">:</span><span class="at"> Cup count</span></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">L</span><span class="kw">:</span><span class="at">   Volume</span></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">kWh</span><span class="kw">:</span><span class="at"> Energy</span></span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">kg</span><span class="kw">:</span><span class="at">  Mass</span></span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Intermediate product flows (technosphere).</span></span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a><span class="co"># These move between processes inside the system.</span></span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a><span class="fu">products</span><span class="kw">:</span></span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="kw">{</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> &lt;flow name&gt;</span><span class="kw">,</span><span class="at"> </span><span class="fu">unit</span><span class="kw">:</span><span class="at"> &lt;symbol&gt; </span><span class="kw">}</span></span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Elementary flows crossing the biosphere boundary.</span></span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a><span class="co">#   emissions  → substances released to nature (e.g. CO₂ to air)</span></span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a><span class="co">#   resources  → substances extracted from nature (e.g. water, crude oil)</span></span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a><span class="fu">elementary_flows</span><span class="kw">:</span></span>
+<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">emissions</span><span class="kw">:</span></span>
+<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="kw">{</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> &lt;flow name&gt;</span><span class="kw">,</span><span class="at"> </span><span class="fu">unit</span><span class="kw">:</span><span class="at"> &lt;symbol&gt; </span><span class="kw">}</span></span>
+<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">resources</span><span class="kw">:</span></span>
+<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="kw">{</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> &lt;flow name&gt;</span><span class="kw">,</span><span class="at"> </span><span class="fu">unit</span><span class="kw">:</span><span class="at"> &lt;symbol&gt; </span><span class="kw">}</span></span>
+<span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a><span class="co"># Unit processes.</span></span>
+<span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a><span class="co"># reference_output  → the product this process "sells" (diagonal of A)</span></span>
+<span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a><span class="co"># inputs            → product flows consumed (negative off-diagonal of A)</span></span>
+<span id="cb6-38"><a href="#cb6-38" aria-hidden="true" tabindex="-1"></a><span class="co"># emissions         → biosphere outputs (entries of B)</span></span>
+<span id="cb6-39"><a href="#cb6-39" aria-hidden="true" tabindex="-1"></a><span class="co"># resources         → biosphere inputs (extracted from nature)</span></span>
+<span id="cb6-40"><a href="#cb6-40" aria-hidden="true" tabindex="-1"></a><span class="fu">processes</span><span class="kw">:</span></span>
+<span id="cb6-41"><a href="#cb6-41" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> &lt;process name&gt;</span></span>
+<span id="cb6-42"><a href="#cb6-42" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">reference_output</span><span class="kw">:</span><span class="at"> </span><span class="kw">{</span><span class="at"> </span><span class="fu">flow</span><span class="kw">:</span><span class="at"> &lt;product name&gt;</span><span class="kw">,</span><span class="at"> </span><span class="fu">amount</span><span class="kw">:</span><span class="at"> &lt;number&gt; </span><span class="kw">}</span></span>
+<span id="cb6-43"><a href="#cb6-43" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">inputs</span><span class="kw">:</span></span>
+<span id="cb6-44"><a href="#cb6-44" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="kw">{</span><span class="at"> </span><span class="fu">flow</span><span class="kw">:</span><span class="at"> &lt;product name&gt;</span><span class="kw">,</span><span class="at"> </span><span class="fu">amount</span><span class="kw">:</span><span class="at"> &lt;number&gt; </span><span class="kw">}</span></span>
+<span id="cb6-45"><a href="#cb6-45" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">emissions</span><span class="kw">:</span></span>
+<span id="cb6-46"><a href="#cb6-46" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="kw">{</span><span class="at"> </span><span class="fu">flow</span><span class="kw">:</span><span class="at"> &lt;emission name&gt;</span><span class="kw">,</span><span class="at"> </span><span class="fu">amount</span><span class="kw">:</span><span class="at"> &lt;number&gt; </span><span class="kw">}</span></span>
+<span id="cb6-47"><a href="#cb6-47" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">resources</span><span class="kw">:</span></span>
+<span id="cb6-48"><a href="#cb6-48" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="kw">{</span><span class="at"> </span><span class="fu">flow</span><span class="kw">:</span><span class="at"> &lt;resource name&gt;</span><span class="kw">,</span><span class="at"> </span><span class="fu">amount</span><span class="kw">:</span><span class="at"> &lt;number&gt; </span><span class="kw">}</span></span>
+<span id="cb6-49"><a href="#cb6-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-50"><a href="#cb6-50" aria-hidden="true" tabindex="-1"></a><span class="co"># Must match one of the process names above.</span></span>
+<span id="cb6-51"><a href="#cb6-51" aria-hidden="true" tabindex="-1"></a><span class="fu">reference_process</span><span class="kw">:</span><span class="at"> &lt;process name that delivers the functional unit&gt;</span></span>
+<span id="cb6-52"><a href="#cb6-52" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <section id="minimal-working-example-coffee" class="level3">
 <h3 class="anchored" data-anchor-id="minimal-working-example-coffee">Minimal working example (coffee)</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">name</span><span class="kw">:</span><span class="at"> Coffee LCA — one cup</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">goal</span><span class="kw">:</span><span class="at"> Calculate CO₂ for one cup of coffee</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="fu">functional_unit</span><span class="kw">:</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">description</span><span class="kw">:</span><span class="at"> One cup of coffee</span></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">amount</span><span class="kw">:</span><span class="at"> </span><span class="fl">1.0</span></span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">unit</span><span class="kw">:</span><span class="at"> cup</span></span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="fu">units</span><span class="kw">:</span></span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">cup</span><span class="kw">:</span><span class="at"> Cup count</span></span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">L</span><span class="kw">:</span><span class="at">   Volume</span></span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">kWh</span><span class="kw">:</span><span class="at"> Energy</span></span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">kg</span><span class="kw">:</span><span class="at">  Mass</span></span>
-<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a><span class="fu">products</span><span class="kw">:</span></span>
-<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="kw">{</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Coffee</span><span class="kw">,</span><span class="at">        </span><span class="fu">unit</span><span class="kw">:</span><span class="at"> cup </span><span class="kw">}</span></span>
-<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="kw">{</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Boiled water</span><span class="kw">,</span><span class="at">  </span><span class="fu">unit</span><span class="kw">:</span><span class="at"> L   </span><span class="kw">}</span></span>
-<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="kw">{</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Electricity</span><span class="kw">,</span><span class="at">   </span><span class="fu">unit</span><span class="kw">:</span><span class="at"> kWh </span><span class="kw">}</span></span>
-<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a><span class="fu">elementary_flows</span><span class="kw">:</span></span>
-<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">emissions</span><span class="kw">:</span></span>
-<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="kw">{</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> CO2 to air</span><span class="kw">,</span><span class="at"> </span><span class="fu">unit</span><span class="kw">:</span><span class="at"> kg </span><span class="kw">}</span></span>
-<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a><span class="fu">processes</span><span class="kw">:</span></span>
-<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> P1 — Make coffee</span></span>
-<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">reference_output</span><span class="kw">:</span><span class="at"> </span><span class="kw">{</span><span class="at"> </span><span class="fu">flow</span><span class="kw">:</span><span class="at"> Coffee</span><span class="kw">,</span><span class="at">       </span><span class="fu">amount</span><span class="kw">:</span><span class="at"> </span><span class="fl">1.0</span><span class="at"> </span><span class="kw">}</span></span>
-<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">inputs</span><span class="kw">:</span></span>
-<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="kw">{</span><span class="at"> </span><span class="fu">flow</span><span class="kw">:</span><span class="at"> Boiled water</span><span class="kw">,</span><span class="at"> </span><span class="fu">amount</span><span class="kw">:</span><span class="at"> </span><span class="fl">0.2</span><span class="at"> </span><span class="kw">}</span></span>
-<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> P2 — Boil water</span></span>
-<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">reference_output</span><span class="kw">:</span><span class="at"> </span><span class="kw">{</span><span class="at"> </span><span class="fu">flow</span><span class="kw">:</span><span class="at"> Boiled water</span><span class="kw">,</span><span class="at"> </span><span class="fu">amount</span><span class="kw">:</span><span class="at"> </span><span class="fl">1.0</span><span class="at"> </span><span class="kw">}</span></span>
-<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">inputs</span><span class="kw">:</span></span>
-<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="kw">{</span><span class="at"> </span><span class="fu">flow</span><span class="kw">:</span><span class="at"> Electricity</span><span class="kw">,</span><span class="at">  </span><span class="fu">amount</span><span class="kw">:</span><span class="at"> </span><span class="fl">0.5</span><span class="at"> </span><span class="kw">}</span></span>
-<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> P3 — Burn coal</span></span>
-<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">reference_output</span><span class="kw">:</span><span class="at"> </span><span class="kw">{</span><span class="at"> </span><span class="fu">flow</span><span class="kw">:</span><span class="at"> Electricity</span><span class="kw">,</span><span class="at">  </span><span class="fu">amount</span><span class="kw">:</span><span class="at"> </span><span class="fl">1.0</span><span class="at"> </span><span class="kw">}</span></span>
-<span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">emissions</span><span class="kw">:</span></span>
-<span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="kw">{</span><span class="at"> </span><span class="fu">flow</span><span class="kw">:</span><span class="at"> CO2 to air</span><span class="kw">,</span><span class="at">   </span><span class="fu">amount</span><span class="kw">:</span><span class="at"> </span><span class="fl">1.0</span><span class="at"> </span><span class="kw">}</span></span>
-<span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-40"><a href="#cb7-40" aria-hidden="true" tabindex="-1"></a><span class="fu">reference_process</span><span class="kw">:</span><span class="at"> P1 — Make coffee</span></span>
-<span id="cb7-41"><a href="#cb7-41" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> Junghyun Choi</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="fu">goal</span><span class="kw">:</span><span class="at"> Calculate CO₂ for one cup of coffee</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="fu">functional_unit</span><span class="kw">:</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">description</span><span class="kw">:</span><span class="at"> One cup of coffee</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">amount</span><span class="kw">:</span><span class="at"> </span><span class="fl">1.0</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">unit</span><span class="kw">:</span><span class="at"> cup</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="fu">units</span><span class="kw">:</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">cup</span><span class="kw">:</span><span class="at"> Cup count</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">L</span><span class="kw">:</span><span class="at">   Volume</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">kWh</span><span class="kw">:</span><span class="at"> Energy</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">kg</span><span class="kw">:</span><span class="at">  Mass</span></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a><span class="fu">products</span><span class="kw">:</span></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="kw">{</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Coffee</span><span class="kw">,</span><span class="at">        </span><span class="fu">unit</span><span class="kw">:</span><span class="at"> cup </span><span class="kw">}</span></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="kw">{</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Boiled water</span><span class="kw">,</span><span class="at">  </span><span class="fu">unit</span><span class="kw">:</span><span class="at"> L   </span><span class="kw">}</span></span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="kw">{</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Electricity</span><span class="kw">,</span><span class="at">   </span><span class="fu">unit</span><span class="kw">:</span><span class="at"> kWh </span><span class="kw">}</span></span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a><span class="fu">elementary_flows</span><span class="kw">:</span></span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">emissions</span><span class="kw">:</span></span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="kw">{</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> CO2 to air</span><span class="kw">,</span><span class="at"> </span><span class="fu">unit</span><span class="kw">:</span><span class="at"> kg </span><span class="kw">}</span></span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a><span class="fu">processes</span><span class="kw">:</span></span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> P1 — Make coffee</span></span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">reference_output</span><span class="kw">:</span><span class="at"> </span><span class="kw">{</span><span class="at"> </span><span class="fu">flow</span><span class="kw">:</span><span class="at"> Coffee</span><span class="kw">,</span><span class="at">       </span><span class="fu">amount</span><span class="kw">:</span><span class="at"> </span><span class="fl">1.0</span><span class="at"> </span><span class="kw">}</span></span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">inputs</span><span class="kw">:</span></span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="kw">{</span><span class="at"> </span><span class="fu">flow</span><span class="kw">:</span><span class="at"> Boiled water</span><span class="kw">,</span><span class="at"> </span><span class="fu">amount</span><span class="kw">:</span><span class="at"> </span><span class="fl">0.2</span><span class="at"> </span><span class="kw">}</span></span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> P2 — Boil water</span></span>
+<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">reference_output</span><span class="kw">:</span><span class="at"> </span><span class="kw">{</span><span class="at"> </span><span class="fu">flow</span><span class="kw">:</span><span class="at"> Boiled water</span><span class="kw">,</span><span class="at"> </span><span class="fu">amount</span><span class="kw">:</span><span class="at"> </span><span class="fl">1.0</span><span class="at"> </span><span class="kw">}</span></span>
+<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">inputs</span><span class="kw">:</span></span>
+<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="kw">{</span><span class="at"> </span><span class="fu">flow</span><span class="kw">:</span><span class="at"> Electricity</span><span class="kw">,</span><span class="at">  </span><span class="fu">amount</span><span class="kw">:</span><span class="at"> </span><span class="fl">0.5</span><span class="at"> </span><span class="kw">}</span></span>
+<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> P3 — Burn coal</span></span>
+<span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">reference_output</span><span class="kw">:</span><span class="at"> </span><span class="kw">{</span><span class="at"> </span><span class="fu">flow</span><span class="kw">:</span><span class="at"> Electricity</span><span class="kw">,</span><span class="at">  </span><span class="fu">amount</span><span class="kw">:</span><span class="at"> </span><span class="fl">1.0</span><span class="at"> </span><span class="kw">}</span></span>
+<span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">emissions</span><span class="kw">:</span></span>
+<span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="kw">{</span><span class="at"> </span><span class="fu">flow</span><span class="kw">:</span><span class="at"> CO2 to air</span><span class="kw">,</span><span class="at">   </span><span class="fu">amount</span><span class="kw">:</span><span class="at"> </span><span class="fl">1.0</span><span class="at"> </span><span class="kw">}</span></span>
+<span id="cb7-40"><a href="#cb7-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-41"><a href="#cb7-41" aria-hidden="true" tabindex="-1"></a><span class="fu">reference_process</span><span class="kw">:</span><span class="at"> P1 — Make coffee</span></span>
+<span id="cb7-42"><a href="#cb7-42" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
 </section>

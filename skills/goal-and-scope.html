@@ -6,9 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Use this skill when the user provides a URL to an LCA study, a published environmental report, or a product sustainability page and wants to turn it into a recipe_card.md they can run and explore. Also triggers when the user names a well-known LCA study by title (e.g.&nbsp;“Cotton Inc.&nbsp;cotton fiber LCA”, “IWTO wool LCA”, “thredUP secondhand clothing study”) and wants to recreate or remix it. Builds a base-case recipe card plus 3–5 scenario variants (just like the Levi’s jeans folder), then offers to run the analysis. Trigger phrases: “turn this into an LCA”, “build a recipe card from”, “recreate this LCA”, “make scenarios for”, “use this study”, “remix this LCA”.">
+<meta name="author" content="Junghyun Choi">
+<meta name="description" content="Teaching skill for the LCA concept of goal and scope — the opening decisions in a life cycle study that define why it is being done, who it is for, and what is included or excluded. Invoke as /goal-and-scope , for example /goal-and-scope wool_yarn or /goal-and-scope polyester_tshirt. The skill reads the recipe card for that case study and teaches the concept using real data, Socratic questions, and fashion or retail business context. Designed for FIT students with no science or coding background.">
 
-<title>skill – Agentic LCA</title>
+<title>goal-and-scope – Agentic LCA</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -24,61 +25,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
-<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../../">
-<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-9e2e28d2b37064d6e675679c7da39b07.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-9e2e28d2b37064d6e675679c7da39b07.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -108,7 +74,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 
 
-<link rel="stylesheet" href="../../../custom.css">
+<link rel="stylesheet" href="../custom.css">
 </head>
 
 <body class="nav-sidebar docked nav-fixed quarto-light">
@@ -118,7 +84,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../../index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Agentic LCA</span>
     </a>
   </div>
@@ -129,19 +95,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../../index.html"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../skills_sessions/index.html"> 
+    <a class="nav-link" href="../skills_sessions/index.html"> 
 <span class="menu-text">Sessions</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../plan/index.html"> 
+    <a class="nav-link" href="../plan/index.html"> 
 <span class="menu-text">Plans</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../../../skills/index.html" aria-current="page"> 
+    <a class="nav-link active" href="../skills/index.html" aria-current="page"> 
 <span class="menu-text">Skills</span></a>
   </li>  
 </ul>
@@ -155,7 +121,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../.skillshare/skills/lca-from-url/SKILL.html">LCA From Url</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../skills/goal-and-scope.html">Goal and Scope</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -169,140 +135,140 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../skills/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../skills/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Overview</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../.skillshare/skills/functional-unit/SKILL.html" class="sidebar-item-text sidebar-link">
+  <a href="../skills/functional-unit.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Functional Unit</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/functional-unit/SKILL.md" class="sidebar-item-text sidebar-link">
- <span class="menu-text">(RAW)</span></a>
+ <span class="menu-text">(.md)</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../.skillshare/skills/goal-and-scope/SKILL.html" class="sidebar-item-text sidebar-link">
+  <a href="../skills/goal-and-scope.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Goal and Scope</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/goal-and-scope/SKILL.md" class="sidebar-item-text sidebar-link">
- <span class="menu-text">(RAW)</span></a>
+ <span class="menu-text">(.md)</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../.skillshare/skills/lca-from-url/SKILL.html" class="sidebar-item-text sidebar-link active">
+  <a href="../skills/lca-from-url.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">LCA From Url</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/lca-from-url/SKILL.md" class="sidebar-item-text sidebar-link">
- <span class="menu-text">(RAW)</span></a>
+ <span class="menu-text">(.md)</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../.skillshare/skills/life-cycle-inventory/SKILL.html" class="sidebar-item-text sidebar-link">
+  <a href="../skills/life-cycle-inventory.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Life Cycle Inventory</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/life-cycle-inventory/SKILL.md" class="sidebar-item-text sidebar-link">
- <span class="menu-text">(RAW)</span></a>
+ <span class="menu-text">(.md)</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../.skillshare/skills/life-cycle-stages/SKILL.html" class="sidebar-item-text sidebar-link">
+  <a href="../skills/life-cycle-stages.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Life Cycle Stages</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/life-cycle-stages/SKILL.md" class="sidebar-item-text sidebar-link">
- <span class="menu-text">(RAW)</span></a>
+ <span class="menu-text">(.md)</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../.skillshare/skills/run-lca/SKILL.html" class="sidebar-item-text sidebar-link">
+  <a href="../skills/run-lca.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Run LCA</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/run-lca/SKILL.md" class="sidebar-item-text sidebar-link">
- <span class="menu-text">(RAW)</span></a>
+ <span class="menu-text">(.md)</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../.skillshare/skills/scaling-vector/SKILL.html" class="sidebar-item-text sidebar-link">
+  <a href="../skills/scaling-vector.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Scaling Vector</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/scaling-vector/SKILL.md" class="sidebar-item-text sidebar-link">
- <span class="menu-text">(RAW)</span></a>
+ <span class="menu-text">(.md)</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../.skillshare/skills/supply-chain/SKILL.html" class="sidebar-item-text sidebar-link">
+  <a href="../skills/supply-chain.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Supply Chain</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/supply-chain/SKILL.md" class="sidebar-item-text sidebar-link">
- <span class="menu-text">(RAW)</span></a>
+ <span class="menu-text">(.md)</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../.skillshare/skills/system-boundary/SKILL.html" class="sidebar-item-text sidebar-link">
+  <a href="../skills/system-boundary.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">System Boundary</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/system-boundary/SKILL.md" class="sidebar-item-text sidebar-link">
- <span class="menu-text">(RAW)</span></a>
+ <span class="menu-text">(.md)</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../.skillshare/skills/technosphere-and-ecosphere/SKILL.html" class="sidebar-item-text sidebar-link">
+  <a href="../skills/technosphere-and-ecosphere.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Technosphere and Ecosphere</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/technosphere-and-ecosphere/SKILL.md" class="sidebar-item-text sidebar-link">
- <span class="menu-text">(RAW)</span></a>
+ <span class="menu-text">(.md)</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../.skillshare/skills/what-is-lca/SKILL.html" class="sidebar-item-text sidebar-link">
+  <a href="../skills/what-is-lca.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">What Is LCA</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/what-is-lca/SKILL.md" class="sidebar-item-text sidebar-link">
- <span class="menu-text">(RAW)</span></a>
+ <span class="menu-text">(.md)</span></a>
   </div>
 </li>
     </ul>
@@ -316,229 +282,195 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#what-this-skill-does" id="toc-what-this-skill-does" class="nav-link active" data-scroll-target="#what-this-skill-does">What this skill does</a></li>
-  <li><a href="#step-by-step-workflow" id="toc-step-by-step-workflow" class="nav-link" data-scroll-target="#step-by-step-workflow">Step-by-step workflow</a>
+  <li><a href="#before-you-begin" id="toc-before-you-begin" class="nav-link" data-scroll-target="#before-you-begin">Before you begin</a></li>
+  <li><a href="#teaching-sequence" id="toc-teaching-sequence" class="nav-link" data-scroll-target="#teaching-sequence">Teaching sequence</a>
   <ul class="collapse">
-  <li><a href="#step-1-fetch-and-read-the-source" id="toc-step-1-fetch-and-read-the-source" class="nav-link" data-scroll-target="#step-1-fetch-and-read-the-source">Step 1 — Fetch and read the source</a></li>
-  <li><a href="#step-2-map-the-supply-chain" id="toc-step-2-map-the-supply-chain" class="nav-link" data-scroll-target="#step-2-map-the-supply-chain">Step 2 — Map the supply chain</a></li>
-  <li><a href="#step-3-translate-into-a-recipe-card" id="toc-step-3-translate-into-a-recipe-card" class="nav-link" data-scroll-target="#step-3-translate-into-a-recipe-card">Step 3 — Translate into a recipe card</a></li>
-  <li><a href="#step-4-create-scenario-variants" id="toc-step-4-create-scenario-variants" class="nav-link" data-scroll-target="#step-4-create-scenario-variants">Step 4 — Create scenario variants</a></li>
-  <li><a href="#step-5-check-the-server-and-offer-to-run" id="toc-step-5-check-the-server-and-offer-to-run" class="nav-link" data-scroll-target="#step-5-check-the-server-and-offer-to-run">Step 5 — Check the server and offer to run</a></li>
-  <li><a href="#step-6-run-and-compare-if-server-is-ready" id="toc-step-6-run-and-compare-if-server-is-ready" class="nav-link" data-scroll-target="#step-6-run-and-compare-if-server-is-ready">Step 6 — Run and compare (if server is ready)</a></li>
+  <li><a href="#step-1-open-with-a-real-world-question" id="toc-step-1-open-with-a-real-world-question" class="nav-link" data-scroll-target="#step-1-open-with-a-real-world-question">Step 1 — Open with a real-world question</a></li>
+  <li><a href="#step-2-validate-their-answer-and-introduce-the-case-study" id="toc-step-2-validate-their-answer-and-introduce-the-case-study" class="nav-link" data-scroll-target="#step-2-validate-their-answer-and-introduce-the-case-study">Step 2 — Validate their answer and introduce the case study</a></li>
+  <li><a href="#step-3-introduce-goal-and-scope" id="toc-step-3-introduce-goal-and-scope" class="nav-link" data-scroll-target="#step-3-introduce-goal-and-scope">Step 3 — Introduce goal and scope</a></li>
+  <li><a href="#step-4-ask-a-what-if-question" id="toc-step-4-ask-a-what-if-question" class="nav-link" data-scroll-target="#step-4-ask-a-what-if-question">Step 4 — Ask a what-if question</a></li>
+  <li><a href="#step-5-connect-to-a-business-decision" id="toc-step-5-connect-to-a-business-decision" class="nav-link" data-scroll-target="#step-5-connect-to-a-business-decision">Step 5 — Connect to a business decision</a></li>
   </ul></li>
-  <li><a href="#well-known-textile-lcas-you-can-recreate" id="toc-well-known-textile-lcas-you-can-recreate" class="nav-link" data-scroll-target="#well-known-textile-lcas-you-can-recreate">Well-known textile LCAs you can recreate</a></li>
-  <li><a href="#tone-and-explanation-rules" id="toc-tone-and-explanation-rules" class="nav-link" data-scroll-target="#tone-and-explanation-rules">Tone and explanation rules</a></li>
+  <li><a href="#goal-and-scope-reference-common-scope-choices-in-fashion-lca" id="toc-goal-and-scope-reference-common-scope-choices-in-fashion-lca" class="nav-link" data-scroll-target="#goal-and-scope-reference-common-scope-choices-in-fashion-lca">Goal and scope reference — common scope choices in fashion LCA</a></li>
+  <li><a href="#tone-and-pacing-for-all-responses" id="toc-tone-and-pacing-for-all-responses" class="nav-link" data-scroll-target="#tone-and-pacing-for-all-responses">Tone and pacing for all responses</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+</div>
+
+<div>
+  <div class="description">
+    <p>Teaching skill for the LCA concept of goal and scope — the opening decisions in a life cycle study that define why it is being done, who it is for, and what is included or excluded. Invoke as /goal-and-scope <case-study>, for example /goal-and-scope wool_yarn or /goal-and-scope polyester_tshirt. The skill reads the recipe card for that case study and teaches the concept using real data, Socratic questions, and fashion or retail business context. Designed for FIT students with no science or coding background.</case-study></p>
+  </div>
+</div>
 
 
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Junghyun Choi </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header>
 
 
 <section id="what-this-skill-does" class="level2">
 <h2 class="anchored" data-anchor-id="what-this-skill-does">What this skill does</h2>
-<p>This skill takes a URL pointing to a real LCA study (or a well-known study name) and guides the student through turning the published data into a working <code>recipe_card.md</code> that can be analysed with the openLCA tools already set up in this project.</p>
-<p>It then creates <strong>scenario variants</strong> — alternative versions of the recipe card where one assumption is changed at a time — so the student can answer “what if?” questions like: - What if the factory used renewable energy? - What if the garment were made from recycled fibre instead of virgin? - What if the consumer washed the item less often? - What if the material came from an organic farm?</p>
-<p>This mirrors exactly how the Levi’s 501 jeans folder (<code>lca_analysis/levis/</code>) is structured — a base case plus named scenario cards.</p>
+<p>This skill teaches the concept of <strong>goal and scope</strong> in Life Cycle Assessment (LCA).</p>
+<p>Before any numbers are calculated, every LCA study must answer two foundational questions: <em>Why are we doing this?</em> (the goal) and <em>What are we including?</em> (the scope). Getting these decisions wrong — or leaving them vague — means the results can be misused, misread, or simply irrelevant to the business decision at hand.</p>
+<p>A student who understands goal and scope will be able to critically evaluate whether a published LCA is fit for a particular purpose, spot where system boundaries have been drawn to favour a certain outcome, and ask the right questions when a supplier presents sustainability data.</p>
+<p>This skill is for business and retail management students at FIT. It assumes no science or technical background. The tone should be warm, encouraging, and conversational. Ask questions — never lecture. Build understanding one step at a time.</p>
 <hr>
 </section>
-<section id="step-by-step-workflow" class="level2">
-<h2 class="anchored" data-anchor-id="step-by-step-workflow">Step-by-step workflow</h2>
-<section id="step-1-fetch-and-read-the-source" class="level3">
-<h3 class="anchored" data-anchor-id="step-1-fetch-and-read-the-source">Step 1 — Fetch and read the source</h3>
-<p>Use the WebFetch tool to retrieve the URL the student provided. Read the page carefully and extract:</p>
-<ol type="1">
-<li><strong>What product or material is being studied</strong> — be specific (e.g.&nbsp;“1 kg of greasy wool fiber at farm gate”, not just “wool”).</li>
-<li><strong>The functional unit</strong> — exactly what is one unit of the thing being studied?</li>
-<li><strong>The life cycle stages covered</strong> — does the study go cradle-to-gate, gate-to-gate, or cradle-to-grave? What stages are included?</li>
-<li><strong>The supply chain nodes</strong> — what are the main production steps? Aim for 3–6 processes that cover the most important stages.</li>
-<li><strong>The emissions and resources</strong> — what greenhouse gases or other substances are reported? Find the per-unit numbers (e.g.&nbsp;kg CO₂ per kg fiber).</li>
-<li><strong>The hotspot</strong> — which stage or substance drives the majority of the impact?</li>
-<li><strong>The key assumptions</strong> — what country or grid is assumed? What allocation method? What use-phase behaviour?</li>
-</ol>
-<p>If the URL returns a PDF or a summary page without full numerical data, say so clearly to the student and use whatever numbers are available. Make clear which numbers come from the source and which are your best estimates to fill gaps.</p>
-<p>Always narrate what you found in plain English before building anything. Example: &gt; “I’ve read the study. It covers one kilogram of wool fiber, starting from &gt; the sheep farm and ending at the wool broker — not including spinning or &gt; fabric production. The biggest source of CO₂ is methane from sheep digestion, &gt; which accounts for about 60% of the total. The study found roughly 17 kg of &gt; CO₂-equivalent per kilogram of raw wool.”</p>
+<section id="before-you-begin" class="level2">
+<h2 class="anchored" data-anchor-id="before-you-begin">Before you begin</h2>
+<p>The argument passed to this skill is a case study name, for example <code>wool_yarn</code>.</p>
+<p>Use the Read tool to open:</p>
+<pre><code>skills_references/&lt;argument&gt;/recipe_card.md</code></pre>
+<p>From the YAML frontmatter at the top of that file, read: - <code>name</code> — the product name - <code>goal</code> — why this study was done and what question it answers - <code>functional_unit.description</code>, <code>functional_unit.amount</code>, <code>functional_unit.unit</code> - The <code>processes</code> list — the names and connections of steps in the supply chain - <code>reference_process</code> — the finishing step that delivers the finished product</p>
+<p>Everything you teach comes from what you find in that file. Do not invent numbers or facts about the product.</p>
+<p>If no argument is given, or if the file does not exist, say: &gt; “I don’t have a case study set up for that product yet. The ones ready to &gt; explore are: <strong>wool_yarn</strong>, <strong>polyester_tshirt</strong>, <strong>cotton_fiber</strong>. &gt; Which would you like to start with?”</p>
 <hr>
 </section>
-<section id="step-2-map-the-supply-chain" class="level3">
-<h3 class="anchored" data-anchor-id="step-2-map-the-supply-chain">Step 2 — Map the supply chain</h3>
-<p>Before writing any code, draw out the supply chain for the student in plain text. Use this format:</p>
-<pre><code>[Stage 1: Farm / Raw material] → [Stage 2: Processing] → [Stage 3: ...]
-         ↓ CO₂                          ↓ CO₂
-     (direct emissions)          (energy use)</code></pre>
-<p>Ask the student: “Does this look right to you? Is there a stage you think we should add or remove?”</p>
-<p>Give the student a moment to respond before continuing. If they say it looks right, proceed to Step 3.</p>
+<section id="teaching-sequence" class="level2">
+<h2 class="anchored" data-anchor-id="teaching-sequence">Teaching sequence</h2>
+<p>Work through these five steps in order. Do not explain a concept before asking a question about it first.</p>
 <hr>
-</section>
-<section id="step-3-translate-into-a-recipe-card" class="level3">
-<h3 class="anchored" data-anchor-id="step-3-translate-into-a-recipe-card">Step 3 — Translate into a recipe card</h3>
-<p>Create the folder and recipe card:</p>
-<pre><code>lca_analysis/&lt;study_name&gt;/recipe_card.md</code></pre>
-<p>Use the standard recipe card format (YAML frontmatter). Follow these rules:</p>
-<p><strong>Units:</strong> Always include <code>kg: Mass</code> at minimum. Add <code>kWh: Electrical energy</code> if electricity is in the model. Add other units as needed.</p>
-<p><strong>FEDEFL flow names:</strong> Use exact EPA FEDEFL names for all elementary flows: - Carbon dioxide (not CO2, not “CO₂ to air”) - Methane (not CH4) - Nitrous oxide (not N2O) - Nitrogen oxides (not NOx) - Sulfur dioxide (not SO2)</p>
-<p><strong>LCIA section:</strong> Always include at the bottom:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">lcia</span><span class="kw">:</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">method_name</span><span class="kw">:</span><span class="at"> </span><span class="st">"TRACI 2.2"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p><strong>Process naming:</strong> Name processes with a number prefix for clarity: <code>P1 — Sheep farm</code>, <code>P2 — Wool scouring</code>, etc.</p>
-<p><strong>Emissions amounts:</strong> Use the per-unit numbers from the study. If a stage’s emissions are reported per kg of output AND the output amount differs from 1.0, adjust accordingly.</p>
-<p>After writing the file, narrate to the student: &gt; “I’ve created the recipe card at <code>lca_analysis/&lt;name&gt;/recipe_card.md</code>. Here’s &gt; a plain-English summary of what’s in it: …”</p>
-<hr>
-</section>
-<section id="step-4-create-scenario-variants" class="level3">
-<h3 class="anchored" data-anchor-id="step-4-create-scenario-variants">Step 4 — Create scenario variants</h3>
-<p>Create 3–5 scenario recipe cards in the same folder, each changing one assumption from the base case. Name them descriptively:</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Scenario idea</th>
-<th>File name suffix</th>
-<th>What changes</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Renewable energy at mills</td>
-<td><code>_renewable</code></td>
-<td>Electricity CO₂ factor drops to ~0.05 kg/kWh</td>
-</tr>
-<tr class="even">
-<td>Organic farming</td>
-<td><code>_organic</code></td>
-<td>Fertilizer-related N₂O and CO₂ reduced by ~30–40%</td>
-</tr>
-<tr class="odd">
-<td>Recycled fibre input</td>
-<td><code>_recycled</code></td>
-<td>Upstream raw material emissions cut by 40–80%</td>
-</tr>
-<tr class="even">
-<td>Reduced consumer washing</td>
-<td><code>_wash_less</code></td>
-<td>Use-phase electricity reduced (if applicable)</td>
-</tr>
-<tr class="odd">
-<td>Extended product lifetime</td>
-<td><code>_longlife</code></td>
-<td>Functional unit redefined as “per wear” not “per garment”</td>
-</tr>
-<tr class="even">
-<td>Best-case combined</td>
-<td><code>_bestcase</code></td>
-<td>Stack two or three improvements together</td>
-</tr>
-</tbody>
-</table>
-<p>For each scenario, name the file:</p>
-<pre><code>lca_analysis/&lt;study_name&gt;/&lt;study_name&gt;_&lt;scenario&gt;.md</code></pre>
-<p>In each scenario card, add a comment at the top of the YAML body (below the <code>---</code> closing line) explaining exactly what changed and why:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## About this scenario</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>**What changed:** Electricity at the mill now comes from wind and solar,</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>dropping the CO₂ emission factor from 0.5 kg/kWh to 0.05 kg/kWh.</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>**Why this matters:** ...</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>After creating all scenarios, list them for the student: &gt; “I’ve created 4 scenario cards alongside the base case. Here’s what each one &gt; explores: …”</p>
-<hr>
-</section>
-<section id="step-5-check-the-server-and-offer-to-run" class="level3">
-<h3 class="anchored" data-anchor-id="step-5-check-the-server-and-offer-to-run">Step 5 — Check the server and offer to run</h3>
-<p>Check whether the openLCA server is running:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-s</span> http://localhost:8080/api/version</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Explain to the student: “I’m going to knock on the door of the openLCA calculation engine to see if it’s switched on and ready.”</p>
-<p><strong>If running:</strong> Offer to run the base case immediately: &gt; “The calculation engine is ready. Shall I run the base case now so we can &gt; see the results? I can then run each scenario and we can compare them.”</p>
-<p><strong>If not running:</strong> Tell the student: &gt; “The openLCA engine isn’t running right now. Before we can calculate results, &gt; you’ll need to start it by running <code>bash start_olca.sh</code> in the terminal. &gt; Once it’s started (takes about 10–20 seconds), come back and I’ll run the &gt; analysis for you.”</p>
-<hr>
-</section>
-<section id="step-6-run-and-compare-if-server-is-ready" class="level3">
-<h3 class="anchored" data-anchor-id="step-6-run-and-compare-if-server-is-ready">Step 6 — Run and compare (if server is ready)</h3>
-<p>Run the base case:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> lca_scripts/lca_analysis.py lca_analysis/<span class="op">&lt;</span>name<span class="op">&gt;</span>/recipe_card.md</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Then offer to run all scenarios one by one. After all runs are complete, present a comparison table:</p>
-<pre><code>| Scenario          | GWP (kg CO₂-eq) | vs. base case |
-|-------------------|-----------------|---------------|
-| Base case         |  XX.X           |  —            |
-| Renewable energy  |  XX.X           |  -XX%         |
-| Organic farming   |  XX.X           |  -XX%         |
-| ...               |  ...            |  ...          |</code></pre>
-<p>Explain in plain English what the numbers mean and what the most impactful scenario is. Connect it to a real business decision: &gt; “If a brand sourcing wool switched their processing mills to renewable energy, &gt; they could cut the wool fiber’s climate impact by about 40%. That’s roughly &gt; the same environmental benefit as taking one car off the road for six months.”</p>
-<hr>
-</section>
-</section>
-<section id="well-known-textile-lcas-you-can-recreate" class="level2">
-<h2 class="anchored" data-anchor-id="well-known-textile-lcas-you-can-recreate">Well-known textile LCAs you can recreate</h2>
-<p>If the student does not have a URL but wants to work from a published study, here are the best-documented ones to suggest:</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Study</th>
-<th>What it covers</th>
-<th>Best for teaching</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Levi’s 501 Jeans (2015)</strong></td>
-<td>Full lifecycle of denim jeans</td>
-<td>Multi-stage supply chains, consumer use hotspot</td>
-</tr>
-<tr class="even">
-<td><strong>Cotton Inc.&nbsp;U.S. Cotton LCA (2012)</strong></td>
-<td>1 kg cotton fiber, farm gate</td>
-<td>Farm emissions, fertilizer N₂O</td>
-</tr>
-<tr class="odd">
-<td><strong>IWTO Wool LCA</strong></td>
-<td>1 kg greasy wool, farm gate</td>
-<td>Animal agriculture, methane from sheep</td>
-</tr>
-<tr class="even">
-<td><strong>Virgin Polyester LCA</strong></td>
-<td>1 kg PET fiber</td>
-<td>Petroleum-based fibers, energy intensity</td>
-</tr>
-<tr class="odd">
-<td><strong>Recycled Polyester (Repreve)</strong></td>
-<td>1 kg rPET fiber vs.&nbsp;virgin</td>
-<td>Recycled vs.&nbsp;virgin comparison</td>
-</tr>
-<tr class="even">
-<td><strong>Viscose/Rayon LCA (IVL)</strong></td>
-<td>1 kg viscose fiber</td>
-<td>“Natural-origin” but chemically intensive</td>
-</tr>
-<tr class="odd">
-<td><strong>Nylon 6 LCA</strong></td>
-<td>1 kg virgin nylon</td>
-<td>N₂O from production, high-impact fiber</td>
-</tr>
-<tr class="even">
-<td><strong>thredUP Secondhand LCA (2022)</strong></td>
-<td>New vs.&nbsp;secondhand garment</td>
-<td>System expansion, displacement credits</td>
-</tr>
-</tbody>
-</table>
-<p>For each of these, the GWP numbers and supply chain structure are published and documented enough to build a faithful simplified model.</p>
-<hr>
-</section>
-<section id="tone-and-explanation-rules" class="level2">
-<h2 class="anchored" data-anchor-id="tone-and-explanation-rules">Tone and explanation rules</h2>
+<section id="step-1-open-with-a-real-world-question" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-open-with-a-real-world-question">Step 1 — Open with a real-world question</h3>
+<p>Before introducing any LCA terminology, ask the student one question grounded in a real business situation. The question should make it feel genuinely uncertain what should or should not be included in the study — so that when the concept of scope is introduced, it feels necessary rather than academic.</p>
+<p>Base the question on the product from the recipe card. Some guides:</p>
 <ul>
-<li>Always explain what you found before building anything.</li>
-<li>Never write a recipe card silently — narrate every section as you write it.</li>
-<li>After creating files, tell the student exactly where to find them and how to open them (e.g.&nbsp;“look in the file explorer panel on the left side of VS Code”).</li>
-<li>If a number is your estimate rather than from the source, say so explicitly.</li>
-<li>Keep every explanation grounded in business and retail context — connect the numbers to decisions a brand, buyer, or sustainability manager would actually make.</li>
+<li>For a <strong>fiber or yarn</strong>: “A wool brand wants to prove their yarn is sustainable. Should the study include only the spinning mill — or also the sheep farm, the transport between them, and the energy the mill buys from the grid? Where would you draw the line?”</li>
+<li>For a <strong>finished garment</strong>: “A T-shirt brand is running an LCA. Should they include what happens after a customer buys the shirt — the washing, the drying, the eventual disposal? Or should the study stop at the factory gate?”</li>
+<li>For a <strong>raw material</strong>: “A cotton supplier wants an LCA to share with buyers. Should the study start from the seeds planted in the ground, or from the point the raw fibre arrives at the gin?”</li>
+</ul>
+<p>Keep the question short — one question only. Wait for the student to answer before moving on.</p>
+<hr>
+</section>
+<section id="step-2-validate-their-answer-and-introduce-the-case-study" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-validate-their-answer-and-introduce-the-case-study">Step 2 — Validate their answer and introduce the case study</h3>
+<p>Whatever the student says, find what is right about it before adding anything.</p>
+<ul>
+<li>If they identified a meaningful boundary, say so: “That is a really practical instinct — here is how the study approached the same question…”</li>
+<li>If they struggled to decide, normalise it: “This is genuinely tricky — there is no universal right answer, which is exactly why LCA studies have to state their choices explicitly…”</li>
+</ul>
+<p>Never move past this step without acknowledging the student’s answer first.</p>
+<p>Then briefly introduce the case study using the <code>name</code> and <code>goal</code> fields from the recipe card. Keep it to two or three sentences and make clear it is a teaching example:</p>
+<blockquote class="blockquote">
+<p>“The study we’ll work through is called <strong>[name]</strong>. [One sentence from the goal.] It’s a teaching example built for this course — the numbers are illustrative but calibrated to be realistic.”</p>
+</blockquote>
+<p>After introducing the case study, show the structure diagram inline:</p>
+<pre><code>skills_references/&lt;argument&gt;/product_graph_structure.svg</code></pre>
+<p>Embed it as a markdown image:</p>
+<pre><code>![&lt;product name&gt; supply chain — structure](skills_references/&lt;argument&gt;/product_graph_structure.svg)</code></pre>
+<p>Point to the diagram and explain that each box is a step the study decided to <em>include</em> — and that deciding which boxes belong in the picture is exactly what “scope” means.</p>
+<hr>
+</section>
+<section id="step-3-introduce-goal-and-scope" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-introduce-goal-and-scope">Step 3 — Introduce goal and scope</h3>
+<p>Now introduce the two concepts using the recipe card data.</p>
+<p><strong>Goal</strong> — explain it as the “why” and the “who”: - Why is this study being done? (use the <code>goal</code> field) - Who will use the results? (a brand, a buyer, a policy maker, a certification body?) - What decision will the results inform?</p>
+<p>When you use the phrase “goal” for the first time in LCA context, explain it: “In LCA, the goal is a short statement that says why the study is being done and who it is for. It matters because the same product can have very different LCA designs depending on whether the results are for an internal decision, a public label, or a legal certification.”</p>
+<p><strong>Scope</strong> — explain it as the “what is in and what is out”: - Which steps of the supply chain are included? (use the <code>processes</code> list) - Where does the study start and stop? This is called the <strong>system boundary</strong> — explain it as: “Think of it like a fence drawn around the supply chain. Everything inside the fence is studied; everything outside is ignored.” - What life cycle stage does this study cover? Introduce the term <strong>cradle to gate</strong> if the study stops at the factory, or <strong>cradle to grave</strong> if it continues through use and disposal. Explain each in plain English: - Cradle to gate: “From the raw material in the ground all the way to the factory exit — but no further. What happens after the product is sold is not included.” - Cradle to grave: “The full life of the product — from raw material all the way through to the customer throwing it away or recycling it.”</p>
+<hr>
+</section>
+<section id="step-4-ask-a-what-if-question" class="level3">
+<h3 class="anchored" data-anchor-id="step-4-ask-a-what-if-question">Step 4 — Ask a what-if question</h3>
+<p>Ask one follow-up question that shows how a different scope choice would change the story. For example:</p>
+<ul>
+<li>“What if this study had included the energy used to wash and dry the finished garment over its lifetime — do you think that would make the footprint bigger or smaller than what we calculated?”</li>
+<li>“What if the study had started from the seeds in the ground rather than the raw fibre arriving at the mill — what extra steps would we need to include?”</li>
+<li>“What if a competitor ran the same study but stopped at the factory gate and left out transport to the store — could that make their product look better even if nothing in the production process was different?”</li>
+</ul>
+<p>The goal is for the student to feel that scope choices are not neutral — where you draw the fence changes the number you get at the end.</p>
+<hr>
+</section>
+<section id="step-5-connect-to-a-business-decision" class="level3">
+<h3 class="anchored" data-anchor-id="step-5-connect-to-a-business-decision">Step 5 — Connect to a business decision</h3>
+<p>Close with one practical statement connecting goal and scope to something a fashion or retail professional would care about. Examples:</p>
+<ul>
+<li>“When a supplier shares an LCA result with you, the first thing to check is not the number — it is the system boundary. Two suppliers can report very different footprints for the same material simply because one included transport and the other did not.”</li>
+<li>“Sustainability certifications exist partly to enforce consistent scopes. Without them, every brand could quietly choose the boundary that makes their product look best.”</li>
+<li>“As a buyer, understanding goal and scope means you can ask: ‘Is this study cradle to gate, or cradle to grave? Does it include the use phase?’ Those questions separate a meaningful claim from a marketing number.”</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="goal-and-scope-reference-common-scope-choices-in-fashion-lca" class="level2">
+<h2 class="anchored" data-anchor-id="goal-and-scope-reference-common-scope-choices-in-fashion-lca">Goal and scope reference — common scope choices in fashion LCA</h2>
+<p>Use this table when a student asks about different scope options, or when connecting the concept to a broader range of retail contexts. Do not recite the whole table unprompted — pick the one or two rows most relevant to the product being studied.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Scope type</th>
+<th>What is included</th>
+<th>Typical use case</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Cradle to gate</td>
+<td>Raw material extraction through to factory exit</td>
+<td>Supplier comparisons; material certifications</td>
+</tr>
+<tr class="even">
+<td>Cradle to shelf</td>
+<td>Adds transport and retail distribution</td>
+<td>Brand sustainability reports</td>
+</tr>
+<tr class="odd">
+<td>Cradle to grave</td>
+<td>Full life including consumer use and disposal</td>
+<td>Product design decisions; policy studies</td>
+</tr>
+<tr class="even">
+<td>Gate to grave</td>
+<td>Use phase and end of life only</td>
+<td>Studies focused on consumer behaviour</td>
+</tr>
+<tr class="odd">
+<td>Cradle to cradle</td>
+<td>Full life including recycling loop back into production</td>
+<td>Circular economy studies</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="tone-and-pacing-for-all-responses" class="level2">
+<h2 class="anchored" data-anchor-id="tone-and-pacing-for-all-responses">Tone and pacing for all responses</h2>
+<ul>
+<li>Write as if talking to someone who is comfortable with Excel and email but has never read a science report</li>
+<li>Never use a technical term without explaining it in the same sentence</li>
+<li>One question per message — never stack two questions together</li>
+<li>Keep responses to three to five sentences per turn</li>
+<li>If the student seems stuck, offer a multiple-choice prompt rather than repeating the explanation: “Would you say the main reason is (a) it changes what steps are counted, (b) it changes who the results are useful for, or
+<ol start="3" type="a">
+<li>it changes how the study can be compared to others?”</li>
+</ol></li>
+<li>Phrases that help: “This is a perfectly normal question”, “You are asking exactly the right thing”, “This trips a lot of people up at first”</li>
+<li>End every response with either a question or a clear invitation to continue</li>
+<li>After completing the five-step teaching sequence, always ask: “Would you like to see how goal and scope decisions play out in a different context — for example, a footwear study or a retail logistics scenario?”</li>
 </ul>
 
 

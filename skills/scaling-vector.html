@@ -6,9 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Teaching skill for the LCA concept of supply chain and system boundary — how to read a product graph diagram, what each box (process) represents, what flows connect them, and what “upstream” and “downstream” mean. Invoke as /supply-chain , for example /supply-chain wool_yarn or /supply-chain polyester_tshirt. The skill reads the recipe card for that case study and walks the student through the supply chain diagram using real data and Socratic questions. Designed for FIT students with no science or coding background.">
+<meta name="author" content="Junghyun Choi">
+<meta name="description" content="Teaching skill for the LCA concept of the scaling vector — how much each process in the supply chain must run to deliver exactly one functional unit. Invoke as /scaling-vector , for example /scaling-vector wool_yarn or /scaling-vector polyester_tshirt. The skill reads the recipe card and lca_results.md for that case study and walks the student through the calculation using plain division, not matrix algebra. Designed for FIT students with no science or coding background.">
 
-<title>skill – Agentic LCA</title>
+<title>scaling-vector – Agentic LCA</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -27,23 +28,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../../">
-<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-9e2e28d2b37064d6e675679c7da39b07.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-9e2e28d2b37064d6e675679c7da39b07.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -73,7 +74,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="../../../custom.css">
+<link rel="stylesheet" href="../custom.css">
 </head>
 
 <body class="nav-sidebar docked nav-fixed quarto-light">
@@ -83,7 +84,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../../index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Agentic LCA</span>
     </a>
   </div>
@@ -94,19 +95,19 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../../index.html"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../skills_sessions/index.html"> 
+    <a class="nav-link" href="../skills_sessions/index.html"> 
 <span class="menu-text">Sessions</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../plan/index.html"> 
+    <a class="nav-link" href="../plan/index.html"> 
 <span class="menu-text">Plans</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../../../skills/index.html" aria-current="page"> 
+    <a class="nav-link active" href="../skills/index.html" aria-current="page"> 
 <span class="menu-text">Skills</span></a>
   </li>  
 </ul>
@@ -120,7 +121,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../.skillshare/skills/supply-chain/SKILL.html">Supply Chain</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../skills/scaling-vector.html">Scaling Vector</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -134,140 +135,140 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../skills/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../skills/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Overview</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../.skillshare/skills/functional-unit/SKILL.html" class="sidebar-item-text sidebar-link">
+  <a href="../skills/functional-unit.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Functional Unit</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/functional-unit/SKILL.md" class="sidebar-item-text sidebar-link">
- <span class="menu-text">(RAW)</span></a>
+ <span class="menu-text">(.md)</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../.skillshare/skills/goal-and-scope/SKILL.html" class="sidebar-item-text sidebar-link">
+  <a href="../skills/goal-and-scope.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Goal and Scope</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/goal-and-scope/SKILL.md" class="sidebar-item-text sidebar-link">
- <span class="menu-text">(RAW)</span></a>
+ <span class="menu-text">(.md)</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../.skillshare/skills/lca-from-url/SKILL.html" class="sidebar-item-text sidebar-link">
+  <a href="../skills/lca-from-url.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">LCA From Url</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/lca-from-url/SKILL.md" class="sidebar-item-text sidebar-link">
- <span class="menu-text">(RAW)</span></a>
+ <span class="menu-text">(.md)</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../.skillshare/skills/life-cycle-inventory/SKILL.html" class="sidebar-item-text sidebar-link">
+  <a href="../skills/life-cycle-inventory.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Life Cycle Inventory</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/life-cycle-inventory/SKILL.md" class="sidebar-item-text sidebar-link">
- <span class="menu-text">(RAW)</span></a>
+ <span class="menu-text">(.md)</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../.skillshare/skills/life-cycle-stages/SKILL.html" class="sidebar-item-text sidebar-link">
+  <a href="../skills/life-cycle-stages.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Life Cycle Stages</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/life-cycle-stages/SKILL.md" class="sidebar-item-text sidebar-link">
- <span class="menu-text">(RAW)</span></a>
+ <span class="menu-text">(.md)</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../.skillshare/skills/run-lca/SKILL.html" class="sidebar-item-text sidebar-link">
+  <a href="../skills/run-lca.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Run LCA</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/run-lca/SKILL.md" class="sidebar-item-text sidebar-link">
- <span class="menu-text">(RAW)</span></a>
+ <span class="menu-text">(.md)</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../.skillshare/skills/scaling-vector/SKILL.html" class="sidebar-item-text sidebar-link">
+  <a href="../skills/scaling-vector.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Scaling Vector</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/scaling-vector/SKILL.md" class="sidebar-item-text sidebar-link">
- <span class="menu-text">(RAW)</span></a>
+ <span class="menu-text">(.md)</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../.skillshare/skills/supply-chain/SKILL.html" class="sidebar-item-text sidebar-link active">
+  <a href="../skills/supply-chain.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Supply Chain</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/supply-chain/SKILL.md" class="sidebar-item-text sidebar-link">
- <span class="menu-text">(RAW)</span></a>
+ <span class="menu-text">(.md)</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../.skillshare/skills/system-boundary/SKILL.html" class="sidebar-item-text sidebar-link">
+  <a href="../skills/system-boundary.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">System Boundary</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/system-boundary/SKILL.md" class="sidebar-item-text sidebar-link">
- <span class="menu-text">(RAW)</span></a>
+ <span class="menu-text">(.md)</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../.skillshare/skills/technosphere-and-ecosphere/SKILL.html" class="sidebar-item-text sidebar-link">
+  <a href="../skills/technosphere-and-ecosphere.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Technosphere and Ecosphere</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/technosphere-and-ecosphere/SKILL.md" class="sidebar-item-text sidebar-link">
- <span class="menu-text">(RAW)</span></a>
+ <span class="menu-text">(.md)</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../.skillshare/skills/what-is-lca/SKILL.html" class="sidebar-item-text sidebar-link">
+  <a href="../skills/what-is-lca.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">What Is LCA</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/what-is-lca/SKILL.md" class="sidebar-item-text sidebar-link">
- <span class="menu-text">(RAW)</span></a>
+ <span class="menu-text">(.md)</span></a>
   </div>
 </li>
     </ul>
@@ -284,135 +285,249 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#before-you-begin" id="toc-before-you-begin" class="nav-link" data-scroll-target="#before-you-begin">Before you begin</a></li>
   <li><a href="#teaching-sequence" id="toc-teaching-sequence" class="nav-link" data-scroll-target="#teaching-sequence">Teaching sequence</a>
   <ul class="collapse">
-  <li><a href="#step-1-introduce-the-idea-of-a-supply-chain-map" id="toc-step-1-introduce-the-idea-of-a-supply-chain-map" class="nav-link" data-scroll-target="#step-1-introduce-the-idea-of-a-supply-chain-map">Step 1 — Introduce the idea of a supply chain map</a></li>
-  <li><a href="#step-2-validate-introduce-the-case-study-and-reveal-the-diagram" id="toc-step-2-validate-introduce-the-case-study-and-reveal-the-diagram" class="nav-link" data-scroll-target="#step-2-validate-introduce-the-case-study-and-reveal-the-diagram">Step 2 — Validate, introduce the case study, and reveal the diagram</a></li>
-  <li><a href="#step-3-walk-through-each-process-box" id="toc-step-3-walk-through-each-process-box" class="nav-link" data-scroll-target="#step-3-walk-through-each-process-box">Step 3 — Walk through each process box</a></li>
-  <li><a href="#step-4-walk-through-the-arrows" id="toc-step-4-walk-through-the-arrows" class="nav-link" data-scroll-target="#step-4-walk-through-the-arrows">Step 4 — Walk through the arrows</a></li>
-  <li><a href="#step-5-explain-the-system-boundary" id="toc-step-5-explain-the-system-boundary" class="nav-link" data-scroll-target="#step-5-explain-the-system-boundary">Step 5 — Explain the system boundary</a></li>
-  <li><a href="#step-6-connect-to-a-business-or-sourcing-decision" id="toc-step-6-connect-to-a-business-or-sourcing-decision" class="nav-link" data-scroll-target="#step-6-connect-to-a-business-or-sourcing-decision">Step 6 — Connect to a business or sourcing decision</a></li>
+  <li><a href="#step-1-introduce-the-question-with-a-real-world-analogy" id="toc-step-1-introduce-the-question-with-a-real-world-analogy" class="nav-link" data-scroll-target="#step-1-introduce-the-question-with-a-real-world-analogy">Step 1 — Introduce the question with a real-world analogy</a></li>
+  <li><a href="#step-2-confirm-the-reference-process-scaling-factor" id="toc-step-2-confirm-the-reference-process-scaling-factor" class="nav-link" data-scroll-target="#step-2-confirm-the-reference-process-scaling-factor">Step 2 — Confirm the reference process scaling factor</a></li>
+  <li><a href="#step-3-work-backwards-one-step-at-a-time" id="toc-step-3-work-backwards-one-step-at-a-time" class="nav-link" data-scroll-target="#step-3-work-backwards-one-step-at-a-time">Step 3 — Work backwards one step at a time</a></li>
+  <li><a href="#step-4-verify-the-scaling-vector-and-show-the-scaled-supply-chain-diagram" id="toc-step-4-verify-the-scaling-vector-and-show-the-scaled-supply-chain-diagram" class="nav-link" data-scroll-target="#step-4-verify-the-scaling-vector-and-show-the-scaled-supply-chain-diagram">Step 4 — Verify the scaling vector and show the scaled supply chain diagram</a></li>
+  <li><a href="#step-5-connect-to-a-business-decision-and-close" id="toc-step-5-connect-to-a-business-decision-and-close" class="nav-link" data-scroll-target="#step-5-connect-to-a-business-decision-and-close">Step 5 — Connect to a business decision and close</a></li>
   </ul></li>
   <li><a href="#tone-and-pacing-for-all-responses" id="toc-tone-and-pacing-for-all-responses" class="nav-link" data-scroll-target="#tone-and-pacing-for-all-responses">Tone and pacing for all responses</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+</div>
+
+<div>
+  <div class="description">
+    <p>Teaching skill for the LCA concept of the scaling vector — how much each process in the supply chain must run to deliver exactly one functional unit. Invoke as /scaling-vector <case-study>, for example /scaling-vector wool_yarn or /scaling-vector polyester_tshirt. The skill reads the recipe card and lca_results.md for that case study and walks the student through the calculation using plain division, not matrix algebra. Designed for FIT students with no science or coding background.</case-study></p>
+  </div>
+</div>
 
 
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Junghyun Choi </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header>
 
 
 <section id="what-this-skill-does" class="level2">
 <h2 class="anchored" data-anchor-id="what-this-skill-does">What this skill does</h2>
-<p>This skill teaches students how to read a <strong>supply chain diagram</strong> in the context of Life Cycle Assessment (LCA).</p>
-<p>Before any numbers can be calculated, an LCA study must map out every step it takes to make the product — from the very beginning of the chain (raw materials) all the way to the finished product. This map is called the product system or supply chain diagram. A student who can read this diagram will understand where emissions come from, which processes are “upstream” (further back) or “downstream” (closer to the finished product), and why the boundaries of the study matter.</p>
+<p>This skill teaches the concept of the <strong>scaling vector</strong> in Life Cycle Assessment.</p>
+<p>Before we can calculate the total emissions from a supply chain, we need to answer one key question: if we want to produce exactly one functional unit of the finished product, how many times does each step in the supply chain need to run?</p>
+<p>The answer to that question is the scaling vector — one number per process, called a scaling factor. The reference process (the one that delivers the finished product) always runs exactly once. Every upstream process runs at a fraction (or sometimes more than once, if there is waste) of that.</p>
+<p>This skill uses simple division, not matrix algebra. Students work backwards through the supply chain one step at a time, just like calculating how many times you need to run a recipe to produce a target quantity of food.</p>
 <p>This skill is for business and retail management students at FIT. Assume no science or technical background. Be warm, encouraging, and conversational. Ask questions — never lecture. Build understanding one step at a time.</p>
 <hr>
 </section>
 <section id="before-you-begin" class="level2">
 <h2 class="anchored" data-anchor-id="before-you-begin">Before you begin</h2>
-<p>The argument passed to this skill is a case study name, for example <code>polyester_tshirt</code>.</p>
-<p>Use the Read tool to open:</p>
-<pre><code>skills_references/&lt;argument&gt;/recipe_card.md</code></pre>
-<p>From the YAML frontmatter, extract: - <code>name</code> — the product name - <code>goal</code> — the study question in plain language - <code>functional_unit.description</code> — what is being measured - <code>processes</code> — the list of steps, their names, inputs, and emissions - <code>reference_process</code> — which process delivers the finished product - <code>products</code> — the intermediate and final goods flowing between steps - <code>elementary_flows.emissions</code> — the pollutants released to the environment</p>
-<p>Also note the filename pattern for the structure diagram:</p>
-<pre><code>skills_references/&lt;argument&gt;/product_graph_structure.svg</code></pre>
-<p>You will direct the student to open this file in VS Code at the right moment.</p>
+<p>The argument passed to this skill is a case study name, for example <code>wool_yarn</code>.</p>
+<p>Use the Read tool to open both of these files:</p>
+<pre><code>skills_references/&lt;argument&gt;/recipe_card.md
+skills_references/&lt;argument&gt;/lca_results.md</code></pre>
+<p>From the <strong>recipe card</strong> frontmatter, extract: - <code>name</code> — the product name - <code>functional_unit.description</code> and <code>functional_unit.amount</code> and <code>functional_unit.unit</code> - <code>processes</code> — names, <code>reference_output</code> (flow name + amount), and <code>inputs</code> (flow name + amount) - <code>elementary_flows.emissions</code> — the gas names and units - <code>reference_process</code> — which process is the finishing line</p>
+<p>From <strong>lca_results.md</strong>, extract: - Step 3 — Scaling Vector table (the verified s values, one per process) - Step 6 — Scaled Emissions by Process table (s × emission rate for each process and gas) - Step 7 — LCIA Characterization table if present (the final impact scores) - The Summary section (the headline impact numbers)</p>
+<p>You will use the recipe card to guide the student through the calculation, and lca_results.md to confirm their answers are correct.</p>
 <p>If no argument is given, or if the file does not exist, say: &gt; “I don’t have a case study set up for that product yet. The ones ready to &gt; explore are: <strong>wool_yarn</strong>, <strong>polyester_tshirt</strong>, <strong>cotton_fiber</strong>. &gt; Which would you like to start with?”</p>
 <hr>
 </section>
 <section id="teaching-sequence" class="level2">
 <h2 class="anchored" data-anchor-id="teaching-sequence">Teaching sequence</h2>
-<p>Work through these six steps in order. Wait for the student to respond at each question before continuing — never skip ahead.</p>
+<p>Work through these five steps in order. Wait for the student to respond at each question before moving on.</p>
 <hr>
-<section id="step-1-introduce-the-idea-of-a-supply-chain-map" class="level3">
-<h3 class="anchored" data-anchor-id="step-1-introduce-the-idea-of-a-supply-chain-map">Step 1 — Introduce the idea of a supply chain map</h3>
-<p>Before showing any content, ask the student to think about the product’s journey from the plan:</p>
-<p>Choose a question that fits the product. For example:</p>
-<ul>
-<li>For <strong>polyester_tshirt</strong>: “Before we open any diagrams, think about a polyester T-shirt for a moment. If you had to draw the journey of that shirt — starting from wherever the raw materials come from, all the way to the finished garment — how many steps do you think it would take? What would the very first step be?”</li>
-<li>For <strong>wool_yarn</strong>: “Think about a ball of wool yarn. Before it becomes yarn, where does it start? What do you think the first step in that supply chain looks like?”</li>
-</ul>
-<p>Keep the question short. One question only. Wait for their answer.</p>
-<hr>
-</section>
-<section id="step-2-validate-introduce-the-case-study-and-reveal-the-diagram" class="level3">
-<h3 class="anchored" data-anchor-id="step-2-validate-introduce-the-case-study-and-reveal-the-diagram">Step 2 — Validate, introduce the case study, and reveal the diagram</h3>
-<p>Whatever the student says, find what is right about it. Then briefly introduce the case study before showing the diagram. Use the <code>name</code> and <code>goal</code> fields from the recipe card. Keep it to two or three sentences. Make clear it is a teaching example — not a real brand’s published study. For example:</p>
+<section id="step-1-introduce-the-question-with-a-real-world-analogy" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-introduce-the-question-with-a-real-world-analogy">Step 1 — Introduce the question with a real-world analogy</h3>
+<p>Before showing any numbers, explain what a scaling factor is using a food or manufacturing analogy. For example:</p>
 <blockquote class="blockquote">
-<p>“The supply chain we’ll be mapping in this lesson is called <strong>[name]</strong>. [One sentence from the goal — what the study covers and why it’s interesting.] It’s a teaching example built for this course, so the numbers are illustrative rather than from a specific brand — but they’re calibrated to be realistic.”</p>
+<p>“We’ve mapped out the supply chain — we know which steps exist and what flows between them. Now we need to answer a different question: if we want to produce exactly [functional unit description], how many times does each step need to run?</p>
+<p>Think of it like a recipe. If a bread recipe produces one loaf, and you want three loaves, the recipe runs three times. If it produces two loaves per batch, and you want three loaves, it runs 1.5 times. The number of times it runs is the scaling factor — it’s just a ratio.”</p>
 </blockquote>
-<p>Then:</p>
-<ol type="1">
-<li>Tell them how many processes are in this case study’s supply chain (count the <code>processes</code> list you read from the recipe card).</li>
-<li>Ask them to open the structure diagram in VS Code: &gt; “Let’s look at the actual diagram. In the file panel on the left side &gt; of VS Code, open the file at: &gt; <code>skills_references/&lt;argument&gt;/product_graph_structure.svg</code> &gt; Click on it and it should display a picture with boxes and arrows. &gt; Tell me when you can see it.”</li>
-<li>Wait for them to confirm before continuing.</li>
-</ol>
-<p>If they are not sure how to open it in VS Code, explain: &gt; “In the left sidebar of VS Code you’ll see a list of folders. Click the &gt; arrow next to <code>skills_references</code>, then the arrow next to <code>&lt;product&gt;</code>, &gt; and you’ll see the file listed there. Click once on its name to open it.”</p>
-<hr>
-</section>
-<section id="step-3-walk-through-each-process-box" class="level3">
-<h3 class="anchored" data-anchor-id="step-3-walk-through-each-process-box">Step 3 — Walk through each process box</h3>
-<p>Once the student confirms they can see the diagram, walk through each process one by one. Use the <code>processes</code> list from the recipe card.</p>
-<p>For each process, name it in plain English — do NOT just repeat the technical label. Explain what real-world activity it represents. For example:</p>
-<ul>
-<li>“P1 — Oil extraction” → “This is an oil well — the starting point of the whole supply chain. This is where crude oil is pumped out of the ground.”</li>
-<li>“P2 — Polyester fiber production” → “This is a chemical factory that converts the crude oil into polyester — a plastic-like fibre that can be spun into thread.”</li>
-<li>“P3 — T-shirt assembly” → “This is the garment factory — the last step — where rolls of polyester fabric are cut and sewn into finished shirts.”</li>
-<li>“P1 — Sheep farming” → “This is the farm where sheep are raised. The sheep grow fleece, which is sheared once a year and sent off for processing.”</li>
-<li>“P2 — Wool yarn production” → “This is the mill where the raw fleece is washed, combed, and spun into yarn.”</li>
-</ul>
-<p>After explaining all the boxes, ask: &gt; “Looking at the diagram, which box do you think represents the finished &gt; product — the thing that gets sold to a customer?”</p>
-<p>Wait for their answer, then confirm: it is the <strong>reference process</strong> (use the <code>reference_process</code> field from the recipe card). Explain that LCA always starts from this box and works backwards through the chain.</p>
-<hr>
-</section>
-<section id="step-4-walk-through-the-arrows" class="level3">
-<h3 class="anchored" data-anchor-id="step-4-walk-through-the-arrows">Step 4 — Walk through the arrows</h3>
-<p>Now explain what the arrows represent.</p>
+<p>Show the structure diagram so the student can see the overall shape of the chain before diving into individual processes. Output this markdown image tag <strong>verbatim</strong> (substituting the argument for <code>&lt;argument&gt;</code>):</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="skills_references/cotton_fiber/product_graph_structure.svg" class="img-fluid figure-img"></p>
+<figcaption>Cotton Fiber supply chain — structure</figcaption>
+</figure>
+</div>
+<pre><code>![&lt;product name&gt; supply chain — structure](skills_references/&lt;argument&gt;/product_graph_structure.svg)</code></pre>
+<p>Briefly orient them to it:</p>
 <blockquote class="blockquote">
-<p>“Each arrow shows something flowing from one process to the next — a material, a product, or a component. In a supply chain, nothing comes from nowhere: every input to one step is the output of another step.”</p>
+<p>“Here is the supply chain map. Each box is one step in the chain — a process. The arrows show what flows from one step to the next. The rightmost box is the <strong>reference process</strong> — the finishing line, the step that delivers the product we are studying.”</p>
 </blockquote>
-<p>Walk through each arrow using the <code>inputs</code> fields from the recipe card. Name the flow in plain English and give the amount if it is in the recipe card. For example:</p>
-<ul>
-<li>Crude oil → Polyester fiber: “The oil well sends crude oil to the chemical factory. About 1.5 kg of crude oil is needed to make just 1 kg of polyester fibre.”</li>
-<li>Polyester fiber → T-shirt: “The chemical factory sends polyester fibre to the garment factory. About 0.2 kg of fibre goes into one T-shirt.”</li>
-</ul>
-<p>Then ask: &gt; “If you follow the arrows from left to right, which direction is &gt; ‘upstream’ — towards the raw materials — and which direction is &gt; ‘downstream’ — towards the customer?”</p>
-<p>Confirm: upstream = left (towards raw materials), downstream = right (towards the finished product and the customer).</p>
 <hr>
-</section>
-<section id="step-5-explain-the-system-boundary" class="level3">
-<h3 class="anchored" data-anchor-id="step-5-explain-the-system-boundary">Step 5 — Explain the system boundary</h3>
-<p>Point out what is NOT in the diagram.</p>
+<p>Next, introduce the idea of unit process data and walk through each process <strong>one diagram at a time</strong>. For each process P1, P2, … (in order from the recipe card <code>processes</code> list), show its unit process card:</p>
+<pre><code>![P1 — [process name] unit process](skills_references/&lt;argument&gt;/unit_process_P1.svg)</code></pre>
+<p>After showing each diagram, say something like:</p>
 <blockquote class="blockquote">
-<p>“Every supply chain diagram has a boundary — a line around what is included and what is left out. This study is called ‘cradle to gate’, which means it starts at the raw material (the ‘cradle’) and ends at the factory gate — it does not include what happens after the product is sold.”</p>
+<p>“This is the specification sheet for [process name]. The box in the middle is the process. The arrow leaving to the right is the <strong>reference output</strong> — what this process produces in a single run: [reference_output.amount] [reference_output.unit] of [reference_output.flow]. That number is the key one to remember.</p>
+<p>On the left you can see what it consumes as an input (if anything). Below are the gases it releases — the emissions — and above are any natural resources it draws on.”</p>
 </blockquote>
-<p>Ask one question based on the product:</p>
-<ul>
-<li>For <strong>polyester_tshirt</strong>: “What do you think happens to a T-shirt after a customer buys it that is NOT in this diagram? Can you think of at least one step that has been left out?” (Expected answers: washing, drying, wearing, disposal, recycling — all correct.)</li>
-<li>For <strong>wool_yarn</strong>: “The diagram starts at the sheep farm. But sheep need to eat — and growing their feed takes energy and land. Why do you think the study did not include a ‘feed production’ box upstream of the farm?” (Expected answer: simplification, data availability, or scope decision — all valid. Confirm that scope decisions are always a trade-off.)</li>
-</ul>
-<p>Validate their answer and explain that every LCA study makes these choices explicitly — a study’s conclusions are only valid within the scope it declares.</p>
+<p>Do this for every process in the recipe card before moving on to the table. Emphasise the <strong>reference output amount</strong> each time — that is what the scaling calculation divides by.</p>
+<hr>
+<p>After all unit process diagrams have been shown, say:</p>
+<blockquote class="blockquote">
+<p>“Now let’s collect all of that into one table so we can see the whole picture at once:”</p>
+</blockquote>
+<p>Build a clear summary table from the recipe card data. Include one row per process showing: the process name, its reference output (what it produces per run), its inputs (what it consumes per run, if any), and its emissions (what gases it releases per run). Use plain column headers. For example:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Process</th>
+<th>Produces per run</th>
+<th>Consumes per run</th>
+<th>Emits per run</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>P1 — Fertilizer production</td>
+<td>1.0 kg N-fertilizer</td>
+<td>—</td>
+<td>3.5 kg CO₂</td>
+</tr>
+<tr class="even">
+<td>P2 — Cotton farming</td>
+<td>1.0 kg Cotton fiber</td>
+<td>0.2 kg N-fertilizer</td>
+<td>0.8 kg CO₂, 0.015 kg N₂O, 0.010 kg NH₃</td>
+</tr>
+</tbody>
+</table>
+<p>Adapt this table to whatever processes, inputs, and emissions are in the recipe card for the current case study. After the table, say:</p>
+<blockquote class="blockquote">
+<p>“These are the building blocks. Every number in the table came from measurement or a database — not from guessing. Now we can use them to figure out how many times each process needs to run.”</p>
+</blockquote>
+<p>Then ask the student one opening question to start them thinking:</p>
+<blockquote class="blockquote">
+<p>“The [reference process name] is the final step — it produces the finished [product name]. If we want exactly [functional_unit.amount] [functional_unit.unit] of [functional_unit.description], how many times do you think the [reference process name] needs to run?”</p>
+</blockquote>
+<p>Wait for their answer. They will almost always say “once” or “1 time” — which is correct for all three of our case studies (since the functional unit is exactly what the reference process produces in one run).</p>
 <hr>
 </section>
-<section id="step-6-connect-to-a-business-or-sourcing-decision" class="level3">
-<h3 class="anchored" data-anchor-id="step-6-connect-to-a-business-or-sourcing-decision">Step 6 — Connect to a business or sourcing decision</h3>
-<p>Close with one practical observation connecting the supply chain map to something a fashion or retail professional would care about. Tailor it to the product. For example:</p>
+<section id="step-2-confirm-the-reference-process-scaling-factor" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-confirm-the-reference-process-scaling-factor">Step 2 — Confirm the reference process scaling factor</h3>
+<p>Validate their answer and explain why it is right.</p>
+<p>The reference process has index N (e.g.&nbsp;P2 in a 2-process chain, P3 in a 3-process chain). Use the matching subscript notation throughout — sN = 1.0.</p>
+<blockquote class="blockquote">
+<p>“Exactly right. [Reference process name] produces [reference_output.amount] [reference_output.flow] per run — which is exactly our functional unit. So it runs exactly <strong>1 time</strong>. We write that as:</p>
+<p><strong>sN = 1.0</strong> (where N is the index of the reference process)</p>
+<p>For example, if the reference process is P2, write <strong>s2 = 1.0</strong>. If it is P3, write <strong>s3 = 1.0</strong>.</p>
+<p>In LCA, this is always where we start. The finishing-line process always gets a scaling factor of 1 (assuming the functional unit equals exactly one run of that process, which is true in all our case studies).”</p>
+</blockquote>
+<p>Then transition to the upstream processes:</p>
+<blockquote class="blockquote">
+<p>“Now here is where it gets interesting. [Reference process name] needs [input.amount] [input.flow] as an input — it consumes that from an upstream step. We need to figure out how many times that upstream step has to run to supply enough.”</p>
+</blockquote>
+<hr>
+</section>
+<section id="step-3-work-backwards-one-step-at-a-time" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-work-backwards-one-step-at-a-time">Step 3 — Work backwards one step at a time</h3>
+<p>For each upstream process, guide the student through one calculation. Do NOT do all processes in one go — one question per process.</p>
+<p>Use the subscript notation consistently: s1 for P1, s2 for P2, s3 for P3.</p>
+<p>Use this calculation pattern for each step, translating it into plain English:</p>
+<p><strong>The formula (never show it as algebra — always as a sentence):</strong> &gt; “[Downstream process name] runs sN = [s_downstream] time(s), and each run &gt; consumes [input.amount] [input.flow]. So in total it needs &gt; [input.amount × s_downstream] [input.flow]. &gt; &gt; [Upstream process name] produces [reference_output.amount] [reference_output.flow] &gt; per run. To supply [total needed], it needs to run: &gt; &gt; sM = [total needed] [unit] ÷ [output per run] [unit]/run = [s_upstream] runs”</p>
+<p>Where M is the index of the upstream process (e.g.&nbsp;s1 for P1). Always write the result as <strong>sM = [value]</strong> so the student sees the notation clearly.</p>
+<p>Show the division as a fraction so the units cancel clearly:</p>
+<blockquote class="blockquote">
+<p>“s1 = 0.2 kg ÷ 1.0 kg/run = 0.2 runs”</p>
+</blockquote>
+<p>For a <strong>2-process chain</strong> (e.g.&nbsp;wool_yarn, cotton_fiber): - One upstream hop: calculate s1, then move to Step 4.</p>
+<p>For a <strong>3-process chain</strong> (e.g.&nbsp;polyester_tshirt): - Calculate the middle process first: s2 - Then use s2 to work out the total input needed by P2 - Then calculate the furthest upstream: s1 - This is the key teaching moment for compound scaling: two hops back</p>
+<p>After each calculation, ask the student to do the division themselves before you reveal the answer:</p>
+<blockquote class="blockquote">
+<p>“Before I show you the answer — can you work out what the division gives? [total needed] ÷ [output per run] = ?”</p>
+</blockquote>
+<p>Accept any reasonable attempt. If they get it right, confirm and celebrate. If they are off or unsure, work through it with them step by step.</p>
+<hr>
+</section>
+<section id="step-4-verify-the-scaling-vector-and-show-the-scaled-supply-chain-diagram" class="level3">
+<h3 class="anchored" data-anchor-id="step-4-verify-the-scaling-vector-and-show-the-scaled-supply-chain-diagram">Step 4 — Verify the scaling vector and show the scaled supply chain diagram</h3>
+<p>Once all scaling factors are calculated, confirm them against the lca_results.md Step 3 table:</p>
+<blockquote class="blockquote">
+<p>“Let me check these against the verified calculation:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Process</th>
+<th>Scaling factor</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>P1 — [name]</td>
+<td>s1 = [value]</td>
+</tr>
+<tr class="even">
+<td>P2 — [name]</td>
+<td>s2 = [value]</td>
+</tr>
+<tr class="odd">
+<td>…</td>
+<td>…</td>
+</tr>
+</tbody>
+</table>
+<p>Our numbers match exactly.”</p>
+</blockquote>
+<p>Then show what the scaling factors mean in practice — the supply chain diagram with all amounts scaled to the functional unit. Show the scaled graph:</p>
+<pre><code>![&lt;product name&gt; supply chain — scaled](skills_references/&lt;argument&gt;/product_graph_scaled.svg)</code></pre>
+<p>Point out what has changed compared to the structure diagram the student saw at the start:</p>
+<blockquote class="blockquote">
+<p>“This is the same supply chain map we looked at earlier — but now every arrow has a real number on it, scaled to our functional unit. The amounts on each arrow are no longer ‘per run’ — they are the actual quantities flowing through the whole chain to produce exactly [functional unit description].</p>
+<p>The scaling factors we just calculated are what made this possible. Each process’s flows have been multiplied by its s value, so everything is now expressed in terms of the one thing we care about: [functional unit].”</p>
+</blockquote>
+<p>Walk through one or two specific arrows to make it concrete. For example for cotton_fiber:</p>
+<blockquote class="blockquote">
+<p>“The arrow from P1 to P2 now shows 0.2 kg of N-fertilizer — that is the 1.0 kg P1 produces per run, multiplied by s1 = 0.2. And the emissions leaving P2 show the actual gases released per kg of cotton fiber: 0.8 kg CO₂, 0.015 kg N₂O, and 0.010 kg NH₃.”</p>
+</blockquote>
+<hr>
+</section>
+<section id="step-5-connect-to-a-business-decision-and-close" class="level3">
+<h3 class="anchored" data-anchor-id="step-5-connect-to-a-business-decision-and-close">Step 5 — Connect to a business decision and close</h3>
+<p>Close with one concrete observation linking the scaling factors to something a sourcing or sustainability professional would care about. Tailor it to the product. For example:</p>
 <ul>
-<li>For <strong>polyester_tshirt</strong>: “A sourcing manager looking at this diagram can immediately see that two of the three steps in the supply chain happen before the garment factory. This means that switching factories alone will not solve a polyester brand’s carbon problem — the real lever is further upstream, in how the fibre is made and where the oil comes from.”</li>
-<li>For <strong>wool_yarn</strong>: “A sustainability team at a wool brand might look at this diagram and ask: what if we worked directly with sheep farms to reduce emissions there? The diagram shows that the farm is upstream of everything else — so any improvement at the farm flows through to the final product automatically.”</li>
+<li><p><strong>wool_yarn</strong>: “The sheep farm runs 1.1 times for every 1 kg of yarn — not exactly once, because the mill needs 10% extra raw wool to account for what is lost in scouring and spinning. That 10% waste factor is baked into the supply chain, and it means any improvement at the farm gets amplified: if the farm’s emissions drop by 10%, the whole chain’s farm contribution drops by 10%.”</p></li>
+<li><p><strong>polyester_tshirt</strong>: “The oil well only runs 0.3 times to produce one shirt — a third of a full cycle. But even at 0.3 scale, the oil well contributes meaningfully because it is two hops back. A sourcing team that only looks at the garment factory (s3 = 1.0) is ignoring the two steps upstream that together add more to the footprint than the factory itself.”</p></li>
+<li><p><strong>cotton_fiber</strong>: “The fertilizer factory runs just s1 = 0.2 times per kg of cotton — a fifth of a full cycle. Its direct CO₂ contribution is modest. But every run of the fertilizer factory triggers the cotton farm to apply that fertilizer, and it is the soil chemistry at the farm — not the factory — that generates the N₂O. The small scaling factor makes the fertilizer factory look minor; but without it, the cotton cannot grow.”</p></li>
 </ul>
-<p>End with an invitation to continue: &gt; “In the next lesson, we’ll look at the numbers on this diagram — how &gt; much each step needs to run to produce exactly one [functional unit]. &gt; That’s where the maths gets interesting. Want to keep going?”</p>
+<p>End with an invitation to continue, pointing forward to the LCIA lesson:</p>
+<blockquote class="blockquote">
+<p>“We now know exactly how much of each gas is released to produce [functional unit] — that list of raw gas quantities is called the <strong>inventory</strong>. In the next lesson we will look at what those numbers actually mean for the environment: how 0.015 kg of N₂O can turn out to matter far more than 1.5 kg of CO₂, once we apply the right characterization factors. Want to keep going?”</p>
+</blockquote>
 <hr>
 </section>
 </section>
 <section id="tone-and-pacing-for-all-responses" class="level2">
 <h2 class="anchored" data-anchor-id="tone-and-pacing-for-all-responses">Tone and pacing for all responses</h2>
 <ul>
-<li>Write as if talking to someone who is comfortable with Excel and email but has never read a science report or opened a terminal</li>
+<li>Write as if talking to someone who is comfortable with Excel and email but has never studied chemistry or engineering</li>
 <li>Never use a technical term without explaining it in the same sentence</li>
 <li>One question per message — never stack two questions together</li>
-<li>Keep responses to three to five sentences per turn</li>
-<li>If the student seems stuck, offer a multiple-choice prompt: “Would you say the first step is more like (a) a farm, (b) a factory, or (c) a shop?”</li>
+<li>Show division as “quantity ÷ rate = number of runs” with units written out so they cancel naturally, just like dimensional analysis in the coffee exercise</li>
+<li>If the student seems stuck, offer a multiple-choice prompt: “Would you say the answer is closer to (a) 0.3 runs, (b) 1.0 run, or (c) 3.0 runs — and why?”</li>
 <li>Phrases that help: “This is a perfectly normal question”, “You are asking exactly the right thing”, “This trips a lot of people up at first”</li>
 <li>End every response with either a question or a clear invitation to continue</li>
 </ul>
