@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>plan_switch_to_quarto – Agentic LCA</title>
+<title>plan_reference_examples – Agentic LCA</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -150,7 +150,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../plan/PLAN_SWITCH_TO_QUARTO.html">Switch to Quarto</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../plan/PLAN_REFERENCE_EXAMPLES.html">Reference Examples</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -176,24 +176,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../plan/PLAN_FOR_EDUCATIONAL_SKILLS.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">for Educational Skills</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../plan/PLAN_FOR_REFERENCE_EXAMPLES.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">for Reference Examples</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../plan/PLAN_FOR_SIMPLE_EXAMPLES.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">for Simple Examples</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../plan/PLAN_PRODUCTION_LCIA_LCA_COMMONS_TRACI.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Production LCIA LCA Commons TRACI</span></a>
   </div>
@@ -202,6 +184,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="sidebar-item-container"> 
   <a href="../plan/PLAN_PRODUCTION_LCIA_RECIPE.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Production LCIA Recipe</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../plan/PLAN_REFERENCE_EXAMPLES.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Reference Examples</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -222,12 +210,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">Skill Recommendations</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../plan/PLAN_SWITCH_TO_QUARTO.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Switch to Quarto</span></a>
-  </div>
-</li>
     </ul>
     </div>
 </nav>
@@ -238,22 +220,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#plan-switch-documentation-site-from-mkdocs-to-quarto" id="toc-plan-switch-documentation-site-from-mkdocs-to-quarto" class="nav-link active" data-scroll-target="#plan-switch-documentation-site-from-mkdocs-to-quarto">Plan: Switch Documentation Site from MkDocs to Quarto</a>
+  <li><a href="#plan-for-reference-lca-teaching-examples" id="toc-plan-for-reference-lca-teaching-examples" class="nav-link active" data-scroll-target="#plan-for-reference-lca-teaching-examples">Plan for Reference LCA Teaching Examples</a>
   <ul class="collapse">
-  <li><a href="#what-this-plan-covers" id="toc-what-this-plan-covers" class="nav-link" data-scroll-target="#what-this-plan-covers">What This Plan Covers</a></li>
-  <li><a href="#why-quarto-instead-of-mkdocs" id="toc-why-quarto-instead-of-mkdocs" class="nav-link" data-scroll-target="#why-quarto-instead-of-mkdocs">Why Quarto Instead of MkDocs</a></li>
-  <li><a href="#will-files-need-to-be-pre-rendered-locally" id="toc-will-files-need-to-be-pre-rendered-locally" class="nav-link" data-scroll-target="#will-files-need-to-be-pre-rendered-locally">Will Files Need to Be Pre-rendered Locally?</a></li>
-  <li><a href="#what-needs-to-change" id="toc-what-needs-to-change" class="nav-link" data-scroll-target="#what-needs-to-change">What Needs to Change</a>
+  <li><a href="#purpose" id="toc-purpose" class="nav-link" data-scroll-target="#purpose">Purpose</a></li>
+  <li><a href="#folder-location" id="toc-folder-location" class="nav-link" data-scroll-target="#folder-location">Folder Location</a></li>
+  <li><a href="#folder-structure-per-case-study" id="toc-folder-structure-per-case-study" class="nav-link" data-scroll-target="#folder-structure-per-case-study">Folder Structure (per case study)</a></li>
+  <li><a href="#file-descriptions" id="toc-file-descriptions" class="nav-link" data-scroll-target="#file-descriptions">File Descriptions</a>
   <ul class="collapse">
-  <li><a href="#remove-no-longer-needed" id="toc-remove-no-longer-needed" class="nav-link" data-scroll-target="#remove-no-longer-needed">Remove (no longer needed)</a></li>
-  <li><a href="#add" id="toc-add" class="nav-link" data-scroll-target="#add">Add</a></li>
-  <li><a href="#keep-unchanged" id="toc-keep-unchanged" class="nav-link" data-scroll-target="#keep-unchanged">Keep unchanged</a></li>
+  <li><a href="#recipe_card.md" id="toc-recipe_card.md" class="nav-link" data-scroll-target="#recipe_card.md"><code>recipe_card.md</code></a></li>
+  <li><a href="#lca_results.md" id="toc-lca_results.md" class="nav-link" data-scroll-target="#lca_results.md"><code>lca_results.md</code></a></li>
+  <li><a href="#product_graph_scaled.svg" id="toc-product_graph_scaled.svg" class="nav-link" data-scroll-target="#product_graph_scaled.svg"><code>product_graph_scaled.svg</code></a></li>
+  <li><a href="#product_graph_structure.svg" id="toc-product_graph_structure.svg" class="nav-link" data-scroll-target="#product_graph_structure.svg"><code>product_graph_structure.svg</code></a></li>
+  <li><a href="#notes.md" id="toc-notes.md" class="nav-link" data-scroll-target="#notes.md"><code>notes.md</code></a></li>
   </ul></li>
-  <li><a href="#the-_quarto.yml-configuration" id="toc-the-_quarto.yml-configuration" class="nav-link" data-scroll-target="#the-_quarto.yml-configuration">The <code>_quarto.yml</code> Configuration</a></li>
-  <li><a href="#the-github-actions-workflow" id="toc-the-github-actions-workflow" class="nav-link" data-scroll-target="#the-github-actions-workflow">The GitHub Actions Workflow</a></li>
-  <li><a href="#navigation-structure" id="toc-navigation-structure" class="nav-link" data-scroll-target="#navigation-structure">Navigation Structure</a></li>
-  <li><a href="#steps-to-implement" id="toc-steps-to-implement" class="nav-link" data-scroll-target="#steps-to-implement">Steps to Implement</a></li>
-  <li><a href="#things-to-watch-out-for" id="toc-things-to-watch-out-for" class="nav-link" data-scroll-target="#things-to-watch-out-for">Things to Watch Out For</a></li>
+  <li><a href="#the-three-fit-reference-case-studies" id="toc-the-three-fit-reference-case-studies" class="nav-link" data-scroll-target="#the-three-fit-reference-case-studies">The Three FIT Reference Case Studies</a>
+  <ul class="collapse">
+  <li><a href="#case-1-wool-yarn-1-layer-deep-climate-only" id="toc-case-1-wool-yarn-1-layer-deep-climate-only" class="nav-link" data-scroll-target="#case-1-wool-yarn-1-layer-deep-climate-only">Case 1 — Wool yarn (1 layer deep, climate only)</a></li>
+  <li><a href="#case-2-polyester-t-shirt-2-layers-deep-climate-only" id="toc-case-2-polyester-t-shirt-2-layers-deep-climate-only" class="nav-link" data-scroll-target="#case-2-polyester-t-shirt-2-layers-deep-climate-only">Case 2 — Polyester T-shirt (2 layers deep, climate only)</a></li>
+  <li><a href="#case-3-cotton-fiber-1-layer-multi-indicator" id="toc-case-3-cotton-fiber-1-layer-multi-indicator" class="nav-link" data-scroll-target="#case-3-cotton-fiber-1-layer-multi-indicator">Case 3 — Cotton fiber (1 layer, multi-indicator)</a></li>
+  </ul></li>
   </ul></li>
   </ul>
 </nav>
@@ -264,165 +249,155 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<section id="plan-switch-documentation-site-from-mkdocs-to-quarto" class="level1">
-<h1>Plan: Switch Documentation Site from MkDocs to Quarto</h1>
-<section id="what-this-plan-covers" class="level2">
-<h2 class="anchored" data-anchor-id="what-this-plan-covers">What This Plan Covers</h2>
-<p>This plan describes switching the project documentation website from MkDocs (what we set up recently) to <strong>Quarto</strong>, a markdown-based publishing system that is more familiar and more flexible for academic and teaching contexts.</p>
-<p>The goal is the same as before: a public website on GitHub Pages that shows the skill sessions and project plans in a readable, searchable format. The switch changes the tool doing the rendering — the content files (the <code>.md</code> files in <code>skills_sessions/</code> and <code>plan/</code>) stay exactly where they are.</p>
+<section id="plan-for-reference-lca-teaching-examples" class="level1">
+<h1>Plan for Reference LCA Teaching Examples</h1>
+<section id="purpose" class="level2">
+<h2 class="anchored" data-anchor-id="purpose">Purpose</h2>
+<p>This document defines the format and content of the completed reference case studies used in this project. Each case study is a self-contained teaching package that provides enough information for an LLM-powered teaching skill to walk a student through any part of the LCA methodology using real numbers from that product.</p>
+<p>The cases are designed for students at FIT (Fashion Institute of Technology) — business and retail management students with no programming background.</p>
 <hr>
 </section>
-<section id="why-quarto-instead-of-mkdocs" class="level2">
-<h2 class="anchored" data-anchor-id="why-quarto-instead-of-mkdocs">Why Quarto Instead of MkDocs</h2>
+<section id="folder-location" class="level2">
+<h2 class="anchored" data-anchor-id="folder-location">Folder Location</h2>
+<p>The reference teaching examples live in <code>skills_references/</code> in the project root — separate from <code>lca_analysis/</code>, which holds examples tied to the openLCA server calculation workflow.</p>
+<pre><code>skills_references/
+  wool_yarn/
+  polyester_tshirt/
+  cotton_fiber/
+  ...</code></pre>
+<p>The teaching skills read from <code>skills_references/&lt;name&gt;/</code> when given a case study argument. This keeps curated teaching material separate from ad-hoc analysis runs.</p>
+<hr>
+</section>
+<section id="folder-structure-per-case-study" class="level2">
+<h2 class="anchored" data-anchor-id="folder-structure-per-case-study">Folder Structure (per case study)</h2>
+<pre><code>skills_references/&lt;product&gt;/
+  recipe_card.md              ← supply chain spec + LCIA method + characterization factors
+  lca_results.md              ← pre-computed results: scaling vector, impacts by process and indicator
+  product_graph_scaled.svg    ← supply chain diagram with scaling factors and flow amounts
+  product_graph_structure.svg ← supply chain diagram with flow names only (no numbers)
+  notes.md                    ← written teaching document: damage pathways, business narrative</code></pre>
+<hr>
+</section>
+<section id="file-descriptions" class="level2">
+<h2 class="anchored" data-anchor-id="file-descriptions">File Descriptions</h2>
+<section id="recipe_card.md" class="level3">
+<h3 class="anchored" data-anchor-id="recipe_card.md"><code>recipe_card.md</code></h3>
+<p>The single quantitative source of truth for the case study. Contains two parts:</p>
+<p><strong>Part 1 — YAML frontmatter (the supply chain spec):</strong> - <code>name</code> — product name and functional unit description - <code>goal</code> — the study goal in plain language - <code>functional_unit</code> — what exactly is being measured (description, amount, unit) - <code>units</code> — unit definitions - <code>products</code> — all intermediate and final products in the supply chain - <code>elementary_flows</code> — emissions to air/water and resource extractions from nature - <code>processes</code> — each step in the supply chain with inputs, outputs, emissions, resources - <code>reference_process</code> — the process that delivers the functional unit - <code>lcia</code> — LCIA method name and impact categories with characterization factors (see below)</p>
+<p><strong>Part 2 — Markdown body (study notes):</strong> - Key assumptions table - Simplifications made - Source references - Any teaching notes specific to this product</p>
+<p><strong>The <code>lcia:</code> section format:</strong></p>
+<p>Simple (climate only):</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">lcia</span><span class="kw">:</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">method</span><span class="kw">:</span><span class="at"> IPCC AR6</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">impact_categories</span><span class="kw">:</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Climate change</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">indicator</span><span class="kw">:</span><span class="at"> GWP100</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">unit</span><span class="kw">:</span><span class="at"> kg CO2 eq</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">characterization_factors</span><span class="kw">:</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">CO2 to air</span><span class="kw">:</span><span class="at"> </span><span class="fl">1.0</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">CH4 to air</span><span class="kw">:</span><span class="at"> </span><span class="fl">27.9</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Multi-indicator:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">lcia</span><span class="kw">:</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">method</span><span class="kw">:</span><span class="at"> EF 3.0</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">impact_categories</span><span class="kw">:</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Climate change</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">indicator</span><span class="kw">:</span><span class="at"> GWP100</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">unit</span><span class="kw">:</span><span class="at"> kg CO2 eq</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">characterization_factors</span><span class="kw">:</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">CO2 to air</span><span class="kw">:</span><span class="at"> </span><span class="fl">1.0</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">CH4 to air</span><span class="kw">:</span><span class="at"> </span><span class="fl">27.9</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">N2O to air</span><span class="kw">:</span><span class="at"> </span><span class="fl">273.0</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Eutrophication (terrestrial)</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">indicator</span><span class="kw">:</span><span class="at"> EP-terrestrial</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">unit</span><span class="kw">:</span><span class="at"> mol N eq</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">characterization_factors</span><span class="kw">:</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">NH3 to air</span><span class="kw">:</span><span class="at"> </span><span class="fl">3.54</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">N2O to air</span><span class="kw">:</span><span class="at"> </span><span class="fl">0.27</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The method name (e.g., “EF 3.0”, “IPCC AR6”) is the published standard the factors come from. The factors are embedded in the recipe card so calculations work without requiring the LCIA method to be loaded in the openLCA database. The factors must match the named standard’s published values.</p>
+<hr>
+</section>
+<section id="lca_results.md" class="level3">
+<h3 class="anchored" data-anchor-id="lca_results.md"><code>lca_results.md</code></h3>
+<p>Pre-computed once (requires the openLCA server) and committed to the repository. Regenerate only when the recipe card changes. Contains:</p>
 <ul>
-<li>You already know Quarto — less friction when tweaking layouts or navigation</li>
-<li>Quarto renders standard <code>.md</code> files natively with no special syntax needed</li>
-<li>Quarto’s website theme is cleaner for document-heavy sites</li>
-<li>Quarto has strong GitHub Actions support — no local rendering required</li>
-<li>No Python dependency for the docs build itself (Quarto is a standalone tool)</li>
+<li>Goal and scope statement</li>
+<li>Reference flow vector f</li>
+<li>Technology matrix A</li>
+<li>Scaling vector s = A⁻¹ · f (how much each process runs per functional unit)</li>
+<li>Intervention matrix B (emissions per unit of each process)</li>
+<li>LCI results B · s (total emissions per functional unit)</li>
+<li>LCIA results (characterization factors applied — totals per impact category)</li>
+<li>Contribution analysis (which process drives which impact, as a percentage)</li>
 </ul>
 <hr>
 </section>
-<section id="will-files-need-to-be-pre-rendered-locally" class="level2">
-<h2 class="anchored" data-anchor-id="will-files-need-to-be-pre-rendered-locally">Will Files Need to Be Pre-rendered Locally?</h2>
-<p><strong>No.</strong> Quarto can render everything on GitHub’s servers using GitHub Actions. The workflow is:</p>
+<section id="product_graph_scaled.svg" class="level3">
+<h3 class="anchored" data-anchor-id="product_graph_scaled.svg"><code>product_graph_scaled.svg</code></h3>
+<p>Generated by <code>lca_scripts/lca_svg.py</code> from the recipe card. Shows: - Each process as a labelled box - Scaling factor (s) on each box - Flow amounts on each arrow between processes - Emissions and resource flows as coloured side arrows</p>
+<hr>
+</section>
+<section id="product_graph_structure.svg" class="level3">
+<h3 class="anchored" data-anchor-id="product_graph_structure.svg"><code>product_graph_structure.svg</code></h3>
+<p>Generated by <code>lca_scripts/lca_svg.py --structure</code> from the recipe card. Shows: - Each process as a labelled box - Flow names on arrows (no quantities) - Clean overview of supply chain structure</p>
+<hr>
+</section>
+<section id="notes.md" class="level3">
+<h3 class="anchored" data-anchor-id="notes.md"><code>notes.md</code></h3>
+<p>A written teaching document. Not generated — written by hand (or LLM-assisted). Contains:</p>
 <ol type="1">
-<li>You push a change to <code>main</code> (e.g., a new session file)</li>
-<li>GitHub automatically installs Quarto on a cloud server</li>
-<li>Quarto renders all the <code>.md</code> files to HTML</li>
-<li>The rendered site is pushed to the <code>gh-pages</code> branch</li>
-<li>GitHub Pages serves the site publicly</li>
-</ol>
-<p>You never need to run Quarto locally unless you want a preview before pushing. If you do want a local preview, it is one command: <code>quarto preview</code>.</p>
-<hr>
-</section>
-<section id="what-needs-to-change" class="level2">
-<h2 class="anchored" data-anchor-id="what-needs-to-change">What Needs to Change</h2>
-<section id="remove-no-longer-needed" class="level3">
-<h3 class="anchored" data-anchor-id="remove-no-longer-needed">Remove (no longer needed)</h3>
+<li><p><strong>LCIA method explanation</strong> — what EF 3.0 or IPCC AR6 is, why it was chosen for this product, what the indicators mean in plain language</p></li>
+<li><p><strong>Damage pathways</strong> — for each impact category, the full chain: <code>emission → atmospheric/ecological mechanism → midpoint indicator → endpoint damage</code></p>
+<p>Example for N2O:</p>
 <ul>
-<li><code>mkdocs.yml</code> — the MkDocs configuration file</li>
-<li><code>requirements-docs.txt</code> — the Python package list for MkDocs</li>
-<li><code>.github/workflows/deploy-docs.yml</code> — the MkDocs deploy action</li>
-<li><code>site/</code> folder in <code>.gitignore</code> — replace with <code>_site/</code> (Quarto’s output folder)</li>
-</ul>
-</section>
-<section id="add" class="level3">
-<h3 class="anchored" data-anchor-id="add">Add</h3>
-<ul>
-<li><code>_quarto.yml</code> — Quarto’s configuration file (replaces <code>mkdocs.yml</code>)</li>
-<li><code>.github/workflows/deploy-quarto.yml</code> — new GitHub Action using <code>quarto-dev/quarto-actions</code></li>
-<li><code>index.qmd</code> or keep <code>docs/index.md</code> — the homepage</li>
-</ul>
-</section>
-<section id="keep-unchanged" class="level3">
-<h3 class="anchored" data-anchor-id="keep-unchanged">Keep unchanged</h3>
-<ul>
-<li><code>docs/sessions</code> symlink → <code>../skills_sessions</code></li>
-<li><code>docs/plans</code> symlink → <code>../plan</code></li>
-<li>All session <code>.md</code> files and plan <code>.md</code> files</li>
-<li><code>generate_sessions.py</code>, <code>generate_plans.py</code> (still needed for the hand-rolled viewer)</li>
-<li><code>skills_sessions/index.html</code> and root <code>index.html</code> (the hand-rolled viewer stays)</li>
-</ul>
-<hr>
-</section>
-</section>
-<section id="the-_quarto.yml-configuration" class="level2">
-<h2 class="anchored" data-anchor-id="the-_quarto.yml-configuration">The <code>_quarto.yml</code> Configuration</h2>
-<p>Quarto uses a single <code>_quarto.yml</code> file at the project root. For a website with a sidebar showing Sessions and Plans, it looks like this:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">project</span><span class="kw">:</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">type</span><span class="kw">:</span><span class="at"> website</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">output-dir</span><span class="kw">:</span><span class="at"> _site</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">website</span><span class="kw">:</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"LCA Learning Hub"</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">navbar</span><span class="kw">:</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">left</span><span class="kw">:</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/index.md</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">text</span><span class="kw">:</span><span class="at"> Home</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/sessions/</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">text</span><span class="kw">:</span><span class="at"> Sessions</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">href</span><span class="kw">:</span><span class="at"> docs/plans/</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">text</span><span class="kw">:</span><span class="at"> Plans</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">theme</span><span class="kw">:</span><span class="at"> cosmo</span></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">toc</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Quarto’s <code>cosmo</code> theme (or <code>flatly</code>, <code>litera</code>, <code>journal</code>) is clean and readable. The <code>toc: true</code> adds a table of contents to each page automatically.</p>
-<hr>
-</section>
-<section id="the-github-actions-workflow" class="level2">
-<h2 class="anchored" data-anchor-id="the-github-actions-workflow">The GitHub Actions Workflow</h2>
-<p>The deploy workflow for Quarto is simpler than MkDocs because the Quarto team provides pre-built Actions:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">name</span><span class="kw">:</span><span class="at"> Deploy Quarto Site to GitHub Pages</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">on</span><span class="kw">:</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">push</span><span class="kw">:</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">branches</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">main</span><span class="kw">]</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu">jobs</span><span class="kw">:</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">deploy</span><span class="kw">:</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">runs-on</span><span class="kw">:</span><span class="at"> ubuntu-latest</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">permissions</span><span class="kw">:</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">contents</span><span class="kw">:</span><span class="at"> write</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">steps</span><span class="kw">:</span></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> actions/checkout@v4</span></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">with</span><span class="kw">:</span></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">fetch-depth</span><span class="kw">:</span><span class="at"> </span><span class="dv">0</span></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Set up Quarto</span></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> quarto-dev/quarto-actions/setup@v2</span></span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Regenerate manifest files</span></span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="fu">        run</span><span class="kw">: </span><span class="ch">|</span></span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>          python3 skills_sessions/generate_sessions.py</span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>          python3 plan/generate_plans.py</span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Publish to GitHub Pages</span></span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> quarto-dev/quarto-actions/publish@v2</span></span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">with</span><span class="kw">:</span></span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">target</span><span class="kw">:</span><span class="at"> gh-pages</span></span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">env</span><span class="kw">:</span></span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">GITHUB_TOKEN</span><span class="kw">:</span><span class="at"> ${{ secrets.GITHUB_TOKEN }}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Note: the <code>quarto-dev/quarto-actions/publish</code> step handles the <code>_site/</code> build and the push to <code>gh-pages</code> in one go. No <code>mkdocs gh-deploy</code> needed.</p>
-<hr>
-</section>
-<section id="navigation-structure" class="level2">
-<h2 class="anchored" data-anchor-id="navigation-structure">Navigation Structure</h2>
-<p>Quarto auto-discovers <code>.md</code> files inside the folders listed in <code>_quarto.yml</code>. The sidebar for Sessions will show one entry per skill subfolder (<code>functional-unit/</code>, <code>system-boundary/</code>, etc.) and Plans will list each <code>PLAN_*.md</code> file. No manual file lists needed.</p>
-<p>Files to exclude from Quarto rendering (same idea as MkDocs <code>exclude_docs</code>):</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">project</span><span class="kw">:</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">type</span><span class="kw">:</span><span class="at"> website</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">render</span><span class="kw">:</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> docs/index.md</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> docs/sessions/**/*.md</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> docs/plans/PLAN_*.md</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Using an explicit <code>render:</code> list is the cleanest way to tell Quarto exactly which files to include, avoiding the other files in <code>docs/</code>.</p>
-<hr>
-</section>
-<section id="steps-to-implement" class="level2">
-<h2 class="anchored" data-anchor-id="steps-to-implement">Steps to Implement</h2>
-<ol type="1">
-<li><p><strong>Delete MkDocs files</strong> — remove <code>mkdocs.yml</code>, <code>requirements-docs.txt</code>, <code>.github/workflows/deploy-docs.yml</code></p></li>
-<li><p><strong>Create <code>_quarto.yml</code></strong> — at the repo root with website config and explicit <code>render:</code> list for <code>docs/sessions/</code> and <code>docs/plans/</code></p></li>
-<li><p><strong>Create the deploy Action</strong> — <code>.github/workflows/deploy-quarto.yml</code> using <code>quarto-dev/quarto-actions</code></p></li>
-<li><p><strong>Update <code>.gitignore</code></strong> — replace <code>site/</code> with <code>_site/</code></p></li>
-<li><p><strong>Push and watch the Action</strong> — first run installs Quarto on GitHub’s servers and publishes to <code>gh-pages</code></p></li>
-<li><p><strong>Switch GitHub Pages source</strong> — if not already on <code>gh-pages</code> branch, change it in repo Settings → Pages</p></li>
+<li>N2O emitted from fertilised soil</li>
+<li>Acts as a greenhouse gas (radiative forcing) AND depletes stratospheric ozone</li>
+<li>Midpoint: GWP100 = 273 kg CO2 eq per kg N2O</li>
+<li>Endpoint: climate change (human health, ecosystem quality) + UV exposure</li>
+</ul></li>
+<li><p><strong>Key findings</strong> — the main numbers, written for a business student: which process dominates, what surprised us, how the result compares to everyday reference points (km driven, days of electricity use, etc.)</p></li>
+<li><p><strong>Business relevance</strong> — what a sourcing, procurement, or product design decision could change based on this result</p></li>
 </ol>
 <hr>
 </section>
-<section id="things-to-watch-out-for" class="level2">
-<h2 class="anchored" data-anchor-id="things-to-watch-out-for">Things to Watch Out For</h2>
-<ul>
-<li><p><strong>Symlinks</strong>: Quarto follows symlinks on Linux/Mac but behaviour can be inconsistent. If <code>docs/sessions</code> and <code>docs/plans</code> symlinks cause issues, the fallback is to list the real paths (<code>skills_sessions/</code> and <code>plan/</code>) directly in the <code>render:</code> list — no symlinks needed.</p></li>
-<li><p><strong>Image links in session files</strong>: Session files link to diagrams using <code>../../skills_references/...</code>. These images exist on disk but are not inside the Quarto render tree. Quarto will render the page but the images will be broken. Fix later by either copying the SVGs into <code>docs/</code> or adding a <code>docs/skills_references</code> symlink.</p></li>
-<li><p><strong><code>index.md</code> vs <code>index.qmd</code></strong>: Quarto prefers <code>.qmd</code> files but renders <code>.md</code> fine. The homepage can stay as <code>docs/index.md</code>.</p></li>
-<li><p><strong>No PDF output needed</strong>: set <code>format: html</code> only in <code>_quarto.yml</code>. This keeps the build fast and avoids needing LaTeX installed on the GitHub runner.</p></li>
-</ul>
+</section>
+<section id="the-three-fit-reference-case-studies" class="level2">
+<h2 class="anchored" data-anchor-id="the-three-fit-reference-case-studies">The Three FIT Reference Case Studies</h2>
+<p>These three cases are designed as a teaching progression. Each adds exactly one new concept. All are directly relevant to fashion and textiles.</p>
+<hr>
+<section id="case-1-wool-yarn-1-layer-deep-climate-only" class="level3">
+<h3 class="anchored" data-anchor-id="case-1-wool-yarn-1-layer-deep-climate-only">Case 1 — Wool yarn (1 layer deep, climate only)</h3>
+<p><strong>Folder:</strong> <code>skills_references/wool_yarn/</code></p>
+<p><strong>Supply chain:</strong></p>
+<pre><code>P1: Sheep farming  →  P2: Wool yarn production  [reference]</code></pre>
+<p><strong>Depth:</strong> 1 layer. The sheep farm is one upstream node from the reference process. The scaling is straightforward: to produce 1 kg of yarn, you need 1.1 kg of raw fleece (10% waste in scouring and spinning), so the sheep farm runs at scale 1.1.</p>
+<p><strong>Emissions:</strong> - P1 (Sheep farming): CO2 (farm energy), CH4 (enteric fermentation — sheep digestion) - P2 (Wool yarn): CO2 (scouring, spinning energy)</p>
+<p><strong>LCIA method:</strong> IPCC AR6, GWP100 only</p>
+<p><strong>Key teaching moment:</strong> Sheep methane. CH4 has a GWP of 27.9 — nearly 28 times more potent than CO2. Wool’s “natural” reputation does not mean low-carbon.</p>
+<hr>
+</section>
+<section id="case-2-polyester-t-shirt-2-layers-deep-climate-only" class="level3">
+<h3 class="anchored" data-anchor-id="case-2-polyester-t-shirt-2-layers-deep-climate-only">Case 2 — Polyester T-shirt (2 layers deep, climate only)</h3>
+<p><strong>Folder:</strong> <code>skills_references/polyester_tshirt/</code></p>
+<p><strong>Supply chain:</strong></p>
+<pre><code>P1: Oil extraction  →  P2: Polyester fiber production  →  P3: T-shirt assembly  [reference]</code></pre>
+<p><strong>Depth:</strong> 2 layers. Oil extraction is two hops back from the finished T-shirt. Calculating the oil extraction’s contribution requires compound scaling: how much fiber per shirt × how much oil per kg of fiber.</p>
+<p><strong>Emissions:</strong> - P1 (Oil extraction): CO2 (combustion of energy), CH4 (fugitive from wells) - P2 (Polyester fiber): CO2 (polymerisation, energy; ~1.5 kg oil per kg fiber) - P3 (T-shirt assembly): CO2 (cutting, sewing, factory energy)</p>
+<p><strong>LCIA method:</strong> IPCC AR6, GWP100 only</p>
+<p><strong>Key teaching moment:</strong> “Your T-shirt is oil.” Polyester is a petroleum product. The matrix inversion shows how the emissions from the oil well end up attributed to the shirt, even though the well is two steps back in the supply chain.</p>
+<hr>
+</section>
+<section id="case-3-cotton-fiber-1-layer-multi-indicator" class="level3">
+<h3 class="anchored" data-anchor-id="case-3-cotton-fiber-1-layer-multi-indicator">Case 3 — Cotton fiber (1 layer, multi-indicator)</h3>
+<p><strong>Folder:</strong> <code>skills_references/cotton_fiber/</code></p>
+<p><strong>Supply chain:</strong></p>
+<pre><code>P1: Fertilizer production  →  P2: Cotton farming  [reference]</code></pre>
+<p><strong>Depth:</strong> 1 layer. Same structural depth as wool yarn — but this case introduces a second impact category, making the LCIA step the main teaching focus.</p>
+<p><strong>Emissions:</strong> - P1 (Fertilizer): CO2 (energy-intensive production of synthetic nitrogen fertilizer) - P2 (Cotton farming): CO2 (machinery, irrigation energy), N2O (from fertilised soil — microbial conversion of nitrogen), NH3 (volatilisation from soil)</p>
+<p><strong>LCIA method:</strong> EF 3.0, two impact categories: - Climate change (GWP100): CO2, N2O, CH4 - Terrestrial eutrophication (EP-terrestrial): NH3, N2O</p>
+<p><strong>Key teaching moment:</strong> Cotton has a natural reputation but the field is the problem. N2O from the soil is 273× more potent than CO2 per kg. NH3 causes eutrophication — excess nitrogen in soil and waterways — independently of its climate contribution. The same emission (N2O) hits two different impact categories at once.</p>
 
 
+</section>
 </section>
 </section>
 

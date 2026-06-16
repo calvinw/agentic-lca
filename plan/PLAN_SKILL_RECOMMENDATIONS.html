@@ -141,24 +141,6 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../plan/PLAN_FOR_EDUCATIONAL_SKILLS.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">for Educational Skills</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../plan/PLAN_FOR_REFERENCE_EXAMPLES.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">for Reference Examples</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../plan/PLAN_FOR_SIMPLE_EXAMPLES.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">for Simple Examples</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../plan/PLAN_PRODUCTION_LCIA_LCA_COMMONS_TRACI.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Production LCIA LCA Commons TRACI</span></a>
   </div>
@@ -167,6 +149,12 @@ ul.task-list li input[type="checkbox"] {
   <div class="sidebar-item-container"> 
   <a href="../plan/PLAN_PRODUCTION_LCIA_RECIPE.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Production LCIA Recipe</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../plan/PLAN_REFERENCE_EXAMPLES.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Reference Examples</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -187,12 +175,6 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Skill Recommendations</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../plan/PLAN_SWITCH_TO_QUARTO.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Switch to Quarto</span></a>
-  </div>
-</li>
     </ul>
     </div>
 </nav>
@@ -205,6 +187,8 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#skill-recommendations-elementary-lca-skills-for-beginners" id="toc-skill-recommendations-elementary-lca-skills-for-beginners" class="nav-link active" data-scroll-target="#skill-recommendations-elementary-lca-skills-for-beginners">Skill Recommendations — Elementary LCA Skills for Beginners</a>
   <ul class="collapse">
+  <li><a href="#how-skills-work" id="toc-how-skills-work" class="nav-link" data-scroll-target="#how-skills-work">How Skills Work</a></li>
+  <li><a href="#invocation-pattern" id="toc-invocation-pattern" class="nav-link" data-scroll-target="#invocation-pattern">Invocation Pattern</a></li>
   <li><a href="#recommended-learning-path" id="toc-recommended-learning-path" class="nav-link" data-scroll-target="#recommended-learning-path">Recommended Learning Path</a></li>
   <li><a href="#operational-skills-outside-the-learning-path" id="toc-operational-skills-outside-the-learning-path" class="nav-link" data-scroll-target="#operational-skills-outside-the-learning-path">Operational Skills (outside the learning path)</a></li>
   <li><a href="#all-skills-detail" id="toc-all-skills-detail" class="nav-link" data-scroll-target="#all-skills-detail">All Skills — Detail</a>
@@ -238,8 +222,28 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="skill-recommendations-elementary-lca-skills-for-beginners" class="level1">
 <h1>Skill Recommendations — Elementary LCA Skills for Beginners</h1>
+<section id="how-skills-work" class="level2">
+<h2 class="anchored" data-anchor-id="how-skills-work">How Skills Work</h2>
+<p>Skills are stored in <code>.skillshare/skills/&lt;skill-name&gt;/SKILL.md</code>. When a student types <code>/functional-unit wool_yarn</code>, the skill named <code>functional-unit</code> is loaded and <code>wool_yarn</code> is passed as the argument.</p>
+<p>The skill instructs the AI to: 1. Read the relevant file(s) from <code>skills_references/wool_yarn/</code> 2. Apply a fixed pedagogical sequence using data from those files 3. Ask Socratic questions based on the actual numbers in the case study</p>
+<p>The skill file never contains product-specific facts. All product knowledge lives in the <code>skills_references/</code> folders. This means: - New case studies are immediately available to all skills without editing the skill - Updating a recipe card automatically updates what the skill teaches - Skills stay short and maintainable</p>
+</section>
+<section id="invocation-pattern" class="level2">
+<h2 class="anchored" data-anchor-id="invocation-pattern">Invocation Pattern</h2>
+<pre><code>/&lt;skill-name&gt; &lt;case-study-name&gt;</code></pre>
+<p>Examples:</p>
+<pre><code>/functional-unit wool_yarn
+/functional-unit polyester_tshirt
+/supply-chain cotton_fiber
+/scaling-vector wool_yarn
+/lcia-method cotton_fiber
+/damage-pathway cotton_fiber
+/hotspots polyester_tshirt</code></pre>
+<p>Case study names correspond to folder names in <code>skills_references/</code>.</p>
+<hr>
 <p>Recommended order for a student with no science or coding background. Skills already built are marked ✅. Skills recommended but not yet built are marked ⬜.</p>
 <hr>
+</section>
 <section id="recommended-learning-path" class="level2">
 <h2 class="anchored" data-anchor-id="recommended-learning-path">Recommended Learning Path</h2>
 <table class="caption-top table">
