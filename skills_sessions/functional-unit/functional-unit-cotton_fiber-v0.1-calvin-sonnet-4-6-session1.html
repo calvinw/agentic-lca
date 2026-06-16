@@ -369,11 +369,10 @@ document.addEventListener('DOMContentLoaded', function () {
     if (!prevItem) return;
     const prevContainer = prevItem.querySelector('.sidebar-item-container');
     if (!prevContainer) return;
-    rawLink.style.marginLeft = '6px';
+    rawLink.style.marginLeft = '4px';
     rawLink.style.fontSize = '0.72em';
     rawLink.style.opacity = '0.55';
     rawLink.style.fontWeight = 'normal';
-    rawLink.style.whiteSpace = 'nowrap';
     prevContainer.appendChild(rawLink);
     item.style.display = 'none';
   });
