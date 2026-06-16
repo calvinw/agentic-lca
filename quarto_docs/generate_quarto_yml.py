@@ -186,11 +186,10 @@ lines += [
 ]
 for src, copy in zip(skill_files, skill_copies):
     label = skill_title(src.parent.name)
-    raw_url = f"https://github.com/calvinw/agentic-lca/blob/main/{src.relative_to(ROOT)}"
     lines.append(f'        - text: "{label}"')
     lines.append(f"          href: {q(copy)}")
     lines.append(f'        - text: "(.md version)"')
-    lines.append(f"          href: {raw_url}")
+    lines.append(f"          href: {q(copy)}")
 
 lines += [
     "",
