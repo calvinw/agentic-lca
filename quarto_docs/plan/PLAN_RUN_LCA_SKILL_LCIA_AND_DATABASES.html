@@ -1,0 +1,1435 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>plan_run_lca_skill_lcia_and_databases – Agentic LCA</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-ed6b1312144c53348356da5812719d81.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../custom.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Agentic LCA</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../skills_sessions/index.html"> 
+<span class="menu-text">Sessions</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../plan/index.html" aria-current="page"> 
+<span class="menu-text">Plans</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../skills/index.html"> 
+<span class="menu-text">Skills</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../plan/PLAN_RUN_LCA_SKILL_LCIA_AND_DATABASES.html">RUN_LCA_SKILL_LCIA_AND_DATABASES</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../plan/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../plan/PLAN_BAFU_AND_METHODS_PACK.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">BAFU_AND_METHODS_PACK</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../plan/PLAN_PRODUCTION_LCIA_LCA_COMMONS_TRACI.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PRODUCTION_LCIA_LCA_COMMONS_TRACI</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../plan/PLAN_PRODUCTION_LCIA_RECIPE.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PRODUCTION_LCIA_RECIPE</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../plan/PLAN_REFERENCE_EXAMPLES.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">REFERENCE_EXAMPLES</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../plan/PLAN_REMIXABLE_LCAS.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">REMIXABLE_LCAS</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../plan/PLAN_RUN_LCA_SKILL_LCIA_AND_DATABASES.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">RUN_LCA_SKILL_LCIA_AND_DATABASES</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../plan/PLAN_SKILL_RECOMMENDATIONS.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SKILL_RECOMMENDATIONS</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#plan-adding-lcia-methods-and-database-support-to-the-run-lca-skill" id="toc-plan-adding-lcia-methods-and-database-support-to-the-run-lca-skill" class="nav-link active" data-scroll-target="#plan-adding-lcia-methods-and-database-support-to-the-run-lca-skill">Plan: Adding LCIA Methods and Database Support to the run-lca Skill</a>
+  <ul class="collapse">
+  <li><a href="#background-what-the-skill-can-do-today" id="toc-background-what-the-skill-can-do-today" class="nav-link" data-scroll-target="#background-what-the-skill-can-do-today">Background — What the Skill Can Do Today</a></li>
+  <li><a href="#step-0-audit-the-recipe-card-against-the-olca-schema-do-this-first" id="toc-step-0-audit-the-recipe-card-against-the-olca-schema-do-this-first" class="nav-link" data-scroll-target="#step-0-audit-the-recipe-card-against-the-olca-schema-do-this-first">Step 0 — Audit the Recipe Card Against the olca-schema (DO THIS FIRST)</a>
+  <ul class="collapse">
+  <li><a href="#why-this-must-come-first" id="toc-why-this-must-come-first" class="nav-link" data-scroll-target="#why-this-must-come-first">Why this must come first</a></li>
+  <li><a href="#what-the-olca-schema-looks-like" id="toc-what-the-olca-schema-looks-like" class="nav-link" data-scroll-target="#what-the-olca-schema-looks-like">What the olca-schema looks like</a></li>
+  <li><a href="#mapping-recipe-card-fields-olca-schema" id="toc-mapping-recipe-card-fields-olca-schema" class="nav-link" data-scroll-target="#mapping-recipe-card-fields-olca-schema">Mapping: recipe card fields → olca-schema</a></li>
+  <li><a href="#issues-found-in-the-audit" id="toc-issues-found-in-the-audit" class="nav-link" data-scroll-target="#issues-found-in-the-audit">Issues found in the audit</a></li>
+  </ul></li>
+  <li><a href="#step-1-fix-unit-group-structure" id="toc-step-1-fix-unit-group-structure" class="nav-link" data-scroll-target="#step-1-fix-unit-group-structure">Step 1 — Fix Unit Group Structure</a></li>
+  <li><a href="#step-2-add-lcia-method-support-to-the-recipe-card-and-script" id="toc-step-2-add-lcia-method-support-to-the-recipe-card-and-script" class="nav-link" data-scroll-target="#step-2-add-lcia-method-support-to-the-recipe-card-and-script">Step 2 — Add LCIA Method Support to the Recipe Card and Script</a>
+  <ul class="collapse">
+  <li><a href="#new-recipe-card-fields" id="toc-new-recipe-card-fields" class="nav-link" data-scroll-target="#new-recipe-card-fields">New recipe card fields</a></li>
+  <li><a href="#script-changes" id="toc-script-changes" class="nav-link" data-scroll-target="#script-changes">Script changes</a></li>
+  <li><a href="#new-step-14-output-in-lca_results.md" id="toc-new-step-14-output-in-lca_results.md" class="nav-link" data-scroll-target="#new-step-14-output-in-lca_results.md">New Step 14 output in <code>lca_results.md</code></a></li>
+  </ul></li>
+  <li><a href="#step-3-add-background-process-support" id="toc-step-3-add-background-process-support" class="nav-link" data-scroll-target="#step-3-add-background-process-support">Step 3 — Add Background Process Support</a></li>
+  <li><a href="#conceptual-background-flow-types-unit-process-tables-and-the-lci-result" id="toc-conceptual-background-flow-types-unit-process-tables-and-the-lci-result" class="nav-link" data-scroll-target="#conceptual-background-flow-types-unit-process-tables-and-the-lci-result">Conceptual Background — Flow Types, Unit Process Tables, and the LCI Result</a>
+  <ul class="collapse">
+  <li><a href="#the-flow-type-taxonomy-from-academic-lca-teaching" id="toc-the-flow-type-taxonomy-from-academic-lca-teaching" class="nav-link" data-scroll-target="#the-flow-type-taxonomy-from-academic-lca-teaching">The flow type taxonomy (from academic LCA teaching)</a></li>
+  <li><a href="#how-our-recipe-card-maps-to-these-types-today" id="toc-how-our-recipe-card-maps-to-these-types-today" class="nav-link" data-scroll-target="#how-our-recipe-card-maps-to-these-types-today">How our recipe card maps to these types today</a></li>
+  <li><a href="#why-our-current-recipe-cards-have-no-true-technosphere-inputs" id="toc-why-our-current-recipe-cards-have-no-true-technosphere-inputs" class="nav-link" data-scroll-target="#why-our-current-recipe-cards-have-no-true-technosphere-inputs">Why our current recipe cards have no true Technosphere inputs</a></li>
+  </ul></li>
+  <li><a href="#how-create_product_system-auto-linking-works" id="toc-how-create_product_system-auto-linking-works" class="nav-link" data-scroll-target="#how-create_product_system-auto-linking-works">How <code>create_product_system</code> Auto-Linking Works</a>
+  <ul class="collapse">
+  <li><a href="#what-the-api-does" id="toc-what-the-api-does" class="nav-link" data-scroll-target="#what-the-api-does">What the API does</a></li>
+  <li><a href="#the-scaling-vector-covers-all-processes" id="toc-the-scaling-vector-covers-all-processes" class="nav-link" data-scroll-target="#the-scaling-vector-covers-all-processes">The scaling vector covers all processes</a></li>
+  <li><a href="#what-happens-when-no-background-database-is-loaded" id="toc-what-happens-when-no-background-database-is-loaded" class="nav-link" data-scroll-target="#what-happens-when-no-background-database-is-loaded">What happens when no background database is loaded</a></li>
+  <li><a href="#the-get_providers-method-looking-before-linking" id="toc-the-get_providers-method-looking-before-linking" class="nav-link" data-scroll-target="#the-get_providers-method-looking-before-linking">The <code>get_providers</code> method — looking before linking</a></li>
+  <li><a href="#example-apple-supply-chain-with-background-database-inputs" id="toc-example-apple-supply-chain-with-background-database-inputs" class="nav-link" data-scroll-target="#example-apple-supply-chain-with-background-database-inputs">Example: apple supply chain with background database inputs</a></li>
+  </ul></li>
+  <li><a href="#database-setup-how-to-get-free-lcia-methods-and-process-data" id="toc-database-setup-how-to-get-free-lcia-methods-and-process-data" class="nav-link" data-scroll-target="#database-setup-how-to-get-free-lcia-methods-and-process-data">Database Setup — How to Get Free LCIA Methods and Process Data</a>
+  <ul class="collapse">
+  <li><a href="#the-constraint" id="toc-the-constraint" class="nav-link" data-scroll-target="#the-constraint">The constraint</a></li>
+  <li><a href="#step-by-step-loading-the-free-lcia-methods-package" id="toc-step-by-step-loading-the-free-lcia-methods-package" class="nav-link" data-scroll-target="#step-by-step-loading-the-free-lcia-methods-package">Step-by-step: loading the free LCIA methods package</a></li>
+  <li><a href="#free-background-process-databases" id="toc-free-background-process-databases" class="nav-link" data-scroll-target="#free-background-process-databases">Free background process databases</a></li>
+  </ul></li>
+  <li><a href="#summary-of-work-items" id="toc-summary-of-work-items" class="nav-link" data-scroll-target="#summary-of-work-items">Summary of Work Items</a></li>
+  <li><a href="#suggested-order-of-work" id="toc-suggested-order-of-work" class="nav-link" data-scroll-target="#suggested-order-of-work">Suggested Order of Work</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+<section id="plan-adding-lcia-methods-and-database-support-to-the-run-lca-skill" class="level1">
+<h1>Plan: Adding LCIA Methods and Database Support to the run-lca Skill</h1>
+<section id="background-what-the-skill-can-do-today" class="level2">
+<h2 class="anchored" data-anchor-id="background-what-the-skill-can-do-today">Background — What the Skill Can Do Today</h2>
+<p>The current <code>run-lca</code> skill and <code>lca_analysis.py</code> script build a complete product system in openLCA and run a calculation. However the calculation only returns <strong>raw inventory results</strong> — e.g.&nbsp;“0.1 kg CO₂ per cup”. It does not produce <strong>impact scores</strong> (GWP in kg CO₂-eq, DALYs, species-years, etc.) because no LCIA method is passed to the <code>CalculationSetup</code>.</p>
+<p>In other words, the skill currently stops at <strong>Step 2 (Characterisation)</strong> of the LCIA chain. Steps 3 and 4 (damage modelling, endpoint scores) are not reached.</p>
+<hr>
+</section>
+<section id="step-0-audit-the-recipe-card-against-the-olca-schema-do-this-first" class="level2">
+<h2 class="anchored" data-anchor-id="step-0-audit-the-recipe-card-against-the-olca-schema-do-this-first">Step 0 — Audit the Recipe Card Against the olca-schema (DO THIS FIRST)</h2>
+<section id="why-this-must-come-first" class="level3">
+<h3 class="anchored" data-anchor-id="why-this-must-come-first">Why this must come first</h3>
+<p>The recipe card format was designed from scratch to be readable for students. That was the right goal — but it was written without systematically checking every field against the olca-schema (the actual data format openLCA uses internally). Before extending the recipe card with new fields, we need to confirm that every existing field maps cleanly onto a real olca-schema concept, and identify any gaps or mismatches.</p>
+<p>The olca-schema example files live at: <strong>https://github.com/GreenDelta/olca-schema/tree/master/examples</strong></p>
+</section>
+<section id="what-the-olca-schema-looks-like" class="level3">
+<h3 class="anchored" data-anchor-id="what-the-olca-schema-looks-like">What the olca-schema looks like</h3>
+<p>Every object in openLCA is a JSON file with a <code>@type</code> field, a UUID <code>@id</code>, and typed fields. Here are the key types relevant to the recipe card:</p>
+<p><strong><code>Process</code></strong> — one production step in the supply chain:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"@type"</span><span class="fu">:</span> <span class="st">"Process"</span><span class="fu">,</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"@id"</span><span class="fu">:</span> <span class="st">"59963026-..."</span><span class="fu">,</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"name"</span><span class="fu">:</span> <span class="st">"Steel production"</span><span class="fu">,</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"processType"</span><span class="fu">:</span> <span class="st">"UNIT_PROCESS"</span><span class="fu">,</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"location"</span><span class="fu">:</span> <span class="fu">{</span> <span class="dt">"@type"</span><span class="fu">:</span> <span class="st">"Location"</span><span class="fu">,</span> <span class="dt">"name"</span><span class="fu">:</span> <span class="st">"Germany"</span> <span class="fu">},</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"exchanges"</span><span class="fu">:</span> <span class="ot">[</span> <span class="er">...</span> <span class="ot">]</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong><code>Exchange</code></strong> — one input or output of a process:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"@type"</span><span class="fu">:</span> <span class="st">"Exchange"</span><span class="fu">,</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"internalId"</span><span class="fu">:</span> <span class="dv">1</span><span class="fu">,</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"amount"</span><span class="fu">:</span> <span class="fl">1.0</span><span class="fu">,</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"isInput"</span><span class="fu">:</span> <span class="kw">false</span><span class="fu">,</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"isQuantitativeReference"</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"isAvoidedProduct"</span><span class="fu">:</span> <span class="kw">false</span><span class="fu">,</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"flow"</span><span class="fu">:</span> <span class="fu">{</span> <span class="dt">"@type"</span><span class="fu">:</span> <span class="st">"Flow"</span><span class="fu">,</span> <span class="dt">"name"</span><span class="fu">:</span> <span class="st">"Steel"</span> <span class="fu">},</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"unit"</span><span class="fu">:</span> <span class="fu">{</span> <span class="dt">"@type"</span><span class="fu">:</span> <span class="st">"Unit"</span><span class="fu">,</span> <span class="dt">"name"</span><span class="fu">:</span> <span class="st">"kg"</span> <span class="fu">},</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"flowProperty"</span><span class="fu">:</span> <span class="fu">{</span> <span class="dt">"@type"</span><span class="fu">:</span> <span class="st">"FlowProperty"</span><span class="fu">,</span> <span class="dt">"name"</span><span class="fu">:</span> <span class="st">"Mass"</span> <span class="fu">}</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong><code>Flow</code></strong> — a material, product, energy, or emission that moves between processes:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"@type"</span><span class="fu">:</span> <span class="st">"Flow"</span><span class="fu">,</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"name"</span><span class="fu">:</span> <span class="st">"electricity, high voltage, at grid"</span><span class="fu">,</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"flowType"</span><span class="fu">:</span> <span class="st">"PRODUCT_FLOW"</span><span class="fu">,</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"location"</span><span class="fu">:</span> <span class="fu">{</span> <span class="dt">"name"</span><span class="fu">:</span> <span class="st">"Poland"</span> <span class="fu">},</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"flowProperties"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"isRefFlowProperty"</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"flowProperty"</span><span class="fu">:</span> <span class="fu">{</span> <span class="dt">"name"</span><span class="fu">:</span> <span class="st">"Energy"</span> <span class="fu">}</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  <span class="ot">]</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Flow types are: <code>PRODUCT_FLOW</code> (technosphere), <code>ELEMENTARY_FLOW</code> (biosphere), or <code>WASTE_FLOW</code>.</p>
+<p><strong><code>UnitGroup</code></strong> — a family of related units with conversion factors:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"@type"</span><span class="fu">:</span> <span class="st">"UnitGroup"</span><span class="fu">,</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"name"</span><span class="fu">:</span> <span class="st">"Units of energy"</span><span class="fu">,</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"units"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span> <span class="dt">"name"</span><span class="fu">:</span> <span class="st">"MJ"</span><span class="fu">,</span>  <span class="dt">"isRefUnit"</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span>  <span class="dt">"conversionFactor"</span><span class="fu">:</span> <span class="fl">1.0</span> <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span> <span class="dt">"name"</span><span class="fu">:</span> <span class="st">"kWh"</span><span class="fu">,</span> <span class="dt">"isRefUnit"</span><span class="fu">:</span> <span class="kw">false</span><span class="fu">,</span> <span class="dt">"conversionFactor"</span><span class="fu">:</span> <span class="fl">3.6</span> <span class="fu">}</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="ot">]</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong><code>ProductSystem</code></strong> — the full supply chain model:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"@type"</span><span class="fu">:</span> <span class="st">"ProductSystem"</span><span class="fu">,</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"name"</span><span class="fu">:</span> <span class="st">"Ingot casting"</span><span class="fu">,</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"refProcess"</span><span class="fu">:</span> <span class="fu">{</span> <span class="dt">"name"</span><span class="fu">:</span> <span class="st">"Ingot casting"</span> <span class="fu">},</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"refExchange"</span><span class="fu">:</span> <span class="fu">{</span> <span class="dt">"internalId"</span><span class="fu">:</span> <span class="dv">1</span> <span class="fu">},</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"targetAmount"</span><span class="fu">:</span> <span class="fl">1.0</span><span class="fu">,</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"targetUnit"</span><span class="fu">:</span> <span class="fu">{</span> <span class="dt">"name"</span><span class="fu">:</span> <span class="st">"kg"</span> <span class="fu">},</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"processes"</span><span class="fu">:</span> <span class="ot">[</span> <span class="er">...</span> <span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"processLinks"</span><span class="fu">:</span> <span class="ot">[</span> <span class="er">...</span> <span class="ot">]</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong><code>ImpactCategory</code></strong> — one impact category with its characterisation factors:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"@type"</span><span class="fu">:</span> <span class="st">"ImpactCategory"</span><span class="fu">,</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"name"</span><span class="fu">:</span> <span class="st">"Depletion of abiotic resources"</span><span class="fu">,</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"referenceUnitName"</span><span class="fu">:</span> <span class="st">"kg antimony eq."</span><span class="fu">,</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"impactFactors"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"value"</span><span class="fu">:</span> <span class="fl">1.09e-9</span><span class="fu">,</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"flow"</span><span class="fu">:</span> <span class="fu">{</span> <span class="dt">"name"</span><span class="fu">:</span> <span class="st">"Aluminium"</span> <span class="fu">},</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"unit"</span><span class="fu">:</span> <span class="fu">{</span> <span class="dt">"name"</span><span class="fu">:</span> <span class="st">"kg"</span> <span class="fu">}</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>  <span class="ot">]</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="mapping-recipe-card-fields-olca-schema" class="level3">
+<h3 class="anchored" data-anchor-id="mapping-recipe-card-fields-olca-schema">Mapping: recipe card fields → olca-schema</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Recipe card field</th>
+<th>olca-schema equivalent</th>
+<th>Status</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>name</code></td>
+<td><code>Process.name</code> (ref process) and <code>ProductSystem.name</code></td>
+<td>✓ Clean</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td><code>goal</code></td>
+<td><code>Process.description</code> or doc field</td>
+<td>✓ Clean</td>
+<td>Used for human docs only</td>
+</tr>
+<tr class="odd">
+<td><code>functional_unit.description</code></td>
+<td><code>ProductSystem</code> description</td>
+<td>✓ Clean</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td><code>functional_unit.amount</code></td>
+<td><code>ProductSystem.targetAmount</code></td>
+<td>✓ Clean</td>
+<td>—</td>
+</tr>
+<tr class="odd">
+<td><code>functional_unit.unit</code></td>
+<td><code>ProductSystem.targetUnit</code></td>
+<td>✓ Clean</td>
+<td>Must match a unit in <code>units</code></td>
+</tr>
+<tr class="even">
+<td><code>units</code> (dict of symbol → description)</td>
+<td><code>UnitGroup</code> + <code>FlowProperty</code> pairs</td>
+<td>⚠ Partial</td>
+<td>The script creates one UnitGroup per unit symbol. The schema expects a UnitGroup to contain a <em>family</em> of related units (e.g.&nbsp;kg, g, t all in one group). Currently each unit gets its own group — this works but is not how real databases organise units.</td>
+</tr>
+<tr class="odd">
+<td><code>products</code> list</td>
+<td><code>Flow</code> with <code>flowType: PRODUCT_FLOW</code></td>
+<td>✓ Clean</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td><code>elementary_flows.emissions</code></td>
+<td><code>Flow</code> with <code>flowType: ELEMENTARY_FLOW</code></td>
+<td>✓ Clean</td>
+<td>—</td>
+</tr>
+<tr class="odd">
+<td><code>elementary_flows.resources</code></td>
+<td><code>Flow</code> with <code>flowType: ELEMENTARY_FLOW</code></td>
+<td>✓ Clean</td>
+<td>Resources are elementary flows extracted from nature — same type, direction differs</td>
+</tr>
+<tr class="even">
+<td><code>processes[].name</code></td>
+<td><code>Process.name</code></td>
+<td>✓ Clean</td>
+<td>—</td>
+</tr>
+<tr class="odd">
+<td><code>processes[].reference_output</code></td>
+<td><code>Exchange</code> where <code>isQuantitativeReference: true</code>, <code>isInput: false</code></td>
+<td>✓ Clean</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td><code>processes[].inputs</code></td>
+<td><code>Exchange</code> where <code>isInput: true</code>, flow is a <code>PRODUCT_FLOW</code></td>
+<td>✓ Clean</td>
+<td>—</td>
+</tr>
+<tr class="odd">
+<td><code>processes[].emissions</code></td>
+<td><code>Exchange</code> where <code>isInput: false</code>, flow is an <code>ELEMENTARY_FLOW</code></td>
+<td>✓ Clean</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td><code>processes[].resources</code></td>
+<td><code>Exchange</code> where <code>isInput: true</code>, flow is an <code>ELEMENTARY_FLOW</code></td>
+<td>✓ Clean</td>
+<td>Resources are inputs <em>from</em> nature — <code>isInput: true</code> on an elementary flow</td>
+</tr>
+<tr class="odd">
+<td><code>reference_process</code></td>
+<td><code>ProductSystem.refProcess</code></td>
+<td>✓ Clean</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td><code>lcia_method</code> <em>(not yet in recipe card)</em></td>
+<td><code>ImpactMethod.name</code> — looked up by name at runtime</td>
+<td>To add</td>
+<td>—</td>
+</tr>
+<tr class="odd">
+<td><code>database</code> <em>(not yet in recipe card)</em></td>
+<td>No direct schema equivalent — documentary only</td>
+<td>To add</td>
+<td>Records which data package was loaded; not used by the script</td>
+</tr>
+<tr class="even">
+<td><code>source: background</code> <em>(not yet in recipe card)</em></td>
+<td><code>Process</code> looked up by name/ID in the database — a <code>Ref</code> rather than a full object</td>
+<td>To add</td>
+<td>Needed for real-world LCA using background databases</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="issues-found-in-the-audit" class="level3">
+<h3 class="anchored" data-anchor-id="issues-found-in-the-audit">Issues found in the audit</h3>
+<p><strong>Issue 1 — Unit groups are incorrectly structured</strong></p>
+<p>The recipe card has a flat <code>units</code> dict:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">units</span><span class="kw">:</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">kWh</span><span class="kw">:</span><span class="at"> Energy</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">kg</span><span class="kw">:</span><span class="at">  Mass</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">L</span><span class="kw">:</span><span class="at">   Volume</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The script currently creates one <code>UnitGroup</code> per symbol. But in the olca-schema, a <code>UnitGroup</code> is a <em>family</em> of interconvertible units — for example, <code>{kg, g, t, lb}</code> all belong to one “Units of mass” group with conversion factors. The current approach creates orphaned single-unit groups that don’t match any real database’s unit structure.</p>
+<p>This matters because when linking foreground processes to background processes, unit names must match exactly. If the background database uses a “Units of mass” group containing <code>kg</code> with a standard UUID, and our script creates a separate “Mass units” group also containing <code>kg</code>, openLCA may treat them as different units.</p>
+<p><strong>Recommended fix</strong>: replace the flat <code>units</code> dict with a reference to standard unit groups. Either hard-code the standard openLCA unit group UUIDs in the script, or look them up from the database at runtime before creating any flows.</p>
+<p><strong>Issue 2 — No <code>flowType</code> distinction for resources vs emissions</strong></p>
+<p>Both resources and emissions are <code>ELEMENTARY_FLOW</code> in the schema. The difference is directionality: emissions are outputs from the technosphere to the biosphere (<code>isInput: false</code>), resources are inputs from the biosphere to the technosphere (<code>isInput: true</code>). The recipe card already captures this correctly via the <code>emissions</code> vs <code>resources</code> keys. No change needed — just confirming the mapping is right.</p>
+<p><strong>Issue 3 — No location field on flows or processes</strong></p>
+<p>Real background databases tag every process and product flow with a location (country or region). The recipe card has no <code>location</code> field. For toy models this does not matter. For real-world LCA it will matter because ecoinvent process names include the location (e.g.&nbsp;<code>"market for electricity, low voltage | DE"</code>). The <code>source: background</code> field (to be added) should handle this by using the full database process name, which includes the location.</p>
+<hr>
+</section>
+</section>
+<section id="step-1-fix-unit-group-structure" class="level2">
+<h2 class="anchored" data-anchor-id="step-1-fix-unit-group-structure">Step 1 — Fix Unit Group Structure</h2>
+<p>Before adding any new features, fix the way the script creates unit groups so they match the standard openLCA structure. The script should:</p>
+<ol type="1">
+<li>Check whether the required unit groups already exist in the database (by looking up standard names like “Units of mass”, “Units of energy”, etc.).</li>
+<li>If they exist (because a real database has been loaded), use them by reference — do not recreate them.</li>
+<li>If they do not exist (fresh empty database, toy model), create them with the correct multi-unit structure including standard conversion factors.</li>
+</ol>
+<p>Standard unit groups to support:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Symbol used in recipe card</th>
+<th>Standard UnitGroup name</th>
+<th>Ref unit</th>
+<th>Common others</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>kg</code></td>
+<td>Units of mass</td>
+<td>kg</td>
+<td>g, t, lb, mg</td>
+</tr>
+<tr class="even">
+<td><code>kWh</code></td>
+<td>Units of energy</td>
+<td>MJ</td>
+<td>kWh (×3.6), GJ, Wh</td>
+</tr>
+<tr class="odd">
+<td><code>L</code></td>
+<td>Units of volume</td>
+<td>m³</td>
+<td>L (×0.001), mL</td>
+</tr>
+<tr class="even">
+<td><code>m²</code></td>
+<td>Units of area</td>
+<td>m²</td>
+<td>cm², ha</td>
+</tr>
+<tr class="odd">
+<td><code>m</code></td>
+<td>Units of length</td>
+<td>m</td>
+<td>km, cm</td>
+</tr>
+<tr class="even">
+<td><code>item</code> / <code>unit</code> / <code>cup</code></td>
+<td>Units of items</td>
+<td>Item(s)</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="step-2-add-lcia-method-support-to-the-recipe-card-and-script" class="level2">
+<h2 class="anchored" data-anchor-id="step-2-add-lcia-method-support-to-the-recipe-card-and-script">Step 2 — Add LCIA Method Support to the Recipe Card and Script</h2>
+<section id="new-recipe-card-fields" class="level3">
+<h3 class="anchored" data-anchor-id="new-recipe-card-fields">New recipe card fields</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">lcia_method</span><span class="kw">:</span><span class="at"> </span><span class="st">"ReCiPe 2016 Midpoint (H)"</span><span class="co">   # name of the method in the database</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">database</span><span class="kw">:</span><span class="at">    </span><span class="st">"openlca-lcia-methods-2.1.2"</span><span class="co">  # documentary — which package was loaded</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li><code>lcia_method</code> is <strong>functional</strong> — the script looks up this method by name and passes it to <code>CalculationSetup</code>.</li>
+<li><code>database</code> is <strong>documentary</strong> — records which version of which data package was loaded, for reproducibility. Does not affect how the script runs.</li>
+<li>Both fields are <strong>optional</strong>. If absent, the script runs inventory-only as today (backwards compatible).</li>
+</ul>
+</section>
+<section id="script-changes" class="level3">
+<h3 class="anchored" data-anchor-id="script-changes">Script changes</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Look up method by name</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>methods <span class="op">=</span> client.get_descriptors(o.ImpactMethod)</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>method  <span class="op">=</span> <span class="bu">next</span>((m <span class="cf">for</span> m <span class="kw">in</span> methods <span class="cf">if</span> m.name <span class="op">==</span> lcia_method_name), <span class="va">None</span>)</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> method <span class="kw">is</span> <span class="va">None</span>:</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Warning: LCIA method '</span><span class="sc">{</span>lcia_method_name<span class="sc">}</span><span class="ss">' not found in database."</span>)</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Running inventory-only. Load the LCIA methods package to enable impact scores."</span>)</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Pass to calculation</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>setup <span class="op">=</span> o.CalculationSetup(</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>    target<span class="op">=</span>o.Ref(<span class="bu">id</span><span class="op">=</span>system_ref.<span class="bu">id</span>),</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>    amount<span class="op">=</span><span class="fl">1.0</span>,</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>    impact_method<span class="op">=</span>method,   <span class="co"># None is safe — openLCA ignores it</span></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Retrieve impact results (Step 14)</span></span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> method:</span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> impact <span class="kw">in</span> result.get_total_impacts():</span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(impact.impact_category.name,</span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>              impact.amount,</span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>              impact.impact_category.ref_unit)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="new-step-14-output-in-lca_results.md" class="level3">
+<h3 class="anchored" data-anchor-id="new-step-14-output-in-lca_results.md">New Step 14 output in <code>lca_results.md</code></h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## LCIA Results  (ReCiPe 2016 Midpoint H)</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Impact category        <span class="pp">|</span> Score    <span class="pp">|</span> Unit          <span class="pp">|</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="pp">|------------------------|----------|---------------|</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Climate change         <span class="pp">|</span> 6.40     <span class="pp">|</span> kg CO₂-eq     <span class="pp">|</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Acidification          <span class="pp">|</span> 0.025    <span class="pp">|</span> kg SO₂-eq     <span class="pp">|</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Eutrophication         <span class="pp">|</span> 0.0023   <span class="pp">|</span> kg PO₄-eq     <span class="pp">|</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+</section>
+<section id="step-3-add-background-process-support" class="level2">
+<h2 class="anchored" data-anchor-id="step-3-add-background-process-support">Step 3 — Add Background Process Support</h2>
+<p>Extend the recipe card to allow processes to be declared as coming from a loaded background database rather than defined locally:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">processes</span><span class="kw">:</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> P1 — Cut and sew shirt</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">source</span><span class="kw">:</span><span class="at"> local</span><span class="co">                    # defined in this recipe card (default)</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">reference_output</span><span class="kw">:</span><span class="at"> </span><span class="kw">{</span><span class="at"> </span><span class="fu">flow</span><span class="kw">:</span><span class="at"> Shirt</span><span class="kw">,</span><span class="at"> </span><span class="fu">amount</span><span class="kw">:</span><span class="at"> </span><span class="fl">1.0</span><span class="at"> </span><span class="kw">}</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">inputs</span><span class="kw">:</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="kw">{</span><span class="at"> </span><span class="fu">flow</span><span class="kw">:</span><span class="at"> Electricity</span><span class="kw">,</span><span class="at"> </span><span class="fu">amount</span><span class="kw">:</span><span class="at"> </span><span class="fl">2.5</span><span class="at"> </span><span class="kw">}</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> market for electricity, low voltage | DE</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">source</span><span class="kw">:</span><span class="at"> background</span><span class="co">               # look up in the database by name</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The script looks up background processes using:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>provider <span class="op">=</span> client.find(o.Process, <span class="st">"market for electricity, low voltage | DE"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>and references them in the product system rather than creating them.</p>
+<p>This requires a background process database to be loaded (US LCI, ELCD, etc.) — see Database Setup below.</p>
+<hr>
+</section>
+<section id="conceptual-background-flow-types-unit-process-tables-and-the-lci-result" class="level2">
+<h2 class="anchored" data-anchor-id="conceptual-background-flow-types-unit-process-tables-and-the-lci-result">Conceptual Background — Flow Types, Unit Process Tables, and the LCI Result</h2>
+<section id="the-flow-type-taxonomy-from-academic-lca-teaching" class="level3">
+<h3 class="anchored" data-anchor-id="the-flow-type-taxonomy-from-academic-lca-teaching">The flow type taxonomy (from academic LCA teaching)</h3>
+<p>The standard LCA teaching vocabulary (as used in the <em>Constructing Inventories</em> lecture slides) classifies every input and output of a unit process by a <strong>Type</strong> field:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Type</th>
+<th>Direction</th>
+<th>What it is</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>Intermediate</code></td>
+<td>Input</td>
+<td>A product flow received from another process <strong>inside</strong> the same foreground model</td>
+<td>Apple arriving at Transport from Production</td>
+</tr>
+<tr class="even">
+<td><code>Technosphere</code></td>
+<td>Input</td>
+<td>A product flow bought from the <strong>background economy</strong> — not modelled locally</td>
+<td>Electricity from the grid, Fertilizer, Diesel</td>
+</tr>
+<tr class="odd">
+<td><code>Resource</code></td>
+<td>Input</td>
+<td>A flow extracted directly from <strong>nature</strong></td>
+<td>Water drawn from a river</td>
+</tr>
+<tr class="even">
+<td><code>Product</code></td>
+<td>Output</td>
+<td>The main product of a process (reference output)</td>
+<td>Apple leaving Production</td>
+</tr>
+<tr class="odd">
+<td><code>Co-product</code></td>
+<td>Output</td>
+<td>A second joint product of the same process</td>
+<td>Pear leaving Production alongside Apple</td>
+</tr>
+<tr class="even">
+<td><code>Emission</code></td>
+<td>Output</td>
+<td>A release to the environment</td>
+<td>CO₂ to air, CH₄ to air</td>
+</tr>
+<tr class="odd">
+<td><code>Waste treatment</code></td>
+<td>Output</td>
+<td>Waste handed off to a downstream waste-handling process</td>
+<td>Waste cardboard leaving Transport</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Key insight:</strong> the unit process data tables shown in teaching slides (one table per process, with Name / Amount / Units / Type / Comments columns) are <strong>not</strong> the LCI result. They are the raw input data — equivalent to our recipe card. The LCI result is produced only after solving the technology matrix (A × s = f) and multiplying by the intervention matrix (g = B × s). The LCI result contains only elementary flows (Emissions + Resources); all Intermediate and Technosphere flows cancel out algebraically and disappear.</p>
+</section>
+<section id="how-our-recipe-card-maps-to-these-types-today" class="level3">
+<h3 class="anchored" data-anchor-id="how-our-recipe-card-maps-to-these-types-today">How our recipe card maps to these types today</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>PDF Type</th>
+<th>Our recipe card field</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>Intermediate</code> input</td>
+<td><code>inputs</code> (when a matching <code>reference_output</code> exists in the recipe card)</td>
+<td>✓ Supported — draws an arrow between process boxes</td>
+</tr>
+<tr class="even">
+<td><code>Technosphere</code> input</td>
+<td><code>inputs</code> (when no matching <code>reference_output</code> exists)</td>
+<td>⚠ Partially supported — number recorded but no arrow drawn, no database lookup</td>
+</tr>
+<tr class="odd">
+<td><code>Resource</code> input</td>
+<td><code>resources</code></td>
+<td>✓ Supported</td>
+</tr>
+<tr class="even">
+<td><code>Product</code> output</td>
+<td><code>reference_output</code></td>
+<td>✓ Supported (one per process only)</td>
+</tr>
+<tr class="odd">
+<td><code>Co-product</code> output</td>
+<td>—</td>
+<td>✗ Not supported</td>
+</tr>
+<tr class="even">
+<td><code>Emission</code> output</td>
+<td><code>emissions</code></td>
+<td>✓ Supported</td>
+</tr>
+<tr class="odd">
+<td><code>Waste treatment</code> output</td>
+<td>—</td>
+<td>✗ Not supported</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="why-our-current-recipe-cards-have-no-true-technosphere-inputs" class="level3">
+<h3 class="anchored" data-anchor-id="why-our-current-recipe-cards-have-no-true-technosphere-inputs">Why our current recipe cards have no true Technosphere inputs</h3>
+<p>All existing recipe cards (coffee, cotton shirt, hand dryer, light bulb) explicitly model every upstream step — electricity generation is always its own process box. This means every entry in <code>inputs</code> has a matching <code>reference_output</code> somewhere in the same recipe card and therefore counts as <strong>Intermediate</strong>, not Technosphere. No inputs are silently dropped from the diagram.</p>
+<p>This is a deliberate pedagogical choice: making every step visible helps students understand the full supply chain. It is also why the diagram always draws correctly — every arrow has both a source and a destination within the recipe card.</p>
+<p>The Technosphere input distinction only becomes meaningful when background database support is added (see Step 3 below).</p>
+<hr>
+</section>
+</section>
+<section id="how-create_product_system-auto-linking-works" class="level2">
+<h2 class="anchored" data-anchor-id="how-create_product_system-auto-linking-works">How <code>create_product_system</code> Auto-Linking Works</h2>
+<section id="what-the-api-does" class="level3">
+<h3 class="anchored" data-anchor-id="what-the-api-does">What the API does</h3>
+<p>The <code>olca-ipc</code> Python client provides a method called <code>create_product_system</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>system_ref <span class="op">=</span> client.create_product_system(</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    process_ref,</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    config<span class="op">=</span>o.LinkingConfig(</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>        prefer_unit_processes<span class="op">=</span><span class="va">False</span>,</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>        provider_linking<span class="op">=</span>o.ProviderLinking.PREFER_DEFAULTS,</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This is openLCA’s auto-linking engine. When called, it:</p>
+<ol type="1">
+<li>Takes the reference (foreground) process as the starting point.</li>
+<li>Scans every input of every foreground process for flows that have no supplier already defined within the foreground model.</li>
+<li>Searches the entire database for any process whose reference output matches that flow (by flow name and unit).</li>
+<li>If a match is found, links the background process into the product system.</li>
+<li>Repeats recursively — the background process’s own inputs are also searched, pulling in further upstream processes until all inputs are satisfied or no more matches exist.</li>
+</ol>
+<p>The result is a fully-linked <code>ProductSystem</code> object containing both the foreground processes (from the recipe card) and any background processes found in the database.</p>
+</section>
+<section id="the-scaling-vector-covers-all-processes" class="level3">
+<h3 class="anchored" data-anchor-id="the-scaling-vector-covers-all-processes">The scaling vector covers all processes</h3>
+<p>The technology matrix A and the subsequent scaling vector s cover <strong>every</strong> process in the product system — foreground and background alike. If ecoinvent has 20,000 processes and auto-linking pulls in 5,000 of them to satisfy the apple supply chain, then A is a 5,000×5,000 matrix and s has 5,000 entries. openLCA handles this internally; the student only sees the final aggregated LCI and LCIA results.</p>
+</section>
+<section id="what-happens-when-no-background-database-is-loaded" class="level3">
+<h3 class="anchored" data-anchor-id="what-happens-when-no-background-database-is-loaded">What happens when no background database is loaded</h3>
+<p>If <code>create_product_system</code> finds no supplier for a Technosphere input (because no background database is loaded), that input is left <strong>unlinked</strong>. The product system is incomplete. The calculation still runs but the results are partial — the upstream emissions from electricity, fertilizer, diesel etc. are missing. The script should warn the user in this case.</p>
+</section>
+<section id="the-get_providers-method-looking-before-linking" class="level3">
+<h3 class="anchored" data-anchor-id="the-get_providers-method-looking-before-linking">The <code>get_providers</code> method — looking before linking</h3>
+<p>Before auto-linking, you can ask openLCA what is available:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Find every process in the database that produces a given flow</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>flow_ref <span class="op">=</span> o.Ref(name<span class="op">=</span><span class="st">"Electricity, low voltage"</span>)</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>providers <span class="op">=</span> client.get_providers(flow_ref)</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> p <span class="kw">in</span> providers:</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(p.process.name)</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>    <span class="co"># e.g. "market for electricity, low voltage | DE"</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>    <span class="co">#      "electricity production, wind, &lt;1MW turbine, onshore | DE"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This is useful for verifying that a background database is loaded and for letting the student choose which provider to use when multiple options exist.</p>
+</section>
+<section id="example-apple-supply-chain-with-background-database-inputs" class="level3">
+<h3 class="anchored" data-anchor-id="example-apple-supply-chain-with-background-database-inputs">Example: apple supply chain with background database inputs</h3>
+<p>The apple supply chain from the <em>Constructing Inventories</em> slides has 4 foreground processes (Production, Transport, Use, Disposal). Electricity, Fertilizer, Cardboard, Facility, and Diesel are Technosphere inputs to Production — they are NOT modelled as explicit process boxes in the recipe card. The recipe card would look like:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">processes</span><span class="kw">:</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Production</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">reference_output</span><span class="kw">:</span><span class="at"> </span><span class="kw">{</span><span class="at"> </span><span class="fu">flow</span><span class="kw">:</span><span class="at"> Apple</span><span class="kw">,</span><span class="at"> </span><span class="fu">amount</span><span class="kw">:</span><span class="at"> </span><span class="dv">500000</span><span class="kw">,</span><span class="at"> </span><span class="fu">unit</span><span class="kw">:</span><span class="at"> kg </span><span class="kw">}</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">inputs</span><span class="kw">:</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="kw">{</span><span class="at"> </span><span class="fu">flow</span><span class="kw">:</span><span class="at"> Electricity</span><span class="kw">,</span><span class="at"> </span><span class="fu">amount</span><span class="kw">:</span><span class="at"> </span><span class="dv">100000</span><span class="kw">,</span><span class="at"> </span><span class="fu">unit</span><span class="kw">:</span><span class="at"> kWh </span><span class="kw">}</span><span class="co">  # Technosphere — no local process</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="kw">{</span><span class="at"> </span><span class="fu">flow</span><span class="kw">:</span><span class="at"> Fertilizer</span><span class="kw">,</span><span class="at">  </span><span class="fu">amount</span><span class="kw">:</span><span class="at"> </span><span class="dv">500000</span><span class="kw">,</span><span class="at"> </span><span class="fu">unit</span><span class="kw">:</span><span class="at"> kg  </span><span class="kw">}</span><span class="co">  # Technosphere — no local process</span></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="kw">{</span><span class="at"> </span><span class="fu">flow</span><span class="kw">:</span><span class="at"> Diesel</span><span class="kw">,</span><span class="at">      </span><span class="fu">amount</span><span class="kw">:</span><span class="at"> </span><span class="dv">30000</span><span class="kw">,</span><span class="at">  </span><span class="fu">unit</span><span class="kw">:</span><span class="at"> kg  </span><span class="kw">}</span><span class="co">  # Technosphere — no local process</span></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">resources</span><span class="kw">:</span></span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="kw">{</span><span class="at"> </span><span class="fu">flow</span><span class="kw">:</span><span class="at"> Water</span><span class="kw">,</span><span class="at"> </span><span class="fu">amount</span><span class="kw">:</span><span class="at"> </span><span class="dv">100000</span><span class="kw">,</span><span class="at"> </span><span class="fu">unit</span><span class="kw">:</span><span class="at"> L </span><span class="kw">}</span></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">emissions</span><span class="kw">:</span></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="kw">{</span><span class="at"> </span><span class="fu">flow</span><span class="kw">:</span><span class="at"> CO2 to air</span><span class="kw">,</span><span class="at"> </span><span class="fu">amount</span><span class="kw">:</span><span class="at"> </span><span class="dv">100000</span><span class="kw">,</span><span class="at"> </span><span class="fu">unit</span><span class="kw">:</span><span class="at"> kg </span><span class="kw">}</span></span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Transport</span></span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">reference_output</span><span class="kw">:</span><span class="at"> </span><span class="kw">{</span><span class="at"> </span><span class="fu">flow</span><span class="kw">:</span><span class="at"> Apple</span><span class="kw">,</span><span class="at"> </span><span class="fu">amount</span><span class="kw">:</span><span class="at"> </span><span class="dv">5000</span><span class="kw">,</span><span class="at"> </span><span class="fu">unit</span><span class="kw">:</span><span class="at"> kg </span><span class="kw">}</span></span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">inputs</span><span class="kw">:</span></span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="kw">{</span><span class="at"> </span><span class="fu">flow</span><span class="kw">:</span><span class="at"> Apple</span><span class="kw">,</span><span class="at"> </span><span class="fu">amount</span><span class="kw">:</span><span class="at"> </span><span class="dv">5000</span><span class="kw">,</span><span class="at"> </span><span class="fu">unit</span><span class="kw">:</span><span class="at"> kg </span><span class="kw">}</span><span class="co">            # Intermediate — from Production</span></span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Use</span></span>
+<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">reference_output</span><span class="kw">:</span><span class="at"> </span><span class="kw">{</span><span class="at"> </span><span class="fu">flow</span><span class="kw">:</span><span class="at"> Waste</span><span class="kw">,</span><span class="at"> </span><span class="fu">amount</span><span class="kw">:</span><span class="at"> </span><span class="fl">0.1</span><span class="kw">,</span><span class="at"> </span><span class="fu">unit</span><span class="kw">:</span><span class="at"> kg </span><span class="kw">}</span></span>
+<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">inputs</span><span class="kw">:</span></span>
+<span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="kw">{</span><span class="at"> </span><span class="fu">flow</span><span class="kw">:</span><span class="at"> Apple</span><span class="kw">,</span><span class="at"> </span><span class="fu">amount</span><span class="kw">:</span><span class="at"> </span><span class="fl">1.0</span><span class="kw">,</span><span class="at"> </span><span class="fu">unit</span><span class="kw">:</span><span class="at"> kg </span><span class="kw">}</span><span class="co">             # Intermediate — from Transport</span></span>
+<span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Disposal</span></span>
+<span id="cb15-24"><a href="#cb15-24" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">reference_output</span><span class="kw">:</span><span class="at"> </span><span class="kw">{</span><span class="at"> </span><span class="fu">flow</span><span class="kw">:</span><span class="at"> Disposed waste</span><span class="kw">,</span><span class="at"> </span><span class="fu">amount</span><span class="kw">:</span><span class="at"> </span><span class="fl">0.1</span><span class="kw">,</span><span class="at"> </span><span class="fu">unit</span><span class="kw">:</span><span class="at"> kg </span><span class="kw">}</span></span>
+<span id="cb15-25"><a href="#cb15-25" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">inputs</span><span class="kw">:</span></span>
+<span id="cb15-26"><a href="#cb15-26" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="kw">{</span><span class="at"> </span><span class="fu">flow</span><span class="kw">:</span><span class="at"> Waste</span><span class="kw">,</span><span class="at"> </span><span class="fu">amount</span><span class="kw">:</span><span class="at"> </span><span class="fl">0.1</span><span class="kw">,</span><span class="at"> </span><span class="fu">unit</span><span class="kw">:</span><span class="at"> kg </span><span class="kw">}</span><span class="co">             # Intermediate — from Use</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>With a background database loaded, <code>create_product_system</code> would automatically find and link processes for Electricity, Fertilizer, and Diesel. Without one, those inputs would be unlinked and the results would be incomplete.</p>
+<hr>
+</section>
+</section>
+<section id="database-setup-how-to-get-free-lcia-methods-and-process-data" class="level2">
+<h2 class="anchored" data-anchor-id="database-setup-how-to-get-free-lcia-methods-and-process-data">Database Setup — How to Get Free LCIA Methods and Process Data</h2>
+<section id="the-constraint" class="level3">
+<h3 class="anchored" data-anchor-id="the-constraint">The constraint</h3>
+<p>The gdt-server API has <strong>no bulk import endpoint</strong>. You cannot import a zip file via Python. The only write operation is <code>PUT</code>, which adds one entity at a time. To load a full database you need the <strong>openLCA desktop app</strong> at least once.</p>
+</section>
+<section id="step-by-step-loading-the-free-lcia-methods-package" class="level3">
+<h3 class="anchored" data-anchor-id="step-by-step-loading-the-free-lcia-methods-package">Step-by-step: loading the free LCIA methods package</h3>
+<ol type="1">
+<li>Download the <strong>openLCA desktop app</strong> from openlca.org (free).</li>
+<li>Download the <strong>openLCA LCIA methods pack</strong> from nexus.openlca.org (free — 43 methods including ReCiPe 2016, CML-IA, TRACI, EF 3.0). Do not unzip it.</li>
+<li>In the desktop app: File → Import → Others → Linked Data (JSON-LD) → select the ZIP → Overwrite all → Finish. Takes a few minutes.</li>
+<li>Point the gdt-server at the same database folder. Methods are now available via the API.</li>
+</ol>
+</section>
+<section id="free-background-process-databases" class="level3">
+<h3 class="anchored" data-anchor-id="free-background-process-databases">Free background process databases</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Database</th>
+<th>Coverage</th>
+<th>Source</th>
+<th>Format</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>US LCI</strong></td>
+<td>~1,000 US processes — energy, transport, materials</td>
+<td>lcacommons.gov</td>
+<td>JSON-LD (free)</td>
+</tr>
+<tr class="even">
+<td><strong>ELCD</strong></td>
+<td>~500 European processes — energy, chemicals, transport</td>
+<td>EU JRC</td>
+<td>ILCD (free)</td>
+</tr>
+<tr class="odd">
+<td><strong>Agribalyse</strong></td>
+<td>~2,500 French food and agriculture processes</td>
+<td>ADEME</td>
+<td>openLCA format (free)</td>
+</tr>
+</tbody>
+</table>
+<p>Import any of these into the same database alongside the LCIA methods package.</p>
+<hr>
+</section>
+</section>
+<section id="summary-of-work-items" class="level2">
+<h2 class="anchored" data-anchor-id="summary-of-work-items">Summary of Work Items</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>#</th>
+<th>Item</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>Audit recipe card fields against olca-schema <em>(this document)</em></td>
+<td><strong>Done</strong></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>Fix unit group structure in <code>lca_analysis.py</code> to match standard openLCA groups</td>
+<td>Not started</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Add <code>lcia_method</code> and <code>database</code> fields to recipe card format</td>
+<td>Not started</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>Update <code>lca_analysis.py</code> to look up and apply LCIA method</td>
+<td>Not started</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>Add LCIA results table (Step 14) to script output and <code>lca_results.md</code></td>
+<td>Not started</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>Document database setup and new fields in <code>SKILL.md</code></td>
+<td>Not started</td>
+</tr>
+<tr class="odd">
+<td>6</td>
+<td>Load LCIA methods package into the Codespace database (one-time manual step)</td>
+<td>Not started</td>
+</tr>
+<tr class="even">
+<td>7</td>
+<td>Test end-to-end: coffee recipe card with ReCiPe 2016, confirm LCIA scores</td>
+<td>Not started</td>
+</tr>
+<tr class="odd">
+<td>8</td>
+<td>Add <code>source: background</code> field to recipe card and script lookup</td>
+<td>Not started</td>
+</tr>
+<tr class="even">
+<td>9</td>
+<td>Load a background process database (US LCI or ELCD)</td>
+<td>Not started</td>
+</tr>
+<tr class="odd">
+<td>10</td>
+<td>Test a recipe card that mixes local and background processes</td>
+<td>Not started</td>
+</tr>
+</tbody>
+</table>
+<p>Items 1–5 are pure code — no database setup needed. Item 6 requires the openLCA desktop app once. Items 8–10 depend on item 6 and a loaded background database.</p>
+<hr>
+</section>
+<section id="suggested-order-of-work" class="level2">
+<h2 class="anchored" data-anchor-id="suggested-order-of-work">Suggested Order of Work</h2>
+<ol type="1">
+<li><strong>Item 0</strong> <em>(done)</em> — audit complete, issues documented above.</li>
+<li><strong>Item 1</strong> — fix unit groups. Low risk, no user-visible change, unblocks correct background linking later.</li>
+<li><strong>Items 2–4</strong> — add LCIA method support to recipe card and script. Test with coffee; expect empty impact results until item 6 is done — handle gracefully.</li>
+<li><strong>Item 6</strong> — load LCIA methods package via desktop app (one-time manual step).</li>
+<li><strong>Item 7</strong> — test end-to-end with ReCiPe 2016.</li>
+<li><strong>Item 5</strong> — update skill documentation.</li>
+<li><strong>Items 8–10</strong> — background process support, once a process database is loaded.</li>
+</ol>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var sidebar = document.getElementById('quarto-sidebar');
+  if (!sidebar) return;
+  var isGitHubPages = window.location.hostname.includes('github.io');
+  const items = Array.from(sidebar.querySelectorAll('li.sidebar-item'));
+  items.forEach(function (item, i) {
+    const link = item.querySelector('a.sidebar-item-text');
+    if (!link || link.textContent.trim() !== '(.md)') return;
+    const prevItem = items[i - 1];
+    if (!prevItem) return;
+    const prevLink = prevItem.querySelector('a.sidebar-item-text');
+    if (!prevLink) return;
+    const prevHref = prevLink.getAttribute('href');
+    const match = prevHref.match(/skills\/(.+)\.html/);
+    if (!match) return;
+    const skillName = match[1];
+    if (isGitHubPages) {
+      link.href = 'https://github.com/calvinw/agentic-lca/blob/main/.skillshare/skills/' + skillName + '/SKILL.md';
+    } else {
+      link.href = prevHref.replace('.html', '.md');
+    }
+    const prevContainer = prevItem.querySelector('.sidebar-item-container');
+    if (!prevContainer) return;
+    prevContainer.style.display = 'block';
+    link.style.display = 'inline';
+    link.style.marginLeft = '4px';
+    link.style.fontSize = '0.72em';
+    link.style.opacity = '0.55';
+    link.style.fontWeight = 'normal';
+    prevContainer.appendChild(link);
+    item.style.display = 'none';
+  });
+});
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

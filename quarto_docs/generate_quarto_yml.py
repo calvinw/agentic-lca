@@ -147,7 +147,6 @@ lines += [
     "    - id: sessions",
     '      title: "Sessions"',
     "      style: docked",
-    "      collapse-level: 2",
     "      contents:",
     "        - text: Overview",
     "          href: skills_sessions/index.md",

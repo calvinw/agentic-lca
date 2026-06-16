@@ -1,0 +1,1537 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>plan_remixable_lcas – Agentic LCA</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-ed6b1312144c53348356da5812719d81.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../custom.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Agentic LCA</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../skills_sessions/index.html"> 
+<span class="menu-text">Sessions</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../plan/index.html" aria-current="page"> 
+<span class="menu-text">Plans</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../skills/index.html"> 
+<span class="menu-text">Skills</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../plan/PLAN_REMIXABLE_LCAS.html">REMIXABLE_LCAS</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../plan/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../plan/PLAN_BAFU_AND_METHODS_PACK.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">BAFU_AND_METHODS_PACK</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../plan/PLAN_PRODUCTION_LCIA_LCA_COMMONS_TRACI.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PRODUCTION_LCIA_LCA_COMMONS_TRACI</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../plan/PLAN_PRODUCTION_LCIA_RECIPE.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PRODUCTION_LCIA_RECIPE</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../plan/PLAN_REFERENCE_EXAMPLES.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">REFERENCE_EXAMPLES</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../plan/PLAN_REMIXABLE_LCAS.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">REMIXABLE_LCAS</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../plan/PLAN_RUN_LCA_SKILL_LCIA_AND_DATABASES.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">RUN_LCA_SKILL_LCIA_AND_DATABASES</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../plan/PLAN_SKILL_RECOMMENDATIONS.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SKILL_RECOMMENDATIONS</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#remixable-lca-studies-textiles-fibres" id="toc-remixable-lca-studies-textiles-fibres" class="nav-link active" data-scroll-target="#remixable-lca-studies-textiles-fibres">Remixable LCA Studies — Textiles &amp; Fibres</a>
+  <ul class="collapse">
+  <li><a href="#levis-501-jeans-lca-2015" id="toc-levis-501-jeans-lca-2015" class="nav-link" data-scroll-target="#levis-501-jeans-lca-2015">1. Levi’s 501 Jeans LCA (2015)</a>
+  <ul class="collapse">
+  <li><a href="#key-findings-and-conclusions" id="toc-key-findings-and-conclusions" class="nav-link" data-scroll-target="#key-findings-and-conclusions">Key findings and conclusions</a></li>
+  <li><a href="#remix-scenarios" id="toc-remix-scenarios" class="nav-link" data-scroll-target="#remix-scenarios">Remix scenarios</a></li>
+  </ul></li>
+  <li><a href="#cotton-inc.-u.s.-cotton-fiber-lca-2012" id="toc-cotton-inc.-u.s.-cotton-fiber-lca-2012" class="nav-link" data-scroll-target="#cotton-inc.-u.s.-cotton-fiber-lca-2012">2. Cotton Inc.&nbsp;U.S. Cotton Fiber LCA (2012)</a>
+  <ul class="collapse">
+  <li><a href="#key-findings-and-conclusions-1" id="toc-key-findings-and-conclusions-1" class="nav-link" data-scroll-target="#key-findings-and-conclusions-1">Key findings and conclusions</a></li>
+  <li><a href="#remix-scenarios-1" id="toc-remix-scenarios-1" class="nav-link" data-scroll-target="#remix-scenarios-1">Remix scenarios</a></li>
+  </ul></li>
+  <li><a href="#iwto-wool-fibre-lca" id="toc-iwto-wool-fibre-lca" class="nav-link" data-scroll-target="#iwto-wool-fibre-lca">3. IWTO Wool Fibre LCA</a>
+  <ul class="collapse">
+  <li><a href="#key-findings-and-conclusions-2" id="toc-key-findings-and-conclusions-2" class="nav-link" data-scroll-target="#key-findings-and-conclusions-2">Key findings and conclusions</a></li>
+  <li><a href="#remix-scenarios-2" id="toc-remix-scenarios-2" class="nav-link" data-scroll-target="#remix-scenarios-2">Remix scenarios</a></li>
+  </ul></li>
+  <li><a href="#patagonia-synchilla-snap-t-fleece-jacket-lca-2013" id="toc-patagonia-synchilla-snap-t-fleece-jacket-lca-2013" class="nav-link" data-scroll-target="#patagonia-synchilla-snap-t-fleece-jacket-lca-2013">4. Patagonia Synchilla Snap-T Fleece Jacket LCA (2013)</a>
+  <ul class="collapse">
+  <li><a href="#key-findings-and-conclusions-3" id="toc-key-findings-and-conclusions-3" class="nav-link" data-scroll-target="#key-findings-and-conclusions-3">Key findings and conclusions</a></li>
+  <li><a href="#remix-scenarios-3" id="toc-remix-scenarios-3" class="nav-link" data-scroll-target="#remix-scenarios-3">Remix scenarios</a></li>
+  </ul></li>
+  <li><a href="#virgin-polyester-pet-fibre-lca" id="toc-virgin-polyester-pet-fibre-lca" class="nav-link" data-scroll-target="#virgin-polyester-pet-fibre-lca">5. Virgin Polyester (PET) Fibre LCA</a>
+  <ul class="collapse">
+  <li><a href="#key-findings-and-conclusions-4" id="toc-key-findings-and-conclusions-4" class="nav-link" data-scroll-target="#key-findings-and-conclusions-4">Key findings and conclusions</a></li>
+  <li><a href="#remix-scenarios-4" id="toc-remix-scenarios-4" class="nav-link" data-scroll-target="#remix-scenarios-4">Remix scenarios</a></li>
+  </ul></li>
+  <li><a href="#made-by-environmental-benchmark-for-fibres-20122017" id="toc-made-by-environmental-benchmark-for-fibres-20122017" class="nav-link" data-scroll-target="#made-by-environmental-benchmark-for-fibres-20122017">6. Made-By Environmental Benchmark for Fibres (2012–2017)</a>
+  <ul class="collapse">
+  <li><a href="#key-findings-and-conclusions-5" id="toc-key-findings-and-conclusions-5" class="nav-link" data-scroll-target="#key-findings-and-conclusions-5">Key findings and conclusions</a></li>
+  <li><a href="#remix-scenarios-5" id="toc-remix-scenarios-5" class="nav-link" data-scroll-target="#remix-scenarios-5">Remix scenarios</a></li>
+  </ul></li>
+  <li><a href="#viscose-rayon-fibre-lca-ivl-swedish-environmental-research-institute" id="toc-viscose-rayon-fibre-lca-ivl-swedish-environmental-research-institute" class="nav-link" data-scroll-target="#viscose-rayon-fibre-lca-ivl-swedish-environmental-research-institute">7. Viscose / Rayon Fibre LCA (IVL Swedish Environmental Research Institute)</a>
+  <ul class="collapse">
+  <li><a href="#key-findings-and-conclusions-6" id="toc-key-findings-and-conclusions-6" class="nav-link" data-scroll-target="#key-findings-and-conclusions-6">Key findings and conclusions</a></li>
+  <li><a href="#remix-scenarios-6" id="toc-remix-scenarios-6" class="nav-link" data-scroll-target="#remix-scenarios-6">Remix scenarios</a></li>
+  </ul></li>
+  <li><a href="#repreve-recycled-polyester-lca-unifi-tno-20212023" id="toc-repreve-recycled-polyester-lca-unifi-tno-20212023" class="nav-link" data-scroll-target="#repreve-recycled-polyester-lca-unifi-tno-20212023">8. Repreve Recycled Polyester LCA (Unifi / TNO, 2021–2023)</a>
+  <ul class="collapse">
+  <li><a href="#key-findings-and-conclusions-7" id="toc-key-findings-and-conclusions-7" class="nav-link" data-scroll-target="#key-findings-and-conclusions-7">Key findings and conclusions</a></li>
+  <li><a href="#remix-scenarios-7" id="toc-remix-scenarios-7" class="nav-link" data-scroll-target="#remix-scenarios-7">Remix scenarios</a></li>
+  </ul></li>
+  <li><a href="#nylon-6-fibre-lca" id="toc-nylon-6-fibre-lca" class="nav-link" data-scroll-target="#nylon-6-fibre-lca">9. Nylon 6 Fibre LCA</a>
+  <ul class="collapse">
+  <li><a href="#key-findings-and-conclusions-8" id="toc-key-findings-and-conclusions-8" class="nav-link" data-scroll-target="#key-findings-and-conclusions-8">Key findings and conclusions</a></li>
+  <li><a href="#remix-scenarios-8" id="toc-remix-scenarios-8" class="nav-link" data-scroll-target="#remix-scenarios-8">Remix scenarios</a></li>
+  </ul></li>
+  <li><a href="#thredup-green-story-second-hand-vs.-new-clothing-lca-2019" id="toc-thredup-green-story-second-hand-vs.-new-clothing-lca-2019" class="nav-link" data-scroll-target="#thredup-green-story-second-hand-vs.-new-clothing-lca-2019">10. thredUP / Green Story — Second-Hand vs.&nbsp;New Clothing LCA (2019)</a>
+  <ul class="collapse">
+  <li><a href="#key-findings-and-conclusions-9" id="toc-key-findings-and-conclusions-9" class="nav-link" data-scroll-target="#key-findings-and-conclusions-9">Key findings and conclusions</a></li>
+  <li><a href="#remix-scenarios-9" id="toc-remix-scenarios-9" class="nav-link" data-scroll-target="#remix-scenarios-9">Remix scenarios</a></li>
+  </ul></li>
+  <li><a href="#priority-order-for-building-recipe-cards" id="toc-priority-order-for-building-recipe-cards" class="nav-link" data-scroll-target="#priority-order-for-building-recipe-cards">Priority order for building recipe cards</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+<section id="remixable-lca-studies-textiles-fibres" class="level1">
+<h1>Remixable LCA Studies — Textiles &amp; Fibres</h1>
+<p>Well-known, publicly available Life Cycle Assessment studies that can be recreated as simplified educational models using the recipe card format in this project. Each entry includes the key numbers, supply chain structure, key findings, and scenario remix ideas.</p>
+<hr>
+<section id="levis-501-jeans-lca-2015" class="level2">
+<h2 class="anchored" data-anchor-id="levis-501-jeans-lca-2015">1. Levi’s 501 Jeans LCA (2015)</h2>
+<p><strong>What it covers:</strong> Full cradle-to-grave lifecycle of one pair of Levi’s® 501® jeans (medium stone wash, 100% cotton denim).</p>
+<p><strong>Functional unit:</strong> One pair of Levi’s 501 jeans worn over its full useful life.</p>
+<p><strong>GWP result:</strong> 33.4 kg CO₂-eq per pair (cradle to grave).</p>
+<p><strong>Hotspot:</strong> Consumer washing and drying (37% of total), followed by fabric milling (27%).</p>
+<p><strong>Supply chain:</strong> Cotton farm → Spinning + Weaving + Dyeing (fabric mill) → Cut + Sew (garment factory) → Distribution + Consumer use + End of life</p>
+<p><strong>Stage breakdown:</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Stage</th>
+<th>CO₂</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Cotton farming</td>
+<td>2.9 kg</td>
+</tr>
+<tr class="even">
+<td>Fabric mill (electricity)</td>
+<td>9.0 kg</td>
+</tr>
+<tr class="odd">
+<td>Garment factory (electricity)</td>
+<td>2.6 kg</td>
+</tr>
+<tr class="even">
+<td>Distribution + sundries + end of life</td>
+<td>6.4 kg</td>
+</tr>
+<tr class="odd">
+<td>Consumer washing + drying (electricity)</td>
+<td>12.5 kg</td>
+</tr>
+<tr class="even">
+<td><strong>Total</strong></td>
+<td><strong>33.4 kg</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Already in this project:</strong> <code>lca_analysis/levis/</code> — base case plus 7 scenario variants.</p>
+<section id="key-findings-and-conclusions" class="level3">
+<h3 class="anchored" data-anchor-id="key-findings-and-conclusions">Key findings and conclusions</h3>
+<ul>
+<li>The single biggest source of CO₂ is not the factory — it is <strong>the customer’s washing machine and tumble dryer</strong>, responsible for 37% of the jeans’ entire lifetime carbon footprint. This is deeply counterintuitive for most people.</li>
+<li>The fabric mill (spinning, dyeing, weaving) is the second largest contributor at 27%, driven almost entirely by electricity consumption in energy-intensive wet-processing steps like dyeing.</li>
+<li>Cotton farming itself is a relatively small contributor (just 9%) — a surprise to students who assume “natural fibre = green fibre.”</li>
+<li>The study’s most quoted business conclusion: <strong>if a consumer washes their jeans every 10 wears instead of every 2–3 wears, they could cut the jeans’ total climate impact by 25–30%</strong> — without the brand changing anything in production.</li>
+<li>This means a brand’s biggest lever for reducing product carbon footprint is <strong>consumer education</strong>, not factory investment — a major reframing for marketing and sustainability teams.</li>
+</ul>
+</section>
+<section id="remix-scenarios" class="level3">
+<h3 class="anchored" data-anchor-id="remix-scenarios">Remix scenarios</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Scenario</th>
+<th>What changes</th>
+<th>Business question it answers</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>_wash1x</code></td>
+<td>Consumer washes only once (extreme care)</td>
+<td>What is the theoretical minimum?</td>
+</tr>
+<tr class="even">
+<td><code>_wash2x</code></td>
+<td>Consumer washes every 2 wears</td>
+<td>What if care labelling said “wash less”?</td>
+</tr>
+<tr class="odd">
+<td><code>_wash5x</code></td>
+<td>Consumer washes every 5 wears</td>
+<td>Realistic “conscious consumer” behaviour</td>
+</tr>
+<tr class="even">
+<td><code>_wash10x</code></td>
+<td>Consumer washes every 10 wears</td>
+<td>Levi’s “wash less” campaign target</td>
+</tr>
+<tr class="odd">
+<td><code>_renewable</code></td>
+<td>Factory and mill switch to renewable energy</td>
+<td>What if the supply chain decarbonised?</td>
+</tr>
+<tr class="even">
+<td><code>_organic</code></td>
+<td>Organic cotton (no synthetic fertilizers)</td>
+<td>Is organic cotton worth the premium?</td>
+</tr>
+<tr class="odd">
+<td><code>_longlife</code></td>
+<td>Jeans last twice as long (functional unit = per wear)</td>
+<td>What is the value of durability?</td>
+</tr>
+<tr class="even">
+<td><code>_bestcase</code></td>
+<td>Renewable energy + wash 10× + organic cotton</td>
+<td>Maximum impact reduction combined</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+</section>
+<section id="cotton-inc.-u.s.-cotton-fiber-lca-2012" class="level2">
+<h2 class="anchored" data-anchor-id="cotton-inc.-u.s.-cotton-fiber-lca-2012">2. Cotton Inc.&nbsp;U.S. Cotton Fiber LCA (2012)</h2>
+<p><strong>What it covers:</strong> 1 kg of U.S. raw cotton fiber, cradle to farm gate (ginned lint ready for spinning). Based on data from 753 cotton growers across 17 states.</p>
+<p><strong>Functional unit:</strong> 1 kg of cotton fiber at the gin gate.</p>
+<p><strong>GWP result:</strong> 1.45 kg CO₂-eq per kg fiber (fossil emissions only). When biogenic carbon sequestration by the cotton plant is included, the net figure is −0.264 kg CO₂-eq — effectively carbon-negative at the farm gate.</p>
+<p><strong>Hotspot:</strong> Nitrogen fertilizer application (N₂O emissions) and irrigation energy.</p>
+<p><strong>Supply chain:</strong> Land preparation → Planting + Growing (fertilizer, irrigation) → Harvest → Ginning (fibre separation)</p>
+<section id="key-findings-and-conclusions-1" class="level3">
+<h3 class="anchored" data-anchor-id="key-findings-and-conclusions-1">Key findings and conclusions</h3>
+<ul>
+<li>U.S. cotton at farm gate has a <strong>surprisingly low carbon footprint</strong> compared to synthetic fibres — 1.45 kg CO₂/kg vs.&nbsp;~9.5 kg CO₂/kg for virgin polyester. The problem is not where cotton comes from, but what happens to it after the farm (milling, dyeing, consumer use).</li>
+<li>The biogenic carbon finding — that cotton can be <strong>net carbon-negative at the farm gate</strong> — is scientifically contested but commercially significant. Cotton Inc.&nbsp;uses it to argue that cotton farming sequesters more CO₂ in biomass and soil than it emits. This is a live debate in the industry.</li>
+<li><strong>Nitrogen fertilizer is the dominant hotspot</strong>: synthetic N fertilizer releases nitrous oxide (N₂O) during application, and N₂O has a global warming potential ~273× that of CO₂. Reducing fertilizer use or switching to precision application is the highest-leverage intervention.</li>
+<li>Irrigation is the second hotspot — not because of water use itself, but because pumping irrigation water is energy-intensive. In regions dependent on groundwater (e.g.&nbsp;the Texas High Plains), this is a major concern.</li>
+<li>The study shows wide <strong>regional variation</strong> across U.S. states — cotton grown in rainfed areas (e.g.&nbsp;Georgia) has a much lower footprint than cotton grown in arid irrigated areas (e.g.&nbsp;Arizona).</li>
+</ul>
+</section>
+<section id="remix-scenarios-1" class="level3">
+<h3 class="anchored" data-anchor-id="remix-scenarios-1">Remix scenarios</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Scenario</th>
+<th>What changes</th>
+<th>Business question it answers</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>_organic</code></td>
+<td>No synthetic N fertilizer, lower yield</td>
+<td>Is organic cotton actually lower carbon?</td>
+</tr>
+<tr class="even">
+<td><code>_precision_ag</code></td>
+<td>Fertilizer reduced 30% via precision application</td>
+<td>What does smart farming technology save?</td>
+</tr>
+<tr class="odd">
+<td><code>_rainfed</code></td>
+<td>No irrigation (rainfall-dependent region)</td>
+<td>What is the benefit of sourcing from wetter regions?</td>
+</tr>
+<tr class="even">
+<td><code>_biogenic</code></td>
+<td>Include CO₂ sequestration credit for cotton plant</td>
+<td>What if carbon sequestration is counted?</td>
+</tr>
+<tr class="odd">
+<td><code>_renewable_gin</code></td>
+<td>Gin powered by solar energy</td>
+<td>What does electrification of farm processing save?</td>
+</tr>
+<tr class="even">
+<td><code>_vs_polyester</code></td>
+<td>Side-by-side comparison with virgin polyester at farm/production gate</td>
+<td>Which is lower carbon: cotton or polyester?</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+</section>
+<section id="iwto-wool-fibre-lca" class="level2">
+<h2 class="anchored" data-anchor-id="iwto-wool-fibre-lca">3. IWTO Wool Fibre LCA</h2>
+<p><strong>What it covers:</strong> 1 kg of greasy (raw, unscoured) wool fibre at the farm gate. Multiple studies synthesised across Australian, New Zealand, and U.S. farms. Also covers a 300 g merino wool sweater worn over its useful life.</p>
+<p><strong>Functional unit:</strong> 1 kg of greasy wool at the farm gate.</p>
+<p><strong>GWP result:</strong> 8.6–26 kg CO₂-eq per kg greasy wool (wide range reflects different farms and allocation methods). A commonly cited mid-range is ~17 kg CO₂-eq per kg. One Australian study (Yass Region, NSW) found 24.9 kg CO₂-eq/kg.</p>
+<p><strong>Hotspot:</strong> Enteric fermentation (methane from sheep digestion) — typically 50–65% of total impact. Nitrous oxide from manure is second.</p>
+<p><strong>Supply chain:</strong> Pasture management → Sheep (methane + manure) → Shearing → Wool classing → Transport to broker</p>
+<section id="key-findings-and-conclusions-2" class="level3">
+<h3 class="anchored" data-anchor-id="key-findings-and-conclusions-2">Key findings and conclusions</h3>
+<ul>
+<li>Wool has one of the <strong>highest carbon footprints of any fibre</strong> per kilogram — much higher than cotton and even higher than virgin polyester — almost entirely because sheep are ruminant animals that produce methane during digestion. There is no technological fix for this at the animal level.</li>
+<li><strong>Methane is 27–30× more potent</strong> as a greenhouse gas than CO₂ over a 100-year period. Because sheep produce so much of it, wool’s climate impact is dominated by a gas that a fashion brand cannot currently eliminate from its supply chain.</li>
+<li>The <strong>allocation method</strong> — how environmental burden is split between wool and lamb/mutton from the same animal — is the most contested variable in wool LCAs and explains most of the 8.6–26 kg range. If most of the burden is allocated to meat (the higher-value product in some markets), wool looks better. If allocated equally by mass, wool looks worse.</li>
+<li>Despite this, wool has <strong>genuine advantages</strong> over synthetics in durability, biodegradability, and end-of-life. A well-cared-for wool sweater worn for 20+ years may have a lower per-wear footprint than a cheap polyester alternative worn for 2 years.</li>
+<li><strong>Pasture management matters enormously</strong>: farms that sequester carbon in soil through regenerative grazing can partially offset methane emissions. Some certified regenerative wool farms claim near-carbon-neutral outcomes.</li>
+</ul>
+</section>
+<section id="remix-scenarios-2" class="level3">
+<h3 class="anchored" data-anchor-id="remix-scenarios-2">Remix scenarios</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Scenario</th>
+<th>What changes</th>
+<th>Business question it answers</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>_allocation_meat</code></td>
+<td>80% of burden allocated to lamb/mutton, 20% to wool</td>
+<td>How does allocation method change the story?</td>
+</tr>
+<tr class="even">
+<td><code>_allocation_wool</code></td>
+<td>80% of burden allocated to wool</td>
+<td>Worst-case wool impact</td>
+</tr>
+<tr class="odd">
+<td><code>_regenerative</code></td>
+<td>Carbon sequestration credit added for regenerative grazing</td>
+<td>What does certified regenerative wool look like?</td>
+</tr>
+<tr class="even">
+<td><code>_merino_fine</code></td>
+<td>Finer merino wool (higher value per kg, fewer sheep needed)</td>
+<td>Does premium wool have a lower footprint?</td>
+</tr>
+<tr class="odd">
+<td><code>_new_zealand</code></td>
+<td>NZ farm (mostly rainfall, less irrigation, lower emissions factor)</td>
+<td>How much does geography matter?</td>
+</tr>
+<tr class="even">
+<td><code>_vs_cotton</code></td>
+<td>Side-by-side with cotton fibre</td>
+<td>Is wool better or worse than cotton?</td>
+</tr>
+<tr class="odd">
+<td><code>_per_wear</code></td>
+<td>Functional unit changed to “per wear” for a wool sweater worn 10 years</td>
+<td>What happens when you account for durability?</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+</section>
+<section id="patagonia-synchilla-snap-t-fleece-jacket-lca-2013" class="level2">
+<h2 class="anchored" data-anchor-id="patagonia-synchilla-snap-t-fleece-jacket-lca-2013">4. Patagonia Synchilla Snap-T Fleece Jacket LCA (2013)</h2>
+<p><strong>What it covers:</strong> Patagonia Synchilla Snap-T fleece pullover made from recycled polyester (rPET from post-consumer plastic bottles), compared to an equivalent jacket made from virgin polyester.</p>
+<p><strong>Functional unit:</strong> One fleece jacket worn over its useful life.</p>
+<p><strong>GWP result:</strong> Making from recycled polyester uses ~42% less CO₂ than virgin polyester. Energy use is approximately 50% lower.</p>
+<p><strong>Hotspot:</strong> Fibre production stage — the difference between petroleum-derived virgin PET and bottle-recycled rPET drives almost all of the savings.</p>
+<p><strong>Supply chain (virgin path):</strong> Crude oil → Naphtha → PTA → PET granules → Fibre spinning → Fabric knitting → Garment assembly</p>
+<p><strong>Supply chain (recycled path):</strong> Collected PET bottles → Shredding + washing → Pelletising → Fibre spinning → Fabric knitting → Garment assembly</p>
+<p><strong>Note:</strong> Patagonia has not released a full public LCA report — only summary findings. The numbers are well-cited in trade press but the underlying data is not publicly available.</p>
+<section id="key-findings-and-conclusions-3" class="level3">
+<h3 class="anchored" data-anchor-id="key-findings-and-conclusions-3">Key findings and conclusions</h3>
+<ul>
+<li><strong>Switching from virgin to recycled polyester cuts the jacket’s carbon footprint by roughly 42%</strong> — entirely at the fibre production stage. Everything downstream (knitting, sewing, consumer care) is the same.</li>
+<li>The key insight for brands: <strong>recycled polyester is not a premium or niche choice</strong> — it is already cost-competitive with virgin polyester at scale, and several major brands (Patagonia, H&amp;M, Nike, Adidas) have committed to high percentages of recycled content.</li>
+<li>A critical limitation: recycled polyester still ends up as microplastic in waterways when washed. The recycled content reduces the carbon footprint but does <strong>not</strong> solve the microplastic problem — a distinction that students often conflate.</li>
+<li><strong>Bottle-to-fibre recycling is not infinite</strong>: rPET fibre cannot itself be easily recycled back into bottles or high-quality fibre. Each cycle downgrades the material. True circularity would require fibre-to-fibre recycling technology (e.g.&nbsp;chemical recycling), which is still emerging.</li>
+<li>Patagonia’s finding that energy use drops by ~50% aligns with the broader industry understanding that the oil-extraction and PTA-synthesis steps are the most energy-intensive in polyester production.</li>
+</ul>
+</section>
+<section id="remix-scenarios-3" class="level3">
+<h3 class="anchored" data-anchor-id="remix-scenarios-3">Remix scenarios</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Scenario</th>
+<th>What changes</th>
+<th>Business question it answers</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>_virgin_polyester</code></td>
+<td>Base case: jacket made from virgin PET</td>
+<td>What is the benchmark impact?</td>
+</tr>
+<tr class="even">
+<td><code>_recycled_polyester</code></td>
+<td>Jacket made from rPET (Patagonia’s actual product)</td>
+<td>What does switching to recycled save?</td>
+</tr>
+<tr class="odd">
+<td><code>_50pct_recycled</code></td>
+<td>Blended: 50% virgin + 50% recycled content</td>
+<td>What if a brand makes a partial commitment?</td>
+</tr>
+<tr class="even">
+<td><code>_renewable_factory</code></td>
+<td>Manufacturing powered by renewable energy</td>
+<td>What if factories also clean up?</td>
+</tr>
+<tr class="odd">
+<td><code>_longlife</code></td>
+<td>Jacket worn 20 years vs.&nbsp;typical 5-year assumption</td>
+<td>What is the value of a repair programme?</td>
+</tr>
+<tr class="even">
+<td><code>_fibre_to_fibre</code></td>
+<td>Future scenario: chemical recycling (90% lower vs.&nbsp;virgin)</td>
+<td>What does true circularity look like?</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+</section>
+<section id="virgin-polyester-pet-fibre-lca" class="level2">
+<h2 class="anchored" data-anchor-id="virgin-polyester-pet-fibre-lca">5. Virgin Polyester (PET) Fibre LCA</h2>
+<p><strong>What it covers:</strong> 1 kg of virgin polyester (PET) staple fibre, cradle to gate. Standard dataset used across the industry via ecoinvent and the Higg MSI.</p>
+<p><strong>Functional unit:</strong> 1 kg of polyester fibre ready for spinning.</p>
+<p><strong>GWP result:</strong> 9.5–14.0 kg CO₂-eq per kg fibre. A commonly cited figure from ecoinvent is ~9.5 kg CO₂-eq/kg. Chinese production studies find ~12 kg CO₂-eq/kg.</p>
+<p><strong>Hotspot:</strong> PTA (purified terephthalic acid) production and PET polymerisation — both energy-intensive petrochemical processes.</p>
+<p><strong>Supply chain:</strong> Crude oil → Naphtha (refinery) → PTA production → PET polymerisation → Fibre spinning → Staple cutting</p>
+<section id="key-findings-and-conclusions-4" class="level3">
+<h3 class="anchored" data-anchor-id="key-findings-and-conclusions-4">Key findings and conclusions</h3>
+<ul>
+<li>Virgin polyester has a <strong>much higher carbon footprint per kg than cotton</strong> at the fibre stage (~9.5 vs ~1.45 kg CO₂/kg), but this comparison is often misleading because polyester garments tend to be lighter, dry faster, and require less energy in consumer care.</li>
+<li><strong>Geography of production matters significantly</strong>: the same PET fibre manufactured in China (coal-heavy grid) has a ~25% higher carbon footprint than the same fibre made in Europe (lower-carbon grid). A brand sourcing from different countries gets very different footprints for the “same” product.</li>
+<li>Polyester is essentially <strong>fossilised carbon in fibre form</strong> — it is made from oil, worn for a few years, and then landfilled or incinerated, releasing that carbon back to the atmosphere. This is a fundamentally non-circular model.</li>
+<li>Despite its high production footprint, polyester dominates the market (over 50% of all fibre produced globally) because it is <strong>cheap, durable, versatile, and easy to care for</strong>. Understanding why polyester won commercially is important for understanding how to change the industry.</li>
+<li><strong>Polyester vs.&nbsp;cotton is the central debate</strong> in sustainable fashion — but the correct answer almost always depends on the functional unit and the use phase assumptions. An LCA that ignores washing frequency will reach different conclusions than one that includes it.</li>
+</ul>
+</section>
+<section id="remix-scenarios-4" class="level3">
+<h3 class="anchored" data-anchor-id="remix-scenarios-4">Remix scenarios</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Scenario</th>
+<th>What changes</th>
+<th>Business question it answers</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>_china_grid</code></td>
+<td>High-carbon electricity (coal-heavy Chinese grid, 0.8 kg CO₂/kWh)</td>
+<td>What does sourcing location do to the footprint?</td>
+</tr>
+<tr class="even">
+<td><code>_europe_grid</code></td>
+<td>Lower-carbon grid (European average, 0.3 kg CO₂/kWh)</td>
+<td>What if production moved to cleaner grids?</td>
+</tr>
+<tr class="odd">
+<td><code>_renewable_factory</code></td>
+<td>Factory runs on 100% renewable energy</td>
+<td>What does full electrification save?</td>
+</tr>
+<tr class="even">
+<td><code>_vs_recycled</code></td>
+<td>Side-by-side with rPET fibre</td>
+<td>How much does the recycled label actually matter?</td>
+</tr>
+<tr class="odd">
+<td><code>_vs_cotton</code></td>
+<td>Side-by-side with cotton fibre at equivalent use stage</td>
+<td>Which is actually better for a t-shirt?</td>
+</tr>
+<tr class="even">
+<td><code>_bio_pet</code></td>
+<td>Bio-based PET (from sugarcane, not oil)</td>
+<td>What if oil is replaced with plant feedstock?</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+</section>
+<section id="made-by-environmental-benchmark-for-fibres-20122017" class="level2">
+<h2 class="anchored" data-anchor-id="made-by-environmental-benchmark-for-fibres-20122017">6. Made-By Environmental Benchmark for Fibres (2012–2017)</h2>
+<p><strong>What it covers:</strong> Comparative benchmark across 9 common fibre types, rated A (lowest impact) to E (highest). Made-By closed as an organisation in 2018 but the benchmark is widely archived and cited.</p>
+<p><strong>Functional unit:</strong> 1 kg of fibre at the spinning stage (cradle to fibre).</p>
+<p><strong>Rankings (A = best, E = worst):</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Class</th>
+<th>Fibres</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td>Recycled polyester, recycled nylon, recycled cotton</td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td>Organic cotton (with certifications)</td>
+</tr>
+<tr class="odd">
+<td>C</td>
+<td>Conventional linen, hemp</td>
+</tr>
+<tr class="even">
+<td>D</td>
+<td>Conventional cotton, conventional polyester</td>
+</tr>
+<tr class="odd">
+<td>E</td>
+<td>Virgin nylon, conventional wool, conventional viscose/rayon</td>
+</tr>
+</tbody>
+</table>
+<section id="key-findings-and-conclusions-5" class="level3">
+<h3 class="anchored" data-anchor-id="key-findings-and-conclusions-5">Key findings and conclusions</h3>
+<ul>
+<li>The benchmark’s most striking finding: <strong>recycled synthetics outperform natural fibres</strong> on climate impact at the fibre production stage. Recycled polyester (Class A) is better than organic cotton (Class B) and far better than conventional wool (Class E). This directly contradicts the common consumer assumption that “natural = sustainable.”</li>
+<li><strong>Conventional cotton and conventional polyester are rated the same</strong> (Class D) — a finding that challenges both the “cotton is bad” narrative and the “synthetics are fine” assumption.</li>
+<li><strong>Wool is rated Class E</strong> (worst category) — alongside virgin nylon. Most fashion consumers do not know this. For a sustainability-focused brand, wool sourcing requires careful justification beyond “it’s natural.”</li>
+<li>The benchmark only covers fibre production — it does not include dyeing, finishing, consumer care, or end of life. A complete LCA might reorder some fibres significantly (e.g.&nbsp;wool’s durability advantage over a long life).</li>
+<li>As a teaching tool, the A–E class system is <strong>more powerful than raw numbers</strong> for non-technical audiences because it removes false precision and focuses on relative comparison.</li>
+</ul>
+</section>
+<section id="remix-scenarios-5" class="level3">
+<h3 class="anchored" data-anchor-id="remix-scenarios-5">Remix scenarios</h3>
+<p>The Made-By benchmark is best modelled as a <strong>multi-product comparison</strong> rather than a single recipe card. The most effective approach is to build individual recipe cards for each fibre and run them side by side:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Comparison</th>
+<th>Recipe cards needed</th>
+<th>What it teaches</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Cotton vs.&nbsp;polyester vs.&nbsp;wool</td>
+<td>3 fibre recipe cards</td>
+<td>The core triangle of the fashion industry</td>
+</tr>
+<tr class="even">
+<td>Conventional vs.&nbsp;organic cotton</td>
+<td>2 recipe cards</td>
+<td>Is organic certification worth the cost?</td>
+</tr>
+<tr class="odd">
+<td>Virgin vs.&nbsp;recycled (polyester or nylon)</td>
+<td>2 recipe cards</td>
+<td>The recycled content argument</td>
+</tr>
+<tr class="even">
+<td>Class A vs.&nbsp;Class E fibres</td>
+<td>2 recipe cards</td>
+<td>Best case vs.&nbsp;worst case in the industry</td>
+</tr>
+<tr class="odd">
+<td>Full 9-fibre comparison</td>
+<td>9 recipe cards</td>
+<td>Complete picture for a sourcing decision</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+</section>
+<section id="viscose-rayon-fibre-lca-ivl-swedish-environmental-research-institute" class="level2">
+<h2 class="anchored" data-anchor-id="viscose-rayon-fibre-lca-ivl-swedish-environmental-research-institute">7. Viscose / Rayon Fibre LCA (IVL Swedish Environmental Research Institute)</h2>
+<p><strong>What it covers:</strong> 1 kg of conventional viscose (rayon) staple fibre, from wood pulp through chemical dissolution and wet spinning. Published as part of IVL’s screening LCA of Swedish textile consumption.</p>
+<p><strong>Functional unit:</strong> 1 kg of viscose fibre at spinning gate.</p>
+<p><strong>GWP result:</strong> ~10.1 kg CO₂-eq per kg viscose fibre (cradle to gate). For comparison, lyocell (TENCEL) — which uses a closed-loop solvent process — comes in at ~3–5 kg CO₂-eq per kg.</p>
+<p><strong>Hotspot:</strong> The xanthation step (dissolving cellulose in carbon disulfide solvent) is highly energy-intensive and releases toxic emissions. The energy use in spinning is also significant.</p>
+<p><strong>Supply chain:</strong> Forest / plantation → Wood chipping → Pulping → Alkali cellulose production → Xanthation (CS₂ solvent) → Wet spinning → Fibre washing + drying</p>
+<section id="key-findings-and-conclusions-6" class="level3">
+<h3 class="anchored" data-anchor-id="key-findings-and-conclusions-6">Key findings and conclusions</h3>
+<ul>
+<li>Viscose is one of the most misunderstood fibres in fashion. It is widely marketed as a <strong>“natural” or “plant-based” fibre</strong> (it comes from wood pulp), but its production process is one of the most chemically intensive in the textile industry, using carbon disulfide (CS₂) — a highly toxic solvent.</li>
+<li>At ~10 kg CO₂/kg, viscose’s carbon footprint is <strong>comparable to virgin polyester</strong> — much higher than most consumers assume for a “natural” fibre.</li>
+<li><strong>TENCEL (lyocell)</strong> uses a closed-loop process where 99%+ of the solvent is recovered and reused, dramatically cutting emissions to ~3–5 kg CO₂/kg. This is the most important comparison in the viscose family and a powerful lesson in how process chemistry determines environmental impact.</li>
+<li>The <strong>sourcing of wood pulp</strong> is a significant variable: viscose from certified sustainably managed forests (FSC/PEFC) has a better land-use profile than from ancient or endangered forests. Canopy, an NGO, publishes an annual ranking of viscose producers by forest risk.</li>
+<li>Carbon emissions are only part of the picture for viscose: <strong>water use, toxic chemical discharge, and worker health risks</strong> from CS₂ exposure are arguably more significant. A full multi-impact LCA tells a very different story than a carbon-only study.</li>
+</ul>
+</section>
+<section id="remix-scenarios-6" class="level3">
+<h3 class="anchored" data-anchor-id="remix-scenarios-6">Remix scenarios</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Scenario</th>
+<th>What changes</th>
+<th>Business question it answers</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>_conventional_viscose</code></td>
+<td>Base case: standard viscose process</td>
+<td>What does conventional rayon actually cost?</td>
+</tr>
+<tr class="even">
+<td><code>_lyocell_tencel</code></td>
+<td>Closed-loop solvent process (TENCEL)</td>
+<td>What does choosing TENCEL instead save?</td>
+</tr>
+<tr class="odd">
+<td><code>_modal</code></td>
+<td>Modal (improved viscose, less chemical intensive)</td>
+<td>Is modal better than standard viscose?</td>
+</tr>
+<tr class="even">
+<td><code>_certified_wood</code></td>
+<td>FSC-certified sustainably managed forest source</td>
+<td>Does sustainable sourcing matter for carbon?</td>
+</tr>
+<tr class="odd">
+<td><code>_renewable_mill</code></td>
+<td>Mill powered by renewable energy</td>
+<td>How much does energy source affect viscose?</td>
+</tr>
+<tr class="even">
+<td><code>_vs_cotton</code></td>
+<td>Side-by-side with cotton at fibre stage</td>
+<td>Is viscose better or worse than cotton?</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+</section>
+<section id="repreve-recycled-polyester-lca-unifi-tno-20212023" class="level2">
+<h2 class="anchored" data-anchor-id="repreve-recycled-polyester-lca-unifi-tno-20212023">8. Repreve Recycled Polyester LCA (Unifi / TNO, 2021–2023)</h2>
+<p><strong>What it covers:</strong> 1 kg of Repreve recycled polyester fibre (made from post-consumer PET bottles) compared directly to 1 kg of virgin polyester fibre. Peer-reviewed study published in Textile Research International (2021), with updated findings from Unifi in 2023.</p>
+<p><strong>Functional unit:</strong> 1 kg of polyester fibre (recycled vs.&nbsp;virgin).</p>
+<p><strong>GWP result:</strong> Recycled polyester reduces GHG emissions by 42–80% vs.&nbsp;virgin, depending on the methodology and allocation assumptions. A published peer-reviewed figure is ~3–5 kg CO₂-eq per kg for recycled vs.&nbsp;~9.5–14 kg for virgin.</p>
+<p><strong>Hotspot:</strong> The avoided petroleum extraction and PTA production — switching from oil to bottles eliminates the most energy-intensive steps.</p>
+<p><strong>Supply chain (recycled):</strong> Collected PET bottles → Sorting + baling → Shredding + washing → Melt extrusion → Chip drying → Fibre spinning</p>
+<section id="key-findings-and-conclusions-7" class="level3">
+<h3 class="anchored" data-anchor-id="key-findings-and-conclusions-7">Key findings and conclusions</h3>
+<ul>
+<li>The 42–80% range in reported savings is not scientific uncertainty — it reflects <strong>genuine methodological choices</strong> about how to allocate the burden of the original bottle production. If the bottle is given zero burden (it is waste), recycled polyester looks much better. If the bottle shares its production burden, it looks somewhat less good. This is a live debate.</li>
+<li><strong>Collection and sorting infrastructure is a hidden bottleneck</strong>: recycled polyester is only as good as the collection system feeding it. In countries with poor bottle collection rates, the “recycled” supply chain becomes much harder to sustain at scale.</li>
+<li>Repreve specifically sources from post-consumer bottles (not industrial waste), which is held to a <strong>higher standard of circularity</strong> but also has higher collection and cleaning costs than industrial scrap recycling.</li>
+<li>Even at the optimistic end (80% reduction), recycled polyester still emits roughly <strong>2–3 kg CO₂ per kg</strong> — not zero. It is much better than virgin, but not carbon-neutral. Brands should be careful with language like “sustainable” or “green” without qualification.</li>
+<li>The study is a good example of a <strong>named-brand LCA</strong> — Unifi commissioned it specifically to support Repreve’s marketing claims, which means the methodology choices likely favour the most favourable plausible result. Independent replication would be useful.</li>
+</ul>
+</section>
+<section id="remix-scenarios-7" class="level3">
+<h3 class="anchored" data-anchor-id="remix-scenarios-7">Remix scenarios</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Scenario</th>
+<th>What changes</th>
+<th>Business question it answers</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>_virgin_baseline</code></td>
+<td>Virgin polyester (base case for comparison)</td>
+<td>What is the starting point?</td>
+</tr>
+<tr class="even">
+<td><code>_recycled_optimistic</code></td>
+<td>80% reduction (zero burden on bottle)</td>
+<td>Best-case recycled polyester claim</td>
+</tr>
+<tr class="odd">
+<td><code>_recycled_conservative</code></td>
+<td>42% reduction (partial burden on bottle)</td>
+<td>Conservative, defensible recycled claim</td>
+</tr>
+<tr class="even">
+<td><code>_low_collection_rate</code></td>
+<td>30% bottle collection rate in supply country</td>
+<td>What happens in markets with poor recycling?</td>
+</tr>
+<tr class="odd">
+<td><code>_chemical_recycling</code></td>
+<td>Future technology: fibre-to-fibre chemical recycling</td>
+<td>What could true circularity achieve?</td>
+</tr>
+<tr class="even">
+<td><code>_renewable_reprocessing</code></td>
+<td>Recycling facility powered by renewables</td>
+<td>Stacking recycled content + renewable energy</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+</section>
+<section id="nylon-6-fibre-lca" class="level2">
+<h2 class="anchored" data-anchor-id="nylon-6-fibre-lca">9. Nylon 6 Fibre LCA</h2>
+<p><strong>What it covers:</strong> 1 kg of virgin Nylon 6 (polyamide 6) fibre, cradle to gate. Compared alongside recycled nylon (e.g.&nbsp;Econyl, made from discarded fishing nets and carpet waste).</p>
+<p><strong>Functional unit:</strong> 1 kg of nylon fibre ready for spinning or weaving.</p>
+<p><strong>GWP result:</strong> - Virgin Nylon 6: 5.5–8.0 kg CO₂-eq per kg (commonly cited ~6.5 kg CO₂-eq/kg) - Recycled nylon (Econyl): ~0.2–3.0 kg CO₂-eq per kg (varies significantly by methodology and what credit is given for avoiding virgin production)</p>
+<p><strong>Hotspot:</strong> The adipic acid production step releases nitrous oxide (N₂O) as a byproduct — a greenhouse gas ~273× more potent than CO₂. This makes nylon’s climate impact disproportionately high relative to its energy use alone.</p>
+<p><strong>Supply chain:</strong> Crude oil → Benzene (refinery) → Cyclohexane → Adipic acid (N₂O released here) → Caprolactam → Polymerisation → Fibre spinning</p>
+<section id="key-findings-and-conclusions-8" class="level3">
+<h3 class="anchored" data-anchor-id="key-findings-and-conclusions-8">Key findings and conclusions</h3>
+<ul>
+<li>Nylon’s headline carbon number (~6.5 kg CO₂/kg) seems lower than polyester (~9.5 kg CO₂/kg), but this is somewhat misleading: <strong>nylon’s N₂O emissions from adipic acid production are so potent</strong> that they dominate the climate impact even at small quantities. The chemistry, not the energy, is the hotspot.</li>
+<li>Modern adipic acid plants have catalytic N₂O abatement technology that can destroy up to 99% of N₂O before it is released. Plants with this technology have footprints as low as <strong>~3–4 kg CO₂-eq/kg</strong>; plants without it are closer to <strong>8+ kg CO₂-eq/kg</strong>. A sourcing decision that specifies abatement technology can cut the fibre’s climate impact in half.</li>
+<li><strong>Nylon is predominantly used in activewear, hosiery, swimwear, and performance outerwear</strong> — categories where there is often no direct natural fibre substitute with equivalent performance. This makes the recycled nylon (Econyl) story particularly commercially relevant.</li>
+<li><strong>Econyl</strong> (recycled nylon from fishing nets, carpet, and industrial waste) has achieved widespread brand adoption (Gucci, Stella McCartney, Adidas). Its carbon footprint of ~0.2–3.0 kg CO₂/kg is dramatically lower than virgin, and it also removes plastic pollution from oceans and landfills.</li>
+<li>The wide range for Econyl (0.2–3.0 kg) again reflects <strong>allocation choices</strong>: if fishing nets are treated as zero-burden waste, Econyl looks nearly carbon- neutral. If some net-production burden is shared, it rises.</li>
+</ul>
+</section>
+<section id="remix-scenarios-8" class="level3">
+<h3 class="anchored" data-anchor-id="remix-scenarios-8">Remix scenarios</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Scenario</th>
+<th>What changes</th>
+<th>Business question it answers</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>_virgin_no_abatement</code></td>
+<td>No N₂O abatement at adipic acid plant</td>
+<td>What is worst-case nylon production?</td>
+</tr>
+<tr class="even">
+<td><code>_virgin_abatement</code></td>
+<td>99% N₂O abatement technology installed</td>
+<td>What does specifying abatement technology achieve?</td>
+</tr>
+<tr class="odd">
+<td><code>_econyl_optimistic</code></td>
+<td>Recycled nylon, zero burden on waste feedstock</td>
+<td>Best-case Econyl claim</td>
+</tr>
+<tr class="even">
+<td><code>_econyl_conservative</code></td>
+<td>Recycled nylon, partial burden on waste feedstock</td>
+<td>Defensible Econyl claim</td>
+</tr>
+<tr class="odd">
+<td><code>_vs_polyester</code></td>
+<td>Side-by-side nylon vs.&nbsp;polyester for a swimwear application</td>
+<td>Which synthetic is better for this use case?</td>
+</tr>
+<tr class="even">
+<td><code>_renewable_plant</code></td>
+<td>Polymerisation powered by renewable electricity</td>
+<td>What if the factory switches to clean energy?</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+</section>
+<section id="thredup-green-story-second-hand-vs.-new-clothing-lca-2019" class="level2">
+<h2 class="anchored" data-anchor-id="thredup-green-story-second-hand-vs.-new-clothing-lca-2019">10. thredUP / Green Story — Second-Hand vs.&nbsp;New Clothing LCA (2019)</h2>
+<p><strong>What it covers:</strong> Comparative LCA of buying one average second-hand garment from thredUP vs.&nbsp;buying an equivalent new garment. Covers 22 clothing categories and 26 fibre types. Prepared by Green Story Inc.&nbsp;for thredUP, following ISO 14040/14044.</p>
+<p><strong>Functional unit:</strong> One average second-hand item of apparel sold online by thredUP in the USA, which replaces a similar new item bought by consumers in the USA.</p>
+<p><strong>GWP result:</strong> - New garment (manufacturing + end of life): 39.4 kg CO₂-eq per kg = ~15.8 kg per average 0.4 kg garment - thredUP operations only (collection + sorting + shipping): ~4.8 kg CO₂-eq per kg = ~1.9 kg per garment - Net saving from buying secondhand: 22.8 kg CO₂-eq per kg (~58% less on a per-wear basis)</p>
+<p><strong>Key assumption:</strong> The study assumes 100% displacement — every thredUP buyer would have bought new if thredUP didn’t exist. Relaxing this to 72% (the 2022 updated estimate) reduces the headline savings by ~28%.</p>
+<p><strong>Supply chain (new garment):</strong> Fibre production → Yarn spinning → Fabric weaving → Dyeing + finishing → Assembly → Distribution → End of life</p>
+<p><strong>Supply chain (secondhand):</strong> Seller ships clean-out kit → thredUP sorts + lists online → Ships to buyer → End of life</p>
+<p><strong>Already in this project:</strong> <code>lca_analysis/thredup/</code> — base case (new garment) plus 5 secondhand scenario variants.</p>
+<section id="key-findings-and-conclusions-9" class="level3">
+<h3 class="anchored" data-anchor-id="key-findings-and-conclusions-9">Key findings and conclusions</h3>
+<ul>
+<li>Buying secondhand can be <strong>88% lower carbon</strong> than buying new on a per-garment basis — but only if the buyer truly would have bought new otherwise. The displacement assumption is everything.</li>
+<li>The study’s most commercially important conclusion: <strong>secondhand is only sustainable if it displaces new purchasing</strong>. If a customer buys secondhand as an <em>addition</em> to their existing new purchases (what researchers call “additionality failure”), there is no net saving at all.</li>
+<li>The study found (in 2019) that 100% of thredUP’s customers were first-time secondhand buyers who said they would have bought new otherwise. By 2022, as secondhand became mainstream, this figure had dropped to ~72% — meaning the headline savings figure shrank significantly as thredUP’s own success brought in customers who were already secondhand shoppers.</li>
+<li>The <strong>remaining useful life of the garment</strong> is a second major variable. The study assumes 70% of useful life remains when thredUP sells it. Premium resale platforms (e.g.&nbsp;The RealReal for luxury) may have garments with 85–90% of useful life remaining; lower-grade platforms may have 50%.</li>
+<li><strong>thredUP’s own operations</strong> (sorting, warehousing, shipping) account for only ~10–12% of the total secondhand system’s emissions — meaning even a dramatic improvement in warehouse energy (e.g.&nbsp;switching to solar) would only modestly change the headline saving. The big lever is the displacement rate, not the warehouse.</li>
+</ul>
+</section>
+<section id="remix-scenarios-9" class="level3">
+<h3 class="anchored" data-anchor-id="remix-scenarios-9">Remix scenarios</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Scenario</th>
+<th>What changes</th>
+<th>Business question it answers</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>_secondhand_base</code></td>
+<td>100% displacement, 70% life remaining (study base case)</td>
+<td>What does thredUP claim?</td>
+</tr>
+<tr class="even">
+<td><code>_renewable_warehouse</code></td>
+<td>thredUP warehouse on solar/wind</td>
+<td>What does warehouse decarbonisation achieve?</td>
+</tr>
+<tr class="odd">
+<td><code>_highquality</code></td>
+<td>85% useful life remaining (premium curation)</td>
+<td>Does quality curation improve the case?</td>
+</tr>
+<tr class="even">
+<td><code>_partial_displacement_50</code></td>
+<td>Only 50% of buyers truly switch from new</td>
+<td>What if half the customers were already secondhand shoppers?</td>
+</tr>
+<tr class="odd">
+<td><code>_partial_displacement_72</code></td>
+<td>72% displacement (2022 updated estimate)</td>
+<td>What is the real-world adjusted saving?</td>
+</tr>
+<tr class="even">
+<td><code>_bestcase</code></td>
+<td>Renewable warehouse + 85% life + 100% displacement</td>
+<td>What is the ceiling for secondhand’s benefit?</td>
+</tr>
+<tr class="odd">
+<td><code>_electric_delivery</code></td>
+<td>Last-mile delivery by electric van</td>
+<td>What does green logistics add?</td>
+</tr>
+<tr class="even">
+<td><code>_local_resale</code></td>
+<td>No shipping (in-person charity shop equivalent)</td>
+<td>What if there were no delivery at all?</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+</section>
+<section id="priority-order-for-building-recipe-cards" class="level2">
+<h2 class="anchored" data-anchor-id="priority-order-for-building-recipe-cards">Priority order for building recipe cards</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Priority</th>
+<th>Study</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>✅ Done</td>
+<td>Levi’s 501 Jeans</td>
+<td>Multi-stage supply chain, consumer use hotspot</td>
+</tr>
+<tr class="even">
+<td>✅ Done</td>
+<td>thredUP Secondhand</td>
+<td>Displacement concept, system expansion</td>
+</tr>
+<tr class="odd">
+<td>Next</td>
+<td>Cotton Inc.&nbsp;Cotton Fibre</td>
+<td>Clean linear chain, farm-gate emissions</td>
+</tr>
+<tr class="even">
+<td>Next</td>
+<td>IWTO Wool</td>
+<td>Methane from animals — surprises students</td>
+</tr>
+<tr class="odd">
+<td>Next</td>
+<td>Virgin vs.&nbsp;Recycled Polyester</td>
+<td>Natural A-vs-B scenario comparison</td>
+</tr>
+<tr class="even">
+<td>Later</td>
+<td>Viscose / Rayon vs.&nbsp;TENCEL</td>
+<td>“Natural-origin but chemical-intensive” lesson</td>
+</tr>
+<tr class="odd">
+<td>Later</td>
+<td>Nylon 6 vs.&nbsp;Econyl</td>
+<td>N₂O hotspot, abatement technology lever</td>
+</tr>
+<tr class="even">
+<td>Later</td>
+<td>Made-By Benchmark</td>
+<td>Multi-fibre comparison table</td>
+</tr>
+<tr class="odd">
+<td>Later</td>
+<td>Patagonia Fleece</td>
+<td>Limited public data — needs estimation</td>
+</tr>
+</tbody>
+</table>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var sidebar = document.getElementById('quarto-sidebar');
+  if (!sidebar) return;
+  var isGitHubPages = window.location.hostname.includes('github.io');
+  const items = Array.from(sidebar.querySelectorAll('li.sidebar-item'));
+  items.forEach(function (item, i) {
+    const link = item.querySelector('a.sidebar-item-text');
+    if (!link || link.textContent.trim() !== '(.md)') return;
+    const prevItem = items[i - 1];
+    if (!prevItem) return;
+    const prevLink = prevItem.querySelector('a.sidebar-item-text');
+    if (!prevLink) return;
+    const prevHref = prevLink.getAttribute('href');
+    const match = prevHref.match(/skills\/(.+)\.html/);
+    if (!match) return;
+    const skillName = match[1];
+    if (isGitHubPages) {
+      link.href = 'https://github.com/calvinw/agentic-lca/blob/main/.skillshare/skills/' + skillName + '/SKILL.md';
+    } else {
+      link.href = prevHref.replace('.html', '.md');
+    }
+    const prevContainer = prevItem.querySelector('.sidebar-item-container');
+    if (!prevContainer) return;
+    prevContainer.style.display = 'block';
+    link.style.display = 'inline';
+    link.style.marginLeft = '4px';
+    link.style.fontSize = '0.72em';
+    link.style.opacity = '0.55';
+    link.style.fontWeight = 'normal';
+    prevContainer.appendChild(link);
+    item.style.display = 'none';
+  });
+});
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
