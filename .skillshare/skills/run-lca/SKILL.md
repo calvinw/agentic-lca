@@ -1,7 +1,7 @@
 ---
 version: 0.1
 name: run-lca
-author: Junghyun Choi
+author: Junghyun Choi (elenachoi1)
 description: >
   Use this skill whenever the user wants to perform a Life Cycle Assessment
   (LCA) using openLCA. Triggers include: "carbon footprint of", "compare
@@ -70,7 +70,7 @@ LCA model. The markdown body is free text (ignored by the runner).
 ```yaml
 ---
 name: <human name for this analysis>
-author: Junghyun Choi
+author: Junghyun Choi (elenachoi1)
 goal: <one sentence describing the purpose>
 
 functional_unit:
@@ -127,7 +127,7 @@ reference_process: <process name that delivers the functional unit>
 ```yaml
 ---
 name: Coffee LCA — one cup
-author: Junghyun Choi
+author: Junghyun Choi (elenachoi1)
 goal: Calculate CO₂ for one cup of coffee
 functional_unit:
   description: One cup of coffee

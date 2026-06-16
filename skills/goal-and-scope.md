@@ -1,7 +1,7 @@
 ---
 version: 0.1
 name: goal-and-scope
-author: Junghyun Choi
+author: Junghyun Choi (elenachoi1)
 description: >
   Teaching skill for the LCA concept of goal and scope — the opening decisions
   in a life cycle study that define why it is being done, who it is for, and

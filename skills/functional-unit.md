@@ -1,7 +1,7 @@
 ---
 version: 0.2
 name: functional-unit
-author: Junghyun Choi
+author: Junghyun Choi (elenachoi1)
 description: >
   Teaching skill for the LCA concept of functional unit — the precise definition
   of what is being measured in a life cycle study. Invoke as

@@ -1,7 +1,7 @@
 ---
 version: 0.1
 name: system-boundary
-author: Junghyun Choi
+author: Junghyun Choi (elenachoi1)
 description: >
   Teaching skill for the LCA concept of system boundary — the fence drawn
   around a study that decides what is counted and what is ignored. Invoke as

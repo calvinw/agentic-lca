@@ -1,7 +1,7 @@
 ---
 version: 0.1
 name: technosphere-and-ecosphere
-author: Junghyun Choi
+author: Junghyun Choi (elenachoi1)
 description: >
   Teaching skill for the LCA concepts of technosphere and ecosphere — the two
   worlds that every LCA study maps: the human-made world of factories, farms,

@@ -1,7 +1,7 @@
 ---
 version: 0.1
 name: life-cycle-stages
-author: Junghyun Choi
+author: Junghyun Choi (elenachoi1)
 description: >
   Teaching skill for the LCA concept of life cycle stages — the four named
   boundary types used in fashion and retail LCA studies: cradle to gate,

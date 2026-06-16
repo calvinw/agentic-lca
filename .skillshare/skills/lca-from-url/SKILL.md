@@ -1,7 +1,7 @@
 ---
 version: 0.1
 name: lca-from-url
-author: Junghyun Choi
+author: Junghyun Choi (elenachoi1)
 description: >
   Use this skill when the user provides a URL to an LCA study, a published
   environmental report, or a product sustainability page and wants to turn it

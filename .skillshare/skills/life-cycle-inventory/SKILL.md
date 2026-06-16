@@ -1,7 +1,7 @@
 ---
 version: 0.1
 name: life-cycle-inventory
-author: Junghyun Choi
+author: Junghyun Choi (elenachoi1)
 description: >
   Teaching skill for the LCA concept of life cycle inventory — the step where
   all emissions and resource uses from every process in the supply chain are

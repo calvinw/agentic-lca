@@ -1,7 +1,7 @@
 ---
 version: 0.1
 name: supply-chain
-author: Junghyun Choi
+author: Junghyun Choi (elenachoi1)
 description: >
   Teaching skill for the LCA concept of supply chain and system boundary —
   how to read a product graph diagram, what each box (process) represents,

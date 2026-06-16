@@ -1,7 +1,7 @@
 ---
 version: 0.1
 name: what-is-lca
-author: Junghyun Choi
+author: Junghyun Choi (elenachoi1)
 description: >
   Orientation skill for Life Cycle Assessment (LCA) — what it is, why fashion
   and retail professionals need it, and how a study is structured. Invoke as
