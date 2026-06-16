@@ -55,21 +55,20 @@ Skills already built are marked ✅. Skills recommended but not yet built are ma
 | **Phase 2 — Life Cycle Inventory** | | | |
 | 6 | `supply-chain` | ✅ Built | How to read a product graph, what processes and flows are |
 | 7 | `technosphere-and-ecosphere` | ✅ Built | The difference between human-made flows (products) and natural flows (emissions, resources) that cross into the natural world |
-| 8 | `elementary-flows` | ⬜ Recommended | What elementary flows are, how they are named and categorised, and why getting the name exactly right determines whether the impact gets scored at all |
-| 9 | `life-cycle-inventory` | ⬜ Recommended | What an inventory is, how emissions and resource use are collected and totalled across all processes |
-| 10 | `allocation` | ⬜ Recommended | What to do when a process produces more than one useful output — how to divide the environmental burden fairly between co-products |
-| 11 | `scaling-vector` | ✅ Built | How much each process in the supply chain must run to deliver one functional unit |
+| 8 | `life-cycle-inventory` | ✅ Built | What an inventory is, how emissions and resource use are collected and totalled across all processes |
+| 9 | `allocation` | ⬜ Recommended | What to do when a process produces more than one useful output — how to divide the environmental burden fairly between co-products |
+| 10 | `scaling-vector` | ✅ Built | How much each process in the supply chain must run to deliver one functional unit |
 | **Phase 3 — Impact Assessment** | | | |
-| 12 | `what-is-impact-assessment` | ⬜ Recommended | How raw inventory emissions are converted into environmental scores — global warming, acidification, smog, and more |
-| 13 | `impact-characterization` | ⬜ Recommended | How each emission is multiplied by a characterization factor to produce an impact score — the maths behind the conversion |
-| 14 | `damage-characterization` | ⬜ Recommended | How midpoint impact scores are translated into damage to human health, ecosystems, and natural resources |
-| 15 | `normalization-and-weighting` | ⬜ Recommended | How to convert impact scores to a common scale so you can add them up into a single score — and why that's controversial |
+| 11 | `what-is-impact-assessment` | ⬜ Recommended | How raw inventory emissions are converted into environmental scores — global warming, acidification, smog, and more |
+| 12 | `impact-characterization` | ⬜ Recommended | How each emission is multiplied by a characterization factor to produce an impact score — the maths behind the conversion |
+| 13 | `damage-characterization` | ⬜ Recommended | How midpoint impact scores are translated into damage to human health, ecosystems, and natural resources |
+| 14 | `normalization-and-weighting` | ⬜ Recommended | How to convert impact scores to a common scale so you can add them up into a single score — and why that's controversial |
 | **Phase 4 — Interpretation** | | | |
-| 16 | `hotspot-analysis` | ⬜ Recommended | How to read a contribution breakdown, identify the biggest sources of impact, connect to business decisions |
-| 17 | `sensitivity-analysis` | ⬜ Recommended | How to test whether results change when you swap an assumption — key for credibility and for understanding what really drives the score |
-| 18 | `uncertainty` | ⬜ Recommended | Why LCA numbers are ranges, not precise values; Monte Carlo basics in plain language |
-| 19 | `comparing-products` | ⬜ Recommended | How to set up a fair comparison between two products, when comparisons are misleading |
-| 20 | `interpretation` | ⬜ Recommended | The final LCA phase — checking whether results are trustworthy, identifying what drives them, and turning the numbers into a business recommendation |
+| 15 | `hotspot-analysis` | ⬜ Recommended | How to read a contribution breakdown, identify the biggest sources of impact, connect to business decisions |
+| 16 | `sensitivity-analysis` | ⬜ Recommended | How to test whether results change when you swap an assumption — key for credibility and for understanding what really drives the score |
+| 17 | `uncertainty` | ⬜ Recommended | Why LCA numbers are ranges, not precise values; Monte Carlo basics in plain language |
+| 18 | `comparing-products` | ⬜ Recommended | How to set up a fair comparison between two products, when comparisons are misleading |
+| 19 | `interpretation` | ⬜ Recommended | The final LCA phase — checking whether results are trustworthy, identifying what drives them, and turning the numbers into a business recommendation |
 
 ---
 
@@ -207,32 +206,7 @@ is what separates an impact from a transaction.
 
 ---
 
-### `elementary-flows` ⬜
-Once students understand the distinction between the technosphere and the ecosphere,
-the natural next step is to get precise about the flows that cross the boundary.
-An elementary flow is any exchange with the natural world — an emission released into
-air, water, or soil, or a natural resource extracted from it (water, land, minerals,
-fossil fuels). These are the *only* things LCA counts as environmental impact.
-
-This skill focuses on a practical detail that trips up beginners and experts alike:
-**the name matters exactly.** Every LCIA method — TRACI 2.2, EF 3.0, IPCC AR6 —
-has a specific list of substance names it recognises. If an emission in the inventory
-is called "CO2 to air" but the method expects "Carbon dioxide", it will score as zero
-with no error or warning. Students learn what the Federal Elementary Flow List (FEDEFL)
-is, why naming standards exist, and how to check that their flows will actually be
-picked up by the characterization step.
-
-Uses a case study to show students the elementary flows in the inventory, trace each
-one to a characterization factor, and spot what happens when a name doesn't match.
-
-**Key insight for students:** A kilogram of CO₂ in your inventory that is named
-incorrectly contributes nothing to the climate score. The database does not guess —
-it only matches exact names. Getting the name wrong is one of the most common and
-invisible mistakes in LCA.
-
----
-
-### `life-cycle-inventory` ⬜
+### `life-cycle-inventory` ✅
 Once students understand what flows cross the boundary between the technosphere and the
 ecosphere, the next question is: *how do you actually count them?* This skill would
 introduce the life cycle inventory (LCI) — the process of collecting and totalling all
