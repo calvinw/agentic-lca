@@ -753,7 +753,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const items = Array.from(sidebar.querySelectorAll('li.sidebar-item'));
   items.forEach(function (item, i) {
     const link = item.querySelector('a.sidebar-item-text');
-    if (!link || link.textContent.trim() !== '(.md version)') return;
+    if (!link || link.textContent.trim() !== '(.md)') return;
     const prevItem = items[i - 1];
     if (!prevItem) return;
     const prevContainer = prevItem.querySelector('.sidebar-item-container');
