@@ -24,6 +24,10 @@
     "title": "Plan: Adding LCIA Methods and Database Support to the run-lca Skill"
   },
   {
+    "file": "PLAN_SETUP_QUARTO_DOCS.md",
+    "title": "PLAN: Set Up `quarto_docs/` for a New Repository"
+  },
+  {
     "file": "PLAN_SKILL_RECOMMENDATIONS.md",
     "title": "Skill Recommendations \u2014 Elementary LCA Skills for Beginners"
   }

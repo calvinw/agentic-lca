@@ -29,6 +29,7 @@ project:
     - plan/PLAN_REFERENCE_EXAMPLES.md
     - plan/PLAN_REMIXABLE_LCAS.md
     - plan/PLAN_RUN_LCA_SKILL_LCIA_AND_DATABASES.md
+    - plan/PLAN_SETUP_QUARTO_DOCS.md
     - plan/PLAN_SKILL_RECOMMENDATIONS.md
     - skills/index.md
     - skills/what-is-lca.md
@@ -138,6 +139,8 @@ website:
           href: plan/PLAN_REMIXABLE_LCAS.md
         - text: "RUN_LCA_SKILL_LCIA_AND_DATABASES"
           href: plan/PLAN_RUN_LCA_SKILL_LCIA_AND_DATABASES.md
+        - text: "SETUP_QUARTO_DOCS"
+          href: plan/PLAN_SETUP_QUARTO_DOCS.md
         - text: "SKILL_RECOMMENDATIONS"
           href: plan/PLAN_SKILL_RECOMMENDATIONS.md
 
