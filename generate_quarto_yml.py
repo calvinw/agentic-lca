@@ -114,6 +114,8 @@ lines += [
     "    theme: cosmo",
     "    css: custom.css",
     "    toc: true",
+    "    grid:",
+    "      body-width: 2000px",
     "",
 ]
 
