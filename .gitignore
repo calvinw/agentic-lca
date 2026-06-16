@@ -49,3 +49,7 @@ Thumbs.db
 .DS_Store
 site/
 _site/
+
+/.quarto/
+**/*.quarto_ipynb
+quarto-linux-amd64.deb

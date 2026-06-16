@@ -1,5 +1,41 @@
 # Skill Recommendations — Elementary LCA Skills for Beginners
 
+## How Skills Work
+
+Skills are stored in `.skillshare/skills/<skill-name>/SKILL.md`. When a student types `/functional-unit wool_yarn`, the skill named `functional-unit` is loaded and `wool_yarn` is passed as the argument.
+
+The skill instructs the AI to:
+1. Read the relevant file(s) from `skills_references/wool_yarn/`
+2. Apply a fixed pedagogical sequence using data from those files
+3. Ask Socratic questions based on the actual numbers in the case study
+
+The skill file never contains product-specific facts. All product knowledge lives in the `skills_references/` folders. This means:
+- New case studies are immediately available to all skills without editing the skill
+- Updating a recipe card automatically updates what the skill teaches
+- Skills stay short and maintainable
+
+## Invocation Pattern
+
+```
+/<skill-name> <case-study-name>
+```
+
+Examples:
+
+```
+/functional-unit wool_yarn
+/functional-unit polyester_tshirt
+/supply-chain cotton_fiber
+/scaling-vector wool_yarn
+/lcia-method cotton_fiber
+/damage-pathway cotton_fiber
+/hotspots polyester_tshirt
+```
+
+Case study names correspond to folder names in `skills_references/`.
+
+---
+
 Recommended order for a student with no science or coding background.
 Skills already built are marked ✅. Skills recommended but not yet built are marked ⬜.
 

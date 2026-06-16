@@ -20,15 +20,12 @@ project:
     - skills_sessions/what-is-lca/what-is-lca-v0.1-elena-sonnet-4-6-session1.md
     - plan/index.md
     - plan/PLAN_BAFU_AND_METHODS_PACK.md
-    - plan/PLAN_FOR_EDUCATIONAL_SKILLS.md
-    - plan/PLAN_FOR_REFERENCE_EXAMPLES.md
-    - plan/PLAN_FOR_SIMPLE_EXAMPLES.md
     - plan/PLAN_PRODUCTION_LCIA_LCA_COMMONS_TRACI.md
     - plan/PLAN_PRODUCTION_LCIA_RECIPE.md
+    - plan/PLAN_REFERENCE_EXAMPLES.md
     - plan/PLAN_REMIXABLE_LCAS.md
     - plan/PLAN_RUN_LCA_SKILL_LCIA_AND_DATABASES.md
     - plan/PLAN_SKILL_RECOMMENDATIONS.md
-    - plan/PLAN_SWITCH_TO_QUARTO.md
 
 website:
   title: "Agentic LCA"
@@ -95,24 +92,18 @@ website:
           href: plan/index.md
         - text: "BAFU and Methods Pack"
           href: plan/PLAN_BAFU_AND_METHODS_PACK.md
-        - text: "for Educational Skills"
-          href: plan/PLAN_FOR_EDUCATIONAL_SKILLS.md
-        - text: "for Reference Examples"
-          href: plan/PLAN_FOR_REFERENCE_EXAMPLES.md
-        - text: "for Simple Examples"
-          href: plan/PLAN_FOR_SIMPLE_EXAMPLES.md
         - text: "Production LCIA LCA Commons TRACI"
           href: plan/PLAN_PRODUCTION_LCIA_LCA_COMMONS_TRACI.md
         - text: "Production LCIA Recipe"
           href: plan/PLAN_PRODUCTION_LCIA_RECIPE.md
+        - text: "Reference Examples"
+          href: plan/PLAN_REFERENCE_EXAMPLES.md
         - text: "Remixable LCAS"
           href: plan/PLAN_REMIXABLE_LCAS.md
         - text: "Run LCA Skill LCIA and Databases"
           href: plan/PLAN_RUN_LCA_SKILL_LCIA_AND_DATABASES.md
         - text: "Skill Recommendations"
           href: plan/PLAN_SKILL_RECOMMENDATIONS.md
-        - text: "Switch to Quarto"
-          href: plan/PLAN_SWITCH_TO_QUARTO.md
 
 format:
   html:
