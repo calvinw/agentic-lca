@@ -45,6 +45,7 @@ project:
     - skills/damage-characterization.md
     - skills/run-lca.md
     - skills/lca-from-url.md
+    - skills/skill-creator.md
 
 website:
   title: "Agentic LCA"
@@ -149,59 +150,63 @@ website:
         - text: "What Is LCA"
           href: skills/what-is-lca.md
         - text: "(.md version)"
-          href: https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/what-is-lca/SKILL.md
+          href: https://github.com/calvinw/agentic-lca/blob/main/.skillshare/skills/what-is-lca/SKILL.md
         - text: "System Boundary"
           href: skills/system-boundary.md
         - text: "(.md version)"
-          href: https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/system-boundary/SKILL.md
+          href: https://github.com/calvinw/agentic-lca/blob/main/.skillshare/skills/system-boundary/SKILL.md
         - text: "Life Cycle Stages"
           href: skills/life-cycle-stages.md
         - text: "(.md version)"
-          href: https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/life-cycle-stages/SKILL.md
+          href: https://github.com/calvinw/agentic-lca/blob/main/.skillshare/skills/life-cycle-stages/SKILL.md
         - text: "Goal and Scope"
           href: skills/goal-and-scope.md
         - text: "(.md version)"
-          href: https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/goal-and-scope/SKILL.md
+          href: https://github.com/calvinw/agentic-lca/blob/main/.skillshare/skills/goal-and-scope/SKILL.md
         - text: "Functional Unit"
           href: skills/functional-unit.md
         - text: "(.md version)"
-          href: https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/functional-unit/SKILL.md
+          href: https://github.com/calvinw/agentic-lca/blob/main/.skillshare/skills/functional-unit/SKILL.md
         - text: "Supply Chain"
           href: skills/supply-chain.md
         - text: "(.md version)"
-          href: https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/supply-chain/SKILL.md
+          href: https://github.com/calvinw/agentic-lca/blob/main/.skillshare/skills/supply-chain/SKILL.md
         - text: "Technosphere and Ecosphere"
           href: skills/technosphere-and-ecosphere.md
         - text: "(.md version)"
-          href: https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/technosphere-and-ecosphere/SKILL.md
+          href: https://github.com/calvinw/agentic-lca/blob/main/.skillshare/skills/technosphere-and-ecosphere/SKILL.md
         - text: "Life Cycle Inventory"
           href: skills/life-cycle-inventory.md
         - text: "(.md version)"
-          href: https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/life-cycle-inventory/SKILL.md
+          href: https://github.com/calvinw/agentic-lca/blob/main/.skillshare/skills/life-cycle-inventory/SKILL.md
         - text: "Scaling Vector"
           href: skills/scaling-vector.md
         - text: "(.md version)"
-          href: https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/scaling-vector/SKILL.md
+          href: https://github.com/calvinw/agentic-lca/blob/main/.skillshare/skills/scaling-vector/SKILL.md
         - text: "What Is Impact Assessment"
           href: skills/what-is-impact-assessment.md
         - text: "(.md version)"
-          href: https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/what-is-impact-assessment/SKILL.md
+          href: https://github.com/calvinw/agentic-lca/blob/main/.skillshare/skills/what-is-impact-assessment/SKILL.md
         - text: "Impact Characterization"
           href: skills/impact-characterization.md
         - text: "(.md version)"
-          href: https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/impact-characterization/SKILL.md
+          href: https://github.com/calvinw/agentic-lca/blob/main/.skillshare/skills/impact-characterization/SKILL.md
         - text: "Damage Characterization"
           href: skills/damage-characterization.md
         - text: "(.md version)"
-          href: https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/damage-characterization/SKILL.md
+          href: https://github.com/calvinw/agentic-lca/blob/main/.skillshare/skills/damage-characterization/SKILL.md
         - text: "Run LCA"
           href: skills/run-lca.md
         - text: "(.md version)"
-          href: https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/run-lca/SKILL.md
+          href: https://github.com/calvinw/agentic-lca/blob/main/.skillshare/skills/run-lca/SKILL.md
         - text: "LCA From Url"
           href: skills/lca-from-url.md
         - text: "(.md version)"
-          href: https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/lca-from-url/SKILL.md
+          href: https://github.com/calvinw/agentic-lca/blob/main/.skillshare/skills/lca-from-url/SKILL.md
+        - text: "Skill Creator"
+          href: skills/skill-creator.md
+        - text: "(.md version)"
+          href: https://github.com/calvinw/agentic-lca/blob/main/.skillshare/skills/skill-creator/SKILL.md
 
 format:
   html:
