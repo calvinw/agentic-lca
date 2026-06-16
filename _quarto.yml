@@ -27,18 +27,18 @@ project:
     - plan/PLAN_RUN_LCA_SKILL_LCIA_AND_DATABASES.md
     - plan/PLAN_SKILL_RECOMMENDATIONS.md
     - skills/index.md
-    - .skillshare/skills/functional-unit/SKILL.md
-    - .skillshare/skills/goal-and-scope/SKILL.md
-    - .skillshare/skills/lca-from-url/SKILL.md
-    - .skillshare/skills/life-cycle-inventory/SKILL.md
-    - .skillshare/skills/life-cycle-stages/SKILL.md
-    - .skillshare/skills/run-lca/SKILL.md
-    - .skillshare/skills/scaling-vector/SKILL.md
-    - .skillshare/skills/skill-creator/SKILL.md
-    - .skillshare/skills/supply-chain/SKILL.md
-    - .skillshare/skills/system-boundary/SKILL.md
-    - .skillshare/skills/technosphere-and-ecosphere/SKILL.md
-    - .skillshare/skills/what-is-lca/SKILL.md
+    - skills/functional-unit.md
+    - skills/goal-and-scope.md
+    - skills/lca-from-url.md
+    - skills/life-cycle-inventory.md
+    - skills/life-cycle-stages.md
+    - skills/run-lca.md
+    - skills/scaling-vector.md
+    - skills/skill-creator.md
+    - skills/supply-chain.md
+    - skills/system-boundary.md
+    - skills/technosphere-and-ecosphere.md
+    - skills/what-is-lca.md
 
 website:
   title: "Agentic LCA"
@@ -127,34 +127,59 @@ website:
         - text: Overview
           href: skills/index.md
         - text: "Functional Unit"
-          href: .skillshare/skills/functional-unit/SKILL.md
+          href: skills/functional-unit.md
+        - text: "(.md version)"
+          href: https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/functional-unit/SKILL.md
         - text: "Goal and Scope"
-          href: .skillshare/skills/goal-and-scope/SKILL.md
+          href: skills/goal-and-scope.md
+        - text: "(.md version)"
+          href: https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/goal-and-scope/SKILL.md
         - text: "LCA From Url"
-          href: .skillshare/skills/lca-from-url/SKILL.md
+          href: skills/lca-from-url.md
+        - text: "(.md version)"
+          href: https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/lca-from-url/SKILL.md
         - text: "Life Cycle Inventory"
-          href: .skillshare/skills/life-cycle-inventory/SKILL.md
+          href: skills/life-cycle-inventory.md
+        - text: "(.md version)"
+          href: https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/life-cycle-inventory/SKILL.md
         - text: "Life Cycle Stages"
-          href: .skillshare/skills/life-cycle-stages/SKILL.md
+          href: skills/life-cycle-stages.md
+        - text: "(.md version)"
+          href: https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/life-cycle-stages/SKILL.md
         - text: "Run LCA"
-          href: .skillshare/skills/run-lca/SKILL.md
+          href: skills/run-lca.md
+        - text: "(.md version)"
+          href: https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/run-lca/SKILL.md
         - text: "Scaling Vector"
-          href: .skillshare/skills/scaling-vector/SKILL.md
+          href: skills/scaling-vector.md
+        - text: "(.md version)"
+          href: https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/scaling-vector/SKILL.md
         - text: "Skill Creator"
-          href: .skillshare/skills/skill-creator/SKILL.md
+          href: skills/skill-creator.md
+        - text: "(.md version)"
+          href: https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/skill-creator/SKILL.md
         - text: "Supply Chain"
-          href: .skillshare/skills/supply-chain/SKILL.md
+          href: skills/supply-chain.md
+        - text: "(.md version)"
+          href: https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/supply-chain/SKILL.md
         - text: "System Boundary"
-          href: .skillshare/skills/system-boundary/SKILL.md
+          href: skills/system-boundary.md
+        - text: "(.md version)"
+          href: https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/system-boundary/SKILL.md
         - text: "Technosphere and Ecosphere"
-          href: .skillshare/skills/technosphere-and-ecosphere/SKILL.md
+          href: skills/technosphere-and-ecosphere.md
+        - text: "(.md version)"
+          href: https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/technosphere-and-ecosphere/SKILL.md
         - text: "What Is LCA"
-          href: .skillshare/skills/what-is-lca/SKILL.md
+          href: skills/what-is-lca.md
+        - text: "(.md version)"
+          href: https://raw.githubusercontent.com/calvinw/agentic-lca/main/.skillshare/skills/what-is-lca/SKILL.md
 
 format:
   html:
     theme: cosmo
     css: custom.css
     toc: true
+    include-after-body: sidebar-tweaks.html
     grid:
       body-width: 2000px

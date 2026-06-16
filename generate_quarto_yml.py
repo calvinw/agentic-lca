@@ -2,6 +2,7 @@
 """Generate _quarto.yml from the current session and plan files."""
 
 import re
+import shutil
 from pathlib import Path
 
 ROOT = Path(__file__).parent
@@ -49,8 +50,15 @@ for folder in sorted(SESSIONS_DIR.iterdir()):
 # Collect plan files
 plan_files = sorted(PLANS_DIR.glob("PLAN_*.md"))
 
-# Collect skill files
+# Collect skill files and copy them into skills/ for rendering
+SKILLS_OUT = ROOT / "skills"
+SKILLS_OUT.mkdir(exist_ok=True)
 skill_files = sorted(SKILLS_DIR.glob("*/SKILL.md"))
+skill_copies = []
+for f in skill_files:
+    dest = SKILLS_OUT / f"{f.parent.name}.md"
+    shutil.copy2(f, dest)
+    skill_copies.append(dest)
 
 lines = [
     "project:",
@@ -69,7 +77,7 @@ lines.append("    - plan/index.md")
 for f in plan_files:
     lines.append(f"    - {f.relative_to(ROOT)}")
 lines.append("    - skills/index.md")
-for f in skill_files:
+for f in skill_copies:
     lines.append(f"    - {f.relative_to(ROOT)}")
 
 lines += [
@@ -125,10 +133,13 @@ lines += [
     "        - text: Overview",
     "          href: skills/index.md",
 ]
-for f in skill_files:
-    label = skill_title(f.parent.name)
+for src, copy in zip(skill_files, skill_copies):
+    label = skill_title(src.parent.name)
+    raw_url = f"https://raw.githubusercontent.com/calvinw/agentic-lca/main/{src.relative_to(ROOT)}"
     lines.append(f'        - text: "{label}"')
-    lines.append(f"          href: {f.relative_to(ROOT)}")
+    lines.append(f"          href: {copy.relative_to(ROOT)}")
+    lines.append(f'        - text: "(.md version)"')
+    lines.append(f"          href: {raw_url}")
 
 lines += [
     "",
@@ -137,6 +148,7 @@ lines += [
     "    theme: cosmo",
     "    css: custom.css",
     "    toc: true",
+    "    include-after-body: sidebar-tweaks.html",
     "    grid:",
     "      body-width: 2000px",
     "",
