@@ -40,16 +40,6 @@
     "n": 1
   },
   {
-    "file": "impact-assessment/impact-assessment-wool_yarn-v0.1-elena-sonnet-4-6-session1.md",
-    "command": "/impact-assessment wool_yarn",
-    "skill": "Impact Assessment",
-    "caseStudy": "Wool Yarn",
-    "student": "Elena",
-    "model": "Sonnet 4.6",
-    "version": "0.1",
-    "n": 1
-  },
-  {
     "file": "life-cycle-inventory/life-cycle-inventory-wool_yarn-v0.1-elena-sonnet-4-6-session1.md",
     "command": "/life-cycle-inventory wool_yarn",
     "skill": "Life Cycle Inventory",
@@ -113,6 +103,26 @@
     "file": "technosphere-and-ecosphere/technosphere-and-ecosphere-wool_yarn-v0.1-elena-sonnet-4-6-session1.md",
     "command": "/technosphere-and-ecosphere wool_yarn",
     "skill": "Technosphere and Ecosphere",
+    "caseStudy": "Wool Yarn",
+    "student": "Elena",
+    "model": "Sonnet 4.6",
+    "version": "0.1",
+    "n": 1
+  },
+  {
+    "file": "what-is-impact-assessment/what-is-impact-assessment-cotton_fiber-v0.1-elena-sonnet-4-6-session1.md",
+    "command": "/what-is-impact-assessment cotton_fiber",
+    "skill": "What Is Impact Assessment",
+    "caseStudy": "Cotton Fiber",
+    "student": "Elena",
+    "model": "Sonnet 4.6",
+    "version": "0.1",
+    "n": 1
+  },
+  {
+    "file": "what-is-impact-assessment/what-is-impact-assessment-wool_yarn-v0.1-elena-sonnet-4-6-session1.md",
+    "command": "/what-is-impact-assessment wool_yarn",
+    "skill": "What Is Impact Assessment",
     "caseStudy": "Wool Yarn",
     "student": "Elena",
     "model": "Sonnet 4.6",
