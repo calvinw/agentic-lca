@@ -1,3 +1,11 @@
+#quarto-sidebar {
+  width: 320px !important;
+}
+
+.quarto-sidebar-toggle-btn {
+  left: 320px !important;
+}
+
 #quarto-sidebar .sidebar-item-text,
 #quarto-sidebar .sidebar-link,
 #quarto-sidebar .sidebar-section .sidebar-item {
