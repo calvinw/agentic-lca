@@ -53,3 +53,13 @@ _site/
 /.quarto/
 **/*.quarto_ipynb
 quarto-linux-amd64.deb
+
+# Generated Quarto doc content (regenerated at deploy time)
+quarto_docs/_quarto.yml
+quarto_docs/analyses.json
+quarto_docs/plans.json
+quarto_docs/sessions.json
+quarto_docs/plan/
+quarto_docs/skills/
+quarto_docs/skills_sessions/
+quarto_docs/skills_references/
