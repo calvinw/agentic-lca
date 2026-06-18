@@ -1,44 +1,154 @@
-# PLAN: Open-Source LCA MCP Server
+# PLAN: Life Cycle Assessment MCP
 
-## What this plan covers
+## What this is
 
 A fully open-source, freely deployable MCP (Model Context Protocol) server that
-wraps the openLCA gdt-server and exposes LCA analysis as AI-callable tools.
-No openLCA desktop app required. No paid licenses required for the free tier.
-Optional ecoinvent support for users who bring their own licensed database.
+exposes life cycle assessment as AI-callable tools — the same way the
+[Dolt MCP](https://github.com/dolthub/dolt-mcp) exposes a version-controlled
+SQL database to any AI assistant.
 
-Inspired by the pattern in [calvinw/BusMgmtDoltDatabase](https://github.com/calvinw/BusMgmtDoltDatabase):
-FastMCP + FastAPI + SSE + Docker, deployed as a remote MCP anyone can point to.
-
----
-
-## Why this is valuable
-
-Right now the analysis pipeline is:
-```
-Student recipe card → python3 lca_analysis.py → results file
-```
-
-With the MCP, it becomes:
-```
-LLM calls run_lca(recipe_card="...") → gets results + graphs in one turn
-```
-
-The LLM can then:
-- Explain the results to the student in plain English
-- Modify the recipe card and re-run in the same conversation
-- Compare two products side by side
-- Try different LCIA methods (TRACI vs ReCiPe) without touching any files
+Once deployed, any AI — Claude.ai, ChatGPT, Copilot, Gemini — can run a full
+LCA in a single conversation turn, get back numbers and supply chain diagrams,
+and explain the results to a student in plain English. No software to install.
+No files to open. No code to write.
 
 ---
 
-## Stack (mirrors BusMgmtDoltDatabase exactly)
+## How the Dolt MCP works — and what we're mirroring
+
+The Dolt MCP gives AI assistants a small set of focused tools for talking to a
+database:
+
+| Dolt MCP Tool | What it does |
+|---|---|
+| `list_tables` | See what data is available in the database |
+| `describe_table` | Understand the shape of a specific table |
+| `list_views` | See pre-built views (named queries) |
+| `read_query` | Ask a question using SQL — get rows back |
+| `write_query` | Insert or update rows |
+
+A student can open Claude.ai, ask *"What are the top 5 products by revenue this
+quarter?"* and Claude calls `read_query` behind the scenes, gets the rows, and
+answers in plain English. The student never writes SQL.
+
+The Life Cycle Assessment MCP does the same thing for environmental analysis.
+
+---
+
+## Life Cycle Assessment MCP Tools
+
+| LCA MCP Tool | Dolt analogy | What it does |
+|---|---|---|
+| `list_impact_methods` | `list_tables` | See all 45 scoring methods available (TRACI 2.2, ReCiPe 2016, EF 3.1 …) |
+| `check_server` | connect / ping | Confirm the calculation engine is running |
+| `run_lca` | `read_query` | Pass a supply chain description, get back full results + diagrams |
+| `get_lca_svg` | `describe_table` | Get a visual supply chain map without running the full calculation |
+
+---
+
+## What this enables for students
+
+### Example 1 — Paper cup vs PS foam cup
+
+A student in a retail sustainability course asks Claude.ai:
+
+> *"Which is better for the environment — a paper cup or a polystyrene foam
+> cup? I want to see the actual numbers."*
+
+Claude calls `run_lca` twice — once for each cup — passing the supply chain
+descriptions (recipe cards) on behalf of the student. It gets back:
+
+| Impact | Paper cup | PS foam cup |
+|---|---:|---:|
+| Global warming | 0.011 kg CO₂ eq | 0.005 kg CO₂ eq |
+| Freshwater withdrawn | 14.3 L | 0.7 L |
+
+And two supply chain diagrams like this one — generated automatically and
+returned as SVG images Claude can display inline:
+
+![Paper cup supply chain](../skills_references/cotton_fiber/product_graph_scaled.svg)
+
+Claude then explains: *"The PS foam cup produces about half the greenhouse gas
+emissions of the paper cup — but it relies on non-renewable petroleum and
+doesn't biodegrade. The paper cup uses 20× more water because pulping and
+papermaking are extremely water-intensive. Which trade-off matters more depends
+on what your company is trying to prioritise."*
+
+The student never saw the recipe card. They just asked a question.
+
+---
+
+### Example 2 — Wool yarn vs cotton fiber
+
+A student comparing textile materials asks:
+
+> *"I'm sourcing yarn for a new product line. Is wool or cotton better for
+> climate impact?"*
+
+Claude calls `run_lca` for each, gets back TRACI 2.2 results, and can show:
+
+**Wool yarn (1 kg):**
+- Global warming: **13.55 kg CO₂ eq** — dominated by methane from sheep
+- Water: 30 L
+
+**Cotton fiber (1 kg):**
+- Global warming: **1.50 kg CO₂ eq**
+- Water: **8,000 L** — cotton farming is one of the most water-intensive crops
+
+Claude explains: *"Wool has nearly 9× the climate impact of cotton — because
+sheep emit large amounts of methane, a greenhouse gas 25× more potent than CO₂.
+But cotton requires thousands of litres of water per kilogram. If your brand is
+in a water-stressed region, cotton may be the harder choice despite its lower
+carbon number."*
+
+Supply chain diagrams are returned for both and shown side by side.
+
+---
+
+### Example 3 — Modify and re-run in the same conversation
+
+A student asks: *"What if the wool farm switched to renewable electricity for
+processing?"*
+
+Claude edits the recipe card in memory, calls `run_lca` again with the updated
+values, and compares the before and after — all in one conversation turn.
+No files to open. No re-running scripts.
+
+---
+
+### Example 4 — Explore impact methods
+
+A student asks: *"What scoring methods are available? Can we look at this using
+ReCiPe instead of TRACI?"*
+
+Claude calls `list_impact_methods`, shows the student the 45 available methods,
+and re-runs the same analysis with ReCiPe 2016 — again, all in the same
+conversation.
+
+---
+
+## What the AI does behind the scenes
+
+When a student asks a sustainability question, the AI:
+
+1. Looks up the relevant recipe card (or writes one from the student's
+   description)
+2. Calls `run_lca(recipe_card="...", method="TRACI 2.2")`
+3. Receives LCI totals, LCIA scores, a scaling vector, and two SVG diagrams
+4. Displays the diagrams inline and explains the numbers in plain English
+
+The student sees only the explanation and the diagrams. The recipe card, the
+tool call, and the raw JSON never appear.
+
+---
+
+## Stack
 
 | Layer | Technology |
 |---|---|
 | MCP framework | `fastmcp` (Python) |
 | HTTP/SSE transport | `FastAPI` + `uvicorn` |
-| LCA calculation | `gdt-server` (GreenDelta, open-source Java) |
+| LCA calculation engine | `gdt-server` (GreenDelta, open-source Java) |
 | Python LCA client | `olca-ipc`, `olca-schema` |
 | Diagram generation | `lca_svg.py` (SVG via matplotlib) |
 | Container | Docker |
@@ -46,235 +156,51 @@ The LLM can then:
 
 ---
 
-## MCP Tools
-
-### `run_lca`
-Takes a recipe card as YAML text, builds the full product system, runs the
-calculation, returns LCI + LCIA results and both SVG diagrams.
+## `run_lca` — what goes in and what comes back
 
 ```python
 @mcp.tool()
-def run_lca(
-    recipe_card: str,
-    server_url: str = "http://localhost:8080"
-) -> dict:
+def run_lca(recipe_card: str, server_url: str = "http://localhost:8080") -> dict:
     """
     Run a full LCA from a recipe card YAML string.
-    Returns LCI flows, LCIA impact scores, and SVG supply chain diagrams.
-    The recipe card follows the same YAML format as files in lca_analysis/.
+    Returns LCI flows, LCIA impact scores, scaling vector, and SVG diagrams.
     """
 ```
 
 **Returns:**
 ```json
 {
-  "name": "Cotton Shirt LCA",
+  "name": "Wool Yarn LCA",
   "method": "TRACI 2.2",
-  "functional_unit": "1 shirt",
+  "functional_unit": "1 kg wool yarn",
   "lci": {
-    "Carbon dioxide": {"amount": 2.32, "unit": "kg"},
-    "Nitrogen oxides": {"amount": 0.0025, "unit": "kg"}
+    "Carbon dioxide": {"amount": 2.55, "unit": "kg"},
+    "Methane":        {"amount": 0.44, "unit": "kg"},
+    "Water":          {"amount": 30.0, "unit": "L"}
   },
   "lcia": {
-    "Global warming": {"score": 2.32, "unit": "kg CO2 eq"},
-    "Acidification": {"score": 0.003475, "unit": "kg SO2 eq"},
-    "Smog (Photochemical Oxidation Formation)": {"score": 0.063, "unit": "kg O3 eq"}
+    "Global warming": {"score": 13.55, "unit": "kg CO2 eq"},
+    "Smog (Photochemical Oxidation Formation)": {"score": 0.006327, "unit": "kg O3 eq"}
   },
   "scaling_vector": {
-    "P1 — Grow cotton": 0.3025,
-    "P2 — Spin yarn": 0.2750,
-    "P4 — Cut and sew shirt": 1.0
+    "P1 — Sheep farming":       1.1,
+    "P2 — Wool yarn production": 1.0
   },
-  "svg_scaled": "<svg>...</svg>",
+  "svg_scaled":    "<svg>...</svg>",
   "svg_structure": "<svg>...</svg>"
 }
 ```
 
 ---
 
-### `list_impact_methods`
-Returns all LCIA methods available in the connected database.
-
-```python
-@mcp.tool()
-def list_impact_methods(
-    server_url: str = "http://localhost:8080"
-) -> list[dict]:
-    """List all LCIA methods available (e.g. TRACI 2.2, ReCiPe 2016, EF 3.1)."""
-```
-
----
-
-### `check_server`
-Health check — confirms the gdt-server is running and returns its version.
-
-```python
-@mcp.tool()
-def check_server(
-    server_url: str = "http://localhost:8080"
-) -> dict:
-    """Check if the openLCA gdt-server is running and ready."""
-```
-
----
-
-### `get_lca_svg`
-Returns a supply chain diagram SVG for a recipe card without running the full
-calculation. Faster when only the diagram is needed.
-
-```python
-@mcp.tool()
-def get_lca_svg(
-    recipe_card: str,
-    graph_type: str = "scaled",
-    server_url: str = "http://localhost:8080"
-) -> str:
-    """
-    Generate a supply chain SVG diagram from a recipe card.
-    graph_type: "scaled" (with amounts) or "structure" (flow names only)
-    Returns SVG as a string.
-    """
-```
-
----
-
-## File structure
-
-```
-mcp-lca/
-├── lca_server.py          ← FastMCP server, all @mcp.tool() definitions
-├── sse_server.py          ← FastAPI wrapper for SSE/HTTP transport
-├── lca_engine.py          ← thin wrapper around lca_analysis.py logic
-├── lca_svg_engine.py      ← thin wrapper around lca_svg.py logic
-├── requirements.txt
-├── pyproject.toml
-├── Dockerfile
-└── README.md
-```
-
-`lca_server.py` is the stdio entry point. `sse_server.py` wraps it for remote
-deployment — identical pattern to BusMgmtDoltDatabase.
-
----
-
-## `lca_server.py` skeleton
-
-```python
-import requests
-from fastmcp import FastMCP
-from lca_engine import run_analysis
-from lca_svg_engine import generate_svg
-
-mcp = FastMCP("LCA Analysis Server")
-
-@mcp.tool()
-def run_lca(recipe_card: str, server_url: str = "http://localhost:8080") -> dict:
-    """Run a full LCA from a recipe card YAML string."""
-    return run_analysis(recipe_card, server_url)
-
-@mcp.tool()
-def get_lca_svg(recipe_card: str, graph_type: str = "scaled",
-                server_url: str = "http://localhost:8080") -> str:
-    """Generate a supply chain SVG diagram from a recipe card."""
-    return generate_svg(recipe_card, graph_type, server_url)
-
-@mcp.tool()
-def list_impact_methods(server_url: str = "http://localhost:8080") -> list:
-    """List all LCIA methods available in the connected database."""
-    r = requests.get(f"{server_url}/data/impact-methods")
-    return [{"id": m["@id"], "name": m["name"]} for m in r.json()]
-
-@mcp.tool()
-def check_server(server_url: str = "http://localhost:8080") -> dict:
-    """Check if the openLCA gdt-server is running."""
-    try:
-        r = requests.get(f"{server_url}/api/version", timeout=5)
-        return {"running": True, "version": r.json().get("version")}
-    except Exception:
-        return {"running": False}
-
-if __name__ == "__main__":
-    mcp.run()  # stdio mode
-```
-
----
-
-## `sse_server.py` skeleton (identical pattern to BusMgmtDoltDatabase)
-
-```python
-import os
-from fastapi import FastAPI, Request
-from fastapi.responses import JSONResponse
-from fastapi.middleware.cors import CORSMiddleware
-import uvicorn
-from lca_server import mcp
-
-http_app = mcp.http_app(transport="sse", path="/sse")
-
-async def oauth_metadata(request: Request):
-    return JSONResponse({"issuer": str(request.base_url).rstrip("/")})
-
-app = FastAPI(lifespan=http_app.lifespan)
-app.add_middleware(CORSMiddleware, allow_origins=["*"],
-                   allow_methods=["GET", "POST", "OPTIONS"],
-                   allow_headers=["Content-Type", "Authorization", "x-api-key"])
-app.add_api_route("/.well-known/oauth-authorization-server", oauth_metadata)
-app.mount("/", http_app)
-
-if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=int(os.environ.get("PORT", 9000)))
-```
-
----
-
-## Dockerfile
-
-```dockerfile
-FROM python:3.11-slim
-
-# Install Java for gdt-server
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    openjdk-17-jre-headless curl tar \
-    && rm -rf /var/lib/apt/lists/*
-
-WORKDIR /app
-
-# Download and install gdt-server
-RUN curl -L https://github.com/GreenDelta/gdt-server/releases/latest/download/gdt-server.jar \
-    -o gdt-server.jar
-
-# Download pre-built lca_methods database
-RUN mkdir -p /app/data/databases && \
-    curl -L https://github.com/calvinw/agentic-lca/releases/download/lca-data-v1/lca_methods-LCIA-methods-2.8.0-2026-06-18.tar.gz \
-    | tar -xz -C /app/data/databases/
-
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
-
-COPY . .
-
-# Start script: launch gdt-server, wait for ready, then start MCP
-COPY start.sh .
-RUN chmod +x start.sh
-
-EXPOSE 9000
-CMD ["./start.sh"]
-```
-
-`start.sh` starts gdt-server in background, waits for it to be ready
-(same pattern as `setup_olca.sh`), then starts `sse_server.py`.
-
----
-
 ## Deployment tiers
 
-### Tier 1 — Free, open-source database (lca_methods)
+### Tier 1 — Free (anyone can use it)
 
-The Docker image downloads `lca_methods-LCIA-methods-2.8.0-2026-06-18.tar.gz`
-at build time. This is the free pre-built database with all 45 LCIA methods
-(TRACI 2.2, ReCiPe 2016, EF 3.1, ImpactWorld, CML, etc.).
+The Docker image bundles the free `lca_methods` database — 45 LCIA methods
+(TRACI 2.2, ReCiPe 2016, EF 3.1, CML, ImpactWorld, and more). No license
+required.
 
-Anyone can run it:
 ```bash
 docker run -p 9000:9000 calvinw/lca-mcp-server:latest
 ```
@@ -284,110 +210,60 @@ Or point any MCP client at a publicly hosted instance:
 https://lca.mcp.yourdomain.com/sse
 ```
 
-### Tier 2 — ecoinvent (user-supplied database)
+### Tier 2 — ecoinvent (licensed users)
 
-Users who have an ecoinvent license pass their own `server_url` to every tool:
+Users with an ecoinvent license point the tools at their own gdt-server:
 
 ```python
 run_lca(recipe_card="...", server_url="http://my-ecoinvent-server:8080")
 ```
 
-They run their own gdt-server locally (via `start_olca_ecoinvent.sh`) and point
-the MCP tools at it. The MCP server itself stays free and license-clean.
-
-Alternatively: the Docker image can download the ecoinvent database from a private
-GitHub repo at startup if a `ECOINVENT_GITHUB_TOKEN` environment variable is set:
-
-```bash
-docker run \
-  -e ECOINVENT_GITHUB_TOKEN=ghp_xxx \
-  -e DATABASE=ecoinvent \
-  -p 9000:9000 \
-  calvinw/lca-mcp-server:latest
-```
+The MCP server itself stays free and license-clean.
 
 ### Tier 3 — BAFU (future, free)
 
-Same as Tier 1 but with BAFU database downloaded at build time. Enables
-real background processes without a license.
+Same as Tier 1 with the Swiss BAFU background database, enabling real
+industrial background processes without a license.
 
 ---
 
-## Integration with skills
-
-Once deployed, register the MCP in `.skillshare/config.yaml`:
-
-```yaml
-mcps:
-  - name: lca
-    url: https://lca.mcp.yourdomain.com/sse
-```
-
-Or for local Codespace use (stdio):
-
-```yaml
-mcps:
-  - name: lca
-    command: python3 mcp-lca/lca_server.py
-```
-
-Skills then call MCP tools directly. Example — `/system-boundary`:
+## File structure
 
 ```
-AI receives: /system-boundary cotton_shirt
-
-AI calls: run_lca(recipe_card="<recipe card yaml text>")
-
-MCP returns: { lci: {...}, lcia: {...}, svg_scaled: "<svg>..." }
-
-AI explains results to student in plain English.
+mcp-lca/
+├── lca_server.py       ← FastMCP server, all @mcp.tool() definitions
+├── sse_server.py       ← FastAPI wrapper for SSE/HTTP transport
+├── lca_engine.py       ← LCA calculation logic
+├── lca_svg_engine.py   ← supply chain diagram generation
+├── requirements.txt
+├── Dockerfile
+└── start.sh            ← starts gdt-server, waits, then starts sse_server.py
 ```
-
-The student never sees the recipe card YAML or the tool call — they just see
-the explanation.
 
 ---
 
 ## Comparison with tiangong-lca-mcp
 
-[tiangong-lca-mcp](https://github.com/linancn/tiangong-lca-mcp) is excellent
-but solves a different problem. It connects to a pre-populated database (ecoinvent,
-GLAD) and runs calculations on product systems that already exist. It is
-TypeScript-based and requires existing product system UUIDs.
+[tiangong-lca-mcp](https://github.com/linancn/tiangong-lca-mcp) is a
+TypeScript MCP server for querying existing product systems in ecoinvent or
+GLAD. It requires pre-built product system UUIDs — the product system must
+already exist in the database before the tool can calculate it.
 
-This MCP builds product systems from scratch from a recipe card YAML, which
-is what our teaching workflow requires. The LLM constructs or modifies the
-supply chain in conversation and runs it immediately — no pre-built product
-systems needed.
-
-The two could be complementary: our MCP for recipe-card-driven teaching,
+The Life Cycle Assessment MCP builds the product system from scratch from a
+recipe card, which means the AI can construct or modify a supply chain
+description mid-conversation and calculate it immediately. The two are
+complementary: this MCP for teaching and recipe-card-driven analysis,
 tiangong for professionals querying existing databases.
 
 ---
 
 ## Build order
 
-1. Create `mcp-lca/` folder with `lca_server.py`, `sse_server.py`, `requirements.txt`
-2. Extract LCA engine logic from `lca_analysis.py` into `lca_engine.py`
-3. Extract SVG logic from `lca_svg.py` into `lca_svg_engine.py`
-4. Test stdio mode locally in Codespace
+1. Create `mcp-lca/` with `lca_server.py`, `sse_server.py`, `requirements.txt`
+2. Extract calculation logic into `lca_engine.py`
+3. Extract diagram logic into `lca_svg_engine.py`
+4. Test in stdio mode locally
 5. Register in `.skillshare/config.yaml` as stdio MCP
 6. Write `Dockerfile` and `start.sh`
 7. Deploy to Render/Railway/Fly.io free tier
 8. Switch `.skillshare/config.yaml` to SSE URL
-9. Update skills to use MCP tools instead of file-based scripts
-
----
-
-## Summary
-
-| | This project now | With MCP |
-|---|---|---|
-| How analysis runs | `python3 lca_analysis.py file.md` | `run_lca(recipe_card="...")` |
-| LLM involvement | Reads output file after the fact | Gets results in the same turn |
-| Recipe card lives | In a file | In the conversation |
-| LCIA method switching | Edit file, re-run | Pass different `method_name` |
-| Deployable as service | No | Yes — Docker + SSE |
-| Requires desktop app | No (already solved) | No |
-| License cost | Free | Free (Tier 1) |
-| ecoinvent support | Via separate script | Via `server_url` parameter |
