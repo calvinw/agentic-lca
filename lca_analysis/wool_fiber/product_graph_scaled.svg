@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="876.2" height="309.0" viewBox="0 -38.0 876.2 309.0">
+<rect x="0" y="-38.0" width="876.2" height="309.0" fill="#f8f8f8"/>
+<defs>
+  <marker id="arr"       viewBox="0 0 10 10" refX="9" refY="5"
+          markerWidth="5" markerHeight="5" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#555555"/>
+  </marker>
+  <marker id="arr-green" viewBox="0 0 10 10" refX="9" refY="5"
+          markerWidth="5" markerHeight="5" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#2d7a45"/>
+  </marker>
+  <marker id="arr-red"   viewBox="0 0 10 10" refX="9" refY="5"
+          markerWidth="5" markerHeight="5" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/>
+  </marker>
+</defs>
+<text x="438.1" y="-11.4" text-anchor="middle" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="bold" fill="#222">Wool Fiber LCA — 1 kg of yarn (expanded)</text>
+<line x1="80.7" y1="54.7" x2="80.7" y2="84.7" stroke="#c0392b" stroke-width="1.6" marker-end="url(#arr-red)"/>
+<text x="75.7" y="66.1" text-anchor="end" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#c0392b">CO<tspan baseline-shift="sub" font-size="0.75em">2</tspan></text>
+<text x="75.7" y="80.1" text-anchor="end" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#c0392b">0.55 kg</text>
+<text x="80.7" y="96.7" text-anchor="start" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="bold" fill="#c0392b">to Air</text>
+<line x1="204.8" y1="54.7" x2="204.8" y2="84.7" stroke="#c0392b" stroke-width="1.6" marker-end="url(#arr-red)"/>
+<text x="199.8" y="66.1" text-anchor="end" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#c0392b">CH<tspan baseline-shift="sub" font-size="0.75em">4</tspan></text>
+<text x="199.8" y="80.1" text-anchor="end" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#c0392b">0.44 kg</text>
+<text x="204.8" y="96.7" text-anchor="start" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="bold" fill="#c0392b">to Air</text>
+<text x="439.4" y="42.8" text-anchor="start" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="bold" fill="#2d7a45">from Nature</text>
+<line x1="439.4" y1="52.8" x2="439.4" y2="82.8" stroke="#2d7a45" stroke-width="1.6" marker-end="url(#arr-green)"/>
+<text x="434.4" y="64.2" text-anchor="end" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#2d7a45">H<tspan baseline-shift="sub" font-size="0.75em">2</tspan>O</text>
+<text x="434.4" y="78.2" text-anchor="end" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#2d7a45">30 L</text>
+<line x1="80.7" y1="219.0" x2="80.7" y2="249.0" stroke="#c0392b" stroke-width="1.6" marker-end="url(#arr-red)"/>
+<text x="75.7" y="230.4" text-anchor="end" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#c0392b">CO<tspan baseline-shift="sub" font-size="0.75em">2</tspan></text>
+<text x="75.7" y="244.4" text-anchor="end" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#c0392b">2 kg</text>
+<text x="80.7" y="261.0" text-anchor="start" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="bold" fill="#c0392b">to Air</text>
+<line x1="142.8" y1="219.0" x2="142.8" y2="249.0" stroke="#c0392b" stroke-width="1.6" marker-end="url(#arr-red)"/>
+<text x="137.8" y="230.4" text-anchor="end" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#c0392b">SO<tspan baseline-shift="sub" font-size="0.75em">2</tspan></text>
+<text x="137.8" y="244.4" text-anchor="end" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#c0392b">0.0024 kg</text>
+<text x="142.8" y="261.0" text-anchor="start" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="bold" fill="#c0392b">to Air</text>
+<line x1="204.8" y1="219.0" x2="204.8" y2="249.0" stroke="#c0392b" stroke-width="1.6" marker-end="url(#arr-red)"/>
+<text x="199.8" y="230.4" text-anchor="end" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#c0392b">NOx</text>
+<text x="199.8" y="244.4" text-anchor="end" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#c0392b">0.0036 kg</text>
+<text x="204.8" y="261.0" text-anchor="start" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="bold" fill="#c0392b">to Air</text>
+<line x1="225.5" y1="27.4" x2="356.6" y2="110.1" stroke="#555555" stroke-width="1.6" marker-end="url(#arr)"/>
+<text text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#444">
+<tspan x="291.1" y="47.6" dominant-baseline="auto">Raw wool</tspan>
+<tspan x="291.1" y="61.9" dominant-baseline="auto">1.1 kg</tspan>
+</text>
+<line x1="522.2" y1="110.1" x2="650.7" y2="110.1" stroke="#555555" stroke-width="1.6" marker-end="url(#arr)"/>
+<text text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#444">
+<tspan x="586.4" y="89.0" dominant-baseline="auto">Wool yarn</tspan>
+<tspan x="586.4" y="103.3" dominant-baseline="auto">1 kg</tspan>
+</text>
+<line x1="225.5" y1="191.6" x2="356.6" y2="110.1" stroke="#555555" stroke-width="1.6" marker-end="url(#arr)"/>
+<text text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#444">
+<tspan x="291.1" y="129.7" dominant-baseline="auto">Electricity</tspan>
+<tspan x="291.1" y="144.0" dominant-baseline="auto">4 kWh</tspan>
+</text>
+<rect x="60.0" y="-0.0" width="165.51333333333335" height="54.74516666666667" rx="8" fill="#3a7ebf"/>
+<text x="142.8" y="19.4" text-anchor="middle" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="white">P1 — Sheep farming</text>
+<text x="142.8" y="35.4" text-anchor="middle" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="white">s1 = 1.1</text>
+<rect x="356.6" y="82.8" width="165.51333333333335" height="54.74516666666667" rx="8" fill="#3a7ebf"/>
+<text x="439.4" y="102.1" text-anchor="middle" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="white">P2 — Scour and spin</text>
+<text x="439.4" y="118.1" text-anchor="middle" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="white">s2 = 1</text>
+<rect x="60.0" y="164.2" width="165.51333333333335" height="54.74516666666667" rx="8" fill="#3a7ebf"/>
+<text x="142.8" y="183.6" text-anchor="middle" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="white">P3 — Generate electricity</text>
+<text x="142.8" y="199.6" text-anchor="middle" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="white">s3 = 4</text>
+<rect x="650.7" y="67.5" width="165.51333333333335" height="85.30133333333335" rx="8" fill="#7b4ea6"/>
+<text x="733.5" y="86.2" text-anchor="middle" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="white">Functional Unit</text>
+<text text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="white">
+<tspan x="733.5" y="113.9" dominant-baseline="auto">1 kg of wool yarn, ready</tspan>
+<tspan x="733.5" y="126.9" dominant-baseline="auto">for knitting or weaving</tspan>
+</text>
+</svg>

@@ -68,31 +68,142 @@ pre-built database identical to what the desktop app would have produced.
 
 ---
 
+## Critical: the folder name inside the archive must match the -db flag
+
+This is the easiest thing to get wrong and the hardest to diagnose because gdt-server
+fails silently.
+
+When `setup_olca.sh` starts the server with `-db lca_methods`, gdt-server looks for
+`~/olca-data/databases/lca_methods/`. If that folder does not exist, it **silently
+creates a new empty database** at that path. No error. No warning. The server starts
+fine and responds to API calls — but every query returns zero results.
+
+The tar archive must therefore contain the database folder under the name `lca_methods/`
+(not `lca_commons/` or any other name). Always verify this before uploading:
+
+```bash
+# Check what folder name is inside the archive — must print "lca_methods/"
+tar -tzf ~/olca-data/lca_methods-LCIA-methods-2.8.0-2026-06-18.tar.gz | head -1
+```
+
+The setup_olca.sh guard condition must also use the same name:
+
+```bash
+# In setup_olca.sh — these three names must all match:
+LCA_COMMONS_DB="$DATA_DIR/databases/lca_methods"   # ← the check
+tar -xzf ...                                         # ← extracts lca_methods/ from archive
+docker run ... -db lca_methods                       # ← the server flag
+```
+
+If any of them differ, a new Codespace will silently get an empty database.
+
+**History:** In June 2026, the database was renamed from `lca_commons` to `lca_methods`
+throughout the scripts, but the tar.gz on GitHub releases was rebuilt from an empty
+database (not the correctly-populated one). The result: every new Codespace had 0 LCIA
+methods. The fix was to re-run the import, tar with the correct folder name, and
+re-upload.
+
+---
+
 ## The one-time build workflow
 
 This workflow runs once per database. After it completes, the database is stored
 in GitHub releases and never rebuilt unless the source data changes.
 
 ```
-1. Start gdt-server with an empty database
-      bash setup_olca.sh  (before lca_methods.tar.gz existed)
+1. Start gdt-server pointed at an empty database named lca_methods
+      docker rm -f olca-server
+      docker run --name olca-server --network host \
+          -v "$HOME/olca-data:/app/data" -d gdt-server:latest -db lca_methods
+      # Wait for it to start: curl -s http://localhost:8080/api/version
 
-2. Run the preprocessing script against the source zip
+2. Download the source zip from GitHub releases
+      gh release download lca-data-v1 \
+          --repo calvinw/agentic-lca \
+          --pattern "openLCA.LCIA.Methods.*.zip" \
+          --output "$HOME/olca-data/openLCA_LCIA_methods.zip"
+
+3. Run the preprocessing script
       python3 import_lca_data.py
-      # Takes ~20-30 minutes for the full LCIA methods pack (60,000 flows)
+      # Takes ~20-30 minutes (60,000 flows is the slow pass)
+      # If interrupted, see "Recovering from a partial import" below
 
-3. Zip the resulting database folder
-      tar -czf lca_methods.tar.gz -C ~/olca-data/databases lca_methods/
+4. Verify the database before tarballing
+      python3 -c "
+      from olca_ipc.rest import RestClient; import olca_schema as o
+      c = RestClient('http://localhost:8080/')
+      methods = list(c.get_descriptors(o.ImpactMethod))
+      print(f'Methods: {len(methods)}')   # must be 45
+      traci = [m.name for m in methods if 'traci' in (m.name or '').lower()]
+      print(f'TRACI: {traci}')            # must include TRACI 2.2
+      "
 
-4. Upload to GitHub releases
-      gh release upload lca-data-v1 lca_methods.tar.gz --repo calvinw/agentic-lca
+5. Stop the server cleanly before tarballing
+      docker stop olca-server
 
-5. Update setup script to download-and-unzip instead of importing
-      # setup_olca.sh now downloads lca_methods.tar.gz and unpacks it (~5 seconds)
+6. Create the archive — folder name inside MUST be lca_methods/
+      tar -czf ~/olca-data/lca_methods-LCIA-methods-2.8.0-$(date +%Y-%m-%d).tar.gz \
+          -C ~/olca-data/databases lca_methods/
+
+      # Verify the folder name inside the archive before uploading:
+      tar -tzf ~/olca-data/lca_methods-LCIA-methods-*.tar.gz | head -1
+      # Must print: lca_methods/
+
+7. Upload to GitHub releases (--clobber replaces an existing file of the same name)
+      gh release upload lca-data-v1 \
+          ~/olca-data/lca_methods-LCIA-methods-*.tar.gz \
+          --repo calvinw/agentic-lca --clobber
 ```
 
-After step 5, all future Codespace sessions just download the pre-built database.
-The import step never runs again unless the source data changes.
+After step 7, all future Codespace sessions just download and unzip the pre-built
+database. The import step never runs again unless the source data changes.
+
+---
+
+## Recovering from a partial import
+
+The import can be interrupted mid-run (e.g. Codespace idle timeout during the
+60,000-flow pass). The database is not corrupted — you can check what made it in
+and run only the missing passes.
+
+```python
+# Check what's already in the database
+from olca_ipc.rest import RestClient; import olca_schema as o
+c = RestClient('http://localhost:8080/')
+print(len(list(c.get_descriptors(o.Flow))))           # expect ~60,914
+print(len(list(c.get_descriptors(o.ImpactCategory)))) # expect ~480 (550 in some packs)
+print(len(list(c.get_descriptors(o.ImpactMethod))))   # expect 45
+```
+
+If flows and categories are in but methods are missing (the most likely interruption
+point since it is the last pass), run only the ImpactMethod pass:
+
+```python
+import json, zipfile
+from pathlib import Path
+from olca_ipc.rest import RestClient; import olca_schema as o
+
+PACK = Path.home() / "olca-data/openLCA_LCIA_methods.zip"
+client = RestClient("http://localhost:8080/")
+ok = total = 0
+with zipfile.ZipFile(PACK) as zf:
+    for name in zf.namelist():
+        if not name.endswith(".json"): continue
+        try:
+            raw = json.loads(zf.read(name))
+            items = raw if isinstance(raw, list) else \
+                    raw.get("@graph", []) if "@graph" in raw else \
+                    [raw] if "@type" in raw else []
+            for item in items:
+                if item.get("@type") == "ImpactMethod":
+                    total += 1
+                    if client.put(o.ImpactMethod.from_dict(item)):
+                        ok += 1; print(f"  ✓ {item.get('name')}")
+        except Exception: pass
+print(f"Imported {ok}/{total} ImpactMethods")
+```
+
+Then continue from step 4 (verify) in the build workflow above.
 
 ---
 
@@ -100,12 +211,16 @@ The import step never runs again unless the source data changes.
 
 | File | Size | Contents | Used by |
 |---|---|---|---|
-| `lca_methods.tar.gz` | 86 MB | Pre-built Derby DB with all 45 LCIA methods | `setup_olca.sh` (download + unzip) |
+| `lca_methods-LCIA-methods-2.8.0-2026-06-18.tar.gz` | 74 MB | Pre-built Derby DB — 45 LCIA methods, 60,914 flows, 480 impact categories. Folder inside archive: `lca_methods/` | `setup_olca.sh` (download + unzip) |
 | `openLCA.LCIA.Methods.2.8.0.2025-12-15.zip` | 157 MB | Source JSON-LD data pack | `import_lca_data.py` (source, kept for rebuilds) |
 
 The methods pack zip is no longer downloaded by `setup_olca.sh` but is kept in the
-release as the source material for rebuilding `lca_methods.tar.gz` if needed (e.g.
-when a newer methods pack version is released).
+release as the source material for rebuilding the tar.gz if needed (e.g. when a newer
+methods pack version is released).
+
+**Naming convention for the tar.gz:** include the methods pack version and build date so
+it is clear which source was used:
+`lca_methods-LCIA-methods-{pack-version}-{build-date}.tar.gz`
 
 ---
 
@@ -194,10 +309,12 @@ the `lcia:` section to use a method available in the active database.
 
 | Trigger | Action |
 |---|---|
-| New LCIA methods pack version released | Re-run import, re-upload lca_methods.tar.gz |
+| New LCIA methods pack version released | Re-run import, re-upload with new date in filename |
+| Database renamed in scripts (`-db` flag changed) | Re-tar with correct folder name inside archive, re-upload |
 | New BAFU version released | Re-run import, re-upload bafu.tar.gz |
 | New ecoinvent version | Re-run import on licensed machine, re-upload to private repo |
 | Bug found in import script | Fix script, re-run, re-upload |
+| New Codespace shows 0 LCIA methods | Check archive folder name (`tar -tzf ... \| head -1`), check `-db` flag matches |
 
 The recipe cards and analysis scripts do not need to change when a database is rebuilt —
 they reference methods by name, which stays stable across versions.
