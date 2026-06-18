@@ -248,7 +248,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#why-this-matters" id="toc-why-this-matters" class="nav-link" data-scroll-target="#why-this-matters">Why this matters</a></li>
   <li><a href="#the-key-insight-import-order-matters" id="toc-the-key-insight-import-order-matters" class="nav-link" data-scroll-target="#the-key-insight-import-order-matters">The key insight: import order matters</a></li>
   <li><a href="#the-preprocessing-script-import_lca_data.py" id="toc-the-preprocessing-script-import_lca_data.py" class="nav-link" data-scroll-target="#the-preprocessing-script-import_lca_data.py">The preprocessing script: <code>import_lca_data.py</code></a></li>
+  <li><a href="#critical-the-folder-name-inside-the-archive-must-match-the--db-flag" id="toc-critical-the-folder-name-inside-the-archive-must-match-the--db-flag" class="nav-link" data-scroll-target="#critical-the-folder-name-inside-the-archive-must-match-the--db-flag">Critical: the folder name inside the archive must match the -db flag</a></li>
   <li><a href="#the-one-time-build-workflow" id="toc-the-one-time-build-workflow" class="nav-link" data-scroll-target="#the-one-time-build-workflow">The one-time build workflow</a></li>
+  <li><a href="#recovering-from-a-partial-import" id="toc-recovering-from-a-partial-import" class="nav-link" data-scroll-target="#recovering-from-a-partial-import">Recovering from a partial import</a></li>
   <li><a href="#current-databases-in-github-releases-lca-data-v1" id="toc-current-databases-in-github-releases-lca-data-v1" class="nav-link" data-scroll-target="#current-databases-in-github-releases-lca-data-v1">Current databases in GitHub releases (<code>lca-data-v1</code>)</a></li>
   <li><a href="#extending-to-other-databases" id="toc-extending-to-other-databases" class="nav-link" data-scroll-target="#extending-to-other-databases">Extending to other databases</a>
   <ul class="collapse">
@@ -306,25 +308,103 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>After all passes complete, the Derby database folder is a fully functional pre-built database identical to what the desktop app would have produced.</p>
 <hr>
 </section>
+<section id="critical-the-folder-name-inside-the-archive-must-match-the--db-flag" class="level2">
+<h2 class="anchored" data-anchor-id="critical-the-folder-name-inside-the-archive-must-match-the--db-flag">Critical: the folder name inside the archive must match the -db flag</h2>
+<p>This is the easiest thing to get wrong and the hardest to diagnose because gdt-server fails silently.</p>
+<p>When <code>setup_olca.sh</code> starts the server with <code>-db lca_methods</code>, gdt-server looks for <code>~/olca-data/databases/lca_methods/</code>. If that folder does not exist, it <strong>silently creates a new empty database</strong> at that path. No error. No warning. The server starts fine and responds to API calls — but every query returns zero results.</p>
+<p>The tar archive must therefore contain the database folder under the name <code>lca_methods/</code> (not <code>lca_commons/</code> or any other name). Always verify this before uploading:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Check what folder name is inside the archive — must print "lca_methods/"</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">tar</span> <span class="at">-tzf</span> ~/olca-data/lca_methods-LCIA-methods-2.8.0-2026-06-18.tar.gz <span class="kw">|</span> <span class="fu">head</span> <span class="at">-1</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The setup_olca.sh guard condition must also use the same name:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># In setup_olca.sh — these three names must all match:</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="va">LCA_COMMONS_DB</span><span class="op">=</span><span class="st">"</span><span class="va">$DATA_DIR</span><span class="st">/databases/lca_methods"</span>   <span class="co"># ← the check</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">tar</span> <span class="at">-xzf</span> ...                                         <span class="co"># ← extracts lca_methods/ from archive</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> run ... <span class="at">-db</span> lca_methods                       <span class="co"># ← the server flag</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>If any of them differ, a new Codespace will silently get an empty database.</p>
+<p><strong>History:</strong> In June 2026, the database was renamed from <code>lca_commons</code> to <code>lca_methods</code> throughout the scripts, but the tar.gz on GitHub releases was rebuilt from an empty database (not the correctly-populated one). The result: every new Codespace had 0 LCIA methods. The fix was to re-run the import, tar with the correct folder name, and re-upload.</p>
+<hr>
+</section>
 <section id="the-one-time-build-workflow" class="level2">
 <h2 class="anchored" data-anchor-id="the-one-time-build-workflow">The one-time build workflow</h2>
 <p>This workflow runs once per database. After it completes, the database is stored in GitHub releases and never rebuilt unless the source data changes.</p>
-<pre><code>1. Start gdt-server with an empty database
-      bash setup_olca.sh  (before lca_methods.tar.gz existed)
+<pre><code>1. Start gdt-server pointed at an empty database named lca_methods
+      docker rm -f olca-server
+      docker run --name olca-server --network host \
+          -v "$HOME/olca-data:/app/data" -d gdt-server:latest -db lca_methods
+      # Wait for it to start: curl -s http://localhost:8080/api/version
 
-2. Run the preprocessing script against the source zip
+2. Download the source zip from GitHub releases
+      gh release download lca-data-v1 \
+          --repo calvinw/agentic-lca \
+          --pattern "openLCA.LCIA.Methods.*.zip" \
+          --output "$HOME/olca-data/openLCA_LCIA_methods.zip"
+
+3. Run the preprocessing script
       python3 import_lca_data.py
-      # Takes ~20-30 minutes for the full LCIA methods pack (60,000 flows)
+      # Takes ~20-30 minutes (60,000 flows is the slow pass)
+      # If interrupted, see "Recovering from a partial import" below
 
-3. Zip the resulting database folder
-      tar -czf lca_methods.tar.gz -C ~/olca-data/databases lca_methods/
+4. Verify the database before tarballing
+      python3 -c "
+      from olca_ipc.rest import RestClient; import olca_schema as o
+      c = RestClient('http://localhost:8080/')
+      methods = list(c.get_descriptors(o.ImpactMethod))
+      print(f'Methods: {len(methods)}')   # must be 45
+      traci = [m.name for m in methods if 'traci' in (m.name or '').lower()]
+      print(f'TRACI: {traci}')            # must include TRACI 2.2
+      "
 
-4. Upload to GitHub releases
-      gh release upload lca-data-v1 lca_methods.tar.gz --repo calvinw/agentic-lca
+5. Stop the server cleanly before tarballing
+      docker stop olca-server
 
-5. Update setup script to download-and-unzip instead of importing
-      # setup_olca.sh now downloads lca_methods.tar.gz and unpacks it (~5 seconds)</code></pre>
-<p>After step 5, all future Codespace sessions just download the pre-built database. The import step never runs again unless the source data changes.</p>
+6. Create the archive — folder name inside MUST be lca_methods/
+      tar -czf ~/olca-data/lca_methods-LCIA-methods-2.8.0-$(date +%Y-%m-%d).tar.gz \
+          -C ~/olca-data/databases lca_methods/
+
+      # Verify the folder name inside the archive before uploading:
+      tar -tzf ~/olca-data/lca_methods-LCIA-methods-*.tar.gz | head -1
+      # Must print: lca_methods/
+
+7. Upload to GitHub releases (--clobber replaces an existing file of the same name)
+      gh release upload lca-data-v1 \
+          ~/olca-data/lca_methods-LCIA-methods-*.tar.gz \
+          --repo calvinw/agentic-lca --clobber</code></pre>
+<p>After step 7, all future Codespace sessions just download and unzip the pre-built database. The import step never runs again unless the source data changes.</p>
+<hr>
+</section>
+<section id="recovering-from-a-partial-import" class="level2">
+<h2 class="anchored" data-anchor-id="recovering-from-a-partial-import">Recovering from a partial import</h2>
+<p>The import can be interrupted mid-run (e.g.&nbsp;Codespace idle timeout during the 60,000-flow pass). The database is not corrupted — you can check what made it in and run only the missing passes.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Check what's already in the database</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> olca_ipc.rest <span class="im">import</span> RestClient<span class="op">;</span> <span class="im">import</span> olca_schema <span class="im">as</span> o</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> RestClient(<span class="st">'http://localhost:8080/'</span>)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">len</span>(<span class="bu">list</span>(c.get_descriptors(o.Flow))))           <span class="co"># expect ~60,914</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">len</span>(<span class="bu">list</span>(c.get_descriptors(o.ImpactCategory)))) <span class="co"># expect ~480 (550 in some packs)</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">len</span>(<span class="bu">list</span>(c.get_descriptors(o.ImpactMethod))))   <span class="co"># expect 45</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>If flows and categories are in but methods are missing (the most likely interruption point since it is the last pass), run only the ImpactMethod pass:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> json, zipfile</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> olca_ipc.rest <span class="im">import</span> RestClient<span class="op">;</span> <span class="im">import</span> olca_schema <span class="im">as</span> o</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>PACK <span class="op">=</span> Path.home() <span class="op">/</span> <span class="st">"olca-data/openLCA_LCIA_methods.zip"</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>client <span class="op">=</span> RestClient(<span class="st">"http://localhost:8080/"</span>)</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>ok <span class="op">=</span> total <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> zipfile.ZipFile(PACK) <span class="im">as</span> zf:</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> name <span class="kw">in</span> zf.namelist():</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="kw">not</span> name.endswith(<span class="st">".json"</span>): <span class="cf">continue</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>        <span class="cf">try</span>:</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>            raw <span class="op">=</span> json.loads(zf.read(name))</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>            items <span class="op">=</span> raw <span class="cf">if</span> <span class="bu">isinstance</span>(raw, <span class="bu">list</span>) <span class="cf">else</span> <span class="op">\</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>                    raw.get(<span class="st">"@graph"</span>, []) <span class="cf">if</span> <span class="st">"@graph"</span> <span class="kw">in</span> raw <span class="cf">else</span> <span class="op">\</span></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>                    [raw] <span class="cf">if</span> <span class="st">"@type"</span> <span class="kw">in</span> raw <span class="cf">else</span> []</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>            <span class="cf">for</span> item <span class="kw">in</span> items:</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>                <span class="cf">if</span> item.get(<span class="st">"@type"</span>) <span class="op">==</span> <span class="st">"ImpactMethod"</span>:</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>                    total <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">if</span> client.put(o.ImpactMethod.from_dict(item)):</span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>                        ok <span class="op">+=</span> <span class="dv">1</span><span class="op">;</span> <span class="bu">print</span>(<span class="ss">f"  ✓ </span><span class="sc">{</span>item<span class="sc">.</span>get(<span class="st">'name'</span>)<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>        <span class="cf">except</span> <span class="pp">Exception</span>: <span class="cf">pass</span></span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Imported </span><span class="sc">{</span>ok<span class="sc">}</span><span class="ss">/</span><span class="sc">{</span>total<span class="sc">}</span><span class="ss"> ImpactMethods"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Then continue from step 4 (verify) in the build workflow above.</p>
 <hr>
 </section>
 <section id="current-databases-in-github-releases-lca-data-v1" class="level2">
@@ -346,9 +426,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </thead>
 <tbody>
 <tr class="odd">
-<td><code>lca_methods.tar.gz</code></td>
-<td>86 MB</td>
-<td>Pre-built Derby DB with all 45 LCIA methods</td>
+<td><code>lca_methods-LCIA-methods-2.8.0-2026-06-18.tar.gz</code></td>
+<td>74 MB</td>
+<td>Pre-built Derby DB — 45 LCIA methods, 60,914 flows, 480 impact categories. Folder inside archive: <code>lca_methods/</code></td>
 <td><code>setup_olca.sh</code> (download + unzip)</td>
 </tr>
 <tr class="even">
@@ -359,7 +439,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
-<p>The methods pack zip is no longer downloaded by <code>setup_olca.sh</code> but is kept in the release as the source material for rebuilding <code>lca_methods.tar.gz</code> if needed (e.g. when a newer methods pack version is released).</p>
+<p>The methods pack zip is no longer downloaded by <code>setup_olca.sh</code> but is kept in the release as the source material for rebuilding the tar.gz if needed (e.g.&nbsp;when a newer methods pack version is released).</p>
+<p><strong>Naming convention for the tar.gz:</strong> include the methods pack version and build date so it is clear which source was used: <code>lca_methods-LCIA-methods-{pack-version}-{build-date}.tar.gz</code></p>
 <hr>
 </section>
 <section id="extending-to-other-databases" class="level2">
@@ -404,11 +485,11 @@ Storage:
   gh release create lca-data-v1 ecoinvent.tar.gz \
       --repo calvinw/ecoinvent-lca-db   ← private repository</code></pre>
 <p>Download in Codespace (authenticated via built-in GitHub token or Codespaces secret):</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">gh</span> release download lca-data-v1 <span class="dt">\</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">--repo</span> calvinw/ecoinvent-lca-db <span class="dt">\</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">--pattern</span> <span class="st">"ecoinvent.tar.gz"</span> <span class="dt">\</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">--output</span> <span class="st">"</span><span class="va">$DATA_DIR</span><span class="st">/ecoinvent.tar.gz"</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="fu">tar</span> <span class="at">-xzf</span> <span class="st">"</span><span class="va">$DATA_DIR</span><span class="st">/ecoinvent.tar.gz"</span> <span class="at">-C</span> <span class="st">"</span><span class="va">$DATA_DIR</span><span class="st">/databases/"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">gh</span> release download lca-data-v1 <span class="dt">\</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">--repo</span> calvinw/ecoinvent-lca-db <span class="dt">\</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">--pattern</span> <span class="st">"ecoinvent.tar.gz"</span> <span class="dt">\</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">--output</span> <span class="st">"</span><span class="va">$DATA_DIR</span><span class="st">/ecoinvent.tar.gz"</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="fu">tar</span> <span class="at">-xzf</span> <span class="st">"</span><span class="va">$DATA_DIR</span><span class="st">/ecoinvent.tar.gz"</span> <span class="at">-C</span> <span class="st">"</span><span class="va">$DATA_DIR</span><span class="st">/databases/"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
 </section>
@@ -465,19 +546,27 @@ Storage:
 <tbody>
 <tr class="odd">
 <td>New LCIA methods pack version released</td>
-<td>Re-run import, re-upload lca_methods.tar.gz</td>
+<td>Re-run import, re-upload with new date in filename</td>
 </tr>
 <tr class="even">
+<td>Database renamed in scripts (<code>-db</code> flag changed)</td>
+<td>Re-tar with correct folder name inside archive, re-upload</td>
+</tr>
+<tr class="odd">
 <td>New BAFU version released</td>
 <td>Re-run import, re-upload bafu.tar.gz</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>New ecoinvent version</td>
 <td>Re-run import on licensed machine, re-upload to private repo</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Bug found in import script</td>
 <td>Fix script, re-run, re-upload</td>
+</tr>
+<tr class="even">
+<td>New Codespace shows 0 LCIA methods</td>
+<td>Check archive folder name (<code>tar -tzf ... \| head -1</code>), check <code>-db</code> flag matches</td>
 </tr>
 </tbody>
 </table>
