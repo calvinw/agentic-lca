@@ -270,7 +270,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#tier-3-bafu-future-free" id="toc-tier-3-bafu-future-free" class="nav-link" data-scroll-target="#tier-3-bafu-future-free">Tier 3 — BAFU (future, free)</a></li>
   </ul></li>
   <li><a href="#file-structure" id="toc-file-structure" class="nav-link" data-scroll-target="#file-structure">File structure</a></li>
-  <li><a href="#comparison-with-tiangong-lca-mcp" id="toc-comparison-with-tiangong-lca-mcp" class="nav-link" data-scroll-target="#comparison-with-tiangong-lca-mcp">Comparison with tiangong-lca-mcp</a></li>
   <li><a href="#build-order" id="toc-build-order" class="nav-link" data-scroll-target="#build-order">Build order</a></li>
   </ul></li>
   </ul>
@@ -550,12 +549,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 ├── requirements.txt
 ├── Dockerfile
 └── start.sh            ← starts gdt-server, waits, then starts sse_server.py</code></pre>
-<hr>
-</section>
-<section id="comparison-with-tiangong-lca-mcp" class="level2">
-<h2 class="anchored" data-anchor-id="comparison-with-tiangong-lca-mcp">Comparison with tiangong-lca-mcp</h2>
-<p><a href="https://github.com/linancn/tiangong-lca-mcp">tiangong-lca-mcp</a> is a TypeScript MCP server for querying existing product systems in ecoinvent or GLAD. It requires pre-built product system UUIDs — the product system must already exist in the database before the tool can calculate it.</p>
-<p>The Life Cycle Assessment MCP builds the product system from scratch from a recipe card, which means the AI can construct or modify a supply chain description mid-conversation and calculate it immediately. The two are complementary: this MCP for teaching and recipe-card-driven analysis, tiangong for professionals querying existing databases.</p>
 <hr>
 </section>
 <section id="build-order" class="level2">
