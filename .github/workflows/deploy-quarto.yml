@@ -21,8 +21,6 @@ jobs:
 
       - name: Regenerate manifest and nav files
         run: |
-          python3 skills_sessions/generate_sessions.py
-          python3 plan/generate_plans.py
           python3 quarto_docs/generate_quarto_yml.py
 
       - name: Set up Quarto
