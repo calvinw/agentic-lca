@@ -421,13 +421,7 @@ Note the two `../` levels — one to exit the skill subfolder (e.g. `system-boun
 
 Save only the header and the verbatim conversation that took place while the skill was running — the back-and-forth between `**AI:**` and `**Student:**` turns, exactly as they happened. Nothing else. Do not add notes, summaries, completion status, meta-comments, or any text that was not part of the actual skill conversation. If the session ended early, just stop — do not add a line explaining that it was incomplete.
 
-**After saving a session file, always run:**
-
-```bash
-python3 skills_sessions/generate_sessions.py
-```
-
-This updates `skills_sessions/sessions.json`, which is the file that the session viewer (`skills_sessions/index.html`) uses to build its list of sessions. If you skip this step, the new session will not appear in the viewer.
+**Do not run any generator scripts after saving a session file.** The generators run automatically as part of `make` inside `quarto_docs/` or via the GitHub Actions CI pipeline. Running them manually at other times (e.g. after saving a session or editing a skill) is unnecessary and should be avoided.
 
 ---
 

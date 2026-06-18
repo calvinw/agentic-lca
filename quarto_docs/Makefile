@@ -4,9 +4,6 @@ all: regenerate render
 
 regenerate:
 	python3 generate_quarto_yml.py
-	python3 ../skills_sessions/generate_sessions.py
-	python3 ../plan/generate_plans.py
-	python3 ../lca_analysis/generate_analyses.py
 
 render:
 	quarto render
