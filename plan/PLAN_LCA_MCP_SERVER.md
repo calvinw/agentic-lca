@@ -242,21 +242,6 @@ mcp-lca/
 
 ---
 
-## Comparison with tiangong-lca-mcp
-
-[tiangong-lca-mcp](https://github.com/linancn/tiangong-lca-mcp) is a
-TypeScript MCP server for querying existing product systems in ecoinvent or
-GLAD. It requires pre-built product system UUIDs — the product system must
-already exist in the database before the tool can calculate it.
-
-The Life Cycle Assessment MCP builds the product system from scratch from a
-recipe card, which means the AI can construct or modify a supply chain
-description mid-conversation and calculate it immediately. The two are
-complementary: this MCP for teaching and recipe-card-driven analysis,
-tiangong for professionals querying existing databases.
-
----
-
 ## Build order
 
 1. Create `mcp-lca/` with `lca_server.py`, `sse_server.py`, `requirements.txt`
