@@ -213,6 +213,8 @@ If it has never been set up before, use `bash setup_olca.sh` instead and explain
 
 `setup_olca.sh` now handles everything automatically in sequence: Python tools → data downloads → Docker build → server start → database import. Each step is skipped on subsequent runs if it has already been completed.
 
+For a full technical reference — including the correct Python client to use (`RestClient`, not `ipc.Client`), all 45 installed LCIA methods, useful query snippets, and a common-errors table — see **`docs/openlca_server_reference.md`**.
+
 ---
 
 ## FEDEFL flow names — the naming standard for emissions and resources
@@ -244,7 +246,7 @@ lcia:
   method_name: "TRACI 2.2"
 ```
 
-This tells `lca_analysis.py` which impact method to use when converting the inventory (raw kg of CO₂, SO₂, etc.) into scored impact categories. Always include this section. The only supported value is `"TRACI 2.2"`.
+This tells `lca_analysis.py` which impact method to use when converting the inventory (raw kg of CO₂, SO₂, etc.) into scored impact categories. Always include this section. The default and most commonly used value is `"TRACI 2.2"`, but any of the 45 methods installed on the server can be used — see `docs/openlca_server_reference.md` for the full list of valid method names.
 
 **TRACI 2.2** (Tool for the Reduction and Assessment of Chemicals and other environmental Impacts) is the US EPA's standard life cycle impact assessment method. It produces eight impact scores:
 
