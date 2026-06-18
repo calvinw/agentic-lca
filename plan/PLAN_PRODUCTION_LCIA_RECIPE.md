@@ -151,7 +151,7 @@ These are the CFs for the flows used in current recipe cards.
 ### Recommended approach — Import the free openLCA LCIA methods pack
 
 The cleanest path is to import the **openLCA LCIA methods pack** on top of
-the `lca_commons` database that is already running. This is a small free file
+the `lca_methods` database that is already running. This is a small free file
 (methods only, no background processes) that adds ReCiPe 2016, CML, EF, ILCD,
 and about a dozen other methods alongside TRACI 2.2.
 
@@ -265,7 +265,7 @@ using the existing `impact_categories` code path in `lca_analysis.py`.
 
 | Situation | Recommendation |
 |---|---|
-| lca_commons running, LCIA methods pack imported | Recommended — `method_name: "ReCiPe 2016 Midpoint (H)"` |
+| lca_methods running, LCIA methods pack imported | Recommended — `method_name: "ReCiPe 2016 Midpoint (H)"` |
 | No methods pack yet, want to test immediately | Fallback — embed CFs in recipe card |
 | ecoinvent connected | `method_name: "ReCiPe 2016 Midpoint (H)"` — built into ecoinvent |
 | Comparing ReCiPe vs TRACI on same product | Change `method_name` and rerun — no other changes needed |

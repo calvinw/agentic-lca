@@ -1,6 +1,6 @@
 # LCA Results: Nordic Textile Waste — Scenario 2B — Cotton reuse in Nordic countries
 
-Generated: 2026-06-14 02:19  |  openLCA system ID: `0535125e-b293-4793-8094-fa39ce08445e`
+Generated: 2026-06-18 17:51  |  openLCA system ID: `cdc8ed1a-201c-46a7-ae60-da1546b273b6`
 
 ## Step 1 — Goal and Scope
 
@@ -74,27 +74,31 @@ Characterization factors from the database. Each impact category score is the su
 
 | Impact Category | Score | Unit |
 |---|---:|---|
-| Human health - cancer | **0.000000** | CTUcancer |
-| Acidification | **0.000000** | kg SO2 eq |
-| Eutrophication (Freshwater) | **0.000000** | kg P eq |
-| Human health - particulate matter | **0.000000** | PM 2.5 eq |
-| Smog formation | **0.000000** | kg O3 eq |
-| Human health - non-cancer | **0.000000** | CTUnoncancer |
 | Ozone depletion | **0.000000** | kg CFC-11 eq |
+| Ecotoxicity | **0.000000** | CTUe |
+| Respiratory effects (Particulate) | **0.000000** | kg PM2.5 eq |
+| Acidification | **0.000000** | kg SO2 eq |
+| Carcinogenics | **0.000000** | CTUh |
 | Global warming | **-13.332870** | kg CO2 eq |
+| Smog (Photochemical Oxidation Formation) | **0.000000** | kg O3 eq |
+| Non carcinogenics | **0.000000** | CTUh |
+| Eutrophication: freshwater | **0.000000** | kg P eq |
+| Eutrophication: marine | **0.000000** | kg N eq |
 
 ## Summary
 
 **LCIA Method:** TRACI 2.2
 
-> **Human health - cancer: 0.000000 CTUcancer** per 1.0 kg of Treatment of one kilogram of used 100% cotton textiles via Nordic reuse — collection to final grave
-> **Acidification: 0.000000 kg SO2 eq** per 1.0 kg of Treatment of one kilogram of used 100% cotton textiles via Nordic reuse — collection to final grave
-> **Eutrophication (Freshwater): 0.000000 kg P eq** per 1.0 kg of Treatment of one kilogram of used 100% cotton textiles via Nordic reuse — collection to final grave
-> **Human health - particulate matter: 0.000000 PM 2.5 eq** per 1.0 kg of Treatment of one kilogram of used 100% cotton textiles via Nordic reuse — collection to final grave
-> **Smog formation: 0.000000 kg O3 eq** per 1.0 kg of Treatment of one kilogram of used 100% cotton textiles via Nordic reuse — collection to final grave
-> **Human health - non-cancer: 0.000000 CTUnoncancer** per 1.0 kg of Treatment of one kilogram of used 100% cotton textiles via Nordic reuse — collection to final grave
 > **Ozone depletion: 0.000000 kg CFC-11 eq** per 1.0 kg of Treatment of one kilogram of used 100% cotton textiles via Nordic reuse — collection to final grave
+> **Ecotoxicity: 0.000000 CTUe** per 1.0 kg of Treatment of one kilogram of used 100% cotton textiles via Nordic reuse — collection to final grave
+> **Respiratory effects (Particulate): 0.000000 kg PM2.5 eq** per 1.0 kg of Treatment of one kilogram of used 100% cotton textiles via Nordic reuse — collection to final grave
+> **Acidification: 0.000000 kg SO2 eq** per 1.0 kg of Treatment of one kilogram of used 100% cotton textiles via Nordic reuse — collection to final grave
+> **Carcinogenics: 0.000000 CTUh** per 1.0 kg of Treatment of one kilogram of used 100% cotton textiles via Nordic reuse — collection to final grave
 > **Global warming: -13.332870 kg CO2 eq** per 1.0 kg of Treatment of one kilogram of used 100% cotton textiles via Nordic reuse — collection to final grave
+> **Smog (Photochemical Oxidation Formation): 0.000000 kg O3 eq** per 1.0 kg of Treatment of one kilogram of used 100% cotton textiles via Nordic reuse — collection to final grave
+> **Non carcinogenics: 0.000000 CTUh** per 1.0 kg of Treatment of one kilogram of used 100% cotton textiles via Nordic reuse — collection to final grave
+> **Eutrophication: freshwater: 0.000000 kg P eq** per 1.0 kg of Treatment of one kilogram of used 100% cotton textiles via Nordic reuse — collection to final grave
+> **Eutrophication: marine: 0.000000 kg N eq** per 1.0 kg of Treatment of one kilogram of used 100% cotton textiles via Nordic reuse — collection to final grave
 
 ## Product System Graphs
 

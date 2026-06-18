@@ -1,6 +1,6 @@
 # LCA Results: Levi's 501 Jeans — wash every wear (Group 1, Scenario A)
 
-Generated: 2026-06-14 02:12  |  openLCA system ID: `341e6daf-d637-49df-98fd-2ef88b4a1bb0`
+Generated: 2026-06-18 17:49  |  openLCA system ID: `73b59b48-7615-4457-abcd-848f87cd139c`
 
 ## Step 1 — Goal and Scope
 
@@ -82,27 +82,31 @@ Characterization factors from the database. Each impact category score is the su
 
 | Impact Category | Score | Unit |
 |---|---:|---|
-| Human health - cancer | **0.000000** | CTUcancer |
-| Acidification | **0.104230** | kg SO2 eq |
-| Eutrophication (Freshwater) | **0.000000** | kg P eq |
-| Human health - particulate matter | **0.003658** | PM 2.5 eq |
-| Smog formation | **1.890908** | kg O3 eq |
-| Human health - non-cancer | **0.000000** | CTUnoncancer |
 | Ozone depletion | **0.000000** | kg CFC-11 eq |
+| Ecotoxicity | **0.000000** | CTUe |
+| Respiratory effects (Particulate) | **0.003658** | kg PM2.5 eq |
+| Acidification | **0.104230** | kg SO2 eq |
+| Carcinogenics | **0.000000** | CTUh |
 | Global warming | **51.670000** | kg CO2 eq |
+| Smog (Photochemical Oxidation Formation) | **1.890634** | kg O3 eq |
+| Non carcinogenics | **0.000000** | CTUh |
+| Eutrophication: freshwater | **0.000000** | kg P eq |
+| Eutrophication: marine | **0.000390** | kg N eq |
 
 ## Summary
 
 **LCIA Method:** TRACI 2.2
 
-> **Human health - cancer: 0.000000 CTUcancer** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, wash every wear
-> **Acidification: 0.104230 kg SO2 eq** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, wash every wear
-> **Eutrophication (Freshwater): 0.000000 kg P eq** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, wash every wear
-> **Human health - particulate matter: 0.003658 PM 2.5 eq** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, wash every wear
-> **Smog formation: 1.890908 kg O3 eq** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, wash every wear
-> **Human health - non-cancer: 0.000000 CTUnoncancer** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, wash every wear
 > **Ozone depletion: 0.000000 kg CFC-11 eq** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, wash every wear
+> **Ecotoxicity: 0.000000 CTUe** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, wash every wear
+> **Respiratory effects (Particulate): 0.003658 kg PM2.5 eq** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, wash every wear
+> **Acidification: 0.104230 kg SO2 eq** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, wash every wear
+> **Carcinogenics: 0.000000 CTUh** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, wash every wear
 > **Global warming: 51.670000 kg CO2 eq** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, wash every wear
+> **Smog (Photochemical Oxidation Formation): 1.890634 kg O3 eq** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, wash every wear
+> **Non carcinogenics: 0.000000 CTUh** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, wash every wear
+> **Eutrophication: freshwater: 0.000000 kg P eq** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, wash every wear
+> **Eutrophication: marine: 0.000390 kg N eq** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, wash every wear
 
 ## Product System Graphs
 

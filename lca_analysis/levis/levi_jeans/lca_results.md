@@ -1,6 +1,6 @@
 # LCA Results: Levi's 501 Jeans LCA — cradle to grave
 
-Generated: 2026-06-14 02:11  |  openLCA system ID: `3bc9398f-637e-438a-b72a-bc1a2831cafb`
+Generated: 2026-06-18 17:49  |  openLCA system ID: `d1180022-b679-42f4-b071-55a414a8df69`
 
 ## Step 1 — Goal and Scope
 
@@ -82,27 +82,31 @@ Characterization factors from the database. Each impact category score is the su
 
 | Impact Category | Score | Unit |
 |---|---:|---|
-| Human health - cancer | **0.000000** | CTUcancer |
-| Acidification | **0.059286** | kg SO2 eq |
-| Eutrophication (Freshwater) | **0.000000** | kg P eq |
-| Human health - particulate matter | **0.002081** | PM 2.5 eq |
-| Smog formation | **1.075546** | kg O3 eq |
-| Human health - non-cancer | **0.000000** | CTUnoncancer |
 | Ozone depletion | **0.000000** | kg CFC-11 eq |
+| Ecotoxicity | **0.000000** | CTUe |
+| Respiratory effects (Particulate) | **0.002081** | kg PM2.5 eq |
+| Acidification | **0.059286** | kg SO2 eq |
+| Carcinogenics | **0.000000** | CTUh |
 | Global warming | **33.400000** | kg CO2 eq |
+| Smog (Photochemical Oxidation Formation) | **1.075390** | kg O3 eq |
+| Non carcinogenics | **0.000000** | CTUh |
+| Eutrophication: freshwater | **0.000000** | kg P eq |
+| Eutrophication: marine | **0.000222** | kg N eq |
 
 ## Summary
 
 **LCIA Method:** TRACI 2.2
 
-> **Human health - cancer: 0.000000 CTUcancer** per 1.0 pair of One pair of Levi's 501 jeans (medium stone wash) — full lifecycle, cradle to grave
-> **Acidification: 0.059286 kg SO2 eq** per 1.0 pair of One pair of Levi's 501 jeans (medium stone wash) — full lifecycle, cradle to grave
-> **Eutrophication (Freshwater): 0.000000 kg P eq** per 1.0 pair of One pair of Levi's 501 jeans (medium stone wash) — full lifecycle, cradle to grave
-> **Human health - particulate matter: 0.002081 PM 2.5 eq** per 1.0 pair of One pair of Levi's 501 jeans (medium stone wash) — full lifecycle, cradle to grave
-> **Smog formation: 1.075546 kg O3 eq** per 1.0 pair of One pair of Levi's 501 jeans (medium stone wash) — full lifecycle, cradle to grave
-> **Human health - non-cancer: 0.000000 CTUnoncancer** per 1.0 pair of One pair of Levi's 501 jeans (medium stone wash) — full lifecycle, cradle to grave
 > **Ozone depletion: 0.000000 kg CFC-11 eq** per 1.0 pair of One pair of Levi's 501 jeans (medium stone wash) — full lifecycle, cradle to grave
+> **Ecotoxicity: 0.000000 CTUe** per 1.0 pair of One pair of Levi's 501 jeans (medium stone wash) — full lifecycle, cradle to grave
+> **Respiratory effects (Particulate): 0.002081 kg PM2.5 eq** per 1.0 pair of One pair of Levi's 501 jeans (medium stone wash) — full lifecycle, cradle to grave
+> **Acidification: 0.059286 kg SO2 eq** per 1.0 pair of One pair of Levi's 501 jeans (medium stone wash) — full lifecycle, cradle to grave
+> **Carcinogenics: 0.000000 CTUh** per 1.0 pair of One pair of Levi's 501 jeans (medium stone wash) — full lifecycle, cradle to grave
 > **Global warming: 33.400000 kg CO2 eq** per 1.0 pair of One pair of Levi's 501 jeans (medium stone wash) — full lifecycle, cradle to grave
+> **Smog (Photochemical Oxidation Formation): 1.075390 kg O3 eq** per 1.0 pair of One pair of Levi's 501 jeans (medium stone wash) — full lifecycle, cradle to grave
+> **Non carcinogenics: 0.000000 CTUh** per 1.0 pair of One pair of Levi's 501 jeans (medium stone wash) — full lifecycle, cradle to grave
+> **Eutrophication: freshwater: 0.000000 kg P eq** per 1.0 pair of One pair of Levi's 501 jeans (medium stone wash) — full lifecycle, cradle to grave
+> **Eutrophication: marine: 0.000222 kg N eq** per 1.0 pair of One pair of Levi's 501 jeans (medium stone wash) — full lifecycle, cradle to grave
 
 ## Product System Graphs
 

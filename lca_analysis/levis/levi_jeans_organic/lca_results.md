@@ -1,6 +1,6 @@
 # LCA Results: Levi's 501 Jeans — organic cotton farm (Custom Scenario B)
 
-Generated: 2026-06-14 02:12  |  openLCA system ID: `e86c3aeb-79be-4b3a-b90f-741804caa06a`
+Generated: 2026-06-18 17:49  |  openLCA system ID: `1179b55c-44a7-4178-b0dc-8e501f8680e1`
 
 ## Step 1 — Goal and Scope
 
@@ -82,27 +82,31 @@ Characterization factors from the database. Each impact category score is the su
 
 | Impact Category | Score | Unit |
 |---|---:|---|
-| Human health - cancer | **0.000000** | CTUcancer |
-| Acidification | **0.059286** | kg SO2 eq |
-| Eutrophication (Freshwater) | **0.000000** | kg P eq |
-| Human health - particulate matter | **0.002081** | PM 2.5 eq |
-| Smog formation | **1.075546** | kg O3 eq |
-| Human health - non-cancer | **0.000000** | CTUnoncancer |
 | Ozone depletion | **0.000000** | kg CFC-11 eq |
+| Ecotoxicity | **0.000000** | CTUe |
+| Respiratory effects (Particulate) | **0.002081** | kg PM2.5 eq |
+| Acidification | **0.059286** | kg SO2 eq |
+| Carcinogenics | **0.000000** | CTUh |
 | Global warming | **32.000000** | kg CO2 eq |
+| Smog (Photochemical Oxidation Formation) | **1.075390** | kg O3 eq |
+| Non carcinogenics | **0.000000** | CTUh |
+| Eutrophication: freshwater | **0.000000** | kg P eq |
+| Eutrophication: marine | **0.000222** | kg N eq |
 
 ## Summary
 
 **LCIA Method:** TRACI 2.2
 
-> **Human health - cancer: 0.000000 CTUcancer** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, organic cotton
-> **Acidification: 0.059286 kg SO2 eq** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, organic cotton
-> **Eutrophication (Freshwater): 0.000000 kg P eq** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, organic cotton
-> **Human health - particulate matter: 0.002081 PM 2.5 eq** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, organic cotton
-> **Smog formation: 1.075546 kg O3 eq** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, organic cotton
-> **Human health - non-cancer: 0.000000 CTUnoncancer** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, organic cotton
 > **Ozone depletion: 0.000000 kg CFC-11 eq** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, organic cotton
+> **Ecotoxicity: 0.000000 CTUe** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, organic cotton
+> **Respiratory effects (Particulate): 0.002081 kg PM2.5 eq** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, organic cotton
+> **Acidification: 0.059286 kg SO2 eq** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, organic cotton
+> **Carcinogenics: 0.000000 CTUh** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, organic cotton
 > **Global warming: 32.000000 kg CO2 eq** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, organic cotton
+> **Smog (Photochemical Oxidation Formation): 1.075390 kg O3 eq** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, organic cotton
+> **Non carcinogenics: 0.000000 CTUh** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, organic cotton
+> **Eutrophication: freshwater: 0.000000 kg P eq** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, organic cotton
+> **Eutrophication: marine: 0.000222 kg N eq** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, organic cotton
 
 ## Product System Graphs
 

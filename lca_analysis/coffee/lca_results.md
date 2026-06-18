@@ -1,6 +1,6 @@
 # LCA Results: Coffee LCA — one cup
 
-Generated: 2026-06-14 04:09  |  openLCA system ID: `cbaadc02-5650-40f0-a2ab-d11b731b5bca`
+Generated: 2026-06-18 17:47  |  openLCA system ID: `72288dac-ac59-4990-b991-c4582dc2861a`
 
 ## Step 1 — Goal and Scope
 
@@ -80,13 +80,37 @@ Each cell = emission rate × scaling factor.  Columns sum to the LCI totals in S
 | P3 — Burn coal | 0.1000 | 0.0500 |
 | **Total** | | **0.0500** |
 
+## Step 7 — LCIA Results  (TRACI 2.2)
+
+Characterization factors from the database. Each impact category score is the sum of all elementary flow contributions as computed by the openLCA engine.
+
+| Impact Category | Score | Unit |
+|---|---:|---|
+| Ozone depletion | **0.000000** | kg CFC-11 eq |
+| Ecotoxicity | **0.000000** | CTUe |
+| Respiratory effects (Particulate) | **0.000000** | kg PM2.5 eq |
+| Acidification | **0.000000** | kg SO2 eq |
+| Carcinogenics | **0.000000** | CTUh |
+| Global warming | **0.100000** | kg CO2 eq |
+| Smog (Photochemical Oxidation Formation) | **0.000000** | kg O3 eq |
+| Non carcinogenics | **0.000000** | CTUh |
+| Eutrophication: freshwater | **0.000000** | kg P eq |
+| Eutrophication: marine | **0.000000** | kg N eq |
+
 ## Summary
 
-$$
-\text{Total emissions} = B \cdot A^{-1} \cdot f
-$$
+**LCIA Method:** TRACI 2.2
 
-> **Carbon dioxide: 0.1000 kg** per 1.0 cup of One cup of coffee
+> **Ozone depletion: 0.000000 kg CFC-11 eq** per 1.0 cup of One cup of coffee
+> **Ecotoxicity: 0.000000 CTUe** per 1.0 cup of One cup of coffee
+> **Respiratory effects (Particulate): 0.000000 kg PM2.5 eq** per 1.0 cup of One cup of coffee
+> **Acidification: 0.000000 kg SO2 eq** per 1.0 cup of One cup of coffee
+> **Carcinogenics: 0.000000 CTUh** per 1.0 cup of One cup of coffee
+> **Global warming: 0.100000 kg CO2 eq** per 1.0 cup of One cup of coffee
+> **Smog (Photochemical Oxidation Formation): 0.000000 kg O3 eq** per 1.0 cup of One cup of coffee
+> **Non carcinogenics: 0.000000 CTUh** per 1.0 cup of One cup of coffee
+> **Eutrophication: freshwater: 0.000000 kg P eq** per 1.0 cup of One cup of coffee
+> **Eutrophication: marine: 0.000000 kg N eq** per 1.0 cup of One cup of coffee
 
 ## Product System Graphs
 

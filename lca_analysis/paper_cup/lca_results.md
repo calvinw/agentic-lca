@@ -1,6 +1,6 @@
 # LCA Results: Paper Cup LCA — one cup
 
-Generated: 2026-06-14 02:11  |  openLCA system ID: `263c008e-378f-4143-8cd9-d8206d5afc43`
+Generated: 2026-06-18 17:51  |  openLCA system ID: `b8292793-8b1b-4bad-b097-61e847103ff2`
 
 ## Step 1 — Goal and Scope
 
@@ -70,27 +70,31 @@ Characterization factors from the database. Each impact category score is the su
 
 | Impact Category | Score | Unit |
 |---|---:|---|
-| Human health - cancer | **0.000000** | CTUcancer |
-| Acidification | **0.000000** | kg SO2 eq |
-| Eutrophication (Freshwater) | **0.000000** | kg P eq |
-| Human health - particulate matter | **0.000000** | PM 2.5 eq |
-| Smog formation | **0.000000** | kg O3 eq |
-| Human health - non-cancer | **0.000000** | CTUnoncancer |
 | Ozone depletion | **0.000000** | kg CFC-11 eq |
+| Ecotoxicity | **0.000000** | CTUe |
+| Respiratory effects (Particulate) | **0.000000** | kg PM2.5 eq |
+| Acidification | **0.000000** | kg SO2 eq |
+| Carcinogenics | **0.000000** | CTUh |
 | Global warming | **0.050000** | kg CO2 eq |
+| Smog (Photochemical Oxidation Formation) | **0.000000** | kg O3 eq |
+| Non carcinogenics | **0.000000** | CTUh |
+| Eutrophication: freshwater | **0.000000** | kg P eq |
+| Eutrophication: marine | **0.000000** | kg N eq |
 
 ## Summary
 
 **LCIA Method:** TRACI 2.2
 
-> **Human health - cancer: 0.000000 CTUcancer** per 1.0 cup of One paper cup
-> **Acidification: 0.000000 kg SO2 eq** per 1.0 cup of One paper cup
-> **Eutrophication (Freshwater): 0.000000 kg P eq** per 1.0 cup of One paper cup
-> **Human health - particulate matter: 0.000000 PM 2.5 eq** per 1.0 cup of One paper cup
-> **Smog formation: 0.000000 kg O3 eq** per 1.0 cup of One paper cup
-> **Human health - non-cancer: 0.000000 CTUnoncancer** per 1.0 cup of One paper cup
 > **Ozone depletion: 0.000000 kg CFC-11 eq** per 1.0 cup of One paper cup
+> **Ecotoxicity: 0.000000 CTUe** per 1.0 cup of One paper cup
+> **Respiratory effects (Particulate): 0.000000 kg PM2.5 eq** per 1.0 cup of One paper cup
+> **Acidification: 0.000000 kg SO2 eq** per 1.0 cup of One paper cup
+> **Carcinogenics: 0.000000 CTUh** per 1.0 cup of One paper cup
 > **Global warming: 0.050000 kg CO2 eq** per 1.0 cup of One paper cup
+> **Smog (Photochemical Oxidation Formation): 0.000000 kg O3 eq** per 1.0 cup of One paper cup
+> **Non carcinogenics: 0.000000 CTUh** per 1.0 cup of One paper cup
+> **Eutrophication: freshwater: 0.000000 kg P eq** per 1.0 cup of One paper cup
+> **Eutrophication: marine: 0.000000 kg N eq** per 1.0 cup of One paper cup
 
 ## Product System Graphs
 

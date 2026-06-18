@@ -1,6 +1,6 @@
 # LCA Results: Organic Cotton Hooded Sweatshirt — 1 year use
 
-Generated: 2026-06-14 02:19  |  openLCA system ID: `109b4469-ad6e-4a6a-9520-e68f422a353c`
+Generated: 2026-06-18 17:48  |  openLCA system ID: `4ab3fcba-7e32-4297-ab76-b03bb2060748`
 
 ## Step 1 — Goal and Scope
 
@@ -115,27 +115,31 @@ Characterization factors from the database. Each impact category score is the su
 
 | Impact Category | Score | Unit |
 |---|---:|---|
-| Human health - cancer | **0.000000** | CTUcancer |
-| Acidification | **0.004809** | kg SO2 eq |
-| Eutrophication (Freshwater) | **0.000000** | kg P eq |
-| Human health - particulate matter | **0.000171** | PM 2.5 eq |
-| Smog formation | **0.000000** | kg O3 eq |
-| Human health - non-cancer | **0.000000** | CTUnoncancer |
 | Ozone depletion | **0.000000** | kg CFC-11 eq |
-| Global warming | **27.350032** | kg CO2 eq |
+| Ecotoxicity | **0.000000** | CTUe |
+| Respiratory effects (Particulate) | **0.000171** | kg PM2.5 eq |
+| Acidification | **0.004809** | kg SO2 eq |
+| Carcinogenics | **0.000000** | CTUh |
+| Global warming | **26.079559** | kg CO2 eq |
+| Smog (Photochemical Oxidation Formation) | **0.000000** | kg O3 eq |
+| Non carcinogenics | **0.000000** | CTUh |
+| Eutrophication: freshwater | **0.000000** | kg P eq |
+| Eutrophication: marine | **0.002247** | kg N eq |
 
 ## Summary
 
 **LCIA Method:** TRACI 2.2
 
-> **Human health - cancer: 0.000000 CTUcancer** per 1.0 item of 1 organic cotton hooded sweatshirt (750g), used for 1 year (52 washes)
-> **Acidification: 0.004809 kg SO2 eq** per 1.0 item of 1 organic cotton hooded sweatshirt (750g), used for 1 year (52 washes)
-> **Eutrophication (Freshwater): 0.000000 kg P eq** per 1.0 item of 1 organic cotton hooded sweatshirt (750g), used for 1 year (52 washes)
-> **Human health - particulate matter: 0.000171 PM 2.5 eq** per 1.0 item of 1 organic cotton hooded sweatshirt (750g), used for 1 year (52 washes)
-> **Smog formation: 0.000000 kg O3 eq** per 1.0 item of 1 organic cotton hooded sweatshirt (750g), used for 1 year (52 washes)
-> **Human health - non-cancer: 0.000000 CTUnoncancer** per 1.0 item of 1 organic cotton hooded sweatshirt (750g), used for 1 year (52 washes)
 > **Ozone depletion: 0.000000 kg CFC-11 eq** per 1.0 item of 1 organic cotton hooded sweatshirt (750g), used for 1 year (52 washes)
-> **Global warming: 27.350032 kg CO2 eq** per 1.0 item of 1 organic cotton hooded sweatshirt (750g), used for 1 year (52 washes)
+> **Ecotoxicity: 0.000000 CTUe** per 1.0 item of 1 organic cotton hooded sweatshirt (750g), used for 1 year (52 washes)
+> **Respiratory effects (Particulate): 0.000171 kg PM2.5 eq** per 1.0 item of 1 organic cotton hooded sweatshirt (750g), used for 1 year (52 washes)
+> **Acidification: 0.004809 kg SO2 eq** per 1.0 item of 1 organic cotton hooded sweatshirt (750g), used for 1 year (52 washes)
+> **Carcinogenics: 0.000000 CTUh** per 1.0 item of 1 organic cotton hooded sweatshirt (750g), used for 1 year (52 washes)
+> **Global warming: 26.079559 kg CO2 eq** per 1.0 item of 1 organic cotton hooded sweatshirt (750g), used for 1 year (52 washes)
+> **Smog (Photochemical Oxidation Formation): 0.000000 kg O3 eq** per 1.0 item of 1 organic cotton hooded sweatshirt (750g), used for 1 year (52 washes)
+> **Non carcinogenics: 0.000000 CTUh** per 1.0 item of 1 organic cotton hooded sweatshirt (750g), used for 1 year (52 washes)
+> **Eutrophication: freshwater: 0.000000 kg P eq** per 1.0 item of 1 organic cotton hooded sweatshirt (750g), used for 1 year (52 washes)
+> **Eutrophication: marine: 0.002247 kg N eq** per 1.0 item of 1 organic cotton hooded sweatshirt (750g), used for 1 year (52 washes)
 
 ## Product System Graphs
 

@@ -54,7 +54,7 @@ real published characterization factors instead of hand-typed estimates.
 
 **Ecoinvent migration path:** The EPA publishes an official FEDEFL↔ecoinvent flow
 mapping (https://github.com/USEPA/fedelemflowlist). When ecoinvent is loaded,
-change `-db lca_commons` to `-db ecoinvent` in the startup script. Recipe cards
+change `-db lca_methods` to `-db ecoinvent` in the startup script. Recipe cards
 need no changes.
 
 ---
@@ -73,7 +73,7 @@ First try via the gdt-server REST API (automated):
 ```bash
 curl -X POST http://localhost:8080/api/import \
   -H "Content-Type: application/octet-stream" \
-  --data-binary @"$HOME/olca-data/lca_commons_2025.1.zolca"
+  --data-binary @"$HOME/olca-data/lca_methods_2025.1.zolca"
 ```
 
 If that endpoint is not exposed, use the openLCA desktop app:
@@ -87,7 +87,7 @@ In `start_olca.sh` and `setup_olca.sh`, change line 41:
 -db paper_cup_lca
 
 # After:
--db lca_commons
+-db lca_methods
 ```
 
 ### 0d. (Future) Ecoinvent startup script
@@ -335,7 +335,7 @@ Create `setup_database.sh` in the project root:
 #   2. Place the file in $HOME/olca-data/
 #   3. Update ZOLCA_FILE below with the exact filename
 
-ZOLCA_FILE="$HOME/olca-data/lca_commons_2025.1.zolca"
+ZOLCA_FILE="$HOME/olca-data/lca_methods_2025.1.zolca"
 
 if [ ! -f "$ZOLCA_FILE" ]; then
     echo "ERROR: $ZOLCA_FILE not found."
@@ -351,7 +351,7 @@ HTTP_STATUS=$(curl -s -o /tmp/import_response.json -w "%{http_code}" \
 
 if [ "$HTTP_STATUS" = "200" ]; then
     echo "[setup] Import successful."
-    echo "[setup] Update start_olca.sh line 41: change '-db paper_cup_lca' to '-db lca_commons'"
+    echo "[setup] Update start_olca.sh line 41: change '-db paper_cup_lca' to '-db lca_methods'"
     echo "[setup] Then restart: bash stop_olca.sh && bash start_olca.sh"
 else
     echo "[setup] API import returned HTTP $HTTP_STATUS"
@@ -385,7 +385,7 @@ When the ecoinvent license is ready:
 | File | Action | Notes |
 |---|---|---|
 | `lca_scripts/lca_analysis.py` | Modify | Add `resolve_flow()`, `get_impact_method_ref()`, update CalculationSetup, Step 14, write_results_md |
-| `start_olca.sh` | Modify | Change `-db paper_cup_lca` → `-db lca_commons` (do after import) |
+| `start_olca.sh` | Modify | Change `-db paper_cup_lca` → `-db lca_methods` (do after import) |
 | `setup_olca.sh` | Modify | Same db name change |
 | `setup_database.sh` | Create | One-time LCA Commons import script |
 | `start_olca_ecoinvent.sh` | Create | Future ecoinvent startup script |

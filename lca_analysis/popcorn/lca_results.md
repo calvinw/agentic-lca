@@ -1,6 +1,6 @@
 # LCA Results: Popcorn Packing Material — 1 kg
 
-Generated: 2026-06-14 02:19  |  openLCA system ID: `9543431b-8dfe-4d94-b898-7c1db68ddd17`
+Generated: 2026-06-18 17:52  |  openLCA system ID: `a609aac4-018e-4a9c-be45-50fefddb04e5`
 
 ## Step 1 — Goal and Scope
 
@@ -95,27 +95,31 @@ Characterization factors from the database. Each impact category score is the su
 
 | Impact Category | Score | Unit |
 |---|---:|---|
-| Human health - cancer | **0.000000** | CTUcancer |
-| Acidification | **0.003760** | kg SO2 eq |
-| Eutrophication (Freshwater) | **0.000000** | kg P eq |
-| Human health - particulate matter | **0.000133** | PM 2.5 eq |
-| Smog formation | **0.000000** | kg O3 eq |
-| Human health - non-cancer | **0.000000** | CTUnoncancer |
 | Ozone depletion | **0.000000** | kg CFC-11 eq |
-| Global warming | **1.619000** | kg CO2 eq |
+| Ecotoxicity | **0.000000** | CTUe |
+| Respiratory effects (Particulate) | **0.000133** | kg PM2.5 eq |
+| Acidification | **0.003760** | kg SO2 eq |
+| Carcinogenics | **0.000000** | CTUh |
+| Global warming | **0.725000** | kg CO2 eq |
+| Smog (Photochemical Oxidation Formation) | **0.000000** | kg O3 eq |
+| Non carcinogenics | **0.000000** | CTUh |
+| Eutrophication: freshwater | **0.000000** | kg P eq |
+| Eutrophication: marine | **0.001757** | kg N eq |
 
 ## Summary
 
 **LCIA Method:** TRACI 2.2
 
-> **Human health - cancer: 0.000000 CTUcancer** per 1.0 kg of 1 kg of popcorn packing material
-> **Acidification: 0.003760 kg SO2 eq** per 1.0 kg of 1 kg of popcorn packing material
-> **Eutrophication (Freshwater): 0.000000 kg P eq** per 1.0 kg of 1 kg of popcorn packing material
-> **Human health - particulate matter: 0.000133 PM 2.5 eq** per 1.0 kg of 1 kg of popcorn packing material
-> **Smog formation: 0.000000 kg O3 eq** per 1.0 kg of 1 kg of popcorn packing material
-> **Human health - non-cancer: 0.000000 CTUnoncancer** per 1.0 kg of 1 kg of popcorn packing material
 > **Ozone depletion: 0.000000 kg CFC-11 eq** per 1.0 kg of 1 kg of popcorn packing material
-> **Global warming: 1.619000 kg CO2 eq** per 1.0 kg of 1 kg of popcorn packing material
+> **Ecotoxicity: 0.000000 CTUe** per 1.0 kg of 1 kg of popcorn packing material
+> **Respiratory effects (Particulate): 0.000133 kg PM2.5 eq** per 1.0 kg of 1 kg of popcorn packing material
+> **Acidification: 0.003760 kg SO2 eq** per 1.0 kg of 1 kg of popcorn packing material
+> **Carcinogenics: 0.000000 CTUh** per 1.0 kg of 1 kg of popcorn packing material
+> **Global warming: 0.725000 kg CO2 eq** per 1.0 kg of 1 kg of popcorn packing material
+> **Smog (Photochemical Oxidation Formation): 0.000000 kg O3 eq** per 1.0 kg of 1 kg of popcorn packing material
+> **Non carcinogenics: 0.000000 CTUh** per 1.0 kg of 1 kg of popcorn packing material
+> **Eutrophication: freshwater: 0.000000 kg P eq** per 1.0 kg of 1 kg of popcorn packing material
+> **Eutrophication: marine: 0.001757 kg N eq** per 1.0 kg of 1 kg of popcorn packing material
 
 ## Product System Graphs
 

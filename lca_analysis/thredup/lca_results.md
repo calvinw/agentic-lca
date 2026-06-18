@@ -1,30 +1,32 @@
-# LCA Results: thredUP Comparative LCA — Secondhand, Best Case
+# LCA Results: thredUP Comparative LCA — New Garment (base case)
 
-Generated: 2026-06-14 05:06  |  openLCA system ID: `c90b9a1d-92b5-4115-b870-820569a803c0`
+Generated: 2026-06-18 17:52  |  openLCA system ID: `9c80312b-fe3f-4b11-a1c2-fe03bf922843`
 
 ## Step 1 — Goal and Scope
 
-**Goal:** Model the lowest possible CO₂ footprint for a thredUP secondhand purchase: renewable-powered warehouse, high-quality items with 85% useful life remaining, and 100% buyer displacement from new purchases.
+**Goal:** Calculate the total CO₂ emitted to make, sell, and dispose of one average new garment purchased in the USA — representing the environmental cost that is AVOIDED when a consumer buys the same garment secondhand from thredUP instead. Based on the Green Story / thredUP Comparative LCA study (2019).
 
-**Functional unit:** 1.0 garment — One premium secondhand garment (0.4 kg) via thredUP, renewable warehouse, 85% life remaining
+**Functional unit:** 1.0 garment — One average new garment (0.4 kg), cradle to end-of-life disposal
 
 **Reference flow vector f:**
 
 ```
-  f[1] = 0.0   (Donated garment)
-  f[2] = 0.0   (Sorted garment)
-  f[3] = 1.0   (thredUP purchase)
+  f[1] = 0.0   (Raw fiber)
+  f[2] = 0.0   (Woven fabric)
+  f[3] = 0.0   (Finished garment)
+  f[4] = 1.0   (New garment lifecycle)
 ```
 
 ## Step 2 — Technology Matrix A
 
 Columns = processes, rows = products.  `+` = produced, `−` = consumed.
 
-| | P1 — Collect and receive used clothing | P2 — Sort, list online, and ship to buyer (renewable warehouse) | P3 — End of life (remaining 15% of garment life) |
-|---|---:|---:|---:|
-| **Donated garment** | +1.00 | -1.00 |  0   |
-| **Sorted garment** |  0   | +1.00 | -1.00 |
-| **thredUP purchase** |  0   |  0   | +1.00 |
+| | P1 — Grow and prepare fiber | P2 — Spin, weave, dye, and finish fabric | P3 — Cut, sew, and ship garment | P4 — Dispose of garment at end of life |
+|---|---:|---:|---:|---:|
+| **Raw fiber** | +1.00 | -1.25 |  0   |  0   |
+| **Woven fabric** |  0   | +1.00 | -0.40 |  0   |
+| **Finished garment** |  0   |  0   | +1.00 | -1.00 |
+| **New garment lifecycle** |  0   |  0   |  0   | +1.00 |
 
 ## Step 3 — Scaling Vector  s = A⁻¹ · f
 
@@ -32,18 +34,19 @@ How many times each process must run to deliver exactly f:
 
 | Process | Scale factor |
 |---|---:|
-| P1 — Collect and receive used clothing | **1.0000** |
-| P2 — Sort, list online, and ship to buyer (renewable warehouse) | **1.0000** |
-| P3 — End of life (remaining 15% of garment life) | **1.0000** |
+| P1 — Grow and prepare fiber | **0.5000** |
+| P2 — Spin, weave, dye, and finish fabric | **0.4000** |
+| P3 — Cut, sew, and ship garment | **1.0000** |
+| P4 — Dispose of garment at end of life | **1.0000** |
 
 ## Step 4 — Intervention Matrix B
 
 Columns = processes, rows = elementary flows (biosphere).
 `+` = emission (exits to environment)  `−` = resource extraction (enters from environment).
 
-| | P1 — Collect and receive used clothing | P2 — Sort, list online, and ship to buyer (renewable warehouse) | P3 — End of life (remaining 15% of garment life) |
-|---|---:|---:|---:|
-| **Carbon dioxide** | +0.70 | +0.15 | +0.12 |
+| | P1 — Grow and prepare fiber | P2 — Spin, weave, dye, and finish fabric | P3 — Cut, sew, and ship garment | P4 — Dispose of garment at end of life |
+|---|---:|---:|---:|---:|
+| **Carbon dioxide** | +11.00 | +13.00 | +3.10 | +2.00 |
 
 ## Step 5 — LCI Results  B · s
 
@@ -51,7 +54,7 @@ Columns = processes, rows = elementary flows (biosphere).
 
 | Flow | Numpy result | openLCA result | Unit | Match |
 |---|---:|---:|---|:---:|
-| **Carbon dioxide** | 0.9700 | 0.9700 | kg | ✓ |
+| **Carbon dioxide** | 15.8000 | 15.8000 | kg | ✓ |
 
 ## Step 6 — Scaled Emissions by Process  (B · diag(s))
 
@@ -59,10 +62,11 @@ Each cell = emission rate × scaling factor.  Columns sum to the LCI totals in S
 
 | Process | s | Carbon dioxide |
 |---|---:|---:|
-| P1 — Collect and receive used clothing | 1.0000 | 0.7000 |
-| P2 — Sort, list online, and ship to buyer (renewable warehouse) | 1.0000 | 0.1500 |
-| P3 — End of life (remaining 15% of garment life) | 1.0000 | 0.1200 |
-| **Total** | | **0.9700** |
+| P1 — Grow and prepare fiber | 0.5000 | 5.5000 |
+| P2 — Spin, weave, dye, and finish fabric | 0.4000 | 5.2000 |
+| P3 — Cut, sew, and ship garment | 1.0000 | 3.1000 |
+| P4 — Dispose of garment at end of life | 1.0000 | 2.0000 |
+| **Total** | | **15.8000** |
 
 ## Step 7 — LCIA Results  (TRACI 2.2)
 
@@ -70,27 +74,31 @@ Characterization factors from the database. Each impact category score is the su
 
 | Impact Category | Score | Unit |
 |---|---:|---|
-| Human health - cancer | **0.000000** | CTUcancer |
-| Human health - non-cancer | **0.000000** | CTUnoncancer |
-| Smog formation | **0.000000** | kg O3 eq |
-| Global warming | **0.970000** | kg CO2 eq |
 | Ozone depletion | **0.000000** | kg CFC-11 eq |
-| Human health - particulate matter | **0.000000** | PM 2.5 eq |
+| Ecotoxicity | **0.000000** | CTUe |
+| Respiratory effects (Particulate) | **0.000000** | kg PM2.5 eq |
 | Acidification | **0.000000** | kg SO2 eq |
-| Eutrophication (Freshwater) | **0.000000** | kg P eq |
+| Carcinogenics | **0.000000** | CTUh |
+| Global warming | **15.800000** | kg CO2 eq |
+| Smog (Photochemical Oxidation Formation) | **0.000000** | kg O3 eq |
+| Non carcinogenics | **0.000000** | CTUh |
+| Eutrophication: freshwater | **0.000000** | kg P eq |
+| Eutrophication: marine | **0.000000** | kg N eq |
 
 ## Summary
 
 **LCIA Method:** TRACI 2.2
 
-> **Human health - cancer: 0.000000 CTUcancer** per 1.0 garment of One premium secondhand garment (0.4 kg) via thredUP, renewable warehouse, 85% life remaining
-> **Human health - non-cancer: 0.000000 CTUnoncancer** per 1.0 garment of One premium secondhand garment (0.4 kg) via thredUP, renewable warehouse, 85% life remaining
-> **Smog formation: 0.000000 kg O3 eq** per 1.0 garment of One premium secondhand garment (0.4 kg) via thredUP, renewable warehouse, 85% life remaining
-> **Global warming: 0.970000 kg CO2 eq** per 1.0 garment of One premium secondhand garment (0.4 kg) via thredUP, renewable warehouse, 85% life remaining
-> **Ozone depletion: 0.000000 kg CFC-11 eq** per 1.0 garment of One premium secondhand garment (0.4 kg) via thredUP, renewable warehouse, 85% life remaining
-> **Human health - particulate matter: 0.000000 PM 2.5 eq** per 1.0 garment of One premium secondhand garment (0.4 kg) via thredUP, renewable warehouse, 85% life remaining
-> **Acidification: 0.000000 kg SO2 eq** per 1.0 garment of One premium secondhand garment (0.4 kg) via thredUP, renewable warehouse, 85% life remaining
-> **Eutrophication (Freshwater): 0.000000 kg P eq** per 1.0 garment of One premium secondhand garment (0.4 kg) via thredUP, renewable warehouse, 85% life remaining
+> **Ozone depletion: 0.000000 kg CFC-11 eq** per 1.0 garment of One average new garment (0.4 kg), cradle to end-of-life disposal
+> **Ecotoxicity: 0.000000 CTUe** per 1.0 garment of One average new garment (0.4 kg), cradle to end-of-life disposal
+> **Respiratory effects (Particulate): 0.000000 kg PM2.5 eq** per 1.0 garment of One average new garment (0.4 kg), cradle to end-of-life disposal
+> **Acidification: 0.000000 kg SO2 eq** per 1.0 garment of One average new garment (0.4 kg), cradle to end-of-life disposal
+> **Carcinogenics: 0.000000 CTUh** per 1.0 garment of One average new garment (0.4 kg), cradle to end-of-life disposal
+> **Global warming: 15.800000 kg CO2 eq** per 1.0 garment of One average new garment (0.4 kg), cradle to end-of-life disposal
+> **Smog (Photochemical Oxidation Formation): 0.000000 kg O3 eq** per 1.0 garment of One average new garment (0.4 kg), cradle to end-of-life disposal
+> **Non carcinogenics: 0.000000 CTUh** per 1.0 garment of One average new garment (0.4 kg), cradle to end-of-life disposal
+> **Eutrophication: freshwater: 0.000000 kg P eq** per 1.0 garment of One average new garment (0.4 kg), cradle to end-of-life disposal
+> **Eutrophication: marine: 0.000000 kg N eq** per 1.0 garment of One average new garment (0.4 kg), cradle to end-of-life disposal
 
 ## Product System Graphs
 

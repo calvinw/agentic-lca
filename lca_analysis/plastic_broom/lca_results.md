@@ -1,6 +1,6 @@
 # LCA Results: Plastic Broom LCA — cradle to gate
 
-Generated: 2026-06-14 02:19  |  openLCA system ID: `58ac5ed7-ae19-4337-bbbd-86b875b673b6`
+Generated: 2026-06-18 17:51  |  openLCA system ID: `157cabb1-fbda-4377-bb70-9cb800a25c78`
 
 ## Step 1 — Goal and Scope
 
@@ -74,27 +74,31 @@ Characterization factors from the database. Each impact category score is the su
 
 | Impact Category | Score | Unit |
 |---|---:|---|
-| Human health - cancer | **0.000000** | CTUcancer |
-| Acidification | **0.000000** | kg SO2 eq |
-| Eutrophication (Freshwater) | **0.000000** | kg P eq |
-| Human health - particulate matter | **0.000000** | PM 2.5 eq |
-| Smog formation | **0.000000** | kg O3 eq |
-| Human health - non-cancer | **0.000000** | CTUnoncancer |
 | Ozone depletion | **0.000000** | kg CFC-11 eq |
+| Ecotoxicity | **0.000000** | CTUe |
+| Respiratory effects (Particulate) | **0.000000** | kg PM2.5 eq |
+| Acidification | **0.000000** | kg SO2 eq |
+| Carcinogenics | **0.000000** | CTUh |
 | Global warming | **1.681525** | kg CO2 eq |
+| Smog (Photochemical Oxidation Formation) | **0.000000** | kg O3 eq |
+| Non carcinogenics | **0.000000** | CTUh |
+| Eutrophication: freshwater | **0.000000** | kg P eq |
+| Eutrophication: marine | **0.000000** | kg N eq |
 
 ## Summary
 
 **LCIA Method:** TRACI 2.2
 
-> **Human health - cancer: 0.000000 CTUcancer** per 1 broom of One plastic broom (cradle to gate)
-> **Acidification: 0.000000 kg SO2 eq** per 1 broom of One plastic broom (cradle to gate)
-> **Eutrophication (Freshwater): 0.000000 kg P eq** per 1 broom of One plastic broom (cradle to gate)
-> **Human health - particulate matter: 0.000000 PM 2.5 eq** per 1 broom of One plastic broom (cradle to gate)
-> **Smog formation: 0.000000 kg O3 eq** per 1 broom of One plastic broom (cradle to gate)
-> **Human health - non-cancer: 0.000000 CTUnoncancer** per 1 broom of One plastic broom (cradle to gate)
 > **Ozone depletion: 0.000000 kg CFC-11 eq** per 1 broom of One plastic broom (cradle to gate)
+> **Ecotoxicity: 0.000000 CTUe** per 1 broom of One plastic broom (cradle to gate)
+> **Respiratory effects (Particulate): 0.000000 kg PM2.5 eq** per 1 broom of One plastic broom (cradle to gate)
+> **Acidification: 0.000000 kg SO2 eq** per 1 broom of One plastic broom (cradle to gate)
+> **Carcinogenics: 0.000000 CTUh** per 1 broom of One plastic broom (cradle to gate)
 > **Global warming: 1.681525 kg CO2 eq** per 1 broom of One plastic broom (cradle to gate)
+> **Smog (Photochemical Oxidation Formation): 0.000000 kg O3 eq** per 1 broom of One plastic broom (cradle to gate)
+> **Non carcinogenics: 0.000000 CTUh** per 1 broom of One plastic broom (cradle to gate)
+> **Eutrophication: freshwater: 0.000000 kg P eq** per 1 broom of One plastic broom (cradle to gate)
+> **Eutrophication: marine: 0.000000 kg N eq** per 1 broom of One plastic broom (cradle to gate)
 
 ## Product System Graphs
 

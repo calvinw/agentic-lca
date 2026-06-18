@@ -1,6 +1,6 @@
 # LCA Results: Warm Air Hand Dryer LCA — one hand drying event
 
-Generated: 2026-06-14 02:18  |  openLCA system ID: `134d4d79-5c65-4519-889a-57a30ea3fa6a`
+Generated: 2026-06-18 17:48  |  openLCA system ID: `a6595000-2331-4d8e-a259-9826703a5d6e`
 
 ## Step 1 — Goal and Scope
 
@@ -66,27 +66,31 @@ Characterization factors from the database. Each impact category score is the su
 
 | Impact Category | Score | Unit |
 |---|---:|---|
-| Human health - cancer | **0.000000** | CTUcancer |
-| Acidification | **0.000000** | kg SO2 eq |
-| Eutrophication (Freshwater) | **0.000000** | kg P eq |
-| Human health - particulate matter | **0.000000** | PM 2.5 eq |
-| Smog formation | **0.000000** | kg O3 eq |
-| Human health - non-cancer | **0.000000** | CTUnoncancer |
 | Ozone depletion | **0.000000** | kg CFC-11 eq |
+| Ecotoxicity | **0.000000** | CTUe |
+| Respiratory effects (Particulate) | **0.000000** | kg PM2.5 eq |
+| Acidification | **0.000000** | kg SO2 eq |
+| Carcinogenics | **0.000000** | CTUh |
 | Global warming | **0.006000** | kg CO2 eq |
+| Smog (Photochemical Oxidation Formation) | **0.000000** | kg O3 eq |
+| Non carcinogenics | **0.000000** | CTUh |
+| Eutrophication: freshwater | **0.000000** | kg P eq |
+| Eutrophication: marine | **0.000000** | kg N eq |
 
 ## Summary
 
 **LCIA Method:** TRACI 2.2
 
-> **Human health - cancer: 0.000000 CTUcancer** per 1 event of Drying hands once for one person after washing
-> **Acidification: 0.000000 kg SO2 eq** per 1 event of Drying hands once for one person after washing
-> **Eutrophication (Freshwater): 0.000000 kg P eq** per 1 event of Drying hands once for one person after washing
-> **Human health - particulate matter: 0.000000 PM 2.5 eq** per 1 event of Drying hands once for one person after washing
-> **Smog formation: 0.000000 kg O3 eq** per 1 event of Drying hands once for one person after washing
-> **Human health - non-cancer: 0.000000 CTUnoncancer** per 1 event of Drying hands once for one person after washing
 > **Ozone depletion: 0.000000 kg CFC-11 eq** per 1 event of Drying hands once for one person after washing
+> **Ecotoxicity: 0.000000 CTUe** per 1 event of Drying hands once for one person after washing
+> **Respiratory effects (Particulate): 0.000000 kg PM2.5 eq** per 1 event of Drying hands once for one person after washing
+> **Acidification: 0.000000 kg SO2 eq** per 1 event of Drying hands once for one person after washing
+> **Carcinogenics: 0.000000 CTUh** per 1 event of Drying hands once for one person after washing
 > **Global warming: 0.006000 kg CO2 eq** per 1 event of Drying hands once for one person after washing
+> **Smog (Photochemical Oxidation Formation): 0.000000 kg O3 eq** per 1 event of Drying hands once for one person after washing
+> **Non carcinogenics: 0.000000 CTUh** per 1 event of Drying hands once for one person after washing
+> **Eutrophication: freshwater: 0.000000 kg P eq** per 1 event of Drying hands once for one person after washing
+> **Eutrophication: marine: 0.000000 kg N eq** per 1 event of Drying hands once for one person after washing
 
 ## Product System Graphs
 

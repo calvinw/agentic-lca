@@ -1,6 +1,6 @@
 # LCA Results: Incandescent Light Bulb LCA — 800 lm for 5000 h
 
-Generated: 2026-06-14 02:19  |  openLCA system ID: `dabc9b3f-1e77-4949-86ac-0c8a395cd074`
+Generated: 2026-06-18 17:50  |  openLCA system ID: `d885405c-ae1e-45de-b8fc-78cb7aaae280`
 
 ## Step 1 — Goal and Scope
 
@@ -101,27 +101,31 @@ Characterization factors from the database. Each impact category score is the su
 
 | Impact Category | Score | Unit |
 |---|---:|---|
-| Human health - cancer | **0.000000** | CTUcancer |
-| Acidification | **0.000000** | kg SO2 eq |
-| Eutrophication (Freshwater) | **0.000000** | kg P eq |
-| Human health - particulate matter | **0.000000** | PM 2.5 eq |
-| Smog formation | **0.000000** | kg O3 eq |
-| Human health - non-cancer | **0.000000** | CTUnoncancer |
 | Ozone depletion | **0.000000** | kg CFC-11 eq |
+| Ecotoxicity | **0.000000** | CTUe |
+| Respiratory effects (Particulate) | **0.000000** | kg PM2.5 eq |
+| Acidification | **0.000000** | kg SO2 eq |
+| Carcinogenics | **0.000000** | CTUh |
 | Global warming | **213.757000** | kg CO2 eq |
+| Smog (Photochemical Oxidation Formation) | **0.000000** | kg O3 eq |
+| Non carcinogenics | **0.000000** | CTUh |
+| Eutrophication: freshwater | **0.000000** | kg P eq |
+| Eutrophication: marine | **0.000000** | kg N eq |
 
 ## Summary
 
 **LCIA Method:** TRACI 2.2
 
-> **Human health - cancer: 0.000000 CTUcancer** per 1 FU of 800 lumens of illumination for 5000 hours
-> **Acidification: 0.000000 kg SO2 eq** per 1 FU of 800 lumens of illumination for 5000 hours
-> **Eutrophication (Freshwater): 0.000000 kg P eq** per 1 FU of 800 lumens of illumination for 5000 hours
-> **Human health - particulate matter: 0.000000 PM 2.5 eq** per 1 FU of 800 lumens of illumination for 5000 hours
-> **Smog formation: 0.000000 kg O3 eq** per 1 FU of 800 lumens of illumination for 5000 hours
-> **Human health - non-cancer: 0.000000 CTUnoncancer** per 1 FU of 800 lumens of illumination for 5000 hours
 > **Ozone depletion: 0.000000 kg CFC-11 eq** per 1 FU of 800 lumens of illumination for 5000 hours
+> **Ecotoxicity: 0.000000 CTUe** per 1 FU of 800 lumens of illumination for 5000 hours
+> **Respiratory effects (Particulate): 0.000000 kg PM2.5 eq** per 1 FU of 800 lumens of illumination for 5000 hours
+> **Acidification: 0.000000 kg SO2 eq** per 1 FU of 800 lumens of illumination for 5000 hours
+> **Carcinogenics: 0.000000 CTUh** per 1 FU of 800 lumens of illumination for 5000 hours
 > **Global warming: 213.757000 kg CO2 eq** per 1 FU of 800 lumens of illumination for 5000 hours
+> **Smog (Photochemical Oxidation Formation): 0.000000 kg O3 eq** per 1 FU of 800 lumens of illumination for 5000 hours
+> **Non carcinogenics: 0.000000 CTUh** per 1 FU of 800 lumens of illumination for 5000 hours
+> **Eutrophication: freshwater: 0.000000 kg P eq** per 1 FU of 800 lumens of illumination for 5000 hours
+> **Eutrophication: marine: 0.000000 kg N eq** per 1 FU of 800 lumens of illumination for 5000 hours
 
 ## Product System Graphs
 

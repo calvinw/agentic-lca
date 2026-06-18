@@ -2,16 +2,21 @@
 """
 import_lca_data.py
 
-Imports FEDEFL elementary flows and TRACI 2.2 impact method into the
-openLCA gdt-server database using the REST API.
+Imports the openLCA LCIA methods pack into the gdt-server database.
+The pack includes TRACI 2.2, ReCiPe 2016, EF 3.1, ImpactWorld, CML, and more.
+
+Uses multiple passes through the zip so that only one entity type is in memory
+at a time — this avoids OOM when the pack contains 60,000+ flows.
+
+Import order (each pass loads one type, imports it, then discards it):
+  1. UnitGroup       (~10 entities)
+  2. FlowProperty    (~10 entities)
+  3. Flow            (~60,000 entities, streamed one file at a time)
+  4. ImpactCategory  (~550 entities, streamed one at a time)
+  5. ImpactMethod    (~45 entities)
 
 Usage:
     python3 import_lca_data.py
-
-Downloads required (free, no login) from https://www.lcacommons.gov/lca-collaboration/
-    Federal LCA Commons / Elementary Flow List  → Federal_LCA_Commons-elementary_flow_list.zip
-    Federal LCA Commons / TRACI 2.2             → Federal_LCA_Commons-TRACI_2_2.zip
-Place both files in ~/olca-data/ before running.
 """
 
 import json
@@ -24,40 +29,18 @@ import requests
 from olca_ipc.rest import RestClient
 import olca_schema as o
 
-# Suppress the noisy "response status != 200" messages from olca_ipc
 logging.disable(logging.ERROR)
 
-SERVER = "http://localhost:8080/"
-FEDEFL = Path.home() / "olca-data/Federal_LCA_Commons-elementary_flow_list.zip"
-TRACI  = Path.home() / "olca-data/Federal_LCA_Commons-TRACI_2_2.zip"
-
-# The only FEDEFL flows our recipe cards use — we skip the other 332,000+
-NEEDED_FLOWS = {
-    "carbon dioxide",
-    "methane",
-    "nitrous oxide",
-    "ammonia",
-    "nitrogen oxides",
-    "sulfur dioxide",
-    "water",
-}
+SERVER       = "http://localhost:8080/"
+METHODS_PACK = Path.home() / "olca-data/openLCA_LCIA_methods.zip"
 
 TYPE_MAP = {
     "UnitGroup":      o.UnitGroup,
     "FlowProperty":   o.FlowProperty,
-    "Source":         o.Source,
-    "Location":       o.Location,
     "Flow":           o.Flow,
     "ImpactMethod":   o.ImpactMethod,
     "ImpactCategory": o.ImpactCategory,
 }
-
-# ImpactCategory must come before ImpactMethod so that when the method is PUT,
-# its impact_categories references already exist in the database.
-IMPORT_ORDER = [
-    "UnitGroup", "FlowProperty", "Source", "Location",
-    "Flow", "ImpactCategory", "ImpactMethod",
-]
 
 
 def check_server():
@@ -71,25 +54,26 @@ def check_server():
         sys.exit(1)
 
 
-def read_entities(zip_path: Path) -> list[dict]:
-    """Read all JSON entities from a JSON-LD zip file."""
-    entities = []
+def iter_entities_of_type(zip_path: Path, target_type: str):
+    """Yield entity dicts of target_type one at a time without loading the full zip."""
     with zipfile.ZipFile(zip_path) as zf:
         for name in zf.namelist():
             if not name.endswith(".json"):
                 continue
             try:
                 raw = json.loads(zf.read(name))
-                # Handle both single objects and @graph arrays
+                items: list[dict] = []
                 if isinstance(raw, list):
-                    entities.extend(e for e in raw if isinstance(e, dict))
+                    items = [e for e in raw if isinstance(e, dict)]
                 elif isinstance(raw, dict) and "@graph" in raw:
-                    entities.extend(e for e in raw["@graph"] if isinstance(e, dict))
+                    items = [e for e in raw["@graph"] if isinstance(e, dict)]
                 elif isinstance(raw, dict) and "@type" in raw:
-                    entities.append(raw)
+                    items = [raw]
+                for item in items:
+                    if item.get("@type") == target_type:
+                        yield item
             except Exception:
                 pass
-    return entities
 
 
 def put_entity(client: RestClient, data: dict) -> bool:
@@ -100,109 +84,76 @@ def put_entity(client: RestClient, data: dict) -> bool:
     try:
         entity = cls.from_dict(data)
         ref = client.put(entity)
-        if ref is None:
-            name = data.get("name", data.get("@id", "?"))
-            print(f"\n    ✗ Failed to import {t} '{name}' (server rejected — may be a known gdt-server limitation)")
-            return False
-        return True
-    except Exception as e:
-        name = data.get("name", data.get("@id", "?"))
-        print(f"\n    ✗ {t} '{name}': {e}")
+        return ref is not None
+    except Exception:
         return False
 
 
-def import_zip(client: RestClient, zip_path: Path, label: str,
-               filter_flows: bool = False):
-    print(f"\n  Reading {zip_path.name}...")
-    entities = read_entities(zip_path)
-    print(f"  Found {len(entities)} entities total.")
-
-    # Group by type
-    by_type: dict[str, list[dict]] = {}
-    for e in entities:
-        t = e.get("@type", "")
-        by_type.setdefault(t, []).append(e)
-
-    for type_name in IMPORT_ORDER:
-        items = by_type.get(type_name, [])
-        if not items:
-            continue
-
-        if type_name == "Flow" and filter_flows:
-            before = len(items)
-            items = [e for e in items
-                     if e.get("name", "").strip().lower() in NEEDED_FLOWS]
-            print(f"  {type_name}: filtered {before} → {len(items)} "
-                  f"(only the flows our recipe cards use)")
-
-        if not items:
-            continue
-
-        print(f"  Importing {len(items):>6,} {type_name}(s)...", end="", flush=True)
-        ok = sum(1 for e in items if put_entity(client, e))
-        print(f"  ✓ {ok}/{len(items)}")
+def import_type(client: RestClient, type_name: str, zip_path: Path):
+    """Stream entities of type_name from zip and import them one at a time."""
+    ok = total = 0
+    for entity in iter_entities_of_type(zip_path, type_name):
+        total += 1
+        if put_entity(client, entity):
+            ok += 1
+    if total:
+        print(f"  Imported {ok:>6,}/{total:<6,} {type_name}(s)  {'✓' if ok == total else '!'}")
+    else:
+        print(f"  No {type_name} entities found in pack.")
 
 
 def verify(client: RestClient):
     print("\n  Verification:")
     methods = client.get_descriptors(o.ImpactMethod)
-    flows   = client.get_descriptors(o.Flow)
-    print(f"    Impact methods in DB : {len(methods)}")
-    print(f"    Flows in DB          : {len(flows)}")
+    print(f"    Impact methods loaded: {len(methods)}")
     for m in methods:
         print(f"      ✓ {m.name}")
     if not methods:
         print("    ✗ No impact methods found — something went wrong.")
 
 
-def traci_already_loaded(client: RestClient) -> bool:
-    """Return True if TRACI 2.2 is already in the database."""
+def any_method_loaded(client: RestClient) -> bool:
     try:
-        methods = client.get_descriptors(o.ImpactMethod)
-        return any("TRACI" in (m.name or "") for m in methods)
+        return len(client.get_descriptors(o.ImpactMethod)) > 0
     except Exception:
         return False
 
 
 def main():
     print("=" * 60)
-    print("  LCA Data Import — FEDEFL + TRACI 2.2")
+    print("  LCA Methods Import")
     print("=" * 60)
 
     check_server()
-
     client = RestClient(SERVER)
 
-    if traci_already_loaded(client):
-        print("\n  TRACI 2.2 is already loaded in the database.")
+    if any_method_loaded(client):
+        print("\n  Impact methods already loaded — skipping import.")
         verify(client)
         print("=" * 60)
         return
 
-    for path, label in [(FEDEFL, "FEDEFL"), (TRACI, "TRACI 2.2")]:
-        if not path.exists():
-            print(f"\n  ERROR: {path} not found.")
-            print(f"  Run setup_olca.sh to download it automatically.")
-            sys.exit(1)
+    if not METHODS_PACK.exists():
+        print(f"\n  ERROR: LCIA methods pack not found at {METHODS_PACK}")
+        print(f"  Run setup_olca.sh to download it automatically.")
+        sys.exit(1)
 
-    print("\n[1/2] Federal Elementary Flow List (FEDEFL)")
-    print("      Importing only the 7 flows used in our recipe cards.")
-    import_zip(client, FEDEFL, "FEDEFL", filter_flows=True)
+    print(f"\n  Importing LCIA methods pack (TRACI 2.2, ReCiPe 2016, EF 3.1, ImpactWorld, CML…)")
+    print(f"  Processing in passes to keep memory usage low.\n")
 
-    print("\n[2/2] TRACI 2.2 Impact Method")
-    import_zip(client, TRACI, "TRACI 2.2", filter_flows=False)
+    import_type(client, "UnitGroup",      METHODS_PACK)
+    import_type(client, "FlowProperty",   METHODS_PACK)
+    import_type(client, "Flow",           METHODS_PACK)
+    import_type(client, "ImpactCategory", METHODS_PACK)
+    import_type(client, "ImpactMethod",   METHODS_PACK)
 
     verify(client)
 
-    if not traci_already_loaded(client):
-        print("\n  ✗ ERROR: TRACI 2.2 was not found after import — something went wrong.")
-        print("    Check the errors above and try re-running setup_olca.sh.")
+    if not any_method_loaded(client):
+        print("\n  ✗ ERROR: No methods found after import — something went wrong.")
         sys.exit(1)
 
-    print("\n  ✓ TRACI 2.2 is loaded and ready.")
-    print("\n  You can now run:")
-    print("    python3 lca_scripts/lca_analysis.py "
-          "lca_analysis/cotton_shirt/recipe_card.md")
+    print("\n  ✓ LCIA methods ready.")
     print("=" * 60)
 
 

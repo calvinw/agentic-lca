@@ -1,6 +1,6 @@
 # LCA Results: Levi's 501 Jeans — twice as durable (Custom Scenario D)
 
-Generated: 2026-06-14 02:12  |  openLCA system ID: `381b34e7-535f-4afd-bc6d-4d501b74cf6d`
+Generated: 2026-06-18 17:48  |  openLCA system ID: `9d085362-5139-40c6-bfc7-a9726f19501b`
 
 ## Step 1 — Goal and Scope
 
@@ -82,27 +82,31 @@ Characterization factors from the database. Each impact category score is the su
 
 | Impact Category | Score | Unit |
 |---|---:|---|
-| Human health - cancer | **0.000000** | CTUcancer |
-| Acidification | **0.045018** | kg SO2 eq |
-| Eutrophication (Freshwater) | **0.000000** | kg P eq |
-| Human health - particulate matter | **0.001580** | PM 2.5 eq |
-| Smog formation | **0.816701** | kg O3 eq |
-| Human health - non-cancer | **0.000000** | CTUnoncancer |
 | Ozone depletion | **0.000000** | kg CFC-11 eq |
+| Ecotoxicity | **0.000000** | CTUe |
+| Respiratory effects (Particulate) | **0.001580** | kg PM2.5 eq |
+| Acidification | **0.045018** | kg SO2 eq |
+| Carcinogenics | **0.000000** | CTUh |
 | Global warming | **26.150000** | kg CO2 eq |
+| Smog (Photochemical Oxidation Formation) | **0.816583** | kg O3 eq |
+| Non carcinogenics | **0.000000** | CTUh |
+| Eutrophication: freshwater | **0.000000** | kg P eq |
+| Eutrophication: marine | **0.000168** | kg N eq |
 
 ## Summary
 
 **LCIA Method:** TRACI 2.2
 
-> **Human health - cancer: 0.000000 CTUcancer** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, twice standard durability
-> **Acidification: 0.045018 kg SO2 eq** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, twice standard durability
-> **Eutrophication (Freshwater): 0.000000 kg P eq** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, twice standard durability
-> **Human health - particulate matter: 0.001580 PM 2.5 eq** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, twice standard durability
-> **Smog formation: 0.816701 kg O3 eq** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, twice standard durability
-> **Human health - non-cancer: 0.000000 CTUnoncancer** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, twice standard durability
 > **Ozone depletion: 0.000000 kg CFC-11 eq** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, twice standard durability
+> **Ecotoxicity: 0.000000 CTUe** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, twice standard durability
+> **Respiratory effects (Particulate): 0.001580 kg PM2.5 eq** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, twice standard durability
+> **Acidification: 0.045018 kg SO2 eq** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, twice standard durability
+> **Carcinogenics: 0.000000 CTUh** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, twice standard durability
 > **Global warming: 26.150000 kg CO2 eq** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, twice standard durability
+> **Smog (Photochemical Oxidation Formation): 0.816583 kg O3 eq** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, twice standard durability
+> **Non carcinogenics: 0.000000 CTUh** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, twice standard durability
+> **Eutrophication: freshwater: 0.000000 kg P eq** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, twice standard durability
+> **Eutrophication: marine: 0.000168 kg N eq** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, twice standard durability
 
 ## Product System Graphs
 

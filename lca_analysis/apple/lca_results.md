@@ -1,6 +1,6 @@
 # LCA Results: Apple LCA — 100 kcal consumed
 
-Generated: 2026-06-14 02:18  |  openLCA system ID: `c551acb3-a22e-4ded-83c8-af371cab8718`
+Generated: 2026-06-18 17:47  |  openLCA system ID: `723600eb-74cd-493d-ae39-621f8473fa46`
 
 ## Step 1 — Goal and Scope
 
@@ -98,27 +98,31 @@ Characterization factors from the database. Each impact category score is the su
 
 | Impact Category | Score | Unit |
 |---|---:|---|
-| Human health - cancer | **0.000000** | CTUcancer |
-| Acidification | **0.000000** | kg SO2 eq |
-| Eutrophication (Freshwater) | **0.000000** | kg P eq |
-| Human health - particulate matter | **0.000000** | PM 2.5 eq |
-| Smog formation | **0.000016** | kg O3 eq |
-| Human health - non-cancer | **0.000000** | CTUnoncancer |
 | Ozone depletion | **0.000000** | kg CFC-11 eq |
+| Ecotoxicity | **0.000000** | CTUe |
+| Respiratory effects (Particulate) | **0.000000** | kg PM2.5 eq |
+| Acidification | **0.000000** | kg SO2 eq |
+| Carcinogenics | **0.000000** | CTUh |
 | Global warming | **0.568670** | kg CO2 eq |
+| Smog (Photochemical Oxidation Formation) | **0.000016** | kg O3 eq |
+| Non carcinogenics | **0.000000** | CTUh |
+| Eutrophication: freshwater | **0.000000** | kg P eq |
+| Eutrophication: marine | **0.000000** | kg N eq |
 
 ## Summary
 
 **LCIA Method:** TRACI 2.2
 
-> **Human health - cancer: 0.000000 CTUcancer** per 1.0 serving of 100 kcal of apple consumed (0.19 kg)
-> **Acidification: 0.000000 kg SO2 eq** per 1.0 serving of 100 kcal of apple consumed (0.19 kg)
-> **Eutrophication (Freshwater): 0.000000 kg P eq** per 1.0 serving of 100 kcal of apple consumed (0.19 kg)
-> **Human health - particulate matter: 0.000000 PM 2.5 eq** per 1.0 serving of 100 kcal of apple consumed (0.19 kg)
-> **Smog formation: 0.000016 kg O3 eq** per 1.0 serving of 100 kcal of apple consumed (0.19 kg)
-> **Human health - non-cancer: 0.000000 CTUnoncancer** per 1.0 serving of 100 kcal of apple consumed (0.19 kg)
 > **Ozone depletion: 0.000000 kg CFC-11 eq** per 1.0 serving of 100 kcal of apple consumed (0.19 kg)
+> **Ecotoxicity: 0.000000 CTUe** per 1.0 serving of 100 kcal of apple consumed (0.19 kg)
+> **Respiratory effects (Particulate): 0.000000 kg PM2.5 eq** per 1.0 serving of 100 kcal of apple consumed (0.19 kg)
+> **Acidification: 0.000000 kg SO2 eq** per 1.0 serving of 100 kcal of apple consumed (0.19 kg)
+> **Carcinogenics: 0.000000 CTUh** per 1.0 serving of 100 kcal of apple consumed (0.19 kg)
 > **Global warming: 0.568670 kg CO2 eq** per 1.0 serving of 100 kcal of apple consumed (0.19 kg)
+> **Smog (Photochemical Oxidation Formation): 0.000016 kg O3 eq** per 1.0 serving of 100 kcal of apple consumed (0.19 kg)
+> **Non carcinogenics: 0.000000 CTUh** per 1.0 serving of 100 kcal of apple consumed (0.19 kg)
+> **Eutrophication: freshwater: 0.000000 kg P eq** per 1.0 serving of 100 kcal of apple consumed (0.19 kg)
+> **Eutrophication: marine: 0.000000 kg N eq** per 1.0 serving of 100 kcal of apple consumed (0.19 kg)
 
 ## Product System Graphs
 

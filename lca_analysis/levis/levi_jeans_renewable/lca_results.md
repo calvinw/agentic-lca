@@ -1,6 +1,6 @@
 # LCA Results: Levi's 501 Jeans — renewable energy supply chain (Custom Scenario A)
 
-Generated: 2026-06-14 02:12  |  openLCA system ID: `305c1f0c-7bf0-48c9-a06d-dc2d47e3d617`
+Generated: 2026-06-18 17:49  |  openLCA system ID: `6406c49a-925e-44bc-a7a3-260f5144d8f5`
 
 ## Step 1 — Goal and Scope
 
@@ -82,27 +82,31 @@ Characterization factors from the database. Each impact category score is the su
 
 | Impact Category | Score | Unit |
 |---|---:|---|
-| Human health - cancer | **0.000000** | CTUcancer |
-| Acidification | **0.005929** | kg SO2 eq |
-| Eutrophication (Freshwater) | **0.000000** | kg P eq |
-| Human health - particulate matter | **0.000208** | PM 2.5 eq |
-| Smog formation | **0.107555** | kg O3 eq |
-| Human health - non-cancer | **0.000000** | CTUnoncancer |
 | Ozone depletion | **0.000000** | kg CFC-11 eq |
+| Ecotoxicity | **0.000000** | CTUe |
+| Respiratory effects (Particulate) | **0.000208** | kg PM2.5 eq |
+| Acidification | **0.005929** | kg SO2 eq |
+| Carcinogenics | **0.000000** | CTUh |
 | Global warming | **11.710000** | kg CO2 eq |
+| Smog (Photochemical Oxidation Formation) | **0.107539** | kg O3 eq |
+| Non carcinogenics | **0.000000** | CTUh |
+| Eutrophication: freshwater | **0.000000** | kg P eq |
+| Eutrophication: marine | **0.000022** | kg N eq |
 
 ## Summary
 
 **LCIA Method:** TRACI 2.2
 
-> **Human health - cancer: 0.000000 CTUcancer** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, renewable energy supply chain
-> **Acidification: 0.005929 kg SO2 eq** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, renewable energy supply chain
-> **Eutrophication (Freshwater): 0.000000 kg P eq** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, renewable energy supply chain
-> **Human health - particulate matter: 0.000208 PM 2.5 eq** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, renewable energy supply chain
-> **Smog formation: 0.107555 kg O3 eq** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, renewable energy supply chain
-> **Human health - non-cancer: 0.000000 CTUnoncancer** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, renewable energy supply chain
 > **Ozone depletion: 0.000000 kg CFC-11 eq** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, renewable energy supply chain
+> **Ecotoxicity: 0.000000 CTUe** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, renewable energy supply chain
+> **Respiratory effects (Particulate): 0.000208 kg PM2.5 eq** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, renewable energy supply chain
+> **Acidification: 0.005929 kg SO2 eq** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, renewable energy supply chain
+> **Carcinogenics: 0.000000 CTUh** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, renewable energy supply chain
 > **Global warming: 11.710000 kg CO2 eq** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, renewable energy supply chain
+> **Smog (Photochemical Oxidation Formation): 0.107539 kg O3 eq** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, renewable energy supply chain
+> **Non carcinogenics: 0.000000 CTUh** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, renewable energy supply chain
+> **Eutrophication: freshwater: 0.000000 kg P eq** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, renewable energy supply chain
+> **Eutrophication: marine: 0.000022 kg N eq** per 1.0 pair of One pair of Levi's 501 jeans — full lifecycle, renewable energy supply chain
 
 ## Product System Graphs
 

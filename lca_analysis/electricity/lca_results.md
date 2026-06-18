@@ -1,6 +1,6 @@
 # LCA Results: Electricity LCA — 200 kWh
 
-Generated: 2026-06-14 02:18  |  openLCA system ID: `a7987f92-57f5-413f-aa27-c4d41b662db5`
+Generated: 2026-06-18 17:47  |  openLCA system ID: `5a02b78b-d895-4b1f-a92a-9a72d659b167`
 
 ## Step 1 — Goal and Scope
 
@@ -83,27 +83,31 @@ Characterization factors from the database. Each impact category score is the su
 
 | Impact Category | Score | Unit |
 |---|---:|---|
-| Human health - cancer | **0.000000** | CTUcancer |
-| Acidification | **6.800000** | kg SO2 eq |
-| Eutrophication (Freshwater) | **0.000000** | kg P eq |
-| Human health - particulate matter | **0.415556** | PM 2.5 eq |
-| Smog formation | **0.000000** | kg O3 eq |
-| Human health - non-cancer | **0.000000** | CTUnoncancer |
 | Ozone depletion | **0.000000** | kg CFC-11 eq |
+| Ecotoxicity | **0.000000** | CTUe |
+| Respiratory effects (Particulate) | **0.415556** | kg PM2.5 eq |
+| Acidification | **6.800000** | kg SO2 eq |
+| Carcinogenics | **0.000000** | CTUh |
 | Global warming | **64.000000** | kg CO2 eq |
+| Smog (Photochemical Oxidation Formation) | **0.000000** | kg O3 eq |
+| Non carcinogenics | **0.000000** | CTUh |
+| Eutrophication: freshwater | **0.000000** | kg P eq |
+| Eutrophication: marine | **0.000000** | kg N eq |
 
 ## Summary
 
 **LCIA Method:** TRACI 2.2
 
-> **Human health - cancer: 0.000000 CTUcancer** per 200 kWh of 200 kWh of electricity
-> **Acidification: 6.800000 kg SO2 eq** per 200 kWh of 200 kWh of electricity
-> **Eutrophication (Freshwater): 0.000000 kg P eq** per 200 kWh of 200 kWh of electricity
-> **Human health - particulate matter: 0.415556 PM 2.5 eq** per 200 kWh of 200 kWh of electricity
-> **Smog formation: 0.000000 kg O3 eq** per 200 kWh of 200 kWh of electricity
-> **Human health - non-cancer: 0.000000 CTUnoncancer** per 200 kWh of 200 kWh of electricity
 > **Ozone depletion: 0.000000 kg CFC-11 eq** per 200 kWh of 200 kWh of electricity
+> **Ecotoxicity: 0.000000 CTUe** per 200 kWh of 200 kWh of electricity
+> **Respiratory effects (Particulate): 0.415556 kg PM2.5 eq** per 200 kWh of 200 kWh of electricity
+> **Acidification: 6.800000 kg SO2 eq** per 200 kWh of 200 kWh of electricity
+> **Carcinogenics: 0.000000 CTUh** per 200 kWh of 200 kWh of electricity
 > **Global warming: 64.000000 kg CO2 eq** per 200 kWh of 200 kWh of electricity
+> **Smog (Photochemical Oxidation Formation): 0.000000 kg O3 eq** per 200 kWh of 200 kWh of electricity
+> **Non carcinogenics: 0.000000 CTUh** per 200 kWh of 200 kWh of electricity
+> **Eutrophication: freshwater: 0.000000 kg P eq** per 200 kWh of 200 kWh of electricity
+> **Eutrophication: marine: 0.000000 kg N eq** per 200 kWh of 200 kWh of electricity
 
 ## Product System Graphs
 

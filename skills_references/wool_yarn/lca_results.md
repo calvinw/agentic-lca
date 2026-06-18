@@ -1,6 +1,6 @@
 # LCA Results: Wool Yarn — 1 kg
 
-Generated: 2026-06-14 02:22  |  openLCA system ID: `b9807050-4fa3-4ccc-baf8-b98c3c77470c`
+Generated: 2026-06-18 17:53  |  openLCA system ID: `371f7514-3e5b-442a-949f-1b069bf24c0d`
 
 ## Step 1 — Goal and Scope
 
@@ -83,27 +83,31 @@ Characterization factors from the database. Each impact category score is the su
 
 | Impact Category | Score | Unit |
 |---|---:|---|
-| Human health - cancer | **0.000000** | CTUcancer |
-| Acidification | **0.000000** | kg SO2 eq |
-| Eutrophication (Freshwater) | **0.000000** | kg P eq |
-| Human health - particulate matter | **0.000000** | PM 2.5 eq |
-| Smog formation | **0.006327** | kg O3 eq |
-| Human health - non-cancer | **0.000000** | CTUnoncancer |
 | Ozone depletion | **0.000000** | kg CFC-11 eq |
+| Ecotoxicity | **0.000000** | CTUe |
+| Respiratory effects (Particulate) | **0.000000** | kg PM2.5 eq |
+| Acidification | **0.000000** | kg SO2 eq |
+| Carcinogenics | **0.000000** | CTUh |
 | Global warming | **13.550000** | kg CO2 eq |
+| Smog (Photochemical Oxidation Formation) | **0.006327** | kg O3 eq |
+| Non carcinogenics | **0.000000** | CTUh |
+| Eutrophication: freshwater | **0.000000** | kg P eq |
+| Eutrophication: marine | **0.000000** | kg N eq |
 
 ## Summary
 
 **LCIA Method:** TRACI 2.2
 
-> **Human health - cancer: 0.000000 CTUcancer** per 1.0 kg of 1 kg of wool yarn, ready for knitting or weaving
-> **Acidification: 0.000000 kg SO2 eq** per 1.0 kg of 1 kg of wool yarn, ready for knitting or weaving
-> **Eutrophication (Freshwater): 0.000000 kg P eq** per 1.0 kg of 1 kg of wool yarn, ready for knitting or weaving
-> **Human health - particulate matter: 0.000000 PM 2.5 eq** per 1.0 kg of 1 kg of wool yarn, ready for knitting or weaving
-> **Smog formation: 0.006327 kg O3 eq** per 1.0 kg of 1 kg of wool yarn, ready for knitting or weaving
-> **Human health - non-cancer: 0.000000 CTUnoncancer** per 1.0 kg of 1 kg of wool yarn, ready for knitting or weaving
 > **Ozone depletion: 0.000000 kg CFC-11 eq** per 1.0 kg of 1 kg of wool yarn, ready for knitting or weaving
+> **Ecotoxicity: 0.000000 CTUe** per 1.0 kg of 1 kg of wool yarn, ready for knitting or weaving
+> **Respiratory effects (Particulate): 0.000000 kg PM2.5 eq** per 1.0 kg of 1 kg of wool yarn, ready for knitting or weaving
+> **Acidification: 0.000000 kg SO2 eq** per 1.0 kg of 1 kg of wool yarn, ready for knitting or weaving
+> **Carcinogenics: 0.000000 CTUh** per 1.0 kg of 1 kg of wool yarn, ready for knitting or weaving
 > **Global warming: 13.550000 kg CO2 eq** per 1.0 kg of 1 kg of wool yarn, ready for knitting or weaving
+> **Smog (Photochemical Oxidation Formation): 0.006327 kg O3 eq** per 1.0 kg of 1 kg of wool yarn, ready for knitting or weaving
+> **Non carcinogenics: 0.000000 CTUh** per 1.0 kg of 1 kg of wool yarn, ready for knitting or weaving
+> **Eutrophication: freshwater: 0.000000 kg P eq** per 1.0 kg of 1 kg of wool yarn, ready for knitting or weaving
+> **Eutrophication: marine: 0.000000 kg N eq** per 1.0 kg of 1 kg of wool yarn, ready for knitting or weaving
 
 ## Product System Graphs
 

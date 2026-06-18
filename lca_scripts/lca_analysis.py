@@ -83,16 +83,19 @@ def get_ef_unit(spec: dict, flow_name: str) -> str:
 
 # ── Build openLCA entities ────────────────────────────────────────────────────
 
-def build_lcia_flow_map(client: RestClient) -> dict[str, str]:
-    """Return a name→id map of flows referenced by any loaded LCIA method.
+def build_lcia_flow_map(client: RestClient, method_name: str = "") -> dict[str, str]:
+    """Return a name→id map of flows referenced by the requested LCIA method.
 
-    When TRACI 2.2 is in the DB, this gives us the exact FEDEFL flow UUIDs
-    that TRACI's characterisation factors point to.  resolve_flow() prefers
-    these over any duplicate flows created by earlier analysis runs.
+    Reads only the method matching method_name (case-insensitive substring).
+    This prevents UUID collisions when multiple methods (TRACI, ReCiPe, EF 3.1,
+    ImpactWorld) are loaded — each method may reference the same flow name
+    with a different UUID, so we must read only the one being used.
     """
     preferred: dict[str, str] = {}
     try:
         for m_desc in client.get_descriptors(o.ImpactMethod):
+            if method_name and method_name.strip().lower() not in (m_desc.name or "").strip().lower():
+                continue
             method = client.get(o.ImpactMethod, m_desc.id)
             for cat_ref in (method.impact_categories or []):
                 cat = client.get(o.ImpactCategory, cat_ref.id)
@@ -133,10 +136,14 @@ def resolve_flow(client: RestClient, name: str, flow_property) -> o.Flow:
     except Exception:
         pass
 
-    # 3. Create a new flow as a last resort.
+    # 3. Create a new flow, stamping the LCIA method's UUID so its
+    #    characterization factors match without needing FEDEFL imported.
     flow = o.new_elementary_flow(name, flow_property)
+    if preferred_id:
+        flow.id = preferred_id
     client.put(flow)
-    print(f"      + created new flow '{name}'")
+    tag = f" (LCIA UUID: {preferred_id[:8]})" if preferred_id else ""
+    print(f"      + created flow '{name}'{tag}")
     return flow
 
 def build_model(client: RestClient, spec: dict) -> tuple[dict, o.Ref]:
@@ -549,7 +556,8 @@ def main():
     client = RestClient(SERVER_URL)
 
     global _LCIA_FLOW_MAP
-    _LCIA_FLOW_MAP = build_lcia_flow_map(client)
+    _method_name_for_map = spec.get("lcia", {}).get("method_name", "")
+    _LCIA_FLOW_MAP = build_lcia_flow_map(client, _method_name_for_map)
 
     reg, system_ref = build_model(client, spec)
 

@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1319.3" height="184.8" viewBox="0 -38.0 1319.3 184.8">
-<rect x="0" y="-38.0" width="1319.3" height="184.8" fill="#f8f8f8"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1624.9" height="168.3" viewBox="0 -38.0 1624.9 168.3">
+<rect x="0" y="-38.0" width="1624.9" height="168.3" fill="#f8f8f8"/>
 <defs>
   <marker id="arr"       viewBox="0 0 10 10" refX="9" refY="5"
           markerWidth="5" markerHeight="5" orient="auto">
@@ -14,50 +14,60 @@
     <path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/>
   </marker>
 </defs>
-<text x="659.6" y="-11.4" text-anchor="middle" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="bold" fill="#222">thredUP Comparative LCA — Secondhand, Best Case</text>
-<line x1="142.8" y1="94.8" x2="142.8" y2="124.8" stroke="#c0392b" stroke-width="1.6" marker-end="url(#arr-red)"/>
-<text x="137.8" y="106.2" text-anchor="end" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#c0392b">CO<tspan baseline-shift="sub" font-size="0.75em">2</tspan></text>
-<text x="137.8" y="120.2" text-anchor="end" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#c0392b">0.7 kg</text>
-<text x="142.8" y="136.8" text-anchor="start" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="bold" fill="#c0392b">to Air</text>
-<line x1="490.3" y1="94.8" x2="490.3" y2="124.8" stroke="#c0392b" stroke-width="1.6" marker-end="url(#arr-red)"/>
-<text x="485.3" y="106.2" text-anchor="end" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#c0392b">CO<tspan baseline-shift="sub" font-size="0.75em">2</tspan></text>
-<text x="485.3" y="120.2" text-anchor="end" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#c0392b">0.15 kg</text>
-<text x="490.3" y="136.8" text-anchor="start" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="bold" fill="#c0392b">to Air</text>
-<line x1="825.2" y1="94.8" x2="825.2" y2="124.8" stroke="#c0392b" stroke-width="1.6" marker-end="url(#arr-red)"/>
-<text x="820.2" y="106.2" text-anchor="end" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#c0392b">CO<tspan baseline-shift="sub" font-size="0.75em">2</tspan></text>
-<text x="820.2" y="120.2" text-anchor="end" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#c0392b">0.12 kg</text>
-<text x="825.2" y="136.8" text-anchor="start" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="bold" fill="#c0392b">to Air</text>
-<line x1="225.5" y1="67.5" x2="407.6" y2="67.5" stroke="#555555" stroke-width="1.6" marker-end="url(#arr)"/>
+<text x="812.4" y="-11.4" text-anchor="middle" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="bold" fill="#222">thredUP Comparative LCA — New Garment (base case)</text>
+<line x1="142.8" y1="78.3" x2="142.8" y2="108.3" stroke="#c0392b" stroke-width="1.6" marker-end="url(#arr-red)"/>
+<text x="137.8" y="89.7" text-anchor="end" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#c0392b">CO<tspan baseline-shift="sub" font-size="0.75em">2</tspan></text>
+<text x="137.8" y="103.7" text-anchor="end" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#c0392b">5.5 kg</text>
+<text x="142.8" y="120.3" text-anchor="start" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="bold" fill="#c0392b">to Air</text>
+<line x1="434.3" y1="78.3" x2="434.3" y2="108.3" stroke="#c0392b" stroke-width="1.6" marker-end="url(#arr-red)"/>
+<text x="429.3" y="89.7" text-anchor="end" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#c0392b">CO<tspan baseline-shift="sub" font-size="0.75em">2</tspan></text>
+<text x="429.3" y="103.7" text-anchor="end" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#c0392b">5.2 kg</text>
+<text x="434.3" y="120.3" text-anchor="start" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="bold" fill="#c0392b">to Air</text>
+<line x1="748.8" y1="78.3" x2="748.8" y2="108.3" stroke="#c0392b" stroke-width="1.6" marker-end="url(#arr-red)"/>
+<text x="743.8" y="89.7" text-anchor="end" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#c0392b">CO<tspan baseline-shift="sub" font-size="0.75em">2</tspan></text>
+<text x="743.8" y="103.7" text-anchor="end" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#c0392b">3.1 kg</text>
+<text x="748.8" y="120.3" text-anchor="start" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="bold" fill="#c0392b">to Air</text>
+<line x1="1097.6" y1="78.3" x2="1097.6" y2="108.3" stroke="#c0392b" stroke-width="1.6" marker-end="url(#arr-red)"/>
+<text x="1092.6" y="89.7" text-anchor="end" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#c0392b">CO<tspan baseline-shift="sub" font-size="0.75em">2</tspan></text>
+<text x="1092.6" y="103.7" text-anchor="end" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#c0392b">2 kg</text>
+<text x="1097.6" y="120.3" text-anchor="start" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="bold" fill="#c0392b">to Air</text>
+<line x1="225.5" y1="50.9" x2="351.5" y2="50.9" stroke="#555555" stroke-width="1.6" marker-end="url(#arr)"/>
 <text text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#444">
-<tspan x="316.5" y="46.3" dominant-baseline="auto">Donated garment</tspan>
-<tspan x="316.5" y="60.6" dominant-baseline="auto">1 garment</tspan>
+<tspan x="288.5" y="29.8" dominant-baseline="auto">Raw fiber</tspan>
+<tspan x="288.5" y="44.1" dominant-baseline="auto">0.5 kg</tspan>
 </text>
-<line x1="573.1" y1="67.5" x2="742.4" y2="67.5" stroke="#555555" stroke-width="1.6" marker-end="url(#arr)"/>
+<line x1="517.1" y1="50.9" x2="666.0" y2="50.9" stroke="#555555" stroke-width="1.6" marker-end="url(#arr)"/>
 <text text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#444">
-<tspan x="657.7" y="46.3" dominant-baseline="auto">Sorted garment</tspan>
-<tspan x="657.7" y="60.6" dominant-baseline="auto">1 garment</tspan>
+<tspan x="591.5" y="29.8" dominant-baseline="auto">Woven fabric</tspan>
+<tspan x="591.5" y="44.1" dominant-baseline="auto">0.4 kg</tspan>
 </text>
-<line x1="907.9" y1="67.5" x2="1093.8" y2="67.5" stroke="#555555" stroke-width="1.6" marker-end="url(#arr)"/>
+<line x1="831.5" y1="50.9" x2="1014.8" y2="50.9" stroke="#555555" stroke-width="1.6" marker-end="url(#arr)"/>
 <text text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#444">
-<tspan x="1000.9" y="46.3" dominant-baseline="auto">thredUP purchase</tspan>
-<tspan x="1000.9" y="60.6" dominant-baseline="auto">1 garment</tspan>
+<tspan x="923.2" y="29.8" dominant-baseline="auto">Finished garment</tspan>
+<tspan x="923.2" y="44.1" dominant-baseline="auto">1 garment</tspan>
 </text>
-<rect x="60.0" y="40.1" width="165.51333333333335" height="54.74516666666667" rx="8" fill="#3a7ebf"/>
-<text x="142.8" y="59.5" text-anchor="middle" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="white">P1 — Collect and receive used clothing</text>
-<text x="142.8" y="75.5" text-anchor="middle" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="white">s1 = 1</text>
-<rect x="407.6" y="40.1" width="165.51333333333335" height="54.74516666666667" rx="8" fill="#3a7ebf"/>
-<text x="490.3" y="59.5" text-anchor="middle" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="white">P2 — Sort, list online, and ship to buyer (renewable warehouse)</text>
-<text x="490.3" y="75.5" text-anchor="middle" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="white">s2 = 1</text>
-<rect x="742.4" y="40.1" width="165.51333333333335" height="54.74516666666667" rx="8" fill="#3a7ebf"/>
-<text x="825.2" y="59.5" text-anchor="middle" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="white">P3 — End of life (remaining 15% of garment life)</text>
-<text x="825.2" y="75.5" text-anchor="middle" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="white">s3 = 1</text>
-<rect x="1093.8" y="-0.0" width="165.51333333333335" height="134.95166666666668" rx="8" fill="#7b4ea6"/>
-<text x="1176.6" y="29.7" text-anchor="middle" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="white">Functional Unit</text>
+<line x1="1180.3" y1="50.9" x2="1399.4" y2="50.9" stroke="#555555" stroke-width="1.6" marker-end="url(#arr)"/>
+<text text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#444">
+<tspan x="1289.8" y="29.8" dominant-baseline="auto">New garment lifecycle</tspan>
+<tspan x="1289.8" y="44.1" dominant-baseline="auto">1 garment</tspan>
+</text>
+<rect x="60.0" y="23.6" width="165.51333333333335" height="54.74516666666667" rx="8" fill="#3a7ebf"/>
+<text x="142.8" y="42.9" text-anchor="middle" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="white">P1 — Grow and prepare fiber</text>
+<text x="142.8" y="58.9" text-anchor="middle" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="white">s1 = 0.5</text>
+<rect x="351.5" y="23.6" width="165.51333333333335" height="54.74516666666667" rx="8" fill="#3a7ebf"/>
+<text x="434.3" y="42.9" text-anchor="middle" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="white">P2 — Spin, weave, dye, and finish fabric</text>
+<text x="434.3" y="58.9" text-anchor="middle" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="white">s2 = 0.4</text>
+<rect x="666.0" y="23.6" width="165.51333333333335" height="54.74516666666667" rx="8" fill="#3a7ebf"/>
+<text x="748.8" y="42.9" text-anchor="middle" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="white">P3 — Cut, sew, and ship garment</text>
+<text x="748.8" y="58.9" text-anchor="middle" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="white">s3 = 1</text>
+<rect x="1014.8" y="23.6" width="165.51333333333335" height="54.74516666666667" rx="8" fill="#3a7ebf"/>
+<text x="1097.6" y="42.9" text-anchor="middle" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="white">P4 — Dispose of garment at end of life</text>
+<text x="1097.6" y="58.9" text-anchor="middle" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="white">s4 = 1</text>
+<rect x="1399.4" y="-0.0" width="165.51333333333335" height="101.85083333333334" rx="8" fill="#7b4ea6"/>
+<text x="1482.1" y="22.4" text-anchor="middle" dominant-baseline="auto" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="white">Functional Unit</text>
 <text text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="white">
-<tspan x="1176.6" y="86.0" dominant-baseline="auto">One premium secondhand</tspan>
-<tspan x="1176.6" y="99.0" dominant-baseline="auto">garment (0.4 kg) via</tspan>
-<tspan x="1176.6" y="112.0" dominant-baseline="auto">thredUP, renewable</tspan>
-<tspan x="1176.6" y="125.0" dominant-baseline="auto">warehouse, 85% life</tspan>
-<tspan x="1176.6" y="138.0" dominant-baseline="auto">remaining</tspan>
+<tspan x="1482.1" y="57.3" dominant-baseline="auto">One average new garment</tspan>
+<tspan x="1482.1" y="70.3" dominant-baseline="auto">(0.4 kg), cradle to</tspan>
+<tspan x="1482.1" y="83.3" dominant-baseline="auto">end-of-life disposal</tspan>
 </text>
 </svg>

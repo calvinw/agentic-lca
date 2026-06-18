@@ -1,6 +1,6 @@
 # LCA Results: Cotton Shirt LCA — cradle to gate
 
-Generated: 2026-06-14 01:51  |  openLCA system ID: `563af41e-1fd9-49e8-9d35-f92753551620`
+Generated: 2026-06-18 17:47  |  openLCA system ID: `dea77b4e-ab51-4d7d-a0e1-1e979bbb8d54`
 
 ## Step 1 — Goal and Scope
 
@@ -82,27 +82,31 @@ Characterization factors from the database. Each impact category score is the su
 
 | Impact Category | Score | Unit |
 |---|---:|---|
-| Human health - cancer | **0.000000** | CTUcancer |
-| Acidification | **0.003475** | kg SO2 eq |
-| Eutrophication (Freshwater) | **0.000000** | kg P eq |
-| Human health - particulate matter | **0.000122** | PM 2.5 eq |
-| Smog formation | **0.063038** | kg O3 eq |
-| Human health - non-cancer | **0.000000** | CTUnoncancer |
 | Ozone depletion | **0.000000** | kg CFC-11 eq |
+| Ecotoxicity | **0.000000** | CTUe |
+| Respiratory effects (Particulate) | **0.000122** | kg PM2.5 eq |
+| Acidification | **0.003475** | kg SO2 eq |
+| Carcinogenics | **0.000000** | CTUh |
 | Global warming | **2.320000** | kg CO2 eq |
+| Smog (Photochemical Oxidation Formation) | **0.063029** | kg O3 eq |
+| Non carcinogenics | **0.000000** | CTUh |
+| Eutrophication: freshwater | **0.000000** | kg P eq |
+| Eutrophication: marine | **0.000013** | kg N eq |
 
 ## Summary
 
 **LCIA Method:** TRACI 2.2
 
-> **Human health - cancer: 0.000000 CTUcancer** per 1.0 shirt of One cotton shirt (cradle to gate)
-> **Acidification: 0.003475 kg SO2 eq** per 1.0 shirt of One cotton shirt (cradle to gate)
-> **Eutrophication (Freshwater): 0.000000 kg P eq** per 1.0 shirt of One cotton shirt (cradle to gate)
-> **Human health - particulate matter: 0.000122 PM 2.5 eq** per 1.0 shirt of One cotton shirt (cradle to gate)
-> **Smog formation: 0.063038 kg O3 eq** per 1.0 shirt of One cotton shirt (cradle to gate)
-> **Human health - non-cancer: 0.000000 CTUnoncancer** per 1.0 shirt of One cotton shirt (cradle to gate)
 > **Ozone depletion: 0.000000 kg CFC-11 eq** per 1.0 shirt of One cotton shirt (cradle to gate)
+> **Ecotoxicity: 0.000000 CTUe** per 1.0 shirt of One cotton shirt (cradle to gate)
+> **Respiratory effects (Particulate): 0.000122 kg PM2.5 eq** per 1.0 shirt of One cotton shirt (cradle to gate)
+> **Acidification: 0.003475 kg SO2 eq** per 1.0 shirt of One cotton shirt (cradle to gate)
+> **Carcinogenics: 0.000000 CTUh** per 1.0 shirt of One cotton shirt (cradle to gate)
 > **Global warming: 2.320000 kg CO2 eq** per 1.0 shirt of One cotton shirt (cradle to gate)
+> **Smog (Photochemical Oxidation Formation): 0.063029 kg O3 eq** per 1.0 shirt of One cotton shirt (cradle to gate)
+> **Non carcinogenics: 0.000000 CTUh** per 1.0 shirt of One cotton shirt (cradle to gate)
+> **Eutrophication: freshwater: 0.000000 kg P eq** per 1.0 shirt of One cotton shirt (cradle to gate)
+> **Eutrophication: marine: 0.000013 kg N eq** per 1.0 shirt of One cotton shirt (cradle to gate)
 
 ## Product System Graphs
 
