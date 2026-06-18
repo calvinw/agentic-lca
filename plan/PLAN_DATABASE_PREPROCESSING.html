@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>plan_reference_examples – Agentic LCA</title>
+<title>plan_database_preprocessing – Agentic LCA</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -154,7 +154,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../plan/PLAN_REFERENCE_EXAMPLES.html">REFERENCE_EXAMPLES</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../plan/PLAN_DATABASE_PREPROCESSING.html">DATABASE_PREPROCESSING</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -180,7 +180,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../plan/PLAN_DATABASE_PREPROCESSING.html" class="sidebar-item-text sidebar-link">
+  <a href="../plan/PLAN_DATABASE_PREPROCESSING.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">DATABASE_PREPROCESSING</span></a>
   </div>
 </li>
@@ -204,7 +204,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../plan/PLAN_REFERENCE_EXAMPLES.html" class="sidebar-item-text sidebar-link active">
+  <a href="../plan/PLAN_REFERENCE_EXAMPLES.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">REFERENCE_EXAMPLES</span></a>
   </div>
 </li>
@@ -242,25 +242,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#plan-for-reference-lca-teaching-examples" id="toc-plan-for-reference-lca-teaching-examples" class="nav-link active" data-scroll-target="#plan-for-reference-lca-teaching-examples">Plan for Reference LCA Teaching Examples</a>
+  <li><a href="#plan-database-preprocessing-building-openlca-databases-without-the-desktop-app" id="toc-plan-database-preprocessing-building-openlca-databases-without-the-desktop-app" class="nav-link active" data-scroll-target="#plan-database-preprocessing-building-openlca-databases-without-the-desktop-app">PLAN: Database Preprocessing — Building openLCA Databases Without the Desktop App</a>
   <ul class="collapse">
-  <li><a href="#purpose" id="toc-purpose" class="nav-link" data-scroll-target="#purpose">Purpose</a></li>
-  <li><a href="#folder-location" id="toc-folder-location" class="nav-link" data-scroll-target="#folder-location">Folder Location</a></li>
-  <li><a href="#folder-structure-per-case-study" id="toc-folder-structure-per-case-study" class="nav-link" data-scroll-target="#folder-structure-per-case-study">Folder Structure (per case study)</a></li>
-  <li><a href="#file-descriptions" id="toc-file-descriptions" class="nav-link" data-scroll-target="#file-descriptions">File Descriptions</a>
+  <li><a href="#what-this-plan-covers" id="toc-what-this-plan-covers" class="nav-link" data-scroll-target="#what-this-plan-covers">What this plan covers</a></li>
+  <li><a href="#why-this-matters" id="toc-why-this-matters" class="nav-link" data-scroll-target="#why-this-matters">Why this matters</a></li>
+  <li><a href="#the-key-insight-import-order-matters" id="toc-the-key-insight-import-order-matters" class="nav-link" data-scroll-target="#the-key-insight-import-order-matters">The key insight: import order matters</a></li>
+  <li><a href="#the-preprocessing-script-import_lca_data.py" id="toc-the-preprocessing-script-import_lca_data.py" class="nav-link" data-scroll-target="#the-preprocessing-script-import_lca_data.py">The preprocessing script: <code>import_lca_data.py</code></a></li>
+  <li><a href="#the-one-time-build-workflow" id="toc-the-one-time-build-workflow" class="nav-link" data-scroll-target="#the-one-time-build-workflow">The one-time build workflow</a></li>
+  <li><a href="#current-databases-in-github-releases-lca-data-v1" id="toc-current-databases-in-github-releases-lca-data-v1" class="nav-link" data-scroll-target="#current-databases-in-github-releases-lca-data-v1">Current databases in GitHub releases (<code>lca-data-v1</code>)</a></li>
+  <li><a href="#extending-to-other-databases" id="toc-extending-to-other-databases" class="nav-link" data-scroll-target="#extending-to-other-databases">Extending to other databases</a>
   <ul class="collapse">
-  <li><a href="#recipe_card.md" id="toc-recipe_card.md" class="nav-link" data-scroll-target="#recipe_card.md"><code>recipe_card.md</code></a></li>
-  <li><a href="#lca_results.md" id="toc-lca_results.md" class="nav-link" data-scroll-target="#lca_results.md"><code>lca_results.md</code></a></li>
-  <li><a href="#product_graph_scaled.svg" id="toc-product_graph_scaled.svg" class="nav-link" data-scroll-target="#product_graph_scaled.svg"><code>product_graph_scaled.svg</code></a></li>
-  <li><a href="#product_graph_structure.svg" id="toc-product_graph_structure.svg" class="nav-link" data-scroll-target="#product_graph_structure.svg"><code>product_graph_structure.svg</code></a></li>
-  <li><a href="#notes.md" id="toc-notes.md" class="nav-link" data-scroll-target="#notes.md"><code>notes.md</code></a></li>
+  <li><a href="#free-databases-public-github-release" id="toc-free-databases-public-github-release" class="nav-link" data-scroll-target="#free-databases-public-github-release">Free databases (public GitHub release)</a></li>
+  <li><a href="#licensed-databases-private-github-repo" id="toc-licensed-databases-private-github-repo" class="nav-link" data-scroll-target="#licensed-databases-private-github-repo">Licensed databases (private GitHub repo)</a></li>
   </ul></li>
-  <li><a href="#the-three-fit-reference-case-studies" id="toc-the-three-fit-reference-case-studies" class="nav-link" data-scroll-target="#the-three-fit-reference-case-studies">The Three FIT Reference Case Studies</a>
-  <ul class="collapse">
-  <li><a href="#case-1-wool-yarn-1-layer-deep-climate-only" id="toc-case-1-wool-yarn-1-layer-deep-climate-only" class="nav-link" data-scroll-target="#case-1-wool-yarn-1-layer-deep-climate-only">Case 1 — Wool yarn (1 layer deep, climate only)</a></li>
-  <li><a href="#case-2-polyester-t-shirt-2-layers-deep-climate-only" id="toc-case-2-polyester-t-shirt-2-layers-deep-climate-only" class="nav-link" data-scroll-target="#case-2-polyester-t-shirt-2-layers-deep-climate-only">Case 2 — Polyester T-shirt (2 layers deep, climate only)</a></li>
-  <li><a href="#case-3-cotton-fiber-1-layer-multi-indicator" id="toc-case-3-cotton-fiber-1-layer-multi-indicator" class="nav-link" data-scroll-target="#case-3-cotton-fiber-1-layer-multi-indicator">Case 3 — Cotton fiber (1 layer, multi-indicator)</a></li>
-  </ul></li>
+  <li><a href="#switching-databases-at-runtime" id="toc-switching-databases-at-runtime" class="nav-link" data-scroll-target="#switching-databases-at-runtime">Switching databases at runtime</a></li>
+  <li><a href="#when-to-rebuild-a-database" id="toc-when-to-rebuild-a-database" class="nav-link" data-scroll-target="#when-to-rebuild-a-database">When to rebuild a database</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -271,155 +268,267 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<section id="plan-for-reference-lca-teaching-examples" class="level1">
-<h1>Plan for Reference LCA Teaching Examples</h1>
-<section id="purpose" class="level2">
-<h2 class="anchored" data-anchor-id="purpose">Purpose</h2>
-<p>This document defines the format and content of the completed reference case studies used in this project. Each case study is a self-contained teaching package that provides enough information for an LLM-powered teaching skill to walk a student through any part of the LCA methodology using real numbers from that product.</p>
-<p>The cases are designed for students at FIT (Fashion Institute of Technology) — business and retail management students with no programming background.</p>
+<section id="plan-database-preprocessing-building-openlca-databases-without-the-desktop-app" class="level1">
+<h1>PLAN: Database Preprocessing — Building openLCA Databases Without the Desktop App</h1>
+<section id="what-this-plan-covers" class="level2">
+<h2 class="anchored" data-anchor-id="what-this-plan-covers">What this plan covers</h2>
+<p>How to build a pre-processed openLCA database (equivalent to what the openLCA desktop app produces) using only Python and the gdt-server REST API, then store it for fast reuse in GitHub releases. This approach replaces the need for the openLCA desktop application entirely.</p>
 <hr>
 </section>
-<section id="folder-location" class="level2">
-<h2 class="anchored" data-anchor-id="folder-location">Folder Location</h2>
-<p>The reference teaching examples live in <code>skills_references/</code> in the project root — separate from <code>lca_analysis/</code>, which holds examples tied to the openLCA server calculation workflow.</p>
-<pre><code>skills_references/
-  wool_yarn/
-  polyester_tshirt/
-  cotton_fiber/
-  ...</code></pre>
-<p>The teaching skills read from <code>skills_references/&lt;name&gt;/</code> when given a case study argument. This keeps curated teaching material separate from ad-hoc analysis runs.</p>
+<section id="why-this-matters" class="level2">
+<h2 class="anchored" data-anchor-id="why-this-matters">Why this matters</h2>
+<p>The gdt-server is a calculation engine, not a database builder. It expects to be pointed at a pre-built Apache Derby database folder. The standard way to build that database is to use the openLCA desktop app — import a data pack, and the app writes the Derby database to disk.</p>
+<p>The problem: openLCA desktop is a 500MB GUI application. In a Codespace or CI environment, you do not want to install a GUI app just to build a database.</p>
+<p>The solution discovered in this project: the desktop app’s import logic is available in the open-source <code>olca-modules</code> Java library, which is also embedded inside gdt-server. The gdt-server REST API exposes enough of that logic to replicate the full import — if you import entities in the right order.</p>
 <hr>
 </section>
-<section id="folder-structure-per-case-study" class="level2">
-<h2 class="anchored" data-anchor-id="folder-structure-per-case-study">Folder Structure (per case study)</h2>
-<pre><code>skills_references/&lt;product&gt;/
-  recipe_card.md              ← supply chain spec + LCIA method + characterization factors
-  lca_results.md              ← pre-computed results: scaling vector, impacts by process and indicator
-  product_graph_scaled.svg    ← supply chain diagram with scaling factors and flow amounts
-  product_graph_structure.svg ← supply chain diagram with flow names only (no numbers)
-  notes.md                    ← written teaching document: damage pathways, business narrative</code></pre>
+<section id="the-key-insight-import-order-matters" class="level2">
+<h2 class="anchored" data-anchor-id="the-key-insight-import-order-matters">The key insight: import order matters</h2>
+<p>The gdt-server’s <code>ImpactCategoryReader</code> resolves each impact factor’s flow by UUID at import time. If the flow does not exist in the database when the ImpactCategory is PUT, the factor is silently dropped and the LCIA score for that flow becomes zero.</p>
+<p><strong>Correct import order:</strong> 1. <code>UnitGroup</code> — unit systems (Mass, Energy, Volume, etc.) 2. <code>FlowProperty</code> — physical quantities (kg, kWh, m³, etc.) 3. <code>Flow</code> — elementary flows (CO₂, NOx, SO₂, etc.) that impact factors reference 4. <code>ImpactCategory</code> — the scoring rules, each referencing flows by UUID 5. <code>ImpactMethod</code> — groups of categories into a named method (TRACI 2.2, ReCiPe, etc.)</p>
+<p>This is exactly the order the openLCA desktop app uses internally.</p>
 <hr>
 </section>
-<section id="file-descriptions" class="level2">
-<h2 class="anchored" data-anchor-id="file-descriptions">File Descriptions</h2>
-<section id="recipe_card.md" class="level3">
-<h3 class="anchored" data-anchor-id="recipe_card.md"><code>recipe_card.md</code></h3>
-<p>The single quantitative source of truth for the case study. Contains two parts:</p>
-<p><strong>Part 1 — YAML frontmatter (the supply chain spec):</strong> - <code>name</code> — product name and functional unit description - <code>goal</code> — the study goal in plain language - <code>functional_unit</code> — what exactly is being measured (description, amount, unit) - <code>units</code> — unit definitions - <code>products</code> — all intermediate and final products in the supply chain - <code>elementary_flows</code> — emissions to air/water and resource extractions from nature - <code>processes</code> — each step in the supply chain with inputs, outputs, emissions, resources - <code>reference_process</code> — the process that delivers the functional unit - <code>lcia</code> — LCIA method name and impact categories with characterization factors (see below)</p>
-<p><strong>Part 2 — Markdown body (study notes):</strong> - Key assumptions table - Simplifications made - Source references - Any teaching notes specific to this product</p>
-<p><strong>The <code>lcia:</code> section format:</strong></p>
-<p>Simple (climate only):</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">lcia</span><span class="kw">:</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">method</span><span class="kw">:</span><span class="at"> IPCC AR6</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">impact_categories</span><span class="kw">:</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Climate change</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">indicator</span><span class="kw">:</span><span class="at"> GWP100</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">unit</span><span class="kw">:</span><span class="at"> kg CO2 eq</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">characterization_factors</span><span class="kw">:</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">CO2 to air</span><span class="kw">:</span><span class="at"> </span><span class="fl">1.0</span></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">CH4 to air</span><span class="kw">:</span><span class="at"> </span><span class="fl">27.9</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Multi-indicator:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">lcia</span><span class="kw">:</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">method</span><span class="kw">:</span><span class="at"> EF 3.0</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">impact_categories</span><span class="kw">:</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Climate change</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">indicator</span><span class="kw">:</span><span class="at"> GWP100</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">unit</span><span class="kw">:</span><span class="at"> kg CO2 eq</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">characterization_factors</span><span class="kw">:</span></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">CO2 to air</span><span class="kw">:</span><span class="at"> </span><span class="fl">1.0</span></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">CH4 to air</span><span class="kw">:</span><span class="at"> </span><span class="fl">27.9</span></span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">N2O to air</span><span class="kw">:</span><span class="at"> </span><span class="fl">273.0</span></span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Eutrophication (terrestrial)</span></span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">indicator</span><span class="kw">:</span><span class="at"> EP-terrestrial</span></span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">unit</span><span class="kw">:</span><span class="at"> mol N eq</span></span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">characterization_factors</span><span class="kw">:</span></span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">NH3 to air</span><span class="kw">:</span><span class="at"> </span><span class="fl">3.54</span></span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">N2O to air</span><span class="kw">:</span><span class="at"> </span><span class="fl">0.27</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>The method name (e.g., “EF 3.0”, “IPCC AR6”) is the published standard the factors come from. The factors are embedded in the recipe card so calculations work without requiring the LCIA method to be loaded in the openLCA database. The factors must match the named standard’s published values.</p>
+<section id="the-preprocessing-script-import_lca_data.py" class="level2">
+<h2 class="anchored" data-anchor-id="the-preprocessing-script-import_lca_data.py">The preprocessing script: <code>import_lca_data.py</code></h2>
+<p>Located at the project root. Streams each entity type from the source zip in a separate pass so only one type is in memory at a time (avoids OOM on the 60,000+ flow entries).</p>
+<pre><code>Source zip (JSON-LD format)
+    │
+    ├─ Pass 1: UnitGroup     (~10 entities)    → PUT /data/unit-group
+    ├─ Pass 2: FlowProperty  (~10 entities)    → PUT /data/flow-property
+    ├─ Pass 3: Flow          (~60,000 entities) → PUT /data/flow
+    ├─ Pass 4: ImpactCategory (~550 entities)  → PUT /data/impact-category
+    └─ Pass 5: ImpactMethod  (~45 entities)    → PUT /data/impact-method
+                                                        │
+                                               gdt-server writes to
+                                               Apache Derby database
+                                               ~/olca-data/databases/lca_methods/</code></pre>
+<p>After all passes complete, the Derby database folder is a fully functional pre-built database identical to what the desktop app would have produced.</p>
 <hr>
 </section>
-<section id="lca_results.md" class="level3">
-<h3 class="anchored" data-anchor-id="lca_results.md"><code>lca_results.md</code></h3>
-<p>Pre-computed once (requires the openLCA server) and committed to the repository. Regenerate only when the recipe card changes. Contains:</p>
-<ul>
-<li>Goal and scope statement</li>
-<li>Reference flow vector f</li>
-<li>Technology matrix A</li>
-<li>Scaling vector s = A⁻¹ · f (how much each process runs per functional unit)</li>
-<li>Intervention matrix B (emissions per unit of each process)</li>
-<li>LCI results B · s (total emissions per functional unit)</li>
-<li>LCIA results (characterization factors applied — totals per impact category)</li>
-<li>Contribution analysis (which process drives which impact, as a percentage)</li>
-</ul>
+<section id="the-one-time-build-workflow" class="level2">
+<h2 class="anchored" data-anchor-id="the-one-time-build-workflow">The one-time build workflow</h2>
+<p>This workflow runs once per database. After it completes, the database is stored in GitHub releases and never rebuilt unless the source data changes.</p>
+<pre><code>1. Start gdt-server with an empty database
+      bash setup_olca.sh  (before lca_methods.tar.gz existed)
+
+2. Run the preprocessing script against the source zip
+      python3 import_lca_data.py
+      # Takes ~20-30 minutes for the full LCIA methods pack (60,000 flows)
+
+3. Zip the resulting database folder
+      tar -czf lca_methods.tar.gz -C ~/olca-data/databases lca_methods/
+
+4. Upload to GitHub releases
+      gh release upload lca-data-v1 lca_methods.tar.gz --repo calvinw/agentic-lca
+
+5. Update setup script to download-and-unzip instead of importing
+      # setup_olca.sh now downloads lca_methods.tar.gz and unpacks it (~5 seconds)</code></pre>
+<p>After step 5, all future Codespace sessions just download the pre-built database. The import step never runs again unless the source data changes.</p>
 <hr>
 </section>
-<section id="product_graph_scaled.svg" class="level3">
-<h3 class="anchored" data-anchor-id="product_graph_scaled.svg"><code>product_graph_scaled.svg</code></h3>
-<p>Generated by <code>lca_scripts/lca_svg.py</code> from the recipe card. Shows: - Each process as a labelled box - Scaling factor (s) on each box - Flow amounts on each arrow between processes - Emissions and resource flows as coloured side arrows</p>
+<section id="current-databases-in-github-releases-lca-data-v1" class="level2">
+<h2 class="anchored" data-anchor-id="current-databases-in-github-releases-lca-data-v1">Current databases in GitHub releases (<code>lca-data-v1</code>)</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>File</th>
+<th>Size</th>
+<th>Contents</th>
+<th>Used by</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>lca_methods.tar.gz</code></td>
+<td>86 MB</td>
+<td>Pre-built Derby DB with all 45 LCIA methods</td>
+<td><code>setup_olca.sh</code> (download + unzip)</td>
+</tr>
+<tr class="even">
+<td><code>openLCA.LCIA.Methods.2.8.0.2025-12-15.zip</code></td>
+<td>157 MB</td>
+<td>Source JSON-LD data pack</td>
+<td><code>import_lca_data.py</code> (source, kept for rebuilds)</td>
+</tr>
+</tbody>
+</table>
+<p>The methods pack zip is no longer downloaded by <code>setup_olca.sh</code> but is kept in the release as the source material for rebuilding <code>lca_methods.tar.gz</code> if needed (e.g. when a newer methods pack version is released).</p>
 <hr>
 </section>
-<section id="product_graph_structure.svg" class="level3">
-<h3 class="anchored" data-anchor-id="product_graph_structure.svg"><code>product_graph_structure.svg</code></h3>
-<p>Generated by <code>lca_scripts/lca_svg.py --structure</code> from the recipe card. Shows: - Each process as a labelled box - Flow names on arrows (no quantities) - Clean overview of supply chain structure</p>
+<section id="extending-to-other-databases" class="level2">
+<h2 class="anchored" data-anchor-id="extending-to-other-databases">Extending to other databases</h2>
+<p>The same pattern applies to any openLCA-compatible database.</p>
+<section id="free-databases-public-github-release" class="level3">
+<h3 class="anchored" data-anchor-id="free-databases-public-github-release">Free databases (public GitHub release)</h3>
+<p><strong>BAFU 2025</strong> — 11,747 Swiss background processes, free download, EF 3.1 compatible</p>
+<pre><code>Source: bafu2025.zip from bafu.admin.ch (free)
+
+Build:
+  1. Start gdt-server with empty `bafu` database (-db bafu)
+  2. python3 import_lca_data.py --source bafu2025.zip --db bafu
+     Import order: UnitGroup → FlowProperty → Flow → Process → ImpactCategory → ImpactMethod
+  3. tar -czf bafu.tar.gz -C ~/olca-data/databases bafu/
+  4. gh release upload lca-data-v1 bafu.tar.gz --repo calvinw/agentic-lca
+
+Setup script addition:
+  if [ ! -d "$DATA_DIR/databases/bafu" ]; then
+      curl -L "$RELEASE_BASE/bafu.tar.gz" | tar -xz -C "$DATA_DIR/databases/"
+  fi
+  docker run ... -db bafu</code></pre>
+<p>BAFU pairs naturally with <code>EF 3.1 Method (adapted)</code> which is already loaded in <code>lca_methods</code>. If using lca_methods as the base database, BAFU processes can be imported on top of it.</p>
+</section>
+<section id="licensed-databases-private-github-repo" class="level3">
+<h3 class="anchored" data-anchor-id="licensed-databases-private-github-repo">Licensed databases (private GitHub repo)</h3>
+<p><strong>ecoinvent</strong> — industry-standard, requires license from ecoinvent.org</p>
+<p>ecoinvent is distributed as a <code>.zolca</code> file (openLCA’s native export format). This format is not a JSON-LD zip — it is a compressed Derby database snapshot.</p>
+<pre><code>Build (on a machine with the ecoinvent license):
+  Option A — openLCA desktop app:
+    1. Open openLCA desktop
+    2. File → Import → .zolca file
+    3. Close openLCA
+    4. tar -czf ecoinvent.tar.gz -C ~/openLCA-data-1.4/databases ecoinvent/
+
+  Option B — programmatic (if .zolca unpacks to JSON-LD):
+    unzip ecoinvent.zolca -d ecoinvent_jsonld/
+    python3 import_lca_data.py --source ecoinvent_jsonld/ --db ecoinvent
+    tar -czf ecoinvent.tar.gz -C ~/olca-data/databases ecoinvent/
+
+Storage:
+  gh release create lca-data-v1 ecoinvent.tar.gz \
+      --repo calvinw/ecoinvent-lca-db   ← private repository</code></pre>
+<p>Download in Codespace (authenticated via built-in GitHub token or Codespaces secret):</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">gh</span> release download lca-data-v1 <span class="dt">\</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">--repo</span> calvinw/ecoinvent-lca-db <span class="dt">\</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">--pattern</span> <span class="st">"ecoinvent.tar.gz"</span> <span class="dt">\</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">--output</span> <span class="st">"</span><span class="va">$DATA_DIR</span><span class="st">/ecoinvent.tar.gz"</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="fu">tar</span> <span class="at">-xzf</span> <span class="st">"</span><span class="va">$DATA_DIR</span><span class="st">/ecoinvent.tar.gz"</span> <span class="at">-C</span> <span class="st">"</span><span class="va">$DATA_DIR</span><span class="st">/databases/"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
-<section id="notes.md" class="level3">
-<h3 class="anchored" data-anchor-id="notes.md"><code>notes.md</code></h3>
-<p>A written teaching document. Not generated — written by hand (or LLM-assisted). Contains:</p>
-<ol type="1">
-<li><p><strong>LCIA method explanation</strong> — what EF 3.0 or IPCC AR6 is, why it was chosen for this product, what the indicators mean in plain language</p></li>
-<li><p><strong>Damage pathways</strong> — for each impact category, the full chain: <code>emission → atmospheric/ecological mechanism → midpoint indicator → endpoint damage</code></p>
-<p>Example for N2O:</p>
-<ul>
-<li>N2O emitted from fertilised soil</li>
-<li>Acts as a greenhouse gas (radiative forcing) AND depletes stratospheric ozone</li>
-<li>Midpoint: GWP100 = 273 kg CO2 eq per kg N2O</li>
-<li>Endpoint: climate change (human health, ecosystem quality) + UV exposure</li>
-</ul></li>
-<li><p><strong>Key findings</strong> — the main numbers, written for a business student: which process dominates, what surprised us, how the result compares to everyday reference points (km driven, days of electricity use, etc.)</p></li>
-<li><p><strong>Business relevance</strong> — what a sourcing, procurement, or product design decision could change based on this result</p></li>
-</ol>
+</section>
+<section id="switching-databases-at-runtime" class="level2">
+<h2 class="anchored" data-anchor-id="switching-databases-at-runtime">Switching databases at runtime</h2>
+<p>Each database is a separate folder. The gdt-server is started with <code>-db &lt;name&gt;</code> pointing at whichever folder you want. Scripts:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Script</th>
+<th>Database</th>
+<th>Use case</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>setup_olca.sh</code> / <code>start_olca.sh</code></td>
+<td><code>lca_methods</code></td>
+<td>Teaching with hand-written recipe cards, all 45 LCIA methods</td>
+</tr>
+<tr class="even">
+<td><code>start_olca_bafu.sh</code> (future)</td>
+<td><code>bafu</code></td>
+<td>Real background processes, EF 3.1, free</td>
+</tr>
+<tr class="odd">
+<td><code>start_olca_ecoinvent.sh</code></td>
+<td><code>ecoinvent</code></td>
+<td>Industry-standard, requires license</td>
+</tr>
+</tbody>
+</table>
+<p>Recipe cards are identical regardless of database — just change <code>method_name</code> in the <code>lcia:</code> section to use a method available in the active database.</p>
 <hr>
 </section>
-</section>
-<section id="the-three-fit-reference-case-studies" class="level2">
-<h2 class="anchored" data-anchor-id="the-three-fit-reference-case-studies">The Three FIT Reference Case Studies</h2>
-<p>These three cases are designed as a teaching progression. Each adds exactly one new concept. All are directly relevant to fashion and textiles.</p>
+<section id="when-to-rebuild-a-database" class="level2">
+<h2 class="anchored" data-anchor-id="when-to-rebuild-a-database">When to rebuild a database</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Trigger</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>New LCIA methods pack version released</td>
+<td>Re-run import, re-upload lca_methods.tar.gz</td>
+</tr>
+<tr class="even">
+<td>New BAFU version released</td>
+<td>Re-run import, re-upload bafu.tar.gz</td>
+</tr>
+<tr class="odd">
+<td>New ecoinvent version</td>
+<td>Re-run import on licensed machine, re-upload to private repo</td>
+</tr>
+<tr class="even">
+<td>Bug found in import script</td>
+<td>Fix script, re-run, re-upload</td>
+</tr>
+</tbody>
+</table>
+<p>The recipe cards and analysis scripts do not need to change when a database is rebuilt — they reference methods by name, which stays stable across versions.</p>
 <hr>
-<section id="case-1-wool-yarn-1-layer-deep-climate-only" class="level3">
-<h3 class="anchored" data-anchor-id="case-1-wool-yarn-1-layer-deep-climate-only">Case 1 — Wool yarn (1 layer deep, climate only)</h3>
-<p><strong>Folder:</strong> <code>skills_references/wool_yarn/</code></p>
-<p><strong>Supply chain:</strong></p>
-<pre><code>P1: Sheep farming  →  P2: Wool yarn production  [reference]</code></pre>
-<p><strong>Depth:</strong> 1 layer. The sheep farm is one upstream node from the reference process. The scaling is straightforward: to produce 1 kg of yarn, you need 1.1 kg of raw fleece (10% waste in scouring and spinning), so the sheep farm runs at scale 1.1.</p>
-<p><strong>Emissions:</strong> - P1 (Sheep farming): CO2 (farm energy), CH4 (enteric fermentation — sheep digestion) - P2 (Wool yarn): CO2 (scouring, spinning energy)</p>
-<p><strong>LCIA method:</strong> IPCC AR6, GWP100 only</p>
-<p><strong>Key teaching moment:</strong> Sheep methane. CH4 has a GWP of 27.9 — nearly 28 times more potent than CO2. Wool’s “natural” reputation does not mean low-carbon.</p>
-<hr>
 </section>
-<section id="case-2-polyester-t-shirt-2-layers-deep-climate-only" class="level3">
-<h3 class="anchored" data-anchor-id="case-2-polyester-t-shirt-2-layers-deep-climate-only">Case 2 — Polyester T-shirt (2 layers deep, climate only)</h3>
-<p><strong>Folder:</strong> <code>skills_references/polyester_tshirt/</code></p>
-<p><strong>Supply chain:</strong></p>
-<pre><code>P1: Oil extraction  →  P2: Polyester fiber production  →  P3: T-shirt assembly  [reference]</code></pre>
-<p><strong>Depth:</strong> 2 layers. Oil extraction is two hops back from the finished T-shirt. Calculating the oil extraction’s contribution requires compound scaling: how much fiber per shirt × how much oil per kg of fiber.</p>
-<p><strong>Emissions:</strong> - P1 (Oil extraction): CO2 (combustion of energy), CH4 (fugitive from wells) - P2 (Polyester fiber): CO2 (polymerisation, energy; ~1.5 kg oil per kg fiber) - P3 (T-shirt assembly): CO2 (cutting, sewing, factory energy)</p>
-<p><strong>LCIA method:</strong> IPCC AR6, GWP100 only</p>
-<p><strong>Key teaching moment:</strong> “Your T-shirt is oil.” Polyester is a petroleum product. The matrix inversion shows how the emissions from the oil well end up attributed to the shirt, even though the well is two steps back in the supply chain.</p>
-<hr>
-</section>
-<section id="case-3-cotton-fiber-1-layer-multi-indicator" class="level3">
-<h3 class="anchored" data-anchor-id="case-3-cotton-fiber-1-layer-multi-indicator">Case 3 — Cotton fiber (1 layer, multi-indicator)</h3>
-<p><strong>Folder:</strong> <code>skills_references/cotton_fiber/</code></p>
-<p><strong>Supply chain:</strong></p>
-<pre><code>P1: Fertilizer production  →  P2: Cotton farming  [reference]</code></pre>
-<p><strong>Depth:</strong> 1 layer. Same structural depth as wool yarn — but this case introduces a second impact category, making the LCIA step the main teaching focus.</p>
-<p><strong>Emissions:</strong> - P1 (Fertilizer): CO2 (energy-intensive production of synthetic nitrogen fertilizer) - P2 (Cotton farming): CO2 (machinery, irrigation energy), N2O (from fertilised soil — microbial conversion of nitrogen), NH3 (volatilisation from soil)</p>
-<p><strong>LCIA method:</strong> EF 3.0, two impact categories: - Climate change (GWP100): CO2, N2O, CH4 - Terrestrial eutrophication (EP-terrestrial): NH3, N2O</p>
-<p><strong>Key teaching moment:</strong> Cotton has a natural reputation but the field is the problem. N2O from the soil is 273× more potent than CO2 per kg. NH3 causes eutrophication — excess nitrogen in soil and waterways — independently of its climate contribution. The same emission (N2O) hits two different impact categories at once.</p>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>openLCA desktop app</th>
+<th>This project’s approach</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Requires GUI</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr class="even">
+<td>Works in Codespace/CI</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+<tr class="odd">
+<td>Build time</td>
+<td>~5 min interactive</td>
+<td>~25 min unattended</td>
+</tr>
+<tr class="even">
+<td>Frequency</td>
+<td>Every new environment</td>
+<td>Once, then stored</td>
+</tr>
+<tr class="odd">
+<td>Output</td>
+<td>Derby database folder</td>
+<td>Same Derby database folder</td>
+</tr>
+<tr class="even">
+<td>Result</td>
+<td>Identical</td>
+<td>Identical</td>
+</tr>
+</tbody>
+</table>
 
 
-</section>
 </section>
 </section>
 

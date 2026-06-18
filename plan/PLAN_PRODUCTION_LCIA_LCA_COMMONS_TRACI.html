@@ -180,6 +180,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../plan/PLAN_DATABASE_PREPROCESSING.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">DATABASE_PREPROCESSING</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../plan/PLAN_PRODUCTION_LCIA_LCA_COMMONS_TRACI.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">PRODUCTION_LCIA_LCA_COMMONS_TRACI</span></a>
   </div>
@@ -309,7 +315,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="why-lca-commons-traci-2.2">Why LCA Commons + TRACI 2.2</h2>
 <p><strong>LCA Commons 2025.1</strong> (nexus.openlca.org, free): - Built and maintained by US government agencies (USDA, NREL, EPA) - Uses FEDEFL (Federal Elementary Flow List) — the same flow standard TRACI is built on - TRACI 2.2 is already embedded — no separate methods download needed - Includes USLCI background processes (US electricity, transport, materials)</p>
 <p><strong>TRACI 2.2</strong> covers: - Global Warming Potential (kg CO₂-eq) - Acidification (kg SO₂-eq) - Eutrophication, freshwater (kg N-eq) - Smog Formation (kg O₃-eq) - Human Health — Cancer (CTUh) - Human Health — Non-cancer (CTUh) - Ecotoxicity (CTUe) - Ozone Depletion (kg CFC-11-eq) - Fossil Fuel Depletion (MJ surplus)</p>
-<p><strong>Ecoinvent migration path:</strong> The EPA publishes an official FEDEFL↔︎ecoinvent flow mapping (https://github.com/USEPA/fedelemflowlist). When ecoinvent is loaded, change <code>-db lca_commons</code> to <code>-db ecoinvent</code> in the startup script. Recipe cards need no changes.</p>
+<p><strong>Ecoinvent migration path:</strong> The EPA publishes an official FEDEFL↔︎ecoinvent flow mapping (https://github.com/USEPA/fedelemflowlist). When ecoinvent is loaded, change <code>-db lca_methods</code> to <code>-db ecoinvent</code> in the startup script. Recipe cards need no changes.</p>
 <hr>
 </section>
 <section id="step-0-one-time-database-setup-instructoradmin-not-students" class="level2">
@@ -327,7 +333,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>First try via the gdt-server REST API (automated):</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-X</span> POST http://localhost:8080/api/import <span class="dt">\</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">-H</span> <span class="st">"Content-Type: application/octet-stream"</span> <span class="dt">\</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">--data-binary</span> @<span class="st">"</span><span class="va">$HOME</span><span class="st">/olca-data/lca_commons_2025.1.zolca"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">--data-binary</span> @<span class="st">"</span><span class="va">$HOME</span><span class="st">/olca-data/lca_methods_2025.1.zolca"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>If that endpoint is not exposed, use the openLCA desktop app: - File → Import → Linked Data (JSON-LD) → select the .zolca file</p>
 </section>
 <section id="c.-update-the-startup-scripts" class="level3">
@@ -337,7 +343,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">-db</span> paper_cup_lca</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># After:</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="ex">-db</span> lca_commons</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="ex">-db</span> lca_methods</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="d.-future-ecoinvent-startup-script" class="level3">
 <h3 class="anchored" data-anchor-id="d.-future-ecoinvent-startup-script">0d. (Future) Ecoinvent startup script</h3>
@@ -582,7 +588,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="co">#   2. Place the file in $HOME/olca-data/</span></span>
 <span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a><span class="co">#   3. Update ZOLCA_FILE below with the exact filename</span></span>
 <span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a><span class="va">ZOLCA_FILE</span><span class="op">=</span><span class="st">"</span><span class="va">$HOME</span><span class="st">/olca-data/lca_commons_2025.1.zolca"</span></span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a><span class="va">ZOLCA_FILE</span><span class="op">=</span><span class="st">"</span><span class="va">$HOME</span><span class="st">/olca-data/lca_methods_2025.1.zolca"</span></span>
 <span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="bu">[</span> <span class="ot">!</span> <span class="ot">-f</span> <span class="st">"</span><span class="va">$ZOLCA_FILE</span><span class="st">"</span> <span class="bu">]</span><span class="kw">;</span> <span class="cf">then</span></span>
 <span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">"ERROR: </span><span class="va">$ZOLCA_FILE</span><span class="st"> not found."</span></span>
@@ -598,7 +604,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-25"><a href="#cb14-25" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="bu">[</span> <span class="st">"</span><span class="va">$HTTP_STATUS</span><span class="st">"</span> <span class="ot">=</span> <span class="st">"200"</span> <span class="bu">]</span><span class="kw">;</span> <span class="cf">then</span></span>
 <span id="cb14-26"><a href="#cb14-26" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">"[setup] Import successful."</span></span>
-<span id="cb14-27"><a href="#cb14-27" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">"[setup] Update start_olca.sh line 41: change '-db paper_cup_lca' to '-db lca_commons'"</span></span>
+<span id="cb14-27"><a href="#cb14-27" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">"[setup] Update start_olca.sh line 41: change '-db paper_cup_lca' to '-db lca_methods'"</span></span>
 <span id="cb14-28"><a href="#cb14-28" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">"[setup] Then restart: bash stop_olca.sh &amp;&amp; bash start_olca.sh"</span></span>
 <span id="cb14-29"><a href="#cb14-29" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span></span>
 <span id="cb14-30"><a href="#cb14-30" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">"[setup] API import returned HTTP </span><span class="va">$HTTP_STATUS</span><span class="st">"</span></span>
@@ -640,7 +646,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="even">
 <td><code>start_olca.sh</code></td>
 <td>Modify</td>
-<td>Change <code>-db paper_cup_lca</code> → <code>-db lca_commons</code> (do after import)</td>
+<td>Change <code>-db paper_cup_lca</code> → <code>-db lca_methods</code> (do after import)</td>
 </tr>
 <tr class="odd">
 <td><code>setup_olca.sh</code></td>

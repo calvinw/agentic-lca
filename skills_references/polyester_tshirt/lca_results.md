@@ -1,6 +1,6 @@
 # LCA Results: Polyester T-shirt — 1 unit
 
-Generated: 2026-06-14 02:22  |  openLCA system ID: `92b6c1aa-0d32-4f98-937b-814c03ed0241`
+Generated: 2026-06-18 17:52  |  openLCA system ID: `ce7be270-605a-488d-a8a2-29f5b2a46172`
 
 ## Step 1 — Goal and Scope
 
@@ -72,27 +72,31 @@ Characterization factors from the database. Each impact category score is the su
 
 | Impact Category | Score | Unit |
 |---|---:|---|
-| Human health - cancer | **0.000000** | CTUcancer |
-| Acidification | **0.000000** | kg SO2 eq |
-| Eutrophication (Freshwater) | **0.000000** | kg P eq |
-| Human health - particulate matter | **0.000000** | PM 2.5 eq |
-| Smog formation | **0.000216** | kg O3 eq |
-| Human health - non-cancer | **0.000000** | CTUnoncancer |
 | Ozone depletion | **0.000000** | kg CFC-11 eq |
+| Ecotoxicity | **0.000000** | CTUe |
+| Respiratory effects (Particulate) | **0.000000** | kg PM2.5 eq |
+| Acidification | **0.000000** | kg SO2 eq |
+| Carcinogenics | **0.000000** | CTUh |
 | Global warming | **2.535000** | kg CO2 eq |
+| Smog (Photochemical Oxidation Formation) | **0.000216** | kg O3 eq |
+| Non carcinogenics | **0.000000** | CTUh |
+| Eutrophication: freshwater | **0.000000** | kg P eq |
+| Eutrophication: marine | **0.000000** | kg N eq |
 
 ## Summary
 
 **LCIA Method:** TRACI 2.2
 
-> **Human health - cancer: 0.000000 CTUcancer** per 1.0 unit of 1 polyester T-shirt, ready for sale (approximately 200 g of fabric)
-> **Acidification: 0.000000 kg SO2 eq** per 1.0 unit of 1 polyester T-shirt, ready for sale (approximately 200 g of fabric)
-> **Eutrophication (Freshwater): 0.000000 kg P eq** per 1.0 unit of 1 polyester T-shirt, ready for sale (approximately 200 g of fabric)
-> **Human health - particulate matter: 0.000000 PM 2.5 eq** per 1.0 unit of 1 polyester T-shirt, ready for sale (approximately 200 g of fabric)
-> **Smog formation: 0.000216 kg O3 eq** per 1.0 unit of 1 polyester T-shirt, ready for sale (approximately 200 g of fabric)
-> **Human health - non-cancer: 0.000000 CTUnoncancer** per 1.0 unit of 1 polyester T-shirt, ready for sale (approximately 200 g of fabric)
 > **Ozone depletion: 0.000000 kg CFC-11 eq** per 1.0 unit of 1 polyester T-shirt, ready for sale (approximately 200 g of fabric)
+> **Ecotoxicity: 0.000000 CTUe** per 1.0 unit of 1 polyester T-shirt, ready for sale (approximately 200 g of fabric)
+> **Respiratory effects (Particulate): 0.000000 kg PM2.5 eq** per 1.0 unit of 1 polyester T-shirt, ready for sale (approximately 200 g of fabric)
+> **Acidification: 0.000000 kg SO2 eq** per 1.0 unit of 1 polyester T-shirt, ready for sale (approximately 200 g of fabric)
+> **Carcinogenics: 0.000000 CTUh** per 1.0 unit of 1 polyester T-shirt, ready for sale (approximately 200 g of fabric)
 > **Global warming: 2.535000 kg CO2 eq** per 1.0 unit of 1 polyester T-shirt, ready for sale (approximately 200 g of fabric)
+> **Smog (Photochemical Oxidation Formation): 0.000216 kg O3 eq** per 1.0 unit of 1 polyester T-shirt, ready for sale (approximately 200 g of fabric)
+> **Non carcinogenics: 0.000000 CTUh** per 1.0 unit of 1 polyester T-shirt, ready for sale (approximately 200 g of fabric)
+> **Eutrophication: freshwater: 0.000000 kg P eq** per 1.0 unit of 1 polyester T-shirt, ready for sale (approximately 200 g of fabric)
+> **Eutrophication: marine: 0.000000 kg N eq** per 1.0 unit of 1 polyester T-shirt, ready for sale (approximately 200 g of fabric)
 
 ## Product System Graphs
 

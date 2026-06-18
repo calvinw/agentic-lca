@@ -180,6 +180,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../plan/PLAN_DATABASE_PREPROCESSING.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">DATABASE_PREPROCESSING</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../plan/PLAN_PRODUCTION_LCIA_LCA_COMMONS_TRACI.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">PRODUCTION_LCIA_LCA_COMMONS_TRACI</span></a>
   </div>
@@ -662,7 +668,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="how-to-use-recipe-in-this-system">How to Use ReCiPe in This System</h2>
 <section id="recommended-approach-import-the-free-openlca-lcia-methods-pack" class="level3">
 <h3 class="anchored" data-anchor-id="recommended-approach-import-the-free-openlca-lcia-methods-pack">Recommended approach — Import the free openLCA LCIA methods pack</h3>
-<p>The cleanest path is to import the <strong>openLCA LCIA methods pack</strong> on top of the <code>lca_commons</code> database that is already running. This is a small free file (methods only, no background processes) that adds ReCiPe 2016, CML, EF, ILCD, and about a dozen other methods alongside TRACI 2.2.</p>
+<p>The cleanest path is to import the <strong>openLCA LCIA methods pack</strong> on top of the <code>lca_methods</code> database that is already running. This is a small free file (methods only, no background processes) that adds ReCiPe 2016, CML, EF, ILCD, and about a dozen other methods alongside TRACI 2.2.</p>
 <p><strong>Step 1 — Download the methods pack (one time only)</strong></p>
 <ol type="1">
 <li>Go to https://nexus.openlca.org (free account required)</li>
@@ -760,7 +766,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </thead>
 <tbody>
 <tr class="odd">
-<td>lca_commons running, LCIA methods pack imported</td>
+<td>lca_methods running, LCIA methods pack imported</td>
 <td>Recommended — <code>method_name: "ReCiPe 2016 Midpoint (H)"</code></td>
 </tr>
 <tr class="even">
