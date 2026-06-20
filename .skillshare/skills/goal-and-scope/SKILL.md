@@ -5,7 +5,7 @@ author: Junghyun Choi (elenachoi1)
 description: >
   Teaching skill for the LCA concept of goal and scope — the opening decisions
   in a life cycle study that define why it is being done, who it is for, and
-  what is included or excluded. Invoke as /goal-and-scope <case-study>, for
+  what is included or excluded. Invoke as /goal-and-scope followed by a case study name, for
   example /goal-and-scope wool_yarn or /goal-and-scope polyester_tshirt. The
   skill reads the recipe card for that case study and teaches the concept using
   real data, Socratic questions, and fashion or retail business context.
