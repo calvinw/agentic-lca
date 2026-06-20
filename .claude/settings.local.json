@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__lca-mcp__get_case_study",
+      "mcp__lca-mcp__get_lca_svg",
+      "mcp__lca-mcp__get_unit_process_svg",
+      "mcp__lca-mcp__list_case_studies",
+      "mcp__lca-mcp__run_lca",
+      "mcp__lca-mcp__check_server",
+      "mcp__lca-mcp__list_impact_methods",
+      "Write",
+      "Bash(mkdir*)"
+    ]
+  }
+}

@@ -1,5 +1,5 @@
 ---
-version: 0.1
+version: 0.2
 name: damage-characterization
 author: Junghyun Choi (elenachoi1)
 description: >
@@ -70,16 +70,18 @@ conversational. Build understanding one step at a time.
 
 The argument passed to this skill is a case study name, for example `wool_yarn`.
 
-Use the Read tool to open:
+Call the `get_case_study` MCP tool with that name:
 ```
-skills_references/<argument>/lca_results.md
+get_case_study("<argument>")
 ```
 
-From **Step 7 — LCIA Results (TRACI 2.2)**, read the midpoint impact category
-scores that are non-zero for this case study. These are the only numbers used
-in this skill — do not introduce any other figures.
+This returns a pre-computed bundle. From it, read:
+- `bundle["lca_results"]["lcia"]` — the midpoint impact category scores
 
-If no argument is given, or if the file does not exist, say:
+Use only the non-zero scores from this bundle. Do not introduce any other
+figures. No separate `run_lca` call is needed.
+
+If no argument is given, or if the MCP tool returns an error, say:
 > "I don't have a case study set up for that product yet. The ones ready to
 > explore are: **wool_yarn**, **cotton_fiber**, **polyester_tshirt**.
 > Which would you like to start with?"

@@ -1,5 +1,5 @@
 ---
-version: 0.1
+version: 0.2
 name: impact-characterization
 author: Junghyun Choi (elenachoi1)
 description: >
@@ -57,25 +57,26 @@ conversational. Build understanding one step at a time.
 
 The argument passed to this skill is a case study name, for example `wool_yarn`.
 
-Use the Read tool to open both:
+Call the `get_case_study` MCP tool with that name:
 ```
-skills_references/<argument>/recipe_card.md
-skills_references/<argument>/lca_results.md
+get_case_study("<argument>")
 ```
 
-From `recipe_card.md`, read the `name` and `processes` (for the inventory
-flows). From `lca_results.md`, read:
-- **Step 5 — LCI Results** — the compiled inventory totals (the starting
-  point for this skill)
-- **Step 7 — LCIA Results (TRACI 2.2)** — the final impact category scores
-  (what the student's table should add up to)
+This returns a pre-computed bundle. From it, read:
+- `bundle["recipe_card"]` — the full recipe card YAML text
+- From the recipe card YAML frontmatter: `name` and `processes`
+- `bundle["lca_results"]["lci"]` — the compiled inventory totals (starting point)
+- `bundle["lca_results"]["lcia"]` — the TRACI 2.2 impact category scores (what
+  the student's table should add up to)
 
-Everything you teach comes from what is in these two files. Do not invent
+No separate `run_lca` call is needed — all results are pre-computed in the bundle.
+
+Everything you teach comes from what is in these results. Do not invent
 numbers. The worked examples below give you the exact characterization
 factors already verified against each case study's real results, so you do
 not need to derive them yourself — just use the ones provided per case study.
 
-If no argument is given, or if the files do not exist, say:
+If no argument is given, or if the MCP tool returns an error, say:
 > "I don't have a case study set up for that product yet. The ones ready to
 > explore are: **wool_yarn**, **cotton_fiber**, **polyester_tshirt**.
 > Which would you like to start with?"
@@ -150,9 +151,10 @@ Introduce the product:
 > "Let's build the full characterization table for **[name]** — every flow,
 > every impact category that matters here."
 
-Show the supply chain diagram:
+Show the supply chain diagram by calling the `get_lca_svg` MCP tool
+and displaying the returned SVG inline:
 ```
-![<product name> supply chain — structure](skills_references/<argument>/product_graph_structure.svg)
+get_lca_svg(recipe_card="<content from get_case_study>", graph_type="structure")
 ```
 
 Then use the matching block below for the chosen case study. Present the

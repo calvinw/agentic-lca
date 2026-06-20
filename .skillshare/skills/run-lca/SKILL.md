@@ -1,5 +1,5 @@
 ---
-version: 0.1
+version: 0.2
 name: run-lca
 author: Calvin Williamson (calvinw)
 description: >
@@ -15,62 +15,61 @@ description: >
 
 ## How this skill works
 
-The standard workflow produces four files:
+Call the `run_lca` MCP tool with the recipe card YAML as a string. The tool
+returns LCI totals, LCIA impact scores, scaling vector, and two SVG supply
+chain diagrams — all in one call. No bash commands needed.
 
-| File | Purpose |
-|---|---|
-| `recipe_card.md` | YAML spec: defines the system (edit this) |
-| `lca_results.md` | Generated report: matrices, scaling vector, results |
-| `product_graph_scaled.svg` | Scaled diagram — supply chain map with amounts and scaling factors |
-| `product_graph_structure.svg` | Structure diagram — supply chain map with flow names only |
-
-Run the analysis with:
-```bash
-python3 lca_scripts/lca_analysis.py lca_analysis/<name>/recipe_card.md
 ```
+run_lca(recipe_card="<yaml string>")
+```
+
+The tool returns:
+```json
+{
+  "name": "...",
+  "method": "TRACI 2.2",
+  "functional_unit": "1 shirt — One cotton t-shirt",
+  "system_id": "...",
+  "lci": {
+    "Carbon dioxide": { "amount": 0.38, "unit": "kg", "type": "emission" },
+    "Water":          { "amount": 2125, "unit": "L",  "type": "resource" }
+  },
+  "lcia": {
+    "Global warming": { "score": 0.396, "unit": "kg CO2 eq" },
+    "Acidification":  { "score": 0.0,   "unit": "kg SO2 eq" }
+  },
+  "scaling_vector": {
+    "P1 — Cotton farming": 0.266,
+    "P2 — Yarn spinning":  0.231
+  },
+  "svg_scaled":    "<svg>...</svg>",
+  "svg_structure": "<svg>...</svg>"
+}
+```
+
+Display both SVGs inline so the student can see the supply chain diagram.
+Explain the results in plain English — never show the raw JSON to the student.
 
 ---
 
 ## Prerequisites
 
-The openLCA `gdt-server` must be running on port 8080 (starts automatically
-via `postStartCommand`). Verify:
+Check that the Life Cycle Assessment MCP server is running using the
+`check_server` tool before calling `run_lca`. If it returns `{"running": false}`,
+tell the student:
 
-```bash
-curl -s http://localhost:8080/api/version
-```
-
-If it is not running:
-```bash
-bash .devcontainer/start_olca.sh
-```
-
-Python packages required:
-```bash
-pip install olca-ipc olca-schema pyyaml numpy --break-system-packages
-```
-
-**Critical**: always use `RestClient`, NOT `ipc.Client`. The gdt-server speaks
-REST, not JSON-RPC:
-
-```python
-from olca_ipc.rest import RestClient   # ← correct for gdt-server
-import olca_schema as o
-
-client = RestClient("http://localhost:8080/")
-```
+> "The calculation engine isn't running right now. Start it by running
+> `cd mcp-lca && uv run python sse_server.py` in the terminal, then try again."
 
 ---
 
 ## recipe_card.md format
 
-`recipe_card.md` is a markdown file whose YAML frontmatter fully specifies the
-LCA model. The markdown body is free text (ignored by the runner).
+The recipe card is a YAML string (the frontmatter of a `recipe_card.md` file).
+Pass it directly to `run_lca` — no file path needed.
 
 ```yaml
----
 name: <human name for this analysis>
-author: Calvin Williamson (calvinw)
 goal: <one sentence describing the purpose>
 
 functional_unit:
@@ -78,35 +77,21 @@ functional_unit:
   amount: 1.0
   unit: <unit symbol, must appear in 'units' below>
 
-# Unit symbols used anywhere in this file.
-# Each entry creates a UnitGroup + FlowProperty in openLCA.
-# key   = symbol referenced in flows and processes
-# value = human-readable description
 units:
   cup: Cup count
   L:   Volume
-  kWh: Energy
+  MJ:  Energy
   kg:  Mass
 
-# Intermediate product flows (technosphere).
-# These move between processes inside the system.
 products:
   - { name: <flow name>, unit: <symbol> }
 
-# Elementary flows crossing the biosphere boundary.
-#   emissions  → substances released to nature (e.g. CO₂ to air)
-#   resources  → substances extracted from nature (e.g. water, crude oil)
 elementary_flows:
   emissions:
     - { name: <flow name>, unit: <symbol> }
   resources:
     - { name: <flow name>, unit: <symbol> }
 
-# Unit processes.
-# reference_output  → the product this process "sells" (diagonal of A)
-# inputs            → product flows consumed (negative off-diagonal of A)
-# emissions         → biosphere outputs (entries of B)
-# resources         → biosphere inputs (extracted from nature)
 processes:
   - name: <process name>
     reference_output: { flow: <product name>, amount: <number> }
@@ -117,17 +102,16 @@ processes:
     resources:
       - { flow: <resource name>, amount: <number> }
 
-# Must match one of the process names above.
 reference_process: <process name that delivers the functional unit>
----
+
+lcia:
+  method_name: "TRACI 2.2"
 ```
 
 ### Minimal working example (coffee)
 
 ```yaml
----
 name: Coffee LCA — one cup
-author: Calvin Williamson (calvinw)
 goal: Calculate CO₂ for one cup of coffee
 functional_unit:
   description: One cup of coffee
@@ -137,17 +121,17 @@ functional_unit:
 units:
   cup: Cup count
   L:   Volume
-  kWh: Energy
+  MJ:  Energy
   kg:  Mass
 
 products:
-  - { name: Coffee,        unit: cup }
-  - { name: Boiled water,  unit: L   }
-  - { name: Electricity,   unit: kWh }
+  - { name: Coffee,       unit: cup }
+  - { name: Boiled water, unit: L   }
+  - { name: Electricity,  unit: MJ  }
 
 elementary_flows:
   emissions:
-    - { name: CO2 to air, unit: kg }
+    - { name: Carbon dioxide, unit: kg }
 
 processes:
   - name: P1 — Make coffee
@@ -163,107 +147,56 @@ processes:
   - name: P3 — Burn coal
     reference_output: { flow: Electricity,  amount: 1.0 }
     emissions:
-      - { flow: CO2 to air,   amount: 1.0 }
+      - { flow: Carbon dioxide, amount: 1.0 }
 
 reference_process: P1 — Make coffee
----
+
+lcia:
+  method_name: "TRACI 2.2"
 ```
 
 ---
 
-## What the runner prints (13 steps)
+## FEDEFL flow names
 
-`lca_analysis.py` mirrors the LCA methodology exactly:
+Always use exact EPA FEDEFL names for elementary flows:
 
-| Step | What |
+| Use this | Not this |
 |---|---|
-| 1 | Goal and scope — functional unit, reference flow vector f |
-| 2 | Product graph — processes, products, emissions summary |
-| 3 | Creates unit groups and flow properties in openLCA |
-| 4 | Creates product flows (technosphere) |
-| 5 | Creates elementary flows (biosphere) |
-| 6 | Creates unit processes with exchanges |
-| 7 | Builds product system (auto-link by flow matching) |
-| 8 | Displays technology matrix **A** |
-| 9 | Solves **s = A⁻¹ · f** and shows scaling vector with bar chart |
-| 10 | Displays intervention matrix **B** |
-| 11 | Submits calculation to gdt-server, waits for result |
-| 12 | Compares B·s (numpy) vs openLCA result — shows ✓ MATCH or ✗ DIFF |
-| 13 | Contribution analysis — which process drives the impact |
-
-Output is written to `lca_results.md` with all matrices and results as
-markdown tables.
+| `Carbon dioxide` | `CO2`, `CO2 to air` |
+| `Methane` | `CH4` |
+| `Nitrous oxide` | `N2O` |
+| `Nitrogen oxides` | `NOx` |
+| `Sulfur dioxide` | `SO2` |
+| `Water` | `H2O` |
 
 ---
 
-## What to specify when setting up a new analysis
-
-Ask the user for:
+## What to ask the user when setting up a new analysis
 
 1. **Name and goal** — what system, why are they studying it?
-
 2. **Functional unit** — what, how much, which unit?
-   - Never silently default geography for real ecoinvent processes.
-
-3. **Units** — list every unit symbol used (cup, kg, kWh, L, m², MJ, …).
-
-4. **Products** (technosphere flows) — one entry per intermediate good or
-   service that flows between processes.
-
-5. **Emissions** (biosphere flows) — CO₂, CH₄, NOₓ, freshwater, etc.
-   For a real database, these must match ecoinvent elementary flow names exactly.
-
-6. **Processes** — for each process:
-   - What is the reference output (the "product" it sells)?
-   - What does it consume from other processes (inputs)?
-   - What does it emit to nature (emissions)?
-
+3. **Units** — list every unit symbol used.
+4. **Products** — intermediate goods flowing between processes.
+5. **Emissions** — CO₂, CH₄, NOₓ, freshwater, etc.
+6. **Processes** — for each: what does it produce, consume, and emit?
 7. **Reference process** — which process delivers the functional unit?
-   This is the root of the product system.
 
 ---
 
-## Low-level API (for custom scripts)
+## After getting results
 
-```python
-from olca_ipc.rest import RestClient
-import olca_schema as o
+Explain everything in plain English. Never show raw JSON. Always:
 
-client = RestClient("http://localhost:8080/")
+1. Show both SVG diagrams (scaled and structure)
+2. Call out the **global warming** score first — it's the number students
+   understand most easily
+3. Explain the **scaling vector** — which processes ran how much?
+4. Identify the **hotspot** — which process contributed most to GWP?
+5. Connect the result to a real business decision
 
-# Create entities
-ug   = o.new_unit_group("Mass units", "kg")
-fp   = o.new_flow_property("Mass", ug)
-flow = o.new_product("My product", fp)
-client.put_all(ug, fp, flow)
-
-# Build product system (auto-links processes)
-system_ref = client.create_product_system(ref_process)
-
-# Calculate
-setup  = o.CalculationSetup(target=o.Ref(id=system_ref.id), amount=1.0)
-result = client.calculate(setup)
-result.wait_until_ready()
-
-# Inventory results
-for f in result.get_total_flows():
-    print(f.envi_flow.flow.name, f.amount)
-
-# LCIA results (requires an impact method in the database)
-for r in result.get_total_impacts():
-    print(r.impact_category.name, r.amount, r.impact_category.ref_unit)
-
-result.dispose()  # always dispose
-```
-
----
-
-## Common errors
-
-| Error | Cause | Fix |
-|---|---|---|
-| `Connection refused` | gdt-server not running | `bash .devcontainer/start_olca.sh` |
-| `AttributeError: module 'olca_ipc' has no attribute 'RestClient'` | Using wrong import | `from olca_ipc.rest import RestClient` |
-| `create_product_system returned None` | Process exchanges not linked | Check flow names match exactly between processes |
-| `get_total_impacts()` empty | No LCIA method in database | Load a method (ReCiPe, CML, etc.) via ecoinvent import first |
-| `wait_until_ready()` hangs | Solver error | `docker logs olca-server` for stack trace |
+Example:
+> "To produce one cotton t-shirt, the cotton farm only needs to run at 27%
+> capacity — but it still accounts for most of the water use (2,125 litres).
+> The total climate impact is 0.40 kg of CO₂-equivalent, roughly the same as
+> driving a car for 3 kilometres."

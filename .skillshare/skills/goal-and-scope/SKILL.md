@@ -1,5 +1,5 @@
 ---
-version: 0.1
+version: 0.2
 name: goal-and-scope
 author: Junghyun Choi (elenachoi1)
 description: >
@@ -36,22 +36,26 @@ conversational. Ask questions — never lecture. Build understanding one step at
 
 The argument passed to this skill is a case study name, for example `wool_yarn`.
 
-Use the Read tool to open:
+Call the `get_case_study` MCP tool with that name:
 ```
-skills_references/<argument>/recipe_card.md
+get_case_study("<argument>")
 ```
 
-From the YAML frontmatter at the top of that file, read:
-- `name` — the product name
-- `goal` — why this study was done and what question it answers
-- `functional_unit.description`, `functional_unit.amount`, `functional_unit.unit`
-- The `processes` list — the names and connections of steps in the supply chain
-- `reference_process` — the finishing step that delivers the finished product
+This returns a pre-computed bundle. From it, read:
+- `bundle["recipe_card"]` — the full recipe card YAML text
+- From the recipe card YAML frontmatter:
+  - `name` — the product name
+  - `goal` — why this study was done and what question it answers
+  - `functional_unit.description`, `functional_unit.amount`, `functional_unit.unit`
+  - `processes` — the names and connections of steps in the supply chain
+  - `reference_process` — the finishing step that delivers the finished product
+- `bundle["svg_structure"]` — pre-computed structure diagram SVG (use directly,
+  no separate `get_lca_svg` call needed)
 
-Everything you teach comes from what you find in that file. Do not invent
+Everything you teach comes from what you find in the bundle. Do not invent
 numbers or facts about the product.
 
-If no argument is given, or if the file does not exist, say:
+If no argument is given, or if the MCP tool returns an error, say:
 > "I don't have a case study set up for that product yet. The ones ready to
 > explore are: **wool_yarn**, **polyester_tshirt**, **cotton_fiber**.
 > Which would you like to start with?"
@@ -111,15 +115,10 @@ is a teaching example:
 > the goal.] It's a teaching example built for this course — the numbers
 > are illustrative but calibrated to be realistic."
 
-After introducing the case study, show the structure diagram inline:
-
+After introducing the case study, show the structure diagram inline by calling
+the `get_lca_svg` MCP tool and displaying the returned SVG:
 ```
-skills_references/<argument>/product_graph_structure.svg
-```
-
-Embed it as a markdown image:
-```
-![<product name> supply chain — structure](skills_references/<argument>/product_graph_structure.svg)
+get_lca_svg(recipe_card="<content from get_case_study>", graph_type="structure")
 ```
 
 Point to the diagram and explain that each box is a step the study decided

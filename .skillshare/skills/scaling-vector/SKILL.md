@@ -1,5 +1,5 @@
 ---
-version: 0.1
+version: 0.2
 name: scaling-vector
 author: Calvin Williamson (calvinw)
 description: >
@@ -41,30 +41,30 @@ Ask questions — never lecture. Build understanding one step at a time.
 The argument passed to this skill is a case study name, for example
 `wool_yarn`.
 
-Use the Read tool to open both of these files:
-
+Call the `get_case_study` MCP tool with that name:
 ```
-skills_references/<argument>/recipe_card.md
-skills_references/<argument>/lca_results.md
+get_case_study("<argument>")
 ```
 
-From the **recipe card** frontmatter, extract:
-- `name` — the product name
-- `functional_unit.description` and `functional_unit.amount` and `functional_unit.unit`
-- `processes` — names, `reference_output` (flow name + amount), and `inputs` (flow name + amount)
-- `elementary_flows.emissions` — the gas names and units
-- `reference_process` — which process is the finishing line
+This returns a pre-computed bundle. From it, read:
+- `bundle["recipe_card"]` — the full recipe card YAML text
+- From the recipe card YAML frontmatter:
+  - `name` — the product name
+  - `functional_unit.description`, `functional_unit.amount`, `functional_unit.unit`
+  - `processes` — names, `reference_output` (flow + amount), `inputs` (flow + amount)
+  - `elementary_flows.emissions` — the gas names and units
+  - `reference_process` — which process is the finishing line
+- `bundle["svg_structure"]` — pre-computed structure diagram SVG
+- `bundle["svg_scaled"]` — pre-computed scaled diagram SVG
+- `bundle["unit_process_svgs"]` — dict of process_name → pre-computed SVG card
+- `bundle["lca_results"]["scaling_vector"]` — verified scaling factor per process
+- `bundle["lca_results"]["lci"]` — scaled inventory totals per flow
+- `bundle["lca_results"]["lcia"]` — final TRACI 2.2 impact scores
 
-From **lca_results.md**, extract:
-- Step 3 — Scaling Vector table (the verified s values, one per process)
-- Step 6 — Scaled Emissions by Process table (s × emission rate for each process and gas)
-- Step 7 — LCIA Characterization table if present (the final impact scores)
-- The Summary section (the headline impact numbers)
+No separate `get_lca_svg`, `get_unit_process_svg`, or `run_lca` calls are
+needed — everything is pre-computed in the bundle.
 
-You will use the recipe card to guide the student through the calculation,
-and lca_results.md to confirm their answers are correct.
-
-If no argument is given, or if the file does not exist, say:
+If no argument is given, or if the MCP tool returns an error, say:
 > "I don't have a case study set up for that product yet. The ones ready to
 > explore are: **wool_yarn**, **polyester_tshirt**, **cotton_fiber**.
 > Which would you like to start with?"
@@ -93,14 +93,10 @@ or manufacturing analogy. For example:
 > per batch, and you want three loaves, it runs 1.5 times. The number of
 > times it runs is the scaling factor — it's just a ratio."
 
-Show the structure diagram so the student can see the overall shape of the
-chain before diving into individual processes. Output this markdown image tag
-**verbatim** (substituting the argument for `<argument>`):
-
-![Cotton Fiber supply chain — structure](skills_references/cotton_fiber/product_graph_structure.svg)
-
+Show the structure diagram by calling the `get_lca_svg` MCP tool
+and displaying the returned SVG inline:
 ```
-![<product name> supply chain — structure](skills_references/<argument>/product_graph_structure.svg)
+get_lca_svg(recipe_card="<content from get_case_study>", graph_type="structure")
 ```
 
 Briefly orient them to it:
@@ -114,10 +110,10 @@ Briefly orient them to it:
 
 Next, introduce the idea of unit process data and walk through each process
 **one diagram at a time**. For each process P1, P2, … (in order from the
-recipe card `processes` list), show its unit process card:
-
+recipe card `processes` list), call the `get_unit_process_svg` MCP tool
+and display the returned SVG inline:
 ```
-![P1 — [process name] unit process](skills_references/<argument>/unit_process_P1.svg)
+get_unit_process_svg(recipe_card="<content from get_case_study>", process_name="<exact process name>")
 ```
 
 After showing each diagram, say something like:
@@ -264,10 +260,10 @@ Step 3 table:
 > Our numbers match exactly."
 
 Then show what the scaling factors mean in practice — the supply chain diagram
-with all amounts scaled to the functional unit. Show the scaled graph:
-
+with all amounts scaled to the functional unit. Call the `get_lca_svg` MCP tool
+with `graph_type="scaled"` and display the returned SVG inline:
 ```
-![<product name> supply chain — scaled](skills_references/<argument>/product_graph_scaled.svg)
+get_lca_svg(recipe_card="<content from get_case_study>", graph_type="scaled")
 ```
 
 Point out what has changed compared to the structure diagram the student saw

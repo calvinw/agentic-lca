@@ -98,9 +98,6 @@ Use these plain-English explanations when you run these common commands:
 
 | Command | What to say before running it |
 |---|---|
-| `python3 lca_scripts/lca_analysis.py ...` | "I'm going to run the LCA analysis now. This is like pressing 'Calculate' — the computer will read the supply chain file, send it to the openLCA software, do the maths, and save a report and two supply chain diagrams." |
-| `python3 lca_scripts/lca_svg.py ...` | "I'm going to generate a supply chain diagram from the recipe card. This creates an SVG image — a picture you can open in VS Code — showing how the processes connect." |
-| `curl -s http://localhost:8080/api/version` | "I'm going to check whether the openLCA software is switched on and ready. Think of it like knocking on a door — if it answers, we know it's running." |
 | `ls` or `tree` | "I'm going to look at what files and folders exist here, like opening a drawer in a filing cabinet to see what's inside." |
 | `git status` | "I'm going to check which files have been changed or added since the last time we saved our work to the project history." |
 | `git add` / `git commit` | "I'm going to save the current state of the project — like taking a snapshot — so we can always come back to this point if needed." |
@@ -117,17 +114,15 @@ If a command produces output, go through it line by line (or group by group) and
 
 **Bad:**
 ```
-lca_results.md written.
-product_graph_scaled.svg saved.
-product_graph_structure.svg saved.
+15 skills discovered.
+Syncing to claude... done.
 ```
 > Done.
 
 **Good:**
-> The command finished and reported two things:
-> - **lca_results.md written** — this means the written report (the one with all the numbers and tables) has been saved into the cotton shirt folder. You can open it in VS Code to read it.
-> - **product_graph_scaled.svg saved** — this is the scaled diagram (with amounts and scaling factors), saved as a vector image you can open in VS Code.
-> - **product_graph_structure.svg saved** — this is the structure diagram (flow names only), also saved as a vector image.
+> The sync finished and reported two things:
+> - **15 skills discovered** — this means it found all 15 teaching skills in the project and is ready to push them out to all the AI assistants.
+> - **Syncing to claude... done** — the updated skills have been delivered to Claude. It will use the new versions from this point on.
 > Everything went as expected — no errors.
 
 ---
@@ -193,27 +188,31 @@ After every file edit or code change, always provide exactly these 3 points:
 
 ---
 
-## The openLCA Server
+## Displaying SVG diagrams in Claude Code
 
-The openLCA server does **not** start automatically. Students must start it manually before running any analysis. There are three scripts in the project root for managing it:
+When a skill calls an MCP tool that returns an SVG diagram (`get_lca_svg`,
+`get_unit_process_svg`), do NOT paste the raw SVG XML inline in your
+response. Instead, save it directly to a file using the Write tool:
 
-- **`setup_olca.sh`** — Use this the very first time in a new Codespace. It builds the openLCA software (takes a minute or two, happens only once) and then starts the server.
-- **`start_olca.sh`** — Use this at the beginning of every session after the first. Much faster because the build step is already done.
-- **`stop_olca.sh`** — Use this to shut the server down when done.
-
-To check whether the server is running:
-```bash
-curl -s http://localhost:8080/api/version
 ```
-Explain the result as: "I just sent a quick 'are you there?' message to the openLCA software running in the background. It replied with its version number, which means it's up and running and ready to do calculations."
+lca_debug/<case_study>_<graph_type>.svg
+```
 
-If it is not running, start it with `bash start_olca.sh` and explain: "The openLCA calculation engine wasn't running — I've just started it up. It's a bit like turning on the calculator before you can press any buttons. This only takes a few seconds."
+For example:
+- `lca_debug/wool_yarn_structure.svg`
+- `lca_debug/wool_yarn_scaled.svg`
+- `lca_debug/wool_yarn_unit_P1.svg`
 
-If it has never been set up before, use `bash setup_olca.sh` instead and explain: "This is the first-time setup — the computer needs to download and build the openLCA software before it can start. It will also download the reference data it needs (about 340 MB in total). This takes a few minutes but only needs to happen once."
+After saving, tell the student:
+> "I've saved the diagram to `lca_debug/<filename>.svg` — click that file
+> in the VS Code file explorer on the left to open it as a picture."
 
-`setup_olca.sh` now handles everything automatically in sequence: Python tools → data downloads → Docker build → server start → database import. Each step is skipped on subsequent runs if it has already been completed.
+The `lca_debug/` folder is a scratch folder for diagram previews. It is
+safe to overwrite files there. If the folder does not exist yet, run
+`mkdir -p lca_debug` before writing.
 
-For a full technical reference — including the correct Python client to use (`RestClient`, not `ipc.Client`), all 45 installed LCIA methods, useful query snippets, and a common-errors table — see **`docs/openlca_server_reference.md`**.
+On Claude.ai web this instruction does not apply — there is no Write tool
+available there, so the SVG is displayed inline automatically.
 
 ---
 
@@ -246,7 +245,7 @@ lcia:
   method_name: "TRACI 2.2"
 ```
 
-This tells `lca_analysis.py` which impact method to use when converting the inventory (raw kg of CO₂, SO₂, etc.) into scored impact categories. Always include this section. The default and most commonly used value is `"TRACI 2.2"`, but any of the 45 methods installed on the server can be used — see `docs/openlca_server_reference.md` for the full list of valid method names.
+This tells the LCA MCP server which impact method to use when converting the inventory (raw kg of CO₂, SO₂, etc.) into scored impact categories. Always include this section. The default and most commonly used value is `"TRACI 2.2"`.
 
 **TRACI 2.2** (Tool for the Reduction and Assessment of Chemicals and other environmental Impacts) is the US EPA's standard life cycle impact assessment method. It produces eight impact scores:
 
@@ -262,66 +261,6 @@ This tells `lca_analysis.py` which impact method to use when converting the inve
 | Ozone depletion | kg CFC-11 eq | Damage to the stratospheric ozone layer |
 
 TRACI 2.2 requires FEDEFL flow names (see section above). Flows with non-FEDEFL names will not match any characterisation factor and will contribute zero to all impact categories.
-
-**The blorp example** (`lca_analysis/blorp/`) is intentionally excluded from TRACI scoring — it uses made-up units (Blorps, Haze, Smog) as a pure maths teaching demo. Its recipe card does not include the `lcia:` section and should be left unchanged.
-
----
-
-## The `product_graphs/` folder — a testing workshop for supply chain diagrams
-
-The `product_graphs/` folder is a dedicated space for experimenting with the
-`lca_svg.py` script (the tool that draws supply chain diagrams). Think of it
-like a test kitchen: you can cook up any imaginary product or supply chain,
-no matter how simple or weird, and immediately see what the diagram looks
-like.
-
-### What is in there
-
-Two groups of files live side by side:
-
-1. **Recipe cards** — named `<product>_recipe_card.md`. These are copies of
-   the real recipe cards from `lca_analysis/`, plus extra experimental ones
-   with made-up products and unusual combinations of emissions and resource
-   extractions (e.g. 7 different pollutants on a 3-node chain).
-
-2. **SVG diagrams** — two per recipe card:
-   - `<product>_product_graph_scaled.svg` — shows amounts and scaling factors
-   - `<product>_product_graph_structure.svg` — shows flow names only
-
-### What you should do when asked about this folder
-
-When a student asks about `product_graphs/` or wants to test `lca_svg.py`,
-you should:
-
-1. Explain the folder is a safe sandbox — nothing here is tied to the
-   real openLCA server, so there is no risk of breaking anything.
-
-2. Invent hypothetical recipe cards on the spot to demonstrate specific
-   features of the SVG script. For example:
-   - One node, one emission (simplest possible diagram)
-   - Many emissions on a single node (tests arrow stacking)
-   - Many extractions on a single node (tests green arrow spacing)
-   - Convergent supply chains (two suppliers feeding one assembler)
-   - Divergent supply chains (one supplier feeding two downstream processes)
-   - Chains where the reference process is not the first one listed
-   - Very wide or very tall layouts
-
-3. Generate both the scaled and structure SVGs so the student can compare.
-
-4. If the student is curious about the visual style, explain that the box
-   width (`BOX_W`) and arrow spacing (`EMIT_OFFSET`) are just numbers at
-   the top of `lca_svg.py` that can be changed to make the diagram look
-   however you like.
-
-### Naming convention
-
-Every SVG output should follow this pattern so it is easy to find:
-
-- `python3 lca_scripts/lca_svg.py product_graphs/<product>_recipe_card.md product_graphs/<product>_product_graph_scaled.svg`
-- `python3 lca_scripts/lca_svg.py product_graphs/<product>_recipe_card.md product_graphs/<product>_product_graph_structure.svg --structure`
-
-Do not rely on the default output path (which strips `.md` to `.svg`) —
-always pass the output path explicitly.
 
 ---
 
@@ -583,7 +522,7 @@ Project-level OpenCode configuration (project root, highest precedence).
 ### `.devcontainer/devcontainer.json`
 Dev container configuration.
 - References container image: `ghcr.io/calvinw/ai-course-devcontainer:latest`
-- Runs setup on creation: `setup-env.sh && install-mcps.sh && install-datascience.sh && setup-skills.sh && skillshare install github.com/anthropics/skills/skill-creator && (sync-skills.sh || true) && pip install olca-ipc olca-schema --break-system-packages`
+- Runs setup on creation: `setup-env.sh && install-mcps.sh && install-datascience.sh && setup-skills.sh && skillshare install github.com/anthropics/skills/skill-creator && (sync-skills.sh || true)`
 - Declares secrets for GitHub Codespaces: `STITCH_API_KEY`
 
 ---
@@ -597,7 +536,6 @@ Dev container configuration.
    - `setup-skills.sh` — Initialize skills infrastructure
    - `skillshare install github.com/anthropics/skills/skill-creator` — Install skill-creator tool
    - `sync-skills.sh` — Deploy skills to all agents
-   - `pip install olca-ipc olca-schema` — Install openLCA Python client
 
 2. **Adding new MCPs** — Edit `configs/mcp-servers.conf`, then:
    ```

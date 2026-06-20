@@ -1,5 +1,5 @@
 ---
-version: 0.1
+version: 0.2
 name: supply-chain
 author: Calvin Williamson (calvinw)
 description: >
@@ -37,28 +37,25 @@ Ask questions — never lecture. Build understanding one step at a time.
 The argument passed to this skill is a case study name, for example
 `polyester_tshirt`.
 
-Use the Read tool to open:
+Call the `get_case_study` MCP tool with that name:
 ```
-skills_references/<argument>/recipe_card.md
-```
-
-From the YAML frontmatter, extract:
-- `name` — the product name
-- `goal` — the study question in plain language
-- `functional_unit.description` — what is being measured
-- `processes` — the list of steps, their names, inputs, and emissions
-- `reference_process` — which process delivers the finished product
-- `products` — the intermediate and final goods flowing between steps
-- `elementary_flows.emissions` — the pollutants released to the environment
-
-Also note the filename pattern for the structure diagram:
-```
-skills_references/<argument>/product_graph_structure.svg
+get_case_study("<argument>")
 ```
 
-You will direct the student to open this file in VS Code at the right moment.
+This returns a pre-computed bundle. From it, read:
+- `bundle["recipe_card"]` — the full recipe card YAML text
+- From the recipe card YAML frontmatter:
+  - `name` — the product name
+  - `goal` — the study question in plain language
+  - `functional_unit.description` — what is being measured
+  - `processes` — the list of steps, their names, inputs, and emissions
+  - `reference_process` — which process delivers the finished product
+  - `products` — the intermediate and final goods flowing between steps
+  - `elementary_flows.emissions` — the pollutants released to the environment
+- `bundle["svg_structure"]` — pre-computed structure diagram SVG (use directly,
+  no separate `get_lca_svg` call needed)
 
-If no argument is given, or if the file does not exist, say:
+If no argument is given, or if the MCP tool returns an error, say:
 > "I don't have a case study set up for that product yet. The ones ready to
 > explore are: **wool_yarn**, **polyester_tshirt**, **cotton_fiber**.
 > Which would you like to start with?"
@@ -109,18 +106,15 @@ Then:
 
 1. Tell them how many processes are in this case study's supply chain
    (count the `processes` list you read from the recipe card).
-2. Ask them to open the structure diagram in VS Code:
-   > "Let's look at the actual diagram. In the file panel on the left side
-   > of VS Code, open the file at:
-   > `skills_references/<argument>/product_graph_structure.svg`
-   > Click on it and it should display a picture with boxes and arrows.
-   > Tell me when you can see it."
-3. Wait for them to confirm before continuing.
-
-If they are not sure how to open it in VS Code, explain:
-> "In the left sidebar of VS Code you'll see a list of folders. Click the
-> arrow next to `skills_references`, then the arrow next to `<product>`,
-> and you'll see the file listed there. Click once on its name to open it."
+2. Show the structure diagram by calling the `get_lca_svg` MCP tool
+   and displaying the returned SVG inline:
+   ```
+   get_lca_svg(recipe_card="<content from get_case_study>", graph_type="structure")
+   ```
+3. After showing it, say something like:
+   > "Here is the supply chain map for [product name]. Each box is one step
+   > in the chain. Take a moment to look it over — can you spot the starting
+   > point and the finishing line?"
 
 ---
 

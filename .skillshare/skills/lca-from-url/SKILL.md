@@ -162,10 +162,7 @@ After creating all scenarios, list them for the student:
 
 ### Step 5 — Check the server and offer to run
 
-Check whether the openLCA server is running:
-```bash
-curl -s http://localhost:8080/api/version
-```
+Call the `check_server` MCP tool to see if the calculation engine is ready.
 
 Explain to the student: "I'm going to knock on the door of the openLCA
 calculation engine to see if it's switched on and ready."
@@ -176,18 +173,19 @@ calculation engine to see if it's switched on and ready."
 
 **If not running:** Tell the student:
 > "The openLCA engine isn't running right now. Before we can calculate results,
-> you'll need to start it by running `bash start_olca.sh` in the terminal.
-> Once it's started (takes about 10–20 seconds), come back and I'll run the
-> analysis for you."
+> you'll need to start it by running `cd mcp-lca && uv run python sse_server.py`
+> in the terminal. Once it's started (takes about 10–20 seconds), come back
+> and I'll run the analysis for you."
 
 ---
 
 ### Step 6 — Run and compare (if server is ready)
 
-Run the base case:
-```bash
-python3 lca_scripts/lca_analysis.py lca_analysis/<name>/recipe_card.md
-```
+Call `run_lca(recipe_card=<yaml string>)` with the contents of the base case
+recipe card. Do NOT use a bash command — call the MCP tool directly.
+
+Display both SVG diagrams (scaled and structure) inline. Explain the results
+in plain English before running each scenario.
 
 Then offer to run all scenarios one by one. After all runs are complete,
 present a comparison table:

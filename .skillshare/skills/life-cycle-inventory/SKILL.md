@@ -1,5 +1,5 @@
 ---
-version: 0.1
+version: 0.2
 name: life-cycle-inventory
 author: Junghyun Choi (elenachoi1)
 description: >
@@ -52,19 +52,22 @@ conversational. Build understanding one step at a time.
 
 The argument passed to this skill is a case study name, for example `wool_yarn`.
 
-Use the Read tool to open:
+Call the `get_case_study` MCP tool with that name:
 ```
-skills_references/<argument>/recipe_card.md
+get_case_study("<argument>")
 ```
 
-From the YAML frontmatter and the analysis section, read:
-- `name` — the product name and functional unit
-- `processes` — each process, its reference output, emissions, and resource use
-- `elementary_flows` — the types of emissions and resources in this study
-- Scaling factors — found in the `### Scaling factors` table in the analysis
-  section; these show how much each process runs per functional unit
+This returns a pre-computed bundle. From it, read:
+- `bundle["recipe_card"]` — the full recipe card YAML text
+- From the recipe card YAML frontmatter:
+  - `name` — the product name and functional unit
+  - `processes` — each process, its reference output, emissions, and resource use
+  - `elementary_flows` — the types of emissions and resources in this study
+- `bundle["lca_results"]["scaling_vector"]` — how much each process runs per
+  functional unit (replaces reading the Scaling factors table from the markdown)
+- `bundle["lca_results"]["lci"]` — the compiled inventory totals per flow
 
-If no argument is given, or if the file does not exist, say:
+If no argument is given, or if the MCP tool returns an error, say:
 > "I don't have a case study set up for that product yet. The ones ready to
 > explore are: **wool_yarn**, **cotton_fiber**, **polyester_tshirt**.
 > Which would you like to start with?"
@@ -153,10 +156,10 @@ Introduce the product:
 
 > "Let's build the inventory for **[name]** together."
 
-Show the supply chain diagram:
-
+Show the supply chain diagram by calling the `get_lca_svg` MCP tool
+and displaying the returned SVG inline:
 ```
-![<product name> supply chain — structure](skills_references/<argument>/product_graph_structure.svg)
+get_lca_svg(recipe_card="<content from get_case_study>", graph_type="structure")
 ```
 
 **Introduce the idea of "how much each step runs":**

@@ -1,5 +1,5 @@
 ---
-version: 0.1
+version: 0.2
 name: technosphere-and-ecosphere
 author: Junghyun Choi (elenachoi1)
 description: >
@@ -50,22 +50,26 @@ conversational. Ask questions — never lecture. Build understanding one step at
 
 The argument passed to this skill is a case study name, for example `wool_yarn`.
 
-Use the Read tool to open:
+Call the `get_case_study` MCP tool with that name:
 ```
-skills_references/<argument>/recipe_card.md
+get_case_study("<argument>")
 ```
 
-From the YAML frontmatter at the top of that file, read:
-- `name` — the product name
-- `processes` — the list of production steps (these are all technosphere activities)
-- `products` — the intermediate goods flowing between steps (also technosphere)
-- `elementary_flows.emissions` — substances released into the natural world (cross from technosphere to ecosphere)
-- `elementary_flows.resources` — substances extracted from the natural world (cross from ecosphere to technosphere)
+This returns a pre-computed bundle. From it, read:
+- `bundle["recipe_card"]` — the full recipe card YAML text
+- From the recipe card YAML frontmatter:
+  - `name` — the product name
+  - `processes` — the list of production steps (technosphere activities)
+  - `products` — the intermediate goods flowing between steps (also technosphere)
+  - `elementary_flows.emissions` — substances released into the natural world
+  - `elementary_flows.resources` — substances extracted from the natural world
+- `bundle["svg_structure"]` — pre-computed structure diagram SVG (use directly,
+  no separate `get_lca_svg` call needed)
 
-Everything you teach comes from what you find in that file. Do not invent
+Everything you teach comes from what you find in the bundle. Do not invent
 numbers or facts about the product.
 
-If no argument is given, or if the file does not exist, say:
+If no argument is given, or if the MCP tool returns an error, say:
 > "I don't have a case study set up for that product yet. The ones ready to
 > explore are: **wool_yarn**, **polyester_tshirt**, **cotton_fiber**.
 > Which would you like to start with?"
@@ -152,10 +156,10 @@ field from the recipe card. Keep it to one sentence:
 > "Let's sort a real LCA study into these two worlds. This is the recipe card
 > for **[name]**."
 
-Then show the supply chain diagram:
-
+Then show the supply chain diagram by calling the `get_lca_svg` MCP tool
+and displaying the returned SVG inline:
 ```
-![<product name> supply chain — structure](skills_references/<argument>/product_graph_structure.svg)
+get_lca_svg(recipe_card="<content from get_case_study>", graph_type="structure")
 ```
 
 Walk the student through the two categories, drawing directly from the recipe card:

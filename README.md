@@ -178,7 +178,7 @@ The lesson uses a cooking analogy to introduce the idea — if a bread recipe ma
 
 ### What this project currently calculates
 
-When you run an analysis with `/run-lca`, the tool works through these steps and saves the results to `lca_results.md`:
+When you run an analysis with `/run-lca`, the tool works through these steps:
 
 | Step | What happens |
 |---|---|
@@ -214,44 +214,7 @@ TRACI 2.2 uses the **Federal Elementary Flow List (FEDEFL)** — the US EPA's st
 
 ### How this project works
 
-Each product you study gets its own folder inside `lca_analysis/`. Every folder contains:
-
-| File | What it is |
-|---|---|
-| `recipe_card.md` | The **recipe card** — you describe the product and its supply chain here |
-| `lca_results.md` | The **report** — automatically generated after the analysis runs |
-| `product_graph_scaled.svg` | The **scaled diagram** — supply chain map with amounts and scaling factors |
-| `product_graph_structure.svg` | The **structure diagram** — supply chain map with flow names only |
-
-Current analyses:
-```
-lca_analysis/
-├── coffee/                    — carbon footprint of one cup of coffee
-├── cotton_shirt/              — carbon footprint of one cotton shirt (cradle to gate)
-├── paper_cup/                 — carbon footprint of one paper cup
-├── apple/                     — carbon footprint of one apple (farm to retail)
-├── electricity/               — emissions from producing 200 kWh of electricity
-├── hand_dryer/                — hand dryer vs paper towels energy comparison
-├── hoodie/                    — carbon footprint of one cotton hoodie
-├── light_bulb/                — LED vs incandescent bulb over lifetime
-├── nordic_cotton_reuse/       — Nordic textile reuse scenario
-├── nordic_textile_waste/      — Nordic textile waste scenario
-├── plastic_broom/             — carbon footprint of one plastic broom
-├── polystyrene/               — carbon footprint of 1 kg polystyrene packing
-├── popcorn/                   — popcorn vs polystyrene packing (per kg)
-└── levis/                     — Levi's 501 jeans: baseline + six what-if scenarios
-    ├── levi_jeans/            — baseline (standard manufacturing)
-    ├── levi_jeans_bestcase/   — all best-case assumptions combined
-    ├── levi_jeans_longlife/   — worn for 10 years instead of 3
-    ├── levi_jeans_organic/    — organic cotton substituted
-    ├── levi_jeans_renewable/  — renewable energy at all factories
-    ├── levi_jeans_wash1x/     — washed once a week
-    ├── levi_jeans_wash2x/     — washed twice a week
-    ├── levi_jeans_wash5x/     — washed five times a week
-    └── levi_jeans_wash10x/    — washed ten times a week
-```
-
-You interact with this project by describing a product in a `recipe_card.md` file and then asking the AI assistant to run the analysis for you. The AI handles everything else.
+You describe a product by filling in a **recipe card** — a structured text file that lists the supply chain steps, what each step produces and consumes, and what it emits to or extracts from nature. Then ask the AI assistant to run the analysis for you with `/run-lca`. The AI sends the recipe card to the hosted LCA server, which does the calculations and returns the results.
 
 ---
 
@@ -379,54 +342,6 @@ Flow names in the `elementary_flows` and `emissions` sections must use the exact
 | Water | `Water` |
 
 Do not use abbreviations like `CO2`, `CH4`, or `CO2 to air` — these will not match the TRACI 2.2 characterisation factors and the LCIA step will return zero for that flow.
-
----
-
-### Starting the openLCA server
-
-The openLCA server does **not** start automatically — you need to start it yourself before running any analysis. There are three scripts at the top level of the project for managing it:
-
-#### `setup_olca.sh` — First-time setup (use this the very first time)
-
-```bash
-bash setup_olca.sh
-```
-
-This does everything needed to get the system ready from scratch — in order:
-
-1. Installs the required Python tools
-2. Downloads the FEDEFL elementary flow list (214 MB) and TRACI 2.2 impact method (126 MB) from the project's GitHub release — only if they are not already present
-3. Builds the openLCA calculation engine (only happens once per Codespace)
-4. Starts the server
-5. Imports all the flow and impact data into the database — only if the database is empty
-
-The whole process takes a few minutes the first time, but each step is skipped on subsequent runs if it has already been done.
-
-#### `start_olca.sh` — Start the server (use this every time after that)
-
-```bash
-bash start_olca.sh
-```
-
-This starts the server using the software that was already built by `setup_olca.sh`. It's much faster because it skips the build step. If the server is already running, it will simply say so and do nothing. Use this at the beginning of every working session.
-
-#### `stop_olca.sh` — Stop the server (use this when you are done)
-
-```bash
-bash stop_olca.sh
-```
-
-This shuts the server down cleanly. You do not have to run this — closing your Codespace will stop it too — but it is good practice if you want to free up resources while you are still in your session.
-
-#### Checking whether the server is running
-
-To confirm the server is up and ready:
-
-```bash
-curl -s http://localhost:8080/api/version
-```
-
-If it replies with a version number, the server is running. If it gives an error or no response, run `bash start_olca.sh` to start it.
 
 ---
 
