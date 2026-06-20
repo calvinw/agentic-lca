@@ -7,7 +7,7 @@ description: >
   maths behind life cycle impact assessment, where every emission in the
   inventory is multiplied by a characterization factor (a published number
   that can be different for every impact category) and then summed within
-  each category. Invoke as /impact-characterization <case-study>, for example
+  each category. Invoke as /impact-characterization followed by a case study name, for example
   /impact-characterization wool_yarn or /impact-characterization cotton_fiber.
   The skill reads the recipe card and lca_results.md for that case study and
   has students build the full characterization table themselves, by hand,
