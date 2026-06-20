@@ -7,7 +7,7 @@ description: >
   that goes beyond midpoint impact scores (kg CO2-eq, kg SO2-eq, PM 2.5-eq)
   to ask what those scores actually do to the world, in terms of three areas
   of protection: human health, ecosystem quality, and resource availability.
-  Invoke as /damage-characterization <case-study>, for example
+  Invoke as /damage-characterization followed by a case study name, for example
   /damage-characterization wool_yarn or /damage-characterization
   cotton_fiber. The skill reads the recipe card and lca_results.md for that
   case study and reasons qualitatively about which midpoint scores feed into
