@@ -380,12 +380,12 @@ ul.task-list li input[type="checkbox"] {
 <section id="before-you-begin" class="level2">
 <h2 class="anchored" data-anchor-id="before-you-begin">Before you begin</h2>
 <p>The argument passed to this skill is a case study name, for example <code>wool_yarn</code>.</p>
-<p>Use the Read tool to open both:</p>
-<pre><code>skills_references/&lt;argument&gt;/recipe_card.md
-skills_references/&lt;argument&gt;/lca_results.md</code></pre>
-<p>From <code>recipe_card.md</code>, read the <code>name</code> and <code>processes</code> (for the inventory flows). From <code>lca_results.md</code>, read: - <strong>Step 5 — LCI Results</strong> — the compiled inventory totals (the starting point for this skill) - <strong>Step 7 — LCIA Results (TRACI 2.2)</strong> — the final impact category scores (the destination for this skill)</p>
-<p>Everything you teach comes from what is in these two files. Do not invent numbers. The worked examples below give you the exact characterization factors already verified against each case study’s results, so you do not need to derive them yourself — just use the ones provided per case study.</p>
-<p>If no argument is given, or if the files do not exist, say: &gt; “I don’t have a case study set up for that product yet. The ones ready to &gt; explore are: <strong>wool_yarn</strong>, <strong>cotton_fiber</strong>, <strong>polyester_tshirt</strong>. &gt; Which would you like to start with?”</p>
+<p>Call the <code>get_case_study</code> MCP tool with that name:</p>
+<pre><code>get_case_study("&lt;argument&gt;")</code></pre>
+<p>This returns a pre-computed bundle. From it, read: - <code>bundle["recipe_card"]</code> — the full recipe card YAML text - From the recipe card YAML frontmatter: <code>name</code> and <code>processes</code> - <code>bundle["lca_results"]["lci"]</code> — the compiled inventory totals (starting point) - <code>bundle["lca_results"]["lcia"]</code> — the TRACI 2.2 impact category scores (destination)</p>
+<p>No separate <code>run_lca</code> call is needed — all results are pre-computed in the bundle.</p>
+<p>Everything you teach comes from what is in these results. Do not invent numbers. The worked examples below give you the exact characterization factors already verified against each case study’s results, so you do not need to derive them yourself — just use the ones provided per case study.</p>
+<p>If no argument is given, or if the MCP tool returns an error, say: &gt; “I don’t have a case study set up for that product yet. The ones ready to &gt; explore are: <strong>wool_yarn</strong>, <strong>cotton_fiber</strong>, <strong>polyester_tshirt</strong>. &gt; Which would you like to start with?”</p>
 <hr>
 </section>
 <section id="teaching-sequence" class="level2">
@@ -423,8 +423,8 @@ skills_references/&lt;argument&gt;/lca_results.md</code></pre>
 <blockquote class="blockquote">
 <p>“Let’s convert the inventory for <strong>[name]</strong> into impact scores together.”</p>
 </blockquote>
-<p>Show the supply chain diagram:</p>
-<pre><code>![&lt;product name&gt; supply chain — structure](skills_references/&lt;argument&gt;/product_graph_structure.svg)</code></pre>
+<p>Show the supply chain diagram by calling the <code>get_lca_svg</code> MCP tool and displaying the returned SVG inline:</p>
+<pre><code>get_lca_svg(recipe_card="&lt;content from get_case_study&gt;", graph_type="structure")</code></pre>
 <p>Then use the matching block below for the chosen case study.</p>
 <p><strong>For wool_yarn:</strong></p>
 <blockquote class="blockquote">

@@ -510,17 +510,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="step-5-check-the-server-and-offer-to-run" class="level3">
 <h3 class="anchored" data-anchor-id="step-5-check-the-server-and-offer-to-run">Step 5 — Check the server and offer to run</h3>
-<p>Check whether the openLCA server is running:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-s</span> http://localhost:8080/api/version</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Call the <code>check_server</code> MCP tool to see if the calculation engine is ready.</p>
 <p>Explain to the student: “I’m going to knock on the door of the openLCA calculation engine to see if it’s switched on and ready.”</p>
 <p><strong>If running:</strong> Offer to run the base case immediately: &gt; “The calculation engine is ready. Shall I run the base case now so we can &gt; see the results? I can then run each scenario and we can compare them.”</p>
-<p><strong>If not running:</strong> Tell the student: &gt; “The openLCA engine isn’t running right now. Before we can calculate results, &gt; you’ll need to start it by running <code>bash start_olca.sh</code> in the terminal. &gt; Once it’s started (takes about 10–20 seconds), come back and I’ll run the &gt; analysis for you.”</p>
+<p><strong>If not running:</strong> Tell the student: &gt; “The openLCA engine isn’t running right now. Before we can calculate results, &gt; you’ll need to start it by running <code>cd mcp-lca &amp;&amp; uv run python sse_server.py</code> &gt; in the terminal. Once it’s started (takes about 10–20 seconds), come back &gt; and I’ll run the analysis for you.”</p>
 <hr>
 </section>
 <section id="step-6-run-and-compare-if-server-is-ready" class="level3">
 <h3 class="anchored" data-anchor-id="step-6-run-and-compare-if-server-is-ready">Step 6 — Run and compare (if server is ready)</h3>
-<p>Run the base case:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> lca_scripts/lca_analysis.py lca_analysis/<span class="op">&lt;</span>name<span class="op">&gt;</span>/recipe_card.md</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Call <code>run_lca(recipe_card=&lt;yaml string&gt;)</code> with the contents of the base case recipe card. Do NOT use a bash command — call the MCP tool directly.</p>
+<p>Display both SVG diagrams (scaled and structure) inline. Explain the results in plain English before running each scenario.</p>
 <p>Then offer to run all scenarios one by one. After all runs are complete, present a comparison table:</p>
 <pre><code>| Scenario          | GWP (kg CO₂-eq) | vs. base case |
 |-------------------|-----------------|---------------|
