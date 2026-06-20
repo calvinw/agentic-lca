@@ -7,7 +7,7 @@ description: >
   the step that converts the raw inventory of emissions and resource use
   (kg of CO2, kg of methane, kg of ammonia, litres of water) into a small set
   of comparable impact category scores, using conversion numbers called
-  characterization factors. Invoke as /what-is-impact-assessment <case-study>,
+  characterization factors. Invoke as /what-is-impact-assessment followed by a case study name,
   for example /what-is-impact-assessment wool_yarn or
   /what-is-impact-assessment cotton_fiber. The skill reads the recipe card and
   lca_results.md for that case study and teaches the concept using a
