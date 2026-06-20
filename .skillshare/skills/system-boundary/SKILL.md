@@ -2,7 +2,7 @@
 version: 0.2
 name: system-boundary
 author: Junghyun Choi (elenachoi1)
-description: >
+description: 
   Teaching skill for the LCA concept of system boundary — the fence drawn
   around a study that decides what is counted and what is ignored. Invoke as
   /system-boundary case-study, for example /system-boundary wool_yarn or
