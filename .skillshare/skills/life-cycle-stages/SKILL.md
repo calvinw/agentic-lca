@@ -6,7 +6,7 @@ description: >
   Teaching skill for the LCA concept of life cycle stages — the four named
   boundary types used in fashion and retail LCA studies: cradle to gate,
   cradle to grave, cradle to cradle, and gate to grave. Invoke as
-  /life-cycle-stages <case-study>, for example /life-cycle-stages wool_yarn
+  /life-cycle-stages case-study, for example /life-cycle-stages wool_yarn
   or /life-cycle-stages polyester_tshirt. The skill reads the recipe card for
   that case study and teaches the concept using real data, everyday analogies,
   and fashion or retail business context. Designed for FIT students with no
