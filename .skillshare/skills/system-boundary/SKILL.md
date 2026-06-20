@@ -5,7 +5,7 @@ author: Junghyun Choi (elenachoi1)
 description: >
   Teaching skill for the LCA concept of system boundary — the fence drawn
   around a study that decides what is counted and what is ignored. Invoke as
-  /system-boundary <case-study>, for example /system-boundary wool_yarn or
+  /system-boundary case-study, for example /system-boundary wool_yarn or
   /system-boundary cotton_fiber. The skill reads the recipe card for that
   case study and teaches the concept using everyday analogies, the supply
   chain diagram, and fashion or retail business context. Designed for FIT
