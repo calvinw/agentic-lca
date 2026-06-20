@@ -6,7 +6,7 @@ description: >
   Teaching skill for the LCA concepts of technosphere and ecosphere — the two
   worlds that every LCA study maps: the human-made world of factories, farms,
   and supply chains (technosphere) and the natural world of air, water, and
-  soil (ecosphere). Invoke as /technosphere-and-ecosphere <case-study>, for
+  soil (ecosphere). Invoke as /technosphere-and-ecosphere followed by a case study name, for
   example /technosphere-and-ecosphere wool_yarn or
   /technosphere-and-ecosphere polyester_tshirt. The skill reads the recipe
   card for that case study and teaches the concept by sorting its parts into
