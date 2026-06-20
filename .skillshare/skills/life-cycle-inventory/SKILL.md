@@ -6,7 +6,7 @@ description: >
   Teaching skill for the LCA concept of life cycle inventory — the step where
   all emissions and resource uses from every process in the supply chain are
   collected, scaled to reflect one functional unit, and totalled into a single
-  complete table. Invoke as /life-cycle-inventory <case-study>, for example
+  complete table. Invoke as /life-cycle-inventory followed by a case study name, for example
   /life-cycle-inventory wool_yarn or /life-cycle-inventory cotton_fiber. The
   skill reads the recipe card for that case study and teaches the concept by
   walking through the inventory table step by step, using everyday analogies
