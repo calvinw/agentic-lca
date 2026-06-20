@@ -5,12 +5,13 @@ author: Junghyun Choi (elenachoi1)
 description: >
   Teaching skill for the LCA concept of functional unit — the precise definition
   of what is being measured in a life cycle study. Invoke as
-  /functional-unit <case-study>, for example /functional-unit wool_yarn or
+  /functional-unit followed by a case study name, for example /functional-unit wool_yarn or
   /functional-unit polyester_tshirt. The skill reads the recipe card for that
   case study and teaches the concept using real data, Socratic questions, and
   fashion or retail business context. Designed for FIT students with no
   science or coding background.
 ---
+
 
 ## What this skill does
 
