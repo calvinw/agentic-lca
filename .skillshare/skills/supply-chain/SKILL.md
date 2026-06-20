@@ -6,7 +6,7 @@ description: >
   Teaching skill for the LCA concept of supply chain and system boundary —
   how to read a product graph diagram, what each box (process) represents,
   what flows connect them, and what "upstream" and "downstream" mean. Invoke
-  as /supply-chain <case-study>, for example /supply-chain wool_yarn or
+  as /supply-chain followed by a case study name, for example /supply-chain wool_yarn or
   /supply-chain polyester_tshirt. The skill reads the recipe card for that
   case study and walks the student through the supply chain diagram using
   real data and Socratic questions. Designed for FIT students with no science
