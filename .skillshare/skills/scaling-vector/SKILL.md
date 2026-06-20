@@ -5,7 +5,7 @@ author: Calvin Williamson (calvinw)
 description: >
   Teaching skill for the LCA concept of the scaling vector — how much each
   process in the supply chain must run to deliver exactly one functional unit.
-  Invoke as /scaling-vector <case-study>, for example /scaling-vector wool_yarn
+  Invoke as /scaling-vector case-study, for example /scaling-vector wool_yarn
   or /scaling-vector polyester_tshirt. The skill reads the recipe card and
   lca_results.md for that case study and walks the student through the
   calculation using plain division, not matrix algebra. Designed for FIT
