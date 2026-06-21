@@ -358,9 +358,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#step-1-fetch-and-read-the-source" id="toc-step-1-fetch-and-read-the-source" class="nav-link" data-scroll-target="#step-1-fetch-and-read-the-source">Step 1 — Fetch and read the source</a></li>
   <li><a href="#step-2-map-the-supply-chain" id="toc-step-2-map-the-supply-chain" class="nav-link" data-scroll-target="#step-2-map-the-supply-chain">Step 2 — Map the supply chain</a></li>
   <li><a href="#step-3-translate-into-a-recipe-card" id="toc-step-3-translate-into-a-recipe-card" class="nav-link" data-scroll-target="#step-3-translate-into-a-recipe-card">Step 3 — Translate into a recipe card</a></li>
-  <li><a href="#step-4-create-scenario-variants" id="toc-step-4-create-scenario-variants" class="nav-link" data-scroll-target="#step-4-create-scenario-variants">Step 4 — Create scenario variants</a></li>
-  <li><a href="#step-5-check-the-server-and-offer-to-run" id="toc-step-5-check-the-server-and-offer-to-run" class="nav-link" data-scroll-target="#step-5-check-the-server-and-offer-to-run">Step 5 — Check the server and offer to run</a></li>
-  <li><a href="#step-6-run-and-compare-if-server-is-ready" id="toc-step-6-run-and-compare-if-server-is-ready" class="nav-link" data-scroll-target="#step-6-run-and-compare-if-server-is-ready">Step 6 — Run and compare (if server is ready)</a></li>
   </ul></li>
   <li><a href="#well-known-textile-lcas-you-can-recreate" id="toc-well-known-textile-lcas-you-can-recreate" class="nav-link" data-scroll-target="#well-known-textile-lcas-you-can-recreate">Well-known textile LCAs you can recreate</a></li>
   <li><a href="#tone-and-explanation-rules" id="toc-tone-and-explanation-rules" class="nav-link" data-scroll-target="#tone-and-explanation-rules">Tone and explanation rules</a></li>
@@ -447,87 +444,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><strong>Process naming:</strong> Name processes with a number prefix for clarity: <code>P1 — Sheep farm</code>, <code>P2 — Wool scouring</code>, etc.</p>
 <p><strong>Emissions amounts:</strong> Use the per-unit numbers from the study. If a stage’s emissions are reported per kg of output AND the output amount differs from 1.0, adjust accordingly.</p>
 <p>After writing the file, narrate to the student: &gt; “I’ve created the recipe card at <code>lca_analysis/&lt;name&gt;/recipe_card.md</code>. Here’s &gt; a plain-English summary of what’s in it: …”</p>
-<hr>
-</section>
-<section id="step-4-create-scenario-variants" class="level3">
-<h3 class="anchored" data-anchor-id="step-4-create-scenario-variants">Step 4 — Create scenario variants</h3>
-<p>Create 3–5 scenario recipe cards in the same folder, each changing one assumption from the base case. Name them descriptively:</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Scenario idea</th>
-<th>File name suffix</th>
-<th>What changes</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Renewable energy at mills</td>
-<td><code>_renewable</code></td>
-<td>Electricity CO₂ factor drops to ~0.05 kg/kWh</td>
-</tr>
-<tr class="even">
-<td>Organic farming</td>
-<td><code>_organic</code></td>
-<td>Fertilizer-related N₂O and CO₂ reduced by ~30–40%</td>
-</tr>
-<tr class="odd">
-<td>Recycled fibre input</td>
-<td><code>_recycled</code></td>
-<td>Upstream raw material emissions cut by 40–80%</td>
-</tr>
-<tr class="even">
-<td>Reduced consumer washing</td>
-<td><code>_wash_less</code></td>
-<td>Use-phase electricity reduced (if applicable)</td>
-</tr>
-<tr class="odd">
-<td>Extended product lifetime</td>
-<td><code>_longlife</code></td>
-<td>Functional unit redefined as “per wear” not “per garment”</td>
-</tr>
-<tr class="even">
-<td>Best-case combined</td>
-<td><code>_bestcase</code></td>
-<td>Stack two or three improvements together</td>
-</tr>
-</tbody>
-</table>
-<p>For each scenario, name the file:</p>
-<pre><code>lca_analysis/&lt;study_name&gt;/&lt;study_name&gt;_&lt;scenario&gt;.md</code></pre>
-<p>In each scenario card, add a comment at the top of the YAML body (below the <code>---</code> closing line) explaining exactly what changed and why:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## About this scenario</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>**What changed:** Electricity at the mill now comes from wind and solar,</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>dropping the CO₂ emission factor from 0.5 kg/kWh to 0.05 kg/kWh.</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>**Why this matters:** ...</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>After creating all scenarios, list them for the student: &gt; “I’ve created 4 scenario cards alongside the base case. Here’s what each one &gt; explores: …”</p>
-<hr>
-</section>
-<section id="step-5-check-the-server-and-offer-to-run" class="level3">
-<h3 class="anchored" data-anchor-id="step-5-check-the-server-and-offer-to-run">Step 5 — Check the server and offer to run</h3>
-<p>Call the <code>check_server</code> MCP tool to see if the calculation engine is ready.</p>
-<p>Explain to the student: “I’m going to knock on the door of the openLCA calculation engine to see if it’s switched on and ready.”</p>
-<p><strong>If running:</strong> Offer to run the base case immediately: &gt; “The calculation engine is ready. Shall I run the base case now so we can &gt; see the results? I can then run each scenario and we can compare them.”</p>
-<p><strong>If not running:</strong> Tell the student: &gt; “The openLCA engine isn’t running right now. Before we can calculate results, &gt; you’ll need to start it by running <code>cd mcp-lca &amp;&amp; uv run python sse_server.py</code> &gt; in the terminal. Once it’s started (takes about 10–20 seconds), come back &gt; and I’ll run the analysis for you.”</p>
-<hr>
-</section>
-<section id="step-6-run-and-compare-if-server-is-ready" class="level3">
-<h3 class="anchored" data-anchor-id="step-6-run-and-compare-if-server-is-ready">Step 6 — Run and compare (if server is ready)</h3>
-<p>Call <code>run_lca(recipe_card=&lt;yaml string&gt;)</code> with the contents of the base case recipe card. Do NOT use a bash command — call the MCP tool directly.</p>
-<p>Display both SVG diagrams (scaled and structure) inline. Explain the results in plain English before running each scenario.</p>
-<p>Then offer to run all scenarios one by one. After all runs are complete, present a comparison table:</p>
-<pre><code>| Scenario          | GWP (kg CO₂-eq) | vs. base case |
-|-------------------|-----------------|---------------|
-| Base case         |  XX.X           |  —            |
-| Renewable energy  |  XX.X           |  -XX%         |
-| Organic farming   |  XX.X           |  -XX%         |
-| ...               |  ...            |  ...          |</code></pre>
-<p>Explain in plain English what the numbers mean and what the most impactful scenario is. Connect it to a real business decision: &gt; “If a brand sourcing wool switched their processing mills to renewable energy, &gt; they could cut the wool fiber’s climate impact by about 40%. That’s roughly &gt; the same environmental benefit as taking one car off the road for six months.”</p>
 <hr>
 </section>
 </section>
