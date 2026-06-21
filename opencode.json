@@ -1,11 +1,4 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "model": "opencode/deepseek-v4-flash-free",
-  "mcp": {
-    "lca-mcp": {
-      "type": "remote",
-      "url": "https://lca-mcp.mathplosion.com/sse",
-      "enabled": true
-    }
-  }
+  "model": "opencode/deepseek-v4-flash-free"
 }
