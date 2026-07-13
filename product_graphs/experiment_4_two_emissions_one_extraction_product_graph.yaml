@@ -1,4 +1,3 @@
----
 name: "Experiment 4 — 6 emissions + 4 extractions (convergent)"
 goal: "Convergent topology with 6 emissions and 4 extractions across all three nodes."
 
@@ -62,4 +61,3 @@ processes:
       - { flow: CH4 to air, amount: 0.4 }
 
 reference_process: "P1 — Assemble Widget"
----

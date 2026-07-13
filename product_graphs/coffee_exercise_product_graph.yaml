@@ -1,4 +1,3 @@
----
 name: "Coffee Exercise — Process Tree"
 subtitle: "Per-run rates (quantities between processes unknown)"
 before: true
@@ -39,4 +38,3 @@ processes:
       - { flow: CO2, amount: 0.02 }
 
 reference_process: "P2 — Brewing & Serving"
----
