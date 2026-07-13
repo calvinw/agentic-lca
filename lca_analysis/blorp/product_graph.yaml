@@ -64,3 +64,6 @@ processes:
       - { flow: Haze, amount: 2.0 }
 
 reference_process: "P1 — Reference process"
+
+lcia:
+  method_name: "TRACI 2.2"
