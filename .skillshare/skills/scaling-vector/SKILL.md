@@ -6,7 +6,7 @@ description: >
   Teaching skill for the LCA concept of the scaling vector — how much each
   process in the supply chain must run to deliver exactly one functional unit.
   Invoke as /scaling-vector case-study, for example /scaling-vector wool_yarn
-  or /scaling-vector polyester_tshirt. The skill reads the recipe card and
+  or /scaling-vector polyester_tshirt. The skill reads the product graph and
   lca_results.md for that case study and walks the student through the
   calculation using plain division, not matrix algebra. Designed for FIT
   students with no science or coding background.
@@ -47,8 +47,8 @@ get_case_study("<argument>")
 ```
 
 This returns a pre-computed bundle. From it, read:
-- `bundle["recipe_card"]` — the full recipe card YAML text
-- From the recipe card YAML frontmatter:
+- `bundle["product_graph"]` — the full product graph YAML text
+- From the product graph YAML frontmatter:
   - `name` — the product name
   - `functional_unit.description`, `functional_unit.amount`, `functional_unit.unit`
   - `processes` — names, `reference_output` (flow + amount), `inputs` (flow + amount)
@@ -96,7 +96,7 @@ or manufacturing analogy. For example:
 Show the structure diagram by calling the `get_lca_svg` MCP tool
 and displaying the returned SVG inline:
 ```
-get_lca_svg(recipe_card="<content from get_case_study>", graph_type="structure")
+get_lca_svg(product_graph="<content from get_case_study>", graph_type="structure")
 ```
 
 Briefly orient them to it:
@@ -110,10 +110,10 @@ Briefly orient them to it:
 
 Next, introduce the idea of unit process data and walk through each process
 **one diagram at a time**. For each process P1, P2, … (in order from the
-recipe card `processes` list), call the `get_unit_process_svg` MCP tool
+product graph `processes` list), call the `get_unit_process_svg` MCP tool
 and display the returned SVG inline:
 ```
-get_unit_process_svg(recipe_card="<content from get_case_study>", process_name="<exact process name>")
+get_unit_process_svg(product_graph="<content from get_case_study>", process_name="<exact process name>")
 ```
 
 After showing each diagram, say something like:
@@ -128,7 +128,7 @@ After showing each diagram, say something like:
 > Below are the gases it releases — the emissions — and above are any
 > natural resources it draws on."
 
-Do this for every process in the recipe card before moving on to the table.
+Do this for every process in the product graph before moving on to the table.
 Emphasise the **reference output amount** each time — that is what the
 scaling calculation divides by.
 
@@ -139,7 +139,7 @@ After all unit process diagrams have been shown, say:
 > "Now let's collect all of that into one table so we can see the whole
 > picture at once:"
 
-Build a clear summary table from the recipe card data. Include one row per
+Build a clear summary table from the product graph data. Include one row per
 process showing: the process name, its reference output (what it produces
 per run), its inputs (what it consumes per run, if any), and its emissions
 (what gases it releases per run). Use plain column headers. For example:
@@ -150,7 +150,7 @@ per run), its inputs (what it consumes per run, if any), and its emissions
 | P2 — Cotton farming | 1.0 kg Cotton fiber | 0.2 kg N-fertilizer | 0.8 kg CO₂, 0.015 kg N₂O, 0.010 kg NH₃ |
 
 Adapt this table to whatever processes, inputs, and emissions are in the
-recipe card for the current case study. After the table, say:
+product graph for the current case study. After the table, say:
 
 > "These are the building blocks. Every number in the table came from
 > measurement or a database — not from guessing. Now we can use them to
@@ -263,7 +263,7 @@ Then show what the scaling factors mean in practice — the supply chain diagram
 with all amounts scaled to the functional unit. Call the `get_lca_svg` MCP tool
 with `graph_type="scaled"` and display the returned SVG inline:
 ```
-get_lca_svg(recipe_card="<content from get_case_study>", graph_type="scaled")
+get_lca_svg(product_graph="<content from get_case_study>", graph_type="scaled")
 ```
 
 Point out what has changed compared to the structure diagram the student saw

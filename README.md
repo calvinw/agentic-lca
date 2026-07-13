@@ -208,19 +208,19 @@ The **Life Cycle Impact Assessment (LCIA)** step converts those raw inventory nu
 | Human health — non-cancer | Other toxic health impacts | CTUh |
 | Ozone depletion | Damage to the stratospheric ozone layer | kg CFC-11 equivalent |
 
-TRACI 2.2 uses the **Federal Elementary Flow List (FEDEFL)** — the US EPA's standard naming system for substances like "Carbon dioxide" and "Methane". Recipe cards must use these exact FEDEFL names so the tool can match each emission to its correct impact factors.
+TRACI 2.2 uses the **Federal Elementary Flow List (FEDEFL)** — the US EPA's standard naming system for substances like "Carbon dioxide" and "Methane". Product graphs must use these exact FEDEFL names so the tool can match each emission to its correct impact factors.
 
 ---
 
 ### How this project works
 
-You describe a product by filling in a **recipe card** — a structured text file that lists the supply chain steps, what each step produces and consumes, and what it emits to or extracts from nature. Then ask the AI assistant to run the analysis for you with `/run-lca`. The AI sends the recipe card to the hosted LCA server, which does the calculations and returns the results.
+You describe a product by filling in a **product graph** — a structured text file that lists the supply chain steps, what each step produces and consumes, and what it emits to or extracts from nature. Then ask the AI assistant to run the analysis for you with `/run-lca`. The AI sends the product graph to the hosted LCA server, which does the calculations and returns the results.
 
 ---
 
-### The recipe card format
+### The product graph format
 
-The `recipe_card.md` file is where you describe the product you want to study. Think of it like filling out a form — each section asks for a specific piece of information about the supply chain. You do not need to understand the technical format; the AI assistant will help you fill it in. But it helps to know what each section represents.
+The `product_graph.yaml` file is where you describe the product you want to study. Think of it like filling out a form — each section asks for a specific piece of information about the supply chain. You do not need to understand the technical format; the AI assistant will help you fill it in. But it helps to know what each section represents.
 
 #### `name` and `goal`
 A short title for the analysis and one sentence explaining what you are trying to find out.
@@ -233,7 +233,7 @@ The precise thing you are measuring. LCA always measures per *one unit* of somet
 > *Example: one cotton shirt*
 
 #### `units`
-Every unit of measurement used anywhere in the recipe card — kilograms, kilowatt-hours, litres, and so on. Think of this as the glossary of measurements for your analysis.
+Every unit of measurement used anywhere in the product graph — kilograms, kilowatt-hours, litres, and so on. Think of this as the glossary of measurements for your analysis.
 
 #### `products`
 The intermediate goods that flow between steps in the supply chain — things that are made by one process and consumed by another. For a shirt, this would include raw cotton, yarn, fabric, and electricity. These stay *inside* the system boundary.
@@ -253,7 +253,7 @@ The final step that delivers the finished product — the one that connects to t
 
 #### Complete example — Cotton Shirt
 
-Here is the full recipe card for the cotton shirt analysis. Read through it top to bottom and you will see how each section connects to the supply chain description above it.
+Here is the full product graph for the cotton shirt analysis. Read through it top to bottom and you will see how each section connects to the supply chain description above it.
 
 ```yaml
 name: Cotton Shirt LCA — cradle to gate

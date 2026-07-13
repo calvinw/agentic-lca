@@ -8,7 +8,7 @@ description: >
   collected, scaled to reflect one functional unit, and totalled into a single
   complete table. Invoke as /life-cycle-inventory followed by a case study name, for example
   /life-cycle-inventory wool_yarn or /life-cycle-inventory cotton_fiber. The
-  skill reads the recipe card for that case study and teaches the concept by
+  skill reads the product graph for that case study and teaches the concept by
   walking through the inventory table step by step, using everyday analogies
   and fashion or retail business context. Designed for FIT students with no
   science or coding background. Builds directly on the technosphere-and-ecosphere
@@ -58,8 +58,8 @@ get_case_study("<argument>")
 ```
 
 This returns a pre-computed bundle. From it, read:
-- `bundle["recipe_card"]` — the full recipe card YAML text
-- From the recipe card YAML frontmatter:
+- `bundle["product_graph"]` — the full product graph YAML text
+- From the product graph YAML frontmatter:
   - `name` — the product name and functional unit
   - `processes` — each process, its reference output, emissions, and resource use
   - `elementary_flows` — the types of emissions and resources in this study
@@ -159,7 +159,7 @@ Introduce the product:
 Show the supply chain diagram by calling the `get_lca_svg` MCP tool
 and displaying the returned SVG inline:
 ```
-get_lca_svg(recipe_card="<content from get_case_study>", graph_type="structure")
+get_lca_svg(product_graph="<content from get_case_study>", graph_type="structure")
 ```
 
 **Introduce the idea of "how much each step runs":**
@@ -388,7 +388,7 @@ any more than you would add apples to oranges. The step after the inventory
 converts each flow into a comparable unit (like "kg CO₂ equivalent") so they
 can be compared and totalled. That conversion step is called characterization.
 
-**"What if a process has no emissions in the recipe card?"**
+**"What if a process has no emissions in the product graph?"**
 Then it contributes nothing to those inventory entries. A process can appear
 in the supply chain purely as a transformation step — taking materials from one
 upstream process and passing them to the next — without releasing any direct

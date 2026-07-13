@@ -1,0 +1,172 @@
+# ## About this analysis
+#
+# Cradle-to-use LCA for an organic cotton hooded sweatshirt, reproducing the supply
+# chain structure from the GreenDelta/OpenLCA case study (Loubert, 2022).
+#
+# **Source:** GreenDelta (2022). *LCA Case Study: Organic cotton sweater*. OpenLCA, v1.11.0.
+#
+# ### Supply chain structure (Figure 2 of source report)
+#
+# Three parallel material streams feed into Manufacturing, then the product flows
+# through Distribution and Use:
+#
+# ```
+# Cotton farming → Yarn production → Textile production ──────────┐
+#                                                                  ├─→ Manufacturing → Distribution → Use
+# Zipper production ───────────────────────────────────────────────┤
+#                                                                  │
+# Polyester resin production ──────────────────────────────────────┘
+# ```
+#
+# ### Component weights (from report)
+#
+# | Component | Weight |
+# |---|---|
+# | Organic cotton fabric | 706.24 g |
+# | Brass zipper | 23.24 g |
+# | Polyester resin (adhesive) | 20.52 g |
+# | **Total** | **750 g** |
+#
+# ### Waste factors in fabric production
+#
+# - Yarn production: 5% waste → 1.053 kg cotton fiber per kg yarn
+# - Textile production: 2.5% waste → 1.025 kg yarn per kg fabric
+# - Manufacturing: 11.8% waste → 0.790 kg fabric input (706.24 g × 1.118 ÷ 1000)
+#
+# ### Use phase (52 washes/year, Germany)
+#
+# - Washed once a week (52 times/year)
+# - Washing machine: type C, 6 kg capacity, 60°C
+# - Base case: 3.8 kg average load (realistic fill), air-dried (no tumble dryer)
+# - Tap water: 13 kg per wash × 52 = 676 L/year
+#
+# ### Emission factors
+#
+# All emission factors are approximate, calibrated to reproduce the report's total of
+# **26.0 kg CO₂ eq per sweater per year** (EF 3.0 base case). The background database
+# used in the original study is Ecoinvent 3.8 cut-off; process-level CO₂ values
+# are derived from that database and are not given directly in the report.
+#
+# ### Key findings from the source report
+#
+# - **Biggest hotspots:** Use phase and raw materials extraction each account for
+#   roughly 40% of most impact categories.
+# - **Washing dominates energy use** — the German electricity grid (with nuclear share)
+#   drives ionising radiation and water use impacts.
+# - **Agriculture dominates eutrophication** — NH₃ and N₂O from organic cotton farming
+#   cause freshwater, marine, and terrestrial eutrophication.
+# - **Brass zipper dominates minerals/metals** — copper and zinc extraction are the
+#   main drivers of the resource use (minerals and metals) impact category.
+# - **End of life is minor** for most categories (no recycling modelled — textile goes
+#   to municipal solid waste in Germany).
+#
+# ### Simplifications in this product graph
+#
+# - End-of-life stage omitted (waste flows not yet supported in our tool).
+# - Electricity for washing modelled as direct CO₂ on the Use process rather than
+#   linking to a German electricity supply process.
+# - Zipper modelled as 1 kg brass zipper production (background process).
+# - All transport within India and packaging during distribution omitted.
+
+name: Organic Cotton Hooded Sweatshirt — 1 year use
+goal: >
+  Reproduce the supply chain structure from the GreenDelta/OpenLCA hooded sweatshirt
+  case study. Functional unit: 1 organic cotton 2XL hooded sweatshirt (750g), used for
+  1 year (worn twice a week, washed once a week = 52 washes).
+  Emission factors are approximate, calibrated to match the report's total of
+  26 kg CO2 eq per sweater per year (EF 3.0 method, base case: Maharashtra, India).
+
+functional_unit:
+  description: 1 organic cotton hooded sweatshirt (750g), used for 1 year (52 washes)
+  amount: 1.0
+  unit: item
+
+units:
+  item: One hooded sweatshirt
+  kg:   Mass
+  L:    Volume
+
+products:
+  - { name: Cotton fiber,         unit: kg   }
+  - { name: Cotton yarn,          unit: kg   }
+  - { name: Knit fabric,          unit: kg   }
+  - { name: Brass zipper,         unit: kg   }
+  - { name: Polyester resin,      unit: kg   }
+  - { name: Hooded sweatshirt,    unit: item }
+  - { name: Sweatshirt in Berlin, unit: item }
+  - { name: Sweatshirt service,   unit: item }
+
+elementary_flows:
+  emissions:
+    - { name: Carbon dioxide, compartment: air, unit: kg }
+    - { name: Nitrous oxide,  compartment: air, unit: kg }
+    - { name: Ammonia,        compartment: air, unit: kg }
+  resources:
+    - { name: Water, unit: L }
+
+processes:
+  # ── Raw materials — organic cotton supply chain ───────────────────────────
+  - name: P1 — Cotton farming
+    reference_output: { flow: Cotton fiber, amount: 1.0 }
+    resources:
+      - { flow: Water, amount: 1500.0 }
+    emissions:
+      - { flow: Carbon dioxide, amount: 2.3  }
+      - { flow: Nitrous oxide, amount: 0.005 }
+      - { flow: Ammonia, amount: 0.003 }
+
+  - name: P2 — Yarn production
+    reference_output: { flow: Cotton yarn, amount: 1.0 }
+    inputs:
+      - { flow: Cotton fiber, amount: 1.053 }
+    emissions:
+      - { flow: Carbon dioxide, amount: 4.3 }
+
+  - name: P3 — Textile production
+    reference_output: { flow: Knit fabric, amount: 1.0 }
+    inputs:
+      - { flow: Cotton yarn, amount: 1.025 }
+    emissions:
+      - { flow: Carbon dioxide, amount: 5.0 }
+
+  # ── Raw materials — zipper and resin (parallel inputs to manufacturing) ───
+  - name: P4 — Zipper production
+    reference_output: { flow: Brass zipper, amount: 1.0 }
+    emissions:
+      - { flow: Carbon dioxide, amount: 4.0 }
+
+  - name: P5 — Polyester resin production
+    reference_output: { flow: Polyester resin, amount: 1.0 }
+    emissions:
+      - { flow: Carbon dioxide, amount: 4.5 }
+
+  # ── Foreground processes ──────────────────────────────────────────────────
+  - name: P6 — Manufacturing
+    reference_output: { flow: Hooded sweatshirt, amount: 1.0 }
+    inputs:
+      - { flow: Knit fabric,    amount: 0.790 }
+      - { flow: Brass zipper,   amount: 0.023 }
+      - { flow: Polyester resin, amount: 0.021 }
+    emissions:
+      - { flow: Carbon dioxide, amount: 3.0 }
+
+  - name: P7 — Distribution
+    reference_output: { flow: Sweatshirt in Berlin, amount: 1.0 }
+    inputs:
+      - { flow: Hooded sweatshirt, amount: 1.0 }
+    emissions:
+      - { flow: Carbon dioxide, amount: 2.5 }
+
+  - name: P8 — Use
+    reference_output: { flow: Sweatshirt service, amount: 1.0 }
+    inputs:
+      - { flow: Sweatshirt in Berlin, amount: 1.0 }
+    resources:
+      - { flow: Water, amount: 676.0 }
+    emissions:
+      - { flow: Carbon dioxide, amount: 11.0 }
+
+reference_process: P8 — Use
+
+lcia:
+  method_name: "TRACI 2.2"

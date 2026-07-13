@@ -1,15 +1,27 @@
----
-name: Levi's 501 Jeans — organic cotton farm (Custom Scenario B)
+# ## About this scenario
+#
+# Custom Scenario C — best of everything combined.
+#
+# Changes from baseline:
+#   - P1: farm CO₂ 2.9 → 1.5 kg/kg (organic cotton)
+#   - P4: consumer care electricity 25.0 → 6.16 kWh (wash every 10 wears)
+#   - P5: electricity emission factor 0.5 → 0.05 kg CO₂/kWh (renewable grid)
+#
+# Total electricity = (22.5 × 0.8) + 5.2 + 6.16 = 18 + 5.2 + 6.16 = 29.36 kWh
+# CO₂ via electricity = 29.36 × 0.05 = 1.47 kg
+# Direct CO₂ = P1 (1.5) + P4 direct (6.4) = 7.9 kg
+# Expected total: 7.9 + 1.47 = ~9.4 kg CO₂.
+
+name: Levi's 501 Jeans — best of everything (Custom Scenario C)
 goal: >
-  Model the impact of switching from conventional cotton to organic cotton.
-  Organic cotton avoids synthetic nitrogen fertilisers, which are a major
-  source of CO₂ and N₂O emissions on conventional cotton farms. The farm
-  emission factor drops from 2.9 kg to 1.5 kg CO₂ per kg of raw cotton.
-  Everything else is identical to the baseline.
-  Question: is the "organic cotton" label actually meaningful for climate impact?
+  Model the theoretical minimum footprint for a pair of Levi's 501 jeans by
+  combining all available levers simultaneously: organic cotton farm, renewable
+  energy supply chain, and best-practice consumer washing (every 10 wears).
+  This is the absolute floor — what would the footprint be if every decision
+  in the entire lifecycle were made as sustainably as possible?
 
 functional_unit:
-  description: One pair of Levi's 501 jeans — full lifecycle, organic cotton
+  description: One pair of Levi's 501 jeans — full lifecycle, best-case scenario
   amount: 1.0
   unit: pair
 
@@ -53,30 +65,18 @@ processes:
     reference_output: { flow: Levis 501 jeans full lifecycle, amount: 1.0 }
     inputs:
       - { flow: Finished jeans, amount: 1.0  }
-      - { flow: Electricity,    amount: 25.0 }
+      - { flow: Electricity,    amount: 6.16 }
     emissions:
       - { flow: Carbon dioxide, amount: 6.4 }
 
   - name: P5 — Generate electricity
     reference_output: { flow: Electricity, amount: 1.0 }
     emissions:
-      - { flow: Carbon dioxide,  amount: 0.5    }
-      - { flow: Nitrogen oxides, amount: 0.0009 }
-      - { flow: Sulfur dioxide,  amount: 0.0006 }
+      - { flow: Carbon dioxide,  amount: 0.05     }
+      - { flow: Nitrogen oxides, amount: 0.00009  }
+      - { flow: Sulfur dioxide,  amount: 0.00006  }
 
 reference_process: P4 — Distribute, wash, dry, and dispose of jeans
 
 lcia:
   method_name: "TRACI 2.2"
----
-
-## About this scenario
-
-Custom Scenario B — organic cotton farm.
-
-The only change from the baseline is P1's emission factor: 2.9 → 1.5 kg CO₂/kg cotton.
-This represents a roughly 48% reduction in farm-level CO₂, reflecting the removal of
-synthetic nitrogen fertilisers and reduction in machinery use.
-
-Saving = 2.9 - 1.5 = 1.4 kg CO₂ per kg cotton × 1.0 kg cotton per pair = 1.4 kg saved.
-Expected total: 33.4 - 1.4 = ~32.0 kg CO₂.

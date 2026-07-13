@@ -1,8 +1,15 @@
----
-# ─────────────────────────────────────────────────────────────
-# LCA Analysis Specification
-# Run with:  python3 lca_scripts/lca_analysis.py lca_analysis/blorp/recipe_card.md
-# ─────────────────────────────────────────────────────────────
+# ## About this analysis
+#
+# Classic teaching example used in LCA courses to introduce the matrix method.
+# Three processes with a convergent supply chain: Blorps are the final product,
+# which require Zings from Process A and Flums from Process B.
+#
+# Expected scaling vector: s = (1.0, 15.0, 25.0)
+# - Process A runs 15 times to deliver 30 Zings
+# - Process B runs 25 times to deliver 100 Flums
+# - The reference process runs once to deliver 10 Blorps
+#
+# Expected total emissions: 39 Smog, 50 Haze, 60 Aqua extracted.
 
 name: "Blorp LCA — 10 Blorps"
 goal: >
@@ -57,17 +64,3 @@ processes:
       - { flow: Haze, amount: 2.0 }
 
 reference_process: "P1 — Reference process"
----
-
-## About this analysis
-
-Classic teaching example used in LCA courses to introduce the matrix method.
-Three processes with a convergent supply chain: Blorps are the final product,
-which require Zings from Process A and Flums from Process B.
-
-Expected scaling vector: s = (1.0, 15.0, 25.0)
-- Process A runs 15 times to deliver 30 Zings
-- Process B runs 25 times to deliver 100 Flums
-- The reference process runs once to deliver 10 Blorps
-
-Expected total emissions: 39 Smog, 50 Haze, 60 Aqua extracted.

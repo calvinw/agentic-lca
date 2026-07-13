@@ -1,4 +1,34 @@
----
+# # Paper Cup LCA — Cradle to Grave
+#
+# ## Data source
+#
+# Based on Hocking (1991, 1994) and Franklin Associates, as presented in
+# *LCA_Paper_vs_Plastic_Cup_v2.xlsx*. Values are illustrative order-of-magnitude
+# estimates suitable for teaching.
+#
+# ## Supply chain
+#
+# | Process | What it does |
+# |---|---|
+# | P1 — Forestry and raw material production | Grows trees, produces wood pulp (10.1 g) and PE coating resin (1.5 g); withdraws 14.3 L of freshwater |
+# | P2 — Paper cup manufacturing | Converts raw materials into one finished cup; uses electricity, steam, and transport; emits CO₂ and NOₓ from combustion |
+# | P3 — Grid electricity | Supplies 0.025 MJ of electricity to the factory; emits 0.1 kg CO₂/MJ |
+# | P4 — Steam generation | Supplies 0.062 MJ of process heat; emits 0.056 kg CO₂/MJ |
+# | P5 — Road transport | Delivers cup to point of sale; emits 0.074 kg CO₂/MJ of diesel |
+# | P6 — Landfill disposal | Cup goes to landfill; paper decomposes and emits CH₄ (modelled as 0.0008 kg CO₂-eq) |
+#
+# ## Expected results
+#
+# | Impact | Value |
+# |---|---|
+# | Global warming (CO₂-eq) | ~0.011 kg |
+# | Freshwater withdrawn | 14.3 L |
+#
+# The paper cup uses roughly **20× more water** than the PS foam cup (14.3 L vs 0.7 L)
+# because pulping and papermaking are highly water-intensive. However, paper has a
+# higher GWP (~0.011 kg) compared to PS foam (~0.005 kg) due to the energy-intensive
+# pulping process and methane from landfill decomposition.
+
 name: "Paper Cup LCA — cradle to grave"
 goal: >
   Calculate the total environmental impact of producing and disposing of
@@ -81,35 +111,3 @@ reference_process: "P2 — Paper cup manufacturing"
 
 lcia:
   method_name: "TRACI 2.2"
----
-
-# Paper Cup LCA — Cradle to Grave
-
-## Data source
-
-Based on Hocking (1991, 1994) and Franklin Associates, as presented in
-*LCA_Paper_vs_Plastic_Cup_v2.xlsx*. Values are illustrative order-of-magnitude
-estimates suitable for teaching.
-
-## Supply chain
-
-| Process | What it does |
-|---|---|
-| P1 — Forestry and raw material production | Grows trees, produces wood pulp (10.1 g) and PE coating resin (1.5 g); withdraws 14.3 L of freshwater |
-| P2 — Paper cup manufacturing | Converts raw materials into one finished cup; uses electricity, steam, and transport; emits CO₂ and NOₓ from combustion |
-| P3 — Grid electricity | Supplies 0.025 MJ of electricity to the factory; emits 0.1 kg CO₂/MJ |
-| P4 — Steam generation | Supplies 0.062 MJ of process heat; emits 0.056 kg CO₂/MJ |
-| P5 — Road transport | Delivers cup to point of sale; emits 0.074 kg CO₂/MJ of diesel |
-| P6 — Landfill disposal | Cup goes to landfill; paper decomposes and emits CH₄ (modelled as 0.0008 kg CO₂-eq) |
-
-## Expected results
-
-| Impact | Value |
-|---|---|
-| Global warming (CO₂-eq) | ~0.011 kg |
-| Freshwater withdrawn | 14.3 L |
-
-The paper cup uses roughly **20× more water** than the PS foam cup (14.3 L vs 0.7 L)
-because pulping and papermaking are highly water-intensive. However, paper has a
-higher GWP (~0.011 kg) compared to PS foam (~0.005 kg) due to the energy-intensive
-pulping process and methane from landfill decomposition.

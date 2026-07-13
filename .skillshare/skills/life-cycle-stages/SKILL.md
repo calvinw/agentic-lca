@@ -7,7 +7,7 @@ description: >
   boundary types used in fashion and retail LCA studies: cradle to gate,
   cradle to grave, cradle to cradle, and gate to grave. Invoke as
   /life-cycle-stages case-study, for example /life-cycle-stages wool_yarn
-  or /life-cycle-stages polyester_tshirt. The skill reads the recipe card for
+  or /life-cycle-stages polyester_tshirt. The skill reads the product graph for
   that case study and teaches the concept using real data, everyday analogies,
   and fashion or retail business context. Designed for FIT students with no
   science or coding background. Builds directly on the system-boundary skill.
@@ -49,8 +49,8 @@ get_case_study("<argument>")
 ```
 
 This returns a pre-computed bundle. From it, read:
-- `bundle["recipe_card"]` — the full recipe card YAML text
-- From the recipe card YAML frontmatter:
+- `bundle["product_graph"]` — the full product graph YAML text
+- From the product graph YAML frontmatter:
   - `name` — the product name
   - `goal` — why this study was done
   - `processes` — the list of steps in the supply chain
@@ -123,7 +123,7 @@ Then introduce the concept:
 ### Step 3 — Introduce the four boundary types
 
 Introduce each one in plain English, one at a time. Use the product from the
-recipe card as the running example throughout.
+product graph as the running example throughout.
 
 **Cradle to gate**
 > "This boundary starts at the very beginning of the supply chain — where the
@@ -132,7 +132,7 @@ recipe card as the running example throughout.
 > the customer using the product, disposing of it — is outside the fence.
 >
 > For [product name], a cradle-to-gate study would cover [list the processes
-> from the recipe card]. It would *not* cover what happens after the product
+> from the product graph]. It would *not* cover what happens after the product
 > leaves the final factory."
 
 Pause and ask:
@@ -179,7 +179,7 @@ Wait for the student's answer, then validate it and continue:
 After presenting all four, show the supply chain diagram by calling the
 `get_lca_svg` MCP tool and displaying the returned SVG inline:
 ```
-get_lca_svg(recipe_card="<content from get_case_study>", graph_type="structure")
+get_lca_svg(product_graph="<content from get_case_study>", graph_type="structure")
 ```
 
 Point to it and say:

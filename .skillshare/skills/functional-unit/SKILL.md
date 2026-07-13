@@ -6,7 +6,7 @@ description: >
   Teaching skill for the LCA concept of functional unit — the precise definition
   of what is being measured in a life cycle study. Invoke as
   /functional-unit followed by a case study name, for example /functional-unit wool_yarn or
-  /functional-unit polyester_tshirt. The skill reads the recipe card for that
+  /functional-unit polyester_tshirt. The skill reads the product graph for that
   case study and teaches the concept using real data, Socratic questions, and
   fashion or retail business context. Designed for FIT students with no
   science or coding background.
@@ -39,8 +39,8 @@ get_case_study("<argument>")
 ```
 
 This returns a pre-computed bundle. From it, read:
-- `bundle["recipe_card"]` — the full recipe card YAML text
-- From the recipe card YAML frontmatter:
+- `bundle["product_graph"]` — the full product graph YAML text
+- From the product graph YAML frontmatter:
   - `name` — the product name
   - `goal` — why this study was done and what question it answers
   - `functional_unit.description` — exactly what is being measured
@@ -70,7 +70,7 @@ Before showing any numbers, ask the student one question they can answer
 from everyday experience. The question should make it feel genuinely tricky
 to choose a measurement unit — so that when the answer is revealed, it lands.
 
-Base the question on the product name you read from the recipe card. Some guides:
+Base the question on the product name you read from the product graph. Some guides:
 
 - For a **fiber or yarn**: "Before we look at the numbers — if a fashion brand
   wanted to put a carbon footprint label on their yarn, what would you measure
@@ -98,7 +98,7 @@ Whatever the student says, find what is right about it before adding anything.
 Never move past this step without acknowledging the student's answer first.
 
 Then, before moving on to the functional unit concept, briefly introduce the
-case study you read from the recipe card. Use the `name` and `goal` fields.
+case study you read from the product graph. Use the `name` and `goal` fields.
 Keep it to two or three sentences. Make clear it is a teaching example — not
 a real brand's published study. For example:
 
@@ -114,11 +114,11 @@ brief and move on.
 After introducing the case study, show the structure diagram inline by calling
 the `get_lca_svg` MCP tool and displaying the returned SVG:
 ```
-get_lca_svg(recipe_card="<content from get_case_study>", graph_type="structure")
+get_lca_svg(product_graph="<content from get_case_study>", graph_type="structure")
 ```
 
 Then point to the **reference process** (use the `reference_process` field
-from the recipe card) and **introduce the term explicitly**. When you use
+from the product graph) and **introduce the term explicitly**. When you use
 "reference process" for the first time, always explain it immediately in plain
 English — do not assume the student knows what it means. Explain:
 - It is the rightmost box in the diagram
@@ -142,12 +142,12 @@ vocabulary for where the functional unit lives before you name it.
 
 ### Step 3 — Reveal the functional unit
 
-State the functional unit exactly as written in the recipe card — the description,
+State the functional unit exactly as written in the product graph — the description,
 amount, and unit. Then explain two things:
 
 **Why this unit was chosen.** What question or business decision does it answer?
 What service is being measured — not just the physical product, but what it does
-for someone? Use the `goal` field from the recipe card to guide this.
+for someone? Use the `goal` field from the product graph to guide this.
 
 **What it rules out.** Name one alternative unit that would give a misleading
 or unfair answer, and explain in plain terms why. Keep it to one sentence.

@@ -15,12 +15,12 @@ description: >
 
 ## How this skill works
 
-Call the `run_lca` MCP tool with the recipe card YAML as a string. The tool
+Call the `run_lca` MCP tool with the product graph YAML as a string. The tool
 returns LCI totals, LCIA impact scores, scaling vector, and two SVG supply
 chain diagrams — all in one call. No bash commands needed.
 
 ```
-run_lca(recipe_card="<yaml string>")
+run_lca(product_graph="<yaml string>")
 ```
 
 The tool returns:
@@ -63,9 +63,9 @@ tell the student:
 
 ---
 
-## recipe_card.md format
+## product_graph.yaml format
 
-The recipe card is a YAML string (the frontmatter of a `recipe_card.md` file).
+The product graph is a YAML string (the frontmatter of a `product_graph.yaml` file).
 Pass it directly to `run_lca` — no file path needed.
 
 ```yaml

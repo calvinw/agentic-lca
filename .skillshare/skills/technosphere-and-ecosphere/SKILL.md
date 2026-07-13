@@ -8,8 +8,8 @@ description: >
   and supply chains (technosphere) and the natural world of air, water, and
   soil (ecosphere). Invoke as /technosphere-and-ecosphere followed by a case study name, for
   example /technosphere-and-ecosphere wool_yarn or
-  /technosphere-and-ecosphere polyester_tshirt. The skill reads the recipe
-  card for that case study and teaches the concept by sorting its parts into
+  /technosphere-and-ecosphere polyester_tshirt. The skill reads the product
+  graph for that case study and teaches the concept by sorting its parts into
   the two worlds, using everyday analogies and fashion or retail business
   context. Designed for FIT students with no science or coding background.
   Short and visual — four to five exchanges to complete.
@@ -34,7 +34,7 @@ the environment. It is the crossings that count.
 
 A student who completes this skill will be able to:
 - Explain in plain language what the technosphere and ecosphere mean
-- Sort the parts of any recipe card into the two worlds
+- Sort the parts of any product graph into the two worlds
 - Explain why only elementary flows (emissions and resource extractions)
   cause environmental impact, while intermediate flows between processes do not
 - Spot the moment of harm: when something crosses from the technosphere
@@ -56,8 +56,8 @@ get_case_study("<argument>")
 ```
 
 This returns a pre-computed bundle. From it, read:
-- `bundle["recipe_card"]` — the full recipe card YAML text
-- From the recipe card YAML frontmatter:
+- `bundle["product_graph"]` — the full product graph YAML text
+- From the product graph YAML frontmatter:
   - `name` — the product name
   - `processes` — the list of production steps (technosphere activities)
   - `products` — the intermediate goods flowing between steps (also technosphere)
@@ -148,27 +148,27 @@ Keep it to two or three sentences after the validation. One clear idea only.
 
 ---
 
-### Step 3 — Sort the recipe card into the two worlds
+### Step 3 — Sort the product graph into the two worlds
 
 Now bring in the case study. Briefly introduce the product using the `name`
-field from the recipe card. Keep it to one sentence:
+field from the product graph. Keep it to one sentence:
 
-> "Let's sort a real LCA study into these two worlds. This is the recipe card
+> "Let's sort a real LCA study into these two worlds. This is the product graph
 > for **[name]**."
 
 Then show the supply chain diagram by calling the `get_lca_svg` MCP tool
 and displaying the returned SVG inline:
 ```
-get_lca_svg(recipe_card="<content from get_case_study>", graph_type="structure")
+get_lca_svg(product_graph="<content from get_case_study>", graph_type="structure")
 ```
 
-Walk the student through the two categories, drawing directly from the recipe card:
+Walk the student through the two categories, drawing directly from the product graph:
 
 **Technosphere — everything inside the wall:**
 
 > "The boxes in this diagram are the **processes** — the human activities
 > that make [product name]. In this study that means: [list the process names
-> from the recipe card, e.g. 'Sheep farming' and 'Wool yarn production'].
+> from the product graph, e.g. 'Sheep farming' and 'Wool yarn production'].
 > Also inside the wall are the **intermediate products** that flow between
 > those boxes — things like [list the products, e.g. 'raw wool passing from
 > the farm to the mill']. These flows stay entirely inside the human-made
@@ -179,8 +179,8 @@ Walk the student through the two categories, drawing directly from the recipe ca
 > "Now look at what crosses the wall. From the processes in this study,
 > two types of flows reach the ecosphere:
 >
-> - **Emissions** going *out* into nature: [list the emissions from the recipe
->   card, e.g. 'Carbon dioxide and Methane released to air']. These are
+> - **Emissions** going *out* into nature: [list the emissions from the product
+>   graph, e.g. 'Carbon dioxide and Methane released to air']. These are
 >   substances the processes produce and discharge into the natural world.
 >
 > - **Resources** coming *in* from nature: [list the resources, e.g. 'Water

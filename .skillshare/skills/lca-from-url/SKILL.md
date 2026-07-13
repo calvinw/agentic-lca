@@ -5,12 +5,12 @@ author: Calvin Williamson (calvinw)
 description: >
   Use this skill when the user provides a URL to an LCA study, a published
   environmental report, or a product sustainability page and wants to turn it
-  into a recipe_card.md they can run and explore. Also triggers when the user
+  into a product_graph.yaml they can run and explore. Also triggers when the user
   names a well-known LCA study by title (e.g. "Cotton Inc. cotton fiber LCA",
   "IWTO wool LCA", "thredUP secondhand clothing study") and wants to recreate
-  or remix it. Builds a base-case recipe card plus 3–5 scenario variants
+  or remix it. Builds a base-case product graph plus 3–5 scenario variants
   (just like the Levi's jeans folder), then offers to run the analysis.
-  Trigger phrases: "turn this into an LCA", "build a recipe card from",
+  Trigger phrases: "turn this into an LCA", "build a product graph from",
   "recreate this LCA", "make scenarios for", "use this study", "remix this LCA".
 ---
 
@@ -18,10 +18,10 @@ description: >
 
 This skill takes a URL pointing to a real LCA study (or a well-known study
 name) and guides the student through turning the published data into a working
-`recipe_card.md` that can be analysed with the openLCA tools already set up
+`product_graph.yaml` that can be analysed with the openLCA tools already set up
 in this project.
 
-It then creates **scenario variants** — alternative versions of the recipe card
+It then creates **scenario variants** — alternative versions of the product graph
 where one assumption is changed at a time — so the student can answer "what if?"
 questions like:
 - What if the factory used renewable energy?
@@ -87,15 +87,15 @@ right, proceed to Step 3.
 
 ---
 
-### Step 3 — Translate into a recipe card
+### Step 3 — Translate into a product graph
 
-Create the folder and recipe card:
+Create the folder and product graph:
 
 ```
-lca_analysis/<study_name>/recipe_card.md
+lca_analysis/<study_name>/product_graph.yaml
 ```
 
-Use the standard recipe card format (YAML frontmatter). Follow these rules:
+Use the standard product graph format (YAML frontmatter). Follow these rules:
 
 **Units:** Always include `kg: Mass` at minimum. Add `kWh: Electrical energy`
 if electricity is in the model. Add other units as needed.
@@ -121,7 +121,7 @@ emissions are reported per kg of output AND the output amount differs from 1.0,
 adjust accordingly.
 
 After writing the file, narrate to the student:
-> "I've created the recipe card at `lca_analysis/<name>/recipe_card.md`. Here's
+> "I've created the product graph at `lca_analysis/<name>/product_graph.yaml`. Here's
 > a plain-English summary of what's in it: ..."
 
 ---
@@ -150,7 +150,7 @@ documented enough to build a faithful simplified model.
 ## Tone and explanation rules
 
 - Always explain what you found before building anything.
-- Never write a recipe card silently — narrate every section as you write it.
+- Never write a product graph silently — narrate every section as you write it.
 - After creating files, tell the student exactly where to find them and how to
   open them (e.g. "look in the file explorer panel on the left side of VS Code").
 - If a number is your estimate rather than from the source, say so explicitly.

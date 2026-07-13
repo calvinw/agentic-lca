@@ -6,7 +6,7 @@ description: >
   Teaching skill for the LCA concept of system boundary — the fence drawn
   around a study that decides what is counted and what is ignored. Invoke as
   /system-boundary case-study, for example /system-boundary wool_yarn or
-  /system-boundary cotton_fiber. The skill reads the recipe card for that
+  /system-boundary cotton_fiber. The skill reads the product graph for that
   case study and teaches the concept using everyday analogies, the supply
   chain diagram, and fashion or retail business context. Designed for FIT
   students with no science or coding background. Short and visual — four to
@@ -45,8 +45,8 @@ get_case_study("<argument>")
 ```
 
 This returns a pre-computed bundle. From it, read:
-- `bundle["recipe_card"]` — the full recipe card YAML text
-- From the recipe card YAML frontmatter:
+- `bundle["product_graph"]` — the full product graph YAML text
+- From the product graph YAML frontmatter:
   - `name` — the product name
   - `goal` — why this study was done
   - `processes` — the list of steps in the supply chain
@@ -123,7 +123,7 @@ Keep it to two or three sentences after the validation. One clear idea only.
 ### Step 3 — Show the supply chain diagram and identify inside vs. outside
 
 Now bring in the case study. Briefly introduce the product using the `name`
-and `goal` fields from the recipe card. Keep it to one sentence:
+and `goal` fields from the product graph. Keep it to one sentence:
 
 > "Let's look at a real example — a study of **[name]**. [One sentence from
 > the goal.]"
@@ -131,7 +131,7 @@ and `goal` fields from the recipe card. Keep it to one sentence:
 Then show the supply chain diagram by calling the `get_lca_svg` MCP tool
 and displaying the returned SVG inline:
 ```
-get_lca_svg(recipe_card="<content from get_case_study>", graph_type="structure")
+get_lca_svg(product_graph="<content from get_case_study>", graph_type="structure")
 ```
 
 Point to the diagram and explain it in plain language:

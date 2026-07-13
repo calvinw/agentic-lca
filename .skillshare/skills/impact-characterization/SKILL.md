@@ -9,7 +9,7 @@ description: >
   that can be different for every impact category) and then summed within
   each category. Invoke as /impact-characterization followed by a case study name, for example
   /impact-characterization wool_yarn or /impact-characterization cotton_fiber.
-  The skill reads the recipe card and lca_results.md for that case study and
+  The skill reads the product graph and lca_results.md for that case study and
   has students build the full characterization table themselves, by hand,
   using a shipping rate-card analogy and fashion or retail business context.
   Designed for FIT students with no science or coding background. Builds
@@ -63,8 +63,8 @@ get_case_study("<argument>")
 ```
 
 This returns a pre-computed bundle. From it, read:
-- `bundle["recipe_card"]` — the full recipe card YAML text
-- From the recipe card YAML frontmatter: `name` and `processes`
+- `bundle["product_graph"]` — the full product graph YAML text
+- From the product graph YAML frontmatter: `name` and `processes`
 - `bundle["lca_results"]["lci"]` — the compiled inventory totals (starting point)
 - `bundle["lca_results"]["lcia"]` — the TRACI 2.2 impact category scores (what
   the student's table should add up to)
@@ -154,7 +154,7 @@ Introduce the product:
 Show the supply chain diagram by calling the `get_lca_svg` MCP tool
 and displaying the returned SVG inline:
 ```
-get_lca_svg(recipe_card="<content from get_case_study>", graph_type="structure")
+get_lca_svg(product_graph="<content from get_case_study>", graph_type="structure")
 ```
 
 Then use the matching block below for the chosen case study. Present the

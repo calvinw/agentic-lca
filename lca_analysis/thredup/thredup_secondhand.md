@@ -80,11 +80,11 @@ typical garment lasts about 50 washes. Most people donate clothes after around
 
 ### How to read the comparison
 
-Run this file and `recipe_card.md` (the new garment), then compare:
+Run this file and `product_graph.yaml` (the new garment), then compare:
 
 | Model | CO₂ per garment | Meaning |
 |---|---|---|
-| New garment (`recipe_card.md`) | ~15.8 kg CO₂ | What making a new garment costs |
+| New garment (`product_graph.yaml`) | ~15.8 kg CO₂ | What making a new garment costs |
 | thredUP secondhand (this file) | ~1.9 kg CO₂ | What thredUP's operations cost |
 | **Savings** | **~13.9 kg CO₂** | **88% less CO₂ per garment lifecycle** |
 

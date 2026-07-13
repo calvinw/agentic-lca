@@ -1,4 +1,81 @@
----
+# ## About this scenario
+#
+# **Source:** Schmidt, A. et al. (2016). *Gaining benefits from discarded textiles —
+# LCA of different treatment pathways.* TemaNord 2016:537. Nordic Council of Ministers.
+#
+# **Scenario 2B** is the single most beneficial end-of-life option for cotton
+# textiles in the Nordic study. Used cotton garments are collected from households,
+# sorted at a sorting facility, and sold through domestic second-hand shops in the
+# Nordic countries. The person who buys the second-hand garment is assumed to
+# have otherwise bought an equivalent new cotton garment — so one sale of a
+# second-hand item replaces one new purchase.
+#
+# ---
+#
+# ### Why reuse produces such a large CO₂ saving
+#
+# The key insight is that cotton clothing is extremely expensive to make in terms
+# of energy and resources. To produce just **one kilogram of finished cotton garment**:
+#
+# | Production step | Where it happens | What it needs |
+# |---|---|---|
+# | Grow 1.26 kg raw cotton | USA, India, or China | Fertilisers, pesticides, irrigation, tractors |
+# | Spin + weave 1.15 kg fabric | China | Energy-intensive mills (Chinese electricity = coal-heavy) |
+# | Dye the fabric | China | Hot water baths, chemicals, energy |
+# | Cut and sew the garment | China | Electricity for sewing machines (8.75 MJ per kg) |
+# | Ship to Scandinavia | Container ship + truck | Heavy fuel oil, diesel |
+#
+# Every single one of these steps releases CO₂. When a consumer buys second-hand,
+# all of these steps are **skipped entirely** for one garment. The combined CO₂ saving
+# from skipping the whole chain is approximately **13.14 kg CO₂ per kg of garment**.
+#
+# ---
+#
+# ### What happens at end of life
+#
+# Even after a second use, the garment eventually wears out and is discarded. In this
+# model it is incinerated with energy recovery — exactly the same as Scenario 2A.
+# That means the end-of-life step produces the same small fossil CO₂ emission
+# (+0.046 kg/kg) and the same small electricity and heat credits (−0.012 and −0.227 kg/kg).
+#
+# The end-of-life contribution totals −0.193 kg CO₂/kg — almost invisible compared
+# to the −13.14 kg saved from avoided production.
+#
+# ---
+#
+# ### Key numbers from the PDF
+#
+# | Data point | Value | Source |
+# |---|---|---|
+# | Avoided cotton fibre (per kg garment) | 1.26 kg | Figure 15 |
+# | Avoided woven fabric (per kg garment) | 1.15 kg | Figure 15 |
+# | Chinese electricity for cutting/sewing | 8.75 MJ = 2.43 kWh | Figure 15 |
+# | Combined avoided production CO₂ | −13.14 kg/kg | Derived from Table 13 |
+# | End-of-life fossil CO₂ (same as 2A) | +0.046 kg/kg | Table 7 / Figure 10 |
+# | PDF result (climate change excl biogenic) | −1.646 PE/ton | Table 13 |
+# | PDF result converted to kg CO₂ | −13,333 kg/tonne | −1.646 × 8,100 |
+#
+# ---
+#
+# ### Comparison with Scenario 2A (incineration)
+#
+# | Scenario | Result |
+# |---|---|
+# | 2A — Cotton incineration | −193 kg CO₂/tonne (near zero) |
+# | **2B — Cotton reuse NORDIC** | **−13,333 kg CO₂/tonne (very large benefit)** |
+#
+# Reuse is roughly **70 times better** for climate than incineration. The reason
+# is straightforward: incineration only recovers a small energy credit, whereas
+# reuse avoids having to manufacture an entirely new garment — a process that
+# uses huge amounts of energy.
+#
+# ### Expected result
+#
+# **−13.333 kg CO₂ per kg cotton reused** (approximately −13,333 kg CO₂ per tonne)
+#
+# This matches the PDF result of **−1.646 PE/tonne** when converted using the
+# ILCD normalization factor of 8,100 kg CO₂-eq per person per year.
+
 name: Nordic Textile Waste — Scenario 2B — Cotton reuse in Nordic countries
 goal: >
   Model the climate change benefit of reusing one kilogram of used 100% cotton
@@ -84,82 +161,3 @@ reference_process: P1 — Collect and reuse cotton garment in Nordic second-hand
 
 lcia:
   method_name: "TRACI 2.2"
----
-
-## About this scenario
-
-**Source:** Schmidt, A. et al. (2016). *Gaining benefits from discarded textiles —
-LCA of different treatment pathways.* TemaNord 2016:537. Nordic Council of Ministers.
-
-**Scenario 2B** is the single most beneficial end-of-life option for cotton
-textiles in the Nordic study. Used cotton garments are collected from households,
-sorted at a sorting facility, and sold through domestic second-hand shops in the
-Nordic countries. The person who buys the second-hand garment is assumed to
-have otherwise bought an equivalent new cotton garment — so one sale of a
-second-hand item replaces one new purchase.
-
----
-
-### Why reuse produces such a large CO₂ saving
-
-The key insight is that cotton clothing is extremely expensive to make in terms
-of energy and resources. To produce just **one kilogram of finished cotton garment**:
-
-| Production step | Where it happens | What it needs |
-|---|---|---|
-| Grow 1.26 kg raw cotton | USA, India, or China | Fertilisers, pesticides, irrigation, tractors |
-| Spin + weave 1.15 kg fabric | China | Energy-intensive mills (Chinese electricity = coal-heavy) |
-| Dye the fabric | China | Hot water baths, chemicals, energy |
-| Cut and sew the garment | China | Electricity for sewing machines (8.75 MJ per kg) |
-| Ship to Scandinavia | Container ship + truck | Heavy fuel oil, diesel |
-
-Every single one of these steps releases CO₂. When a consumer buys second-hand,
-all of these steps are **skipped entirely** for one garment. The combined CO₂ saving
-from skipping the whole chain is approximately **13.14 kg CO₂ per kg of garment**.
-
----
-
-### What happens at end of life
-
-Even after a second use, the garment eventually wears out and is discarded. In this
-model it is incinerated with energy recovery — exactly the same as Scenario 2A.
-That means the end-of-life step produces the same small fossil CO₂ emission
-(+0.046 kg/kg) and the same small electricity and heat credits (−0.012 and −0.227 kg/kg).
-
-The end-of-life contribution totals −0.193 kg CO₂/kg — almost invisible compared
-to the −13.14 kg saved from avoided production.
-
----
-
-### Key numbers from the PDF
-
-| Data point | Value | Source |
-|---|---|---|
-| Avoided cotton fibre (per kg garment) | 1.26 kg | Figure 15 |
-| Avoided woven fabric (per kg garment) | 1.15 kg | Figure 15 |
-| Chinese electricity for cutting/sewing | 8.75 MJ = 2.43 kWh | Figure 15 |
-| Combined avoided production CO₂ | −13.14 kg/kg | Derived from Table 13 |
-| End-of-life fossil CO₂ (same as 2A) | +0.046 kg/kg | Table 7 / Figure 10 |
-| PDF result (climate change excl biogenic) | −1.646 PE/ton | Table 13 |
-| PDF result converted to kg CO₂ | −13,333 kg/tonne | −1.646 × 8,100 |
-
----
-
-### Comparison with Scenario 2A (incineration)
-
-| Scenario | Result |
-|---|---|
-| 2A — Cotton incineration | −193 kg CO₂/tonne (near zero) |
-| **2B — Cotton reuse NORDIC** | **−13,333 kg CO₂/tonne (very large benefit)** |
-
-Reuse is roughly **70 times better** for climate than incineration. The reason
-is straightforward: incineration only recovers a small energy credit, whereas
-reuse avoids having to manufacture an entirely new garment — a process that
-uses huge amounts of energy.
-
-### Expected result
-
-**−13.333 kg CO₂ per kg cotton reused** (approximately −13,333 kg CO₂ per tonne)
-
-This matches the PDF result of **−1.646 PE/tonne** when converted using the
-ILCD normalization factor of 8,100 kg CO₂-eq per person per year.

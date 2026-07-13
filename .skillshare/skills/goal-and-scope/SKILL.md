@@ -7,7 +7,7 @@ description: >
   in a life cycle study that define why it is being done, who it is for, and
   what is included or excluded. Invoke as /goal-and-scope followed by a case study name, for
   example /goal-and-scope wool_yarn or /goal-and-scope polyester_tshirt. The
-  skill reads the recipe card for that case study and teaches the concept using
+  skill reads the product graph for that case study and teaches the concept using
   real data, Socratic questions, and fashion or retail business context.
   Designed for FIT students with no science or coding background.
 ---
@@ -42,8 +42,8 @@ get_case_study("<argument>")
 ```
 
 This returns a pre-computed bundle. From it, read:
-- `bundle["recipe_card"]` — the full recipe card YAML text
-- From the recipe card YAML frontmatter:
+- `bundle["product_graph"]` — the full product graph YAML text
+- From the product graph YAML frontmatter:
   - `name` — the product name
   - `goal` — why this study was done and what question it answers
   - `functional_unit.description`, `functional_unit.amount`, `functional_unit.unit`
@@ -76,7 +76,7 @@ in a real business situation. The question should make it feel genuinely
 uncertain what should or should not be included in the study — so that when
 the concept of scope is introduced, it feels necessary rather than academic.
 
-Base the question on the product from the recipe card. Some guides:
+Base the question on the product from the product graph. Some guides:
 
 - For a **fiber or yarn**: "A wool brand wants to prove their yarn is
   sustainable. Should the study include only the spinning mill — or also
@@ -108,7 +108,7 @@ Whatever the student says, find what is right about it before adding anything.
 Never move past this step without acknowledging the student's answer first.
 
 Then briefly introduce the case study using the `name` and `goal` fields
-from the recipe card. Keep it to two or three sentences and make clear it
+from the product graph. Keep it to two or three sentences and make clear it
 is a teaching example:
 
 > "The study we'll work through is called **[name]**. [One sentence from
@@ -118,7 +118,7 @@ is a teaching example:
 After introducing the case study, show the structure diagram inline by calling
 the `get_lca_svg` MCP tool and displaying the returned SVG:
 ```
-get_lca_svg(recipe_card="<content from get_case_study>", graph_type="structure")
+get_lca_svg(product_graph="<content from get_case_study>", graph_type="structure")
 ```
 
 Point to the diagram and explain that each box is a step the study decided
@@ -129,7 +129,7 @@ what "scope" means.
 
 ### Step 3 — Introduce goal and scope
 
-Now introduce the two concepts using the recipe card data.
+Now introduce the two concepts using the product graph data.
 
 **Goal** — explain it as the "why" and the "who":
 - Why is this study being done? (use the `goal` field)

@@ -1,4 +1,17 @@
----
+# ## About this analysis
+#
+# Based on the incandescent bulb scenario from Jolliet et al. Chapter 4 (Tables 4.2 and 4.3).
+# The functional unit is 800 lumens of illumination for 5000 hours.
+#
+# Key facts:
+# - Each bulb lasts 1000 hours, so 5 bulbs are needed per FU
+# - Each bulb contains 20 g glass and 15 g copper
+# - Packaging uses 0.01 kg paper per bulb (0.05 kg per FU)
+# - U.S. electricity mix: 0.711 kg CO₂ per kWh
+# - The use phase dominates: 300 kWh × 0.711 kg/kWh = 213 kg CO₂ per FU
+#
+# Expected total CO₂: 214 kg per FU (from Table 4.3).
+
 name: "Incandescent Light Bulb LCA — 800 lm for 5000 h"
 goal: >
   Calculate the total CO₂ emitted to provide 800 lumens of illumination
@@ -79,18 +92,3 @@ reference_process: "P6 — Deliver lighting"
 
 lcia:
   method_name: "TRACI 2.2"
----
-
-## About this analysis
-
-Based on the incandescent bulb scenario from Jolliet et al. Chapter 4 (Tables 4.2 and 4.3).
-The functional unit is 800 lumens of illumination for 5000 hours.
-
-Key facts:
-- Each bulb lasts 1000 hours, so 5 bulbs are needed per FU
-- Each bulb contains 20 g glass and 15 g copper
-- Packaging uses 0.01 kg paper per bulb (0.05 kg per FU)
-- U.S. electricity mix: 0.711 kg CO₂ per kWh
-- The use phase dominates: 300 kWh × 0.711 kg/kWh = 213 kg CO₂ per FU
-
-Expected total CO₂: 214 kg per FU (from Table 4.3).

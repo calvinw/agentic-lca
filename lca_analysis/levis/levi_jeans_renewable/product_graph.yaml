@@ -1,14 +1,26 @@
----
-name: Levi's 501 Jeans — wash every 5 wears (Group 1, Scenario C)
+# ## About this scenario
+#
+# Custom Scenario A — renewable energy supply chain.
+#
+# The only change from the baseline is P5's emission factor: 0.5 → 0.05 kg CO₂/kWh.
+# This represents a grid powered by solar or wind (a ~90% reduction in electricity
+# carbon intensity).
+#
+# The baseline uses 48.2 kWh total electricity per pair of jeans.
+# At 0.05 kg CO₂/kWh that produces 48.2 × 0.05 = 2.41 kg CO₂ via electricity.
+# The remaining direct emissions are: P1 (2.9 kg) + P4 direct (6.4 kg) = 9.3 kg.
+# Expected total: 9.3 + 2.41 = ~11.7 kg CO₂.
+
+name: Levi's 501 Jeans — renewable energy supply chain (Custom Scenario A)
 goal: >
-  Reproduce the Levi's 2015 LCA consumer care scenario where the consumer
-  washes their jeans once every 5 times they wear them — roughly twice as
-  infrequently as the US average. US consumer, conventional washing machine,
-  average mix of cold/warm water and tumble dry.
-  Based on Levi Strauss & Co.'s 2015 LCA study.
+  Model the impact of switching the entire textile supply chain — fabric mills
+  and garment factory — from a coal-heavy electricity grid to renewable energy
+  (solar or wind). The electricity emission factor drops from 0.5 kg CO₂/kWh
+  down to 0.05 kg CO₂/kWh. Everything else is identical to the baseline.
+  Question: what is the value of a brand moving its supply chain to green energy?
 
 functional_unit:
-  description: One pair of Levi's 501 jeans — full lifecycle, wash every 5 wears
+  description: One pair of Levi's 501 jeans — full lifecycle, renewable energy supply chain
   amount: 1.0
   unit: pair
 
@@ -52,27 +64,18 @@ processes:
     reference_output: { flow: Levis 501 jeans full lifecycle, amount: 1.0 }
     inputs:
       - { flow: Finished jeans, amount: 1.0  }
-      - { flow: Electricity,    amount: 12.30 }
+      - { flow: Electricity,    amount: 25.0 }
     emissions:
       - { flow: Carbon dioxide, amount: 6.4 }
 
   - name: P5 — Generate electricity
     reference_output: { flow: Electricity, amount: 1.0 }
     emissions:
-      - { flow: Carbon dioxide,  amount: 0.5    }
-      - { flow: Nitrogen oxides, amount: 0.0009 }
-      - { flow: Sulfur dioxide,  amount: 0.0006 }
+      - { flow: Carbon dioxide,  amount: 0.05     }
+      - { flow: Nitrogen oxides, amount: 0.00009  }
+      - { flow: Sulfur dioxide,  amount: 0.00006  }
 
 reference_process: P4 — Distribute, wash, dry, and dispose of jeans
 
 lcia:
   method_name: "TRACI 2.2"
----
-
-## About this scenario
-
-Group 1, Scenario C — wash every 5 wears.
-
-Consumer care CO₂ from the Levi's PDF: 6.15 kg.
-P4 electricity = 6.15 / 0.5 = 12.30 kWh.
-Expected full lifecycle total: ~27.1 kg CO₂.

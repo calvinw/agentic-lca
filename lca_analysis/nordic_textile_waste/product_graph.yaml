@@ -1,4 +1,54 @@
----
+# ## About this scenario
+#
+# **Source:** Schmidt, A. et al. (2016). *Gaining benefits from discarded textiles —
+# LCA of different treatment pathways.* TemaNord 2016:537. Nordic Council of Ministers.
+#
+# **Scenario 2A** is the baseline end-of-life option in the Nordic study: cotton
+# textiles are collected from households and organisations, transported to a Nordic
+# waste-to-energy (incineration) plant, and burned. The energy released heats water
+# and drives a turbine to generate electricity. Both the electricity and heat are
+# fed into the local grid.
+#
+# ---
+#
+# ### Key numbers from the PDF
+#
+# | Data point | Value | Source |
+# |---|---|---|
+# | Fossil CO₂ from burning 1 kg cotton | 0.046 kg | Table 7 / Figure 10 |
+# | Electricity recovered per kg cotton (Nordic avg.) | 2.075 MJ = 0.576 kWh | Table 7 (avg. of DK, FI, NO, SE) |
+# | Heat recovered per kg cotton (Nordic avg.) | 11.5 MJ = 3.194 kWh | Table 7 (avg. of DK, FI, NO, SE) |
+# | Marginal electricity CO₂ factor (Nordic avg.) | 0.021 kg CO₂/kWh | Table 4 (2020–2030 scenario) |
+# | Marginal heat CO₂ factor (Nordic avg.) | 0.071 kg CO₂/kWh | Table 5 (2020–2030 scenario) |
+#
+# ### Why cotton CO₂ from burning is almost zero
+#
+# Cotton is made from plant fibres. While the plant was growing, it absorbed CO₂
+# from the atmosphere. When it burns, that same CO₂ is released back. The net
+# effect on atmospheric CO₂ is therefore close to zero — the CO₂ was "borrowed"
+# from the air and returned, not added from underground fossil reserves. This is
+# called **biogenic carbon**, and under standard LCA methodology it is excluded
+# from the climate change score. Only the fossil CO₂ from the small amounts of
+# synthetic dyes, processing chemicals, and finishing agents is counted (0.046 kg/kg).
+#
+# ### Why the result is slightly negative
+#
+# The Nordic electricity grid is dominated by wind, hydro, and nuclear — very
+# low carbon sources. The marginal CO₂ saved per kWh of electricity displaced is
+# therefore small (0.021 kg/kWh). However, the heat recovery is much larger in
+# volume (3.194 kWh of heat per kg cotton vs 0.576 kWh of electricity), and the
+# marginal heat in Denmark in particular involves some gas and coal, giving a
+# higher CO₂ factor (0.071 kg/kWh). Together, the energy savings outweigh the
+# small fossil CO₂ from combustion, producing a slight net benefit.
+#
+# ### Expected result
+#
+# **−0.193 kg CO₂ per kg cotton** (approximately −193 kg CO₂ per tonne of cotton textiles)
+#
+# This is a small net environmental benefit — meaning that incinerating cotton with
+# energy recovery is, from a climate perspective, marginally better than doing
+# nothing with it.
+
 name: Nordic Textile Waste — Scenario 2A — Cotton incineration with energy recovery
 goal: >
   Model the climate change impact of incinerating one kilogram of used 100% cotton
@@ -72,55 +122,3 @@ reference_process: P1 — Incinerate cotton in Nordic waste-to-energy plant
 
 lcia:
   method_name: "TRACI 2.2"
----
-
-## About this scenario
-
-**Source:** Schmidt, A. et al. (2016). *Gaining benefits from discarded textiles —
-LCA of different treatment pathways.* TemaNord 2016:537. Nordic Council of Ministers.
-
-**Scenario 2A** is the baseline end-of-life option in the Nordic study: cotton
-textiles are collected from households and organisations, transported to a Nordic
-waste-to-energy (incineration) plant, and burned. The energy released heats water
-and drives a turbine to generate electricity. Both the electricity and heat are
-fed into the local grid.
-
----
-
-### Key numbers from the PDF
-
-| Data point | Value | Source |
-|---|---|---|
-| Fossil CO₂ from burning 1 kg cotton | 0.046 kg | Table 7 / Figure 10 |
-| Electricity recovered per kg cotton (Nordic avg.) | 2.075 MJ = 0.576 kWh | Table 7 (avg. of DK, FI, NO, SE) |
-| Heat recovered per kg cotton (Nordic avg.) | 11.5 MJ = 3.194 kWh | Table 7 (avg. of DK, FI, NO, SE) |
-| Marginal electricity CO₂ factor (Nordic avg.) | 0.021 kg CO₂/kWh | Table 4 (2020–2030 scenario) |
-| Marginal heat CO₂ factor (Nordic avg.) | 0.071 kg CO₂/kWh | Table 5 (2020–2030 scenario) |
-
-### Why cotton CO₂ from burning is almost zero
-
-Cotton is made from plant fibres. While the plant was growing, it absorbed CO₂
-from the atmosphere. When it burns, that same CO₂ is released back. The net
-effect on atmospheric CO₂ is therefore close to zero — the CO₂ was "borrowed"
-from the air and returned, not added from underground fossil reserves. This is
-called **biogenic carbon**, and under standard LCA methodology it is excluded
-from the climate change score. Only the fossil CO₂ from the small amounts of
-synthetic dyes, processing chemicals, and finishing agents is counted (0.046 kg/kg).
-
-### Why the result is slightly negative
-
-The Nordic electricity grid is dominated by wind, hydro, and nuclear — very
-low carbon sources. The marginal CO₂ saved per kWh of electricity displaced is
-therefore small (0.021 kg/kWh). However, the heat recovery is much larger in
-volume (3.194 kWh of heat per kg cotton vs 0.576 kWh of electricity), and the
-marginal heat in Denmark in particular involves some gas and coal, giving a
-higher CO₂ factor (0.071 kg/kWh). Together, the energy savings outweigh the
-small fossil CO₂ from combustion, producing a slight net benefit.
-
-### Expected result
-
-**−0.193 kg CO₂ per kg cotton** (approximately −193 kg CO₂ per tonne of cotton textiles)
-
-This is a small net environmental benefit — meaning that incinerating cotton with
-energy recovery is, from a climate perspective, marginally better than doing
-nothing with it.

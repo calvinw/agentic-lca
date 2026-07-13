@@ -64,8 +64,8 @@ Cotton cultivation dominates water use at 68% of total.
 
 ## The supply chain model we built
 
-We translated the PDF data into a recipe card at:
-`lca_analysis/levi_jeans/recipe_card.md`
+We translated the PDF data into a product graph at:
+`lca_analysis/levi_jeans/product_graph.yaml`
 
 ### Physical quantities assumed
 - One pair of jeans = 0.8 kg denim fabric
@@ -183,7 +183,7 @@ their CO₂ impact.
 | A — Renewable energy supply chain | `levi_jeans_renewable` | 11.71 kg | −21.69 kg | −65% |
 | C — Best of everything | `levi_jeans_bestcase` | 9.37 kg | −24.03 kg | −72% |
 
-### What changed in each recipe card
+### What changed in each product graph
 
 | Scenario | Parameter changed | Baseline value | Scenario value |
 |---|---|---|---|
@@ -219,25 +219,25 @@ of growing cotton. It is very hard to eliminate.
 
 | File | Description |
 |---|---|
-| `lca_analysis/levi_jeans/recipe_card.md` | Base recipe card — global average consumer |
+| `lca_analysis/levi_jeans/product_graph.yaml` | Base product graph — global average consumer |
 | `lca_analysis/levi_jeans/lca_results.md` | Full LCA results for baseline |
 | `lca_analysis/levi_jeans/product_graph_scaled.svg` | Supply chain diagram with amounts |
 | `lca_analysis/levi_jeans/product_graph_structure.svg` | Supply chain diagram — flow names only |
 | `lca_analysis/levi_jeans/levi_jeans_product_graph_scaled.svg` | Earlier diagram (generated before running full analysis) |
 | `lca_analysis/levi_jeans/levi_jeans_product_graph_structure.svg` | Earlier structure diagram |
-| `lca_analysis/levi_jeans_wash1x/recipe_card.md` | Scenario: wash every wear |
+| `lca_analysis/levi_jeans_wash1x/product_graph.yaml` | Scenario: wash every wear |
 | `lca_analysis/levi_jeans_wash1x/lca_results.md` | Results: 51.67 kg CO₂ |
-| `lca_analysis/levi_jeans_wash2x/recipe_card.md` | Scenario: wash every 2 wears |
+| `lca_analysis/levi_jeans_wash2x/product_graph.yaml` | Scenario: wash every 2 wears |
 | `lca_analysis/levi_jeans_wash2x/lca_results.md` | Results: 36.28 kg CO₂ |
-| `lca_analysis/levi_jeans_wash5x/recipe_card.md` | Scenario: wash every 5 wears |
+| `lca_analysis/levi_jeans_wash5x/product_graph.yaml` | Scenario: wash every 5 wears |
 | `lca_analysis/levi_jeans_wash5x/lca_results.md` | Results: 27.05 kg CO₂ |
-| `lca_analysis/levi_jeans_wash10x/recipe_card.md` | Scenario: wash every 10 wears |
+| `lca_analysis/levi_jeans_wash10x/product_graph.yaml` | Scenario: wash every 10 wears |
 | `lca_analysis/levi_jeans_wash10x/lca_results.md` | Results: 23.98 kg CO₂ |
-| `lca_analysis/levi_jeans_renewable/recipe_card.md` | Custom A: renewable energy supply chain |
+| `lca_analysis/levi_jeans_renewable/product_graph.yaml` | Custom A: renewable energy supply chain |
 | `lca_analysis/levi_jeans_renewable/lca_results.md` | Results: 11.71 kg CO₂ (−65%) |
-| `lca_analysis/levi_jeans_organic/recipe_card.md` | Custom B: organic cotton farm |
+| `lca_analysis/levi_jeans_organic/product_graph.yaml` | Custom B: organic cotton farm |
 | `lca_analysis/levi_jeans_organic/lca_results.md` | Results: 32.00 kg CO₂ (−4%) |
-| `lca_analysis/levi_jeans_bestcase/recipe_card.md` | Custom C: best of everything |
+| `lca_analysis/levi_jeans_bestcase/product_graph.yaml` | Custom C: best of everything |
 | `lca_analysis/levi_jeans_bestcase/lca_results.md` | Results: 9.37 kg CO₂ (−72%) |
-| `lca_analysis/levi_jeans_longlife/recipe_card.md` | Custom D: twice as durable |
+| `lca_analysis/levi_jeans_longlife/product_graph.yaml` | Custom D: twice as durable |
 | `lca_analysis/levi_jeans_longlife/lca_results.md` | Results: 26.15 kg CO₂ (−22%) |

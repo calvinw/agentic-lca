@@ -1,8 +1,31 @@
----
-# ─────────────────────────────────────────────────────────────
-# LCA Analysis Specification
-# Run with:  python3 lca_scripts/lca_analysis.py lca_analysis/apple/recipe_card.md
-# ─────────────────────────────────────────────────────────────
+# ## About this analysis
+#
+# Cradle-to-use LCA for 100 kcal of fresh apple (0.19 kg), based on the apple
+# example from the *Constructing Inventories* lecture slides.
+#
+# Supply chain: farm → transport (1,000 km by truck) → consumption.
+#
+# ### Simplifications in this version
+#
+# - **Cardboard / packaging omitted** — only electricity and fertilizer as farm inputs.
+# - **Co-product Pear omitted** — requires allocation (to be added later).
+# - **End-of-life disposal omitted** — waste flows to be added later.
+# - **Transport modelled as flow transformation** — P4 receives "Apple" (farm gate)
+#   and outputs "Apple delivered" (at consumer).
+#
+# ### Key assumptions
+#
+# | Parameter | Value | Source |
+# |---|---|---|
+# | Functional unit | 0.19 kg apple = 100 kcal | PDF slide data |
+# | Electricity per kg apple | 0.2 kWh | 100,000 kWh / 500,000 kg |
+# | Fertilizer per kg apple | 1.0 kg | 500,000 kg / 500,000 kg |
+# | Water per kg apple | 0.2 L | 100,000 L / 500,000 kg |
+# | Direct CO₂ per kg apple | 0.2 kg | 100,000 kg CO₂ / 500,000 kg apple |
+# | Direct CH₄ per kg apple | 0.006 kg | 3,000 kg CH₄ / 500,000 kg apple |
+# | Transport emissions | 0.063 kg CO₂/kg | 1.02 tkm × 0.062 kg CO₂/tkm |
+# | Electricity emission factor | 0.4 kg CO₂/kWh | European average |
+# | Fertilizer emission factor | 2.5 kg CO₂/kg | Ammonium nitrate, typical |
 
 name: Apple LCA — 100 kcal consumed
 goal: >
@@ -76,33 +99,3 @@ reference_process: P5 — Use
 
 lcia:
   method_name: "TRACI 2.2"
----
-
-## About this analysis
-
-Cradle-to-use LCA for 100 kcal of fresh apple (0.19 kg), based on the apple
-example from the *Constructing Inventories* lecture slides.
-
-Supply chain: farm → transport (1,000 km by truck) → consumption.
-
-### Simplifications in this version
-
-- **Cardboard / packaging omitted** — only electricity and fertilizer as farm inputs.
-- **Co-product Pear omitted** — requires allocation (to be added later).
-- **End-of-life disposal omitted** — waste flows to be added later.
-- **Transport modelled as flow transformation** — P4 receives "Apple" (farm gate)
-  and outputs "Apple delivered" (at consumer).
-
-### Key assumptions
-
-| Parameter | Value | Source |
-|---|---|---|
-| Functional unit | 0.19 kg apple = 100 kcal | PDF slide data |
-| Electricity per kg apple | 0.2 kWh | 100,000 kWh / 500,000 kg |
-| Fertilizer per kg apple | 1.0 kg | 500,000 kg / 500,000 kg |
-| Water per kg apple | 0.2 L | 100,000 L / 500,000 kg |
-| Direct CO₂ per kg apple | 0.2 kg | 100,000 kg CO₂ / 500,000 kg apple |
-| Direct CH₄ per kg apple | 0.006 kg | 3,000 kg CH₄ / 500,000 kg apple |
-| Transport emissions | 0.063 kg CO₂/kg | 1.02 tkm × 0.062 kg CO₂/tkm |
-| Electricity emission factor | 0.4 kg CO₂/kWh | European average |
-| Fertilizer emission factor | 2.5 kg CO₂/kg | Ammonium nitrate, typical |

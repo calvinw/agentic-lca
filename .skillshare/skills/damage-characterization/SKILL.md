@@ -9,7 +9,7 @@ description: >
   of protection: human health, ecosystem quality, and resource availability.
   Invoke as /damage-characterization followed by a case study name, for example
   /damage-characterization wool_yarn or /damage-characterization
-  cotton_fiber. The skill reads the recipe card and lca_results.md for that
+  cotton_fiber. The skill reads the product graph and lca_results.md for that
   case study and reasons qualitatively about which midpoint scores feed into
   which damage area, using a leading-indicator-vs-revenue retail analogy.
   Designed for FIT students with no science or coding background. Builds

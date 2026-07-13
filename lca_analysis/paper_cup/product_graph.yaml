@@ -1,4 +1,14 @@
----
+# ## About this analysis
+#
+# Simple three-process chain used to study the carbon footprint of a disposable paper cup.
+#
+# The chain is: electricity generation → paper manufacturing → cup production.
+# All CO₂ originates in P3 (generating electricity by burning coal); P1 and P2 have no direct emissions.
+#
+# Expected result: **0.05 kg CO₂ per cup**.
+#
+# ---
+
 name: Paper Cup LCA — one cup
 goal: >
   Calculate the total CO₂ emitted to produce one paper cup,
@@ -44,40 +54,3 @@ reference_process: P1 — Make paper cup
 
 lcia:
   method_name: "TRACI 2.2"
----
-
-## About this analysis
-
-Simple three-process chain used to study the carbon footprint of a disposable paper cup.
-
-The chain is: electricity generation → paper manufacturing → cup production.
-All CO₂ originates in P3 (generating electricity by burning coal); P1 and P2 have no direct emissions.
-
-Expected result: **0.05 kg CO₂ per cup**.
-
----
-
-## Product Graph
-
-```mermaid
-flowchart LR
-    subgraph nature_in["🌍 From Nature"]
-        coal["Coal\n(from ground)"]
-    end
-
-    subgraph tech["⚙️ Supply Chain (Technosphere)"]
-        P3["P3 — Generate electricity\nProduces: 1 kWh"]
-        P2["P2 — Make paper\nProduces: 1 kg paper"]
-        P1["P1 — Make paper cup\nProduces: 1 cup"]
-    end
-
-    subgraph nature_out["🌍 To Nature"]
-        co2["CO₂ to air\n1 kg per kWh"]
-    end
-
-    coal -->|fuel| P3
-    P3 -->|"2.5 kWh"| P2
-    P2 -->|"0.02 kg"| P1
-    P1 -->|"1 cup"| fu["☕ 1 paper cup\n(functional unit)"]
-    P3 -->|"1.0 kg CO₂"| co2
-```

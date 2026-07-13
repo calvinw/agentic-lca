@@ -1,0 +1,48 @@
+name: "Electricity LCA — 200 kWh"
+goal: >
+  Calculate the total emissions and resources needed to produce 200 kWh
+  of electricity from crude oil, tracing through fuel production to
+  electricity generation.
+
+functional_unit:
+  description: 200 kWh of electricity
+  amount: 200
+  unit: kWh
+
+units:
+  L: Volume
+  kWh: Energy
+  kg: Mass
+
+products:
+  - { name: Fuel, unit: L }
+  - { name: Electricity, unit: kWh }
+
+elementary_flows:
+  emissions:
+    - { name: Carbon dioxide,  compartment: air, unit: kg }
+    - { name: Sulfur dioxide,  compartment: air, unit: kg }
+  resources:
+    - { name: Crude oil, unit: L }
+
+processes:
+  - name: P1 — Fuel Production
+    reference_output: { flow: Fuel, amount: 100 }
+    resources:
+      - { flow: Crude oil, amount: 300 }
+    emissions:
+      - { flow: Carbon dioxide, amount: 60 }
+      - { flow: Sulfur dioxide, amount: 12 }
+
+  - name: P2 — Electricity Production
+    reference_output: { flow: Electricity, amount: 100 }
+    inputs:
+      - { flow: Fuel, amount: 20 }
+    emissions:
+      - { flow: Carbon dioxide, amount: 20 }
+      - { flow: Sulfur dioxide, amount: 1 }
+
+reference_process: "P2 — Electricity Production"
+
+lcia:
+  method_name: "TRACI 2.2"

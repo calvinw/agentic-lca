@@ -9,7 +9,7 @@ description: >
   of comparable impact category scores, using conversion numbers called
   characterization factors. Invoke as /what-is-impact-assessment followed by a case study name,
   for example /what-is-impact-assessment wool_yarn or
-  /what-is-impact-assessment cotton_fiber. The skill reads the recipe card and
+  /what-is-impact-assessment cotton_fiber. The skill reads the product graph and
   lca_results.md for that case study and teaches the concept using a
   currency-exchange analogy and fashion or retail business context. Designed
   for FIT students with no science or coding background. Builds directly on
@@ -63,8 +63,8 @@ get_case_study("<argument>")
 ```
 
 This returns a pre-computed bundle. From it, read:
-- `bundle["recipe_card"]` — the full recipe card YAML text
-- From the recipe card YAML frontmatter: `name` and `processes`
+- `bundle["product_graph"]` — the full product graph YAML text
+- From the product graph YAML frontmatter: `name` and `processes`
 - `bundle["lca_results"]["lci"]` — the compiled inventory totals (starting point)
 - `bundle["lca_results"]["lcia"]` — the TRACI 2.2 impact category scores (destination)
 
@@ -152,7 +152,7 @@ Introduce the product:
 Show the supply chain diagram by calling the `get_lca_svg` MCP tool
 and displaying the returned SVG inline:
 ```
-get_lca_svg(recipe_card="<content from get_case_study>", graph_type="structure")
+get_lca_svg(product_graph="<content from get_case_study>", graph_type="structure")
 ```
 
 Then use the matching block below for the chosen case study.

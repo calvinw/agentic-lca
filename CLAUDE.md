@@ -142,10 +142,10 @@ Syncing to claude... done.
 ### Example 2 — Explaining a file structure
 
 **Bad (too technical):**
-> Each analysis is isolated in its own subdirectory under `lca_analysis/` with its own `recipe_card.md` spec and generated `lca_results.md` output.
+> Each analysis is isolated in its own subdirectory under `lca_analysis/` with its own `product_graph.yaml` spec and generated `lca_results.md` output.
 
 **Good (student-friendly):**
-> Think of the `lca_analysis` folder like a filing cabinet. Inside it, each product you study gets its own drawer — for example, `coffee` or `cotton_shirt`. Inside each drawer, there are four documents: the recipe card (`recipe_card.md`) where you describe the product, the report (`lca_results.md`) with the calculation results, and two supply chain diagrams (`product_graph_scaled.svg` and `product_graph_structure.svg`). This way, studying a new product never overwrites the work you did on a previous one.
+> Think of the `lca_analysis` folder like a filing cabinet. Inside it, each product you study gets its own drawer — for example, `coffee` or `cotton_shirt`. Inside each drawer, there are four documents: the product graph (`product_graph.yaml`) where you describe the product, the report (`lca_results.md`) with the calculation results, and two supply chain diagrams (`product_graph_scaled.svg` and `product_graph_structure.svg`). This way, studying a new product never overwrites the work you did on a previous one.
 
 ### Example 3 — Explaining a result
 
@@ -218,7 +218,7 @@ available there, so the SVG is displayed inline automatically.
 
 ## FEDEFL flow names — the naming standard for emissions and resources
 
-All recipe cards use the **Federal Elementary Flow List (FEDEFL)** — the US EPA's standard names for elementary flows. When writing or editing recipe cards, always use these exact names in the `elementary_flows` and `emissions` sections. The most common ones are:
+All product graphs use the **Federal Elementary Flow List (FEDEFL)** — the US EPA's standard names for elementary flows. When writing or editing product graphs, always use these exact names in the `elementary_flows` and `emissions` sections. The most common ones are:
 
 | Substance | FEDEFL name (use this exactly) | Do NOT use |
 |---|---|---|
@@ -232,13 +232,13 @@ All recipe cards use the **Federal Elementary Flow List (FEDEFL)** — the US EP
 
 Getting these names wrong causes the LCIA step to score zero for that flow, with no error message — it will silently fail. Always double-check the spelling.
 
-The `compartment` field (e.g. `compartment: air`) is used in recipe cards for human readability but does not affect the database lookup — only the name matters for matching.
+The `compartment` field (e.g. `compartment: air`) is used in product graphs for human readability but does not affect the database lookup — only the name matters for matching.
 
 ---
 
 ## LCIA method — TRACI 2.2
 
-All recipe cards include a `lcia:` section at the bottom:
+All product graphs include a `lcia:` section at the bottom:
 
 ```yaml
 lcia:

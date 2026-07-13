@@ -1,4 +1,15 @@
----
+# ## About this analysis
+#
+# Based on the hand dryer scenario from Jolliet et al. Chapter 3 (Table 3.6).
+#
+# Key parameters:
+# - Power rating: 1800 W
+# - Drying time: 30 seconds
+# - Energy per use: 1800 W × 30 s = 15 Wh = 0.015 kWh
+# - European grid average: 0.4 kg CO₂ per kWh
+#
+# Expected use-phase emissions: 0.015 × 0.4 = 0.006 kg CO₂ per event.
+
 name: "Warm Air Hand Dryer LCA — one hand drying event"
 goal: >
   Calculate the total CO₂ emitted to dry one pair of hands using a
@@ -38,16 +49,3 @@ reference_process: "P2 — Dry hands"
 
 lcia:
   method_name: "TRACI 2.2"
----
-
-## About this analysis
-
-Based on the hand dryer scenario from Jolliet et al. Chapter 3 (Table 3.6).
-
-Key parameters:
-- Power rating: 1800 W
-- Drying time: 30 seconds
-- Energy per use: 1800 W × 30 s = 15 Wh = 0.015 kWh
-- European grid average: 0.4 kg CO₂ per kWh
-
-Expected use-phase emissions: 0.015 × 0.4 = 0.006 kg CO₂ per event.

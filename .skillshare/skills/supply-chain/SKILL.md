@@ -7,7 +7,7 @@ description: >
   how to read a product graph diagram, what each box (process) represents,
   what flows connect them, and what "upstream" and "downstream" mean. Invoke
   as /supply-chain followed by a case study name, for example /supply-chain wool_yarn or
-  /supply-chain polyester_tshirt. The skill reads the recipe card for that
+  /supply-chain polyester_tshirt. The skill reads the product graph for that
   case study and walks the student through the supply chain diagram using
   real data and Socratic questions. Designed for FIT students with no science
   or coding background.
@@ -43,8 +43,8 @@ get_case_study("<argument>")
 ```
 
 This returns a pre-computed bundle. From it, read:
-- `bundle["recipe_card"]` — the full recipe card YAML text
-- From the recipe card YAML frontmatter:
+- `bundle["product_graph"]` — the full product graph YAML text
+- From the product graph YAML frontmatter:
   - `name` — the product name
   - `goal` — the study question in plain language
   - `functional_unit.description` — what is being measured
@@ -93,7 +93,7 @@ Keep the question short. One question only. Wait for their answer.
 
 Whatever the student says, find what is right about it. Then briefly introduce
 the case study before showing the diagram. Use the `name` and `goal` fields
-from the recipe card. Keep it to two or three sentences. Make clear it is a
+from the product graph. Keep it to two or three sentences. Make clear it is a
 teaching example — not a real brand's published study. For example:
 
 > "The supply chain we'll be mapping in this lesson is called **[name]**.
@@ -105,11 +105,11 @@ teaching example — not a real brand's published study. For example:
 Then:
 
 1. Tell them how many processes are in this case study's supply chain
-   (count the `processes` list you read from the recipe card).
+   (count the `processes` list you read from the product graph).
 2. Show the structure diagram by calling the `get_lca_svg` MCP tool
    and displaying the returned SVG inline:
    ```
-   get_lca_svg(recipe_card="<content from get_case_study>", graph_type="structure")
+   get_lca_svg(product_graph="<content from get_case_study>", graph_type="structure")
    ```
 3. After showing it, say something like:
    > "Here is the supply chain map for [product name]. Each box is one step
@@ -121,7 +121,7 @@ Then:
 ### Step 3 — Walk through each process box
 
 Once the student confirms they can see the diagram, walk through each
-process one by one. Use the `processes` list from the recipe card.
+process one by one. Use the `processes` list from the product graph.
 
 For each process, name it in plain English — do NOT just repeat the
 technical label. Explain what real-world activity it represents. For example:
@@ -144,7 +144,7 @@ After explaining all the boxes, ask:
 > product — the thing that gets sold to a customer?"
 
 Wait for their answer, then confirm: it is the **reference process**
-(use the `reference_process` field from the recipe card). Explain that
+(use the `reference_process` field from the product graph). Explain that
 LCA always starts from this box and works backwards through the chain.
 
 ---
@@ -157,9 +157,9 @@ Now explain what the arrows represent.
 > material, a product, or a component. In a supply chain, nothing comes
 > from nowhere: every input to one step is the output of another step."
 
-Walk through each arrow using the `inputs` fields from the recipe card.
-Name the flow in plain English and give the amount if it is in the recipe
-card. For example:
+Walk through each arrow using the `inputs` fields from the product graph.
+Name the flow in plain English and give the amount if it is in the product
+graph. For example:
 
 - Crude oil → Polyester fiber: "The oil well sends crude oil to the
   chemical factory. About 1.5 kg of crude oil is needed to make just

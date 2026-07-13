@@ -1,8 +1,17 @@
----
-# ─────────────────────────────────────────────────────────────
-# LCA Analysis Specification
-# Run with:  python3 lca_scripts/lca_analysis.py lca_analysis/cotton_shirt/recipe_card.md
-# ─────────────────────────────────────────────────────────────
+# ## About this analysis
+#
+# Cradle-to-gate LCA for one cotton shirt.
+#
+# Supply chain: cotton farm → spinning mill → weaving mill → garment factory.
+# Electricity is supplied to the spinning, weaving, and sewing steps by a
+# coal-powered grid (0.5 kg CO₂ per kWh).
+#
+# Key assumptions:
+# - A finished shirt uses 0.25 kg of fabric.
+# - Spinning requires 1.1 kg raw cotton per 1 kg yarn (10% fibre loss).
+# - Weaving requires 1.1 kg yarn per 1 kg fabric (10% yarn loss).
+# - Cotton farming emits 3.0 kg CO₂ per kg raw cotton (fertilisers, machinery, irrigation).
+# - Grid electricity emits 0.5 kg CO₂ per kWh (average coal-heavy grid).
 
 name: Cotton Shirt LCA — cradle to gate
 goal: >
@@ -68,19 +77,3 @@ reference_process: P4 — Cut and sew shirt
 
 lcia:
   method_name: "TRACI 2.2"
----
-
-## About this analysis
-
-Cradle-to-gate LCA for one cotton shirt.
-
-Supply chain: cotton farm → spinning mill → weaving mill → garment factory.
-Electricity is supplied to the spinning, weaving, and sewing steps by a
-coal-powered grid (0.5 kg CO₂ per kWh).
-
-Key assumptions:
-- A finished shirt uses 0.25 kg of fabric.
-- Spinning requires 1.1 kg raw cotton per 1 kg yarn (10% fibre loss).
-- Weaving requires 1.1 kg yarn per 1 kg fabric (10% yarn loss).
-- Cotton farming emits 3.0 kg CO₂ per kg raw cotton (fertilisers, machinery, irrigation).
-- Grid electricity emits 0.5 kg CO₂ per kWh (average coal-heavy grid).
