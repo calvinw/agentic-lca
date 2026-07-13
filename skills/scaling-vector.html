@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Calvin Williamson (calvinw)">
-<meta name="description" content="Teaching skill for the LCA concept of the scaling vector — how much each process in the supply chain must run to deliver exactly one functional unit. Invoke as /scaling-vector case-study, for example /scaling-vector wool_yarn or /scaling-vector polyester_tshirt. The skill reads the recipe card and lca_results.md for that case study and walks the student through the calculation using plain division, not matrix algebra. Designed for FIT students with no science or coding background.">
+<meta name="description" content="Teaching skill for the LCA concept of the scaling vector — how much each process in the supply chain must run to deliver exactly one functional unit. Invoke as /scaling-vector case-study, for example /scaling-vector wool_yarn or /scaling-vector polyester_tshirt. The skill reads the product graph and lca_results.md for that case study and walks the student through the calculation using plain division, not matrix algebra. Designed for FIT students with no science or coding background.">
 
 <title>scaling-vector – Agentic LCA</title>
 <style>
@@ -340,7 +340,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    <p>Teaching skill for the LCA concept of the scaling vector — how much each process in the supply chain must run to deliver exactly one functional unit. Invoke as /scaling-vector case-study, for example /scaling-vector wool_yarn or /scaling-vector polyester_tshirt. The skill reads the recipe card and lca_results.md for that case study and walks the student through the calculation using plain division, not matrix algebra. Designed for FIT students with no science or coding background.</p>
+    <p>Teaching skill for the LCA concept of the scaling vector — how much each process in the supply chain must run to deliver exactly one functional unit. Invoke as /scaling-vector case-study, for example /scaling-vector wool_yarn or /scaling-vector polyester_tshirt. The skill reads the product graph and lca_results.md for that case study and walks the student through the calculation using plain division, not matrix algebra. Designed for FIT students with no science or coding background.</p>
   </div>
 </div>
 
@@ -377,7 +377,7 @@ ul.task-list li input[type="checkbox"] {
 <p>The argument passed to this skill is a case study name, for example <code>wool_yarn</code>.</p>
 <p>Call the <code>get_case_study</code> MCP tool with that name:</p>
 <pre><code>get_case_study("&lt;argument&gt;")</code></pre>
-<p>This returns a pre-computed bundle. From it, read: - <code>bundle["recipe_card"]</code> — the full recipe card YAML text - From the recipe card YAML frontmatter: - <code>name</code> — the product name - <code>functional_unit.description</code>, <code>functional_unit.amount</code>, <code>functional_unit.unit</code> - <code>processes</code> — names, <code>reference_output</code> (flow + amount), <code>inputs</code> (flow + amount) - <code>elementary_flows.emissions</code> — the gas names and units - <code>reference_process</code> — which process is the finishing line - <code>bundle["svg_structure"]</code> — pre-computed structure diagram SVG - <code>bundle["svg_scaled"]</code> — pre-computed scaled diagram SVG - <code>bundle["unit_process_svgs"]</code> — dict of process_name → pre-computed SVG card - <code>bundle["lca_results"]["scaling_vector"]</code> — verified scaling factor per process - <code>bundle["lca_results"]["lci"]</code> — scaled inventory totals per flow - <code>bundle["lca_results"]["lcia"]</code> — final TRACI 2.2 impact scores</p>
+<p>This returns a pre-computed bundle. From it, read: - <code>bundle["product_graph"]</code> — the full product graph YAML text - From the product graph YAML frontmatter: - <code>name</code> — the product name - <code>functional_unit.description</code>, <code>functional_unit.amount</code>, <code>functional_unit.unit</code> - <code>processes</code> — names, <code>reference_output</code> (flow + amount), <code>inputs</code> (flow + amount) - <code>elementary_flows.emissions</code> — the gas names and units - <code>reference_process</code> — which process is the finishing line - <code>bundle["svg_structure"]</code> — pre-computed structure diagram SVG - <code>bundle["svg_scaled"]</code> — pre-computed scaled diagram SVG - <code>bundle["unit_process_svgs"]</code> — dict of process_name → pre-computed SVG card - <code>bundle["lca_results"]["scaling_vector"]</code> — verified scaling factor per process - <code>bundle["lca_results"]["lci"]</code> — scaled inventory totals per flow - <code>bundle["lca_results"]["lcia"]</code> — final TRACI 2.2 impact scores</p>
 <p>No separate <code>get_lca_svg</code>, <code>get_unit_process_svg</code>, or <code>run_lca</code> calls are needed — everything is pre-computed in the bundle.</p>
 <p>If no argument is given, or if the MCP tool returns an error, say: &gt; “I don’t have a case study set up for that product yet. The ones ready to &gt; explore are: <strong>wool_yarn</strong>, <strong>polyester_tshirt</strong>, <strong>cotton_fiber</strong>. &gt; Which would you like to start with?”</p>
 <hr>
@@ -394,26 +394,26 @@ ul.task-list li input[type="checkbox"] {
 <p>Think of it like a recipe. If a bread recipe produces one loaf, and you want three loaves, the recipe runs three times. If it produces two loaves per batch, and you want three loaves, it runs 1.5 times. The number of times it runs is the scaling factor — it’s just a ratio.”</p>
 </blockquote>
 <p>Show the structure diagram by calling the <code>get_lca_svg</code> MCP tool and displaying the returned SVG inline:</p>
-<pre><code>get_lca_svg(recipe_card="&lt;content from get_case_study&gt;", graph_type="structure")</code></pre>
+<pre><code>get_lca_svg(product_graph="&lt;content from get_case_study&gt;", graph_type="structure")</code></pre>
 <p>Briefly orient them to it:</p>
 <blockquote class="blockquote">
 <p>“Here is the supply chain map. Each box is one step in the chain — a process. The arrows show what flows from one step to the next. The rightmost box is the <strong>reference process</strong> — the finishing line, the step that delivers the product we are studying.”</p>
 </blockquote>
 <hr>
-<p>Next, introduce the idea of unit process data and walk through each process <strong>one diagram at a time</strong>. For each process P1, P2, … (in order from the recipe card <code>processes</code> list), call the <code>get_unit_process_svg</code> MCP tool and display the returned SVG inline:</p>
-<pre><code>get_unit_process_svg(recipe_card="&lt;content from get_case_study&gt;", process_name="&lt;exact process name&gt;")</code></pre>
+<p>Next, introduce the idea of unit process data and walk through each process <strong>one diagram at a time</strong>. For each process P1, P2, … (in order from the product graph <code>processes</code> list), call the <code>get_unit_process_svg</code> MCP tool and display the returned SVG inline:</p>
+<pre><code>get_unit_process_svg(product_graph="&lt;content from get_case_study&gt;", process_name="&lt;exact process name&gt;")</code></pre>
 <p>After showing each diagram, say something like:</p>
 <blockquote class="blockquote">
 <p>“This is the specification sheet for [process name]. The box in the middle is the process. The arrow leaving to the right is the <strong>reference output</strong> — what this process produces in a single run: [reference_output.amount] [reference_output.unit] of [reference_output.flow]. That number is the key one to remember.</p>
 <p>On the left you can see what it consumes as an input (if anything). Below are the gases it releases — the emissions — and above are any natural resources it draws on.”</p>
 </blockquote>
-<p>Do this for every process in the recipe card before moving on to the table. Emphasise the <strong>reference output amount</strong> each time — that is what the scaling calculation divides by.</p>
+<p>Do this for every process in the product graph before moving on to the table. Emphasise the <strong>reference output amount</strong> each time — that is what the scaling calculation divides by.</p>
 <hr>
 <p>After all unit process diagrams have been shown, say:</p>
 <blockquote class="blockquote">
 <p>“Now let’s collect all of that into one table so we can see the whole picture at once:”</p>
 </blockquote>
-<p>Build a clear summary table from the recipe card data. Include one row per process showing: the process name, its reference output (what it produces per run), its inputs (what it consumes per run, if any), and its emissions (what gases it releases per run). Use plain column headers. For example:</p>
+<p>Build a clear summary table from the product graph data. Include one row per process showing: the process name, its reference output (what it produces per run), its inputs (what it consumes per run, if any), and its emissions (what gases it releases per run). Use plain column headers. For example:</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 25%">
@@ -444,7 +444,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
-<p>Adapt this table to whatever processes, inputs, and emissions are in the recipe card for the current case study. After the table, say:</p>
+<p>Adapt this table to whatever processes, inputs, and emissions are in the product graph for the current case study. After the table, say:</p>
 <blockquote class="blockquote">
 <p>“These are the building blocks. Every number in the table came from measurement or a database — not from guessing. Now we can use them to figure out how many times each process needs to run.”</p>
 </blockquote>
@@ -521,7 +521,7 @@ ul.task-list li input[type="checkbox"] {
 <p>Our numbers match exactly.”</p>
 </blockquote>
 <p>Then show what the scaling factors mean in practice — the supply chain diagram with all amounts scaled to the functional unit. Call the <code>get_lca_svg</code> MCP tool with <code>graph_type="scaled"</code> and display the returned SVG inline:</p>
-<pre><code>get_lca_svg(recipe_card="&lt;content from get_case_study&gt;", graph_type="scaled")</code></pre>
+<pre><code>get_lca_svg(product_graph="&lt;content from get_case_study&gt;", graph_type="scaled")</code></pre>
 <p>Point out what has changed compared to the structure diagram the student saw at the start:</p>
 <blockquote class="blockquote">
 <p>“This is the same supply chain map we looked at earlier — but now every arrow has a real number on it, scaled to our functional unit. The amounts on each arrow are no longer ‘per run’ — they are the actual quantities flowing through the whole chain to produce exactly [functional unit description].</p>

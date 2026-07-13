@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Junghyun Choi (elenachoi1)">
-<meta name="description" content="Teaching skill for the LCA concept of life cycle stages — the four named boundary types used in fashion and retail LCA studies: cradle to gate, cradle to grave, cradle to cradle, and gate to grave. Invoke as /life-cycle-stages case-study, for example /life-cycle-stages wool_yarn or /life-cycle-stages polyester_tshirt. The skill reads the recipe card for that case study and teaches the concept using real data, everyday analogies, and fashion or retail business context. Designed for FIT students with no science or coding background. Builds directly on the system-boundary skill.">
+<meta name="description" content="Teaching skill for the LCA concept of life cycle stages — the four named boundary types used in fashion and retail LCA studies: cradle to gate, cradle to grave, cradle to cradle, and gate to grave. Invoke as /life-cycle-stages case-study, for example /life-cycle-stages wool_yarn or /life-cycle-stages polyester_tshirt. The skill reads the product graph for that case study and teaches the concept using real data, everyday analogies, and fashion or retail business context. Designed for FIT students with no science or coding background. Builds directly on the system-boundary skill.">
 
 <title>life-cycle-stages – Agentic LCA</title>
 <style>
@@ -342,7 +342,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    <p>Teaching skill for the LCA concept of life cycle stages — the four named boundary types used in fashion and retail LCA studies: cradle to gate, cradle to grave, cradle to cradle, and gate to grave. Invoke as /life-cycle-stages case-study, for example /life-cycle-stages wool_yarn or /life-cycle-stages polyester_tshirt. The skill reads the recipe card for that case study and teaches the concept using real data, everyday analogies, and fashion or retail business context. Designed for FIT students with no science or coding background. Builds directly on the system-boundary skill.</p>
+    <p>Teaching skill for the LCA concept of life cycle stages — the four named boundary types used in fashion and retail LCA studies: cradle to gate, cradle to grave, cradle to cradle, and gate to grave. Invoke as /life-cycle-stages case-study, for example /life-cycle-stages wool_yarn or /life-cycle-stages polyester_tshirt. The skill reads the product graph for that case study and teaches the concept using real data, everyday analogies, and fashion or retail business context. Designed for FIT students with no science or coding background. Builds directly on the system-boundary skill.</p>
   </div>
 </div>
 
@@ -379,7 +379,7 @@ ul.task-list li input[type="checkbox"] {
 <p>The argument passed to this skill is a case study name, for example <code>polyester_tshirt</code>.</p>
 <p>Call the <code>get_case_study</code> MCP tool with that name:</p>
 <pre><code>get_case_study("&lt;argument&gt;")</code></pre>
-<p>This returns a pre-computed bundle. From it, read: - <code>bundle["recipe_card"]</code> — the full recipe card YAML text - From the recipe card YAML frontmatter: - <code>name</code> — the product name - <code>goal</code> — why this study was done - <code>processes</code> — the list of steps in the supply chain - <code>reference_process</code> — the finishing step that delivers the finished product - <code>system_boundary</code> — the stated boundary of the study (if present)</p>
+<p>This returns a pre-computed bundle. From it, read: - <code>bundle["product_graph"]</code> — the full product graph YAML text - From the product graph YAML frontmatter: - <code>name</code> — the product name - <code>goal</code> — why this study was done - <code>processes</code> — the list of steps in the supply chain - <code>reference_process</code> — the finishing step that delivers the finished product - <code>system_boundary</code> — the stated boundary of the study (if present)</p>
 <p>Everything you teach comes from what you find in the bundle. Do not invent numbers or facts about the product.</p>
 <p>If no argument is given, or if the MCP tool returns an error, say: &gt; “I don’t have a case study set up for that product yet. The ones ready to &gt; explore are: <strong>wool_yarn</strong>, <strong>polyester_tshirt</strong>, <strong>cotton_fiber</strong>. &gt; Which would you like to start with?”</p>
 <hr>
@@ -416,15 +416,15 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="step-3-introduce-the-four-boundary-types" class="level3">
 <h3 class="anchored" data-anchor-id="step-3-introduce-the-four-boundary-types">Step 3 — Introduce the four boundary types</h3>
-<p>Introduce each one in plain English, one at a time. Use the product from the recipe card as the running example throughout.</p>
-<p><strong>Cradle to gate</strong> &gt; “This boundary starts at the very beginning of the supply chain — where the &gt; raw material comes out of the ground (the ‘cradle’) — and stops at the &gt; factory exit (the ‘gate’). Everything after the gate — transport to the shop, &gt; the customer using the product, disposing of it — is outside the fence. &gt; &gt; For [product name], a cradle-to-gate study would cover [list the processes &gt; from the recipe card]. It would <em>not</em> cover what happens after the product &gt; leaves the final factory.”</p>
+<p>Introduce each one in plain English, one at a time. Use the product from the product graph as the running example throughout.</p>
+<p><strong>Cradle to gate</strong> &gt; “This boundary starts at the very beginning of the supply chain — where the &gt; raw material comes out of the ground (the ‘cradle’) — and stops at the &gt; factory exit (the ‘gate’). Everything after the gate — transport to the shop, &gt; the customer using the product, disposing of it — is outside the fence. &gt; &gt; For [product name], a cradle-to-gate study would cover [list the processes &gt; from the product graph]. It would <em>not</em> cover what happens after the product &gt; leaves the final factory.”</p>
 <p>Pause and ask: &gt; “Before I go on — why do you think most supplier sustainability reports use &gt; cradle to gate rather than a wider boundary?”</p>
 <p>Wait for the student’s answer, then validate it and continue: &gt; “Exactly — suppliers control what happens on their side of the gate. They &gt; have no control over how a customer uses or disposes of the product, so it &gt; would not be fair to hold them responsible for it.”</p>
 <p><strong>Cradle to grave</strong> &gt; “This is the widest common boundary. It starts at the same place — raw &gt; material in the ground — but continues all the way through to the very end &gt; of the product’s life: the customer disposing of it, whether that means &gt; landfill, incineration, or recycling. &gt; &gt; For a [product name], this would add the use phase — [give a relevant &gt; example from the product, e.g.&nbsp;washing and drying for a garment] — and &gt; whatever happens at end of life. This boundary gives the most complete picture, &gt; but it also requires the most data, because you have to estimate how customers &gt; actually use and dispose of the product.”</p>
 <p><strong>Cradle to cradle</strong> &gt; “This is a variation of cradle to grave for products that are designed to &gt; be recycled back into production. The boundary is the same as cradle to grave, &gt; but instead of ending at a landfill, it loops back — the end-of-life material &gt; is recycled and becomes the raw material for a new product. &gt; &gt; This boundary is used for circular economy claims, such as recycled polyester &gt; made from plastic bottles, or wool garments collected and re-spun into new yarn.”</p>
 <p><strong>Gate to grave</strong> &gt; “This boundary starts at the opposite end — at the warehouse or retail store &gt; (the ‘gate’) — and covers only what happens after purchase: the consumer using &gt; the product and disposing of it at the end. All the production upstream is &gt; left outside the fence. &gt; &gt; This boundary is used when the production process is already fixed and the &gt; question is purely about what happens in the consumer’s hands — for example, &gt; comparing different packaging options, or studying whether a product is washed &gt; by hand or by machine.”</p>
 <p>After presenting all four, show the supply chain diagram by calling the <code>get_lca_svg</code> MCP tool and displaying the returned SVG inline:</p>
-<pre><code>get_lca_svg(recipe_card="&lt;content from get_case_study&gt;", graph_type="structure")</code></pre>
+<pre><code>get_lca_svg(product_graph="&lt;content from get_case_study&gt;", graph_type="structure")</code></pre>
 <p>Point to it and say: &gt; “The processes shown in this diagram are what the [product name] study &gt; included. Based on what we just covered — which of the four boundary types &gt; does this diagram represent?”</p>
 <p>Wait for the student’s answer before moving on.</p>
 <hr>

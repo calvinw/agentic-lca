@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Junghyun Choi (elenachoi1)">
-<meta name="description" content="Teaching skill for the LCA concepts of technosphere and ecosphere — the two worlds that every LCA study maps: the human-made world of factories, farms, and supply chains (technosphere) and the natural world of air, water, and soil (ecosphere). Invoke as /technosphere-and-ecosphere followed by a case study name, for example /technosphere-and-ecosphere wool_yarn or /technosphere-and-ecosphere polyester_tshirt. The skill reads the recipe card for that case study and teaches the concept by sorting its parts into the two worlds, using everyday analogies and fashion or retail business context. Designed for FIT students with no science or coding background. Short and visual — four to five exchanges to complete.">
+<meta name="description" content="Teaching skill for the LCA concepts of technosphere and ecosphere — the two worlds that every LCA study maps: the human-made world of factories, farms, and supply chains (technosphere) and the natural world of air, water, and soil (ecosphere). Invoke as /technosphere-and-ecosphere followed by a case study name, for example /technosphere-and-ecosphere wool_yarn or /technosphere-and-ecosphere polyester_tshirt. The skill reads the product graph for that case study and teaches the concept by sorting its parts into the two worlds, using everyday analogies and fashion or retail business context. Designed for FIT students with no science or coding background. Short and visual — four to five exchanges to complete.">
 
 <title>technosphere-and-ecosphere – Agentic LCA</title>
 <style>
@@ -323,7 +323,7 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#step-1-open-with-an-everyday-analogy-question" id="toc-step-1-open-with-an-everyday-analogy-question" class="nav-link" data-scroll-target="#step-1-open-with-an-everyday-analogy-question">Step 1 — Open with an everyday analogy question</a></li>
   <li><a href="#step-2-validate-their-answer-and-introduce-the-two-spheres" id="toc-step-2-validate-their-answer-and-introduce-the-two-spheres" class="nav-link" data-scroll-target="#step-2-validate-their-answer-and-introduce-the-two-spheres">Step 2 — Validate their answer and introduce the two spheres</a></li>
-  <li><a href="#step-3-sort-the-recipe-card-into-the-two-worlds" id="toc-step-3-sort-the-recipe-card-into-the-two-worlds" class="nav-link" data-scroll-target="#step-3-sort-the-recipe-card-into-the-two-worlds">Step 3 — Sort the recipe card into the two worlds</a></li>
+  <li><a href="#step-3-sort-the-product-graph-into-the-two-worlds" id="toc-step-3-sort-the-product-graph-into-the-two-worlds" class="nav-link" data-scroll-target="#step-3-sort-the-product-graph-into-the-two-worlds">Step 3 — Sort the product graph into the two worlds</a></li>
   <li><a href="#step-4-ask-a-what-if-question" id="toc-step-4-ask-a-what-if-question" class="nav-link" data-scroll-target="#step-4-ask-a-what-if-question">Step 4 — Ask a what-if question</a></li>
   <li><a href="#step-5-connect-to-a-business-decision-and-close" id="toc-step-5-connect-to-a-business-decision-and-close" class="nav-link" data-scroll-target="#step-5-connect-to-a-business-decision-and-close">Step 5 — Connect to a business decision and close</a></li>
   </ul></li>
@@ -342,7 +342,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    <p>Teaching skill for the LCA concepts of technosphere and ecosphere — the two worlds that every LCA study maps: the human-made world of factories, farms, and supply chains (technosphere) and the natural world of air, water, and soil (ecosphere). Invoke as /technosphere-and-ecosphere followed by a case study name, for example /technosphere-and-ecosphere wool_yarn or /technosphere-and-ecosphere polyester_tshirt. The skill reads the recipe card for that case study and teaches the concept by sorting its parts into the two worlds, using everyday analogies and fashion or retail business context. Designed for FIT students with no science or coding background. Short and visual — four to five exchanges to complete.</p>
+    <p>Teaching skill for the LCA concepts of technosphere and ecosphere — the two worlds that every LCA study maps: the human-made world of factories, farms, and supply chains (technosphere) and the natural world of air, water, and soil (ecosphere). Invoke as /technosphere-and-ecosphere followed by a case study name, for example /technosphere-and-ecosphere wool_yarn or /technosphere-and-ecosphere polyester_tshirt. The skill reads the product graph for that case study and teaches the concept by sorting its parts into the two worlds, using everyday analogies and fashion or retail business context. Designed for FIT students with no science or coding background. Short and visual — four to five exchanges to complete.</p>
   </div>
 </div>
 
@@ -370,7 +370,7 @@ ul.task-list li input[type="checkbox"] {
 <p>This skill teaches the distinction between the <strong>technosphere</strong> and the <strong>ecosphere</strong> in Life Cycle Assessment (LCA).</p>
 <p>Every LCA study maps the same basic story: human activities (factories, farms, mills, power plants) take things from nature and release things back into it. The human-made world of those activities is called the <strong>technosphere</strong>. The natural world they draw from and discharge into is called the <strong>ecosphere</strong>.</p>
 <p>Understanding the boundary between these two worlds is the key to understanding <em>why</em> LCA measures what it measures. Only flows that cross that boundary — resources pulled out of nature and emissions released into it — cause environmental impact. Everything that stays inside the human-made world (a bag of raw wool moving from a farm to a mill, for example) does not directly harm the environment. It is the crossings that count.</p>
-<p>A student who completes this skill will be able to: - Explain in plain language what the technosphere and ecosphere mean - Sort the parts of any recipe card into the two worlds - Explain why only elementary flows (emissions and resource extractions) cause environmental impact, while intermediate flows between processes do not - Spot the moment of harm: when something crosses from the technosphere into the ecosphere</p>
+<p>A student who completes this skill will be able to: - Explain in plain language what the technosphere and ecosphere mean - Sort the parts of any product graph into the two worlds - Explain why only elementary flows (emissions and resource extractions) cause environmental impact, while intermediate flows between processes do not - Spot the moment of harm: when something crosses from the technosphere into the ecosphere</p>
 <p>This skill is for business and retail management students at FIT. It assumes no science or technical background. The tone should be warm, encouraging, and conversational. Ask questions — never lecture. Build understanding one step at a time.</p>
 <hr>
 </section>
@@ -379,7 +379,7 @@ ul.task-list li input[type="checkbox"] {
 <p>The argument passed to this skill is a case study name, for example <code>wool_yarn</code>.</p>
 <p>Call the <code>get_case_study</code> MCP tool with that name:</p>
 <pre><code>get_case_study("&lt;argument&gt;")</code></pre>
-<p>This returns a pre-computed bundle. From it, read: - <code>bundle["recipe_card"]</code> — the full recipe card YAML text - From the recipe card YAML frontmatter: - <code>name</code> — the product name - <code>processes</code> — the list of production steps (technosphere activities) - <code>products</code> — the intermediate goods flowing between steps (also technosphere) - <code>elementary_flows.emissions</code> — substances released into the natural world - <code>elementary_flows.resources</code> — substances extracted from the natural world - <code>bundle["svg_structure"]</code> — pre-computed structure diagram SVG (use directly, no separate <code>get_lca_svg</code> call needed)</p>
+<p>This returns a pre-computed bundle. From it, read: - <code>bundle["product_graph"]</code> — the full product graph YAML text - From the product graph YAML frontmatter: - <code>name</code> — the product name - <code>processes</code> — the list of production steps (technosphere activities) - <code>products</code> — the intermediate goods flowing between steps (also technosphere) - <code>elementary_flows.emissions</code> — substances released into the natural world - <code>elementary_flows.resources</code> — substances extracted from the natural world - <code>bundle["svg_structure"]</code> — pre-computed structure diagram SVG (use directly, no separate <code>get_lca_svg</code> call needed)</p>
 <p>Everything you teach comes from what you find in the bundle. Do not invent numbers or facts about the product.</p>
 <p>If no argument is given, or if the MCP tool returns an error, say: &gt; “I don’t have a case study set up for that product yet. The ones ready to &gt; explore are: <strong>wool_yarn</strong>, <strong>polyester_tshirt</strong>, <strong>cotton_fiber</strong>. &gt; Which would you like to start with?”</p>
 <hr>
@@ -415,24 +415,24 @@ ul.task-list li input[type="checkbox"] {
 <p>Keep it to two or three sentences after the validation. One clear idea only.</p>
 <hr>
 </section>
-<section id="step-3-sort-the-recipe-card-into-the-two-worlds" class="level3">
-<h3 class="anchored" data-anchor-id="step-3-sort-the-recipe-card-into-the-two-worlds">Step 3 — Sort the recipe card into the two worlds</h3>
-<p>Now bring in the case study. Briefly introduce the product using the <code>name</code> field from the recipe card. Keep it to one sentence:</p>
+<section id="step-3-sort-the-product-graph-into-the-two-worlds" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-sort-the-product-graph-into-the-two-worlds">Step 3 — Sort the product graph into the two worlds</h3>
+<p>Now bring in the case study. Briefly introduce the product using the <code>name</code> field from the product graph. Keep it to one sentence:</p>
 <blockquote class="blockquote">
-<p>“Let’s sort a real LCA study into these two worlds. This is the recipe card for <strong>[name]</strong>.”</p>
+<p>“Let’s sort a real LCA study into these two worlds. This is the product graph for <strong>[name]</strong>.”</p>
 </blockquote>
 <p>Then show the supply chain diagram by calling the <code>get_lca_svg</code> MCP tool and displaying the returned SVG inline:</p>
-<pre><code>get_lca_svg(recipe_card="&lt;content from get_case_study&gt;", graph_type="structure")</code></pre>
-<p>Walk the student through the two categories, drawing directly from the recipe card:</p>
+<pre><code>get_lca_svg(product_graph="&lt;content from get_case_study&gt;", graph_type="structure")</code></pre>
+<p>Walk the student through the two categories, drawing directly from the product graph:</p>
 <p><strong>Technosphere — everything inside the wall:</strong></p>
 <blockquote class="blockquote">
-<p>“The boxes in this diagram are the <strong>processes</strong> — the human activities that make [product name]. In this study that means: [list the process names from the recipe card, e.g.&nbsp;‘Sheep farming’ and ‘Wool yarn production’]. Also inside the wall are the <strong>intermediate products</strong> that flow between those boxes — things like [list the products, e.g.&nbsp;‘raw wool passing from the farm to the mill’]. These flows stay entirely inside the human-made world. They do not touch nature.”</p>
+<p>“The boxes in this diagram are the <strong>processes</strong> — the human activities that make [product name]. In this study that means: [list the process names from the product graph, e.g.&nbsp;‘Sheep farming’ and ‘Wool yarn production’]. Also inside the wall are the <strong>intermediate products</strong> that flow between those boxes — things like [list the products, e.g.&nbsp;‘raw wool passing from the farm to the mill’]. These flows stay entirely inside the human-made world. They do not touch nature.”</p>
 </blockquote>
 <p><strong>Ecosphere crossings — what crosses the wall:</strong></p>
 <blockquote class="blockquote">
 <p>“Now look at what crosses the wall. From the processes in this study, two types of flows reach the ecosphere:</p>
 <ul>
-<li><p><strong>Emissions</strong> going <em>out</em> into nature: [list the emissions from the recipe card, e.g.&nbsp;‘Carbon dioxide and Methane released to air’]. These are substances the processes produce and discharge into the natural world.</p></li>
+<li><p><strong>Emissions</strong> going <em>out</em> into nature: [list the emissions from the product graph, e.g.&nbsp;‘Carbon dioxide and Methane released to air’]. These are substances the processes produce and discharge into the natural world.</p></li>
 <li><p><strong>Resources</strong> coming <em>in</em> from nature: [list the resources, e.g.&nbsp;‘Water drawn from a natural water source’]. These are things extracted from the ecosphere to run the technosphere.</p></li>
 </ul>
 <p>In LCA, these crossings are called <strong>elementary flows</strong> — elementary because they are the basic exchanges between the human world and the natural world. They are the only flows that score environmental impact, because they are the only ones that actually affect the ecosphere.”</p>

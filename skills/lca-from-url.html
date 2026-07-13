@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Calvin Williamson (calvinw)">
-<meta name="description" content="Use this skill when the user provides a URL to an LCA study, a published environmental report, or a product sustainability page and wants to turn it into a recipe_card.md they can run and explore. Also triggers when the user names a well-known LCA study by title (e.g.&nbsp;“Cotton Inc.&nbsp;cotton fiber LCA”, “IWTO wool LCA”, “thredUP secondhand clothing study”) and wants to recreate or remix it. Builds a base-case recipe card plus 3–5 scenario variants (just like the Levi’s jeans folder), then offers to run the analysis. Trigger phrases: “turn this into an LCA”, “build a recipe card from”, “recreate this LCA”, “make scenarios for”, “use this study”, “remix this LCA”.">
+<meta name="description" content="Use this skill when the user provides a URL to an LCA study, a published environmental report, or a product sustainability page and wants to turn it into a product_graph.yaml they can run and explore. Also triggers when the user names a well-known LCA study by title (e.g.&nbsp;“Cotton Inc.&nbsp;cotton fiber LCA”, “IWTO wool LCA”, “thredUP secondhand clothing study”) and wants to recreate or remix it. Builds a base-case product graph plus 3–5 scenario variants (just like the Levi’s jeans folder), then offers to run the analysis. Trigger phrases: “turn this into an LCA”, “build a product graph from”, “recreate this LCA”, “make scenarios for”, “use this study”, “remix this LCA”.">
 
 <title>lca-from-url – Agentic LCA</title>
 <style>
@@ -357,7 +357,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#step-1-fetch-and-read-the-source" id="toc-step-1-fetch-and-read-the-source" class="nav-link" data-scroll-target="#step-1-fetch-and-read-the-source">Step 1 — Fetch and read the source</a></li>
   <li><a href="#step-2-map-the-supply-chain" id="toc-step-2-map-the-supply-chain" class="nav-link" data-scroll-target="#step-2-map-the-supply-chain">Step 2 — Map the supply chain</a></li>
-  <li><a href="#step-3-translate-into-a-recipe-card" id="toc-step-3-translate-into-a-recipe-card" class="nav-link" data-scroll-target="#step-3-translate-into-a-recipe-card">Step 3 — Translate into a recipe card</a></li>
+  <li><a href="#step-3-translate-into-a-product-graph" id="toc-step-3-translate-into-a-product-graph" class="nav-link" data-scroll-target="#step-3-translate-into-a-product-graph">Step 3 — Translate into a product graph</a></li>
   </ul></li>
   <li><a href="#well-known-textile-lcas-you-can-recreate" id="toc-well-known-textile-lcas-you-can-recreate" class="nav-link" data-scroll-target="#well-known-textile-lcas-you-can-recreate">Well-known textile LCAs you can recreate</a></li>
   <li><a href="#tone-and-explanation-rules" id="toc-tone-and-explanation-rules" class="nav-link" data-scroll-target="#tone-and-explanation-rules">Tone and explanation rules</a></li>
@@ -373,7 +373,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <div>
   <div class="description">
-    <p>Use this skill when the user provides a URL to an LCA study, a published environmental report, or a product sustainability page and wants to turn it into a recipe_card.md they can run and explore. Also triggers when the user names a well-known LCA study by title (e.g.&nbsp;“Cotton Inc.&nbsp;cotton fiber LCA”, “IWTO wool LCA”, “thredUP secondhand clothing study”) and wants to recreate or remix it. Builds a base-case recipe card plus 3–5 scenario variants (just like the Levi’s jeans folder), then offers to run the analysis. Trigger phrases: “turn this into an LCA”, “build a recipe card from”, “recreate this LCA”, “make scenarios for”, “use this study”, “remix this LCA”.</p>
+    <p>Use this skill when the user provides a URL to an LCA study, a published environmental report, or a product sustainability page and wants to turn it into a product_graph.yaml they can run and explore. Also triggers when the user names a well-known LCA study by title (e.g.&nbsp;“Cotton Inc.&nbsp;cotton fiber LCA”, “IWTO wool LCA”, “thredUP secondhand clothing study”) and wants to recreate or remix it. Builds a base-case product graph plus 3–5 scenario variants (just like the Levi’s jeans folder), then offers to run the analysis. Trigger phrases: “turn this into an LCA”, “build a product graph from”, “recreate this LCA”, “make scenarios for”, “use this study”, “remix this LCA”.</p>
   </div>
 </div>
 
@@ -398,8 +398,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="what-this-skill-does" class="level2">
 <h2 class="anchored" data-anchor-id="what-this-skill-does">What this skill does</h2>
-<p>This skill takes a URL pointing to a real LCA study (or a well-known study name) and guides the student through turning the published data into a working <code>recipe_card.md</code> that can be analysed with the openLCA tools already set up in this project.</p>
-<p>It then creates <strong>scenario variants</strong> — alternative versions of the recipe card where one assumption is changed at a time — so the student can answer “what if?” questions like: - What if the factory used renewable energy? - What if the garment were made from recycled fibre instead of virgin? - What if the consumer washed the item less often? - What if the material came from an organic farm?</p>
+<p>This skill takes a URL pointing to a real LCA study (or a well-known study name) and guides the student through turning the published data into a working <code>product_graph.yaml</code> that can be analysed with the openLCA tools already set up in this project.</p>
+<p>It then creates <strong>scenario variants</strong> — alternative versions of the product graph where one assumption is changed at a time — so the student can answer “what if?” questions like: - What if the factory used renewable energy? - What if the garment were made from recycled fibre instead of virgin? - What if the consumer washed the item less often? - What if the material came from an organic farm?</p>
 <p>This mirrors exactly how the Levi’s 501 jeans folder (<code>lca_analysis/levis/</code>) is structured — a base case plus named scenario cards.</p>
 <hr>
 </section>
@@ -431,11 +431,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Give the student a moment to respond before continuing. If they say it looks right, proceed to Step 3.</p>
 <hr>
 </section>
-<section id="step-3-translate-into-a-recipe-card" class="level3">
-<h3 class="anchored" data-anchor-id="step-3-translate-into-a-recipe-card">Step 3 — Translate into a recipe card</h3>
-<p>Create the folder and recipe card:</p>
-<pre><code>lca_analysis/&lt;study_name&gt;/recipe_card.md</code></pre>
-<p>Use the standard recipe card format (YAML frontmatter). Follow these rules:</p>
+<section id="step-3-translate-into-a-product-graph" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-translate-into-a-product-graph">Step 3 — Translate into a product graph</h3>
+<p>Create the folder and product graph:</p>
+<pre><code>lca_analysis/&lt;study_name&gt;/product_graph.yaml</code></pre>
+<p>Use the standard product graph format (YAML frontmatter). Follow these rules:</p>
 <p><strong>Units:</strong> Always include <code>kg: Mass</code> at minimum. Add <code>kWh: Electrical energy</code> if electricity is in the model. Add other units as needed.</p>
 <p><strong>FEDEFL flow names:</strong> Use exact EPA FEDEFL names for all elementary flows: - Carbon dioxide (not CO2, not “CO₂ to air”) - Methane (not CH4) - Nitrous oxide (not N2O) - Nitrogen oxides (not NOx) - Sulfur dioxide (not SO2)</p>
 <p><strong>LCIA section:</strong> Always include at the bottom:</p>
@@ -443,7 +443,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">method_name</span><span class="kw">:</span><span class="at"> </span><span class="st">"TRACI 2.2"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Process naming:</strong> Name processes with a number prefix for clarity: <code>P1 — Sheep farm</code>, <code>P2 — Wool scouring</code>, etc.</p>
 <p><strong>Emissions amounts:</strong> Use the per-unit numbers from the study. If a stage’s emissions are reported per kg of output AND the output amount differs from 1.0, adjust accordingly.</p>
-<p>After writing the file, narrate to the student: &gt; “I’ve created the recipe card at <code>lca_analysis/&lt;name&gt;/recipe_card.md</code>. Here’s &gt; a plain-English summary of what’s in it: …”</p>
+<p>After writing the file, narrate to the student: &gt; “I’ve created the product graph at <code>lca_analysis/&lt;name&gt;/product_graph.yaml</code>. Here’s &gt; a plain-English summary of what’s in it: …”</p>
 <hr>
 </section>
 </section>
@@ -513,7 +513,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="tone-and-explanation-rules">Tone and explanation rules</h2>
 <ul>
 <li>Always explain what you found before building anything.</li>
-<li>Never write a recipe card silently — narrate every section as you write it.</li>
+<li>Never write a product graph silently — narrate every section as you write it.</li>
 <li>After creating files, tell the student exactly where to find them and how to open them (e.g.&nbsp;“look in the file explorer panel on the left side of VS Code”).</li>
 <li>If a number is your estimate rather than from the source, say so explicitly.</li>
 <li>Keep every explanation grounded in business and retail context — connect the numbers to decisions a brand, buyer, or sustainability manager would actually make.</li>

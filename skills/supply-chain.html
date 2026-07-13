@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Calvin Williamson (calvinw)">
-<meta name="description" content="Teaching skill for the LCA concept of supply chain and system boundary — how to read a product graph diagram, what each box (process) represents, what flows connect them, and what “upstream” and “downstream” mean. Invoke as /supply-chain followed by a case study name, for example /supply-chain wool_yarn or /supply-chain polyester_tshirt. The skill reads the recipe card for that case study and walks the student through the supply chain diagram using real data and Socratic questions. Designed for FIT students with no science or coding background.">
+<meta name="description" content="Teaching skill for the LCA concept of supply chain and system boundary — how to read a product graph diagram, what each box (process) represents, what flows connect them, and what “upstream” and “downstream” mean. Invoke as /supply-chain followed by a case study name, for example /supply-chain wool_yarn or /supply-chain polyester_tshirt. The skill reads the product graph for that case study and walks the student through the supply chain diagram using real data and Socratic questions. Designed for FIT students with no science or coding background.">
 
 <title>supply-chain – Agentic LCA</title>
 <style>
@@ -341,7 +341,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    <p>Teaching skill for the LCA concept of supply chain and system boundary — how to read a product graph diagram, what each box (process) represents, what flows connect them, and what “upstream” and “downstream” mean. Invoke as /supply-chain followed by a case study name, for example /supply-chain wool_yarn or /supply-chain polyester_tshirt. The skill reads the recipe card for that case study and walks the student through the supply chain diagram using real data and Socratic questions. Designed for FIT students with no science or coding background.</p>
+    <p>Teaching skill for the LCA concept of supply chain and system boundary — how to read a product graph diagram, what each box (process) represents, what flows connect them, and what “upstream” and “downstream” mean. Invoke as /supply-chain followed by a case study name, for example /supply-chain wool_yarn or /supply-chain polyester_tshirt. The skill reads the product graph for that case study and walks the student through the supply chain diagram using real data and Socratic questions. Designed for FIT students with no science or coding background.</p>
   </div>
 </div>
 
@@ -376,7 +376,7 @@ ul.task-list li input[type="checkbox"] {
 <p>The argument passed to this skill is a case study name, for example <code>polyester_tshirt</code>.</p>
 <p>Call the <code>get_case_study</code> MCP tool with that name:</p>
 <pre><code>get_case_study("&lt;argument&gt;")</code></pre>
-<p>This returns a pre-computed bundle. From it, read: - <code>bundle["recipe_card"]</code> — the full recipe card YAML text - From the recipe card YAML frontmatter: - <code>name</code> — the product name - <code>goal</code> — the study question in plain language - <code>functional_unit.description</code> — what is being measured - <code>processes</code> — the list of steps, their names, inputs, and emissions - <code>reference_process</code> — which process delivers the finished product - <code>products</code> — the intermediate and final goods flowing between steps - <code>elementary_flows.emissions</code> — the pollutants released to the environment - <code>bundle["svg_structure"]</code> — pre-computed structure diagram SVG (use directly, no separate <code>get_lca_svg</code> call needed)</p>
+<p>This returns a pre-computed bundle. From it, read: - <code>bundle["product_graph"]</code> — the full product graph YAML text - From the product graph YAML frontmatter: - <code>name</code> — the product name - <code>goal</code> — the study question in plain language - <code>functional_unit.description</code> — what is being measured - <code>processes</code> — the list of steps, their names, inputs, and emissions - <code>reference_process</code> — which process delivers the finished product - <code>products</code> — the intermediate and final goods flowing between steps - <code>elementary_flows.emissions</code> — the pollutants released to the environment - <code>bundle["svg_structure"]</code> — pre-computed structure diagram SVG (use directly, no separate <code>get_lca_svg</code> call needed)</p>
 <p>If no argument is given, or if the MCP tool returns an error, say: &gt; “I don’t have a case study set up for that product yet. The ones ready to &gt; explore are: <strong>wool_yarn</strong>, <strong>polyester_tshirt</strong>, <strong>cotton_fiber</strong>. &gt; Which would you like to start with?”</p>
 <hr>
 </section>
@@ -397,22 +397,22 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="step-2-validate-introduce-the-case-study-and-reveal-the-diagram" class="level3">
 <h3 class="anchored" data-anchor-id="step-2-validate-introduce-the-case-study-and-reveal-the-diagram">Step 2 — Validate, introduce the case study, and reveal the diagram</h3>
-<p>Whatever the student says, find what is right about it. Then briefly introduce the case study before showing the diagram. Use the <code>name</code> and <code>goal</code> fields from the recipe card. Keep it to two or three sentences. Make clear it is a teaching example — not a real brand’s published study. For example:</p>
+<p>Whatever the student says, find what is right about it. Then briefly introduce the case study before showing the diagram. Use the <code>name</code> and <code>goal</code> fields from the product graph. Keep it to two or three sentences. Make clear it is a teaching example — not a real brand’s published study. For example:</p>
 <blockquote class="blockquote">
 <p>“The supply chain we’ll be mapping in this lesson is called <strong>[name]</strong>. [One sentence from the goal — what the study covers and why it’s interesting.] It’s a teaching example built for this course, so the numbers are illustrative rather than from a specific brand — but they’re calibrated to be realistic.”</p>
 </blockquote>
 <p>Then:</p>
 <ol type="1">
-<li><p>Tell them how many processes are in this case study’s supply chain (count the <code>processes</code> list you read from the recipe card).</p></li>
+<li><p>Tell them how many processes are in this case study’s supply chain (count the <code>processes</code> list you read from the product graph).</p></li>
 <li><p>Show the structure diagram by calling the <code>get_lca_svg</code> MCP tool and displaying the returned SVG inline:</p>
-<pre><code>get_lca_svg(recipe_card="&lt;content from get_case_study&gt;", graph_type="structure")</code></pre></li>
+<pre><code>get_lca_svg(product_graph="&lt;content from get_case_study&gt;", graph_type="structure")</code></pre></li>
 <li><p>After showing it, say something like: &gt; “Here is the supply chain map for [product name]. Each box is one step &gt; in the chain. Take a moment to look it over — can you spot the starting &gt; point and the finishing line?”</p></li>
 </ol>
 <hr>
 </section>
 <section id="step-3-walk-through-each-process-box" class="level3">
 <h3 class="anchored" data-anchor-id="step-3-walk-through-each-process-box">Step 3 — Walk through each process box</h3>
-<p>Once the student confirms they can see the diagram, walk through each process one by one. Use the <code>processes</code> list from the recipe card.</p>
+<p>Once the student confirms they can see the diagram, walk through each process one by one. Use the <code>processes</code> list from the product graph.</p>
 <p>For each process, name it in plain English — do NOT just repeat the technical label. Explain what real-world activity it represents. For example:</p>
 <ul>
 <li>“P1 — Oil extraction” → “This is an oil well — the starting point of the whole supply chain. This is where crude oil is pumped out of the ground.”</li>
@@ -422,7 +422,7 @@ ul.task-list li input[type="checkbox"] {
 <li>“P2 — Wool yarn production” → “This is the mill where the raw fleece is washed, combed, and spun into yarn.”</li>
 </ul>
 <p>After explaining all the boxes, ask: &gt; “Looking at the diagram, which box do you think represents the finished &gt; product — the thing that gets sold to a customer?”</p>
-<p>Wait for their answer, then confirm: it is the <strong>reference process</strong> (use the <code>reference_process</code> field from the recipe card). Explain that LCA always starts from this box and works backwards through the chain.</p>
+<p>Wait for their answer, then confirm: it is the <strong>reference process</strong> (use the <code>reference_process</code> field from the product graph). Explain that LCA always starts from this box and works backwards through the chain.</p>
 <hr>
 </section>
 <section id="step-4-walk-through-the-arrows" class="level3">
@@ -431,7 +431,7 @@ ul.task-list li input[type="checkbox"] {
 <blockquote class="blockquote">
 <p>“Each arrow shows something flowing from one process to the next — a material, a product, or a component. In a supply chain, nothing comes from nowhere: every input to one step is the output of another step.”</p>
 </blockquote>
-<p>Walk through each arrow using the <code>inputs</code> fields from the recipe card. Name the flow in plain English and give the amount if it is in the recipe card. For example:</p>
+<p>Walk through each arrow using the <code>inputs</code> fields from the product graph. Name the flow in plain English and give the amount if it is in the product graph. For example:</p>
 <ul>
 <li>Crude oil → Polyester fiber: “The oil well sends crude oil to the chemical factory. About 1.5 kg of crude oil is needed to make just 1 kg of polyester fibre.”</li>
 <li>Polyester fiber → T-shirt: “The chemical factory sends polyester fibre to the garment factory. About 0.2 kg of fibre goes into one T-shirt.”</li>

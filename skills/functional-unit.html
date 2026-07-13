@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Junghyun Choi (elenachoi1)">
-<meta name="description" content="Teaching skill for the LCA concept of functional unit — the precise definition of what is being measured in a life cycle study. Invoke as /functional-unit followed by a case study name, for example /functional-unit wool_yarn or /functional-unit polyester_tshirt. The skill reads the recipe card for that case study and teaches the concept using real data, Socratic questions, and fashion or retail business context. Designed for FIT students with no science or coding background.">
+<meta name="description" content="Teaching skill for the LCA concept of functional unit — the precise definition of what is being measured in a life cycle study. Invoke as /functional-unit followed by a case study name, for example /functional-unit wool_yarn or /functional-unit polyester_tshirt. The skill reads the product graph for that case study and teaches the concept using real data, Socratic questions, and fashion or retail business context. Designed for FIT students with no science or coding background.">
 
 <title>functional-unit – Agentic LCA</title>
 <style>
@@ -348,7 +348,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    <p>Teaching skill for the LCA concept of functional unit — the precise definition of what is being measured in a life cycle study. Invoke as /functional-unit followed by a case study name, for example /functional-unit wool_yarn or /functional-unit polyester_tshirt. The skill reads the recipe card for that case study and teaches the concept using real data, Socratic questions, and fashion or retail business context. Designed for FIT students with no science or coding background.</p>
+    <p>Teaching skill for the LCA concept of functional unit — the precise definition of what is being measured in a life cycle study. Invoke as /functional-unit followed by a case study name, for example /functional-unit wool_yarn or /functional-unit polyester_tshirt. The skill reads the product graph for that case study and teaches the concept using real data, Socratic questions, and fashion or retail business context. Designed for FIT students with no science or coding background.</p>
   </div>
 </div>
 
@@ -383,7 +383,7 @@ ul.task-list li input[type="checkbox"] {
 <p>The argument passed to this skill is a case study name, for example <code>wool_yarn</code>.</p>
 <p>Call the <code>get_case_study</code> MCP tool with that name:</p>
 <pre><code>get_case_study("&lt;argument&gt;")</code></pre>
-<p>This returns a pre-computed bundle. From it, read: - <code>bundle["recipe_card"]</code> — the full recipe card YAML text - From the recipe card YAML frontmatter: - <code>name</code> — the product name - <code>goal</code> — why this study was done and what question it answers - <code>functional_unit.description</code> — exactly what is being measured - <code>functional_unit.amount</code> and <code>functional_unit.unit</code> - <code>processes</code> — the names of the steps in the supply chain</p>
+<p>This returns a pre-computed bundle. From it, read: - <code>bundle["product_graph"]</code> — the full product graph YAML text - From the product graph YAML frontmatter: - <code>name</code> — the product name - <code>goal</code> — why this study was done and what question it answers - <code>functional_unit.description</code> — exactly what is being measured - <code>functional_unit.amount</code> and <code>functional_unit.unit</code> - <code>processes</code> — the names of the steps in the supply chain</p>
 <p>Everything you teach comes from what you find in the bundle. Do not invent numbers or facts about the product.</p>
 <p>If no argument is given, or if the MCP tool returns an error, say: &gt; “I don’t have a case study set up for that product yet. The ones ready to &gt; explore are: <strong>wool_yarn</strong>, <strong>polyester_tshirt</strong>, <strong>cotton_fiber</strong>. &gt; Which would you like to start with?”</p>
 <hr>
@@ -395,7 +395,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="step-1-open-with-a-real-world-question" class="level3">
 <h3 class="anchored" data-anchor-id="step-1-open-with-a-real-world-question">Step 1 — Open with a real-world question</h3>
 <p>Before showing any numbers, ask the student one question they can answer from everyday experience. The question should make it feel genuinely tricky to choose a measurement unit — so that when the answer is revealed, it lands.</p>
-<p>Base the question on the product name you read from the recipe card. Some guides:</p>
+<p>Base the question on the product name you read from the product graph. Some guides:</p>
 <ul>
 <li>For a <strong>fiber or yarn</strong>: “Before we look at the numbers — if a fashion brand wanted to put a carbon footprint label on their yarn, what would you measure it per? Per kilogram of yarn? Per sweater? Per year of wearing?”</li>
 <li>For a <strong>finished garment</strong>: “If two brands both claim their product has a lower carbon footprint — what is the first question you would ask to check whether that comparison is actually fair?”</li>
@@ -412,14 +412,14 @@ ul.task-list li input[type="checkbox"] {
 <li>If their unit has a problem, name the problem gently without saying they are wrong: “That is a natural instinct — the issue with that unit is…”</li>
 </ul>
 <p>Never move past this step without acknowledging the student’s answer first.</p>
-<p>Then, before moving on to the functional unit concept, briefly introduce the case study you read from the recipe card. Use the <code>name</code> and <code>goal</code> fields. Keep it to two or three sentences. Make clear it is a teaching example — not a real brand’s published study. For example:</p>
+<p>Then, before moving on to the functional unit concept, briefly introduce the case study you read from the product graph. Use the <code>name</code> and <code>goal</code> fields. Keep it to two or three sentences. Make clear it is a teaching example — not a real brand’s published study. For example:</p>
 <blockquote class="blockquote">
 <p>“The study we’ll be working through in this lesson is called <strong>[name]</strong>. [One sentence from the goal — what the study is trying to calculate and why it’s interesting.] It’s a teaching example built for this course, so the numbers are illustrative rather than from a specific brand — but they’re calibrated to be realistic.”</p>
 </blockquote>
 <p>This introduction should feel like context-setting, not a lecture. Keep it brief and move on.</p>
 <p>After introducing the case study, show the structure diagram inline by calling the <code>get_lca_svg</code> MCP tool and displaying the returned SVG:</p>
-<pre><code>get_lca_svg(recipe_card="&lt;content from get_case_study&gt;", graph_type="structure")</code></pre>
-<p>Then point to the <strong>reference process</strong> (use the <code>reference_process</code> field from the recipe card) and <strong>introduce the term explicitly</strong>. When you use “reference process” for the first time, always explain it immediately in plain English — do not assume the student knows what it means. Explain: - It is the rightmost box in the diagram - It is the step that produces the finished product - The functional unit is exactly what comes out of that box — the measurement stops here</p>
+<pre><code>get_lca_svg(product_graph="&lt;content from get_case_study&gt;", graph_type="structure")</code></pre>
+<p>Then point to the <strong>reference process</strong> (use the <code>reference_process</code> field from the product graph) and <strong>introduce the term explicitly</strong>. When you use “reference process” for the first time, always explain it immediately in plain English — do not assume the student knows what it means. Explain: - It is the rightmost box in the diagram - It is the step that produces the finished product - The functional unit is exactly what comes out of that box — the measurement stops here</p>
 <p>For example:</p>
 <blockquote class="blockquote">
 <p>“The rightmost box — <strong>[reference_process name]</strong> — has a special name in LCA: it’s called the <strong>reference process</strong>. That just means it’s the finishing line — the step that delivers the finished product. Everything to its left in the diagram exists only to supply it. The functional unit is precisely what comes out of that box: the thing we’re measuring, and the point at which the study stops.”</p>
@@ -429,8 +429,8 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="step-3-reveal-the-functional-unit" class="level3">
 <h3 class="anchored" data-anchor-id="step-3-reveal-the-functional-unit">Step 3 — Reveal the functional unit</h3>
-<p>State the functional unit exactly as written in the recipe card — the description, amount, and unit. Then explain two things:</p>
-<p><strong>Why this unit was chosen.</strong> What question or business decision does it answer? What service is being measured — not just the physical product, but what it does for someone? Use the <code>goal</code> field from the recipe card to guide this.</p>
+<p>State the functional unit exactly as written in the product graph — the description, amount, and unit. Then explain two things:</p>
+<p><strong>Why this unit was chosen.</strong> What question or business decision does it answer? What service is being measured — not just the physical product, but what it does for someone? Use the <code>goal</code> field from the product graph to guide this.</p>
 <p><strong>What it rules out.</strong> Name one alternative unit that would give a misleading or unfair answer, and explain in plain terms why. Keep it to one sentence.</p>
 <p>When you use the phrase “functional unit” for the first time, explain it: “In LCA, this is called the functional unit — it is the precise definition of exactly what we are measuring, so that comparisons between products are fair.”</p>
 <hr>

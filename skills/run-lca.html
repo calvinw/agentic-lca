@@ -354,7 +354,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#how-this-skill-works" id="toc-how-this-skill-works" class="nav-link active" data-scroll-target="#how-this-skill-works">How this skill works</a></li>
   <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites">Prerequisites</a></li>
-  <li><a href="#recipe_card.md-format" id="toc-recipe_card.md-format" class="nav-link" data-scroll-target="#recipe_card.md-format">recipe_card.md format</a>
+  <li><a href="#product_graph.yaml-format" id="toc-product_graph.yaml-format" class="nav-link" data-scroll-target="#product_graph.yaml-format">product_graph.yaml format</a>
   <ul class="collapse">
   <li><a href="#minimal-working-example-coffee" id="toc-minimal-working-example-coffee" class="nav-link" data-scroll-target="#minimal-working-example-coffee">Minimal working example (coffee)</a></li>
   </ul></li>
@@ -398,8 +398,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="how-this-skill-works" class="level2">
 <h2 class="anchored" data-anchor-id="how-this-skill-works">How this skill works</h2>
-<p>Call the <code>run_lca</code> MCP tool with the recipe card YAML as a string. The tool returns LCI totals, LCIA impact scores, scaling vector, and two SVG supply chain diagrams — all in one call. No bash commands needed.</p>
-<pre><code>run_lca(recipe_card="&lt;yaml string&gt;")</code></pre>
+<p>Call the <code>run_lca</code> MCP tool with the product graph YAML as a string. The tool returns LCI totals, LCIA impact scores, scaling vector, and two SVG supply chain diagrams — all in one call. No bash commands needed.</p>
+<pre><code>run_lca(product_graph="&lt;yaml string&gt;")</code></pre>
 <p>The tool returns:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"name"</span><span class="fu">:</span> <span class="st">"..."</span><span class="fu">,</span></span>
@@ -432,9 +432,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </blockquote>
 <hr>
 </section>
-<section id="recipe_card.md-format" class="level2">
-<h2 class="anchored" data-anchor-id="recipe_card.md-format">recipe_card.md format</h2>
-<p>The recipe card is a YAML string (the frontmatter of a <code>recipe_card.md</code> file). Pass it directly to <code>run_lca</code> — no file path needed.</p>
+<section id="product_graph.yaml-format" class="level2">
+<h2 class="anchored" data-anchor-id="product_graph.yaml-format">product_graph.yaml format</h2>
+<p>The product graph is a YAML string (the frontmatter of a <code>product_graph.yaml</code> file). Pass it directly to <code>run_lca</code> — no file path needed.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">name</span><span class="kw">:</span><span class="at"> &lt;human name for this analysis&gt;</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">goal</span><span class="kw">:</span><span class="at"> &lt;one sentence describing the purpose&gt;</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Junghyun Choi (elenachoi1)">
-<meta name="description" content="Teaching skill for the LCA concept of goal and scope — the opening decisions in a life cycle study that define why it is being done, who it is for, and what is included or excluded. Invoke as /goal-and-scope followed by a case study name, for example /goal-and-scope wool_yarn or /goal-and-scope polyester_tshirt. The skill reads the recipe card for that case study and teaches the concept using real data, Socratic questions, and fashion or retail business context. Designed for FIT students with no science or coding background.">
+<meta name="description" content="Teaching skill for the LCA concept of goal and scope — the opening decisions in a life cycle study that define why it is being done, who it is for, and what is included or excluded. Invoke as /goal-and-scope followed by a case study name, for example /goal-and-scope wool_yarn or /goal-and-scope polyester_tshirt. The skill reads the product graph for that case study and teaches the concept using real data, Socratic questions, and fashion or retail business context. Designed for FIT students with no science or coding background.">
 
 <title>goal-and-scope – Agentic LCA</title>
 <style>
@@ -341,7 +341,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    <p>Teaching skill for the LCA concept of goal and scope — the opening decisions in a life cycle study that define why it is being done, who it is for, and what is included or excluded. Invoke as /goal-and-scope followed by a case study name, for example /goal-and-scope wool_yarn or /goal-and-scope polyester_tshirt. The skill reads the recipe card for that case study and teaches the concept using real data, Socratic questions, and fashion or retail business context. Designed for FIT students with no science or coding background.</p>
+    <p>Teaching skill for the LCA concept of goal and scope — the opening decisions in a life cycle study that define why it is being done, who it is for, and what is included or excluded. Invoke as /goal-and-scope followed by a case study name, for example /goal-and-scope wool_yarn or /goal-and-scope polyester_tshirt. The skill reads the product graph for that case study and teaches the concept using real data, Socratic questions, and fashion or retail business context. Designed for FIT students with no science or coding background.</p>
   </div>
 </div>
 
@@ -377,7 +377,7 @@ ul.task-list li input[type="checkbox"] {
 <p>The argument passed to this skill is a case study name, for example <code>wool_yarn</code>.</p>
 <p>Call the <code>get_case_study</code> MCP tool with that name:</p>
 <pre><code>get_case_study("&lt;argument&gt;")</code></pre>
-<p>This returns a pre-computed bundle. From it, read: - <code>bundle["recipe_card"]</code> — the full recipe card YAML text - From the recipe card YAML frontmatter: - <code>name</code> — the product name - <code>goal</code> — why this study was done and what question it answers - <code>functional_unit.description</code>, <code>functional_unit.amount</code>, <code>functional_unit.unit</code> - <code>processes</code> — the names and connections of steps in the supply chain - <code>reference_process</code> — the finishing step that delivers the finished product - <code>bundle["svg_structure"]</code> — pre-computed structure diagram SVG (use directly, no separate <code>get_lca_svg</code> call needed)</p>
+<p>This returns a pre-computed bundle. From it, read: - <code>bundle["product_graph"]</code> — the full product graph YAML text - From the product graph YAML frontmatter: - <code>name</code> — the product name - <code>goal</code> — why this study was done and what question it answers - <code>functional_unit.description</code>, <code>functional_unit.amount</code>, <code>functional_unit.unit</code> - <code>processes</code> — the names and connections of steps in the supply chain - <code>reference_process</code> — the finishing step that delivers the finished product - <code>bundle["svg_structure"]</code> — pre-computed structure diagram SVG (use directly, no separate <code>get_lca_svg</code> call needed)</p>
 <p>Everything you teach comes from what you find in the bundle. Do not invent numbers or facts about the product.</p>
 <p>If no argument is given, or if the MCP tool returns an error, say: &gt; “I don’t have a case study set up for that product yet. The ones ready to &gt; explore are: <strong>wool_yarn</strong>, <strong>polyester_tshirt</strong>, <strong>cotton_fiber</strong>. &gt; Which would you like to start with?”</p>
 <hr>
@@ -389,7 +389,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="step-1-open-with-a-real-world-question" class="level3">
 <h3 class="anchored" data-anchor-id="step-1-open-with-a-real-world-question">Step 1 — Open with a real-world question</h3>
 <p>Before introducing any LCA terminology, ask the student one question grounded in a real business situation. The question should make it feel genuinely uncertain what should or should not be included in the study — so that when the concept of scope is introduced, it feels necessary rather than academic.</p>
-<p>Base the question on the product from the recipe card. Some guides:</p>
+<p>Base the question on the product from the product graph. Some guides:</p>
 <ul>
 <li>For a <strong>fiber or yarn</strong>: “A wool brand wants to prove their yarn is sustainable. Should the study include only the spinning mill — or also the sheep farm, the transport between them, and the energy the mill buys from the grid? Where would you draw the line?”</li>
 <li>For a <strong>finished garment</strong>: “A T-shirt brand is running an LCA. Should they include what happens after a customer buys the shirt — the washing, the drying, the eventual disposal? Or should the study stop at the factory gate?”</li>
@@ -406,18 +406,18 @@ ul.task-list li input[type="checkbox"] {
 <li>If they struggled to decide, normalise it: “This is genuinely tricky — there is no universal right answer, which is exactly why LCA studies have to state their choices explicitly…”</li>
 </ul>
 <p>Never move past this step without acknowledging the student’s answer first.</p>
-<p>Then briefly introduce the case study using the <code>name</code> and <code>goal</code> fields from the recipe card. Keep it to two or three sentences and make clear it is a teaching example:</p>
+<p>Then briefly introduce the case study using the <code>name</code> and <code>goal</code> fields from the product graph. Keep it to two or three sentences and make clear it is a teaching example:</p>
 <blockquote class="blockquote">
 <p>“The study we’ll work through is called <strong>[name]</strong>. [One sentence from the goal.] It’s a teaching example built for this course — the numbers are illustrative but calibrated to be realistic.”</p>
 </blockquote>
 <p>After introducing the case study, show the structure diagram inline by calling the <code>get_lca_svg</code> MCP tool and displaying the returned SVG:</p>
-<pre><code>get_lca_svg(recipe_card="&lt;content from get_case_study&gt;", graph_type="structure")</code></pre>
+<pre><code>get_lca_svg(product_graph="&lt;content from get_case_study&gt;", graph_type="structure")</code></pre>
 <p>Point to the diagram and explain that each box is a step the study decided to <em>include</em> — and that deciding which boxes belong in the picture is exactly what “scope” means.</p>
 <hr>
 </section>
 <section id="step-3-introduce-goal-and-scope" class="level3">
 <h3 class="anchored" data-anchor-id="step-3-introduce-goal-and-scope">Step 3 — Introduce goal and scope</h3>
-<p>Now introduce the two concepts using the recipe card data.</p>
+<p>Now introduce the two concepts using the product graph data.</p>
 <p><strong>Goal</strong> — explain it as the “why” and the “who”: - Why is this study being done? (use the <code>goal</code> field) - Who will use the results? (a brand, a buyer, a policy maker, a certification body?) - What decision will the results inform?</p>
 <p>When you use the phrase “goal” for the first time in LCA context, explain it: “In LCA, the goal is a short statement that says why the study is being done and who it is for. It matters because the same product can have very different LCA designs depending on whether the results are for an internal decision, a public label, or a legal certification.”</p>
 <p><strong>Scope</strong> — explain it as the “what is in and what is out”: - Which steps of the supply chain are included? (use the <code>processes</code> list) - Where does the study start and stop? This is called the <strong>system boundary</strong> — explain it as: “Think of it like a fence drawn around the supply chain. Everything inside the fence is studied; everything outside is ignored.” - What life cycle stage does this study cover? Introduce the term <strong>cradle to gate</strong> if the study stops at the factory, or <strong>cradle to grave</strong> if it continues through use and disposal. Explain each in plain English: - Cradle to gate: “From the raw material in the ground all the way to the factory exit — but no further. What happens after the product is sold is not included.” - Cradle to grave: “The full life of the product — from raw material all the way through to the customer throwing it away or recycling it.”</p>
