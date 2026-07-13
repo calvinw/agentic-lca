@@ -9,7 +9,9 @@
       "mcp__lca-mcp__check_server",
       "mcp__lca-mcp__list_impact_methods",
       "Write",
-      "Bash(mkdir*)"
+      "Bash(mkdir*)",
+      "Bash(python3 *)",
+      "Bash(git commit -m ' *)"
     ]
   }
 }
