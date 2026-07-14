@@ -30,7 +30,7 @@ questions like:
 - What if the material came from an organic farm?
 
 This mirrors exactly how the Levi's 501 jeans folder (`lca_analysis/levis/`) is
-structured — a base case plus named scenario cards.
+structured — a base case plus named scenario product graphs.
 
 ---
 

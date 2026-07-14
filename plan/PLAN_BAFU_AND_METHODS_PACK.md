@@ -66,7 +66,7 @@ For our purposes, the `.zolca` file is what we need.
 
 ### What BAFU provides that we currently lack
 
-In the current project, every CO₂ number in every recipe card is hand-entered
+In the current project, every CO₂ number in every product graph is hand-entered
 based on published studies and literature estimates. For example:
 
 ```yaml
@@ -146,21 +146,21 @@ for p in nylon[:5]:
 
 You should see processes like `Nylon 6, at plant` listed.
 
-### Important limitation — recipe card format
+### Important limitation — product graph format
 
-The current recipe card format is **self-contained**: all emission values are
-declared inside the YAML file itself. The recipe card system does not yet support
+The current product graph format is **self-contained**: all emission values are
+declared inside the YAML file itself. The product graph system does not yet support
 referencing background database processes directly.
 
 To use BAFU data today, there are two options:
 
 **Option A — Use BAFU as a lookup reference only**
 Run an analysis in the openLCA desktop app using BAFU processes, read the per-kg
-CO₂ values from the results, and hand-enter those values into recipe cards. This
+CO₂ values from the results, and hand-enter those values into product graphs. This
 is more accurate than estimates but still hand-entered.
 
-**Option B — Extend the recipe card format**
-Add a `database_inputs` block to the recipe card YAML that names BAFU processes
+**Option B — Extend the product graph format**
+Add a `database_inputs` block to the product graph YAML that names BAFU processes
 to connect to. This would require changes to `lca_analysis.py` to look up those
 processes by name and wire them in automatically. This is a meaningful development
 task but would make the system much more powerful.
@@ -208,7 +208,7 @@ curl -X POST http://localhost:8080/api/import \
   --data-binary @"$HOME/olca-data/openLCA_LCIA_methods_2_2.zip"
 ```
 
-**Step 3 — Use in a recipe card**
+**Step 3 — Use in a product graph**
 
 ```yaml
 # Change this one line:
@@ -297,30 +297,30 @@ Both additions can be done independently, in either order. Recommended sequence:
 1. Create free account at nexus.openlca.org
 2. Download openLCA LCIA methods pack `.zip`
 3. Import into running database
-4. Test by running an existing recipe card with `method_name: "EF 3.1"`
-5. Compare results to same card with `method_name: "TRACI 2.2"`
+4. Test by running an existing product graph with `method_name: "EF 3.1"`
+5. Compare results to same product graph with `method_name: "TRACI 2.2"`
 
-This immediately unlocks EF 3.1 and ReCiPe for all existing recipe cards.
+This immediately unlocks EF 3.1 and ReCiPe for all existing product graphs.
 
 ### Phase 2 — BAFU database (more involved, ~1–2 hours)
 
 1. Download BAFU-2025-LCI DB from nexus.openlca.org
 2. Import into running database (may take several minutes — it's a large dataset)
 3. Verify key processes are available (nylon, PLA, polyester, transport)
-4. Look up per-kg CO₂ values for materials used in existing recipe cards
-5. Compare BAFU-derived values against hand-entered estimates in our recipe cards
-6. Update recipe cards where BAFU values differ significantly from estimates
+4. Look up per-kg CO₂ values for materials used in existing product graphs
+5. Compare BAFU-derived values against hand-entered estimates in our product graphs
+6. Update product graphs where BAFU values differ significantly from estimates
 
-### Phase 3 (future) — Recipe card database_inputs extension
+### Phase 3 (future) — Product graph database_inputs extension
 
-Extend the recipe card YAML format to support:
+Extend the product graph YAML format to support:
 ```yaml
 database_inputs:
   - { process: "Nylon 6, at plant", amount: 0.03, unit: kg }
   - { process: "Polylactide, at plant", amount: 0.52, unit: kg }
 ```
 
-This would make our recipe cards behave like the broom video — foreground model
+This would make our product graphs behave like the broom video — foreground model
 hand-defined, background model drawn from BAFU automatically.
 
 ---

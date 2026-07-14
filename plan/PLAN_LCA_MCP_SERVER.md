@@ -56,7 +56,7 @@ A student in a retail sustainability course asks Claude.ai:
 > cup? I want to see the actual numbers."*
 
 Claude calls `run_lca` twice — once for each cup — passing the supply chain
-descriptions (recipe cards) on behalf of the student. It gets back:
+descriptions (product graphs) on behalf of the student. It gets back:
 
 | Impact | Paper cup | PS foam cup |
 |---|---:|---:|
@@ -74,7 +74,7 @@ doesn't biodegrade. The paper cup uses 20× more water because pulping and
 papermaking are extremely water-intensive. Which trade-off matters more depends
 on what your company is trying to prioritise."*
 
-The student never saw the recipe card. They just asked a question.
+The student never saw the product graph. They just asked a question.
 
 ---
 
@@ -110,7 +110,7 @@ Supply chain diagrams are returned for both and shown side by side.
 A student asks: *"What if the wool farm switched to renewable electricity for
 processing?"*
 
-Claude edits the recipe card in memory, calls `run_lca` again with the updated
+Claude edits the product graph in memory, calls `run_lca` again with the updated
 values, and compares the before and after — all in one conversation turn.
 No files to open. No re-running scripts.
 
@@ -131,13 +131,13 @@ conversation.
 
 When a student asks a sustainability question, the AI:
 
-1. Looks up the relevant recipe card (or writes one from the student's
+1. Looks up the relevant product graph (or writes one from the student's
    description)
-2. Calls `run_lca(recipe_card="...", method="TRACI 2.2")`
+2. Calls `run_lca(product_graph="...", method="TRACI 2.2")`
 3. Receives LCI totals, LCIA scores, a scaling vector, and two SVG diagrams
 4. Displays the diagrams inline and explains the numbers in plain English
 
-The student sees only the explanation and the diagrams. The recipe card, the
+The student sees only the explanation and the diagrams. The product graph, the
 tool call, and the raw JSON never appear.
 
 ---
@@ -160,9 +160,9 @@ tool call, and the raw JSON never appear.
 
 ```python
 @mcp.tool()
-def run_lca(recipe_card: str, server_url: str = "http://localhost:8080") -> dict:
+def run_lca(product_graph: str, server_url: str = "http://localhost:8080") -> dict:
     """
-    Run a full LCA from a recipe card YAML string.
+    Run a full LCA from a product graph YAML string.
     Returns LCI flows, LCIA impact scores, scaling vector, and SVG diagrams.
     """
 ```
@@ -215,7 +215,7 @@ https://lca.mcp.yourdomain.com/sse
 Users with an ecoinvent license point the tools at their own gdt-server:
 
 ```python
-run_lca(recipe_card="...", server_url="http://my-ecoinvent-server:8080")
+run_lca(product_graph="...", server_url="http://my-ecoinvent-server:8080")
 ```
 
 The MCP server itself stays free and license-clean.

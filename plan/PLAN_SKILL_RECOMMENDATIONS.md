@@ -37,8 +37,8 @@ These skills are built and working but are tools for running analyses, not teach
 
 | Skill | What it does |
 |---|---|
-| `run-lca` | Runs the full LCA pipeline for a case study — sends the recipe card to openLCA, saves results and diagrams |
-| `lca-from-url` | Builds a recipe card from a published LCA study URL or well-known study name, then offers to run it |
+| `run-lca` | Runs the full LCA pipeline for a case study — sends the product graph to openLCA, saves results and diagrams |
+| `lca-from-url` | Builds a product graph from a published LCA study URL or well-known study name, then offers to run it |
 | `skill-creator` | Creates, edits, and evaluates skills; runs evals and benchmarks skill performance |
 
 ---
@@ -419,7 +419,7 @@ is always a range, and a reputable study will tell you how wide that range is.
 - All skills follow the same Socratic five-step structure: open with a real-world
   question, validate the student's answer, introduce the concept, ask a what-if
   question, connect to a business decision.
-- Skills that use a case study argument read from `skills_references/<case_study>/recipe_card.md`.
+- Skills that use a case study argument read from `skills_references/<case_study>/product_graph.yaml`.
 - `what-is-lca` is the only skill with no case study argument.
 - Sessions should be saved to `skills_sessions/` using the naming convention:
   `{skill-name}-{arg}-v{version}-{student}-{model}-session{n}.md`

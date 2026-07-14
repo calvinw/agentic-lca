@@ -22,8 +22,8 @@ These must exist **before** the generator scripts run. They are the canonical da
 | `skills_sessions/index.md` | Sessions landing page |
 | `plan/PLAN_*.md` | Planning documents |
 | `plan/index.md` | Plans landing page |
-| `skills_references/<product>/` | LCA case-study data (recipe cards, diagrams, results) |
-| `lca_analysis/<product>/` | LCA analysis folders with `recipe_card.md` |
+| `skills_references/<product>/` | LCA case-study data (product graphs, diagrams, results) |
+| `lca_analysis/<product>/` | LCA analysis folders with `product_graph.yaml` |
 
 If any folder or file does not exist, the generator scripts skip it gracefully.
 
@@ -230,7 +230,7 @@ Create these four generator scripts. Copy them from their original locations:
 
 3. **`plan/generate_plans.py`** — scans `plan/` for `PLAN_*.md` files and writes `quarto_docs/plans.json`.
 
-4. **`lca_analysis/generate_analyses.py`** — scans `lca_analysis/` for `recipe_card.md` files and writes `quarto_docs/analyses.json`.
+4. **`lca_analysis/generate_analyses.py`** — scans `lca_analysis/` for `product_graph.yaml` files and writes `quarto_docs/analyses.json`.
 
 The full contents of these scripts are in Appendix A below.
 
@@ -701,7 +701,7 @@ print(f'plans.json: wrote {len(plans)} plans', file=sys.stderr)
 
 ```python
 """
-Scans lca_analysis/ for folders containing recipe_card.md and writes analyses.json.
+Scans lca_analysis/ for folders containing product_graph.yaml and writes analyses.json.
 Run from the repo root: python3 lca_analysis/generate_analyses.py
 """
 
@@ -726,12 +726,12 @@ def file_label(md_path, folder_name):
 
 analyses = []
 
-for recipe in sorted(root.rglob('recipe_card.md')):
-    folder = recipe.parent
+for product_graph in sorted(root.rglob('product_graph.yaml')):
+    folder = product_graph.parent
     rel    = folder.relative_to(root)
     name   = format_name(folder.name)
     group  = folder.parent.name if folder.parent != root else ''
-    mds = sorted(folder.glob('*.md'), key=lambda p: (p.name != 'recipe_card.md', p.name))
+    mds = sorted(folder.glob('*.md'), key=lambda p: (p.name != 'product_graph.yaml', p.name))
     files = [
         {
             'file':  str(rel / md.name),

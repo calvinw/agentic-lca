@@ -97,7 +97,7 @@ and fashion supply chains are marked with ★.
 
 ## ReCiPe 2016 Midpoint (H) — Key Characterization Factors
 
-These are the CFs for the flows used in current recipe cards.
+These are the CFs for the flows used in current product graphs.
 
 ### Global Warming (GWP100) — kg CO₂ eq per kg
 
@@ -191,7 +191,7 @@ for m in client.get_descriptors(o.ImpactMethod):
 You should see ReCiPe 2016 Midpoint (H), (I), and (E) listed alongside
 TRACI 2.2. No restart needed.
 
-**Step 4 — Change one line in a recipe card**
+**Step 4 — Change one line in a product graph**
 
 ```yaml
 # Before (TRACI):
@@ -209,7 +209,7 @@ needed. Run the analysis exactly as before.
 
 ---
 
-### Fallback option — Embedded CFs in recipe card (no database needed)
+### Fallback option — Embedded CFs in product graph (no database needed)
 
 Embed the CFs directly using the `impact_categories` block (same as the
 existing hand-typed CF path already in `lca_analysis.py`):
@@ -266,7 +266,7 @@ using the existing `impact_categories` code path in `lca_analysis.py`.
 | Situation | Recommendation |
 |---|---|
 | lca_methods running, LCIA methods pack imported | Recommended — `method_name: "ReCiPe 2016 Midpoint (H)"` |
-| No methods pack yet, want to test immediately | Fallback — embed CFs in recipe card |
+| No methods pack yet, want to test immediately | Fallback — embed CFs in product graph |
 | ecoinvent connected | `method_name: "ReCiPe 2016 Midpoint (H)"` — built into ecoinvent |
 | Comparing ReCiPe vs TRACI on same product | Change `method_name` and rerun — no other changes needed |
 
@@ -274,16 +274,16 @@ using the existing `impact_categories` code path in `lca_analysis.py`.
 
 ## Comparing ReCiPe and TRACI on the Same Product
 
-Because `method_name` is just a string in the recipe card, you can compare
+Because `method_name` is just a string in the product graph, you can compare
 both methods by running the analysis twice with different values:
 
 ```bash
 # Run with TRACI 2.2
-python3 lca_scripts/lca_analysis.py lca_analysis/cotton_shirt/recipe_card.md
+python3 lca_scripts/lca_analysis.py lca_analysis/cotton_shirt/product_graph.yaml
 
-# Edit recipe card: change method_name to "ReCiPe 2016 Midpoint (H)"
+# Edit product graph: change method_name to "ReCiPe 2016 Midpoint (H)"
 # Run again
-python3 lca_scripts/lca_analysis.py lca_analysis/cotton_shirt/recipe_card.md
+python3 lca_scripts/lca_analysis.py lca_analysis/cotton_shirt/product_graph.yaml
 ```
 
 The GWP100 numbers should be very similar (both use IPCC AR6 GWP100 factors).

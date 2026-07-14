@@ -20,7 +20,7 @@ In Life Cycle Assessment, researchers use two names for these two worlds. The hu
 
 The most important idea in LCA is this: environmental harm only happens when something **crosses the boundary** between the two. Emissions released into the ecosphere (like CO₂ into the air) and resources pulled out of the ecosphere (like water from a river) are the flows that cause impact. Everything that moves around *inside* the technosphere — a bag of raw wool travelling from a farm to a mill, say — stays inside the wall and does not directly harm the natural world.
 
-Now let's sort a real LCA study into these two worlds. This is the recipe card for **Wool Yarn — 1 kg**.
+Now let's sort a real LCA study into these two worlds. This is the product graph for **Wool Yarn — 1 kg**.
 
 [![Wool yarn supply chain — structure](../../skills_references/wool_yarn/product_graph_structure.svg)](../../skills_references/wool_yarn/product_graph_structure.svg)
 `../../skills_references/wool_yarn/product_graph_structure.svg`

@@ -14,14 +14,14 @@ reached.
 
 ---
 
-## Step 0 — Audit the Recipe Card Against the olca-schema (DO THIS FIRST)
+## Step 0 — Audit the Product Graph Against the olca-schema (DO THIS FIRST)
 
 ### Why this must come first
 
-The recipe card format was designed from scratch to be readable for students.
+The product graph format was designed from scratch to be readable for students.
 That was the right goal — but it was written without systematically checking
 every field against the olca-schema (the actual data format openLCA uses
-internally). Before extending the recipe card with new fields, we need to
+internally). Before extending the product graph with new fields, we need to
 confirm that every existing field maps cleanly onto a real olca-schema concept,
 and identify any gaps or mismatches.
 
@@ -31,7 +31,7 @@ The olca-schema example files live at:
 ### What the olca-schema looks like
 
 Every object in openLCA is a JSON file with a `@type` field, a UUID `@id`,
-and typed fields. Here are the key types relevant to the recipe card:
+and typed fields. Here are the key types relevant to the product graph:
 
 **`Process`** — one production step in the supply chain:
 ```json
@@ -120,9 +120,9 @@ or `WASTE_FLOW`.
 }
 ```
 
-### Mapping: recipe card fields → olca-schema
+### Mapping: product graph fields → olca-schema
 
-| Recipe card field | olca-schema equivalent | Status | Notes |
+| Product graph field | olca-schema equivalent | Status | Notes |
 |---|---|---|---|
 | `name` | `Process.name` (ref process) and `ProductSystem.name` | ✓ Clean | — |
 | `goal` | `Process.description` or doc field | ✓ Clean | Used for human docs only |
@@ -139,15 +139,15 @@ or `WASTE_FLOW`.
 | `processes[].emissions` | `Exchange` where `isInput: false`, flow is an `ELEMENTARY_FLOW` | ✓ Clean | — |
 | `processes[].resources` | `Exchange` where `isInput: true`, flow is an `ELEMENTARY_FLOW` | ✓ Clean | Resources are inputs *from* nature — `isInput: true` on an elementary flow |
 | `reference_process` | `ProductSystem.refProcess` | ✓ Clean | — |
-| `lcia_method` *(not yet in recipe card)* | `ImpactMethod.name` — looked up by name at runtime | To add | — |
-| `database` *(not yet in recipe card)* | No direct schema equivalent — documentary only | To add | Records which data package was loaded; not used by the script |
-| `source: background` *(not yet in recipe card)* | `Process` looked up by name/ID in the database — a `Ref` rather than a full object | To add | Needed for real-world LCA using background databases |
+| `lcia_method` *(not yet in product graph)* | `ImpactMethod.name` — looked up by name at runtime | To add | — |
+| `database` *(not yet in product graph)* | No direct schema equivalent — documentary only | To add | Records which data package was loaded; not used by the script |
+| `source: background` *(not yet in product graph)* | `Process` looked up by name/ID in the database — a `Ref` rather than a full object | To add | Needed for real-world LCA using background databases |
 
 ### Issues found in the audit
 
 **Issue 1 — Unit groups are incorrectly structured**
 
-The recipe card has a flat `units` dict:
+The product graph has a flat `units` dict:
 ```yaml
 units:
   kWh: Energy
@@ -177,14 +177,14 @@ any flows.
 Both resources and emissions are `ELEMENTARY_FLOW` in the schema. The
 difference is directionality: emissions are outputs from the technosphere to
 the biosphere (`isInput: false`), resources are inputs from the biosphere to
-the technosphere (`isInput: true`). The recipe card already captures this
+the technosphere (`isInput: true`). The product graph already captures this
 correctly via the `emissions` vs `resources` keys. No change needed — just
 confirming the mapping is right.
 
 **Issue 3 — No location field on flows or processes**
 
 Real background databases tag every process and product flow with a location
-(country or region). The recipe card has no `location` field. For toy models
+(country or region). The product graph has no `location` field. For toy models
 this does not matter. For real-world LCA it will matter because ecoinvent
 process names include the location (e.g. `"market for electricity, low voltage
 | DE"`). The `source: background` field (to be added) should handle this by
@@ -206,7 +206,7 @@ they match the standard openLCA structure. The script should:
 
 Standard unit groups to support:
 
-| Symbol used in recipe card | Standard UnitGroup name | Ref unit | Common others |
+| Symbol used in product graph | Standard UnitGroup name | Ref unit | Common others |
 |---|---|---|---|
 | `kg` | Units of mass | kg | g, t, lb, mg |
 | `kWh` | Units of energy | MJ | kWh (×3.6), GJ, Wh |
@@ -217,9 +217,9 @@ Standard unit groups to support:
 
 ---
 
-## Step 2 — Add LCIA Method Support to the Recipe Card and Script
+## Step 2 — Add LCIA Method Support to the Product Graph and Script
 
-### New recipe card fields
+### New product graph fields
 
 ```yaml
 lcia_method: "ReCiPe 2016 Midpoint (H)"   # name of the method in the database
@@ -274,13 +274,13 @@ if method:
 
 ## Step 3 — Add Background Process Support
 
-Extend the recipe card to allow processes to be declared as coming from a
+Extend the product graph to allow processes to be declared as coming from a
 loaded background database rather than defined locally:
 
 ```yaml
 processes:
   - name: P1 — Cut and sew shirt
-    source: local                    # defined in this recipe card (default)
+    source: local                    # defined in this product graph (default)
     reference_output: { flow: Shirt, amount: 1.0 }
     inputs:
       - { flow: Electricity, amount: 2.5 }
@@ -319,16 +319,16 @@ slides) classifies every input and output of a unit process by a **Type** field:
 
 **Key insight:** the unit process data tables shown in teaching slides (one table per process,
 with Name / Amount / Units / Type / Comments columns) are **not** the LCI result.
-They are the raw input data — equivalent to our recipe card. The LCI result is produced
+They are the raw input data — equivalent to our product graph. The LCI result is produced
 only after solving the technology matrix (A × s = f) and multiplying by the intervention
 matrix (g = B × s). The LCI result contains only elementary flows (Emissions + Resources);
 all Intermediate and Technosphere flows cancel out algebraically and disappear.
 
-### How our recipe card maps to these types today
+### How our product graph maps to these types today
 
-| PDF Type | Our recipe card field | Status |
+| PDF Type | Our product graph field | Status |
 |---|---|---|
-| `Intermediate` input | `inputs` (when a matching `reference_output` exists in the recipe card) | ✓ Supported — draws an arrow between process boxes |
+| `Intermediate` input | `inputs` (when a matching `reference_output` exists in the product graph) | ✓ Supported — draws an arrow between process boxes |
 | `Technosphere` input | `inputs` (when no matching `reference_output` exists) | ⚠ Partially supported — number recorded but no arrow drawn, no database lookup |
 | `Resource` input | `resources` | ✓ Supported |
 | `Product` output | `reference_output` | ✓ Supported (one per process only) |
@@ -336,17 +336,16 @@ all Intermediate and Technosphere flows cancel out algebraically and disappear.
 | `Emission` output | `emissions` | ✓ Supported |
 | `Waste treatment` output | — | ✗ Not supported |
 
-### Why our current recipe cards have no true Technosphere inputs
+### Why our current product graphs have no true Technosphere inputs
 
-All existing recipe cards (coffee, cotton shirt, hand dryer, light bulb) explicitly model
+All existing product graphs (coffee, cotton shirt, hand dryer, light bulb) explicitly model
 every upstream step — electricity generation is always its own process box. This means
-every entry in `inputs` has a matching `reference_output` somewhere in the same recipe
-card and therefore counts as **Intermediate**, not Technosphere. No inputs are silently
+every entry in `inputs` has a matching `reference_output` somewhere in the same product graph and therefore counts as **Intermediate**, not Technosphere. No inputs are silently
 dropped from the diagram.
 
 This is a deliberate pedagogical choice: making every step visible helps students
 understand the full supply chain. It is also why the diagram always draws correctly —
-every arrow has both a source and a destination within the recipe card.
+every arrow has both a source and a destination within the product graph.
 
 The Technosphere input distinction only becomes meaningful when background database
 support is added (see Step 3 below).
@@ -382,7 +381,7 @@ This is openLCA's auto-linking engine. When called, it:
    more matches exist.
 
 The result is a fully-linked `ProductSystem` object containing both the foreground
-processes (from the recipe card) and any background processes found in the database.
+processes (from the product graph) and any background processes found in the database.
 
 ### The scaling vector covers all processes
 
@@ -422,7 +421,7 @@ the student choose which provider to use when multiple options exist.
 The apple supply chain from the *Constructing Inventories* slides has 4 foreground
 processes (Production, Transport, Use, Disposal). Electricity, Fertilizer, Cardboard,
 Facility, and Diesel are Technosphere inputs to Production — they are NOT modelled
-as explicit process boxes in the recipe card. The recipe card would look like:
+as explicit process boxes in the product graph. The product graph would look like:
 
 ```yaml
 processes:
@@ -494,17 +493,17 @@ Import any of these into the same database alongside the LCIA methods package.
 
 | # | Item | Status |
 |---|---|---|
-| 0 | Audit recipe card fields against olca-schema *(this document)* | **Done** |
+| 0 | Audit product graph fields against olca-schema *(this document)* | **Done** |
 | 1 | Fix unit group structure in `lca_analysis.py` to match standard openLCA groups | Not started |
-| 2 | Add `lcia_method` and `database` fields to recipe card format | Not started |
+| 2 | Add `lcia_method` and `database` fields to product graph format | Not started |
 | 3 | Update `lca_analysis.py` to look up and apply LCIA method | Not started |
 | 4 | Add LCIA results table (Step 14) to script output and `lca_results.md` | Not started |
 | 5 | Document database setup and new fields in `SKILL.md` | Not started |
 | 6 | Load LCIA methods package into the Codespace database (one-time manual step) | Not started |
-| 7 | Test end-to-end: coffee recipe card with ReCiPe 2016, confirm LCIA scores | Not started |
-| 8 | Add `source: background` field to recipe card and script lookup | Not started |
+| 7 | Test end-to-end: coffee product graph with ReCiPe 2016, confirm LCIA scores | Not started |
+| 8 | Add `source: background` field to product graph and script lookup | Not started |
 | 9 | Load a background process database (US LCI or ELCD) | Not started |
-| 10 | Test a recipe card that mixes local and background processes | Not started |
+| 10 | Test a product graph that mixes local and background processes | Not started |
 
 Items 1–5 are pure code — no database setup needed.
 Item 6 requires the openLCA desktop app once.
@@ -516,7 +515,7 @@ Items 8–10 depend on item 6 and a loaded background database.
 
 1. **Item 0** *(done)* — audit complete, issues documented above.
 2. **Item 1** — fix unit groups. Low risk, no user-visible change, unblocks correct background linking later.
-3. **Items 2–4** — add LCIA method support to recipe card and script. Test with coffee; expect empty impact results until item 6 is done — handle gracefully.
+3. **Items 2–4** — add LCIA method support to product graph and script. Test with coffee; expect empty impact results until item 6 is done — handle gracefully.
 4. **Item 6** — load LCIA methods package via desktop app (one-time manual step).
 5. **Item 7** — test end-to-end with ReCiPe 2016.
 6. **Item 5** — update skill documentation.

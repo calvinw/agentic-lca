@@ -2,11 +2,11 @@
 
 ## Background — What the System Does Today
 
-`lca_analysis.py` builds a complete product system in openLCA from a recipe card,
+`lca_analysis.py` builds a complete product system in openLCA from a product graph,
 solves the technology matrix A, computes the scaling vector s = A⁻¹·f, and
 produces the LCI result B·s. It then does one of two things:
 
-- If the recipe card has an `lcia:` block with hand-typed `characterization_factors`,
+- If the product graph has an `lcia:` block with hand-typed `characterization_factors`,
   it multiplies B·s by those CFs in Python and reports impact scores.
 - If there is no `lcia:` block, it reports only raw CO₂.
 
@@ -23,7 +23,7 @@ fully intact.
 
 1. Replace the empty database with **LCA Commons 2025.1** (free US government data)
 2. Use **TRACI 2.2** from that database as the LCIA method (what Schiros uses)
-3. Update recipe cards to use **FEDEFL flow names** so TRACI can characterize them
+3. Update product graphs to use **FEDEFL flow names** so TRACI can characterize them
 4. Wire `CalculationSetup` to pass the method and call `get_total_impacts()`
 5. Structure everything so switching to **ecoinvent** later is a one-line change
 
@@ -54,7 +54,7 @@ real published characterization factors instead of hand-typed estimates.
 
 **Ecoinvent migration path:** The EPA publishes an official FEDEFL↔ecoinvent flow
 mapping (https://github.com/USEPA/fedelemflowlist). When ecoinvent is loaded,
-change `-db lca_methods` to `-db ecoinvent` in the startup script. Recipe cards
+change `-db lca_methods` to `-db ecoinvent` in the startup script. Product graphs
 need no changes.
 
 ---
@@ -101,14 +101,14 @@ Students use `start_olca.sh` (LCA Commons, free). Researchers use
 
 ---
 
-## Step 1 — Update Recipe Cards to Use FEDEFL Flow Names
+## Step 1 — Update Product Graphs to Use FEDEFL Flow Names
 
 FEDEFL names are the bridge between our foreground processes and TRACI 2.2.
 The FEDEFL name for CO₂ is simply `Carbon dioxide`; compartment is `air`.
 
 ### FEDEFL name reference for textile/food LCA
 
-| Current name in recipe cards | FEDEFL name      | Compartment |
+| Current name in product graphs | FEDEFL name      | Compartment |
 |------------------------------|------------------|-------------|
 | CO2 to air                   | Carbon dioxide   | air         |
 | CH4 to air                   | Methane          | air         |
@@ -117,7 +117,7 @@ The FEDEFL name for CO₂ is simply `Carbon dioxide`; compartment is `air`.
 | Water                        | Water            | water       |
 | Phosphate                    | Phosphorus       | water       |
 
-### New elementary flow format in recipe cards
+### New elementary flow format in product graphs
 
 ```yaml
 elementary_flows:
@@ -130,7 +130,7 @@ elementary_flows:
     - { name: Water,           compartment: water, unit: L  }
 ```
 
-### New LCIA block in recipe cards (no hand-typed CFs)
+### New LCIA block in product graphs (no hand-typed CFs)
 
 ```yaml
 lcia:
@@ -139,27 +139,27 @@ lcia:
 
 That is all. No characterization factors to type. The engine provides them.
 
-### Recipe cards to update
+### Product graphs to update
 
-- `lca_analysis/cotton_shirt/recipe_card.md`
+- `lca_analysis/cotton_shirt/product_graph.yaml`
   - Rename `CO2 to air` → `Carbon dioxide` (compartment: air)
   - Add `Nitrogen oxides` and `Sulfur dioxide` to P5 (Generate electricity)
     with realistic coal-grid values: NOₓ ≈ 0.0009 kg/kWh, SOₓ ≈ 0.0006 kg/kWh
   - Add `lcia: { method_name: "TRACI 2.2" }`
 
-- `lca_analysis/levi_jeans/recipe_card.md` and all 7 variants
+- `lca_analysis/levi_jeans/product_graph.yaml` and all 7 variants
   - Same pattern as cotton shirt
 
-- `skills_references/wool_yarn/recipe_card.md`
+- `skills_references/wool_yarn/product_graph.yaml`
   - Rename `CO2 to air` → `Carbon dioxide`, `CH4 to air` → `Methane`
   - Remove hand-typed `characterization_factors` dict
   - Add `lcia: { method_name: "TRACI 2.2" }`
 
-- `skills_references/cotton_fiber/recipe_card.md`
-- `skills_references/polyester_tshirt/recipe_card.md`
-- `lca_analysis/coffee/recipe_card.md`
-- `lca_analysis/paper_cup/recipe_card.md`
-- All other cards with elementary flows
+- `skills_references/cotton_fiber/product_graph.yaml`
+- `skills_references/polyester_tshirt/product_graph.yaml`
+- `lca_analysis/coffee/product_graph.yaml`
+- `lca_analysis/paper_cup/product_graph.yaml`
+- All other product graphs with elementary flows
 
 ---
 
@@ -230,7 +230,7 @@ Replace the existing CalculationSetup block (lines ~497-509):
 ```python
 step(11, "LCA Calculation via openLCA gdt-server")
 
-# Look up LCIA method if recipe card requests one
+# Look up LCIA method if product graph requests one
 method_ref  = None
 lcia_spec   = spec.get("lcia", {})
 method_name = lcia_spec.get("method_name", "")
@@ -303,7 +303,7 @@ if olca_impacts:
         ln(f"| {cat_name} | **{val:.6f}** | {unit} |")
     ln()
 elif lcia_spec.get("impact_categories"):
-    # existing hand-typed CF table (keep as-is for legacy cards)
+    # existing hand-typed CF table (keep as-is for legacy product graphs)
     ...
 ```
 
@@ -375,7 +375,7 @@ Create `start_olca_ecoinvent.sh` as a copy of `start_olca.sh` with one change:
 When the ecoinvent license is ready:
 1. Import ecoinvent 3.12 (cut-off) .zolca into `$HOME/olca-data/databases/`
 2. Run `bash start_olca_ecoinvent.sh` instead of `bash start_olca.sh`
-3. Recipe cards stay identical — `resolve_flow()` finds ecoinvent flows by FEDEFL name
+3. Product graphs stay identical — `resolve_flow()` finds ecoinvent flows by FEDEFL name
 4. `get_impact_method_ref()` finds EF 3.1 or TRACI in ecoinvent's embedded methods
 
 ---
@@ -389,14 +389,14 @@ When the ecoinvent license is ready:
 | `setup_olca.sh` | Modify | Same db name change |
 | `setup_database.sh` | Create | One-time LCA Commons import script |
 | `start_olca_ecoinvent.sh` | Create | Future ecoinvent startup script |
-| `lca_analysis/cotton_shirt/recipe_card.md` | Modify | FEDEFL names + NOₓ/SOₓ + `method_name: "TRACI 2.2"` |
-| `lca_analysis/levi_jeans/recipe_card.md` | Modify | Same pattern |
-| `lca_analysis/levi_jeans_*/recipe_card.md` | Modify | Same pattern (7 variant cards) |
-| `skills_references/wool_yarn/recipe_card.md` | Modify | FEDEFL names, remove hand-typed CFs, add method_name |
-| `skills_references/cotton_fiber/recipe_card.md` | Modify | Same pattern |
-| `skills_references/polyester_tshirt/recipe_card.md` | Modify | Same pattern |
-| `lca_analysis/coffee/recipe_card.md` | Modify | FEDEFL names + method_name |
-| `lca_analysis/paper_cup/recipe_card.md` | Modify | Same pattern |
+| `lca_analysis/cotton_shirt/product_graph.yaml` | Modify | FEDEFL names + NOₓ/SOₓ + `method_name: "TRACI 2.2"` |
+| `lca_analysis/levi_jeans/product_graph.yaml` | Modify | Same pattern |
+| `lca_analysis/levi_jeans_*/product_graph.yaml` | Modify | Same pattern (7 variant product graphs) |
+| `skills_references/wool_yarn/product_graph.yaml` | Modify | FEDEFL names, remove hand-typed CFs, add method_name |
+| `skills_references/cotton_fiber/product_graph.yaml` | Modify | Same pattern |
+| `skills_references/polyester_tshirt/product_graph.yaml` | Modify | Same pattern |
+| `lca_analysis/coffee/product_graph.yaml` | Modify | FEDEFL names + method_name |
+| `lca_analysis/paper_cup/product_graph.yaml` | Modify | Same pattern |
 
 ---
 
@@ -412,7 +412,7 @@ curl -s http://localhost:8080/api/version
 curl -s http://localhost:8080/api/descriptors/ImpactMethod | python3 -m json.tool | grep -i traci
 
 # 3. Run cotton shirt — watch for resolve_flow and method lookup in console
-python3 lca_scripts/lca_analysis.py lca_analysis/cotton_shirt/recipe_card.md
+python3 lca_scripts/lca_analysis.py lca_analysis/cotton_shirt/product_graph.yaml
 
 # Expected console output:
 #   ✓ resolved 'Carbon dioxide' → DB flow (xxxxxxxx)
@@ -426,8 +426,8 @@ python3 lca_scripts/lca_analysis.py lca_analysis/cotton_shirt/recipe_card.md
 
 # 4. Confirm GWP matches the old CO2 number (should be ~2.32 kg CO₂-eq)
 # 5. Run levi_jeans base vs organic — confirm burden-shift visible across categories
-python3 lca_scripts/lca_analysis.py lca_analysis/levi_jeans/recipe_card.md
-python3 lca_scripts/lca_analysis.py lca_analysis/levi_jeans_organic/recipe_card.md
+python3 lca_scripts/lca_analysis.py lca_analysis/levi_jeans/product_graph.yaml
+python3 lca_scripts/lca_analysis.py lca_analysis/levi_jeans_organic/product_graph.yaml
 ```
 
 ---
@@ -450,7 +450,7 @@ When running this for students, explain:
   peer-reviewed method rather than numbers typed by hand.
 
 - **When ecoinvent is connected:** tell students "we have switched to a more
-  detailed dictionary — the recipe card is the same, but the background
+  detailed dictionary — the product graph is the same, but the background
   measurements are now from a professionally-measured industrial database."
 
 ---

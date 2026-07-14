@@ -296,11 +296,11 @@ pointing at whichever folder you want. Scripts:
 
 | Script | Database | Use case |
 |---|---|---|
-| `setup_olca.sh` / `start_olca.sh` | `lca_methods` | Teaching with hand-written recipe cards, all 45 LCIA methods |
+| `setup_olca.sh` / `start_olca.sh` | `lca_methods` | Teaching with hand-written product graphs, all 45 LCIA methods |
 | `start_olca_bafu.sh` (future) | `bafu` | Real background processes, EF 3.1, free |
 | `start_olca_ecoinvent.sh` | `ecoinvent` | Industry-standard, requires license |
 
-Recipe cards are identical regardless of database — just change `method_name` in
+Product graphs are identical regardless of database — just change `method_name` in
 the `lcia:` section to use a method available in the active database.
 
 ---
@@ -316,7 +316,7 @@ the `lcia:` section to use a method available in the active database.
 | Bug found in import script | Fix script, re-run, re-upload |
 | New Codespace shows 0 LCIA methods | Check archive folder name (`tar -tzf ... \| head -1`), check `-db` flag matches |
 
-The recipe cards and analysis scripts do not need to change when a database is rebuilt —
+The product graphs and analysis scripts do not need to change when a database is rebuilt —
 they reference methods by name, which stays stable across versions.
 
 ---

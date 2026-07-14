@@ -1,7 +1,7 @@
 # Remixable LCA Studies — Textiles & Fibres
 
 Well-known, publicly available Life Cycle Assessment studies that can be
-recreated as simplified educational models using the recipe card format in
+recreated as simplified educational models using the product graph format in
 this project. Each entry includes the key numbers, supply chain structure,
 key findings, and scenario remix ideas.
 
@@ -322,16 +322,16 @@ but the benchmark is widely archived and cited.
 ### Remix scenarios
 
 The Made-By benchmark is best modelled as a **multi-product comparison** rather
-than a single recipe card. The most effective approach is to build individual
-recipe cards for each fibre and run them side by side:
+than a single product graph. The most effective approach is to build individual
+product graphs for each fibre and run them side by side:
 
-| Comparison | Recipe cards needed | What it teaches |
+| Comparison | Product graphs needed | What it teaches |
 |---|---|---|
-| Cotton vs. polyester vs. wool | 3 fibre recipe cards | The core triangle of the fashion industry |
-| Conventional vs. organic cotton | 2 recipe cards | Is organic certification worth the cost? |
-| Virgin vs. recycled (polyester or nylon) | 2 recipe cards | The recycled content argument |
-| Class A vs. Class E fibres | 2 recipe cards | Best case vs. worst case in the industry |
-| Full 9-fibre comparison | 9 recipe cards | Complete picture for a sourcing decision |
+| Cotton vs. polyester vs. wool | 3 fibre product graphs | The core triangle of the fashion industry |
+| Conventional vs. organic cotton | 2 product graphs | Is organic certification worth the cost? |
+| Virgin vs. recycled (polyester or nylon) | 2 product graphs | The recycled content argument |
+| Class A vs. Class E fibres | 2 product graphs | Best case vs. worst case in the industry |
+| Full 9-fibre comparison | 9 product graphs | Complete picture for a sourcing decision |
 
 ---
 
@@ -567,7 +567,7 @@ plus 5 secondhand scenario variants.
 
 ---
 
-## Priority order for building recipe cards
+## Priority order for building product graphs
 
 | Priority | Study | Why |
 |---|---|---|

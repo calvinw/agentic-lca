@@ -27,7 +27,7 @@ Would you like to continue to the next step and look at the difference between t
 
 **AI:** The file path is:
 
-`skills_references/cotton_fiber/recipe_card.md`
+`skills_references/cotton_fiber/product_graph.yaml`
 
 **Student:** can you give me the path to the product graph
 

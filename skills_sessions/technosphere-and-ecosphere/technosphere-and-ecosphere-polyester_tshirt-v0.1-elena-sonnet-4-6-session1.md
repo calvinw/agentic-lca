@@ -20,7 +20,7 @@ In Life Cycle Assessment, researchers use two names for these two worlds. The hu
 
 The key idea is this: environmental harm only happens when something **crosses the boundary** between the two. Emissions released into the ecosphere (like CO₂ into the air) are the flows that cause impact. Everything that moves around *inside* the technosphere stays inside the wall and does not directly harm the natural world.
 
-Now let's sort a real LCA study into these two worlds. This is the recipe card for **Polyester T-shirt — 1 unit**.
+Now let's sort a real LCA study into these two worlds. This is the product graph for **Polyester T-shirt — 1 unit**.
 
 [![Polyester T-shirt supply chain — structure](../../skills_references/polyester_tshirt/product_graph_structure.svg)](../../skills_references/polyester_tshirt/product_graph_structure.svg)
 `../../skills_references/polyester_tshirt/product_graph_structure.svg`
