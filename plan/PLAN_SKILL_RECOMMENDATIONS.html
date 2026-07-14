@@ -407,11 +407,11 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td><code>run-lca</code></td>
-<td>Runs the full LCA pipeline for a case study — sends the recipe card to openLCA, saves results and diagrams</td>
+<td>Runs the full LCA pipeline for a case study — sends the product graph to openLCA, saves results and diagrams</td>
 </tr>
 <tr class="even">
 <td><code>lca-from-url</code></td>
-<td>Builds a recipe card from a published LCA study URL or well-known study name, then offers to run it</td>
+<td>Builds a product graph from a published LCA study URL or well-known study name, then offers to run it</td>
 </tr>
 <tr class="odd">
 <td><code>skill-creator</code></td>
@@ -577,7 +577,7 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="notes">Notes</h2>
 <ul>
 <li>All skills follow the same Socratic five-step structure: open with a real-world question, validate the student’s answer, introduce the concept, ask a what-if question, connect to a business decision.</li>
-<li>Skills that use a case study argument read from <code>skills_references/&lt;case_study&gt;/recipe_card.md</code>.</li>
+<li>Skills that use a case study argument read from <code>skills_references/&lt;case_study&gt;/product_graph.yaml</code>.</li>
 <li><code>what-is-lca</code> is the only skill with no case study argument.</li>
 <li>Sessions should be saved to <code>skills_sessions/</code> using the naming convention: <code>{skill-name}-{arg}-v{version}-{student}-{model}-session{n}.md</code> For <code>what-is-lca</code> (no case study argument), omit <code>{arg}</code>: <code>{skill-name}-v{version}-{student}-{model}-session{n}.md</code></li>
 </ul>

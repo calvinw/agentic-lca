@@ -251,17 +251,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#plan-adding-lcia-methods-and-database-support-to-the-run-lca-skill" id="toc-plan-adding-lcia-methods-and-database-support-to-the-run-lca-skill" class="nav-link active" data-scroll-target="#plan-adding-lcia-methods-and-database-support-to-the-run-lca-skill">Plan: Adding LCIA Methods and Database Support to the run-lca Skill</a>
   <ul class="collapse">
   <li><a href="#background-what-the-skill-can-do-today" id="toc-background-what-the-skill-can-do-today" class="nav-link" data-scroll-target="#background-what-the-skill-can-do-today">Background — What the Skill Can Do Today</a></li>
-  <li><a href="#step-0-audit-the-recipe-card-against-the-olca-schema-do-this-first" id="toc-step-0-audit-the-recipe-card-against-the-olca-schema-do-this-first" class="nav-link" data-scroll-target="#step-0-audit-the-recipe-card-against-the-olca-schema-do-this-first">Step 0 — Audit the Recipe Card Against the olca-schema (DO THIS FIRST)</a>
+  <li><a href="#step-0-audit-the-product-graph-against-the-olca-schema-do-this-first" id="toc-step-0-audit-the-product-graph-against-the-olca-schema-do-this-first" class="nav-link" data-scroll-target="#step-0-audit-the-product-graph-against-the-olca-schema-do-this-first">Step 0 — Audit the Product Graph Against the olca-schema (DO THIS FIRST)</a>
   <ul class="collapse">
   <li><a href="#why-this-must-come-first" id="toc-why-this-must-come-first" class="nav-link" data-scroll-target="#why-this-must-come-first">Why this must come first</a></li>
   <li><a href="#what-the-olca-schema-looks-like" id="toc-what-the-olca-schema-looks-like" class="nav-link" data-scroll-target="#what-the-olca-schema-looks-like">What the olca-schema looks like</a></li>
-  <li><a href="#mapping-recipe-card-fields-olca-schema" id="toc-mapping-recipe-card-fields-olca-schema" class="nav-link" data-scroll-target="#mapping-recipe-card-fields-olca-schema">Mapping: recipe card fields → olca-schema</a></li>
+  <li><a href="#mapping-product-graph-fields-olca-schema" id="toc-mapping-product-graph-fields-olca-schema" class="nav-link" data-scroll-target="#mapping-product-graph-fields-olca-schema">Mapping: product graph fields → olca-schema</a></li>
   <li><a href="#issues-found-in-the-audit" id="toc-issues-found-in-the-audit" class="nav-link" data-scroll-target="#issues-found-in-the-audit">Issues found in the audit</a></li>
   </ul></li>
   <li><a href="#step-1-fix-unit-group-structure" id="toc-step-1-fix-unit-group-structure" class="nav-link" data-scroll-target="#step-1-fix-unit-group-structure">Step 1 — Fix Unit Group Structure</a></li>
-  <li><a href="#step-2-add-lcia-method-support-to-the-recipe-card-and-script" id="toc-step-2-add-lcia-method-support-to-the-recipe-card-and-script" class="nav-link" data-scroll-target="#step-2-add-lcia-method-support-to-the-recipe-card-and-script">Step 2 — Add LCIA Method Support to the Recipe Card and Script</a>
+  <li><a href="#step-2-add-lcia-method-support-to-the-product-graph-and-script" id="toc-step-2-add-lcia-method-support-to-the-product-graph-and-script" class="nav-link" data-scroll-target="#step-2-add-lcia-method-support-to-the-product-graph-and-script">Step 2 — Add LCIA Method Support to the Product Graph and Script</a>
   <ul class="collapse">
-  <li><a href="#new-recipe-card-fields" id="toc-new-recipe-card-fields" class="nav-link" data-scroll-target="#new-recipe-card-fields">New recipe card fields</a></li>
+  <li><a href="#new-product-graph-fields" id="toc-new-product-graph-fields" class="nav-link" data-scroll-target="#new-product-graph-fields">New product graph fields</a></li>
   <li><a href="#script-changes" id="toc-script-changes" class="nav-link" data-scroll-target="#script-changes">Script changes</a></li>
   <li><a href="#new-step-14-output-in-lca_results.md" id="toc-new-step-14-output-in-lca_results.md" class="nav-link" data-scroll-target="#new-step-14-output-in-lca_results.md">New Step 14 output in <code>lca_results.md</code></a></li>
   </ul></li>
@@ -269,8 +269,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#conceptual-background-flow-types-unit-process-tables-and-the-lci-result" id="toc-conceptual-background-flow-types-unit-process-tables-and-the-lci-result" class="nav-link" data-scroll-target="#conceptual-background-flow-types-unit-process-tables-and-the-lci-result">Conceptual Background — Flow Types, Unit Process Tables, and the LCI Result</a>
   <ul class="collapse">
   <li><a href="#the-flow-type-taxonomy-from-academic-lca-teaching" id="toc-the-flow-type-taxonomy-from-academic-lca-teaching" class="nav-link" data-scroll-target="#the-flow-type-taxonomy-from-academic-lca-teaching">The flow type taxonomy (from academic LCA teaching)</a></li>
-  <li><a href="#how-our-recipe-card-maps-to-these-types-today" id="toc-how-our-recipe-card-maps-to-these-types-today" class="nav-link" data-scroll-target="#how-our-recipe-card-maps-to-these-types-today">How our recipe card maps to these types today</a></li>
-  <li><a href="#why-our-current-recipe-cards-have-no-true-technosphere-inputs" id="toc-why-our-current-recipe-cards-have-no-true-technosphere-inputs" class="nav-link" data-scroll-target="#why-our-current-recipe-cards-have-no-true-technosphere-inputs">Why our current recipe cards have no true Technosphere inputs</a></li>
+  <li><a href="#how-our-product-graph-maps-to-these-types-today" id="toc-how-our-product-graph-maps-to-these-types-today" class="nav-link" data-scroll-target="#how-our-product-graph-maps-to-these-types-today">How our product graph maps to these types today</a></li>
+  <li><a href="#why-our-current-product-graphs-have-no-true-technosphere-inputs" id="toc-why-our-current-product-graphs-have-no-true-technosphere-inputs" class="nav-link" data-scroll-target="#why-our-current-product-graphs-have-no-true-technosphere-inputs">Why our current product graphs have no true Technosphere inputs</a></li>
   </ul></li>
   <li><a href="#how-create_product_system-auto-linking-works" id="toc-how-create_product_system-auto-linking-works" class="nav-link" data-scroll-target="#how-create_product_system-auto-linking-works">How <code>create_product_system</code> Auto-Linking Works</a>
   <ul class="collapse">
@@ -306,16 +306,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>In other words, the skill currently stops at <strong>Step 2 (Characterisation)</strong> of the LCIA chain. Steps 3 and 4 (damage modelling, endpoint scores) are not reached.</p>
 <hr>
 </section>
-<section id="step-0-audit-the-recipe-card-against-the-olca-schema-do-this-first" class="level2">
-<h2 class="anchored" data-anchor-id="step-0-audit-the-recipe-card-against-the-olca-schema-do-this-first">Step 0 — Audit the Recipe Card Against the olca-schema (DO THIS FIRST)</h2>
+<section id="step-0-audit-the-product-graph-against-the-olca-schema-do-this-first" class="level2">
+<h2 class="anchored" data-anchor-id="step-0-audit-the-product-graph-against-the-olca-schema-do-this-first">Step 0 — Audit the Product Graph Against the olca-schema (DO THIS FIRST)</h2>
 <section id="why-this-must-come-first" class="level3">
 <h3 class="anchored" data-anchor-id="why-this-must-come-first">Why this must come first</h3>
-<p>The recipe card format was designed from scratch to be readable for students. That was the right goal — but it was written without systematically checking every field against the olca-schema (the actual data format openLCA uses internally). Before extending the recipe card with new fields, we need to confirm that every existing field maps cleanly onto a real olca-schema concept, and identify any gaps or mismatches.</p>
+<p>The product graph format was designed from scratch to be readable for students. That was the right goal — but it was written without systematically checking every field against the olca-schema (the actual data format openLCA uses internally). Before extending the product graph with new fields, we need to confirm that every existing field maps cleanly onto a real olca-schema concept, and identify any gaps or mismatches.</p>
 <p>The olca-schema example files live at: <strong>https://github.com/GreenDelta/olca-schema/tree/master/examples</strong></p>
 </section>
 <section id="what-the-olca-schema-looks-like" class="level3">
 <h3 class="anchored" data-anchor-id="what-the-olca-schema-looks-like">What the olca-schema looks like</h3>
-<p>Every object in openLCA is a JSON file with a <code>@type</code> field, a UUID <code>@id</code>, and typed fields. Here are the key types relevant to the recipe card:</p>
+<p>Every object in openLCA is a JSON file with a <code>@type</code> field, a UUID <code>@id</code>, and typed fields. Here are the key types relevant to the product graph:</p>
 <p><strong><code>Process</code></strong> — one production step in the supply chain:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"@type"</span><span class="fu">:</span> <span class="st">"Process"</span><span class="fu">,</span></span>
@@ -385,8 +385,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>  <span class="ot">]</span></span>
 <span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="mapping-recipe-card-fields-olca-schema" class="level3">
-<h3 class="anchored" data-anchor-id="mapping-recipe-card-fields-olca-schema">Mapping: recipe card fields → olca-schema</h3>
+<section id="mapping-product-graph-fields-olca-schema" class="level3">
+<h3 class="anchored" data-anchor-id="mapping-product-graph-fields-olca-schema">Mapping: product graph fields → olca-schema</h3>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 25%">
@@ -396,7 +396,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </colgroup>
 <thead>
 <tr class="header">
-<th>Recipe card field</th>
+<th>Product graph field</th>
 <th>olca-schema equivalent</th>
 <th>Status</th>
 <th>Notes</th>
@@ -494,19 +494,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>—</td>
 </tr>
 <tr class="even">
-<td><code>lcia_method</code> <em>(not yet in recipe card)</em></td>
+<td><code>lcia_method</code> <em>(not yet in product graph)</em></td>
 <td><code>ImpactMethod.name</code> — looked up by name at runtime</td>
 <td>To add</td>
 <td>—</td>
 </tr>
 <tr class="odd">
-<td><code>database</code> <em>(not yet in recipe card)</em></td>
+<td><code>database</code> <em>(not yet in product graph)</em></td>
 <td>No direct schema equivalent — documentary only</td>
 <td>To add</td>
 <td>Records which data package was loaded; not used by the script</td>
 </tr>
 <tr class="even">
-<td><code>source: background</code> <em>(not yet in recipe card)</em></td>
+<td><code>source: background</code> <em>(not yet in product graph)</em></td>
 <td><code>Process</code> looked up by name/ID in the database — a <code>Ref</code> rather than a full object</td>
 <td>To add</td>
 <td>Needed for real-world LCA using background databases</td>
@@ -517,7 +517,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="issues-found-in-the-audit" class="level3">
 <h3 class="anchored" data-anchor-id="issues-found-in-the-audit">Issues found in the audit</h3>
 <p><strong>Issue 1 — Unit groups are incorrectly structured</strong></p>
-<p>The recipe card has a flat <code>units</code> dict:</p>
+<p>The product graph has a flat <code>units</code> dict:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">units</span><span class="kw">:</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">kWh</span><span class="kw">:</span><span class="at"> Energy</span></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">kg</span><span class="kw">:</span><span class="at">  Mass</span></span>
@@ -526,9 +526,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>This matters because when linking foreground processes to background processes, unit names must match exactly. If the background database uses a “Units of mass” group containing <code>kg</code> with a standard UUID, and our script creates a separate “Mass units” group also containing <code>kg</code>, openLCA may treat them as different units.</p>
 <p><strong>Recommended fix</strong>: replace the flat <code>units</code> dict with a reference to standard unit groups. Either hard-code the standard openLCA unit group UUIDs in the script, or look them up from the database at runtime before creating any flows.</p>
 <p><strong>Issue 2 — No <code>flowType</code> distinction for resources vs emissions</strong></p>
-<p>Both resources and emissions are <code>ELEMENTARY_FLOW</code> in the schema. The difference is directionality: emissions are outputs from the technosphere to the biosphere (<code>isInput: false</code>), resources are inputs from the biosphere to the technosphere (<code>isInput: true</code>). The recipe card already captures this correctly via the <code>emissions</code> vs <code>resources</code> keys. No change needed — just confirming the mapping is right.</p>
+<p>Both resources and emissions are <code>ELEMENTARY_FLOW</code> in the schema. The difference is directionality: emissions are outputs from the technosphere to the biosphere (<code>isInput: false</code>), resources are inputs from the biosphere to the technosphere (<code>isInput: true</code>). The product graph already captures this correctly via the <code>emissions</code> vs <code>resources</code> keys. No change needed — just confirming the mapping is right.</p>
 <p><strong>Issue 3 — No location field on flows or processes</strong></p>
-<p>Real background databases tag every process and product flow with a location (country or region). The recipe card has no <code>location</code> field. For toy models this does not matter. For real-world LCA it will matter because ecoinvent process names include the location (e.g.&nbsp;<code>"market for electricity, low voltage | DE"</code>). The <code>source: background</code> field (to be added) should handle this by using the full database process name, which includes the location.</p>
+<p>Real background databases tag every process and product flow with a location (country or region). The product graph has no <code>location</code> field. For toy models this does not matter. For real-world LCA it will matter because ecoinvent process names include the location (e.g.&nbsp;<code>"market for electricity, low voltage | DE"</code>). The <code>source: background</code> field (to be added) should handle this by using the full database process name, which includes the location.</p>
 <hr>
 </section>
 </section>
@@ -550,7 +550,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </colgroup>
 <thead>
 <tr class="header">
-<th>Symbol used in recipe card</th>
+<th>Symbol used in product graph</th>
 <th>Standard UnitGroup name</th>
 <th>Ref unit</th>
 <th>Common others</th>
@@ -597,10 +597,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </table>
 <hr>
 </section>
-<section id="step-2-add-lcia-method-support-to-the-recipe-card-and-script" class="level2">
-<h2 class="anchored" data-anchor-id="step-2-add-lcia-method-support-to-the-recipe-card-and-script">Step 2 — Add LCIA Method Support to the Recipe Card and Script</h2>
-<section id="new-recipe-card-fields" class="level3">
-<h3 class="anchored" data-anchor-id="new-recipe-card-fields">New recipe card fields</h3>
+<section id="step-2-add-lcia-method-support-to-the-product-graph-and-script" class="level2">
+<h2 class="anchored" data-anchor-id="step-2-add-lcia-method-support-to-the-product-graph-and-script">Step 2 — Add LCIA Method Support to the Product Graph and Script</h2>
+<section id="new-product-graph-fields" class="level3">
+<h3 class="anchored" data-anchor-id="new-product-graph-fields">New product graph fields</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">lcia_method</span><span class="kw">:</span><span class="at"> </span><span class="st">"ReCiPe 2016 Midpoint (H)"</span><span class="co">   # name of the method in the database</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">database</span><span class="kw">:</span><span class="at">    </span><span class="st">"openlca-lcia-methods-2.1.2"</span><span class="co">  # documentary — which package was loaded</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
@@ -646,10 +646,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="step-3-add-background-process-support" class="level2">
 <h2 class="anchored" data-anchor-id="step-3-add-background-process-support">Step 3 — Add Background Process Support</h2>
-<p>Extend the recipe card to allow processes to be declared as coming from a loaded background database rather than defined locally:</p>
+<p>Extend the product graph to allow processes to be declared as coming from a loaded background database rather than defined locally:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">processes</span><span class="kw">:</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> P1 — Cut and sew shirt</span></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">source</span><span class="kw">:</span><span class="at"> local</span><span class="co">                    # defined in this recipe card (default)</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">source</span><span class="kw">:</span><span class="at"> local</span><span class="co">                    # defined in this product graph (default)</span></span>
 <span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">reference_output</span><span class="kw">:</span><span class="at"> </span><span class="kw">{</span><span class="at"> </span><span class="fu">flow</span><span class="kw">:</span><span class="at"> Shirt</span><span class="kw">,</span><span class="at"> </span><span class="fu">amount</span><span class="kw">:</span><span class="at"> </span><span class="fl">1.0</span><span class="at"> </span><span class="kw">}</span></span>
 <span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">inputs</span><span class="kw">:</span></span>
 <span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="kw">{</span><span class="at"> </span><span class="fu">flow</span><span class="kw">:</span><span class="at"> Electricity</span><span class="kw">,</span><span class="at"> </span><span class="fu">amount</span><span class="kw">:</span><span class="at"> </span><span class="fl">2.5</span><span class="at"> </span><span class="kw">}</span></span>
@@ -727,10 +727,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
-<p><strong>Key insight:</strong> the unit process data tables shown in teaching slides (one table per process, with Name / Amount / Units / Type / Comments columns) are <strong>not</strong> the LCI result. They are the raw input data — equivalent to our recipe card. The LCI result is produced only after solving the technology matrix (A × s = f) and multiplying by the intervention matrix (g = B × s). The LCI result contains only elementary flows (Emissions + Resources); all Intermediate and Technosphere flows cancel out algebraically and disappear.</p>
+<p><strong>Key insight:</strong> the unit process data tables shown in teaching slides (one table per process, with Name / Amount / Units / Type / Comments columns) are <strong>not</strong> the LCI result. They are the raw input data — equivalent to our product graph. The LCI result is produced only after solving the technology matrix (A × s = f) and multiplying by the intervention matrix (g = B × s). The LCI result contains only elementary flows (Emissions + Resources); all Intermediate and Technosphere flows cancel out algebraically and disappear.</p>
 </section>
-<section id="how-our-recipe-card-maps-to-these-types-today" class="level3">
-<h3 class="anchored" data-anchor-id="how-our-recipe-card-maps-to-these-types-today">How our recipe card maps to these types today</h3>
+<section id="how-our-product-graph-maps-to-these-types-today" class="level3">
+<h3 class="anchored" data-anchor-id="how-our-product-graph-maps-to-these-types-today">How our product graph maps to these types today</h3>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -740,14 +740,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <thead>
 <tr class="header">
 <th>PDF Type</th>
-<th>Our recipe card field</th>
+<th>Our product graph field</th>
 <th>Status</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><code>Intermediate</code> input</td>
-<td><code>inputs</code> (when a matching <code>reference_output</code> exists in the recipe card)</td>
+<td><code>inputs</code> (when a matching <code>reference_output</code> exists in the product graph)</td>
 <td>✓ Supported — draws an arrow between process boxes</td>
 </tr>
 <tr class="even">
@@ -783,10 +783,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table>
 </section>
-<section id="why-our-current-recipe-cards-have-no-true-technosphere-inputs" class="level3">
-<h3 class="anchored" data-anchor-id="why-our-current-recipe-cards-have-no-true-technosphere-inputs">Why our current recipe cards have no true Technosphere inputs</h3>
-<p>All existing recipe cards (coffee, cotton shirt, hand dryer, light bulb) explicitly model every upstream step — electricity generation is always its own process box. This means every entry in <code>inputs</code> has a matching <code>reference_output</code> somewhere in the same recipe card and therefore counts as <strong>Intermediate</strong>, not Technosphere. No inputs are silently dropped from the diagram.</p>
-<p>This is a deliberate pedagogical choice: making every step visible helps students understand the full supply chain. It is also why the diagram always draws correctly — every arrow has both a source and a destination within the recipe card.</p>
+<section id="why-our-current-product-graphs-have-no-true-technosphere-inputs" class="level3">
+<h3 class="anchored" data-anchor-id="why-our-current-product-graphs-have-no-true-technosphere-inputs">Why our current product graphs have no true Technosphere inputs</h3>
+<p>All existing product graphs (coffee, cotton shirt, hand dryer, light bulb) explicitly model every upstream step — electricity generation is always its own process box. This means every entry in <code>inputs</code> has a matching <code>reference_output</code> somewhere in the same product graph and therefore counts as <strong>Intermediate</strong>, not Technosphere. No inputs are silently dropped from the diagram.</p>
+<p>This is a deliberate pedagogical choice: making every step visible helps students understand the full supply chain. It is also why the diagram always draws correctly — every arrow has both a source and a destination within the product graph.</p>
 <p>The Technosphere input distinction only becomes meaningful when background database support is added (see Step 3 below).</p>
 <hr>
 </section>
@@ -811,7 +811,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>If a match is found, links the background process into the product system.</li>
 <li>Repeats recursively — the background process’s own inputs are also searched, pulling in further upstream processes until all inputs are satisfied or no more matches exist.</li>
 </ol>
-<p>The result is a fully-linked <code>ProductSystem</code> object containing both the foreground processes (from the recipe card) and any background processes found in the database.</p>
+<p>The result is a fully-linked <code>ProductSystem</code> object containing both the foreground processes (from the product graph) and any background processes found in the database.</p>
 </section>
 <section id="the-scaling-vector-covers-all-processes" class="level3">
 <h3 class="anchored" data-anchor-id="the-scaling-vector-covers-all-processes">The scaling vector covers all processes</h3>
@@ -835,7 +835,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="example-apple-supply-chain-with-background-database-inputs" class="level3">
 <h3 class="anchored" data-anchor-id="example-apple-supply-chain-with-background-database-inputs">Example: apple supply chain with background database inputs</h3>
-<p>The apple supply chain from the <em>Constructing Inventories</em> slides has 4 foreground processes (Production, Transport, Use, Disposal). Electricity, Fertilizer, Cardboard, Facility, and Diesel are Technosphere inputs to Production — they are NOT modelled as explicit process boxes in the recipe card. The recipe card would look like:</p>
+<p>The apple supply chain from the <em>Constructing Inventories</em> slides has 4 foreground processes (Production, Transport, Use, Disposal). Electricity, Fertilizer, Cardboard, Facility, and Diesel are Technosphere inputs to Production — they are NOT modelled as explicit process boxes in the product graph. The product graph would look like:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">processes</span><span class="kw">:</span></span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Production</span></span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">reference_output</span><span class="kw">:</span><span class="at"> </span><span class="kw">{</span><span class="at"> </span><span class="fu">flow</span><span class="kw">:</span><span class="at"> Apple</span><span class="kw">,</span><span class="at"> </span><span class="fu">amount</span><span class="kw">:</span><span class="at"> </span><span class="dv">500000</span><span class="kw">,</span><span class="at"> </span><span class="fu">unit</span><span class="kw">:</span><span class="at"> kg </span><span class="kw">}</span></span>
@@ -941,7 +941,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tbody>
 <tr class="odd">
 <td>0</td>
-<td>Audit recipe card fields against olca-schema <em>(this document)</em></td>
+<td>Audit product graph fields against olca-schema <em>(this document)</em></td>
 <td><strong>Done</strong></td>
 </tr>
 <tr class="even">
@@ -951,7 +951,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="odd">
 <td>2</td>
-<td>Add <code>lcia_method</code> and <code>database</code> fields to recipe card format</td>
+<td>Add <code>lcia_method</code> and <code>database</code> fields to product graph format</td>
 <td>Not started</td>
 </tr>
 <tr class="even">
@@ -976,12 +976,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td>7</td>
-<td>Test end-to-end: coffee recipe card with ReCiPe 2016, confirm LCIA scores</td>
+<td>Test end-to-end: coffee product graph with ReCiPe 2016, confirm LCIA scores</td>
 <td>Not started</td>
 </tr>
 <tr class="odd">
 <td>8</td>
-<td>Add <code>source: background</code> field to recipe card and script lookup</td>
+<td>Add <code>source: background</code> field to product graph and script lookup</td>
 <td>Not started</td>
 </tr>
 <tr class="even">
@@ -991,7 +991,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="odd">
 <td>10</td>
-<td>Test a recipe card that mixes local and background processes</td>
+<td>Test a product graph that mixes local and background processes</td>
 <td>Not started</td>
 </tr>
 </tbody>
@@ -1004,7 +1004,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ol type="1">
 <li><strong>Item 0</strong> <em>(done)</em> — audit complete, issues documented above.</li>
 <li><strong>Item 1</strong> — fix unit groups. Low risk, no user-visible change, unblocks correct background linking later.</li>
-<li><strong>Items 2–4</strong> — add LCIA method support to recipe card and script. Test with coffee; expect empty impact results until item 6 is done — handle gracefully.</li>
+<li><strong>Items 2–4</strong> — add LCIA method support to product graph and script. Test with coffee; expect empty impact results until item 6 is done — handle gracefully.</li>
 <li><strong>Item 6</strong> — load LCIA methods package via desktop app (one-time manual step).</li>
 <li><strong>Item 7</strong> — test end-to-end with ReCiPe 2016.</li>
 <li><strong>Item 5</strong> — update skill documentation.</li>

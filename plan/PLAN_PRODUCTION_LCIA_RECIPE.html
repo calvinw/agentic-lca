@@ -269,7 +269,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#how-to-use-recipe-in-this-system" id="toc-how-to-use-recipe-in-this-system" class="nav-link" data-scroll-target="#how-to-use-recipe-in-this-system">How to Use ReCiPe in This System</a>
   <ul class="collapse">
   <li><a href="#recommended-approach-import-the-free-openlca-lcia-methods-pack" id="toc-recommended-approach-import-the-free-openlca-lcia-methods-pack" class="nav-link" data-scroll-target="#recommended-approach-import-the-free-openlca-lcia-methods-pack">Recommended approach — Import the free openLCA LCIA methods pack</a></li>
-  <li><a href="#fallback-option-embedded-cfs-in-recipe-card-no-database-needed" id="toc-fallback-option-embedded-cfs-in-recipe-card-no-database-needed" class="nav-link" data-scroll-target="#fallback-option-embedded-cfs-in-recipe-card-no-database-needed">Fallback option — Embedded CFs in recipe card (no database needed)</a></li>
+  <li><a href="#fallback-option-embedded-cfs-in-product-graph-no-database-needed" id="toc-fallback-option-embedded-cfs-in-product-graph-no-database-needed" class="nav-link" data-scroll-target="#fallback-option-embedded-cfs-in-product-graph-no-database-needed">Fallback option — Embedded CFs in product graph (no database needed)</a></li>
   </ul></li>
   <li><a href="#which-approach-to-use" id="toc-which-approach-to-use" class="nav-link" data-scroll-target="#which-approach-to-use">Which Approach to Use</a></li>
   <li><a href="#comparing-recipe-and-traci-on-the-same-product" id="toc-comparing-recipe-and-traci-on-the-same-product" class="nav-link" data-scroll-target="#comparing-recipe-and-traci-on-the-same-product">Comparing ReCiPe and TRACI on the Same Product</a></li>
@@ -529,7 +529,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="recipe-2016-midpoint-h-key-characterization-factors" class="level2">
 <h2 class="anchored" data-anchor-id="recipe-2016-midpoint-h-key-characterization-factors">ReCiPe 2016 Midpoint (H) — Key Characterization Factors</h2>
-<p>These are the CFs for the flows used in current recipe cards.</p>
+<p>These are the CFs for the flows used in current product graphs.</p>
 <section id="global-warming-gwp100-kg-co₂-eq-per-kg" class="level3">
 <h3 class="anchored" data-anchor-id="global-warming-gwp100-kg-co₂-eq-per-kg">Global Warming (GWP100) — kg CO₂ eq per kg</h3>
 <table class="caption-top table">
@@ -700,7 +700,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(m.name)</span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co">"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>You should see ReCiPe 2016 Midpoint (H), (I), and (E) listed alongside TRACI 2.2. No restart needed.</p>
-<p><strong>Step 4 — Change one line in a recipe card</strong></p>
+<p><strong>Step 4 — Change one line in a product graph</strong></p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Before (TRACI):</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">lcia</span><span class="kw">:</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">method_name</span><span class="kw">:</span><span class="at"> </span><span class="st">"TRACI 2.2"</span></span>
@@ -711,8 +711,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><code>get_impact_method_ref()</code> in <code>lca_analysis.py</code> does a case-insensitive substring search, so it will find the method automatically. No code changes needed. Run the analysis exactly as before.</p>
 <hr>
 </section>
-<section id="fallback-option-embedded-cfs-in-recipe-card-no-database-needed" class="level3">
-<h3 class="anchored" data-anchor-id="fallback-option-embedded-cfs-in-recipe-card-no-database-needed">Fallback option — Embedded CFs in recipe card (no database needed)</h3>
+<section id="fallback-option-embedded-cfs-in-product-graph-no-database-needed" class="level3">
+<h3 class="anchored" data-anchor-id="fallback-option-embedded-cfs-in-product-graph-no-database-needed">Fallback option — Embedded CFs in product graph (no database needed)</h3>
 <p>Embed the CFs directly using the <code>impact_categories</code> block (same as the existing hand-typed CF path already in <code>lca_analysis.py</code>):</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">lcia</span><span class="kw">:</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">method</span><span class="kw">:</span><span class="at"> </span><span class="st">"ReCiPe 2016 Midpoint (H)"</span></span>
@@ -777,7 +777,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td>No methods pack yet, want to test immediately</td>
-<td>Fallback — embed CFs in recipe card</td>
+<td>Fallback — embed CFs in product graph</td>
 </tr>
 <tr class="odd">
 <td>ecoinvent connected</td>
@@ -793,13 +793,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="comparing-recipe-and-traci-on-the-same-product" class="level2">
 <h2 class="anchored" data-anchor-id="comparing-recipe-and-traci-on-the-same-product">Comparing ReCiPe and TRACI on the Same Product</h2>
-<p>Because <code>method_name</code> is just a string in the recipe card, you can compare both methods by running the analysis twice with different values:</p>
+<p>Because <code>method_name</code> is just a string in the product graph, you can compare both methods by running the analysis twice with different values:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Run with TRACI 2.2</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> lca_scripts/lca_analysis.py lca_analysis/cotton_shirt/recipe_card.md</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> lca_scripts/lca_analysis.py lca_analysis/cotton_shirt/product_graph.yaml</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Edit recipe card: change method_name to "ReCiPe 2016 Midpoint (H)"</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Edit product graph: change method_name to "ReCiPe 2016 Midpoint (H)"</span></span>
 <span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Run again</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> lca_scripts/lca_analysis.py lca_analysis/cotton_shirt/recipe_card.md</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> lca_scripts/lca_analysis.py lca_analysis/cotton_shirt/product_graph.yaml</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>The GWP100 numbers should be very similar (both use IPCC AR6 GWP100 factors). Differences will appear in categories where the methods diverge — for example, TRACI uses North American spatial factors for acidification, while ReCiPe uses global average factors.</p>
 <hr>
 </section>

@@ -259,7 +259,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#what-bafu-provides-that-we-currently-lack" id="toc-what-bafu-provides-that-we-currently-lack" class="nav-link" data-scroll-target="#what-bafu-provides-that-we-currently-lack">What BAFU provides that we currently lack</a></li>
   <li><a href="#what-bafu-covers" id="toc-what-bafu-covers" class="nav-link" data-scroll-target="#what-bafu-covers">What BAFU covers</a></li>
   <li><a href="#how-to-download-bafu-2025-lci-db" id="toc-how-to-download-bafu-2025-lci-db" class="nav-link" data-scroll-target="#how-to-download-bafu-2025-lci-db">How to download BAFU-2025-LCI DB</a></li>
-  <li><a href="#important-limitation-recipe-card-format" id="toc-important-limitation-recipe-card-format" class="nav-link" data-scroll-target="#important-limitation-recipe-card-format">Important limitation — recipe card format</a></li>
+  <li><a href="#important-limitation-product-graph-format" id="toc-important-limitation-product-graph-format" class="nav-link" data-scroll-target="#important-limitation-product-graph-format">Important limitation — product graph format</a></li>
   </ul></li>
   <li><a href="#part-2-the-openlca-lcia-methods-pack" id="toc-part-2-the-openlca-lcia-methods-pack" class="nav-link" data-scroll-target="#part-2-the-openlca-lcia-methods-pack">Part 2 — The openLCA LCIA Methods Pack</a>
   <ul class="collapse">
@@ -277,7 +277,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#phase-1-methods-pack-quick-win-30-minutes" id="toc-phase-1-methods-pack-quick-win-30-minutes" class="nav-link" data-scroll-target="#phase-1-methods-pack-quick-win-30-minutes">Phase 1 — Methods pack (quick win, ~30 minutes)</a></li>
   <li><a href="#phase-2-bafu-database-more-involved-12-hours" id="toc-phase-2-bafu-database-more-involved-12-hours" class="nav-link" data-scroll-target="#phase-2-bafu-database-more-involved-12-hours">Phase 2 — BAFU database (more involved, ~1–2 hours)</a></li>
-  <li><a href="#phase-3-future-recipe-card-database_inputs-extension" id="toc-phase-3-future-recipe-card-database_inputs-extension" class="nav-link" data-scroll-target="#phase-3-future-recipe-card-database_inputs-extension">Phase 3 (future) — Recipe card database_inputs extension</a></li>
+  <li><a href="#phase-3-future-product-graph-database_inputs-extension" id="toc-phase-3-future-product-graph-database_inputs-extension" class="nav-link" data-scroll-target="#phase-3-future-product-graph-database_inputs-extension">Phase 3 (future) — Product graph database_inputs extension</a></li>
   </ul></li>
   <li><a href="#pedagogical-value" id="toc-pedagogical-value" class="nav-link" data-scroll-target="#pedagogical-value">Pedagogical Value</a>
   <ul class="collapse">
@@ -357,7 +357,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="what-bafu-provides-that-we-currently-lack" class="level3">
 <h3 class="anchored" data-anchor-id="what-bafu-provides-that-we-currently-lack">What BAFU provides that we currently lack</h3>
-<p>In the current project, every CO₂ number in every recipe card is hand-entered based on published studies and literature estimates. For example:</p>
+<p>In the current project, every CO₂ number in every product graph is hand-entered based on published studies and literature estimates. For example:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">emissions</span><span class="kw">:</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="kw">{</span><span class="at"> </span><span class="fu">flow</span><span class="kw">:</span><span class="at"> Carbon dioxide</span><span class="kw">,</span><span class="at"> </span><span class="fu">amount</span><span class="kw">:</span><span class="at"> </span><span class="fl">11.0</span><span class="at"> </span><span class="kw">}</span><span class="co">   # ← hand-entered estimate</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>With BAFU imported, you can instead connect to a background process:</p>
@@ -402,12 +402,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="co">"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>You should see processes like <code>Nylon 6, at plant</code> listed.</p>
 </section>
-<section id="important-limitation-recipe-card-format" class="level3">
-<h3 class="anchored" data-anchor-id="important-limitation-recipe-card-format">Important limitation — recipe card format</h3>
-<p>The current recipe card format is <strong>self-contained</strong>: all emission values are declared inside the YAML file itself. The recipe card system does not yet support referencing background database processes directly.</p>
+<section id="important-limitation-product-graph-format" class="level3">
+<h3 class="anchored" data-anchor-id="important-limitation-product-graph-format">Important limitation — product graph format</h3>
+<p>The current product graph format is <strong>self-contained</strong>: all emission values are declared inside the YAML file itself. The product graph system does not yet support referencing background database processes directly.</p>
 <p>To use BAFU data today, there are two options:</p>
-<p><strong>Option A — Use BAFU as a lookup reference only</strong> Run an analysis in the openLCA desktop app using BAFU processes, read the per-kg CO₂ values from the results, and hand-enter those values into recipe cards. This is more accurate than estimates but still hand-entered.</p>
-<p><strong>Option B — Extend the recipe card format</strong> Add a <code>database_inputs</code> block to the recipe card YAML that names BAFU processes to connect to. This would require changes to <code>lca_analysis.py</code> to look up those processes by name and wire them in automatically. This is a meaningful development task but would make the system much more powerful.</p>
+<p><strong>Option A — Use BAFU as a lookup reference only</strong> Run an analysis in the openLCA desktop app using BAFU processes, read the per-kg CO₂ values from the results, and hand-enter those values into product graphs. This is more accurate than estimates but still hand-entered.</p>
+<p><strong>Option B — Extend the product graph format</strong> Add a <code>database_inputs</code> block to the product graph YAML that names BAFU processes to connect to. This would require changes to <code>lca_analysis.py</code> to look up those processes by name and wire them in automatically. This is a meaningful development task but would make the system much more powerful.</p>
 <p>Option A can be done immediately. Option B is a future development goal.</p>
 <hr>
 </section>
@@ -489,7 +489,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-X</span> POST http://localhost:8080/api/import <span class="dt">\</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">-H</span> <span class="st">"Content-Type: application/octet-stream"</span> <span class="dt">\</span></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">--data-binary</span> @<span class="st">"</span><span class="va">$HOME</span><span class="st">/olca-data/openLCA_LCIA_methods_2_2.zip"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p><strong>Step 3 — Use in a recipe card</strong></p>
+<p><strong>Step 3 — Use in a product graph</strong></p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Change this one line:</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">lcia</span><span class="kw">:</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">method_name</span><span class="kw">:</span><span class="at"> </span><span class="st">"EF 3.1"</span></span>
@@ -717,10 +717,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Create free account at nexus.openlca.org</li>
 <li>Download openLCA LCIA methods pack <code>.zip</code></li>
 <li>Import into running database</li>
-<li>Test by running an existing recipe card with <code>method_name: "EF 3.1"</code></li>
-<li>Compare results to same card with <code>method_name: "TRACI 2.2"</code></li>
+<li>Test by running an existing product graph with <code>method_name: "EF 3.1"</code></li>
+<li>Compare results to same product graph with <code>method_name: "TRACI 2.2"</code></li>
 </ol>
-<p>This immediately unlocks EF 3.1 and ReCiPe for all existing recipe cards.</p>
+<p>This immediately unlocks EF 3.1 and ReCiPe for all existing product graphs.</p>
 </section>
 <section id="phase-2-bafu-database-more-involved-12-hours" class="level3">
 <h3 class="anchored" data-anchor-id="phase-2-bafu-database-more-involved-12-hours">Phase 2 — BAFU database (more involved, ~1–2 hours)</h3>
@@ -728,18 +728,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Download BAFU-2025-LCI DB from nexus.openlca.org</li>
 <li>Import into running database (may take several minutes — it’s a large dataset)</li>
 <li>Verify key processes are available (nylon, PLA, polyester, transport)</li>
-<li>Look up per-kg CO₂ values for materials used in existing recipe cards</li>
-<li>Compare BAFU-derived values against hand-entered estimates in our recipe cards</li>
-<li>Update recipe cards where BAFU values differ significantly from estimates</li>
+<li>Look up per-kg CO₂ values for materials used in existing product graphs</li>
+<li>Compare BAFU-derived values against hand-entered estimates in our product graphs</li>
+<li>Update product graphs where BAFU values differ significantly from estimates</li>
 </ol>
 </section>
-<section id="phase-3-future-recipe-card-database_inputs-extension" class="level3">
-<h3 class="anchored" data-anchor-id="phase-3-future-recipe-card-database_inputs-extension">Phase 3 (future) — Recipe card database_inputs extension</h3>
-<p>Extend the recipe card YAML format to support:</p>
+<section id="phase-3-future-product-graph-database_inputs-extension" class="level3">
+<h3 class="anchored" data-anchor-id="phase-3-future-product-graph-database_inputs-extension">Phase 3 (future) — Product graph database_inputs extension</h3>
+<p>Extend the product graph YAML format to support:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">database_inputs</span><span class="kw">:</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="kw">{</span><span class="at"> </span><span class="fu">process</span><span class="kw">:</span><span class="at"> </span><span class="st">"Nylon 6, at plant"</span><span class="kw">,</span><span class="at"> </span><span class="fu">amount</span><span class="kw">:</span><span class="at"> </span><span class="fl">0.03</span><span class="kw">,</span><span class="at"> </span><span class="fu">unit</span><span class="kw">:</span><span class="at"> kg </span><span class="kw">}</span></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="kw">{</span><span class="at"> </span><span class="fu">process</span><span class="kw">:</span><span class="at"> </span><span class="st">"Polylactide, at plant"</span><span class="kw">,</span><span class="at"> </span><span class="fu">amount</span><span class="kw">:</span><span class="at"> </span><span class="fl">0.52</span><span class="kw">,</span><span class="at"> </span><span class="fu">unit</span><span class="kw">:</span><span class="at"> kg </span><span class="kw">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>This would make our recipe cards behave like the broom video — foreground model hand-defined, background model drawn from BAFU automatically.</p>
+<p>This would make our product graphs behave like the broom video — foreground model hand-defined, background model drawn from BAFU automatically.</p>
 <hr>
 </section>
 </section>

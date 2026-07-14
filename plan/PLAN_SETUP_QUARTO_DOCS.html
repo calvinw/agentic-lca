@@ -340,11 +340,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td><code>skills_references/&lt;product&gt;/</code></td>
-<td>LCA case-study data (recipe cards, diagrams, results)</td>
+<td>LCA case-study data (product graphs, diagrams, results)</td>
 </tr>
 <tr class="odd">
 <td><code>lca_analysis/&lt;product&gt;/</code></td>
-<td>LCA analysis folders with <code>recipe_card.md</code></td>
+<td>LCA analysis folders with <code>product_graph.yaml</code></td>
 </tr>
 </tbody>
 </table>
@@ -613,7 +613,7 @@ skills_sessions/**/*.html</code></pre>
 <li><p><strong><code>quarto_docs/generate_quarto_yml.py</code></strong> — the main generator. It scans <code>.skillshare/skills/</code>, <code>skills_sessions/</code>, <code>plan/</code>, and <code>skills_references/</code>, copies files into <code>quarto_docs/</code>, and writes <code>_quarto.yml</code>.</p></li>
 <li><p><strong><code>skills_sessions/generate_sessions.py</code></strong> — scans <code>skills_sessions/</code> for session transcripts and writes <code>quarto_docs/sessions.json</code>.</p></li>
 <li><p><strong><code>plan/generate_plans.py</code></strong> — scans <code>plan/</code> for <code>PLAN_*.md</code> files and writes <code>quarto_docs/plans.json</code>.</p></li>
-<li><p><strong><code>lca_analysis/generate_analyses.py</code></strong> — scans <code>lca_analysis/</code> for <code>recipe_card.md</code> files and writes <code>quarto_docs/analyses.json</code>.</p></li>
+<li><p><strong><code>lca_analysis/generate_analyses.py</code></strong> — scans <code>lca_analysis/</code> for <code>product_graph.yaml</code> files and writes <code>quarto_docs/analyses.json</code>.</p></li>
 </ol>
 <p>The full contents of these scripts are in Appendix A below.</p>
 </section>
@@ -1064,7 +1064,7 @@ skills_sessions/**/*.html</code></pre>
 <section id="lca_analysisgenerate_analyses.py" class="level3">
 <h3 class="anchored" data-anchor-id="lca_analysisgenerate_analyses.py"><code>lca_analysis/generate_analyses.py</code></h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""</span></span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="co">Scans lca_analysis/ for folders containing recipe_card.md and writes analyses.json.</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="co">Scans lca_analysis/ for folders containing product_graph.yaml and writes analyses.json.</span></span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="co">Run from the repo root: python3 lca_analysis/generate_analyses.py</span></span>
 <span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="co">"""</span></span>
 <span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a></span>
@@ -1089,12 +1089,12 @@ skills_sessions/**/*.html</code></pre>
 <span id="cb18-24"><a href="#cb18-24" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb18-25"><a href="#cb18-25" aria-hidden="true" tabindex="-1"></a>analyses <span class="op">=</span> []</span>
 <span id="cb18-26"><a href="#cb18-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-27"><a href="#cb18-27" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> recipe <span class="kw">in</span> <span class="bu">sorted</span>(root.rglob(<span class="st">'recipe_card.md'</span>)):</span>
-<span id="cb18-28"><a href="#cb18-28" aria-hidden="true" tabindex="-1"></a>    folder <span class="op">=</span> recipe.parent</span>
+<span id="cb18-27"><a href="#cb18-27" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> product_graph <span class="kw">in</span> <span class="bu">sorted</span>(root.rglob(<span class="st">'product_graph.yaml'</span>)):</span>
+<span id="cb18-28"><a href="#cb18-28" aria-hidden="true" tabindex="-1"></a>    folder <span class="op">=</span> product_graph.parent</span>
 <span id="cb18-29"><a href="#cb18-29" aria-hidden="true" tabindex="-1"></a>    rel    <span class="op">=</span> folder.relative_to(root)</span>
 <span id="cb18-30"><a href="#cb18-30" aria-hidden="true" tabindex="-1"></a>    name   <span class="op">=</span> format_name(folder.name)</span>
 <span id="cb18-31"><a href="#cb18-31" aria-hidden="true" tabindex="-1"></a>    group  <span class="op">=</span> folder.parent.name <span class="cf">if</span> folder.parent <span class="op">!=</span> root <span class="cf">else</span> <span class="st">''</span></span>
-<span id="cb18-32"><a href="#cb18-32" aria-hidden="true" tabindex="-1"></a>    mds <span class="op">=</span> <span class="bu">sorted</span>(folder.glob(<span class="st">'*.md'</span>), key<span class="op">=</span><span class="kw">lambda</span> p: (p.name <span class="op">!=</span> <span class="st">'recipe_card.md'</span>, p.name))</span>
+<span id="cb18-32"><a href="#cb18-32" aria-hidden="true" tabindex="-1"></a>    mds <span class="op">=</span> <span class="bu">sorted</span>(folder.glob(<span class="st">'*.md'</span>), key<span class="op">=</span><span class="kw">lambda</span> p: (p.name <span class="op">!=</span> <span class="st">'product_graph.yaml'</span>, p.name))</span>
 <span id="cb18-33"><a href="#cb18-33" aria-hidden="true" tabindex="-1"></a>    files <span class="op">=</span> [</span>
 <span id="cb18-34"><a href="#cb18-34" aria-hidden="true" tabindex="-1"></a>        {</span>
 <span id="cb18-35"><a href="#cb18-35" aria-hidden="true" tabindex="-1"></a>            <span class="st">'file'</span>:  <span class="bu">str</span>(rel <span class="op">/</span> md.name),</span>

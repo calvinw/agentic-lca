@@ -374,7 +374,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <blockquote class="blockquote">
 <p><em>“Which is better for the environment — a paper cup or a polystyrene foam cup? I want to see the actual numbers.”</em></p>
 </blockquote>
-<p>Claude calls <code>run_lca</code> twice — once for each cup — passing the supply chain descriptions (recipe cards) on behalf of the student. It gets back:</p>
+<p>Claude calls <code>run_lca</code> twice — once for each cup — passing the supply chain descriptions (product graphs) on behalf of the student. It gets back:</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -404,7 +404,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </figure>
 </div>
 <p>Claude then explains: <em>“The PS foam cup produces about half the greenhouse gas emissions of the paper cup — but it relies on non-renewable petroleum and doesn’t biodegrade. The paper cup uses 20× more water because pulping and papermaking are extremely water-intensive. Which trade-off matters more depends on what your company is trying to prioritise.”</em></p>
-<p>The student never saw the recipe card. They just asked a question.</p>
+<p>The student never saw the product graph. They just asked a question.</p>
 <hr>
 </section>
 <section id="example-2-wool-yarn-vs-cotton-fiber" class="level3">
@@ -423,7 +423,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="example-3-modify-and-re-run-in-the-same-conversation" class="level3">
 <h3 class="anchored" data-anchor-id="example-3-modify-and-re-run-in-the-same-conversation">Example 3 — Modify and re-run in the same conversation</h3>
 <p>A student asks: <em>“What if the wool farm switched to renewable electricity for processing?”</em></p>
-<p>Claude edits the recipe card in memory, calls <code>run_lca</code> again with the updated values, and compares the before and after — all in one conversation turn. No files to open. No re-running scripts.</p>
+<p>Claude edits the product graph in memory, calls <code>run_lca</code> again with the updated values, and compares the before and after — all in one conversation turn. No files to open. No re-running scripts.</p>
 <hr>
 </section>
 <section id="example-4-explore-impact-methods" class="level3">
@@ -437,12 +437,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="what-the-ai-does-behind-the-scenes">What the AI does behind the scenes</h2>
 <p>When a student asks a sustainability question, the AI:</p>
 <ol type="1">
-<li>Looks up the relevant recipe card (or writes one from the student’s description)</li>
-<li>Calls <code>run_lca(recipe_card="...", method="TRACI 2.2")</code></li>
+<li>Looks up the relevant product graph (or writes one from the student’s description)</li>
+<li>Calls <code>run_lca(product_graph="...", method="TRACI 2.2")</code></li>
 <li>Receives LCI totals, LCIA scores, a scaling vector, and two SVG diagrams</li>
 <li>Displays the diagrams inline and explains the numbers in plain English</li>
 </ol>
-<p>The student sees only the explanation and the diagrams. The recipe card, the tool call, and the raw JSON never appear.</p>
+<p>The student sees only the explanation and the diagrams. The product graph, the tool call, and the raw JSON never appear.</p>
 <hr>
 </section>
 <section id="stack" class="level2">
@@ -490,9 +490,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="run_lca-what-goes-in-and-what-comes-back" class="level2">
 <h2 class="anchored" data-anchor-id="run_lca-what-goes-in-and-what-comes-back"><code>run_lca</code> — what goes in and what comes back</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="at">@mcp.tool</span>()</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> run_lca(recipe_card: <span class="bu">str</span>, server_url: <span class="bu">str</span> <span class="op">=</span> <span class="st">"http://localhost:8080"</span>) <span class="op">-&gt;</span> <span class="bu">dict</span>:</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> run_lca(product_graph: <span class="bu">str</span>, server_url: <span class="bu">str</span> <span class="op">=</span> <span class="st">"http://localhost:8080"</span>) <span class="op">-&gt;</span> <span class="bu">dict</span>:</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">    Run a full LCA from a recipe card YAML string.</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">    Run a full LCA from a product graph YAML string.</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns LCI flows, LCIA impact scores, scaling vector, and SVG diagrams.</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Returns:</strong></p>
@@ -530,7 +530,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="tier-2-ecoinvent-licensed-users" class="level3">
 <h3 class="anchored" data-anchor-id="tier-2-ecoinvent-licensed-users">Tier 2 — ecoinvent (licensed users)</h3>
 <p>Users with an ecoinvent license point the tools at their own gdt-server:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>run_lca(recipe_card<span class="op">=</span><span class="st">"..."</span>, server_url<span class="op">=</span><span class="st">"http://my-ecoinvent-server:8080"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>run_lca(product_graph<span class="op">=</span><span class="st">"..."</span>, server_url<span class="op">=</span><span class="st">"http://my-ecoinvent-server:8080"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>The MCP server itself stays free and license-clean.</p>
 </section>
 <section id="tier-3-bafu-future-free" class="level3">

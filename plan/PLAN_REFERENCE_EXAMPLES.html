@@ -255,7 +255,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#folder-structure-per-case-study" id="toc-folder-structure-per-case-study" class="nav-link" data-scroll-target="#folder-structure-per-case-study">Folder Structure (per case study)</a></li>
   <li><a href="#file-descriptions" id="toc-file-descriptions" class="nav-link" data-scroll-target="#file-descriptions">File Descriptions</a>
   <ul class="collapse">
-  <li><a href="#recipe_card.md" id="toc-recipe_card.md" class="nav-link" data-scroll-target="#recipe_card.md"><code>recipe_card.md</code></a></li>
+  <li><a href="#product_graph.yaml" id="toc-product_graph.yaml" class="nav-link" data-scroll-target="#product_graph.yaml"><code>product_graph.yaml</code></a></li>
   <li><a href="#lca_results.md" id="toc-lca_results.md" class="nav-link" data-scroll-target="#lca_results.md"><code>lca_results.md</code></a></li>
   <li><a href="#product_graph_scaled.svg" id="toc-product_graph_scaled.svg" class="nav-link" data-scroll-target="#product_graph_scaled.svg"><code>product_graph_scaled.svg</code></a></li>
   <li><a href="#product_graph_structure.svg" id="toc-product_graph_structure.svg" class="nav-link" data-scroll-target="#product_graph_structure.svg"><code>product_graph_structure.svg</code></a></li>
@@ -299,7 +299,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="folder-structure-per-case-study" class="level2">
 <h2 class="anchored" data-anchor-id="folder-structure-per-case-study">Folder Structure (per case study)</h2>
 <pre><code>skills_references/&lt;product&gt;/
-  recipe_card.md              ← supply chain spec + LCIA method + characterization factors
+  product_graph.yaml              ← supply chain spec + LCIA method + characterization factors
   lca_results.md              ← pre-computed results: scaling vector, impacts by process and indicator
   product_graph_scaled.svg    ← supply chain diagram with scaling factors and flow amounts
   product_graph_structure.svg ← supply chain diagram with flow names only (no numbers)
@@ -308,8 +308,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="file-descriptions" class="level2">
 <h2 class="anchored" data-anchor-id="file-descriptions">File Descriptions</h2>
-<section id="recipe_card.md" class="level3">
-<h3 class="anchored" data-anchor-id="recipe_card.md"><code>recipe_card.md</code></h3>
+<section id="product_graph.yaml" class="level3">
+<h3 class="anchored" data-anchor-id="product_graph.yaml"><code>product_graph.yaml</code></h3>
 <p>The single quantitative source of truth for the case study. Contains two parts:</p>
 <p><strong>Part 1 — YAML frontmatter (the supply chain spec):</strong> - <code>name</code> — product name and functional unit description - <code>goal</code> — the study goal in plain language - <code>functional_unit</code> — what exactly is being measured (description, amount, unit) - <code>units</code> — unit definitions - <code>products</code> — all intermediate and final products in the supply chain - <code>elementary_flows</code> — emissions to air/water and resource extractions from nature - <code>processes</code> — each step in the supply chain with inputs, outputs, emissions, resources - <code>reference_process</code> — the process that delivers the functional unit - <code>lcia</code> — LCIA method name and impact categories with characterization factors (see below)</p>
 <p><strong>Part 2 — Markdown body (study notes):</strong> - Key assumptions table - Simplifications made - Source references - Any teaching notes specific to this product</p>
@@ -341,12 +341,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">characterization_factors</span><span class="kw">:</span></span>
 <span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">NH3 to air</span><span class="kw">:</span><span class="at"> </span><span class="fl">3.54</span></span>
 <span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">N2O to air</span><span class="kw">:</span><span class="at"> </span><span class="fl">0.27</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>The method name (e.g., “EF 3.0”, “IPCC AR6”) is the published standard the factors come from. The factors are embedded in the recipe card so calculations work without requiring the LCIA method to be loaded in the openLCA database. The factors must match the named standard’s published values.</p>
+<p>The method name (e.g., “EF 3.0”, “IPCC AR6”) is the published standard the factors come from. The factors are embedded in the product graph so calculations work without requiring the LCIA method to be loaded in the openLCA database. The factors must match the named standard’s published values.</p>
 <hr>
 </section>
 <section id="lca_results.md" class="level3">
 <h3 class="anchored" data-anchor-id="lca_results.md"><code>lca_results.md</code></h3>
-<p>Pre-computed once (requires the openLCA server) and committed to the repository. Regenerate only when the recipe card changes. Contains:</p>
+<p>Pre-computed once (requires the openLCA server) and committed to the repository. Regenerate only when the product graph changes. Contains:</p>
 <ul>
 <li>Goal and scope statement</li>
 <li>Reference flow vector f</li>
@@ -361,12 +361,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="product_graph_scaled.svg" class="level3">
 <h3 class="anchored" data-anchor-id="product_graph_scaled.svg"><code>product_graph_scaled.svg</code></h3>
-<p>Generated by <code>lca_scripts/lca_svg.py</code> from the recipe card. Shows: - Each process as a labelled box - Scaling factor (s) on each box - Flow amounts on each arrow between processes - Emissions and resource flows as coloured side arrows</p>
+<p>Generated by <code>lca_scripts/lca_svg.py</code> from the product graph. Shows: - Each process as a labelled box - Scaling factor (s) on each box - Flow amounts on each arrow between processes - Emissions and resource flows as coloured side arrows</p>
 <hr>
 </section>
 <section id="product_graph_structure.svg" class="level3">
 <h3 class="anchored" data-anchor-id="product_graph_structure.svg"><code>product_graph_structure.svg</code></h3>
-<p>Generated by <code>lca_scripts/lca_svg.py --structure</code> from the recipe card. Shows: - Each process as a labelled box - Flow names on arrows (no quantities) - Clean overview of supply chain structure</p>
+<p>Generated by <code>lca_scripts/lca_svg.py --structure</code> from the product graph. Shows: - Each process as a labelled box - Flow names on arrows (no quantities) - Clean overview of supply chain structure</p>
 <hr>
 </section>
 <section id="notes.md" class="level3">
